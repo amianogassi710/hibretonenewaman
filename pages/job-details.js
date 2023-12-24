@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import FeaturedSlider from "./../components/sliders/Featured";
+import FeaturedSlider from "../components/sliders/Featured";
 
 export default function JobDetails() {
     return (
@@ -17,8 +17,8 @@ export default function JobDetails() {
                                 <div className="col-lg-8 col-md-12">
                                     <h3>Senior Full Stack Engineer, Creator Success Full Time</h3>
                                     <div className="mt-0 mb-15">
-                                        <span className="card-briefcase">Fulltime</span>
-                                        <span className="card-time">3 mins ago</span>
+                                        {/* <span className="card-briefcase">Fulltime</span>
+                                        <span className="card-time">3 mins ago</span> */}
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-12 text-lg-end">
@@ -159,13 +159,13 @@ export default function JobDetails() {
                                     <div className="single-apply-jobs">
                                         <div className="row align-items-center">
                                             <div className="col-md-5">
-                                                <Link legacyBehavior href="#">
+                                                {/* <Link legacyBehavior href="#">
                                                     <a className="btn btn-default mr-15">Apply now</a>
                                                 </Link>
 
                                                 <Link legacyBehavior href="#">
                                                     <a className="btn btn-border">Save job</a>
-                                                </Link>
+                                                </Link> */}
                                             </div>
                                             <div className="col-md-7 text-lg-end social-share">
                                                 <h6 className="color-text-paragraph-2 d-inline-block d-baseline mr-10">Share this</h6>
@@ -197,7 +197,7 @@ export default function JobDetails() {
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-12 col-sm-12 col-12 pl-40 pl-lg-15 mt-lg-30">
-                                    <div className="sidebar-border">
+                                    {/* <div className="sidebar-border">
                                         <div className="sidebar-heading">
                                             <div className="avatar-sidebar">
                                                 <figure>
@@ -222,9 +222,9 @@ export default function JobDetails() {
                                                 <li>Email: contact@Evara.com</li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="sidebar-border">
-                                        <h6 className="f-18">Similar jobs</h6>
+                                        <h6 className="f-18">Similar Grants</h6>
                                         <div className="sidebar-list-job">
                                             <ul>
                                                 <li>
@@ -530,7 +530,7 @@ export default function JobDetails() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-50 mb-50">
+                    {/* <section className="section-box mt-50 mb-50">
                         <div className="container">
                             <div className="text-left">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Featured Jobs</h2>
@@ -547,28 +547,22 @@ export default function JobDetails() {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                     <section className="section-box mt-50 mb-20">
                         <div className="container">
-                            <div className="box-newsletter">
+                            <div className="box-newsletter box-newsletter-3">
                                 <div className="row">
-                                    <div className="col-xl-3 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/template/newsletter-left.png" alt="joxBox" />
-                                    </div>
-                                    <div className="col-lg-12 col-xl-6 col-12">
-                                        <h2 className="text-md-newsletter text-center">
-                                            New Things Will Always
-                                            <br /> Update Regularly
-                                        </h2>
-                                        <div className="box-form-newsletter mt-40">
-                                            <form className="form-newsletter">
-                                                <input className="input-newsletter" type="text" placeholder="Enter your email here" />
-                                                <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
-                                            </form>
+                                    <div className="col-xl-12 text-center">
+                                        <div className="d-inline-block">
+                                            <h2 className="color-white mt-30">Subscribe our newsletter</h2>
+                                            <p className="mt-10 font-lg color-white">New Things Will Always Update Regularl</p>
+                                            <div className="box-form-newsletter mt-30">
+                                                <form className="form-newsletter">
+                                                    <input className="input-newsletter" type="text" placeholder="Enter your email here" />
+                                                    <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
+                                                </form>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="col-xl-3 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/template/newsletter-right.png" alt="joxBox" />
                                     </div>
                                 </div>
                             </div>

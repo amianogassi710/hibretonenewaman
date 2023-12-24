@@ -15,130 +15,96 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
       })
     return (
         <>
+        
             <header className={scroll ? "header sticky-bar stick" : "header sticky-bar"}>
                 <div className="container">
                     <div className="main-header">
                         <div className="header-left">
                             <div className="header-logo">
-                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="assets/imgs/template/jobhub-logo.svg" /></a></Link>
+                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="assets/imgs/template/hibretOne-logo.png" /></a></Link>
                             </div>
                         </div>
                         <div className="header-nav">
                             <nav className="nav-main-menu">
                                 <ul className="main-menu">
                                     <li className="has-children">
-                                    <Link legacyBehavior href="/"><a className="active">Home</a></Link>
-
-                                        <ul className="sub-menu">
-                                            {/* <li>
-                                                <Link legacyBehavior href="/"><a>Home 1</a></Link>
-                                            </li> */}
-                                            <li>
-                                                <Link legacyBehavior href="/index-2"><a>Home</a></Link>
-                                            </li>
-                                            {/* <li>
-                                                <Link legacyBehavior href="/index-3"><a>Home 3</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/index-4"><a>Home 4</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/index-5"><a>Home 5</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/index-6"><a>Home 6</a></Link>
-                                            </li> */}
-                                        </ul>
-                                    </li>
-                                    <li className="has-children">
-                                        <Link legacyBehavior href="/jobs-grid"><a>Find Grants</a></Link>
+                                        <Link legacyBehavior href="/"><a>Business Builder</a></Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/jobs-grid"><a>Grants Grid</a></Link>
+                                                <Link legacyBehavior href="/"><a>Entrepreneurial Assessments</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/jobs-list"><a>Jobs List</a></Link>
+                                                <Link legacyBehavior href="/"><a>Entrepreneur Academy</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/job-details"><a>Jobs Details</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/job-details-2"><a>Jobs Details 2            </a></Link>
+                                                <Link legacyBehavior href="/"><a>Scholarship & Bursaries</a></Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/companies-grid"><a>Recruiters</a></Link>
+                                        <Link legacyBehavior href="/"><a>Funding Builder</a></Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/companies-grid"><a>Recruiters</a></Link>
+                                                <Link legacyBehavior href="/"><a>R&D Tax Credits Calculator</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/company-details"><a>Company Details</a></Link>
+                                                <Link legacyBehavior href="/"><a>Investability Rating</a></Link>
+                                            </li>
+                                            <li>
+                                                <Link legacyBehavior href="/grant-finder"><a>Grant Finder</a></Link>
+                                            </li>
+                                            <li>
+                                                <Link legacyBehavior href="/"><a>Grant Writer</a></Link>
+                                            </li>
+                                            <li>
+                                                <Link legacyBehavior href="/"><a>Investability Rating</a></Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/candidates-grid"><a>Candidates</a></Link>
+                                        <Link legacyBehavior href="/"><a>Resource Builder</a></Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/candidates-grid"><a>Candidates Grid</a></Link>
+                                                <Link legacyBehavior href="/"><a>Ecosystem Connector</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/candidate-details"><a>Candidate Details</a></Link>
+                                                <Link legacyBehavior href="/"><a>Business Problem Pivots</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/candidate-profile"><a>Candidate Profile</a></Link>
+                                                <Link legacyBehavior href="/"><a>Industry Intelligence</a></Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/blog-grid"><a>Pages</a></Link>
+                                        <Link legacyBehavior href="/blog-grid"><a>Career Builder</a></Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/page-about"><a>About Us</a></Link>
+                                                <Link legacyBehavior href="/"><a>Online Courses</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/page-pricing"><a>Pricing Plan</a></Link>
+                                                <Link legacyBehavior href="/"><a>Career Guidance</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/page-contact"><a>Contact Us</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-register"><a>Register</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-signin"><a>Signin</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-reset-password"><a>Reset Password</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/page-content-protected"><a>Content Protected</a></Link>
+                                                <Link legacyBehavior href="/"><a>Job Connect</a></Link>
                                             </li>
                                         </ul>
                                     </li>
+                                
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/blog-grid"><a>Blog</a></Link>
+                                    <Link legacyBehavior href="/"><a>About Us</a></Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/blog-grid"><a>Blog Grid</a></Link>
+                                                <Link legacyBehavior href="/"><a>Pricing</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/blog-grid-2"><a>Blog Grid 2</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/blog-details"><a>Blog Single</a></Link>
+                                                <Link legacyBehavior href="/"><a>Contact Us</a></Link>
                                             </li>
                                         </ul>
-                                    </li>
-                                    <li>
-                                        <Link legacyBehavior href="/page-contact"><a>Contact</a></Link>
                                     </li>
                                 </ul>
                             </nav>
@@ -149,8 +115,8 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                         <div className="header-right">
                             <div className="block-signin">
                                 <Link legacyBehavior href="page-register"><a className="text-link-bd-btom hover-up">Register</a></Link>
-
                                 <Link legacyBehavior href="page-signin"><a className="btn btn-default btn-shadow ml-40 hover-up">Sign in</a></Link>
+                                {/* <Link legacyBehavior href="/"><a className="btn btn-default btn-shadow ml-40 hover-up">Become a Partner</a></Link> */}
                             </div>
                         </div>
                     </div>

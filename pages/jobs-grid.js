@@ -420,7 +420,7 @@ export default function JobGrid() {
                                                                 </div>
                                                                 <div className="col-lg-5 col-5 text-end">
                                                                     <div className="btn btn-apply-now" data-bs-toggle="modal" data-bs-target="#ModalApplyJobForm">
-                                                                        More Info
+                                                                        <Link legacyBehavior href="/job-details">More Info</Link>
                                                                     </div>
                                                                 </div>
                                                             </div>
