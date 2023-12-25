@@ -26,10 +26,10 @@ const StrengthsAndIdealJobsModal = props => {
       <div className="strengths-and-ideal-jobs-modal-content" onClick={e => e.stopPropagation()}>
         <div className="strengths-and-ideal-jobs-modal-header">
           <div className="strengths-and-ideal-jobs-title">
-            <h4>{props.section}</h4>
+            <h4 className="text-reset">{props.section}</h4>
           </div>
           <div className="close">
-            <a className="assessment-icon" onClick={props.onClose}><IoCloseOutline size={35} /></a>
+            <i className="assessment-icon" onClick={props.onClose}><IoCloseOutline size={35} /></i>
           </div>
         </div>
         <div className="strengths-and-ideal-jobs-modal-body">

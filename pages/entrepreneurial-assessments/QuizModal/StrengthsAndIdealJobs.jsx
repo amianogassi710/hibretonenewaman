@@ -7,7 +7,7 @@ const StrengthsAndIdealJobs = props => {
 
   const toggleOpen = e => {
     if (open === false) {
-      setSection(() => e.target.dataset.value)
+      setSection(e.target.dataset.value)
     }
     setOpen(!open);
   }
