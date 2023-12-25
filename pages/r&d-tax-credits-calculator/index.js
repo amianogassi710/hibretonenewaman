@@ -231,7 +231,7 @@ export default function TaxCreditsCalculator() {
                                                     <h3>R&D Tax Credits Calculator</h3>
                                                 </div><br />
                                                 <h4>Result: £{(result).toFixed(2)}</h4><br />
-                                                <button className="btn btn-default fs-5 mr-10 ml-10" onClick={handleRetake}>Retake</button>
+                                                <button className="btn btn-default fs-5 mx-auto" onClick={handleRetake}>Retake</button>
                                             </div>
                                         </div>
                                     </div>
