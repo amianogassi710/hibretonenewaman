@@ -7,11 +7,11 @@ const nextConfig = {
     return [
       {
         source: '/tax-credits-calculator/:path*',
-        destination: 'http://127.0.0.1:8000/:path*', // Your FastAPI endpoint
+        destination: 'https://tax-credits-calculator-backend.vercel.app/:path*', // Your FastAPI endpoint
       },
       {
         source: '/assessments/:path*',
-        destination: 'http://127.0.0.1:8000/:path*', // Your FastAPI endpoint
+        destination: 'https://entrepreneurial-assessments-backend.vercel.app/:path*', // Your FastAPI endpoint
       },
       // Add more rewrites as needed
     ];

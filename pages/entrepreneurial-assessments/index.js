@@ -16,7 +16,7 @@ function App() {
 
   return (
     <Layout>
-      <div className="App">
+      <div className="App d-flex justify-content-center align-items-center">
         <button onClick={toggleOpen} value="Entrepreneurial-Readiness">Entrepreneurial Readiness</button>
         <button onClick={toggleOpen} value="Personality">Personality</button>
         <button onClick={toggleOpen} value="ADHD-Screener">ADHD</button>
