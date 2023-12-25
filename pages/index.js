@@ -15,14 +15,16 @@ export default function Home() {
                         <div className="banner-hero hero-2">
                             <div className="banner-inner">
                                 <div className="block-banner">
-                                    <h1 className="text-42 color-white wow animate__animated animate__fadeInUp">
-                                    Opportunities For All Aspirers Through
-                                    {/* <span className="color-green">Job Board for</span> */}
+                                    <h1 className="text-30 color-white wow animate__animated animate__fadeInUp">
+                                    Free First-line 
+                                    <span className="color-blue"> Entrepreneurship </span>
+                                    And 
+                                    <span className="color-blue"> Learning </span>
                                         <br className="d-none d-lg-block" />
-                                        Entrepreneurship And Education 
+                                        Support For Every User In Every Sector, Forever!
                                     </h1>
                                     <div className="font-lg font-regular color-white mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                                    A revolutionary platform delivering teh most comprehensive first line business resources, tools and funding, all in one place
+                                    A revolutionary platform delivering the most comprehensive first-line business resources, tools and funding, all in one place
                                     </div>
                                     <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
                                         <form>
@@ -34,42 +36,35 @@ export default function Home() {
                                 <div className="mt-60">
                                     <div className="row">
                                         <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
-                                            <div className="d-inline-block text-start">
+                                            <div className="d-inline-block text-center">
                                                 <h4 className="color-white">
-                                                    {" "}
-                                                    <span className="count">265</span>
-                                                    <span> K+</span>
+                                                    <span className="count">231+</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Daily Jobs Posted</p>
+                                                <p className="font-sm color-text-mutted">Grants Posted</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
-                                            <div className="d-inline-block text-start">
+                                            <div className="d-inline-block text-center">
                                                 <h4 className="color-white">
-                                                    <span className="count">17</span>
-                                                    <span> K+</span>
+                                                    <span className="count">297+</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Recruiters</p>
+                                                <p className="font-sm color-text-mutted">Online Courses</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
-                                            <div className="d-inline-block text-start">
+                                            <div className="d-inline-block text-center">
                                                 <h4 className="color-white">
-                                                    {" "}
-                                                    <span className="count">15</span>
-                                                    <span> K+</span>
+                                                    <span className="count">235+</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Freelancers</p>
+                                                <p className="font-sm color-text-mutted">Scholarships</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
-                                            <div className="d-inline-block text-start">
+                                            <div className="d-inline-block text-center">
                                                 <h4 className="color-white">
-                                                    {" "}
-                                                    <span className="count">28</span>
-                                                    <span> K+</span>
+                                                    <span className="count">212+</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Blog Tips</p>
+                                                <p className="font-sm color-text-mutted">Jobs</p>
                                             </div>
                                         </div>
                                     </div>
@@ -84,23 +79,12 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-30">
-                        <div className="container">
-                            <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Jobs of the day</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Search and connect with the right candidates faster.</p>
-                            </div>
-                            <div className="mt-50">
-                                <CategoryTab2 />
-                            </div>
-                        </div>
-                    </section>
                     <section className="section-box mt-50">
                         <div className="section-box wow animate__animated animate__fadeIn">
                             <div className="container">
                                 <div className="text-start">
-                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Popular category</h2>
-                                    <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Search and connect with the right candidates faster.</p>
+                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">How We Help</h2>
+                                    {/* <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Search and connect with the right candidates faster.</p> */}
                                 </div>
                                 <div className="box-swiper mt-50">
                                     <CategorySlider2 />

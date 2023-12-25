@@ -573,6 +573,12 @@ h6
     line-height: 40px;
     font-weight: 800;
 }
+.text-30
+{
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 800;
+}
 .text-52
 {
     font-size: 52px;
@@ -590,6 +596,10 @@ h6
 .color-green
 {
     color: $color-green;
+}
+.color-blue
+{
+    color: rgba(131, 203, 255, 1);
 }
 .color-brand-1
 {

@@ -11,7 +11,7 @@ export default function Index2() {
             <Layout>
                 <div>
                     <section className="section-box">
-                        <div className="banner-hero hero-2">
+                        <div className="banner-hero hero-grant">
                             <div className="banner-inner">
                                 <div className="block-banner">
                                     <h1 className="text-42 color-white wow animate__animated animate__fadeInUp">

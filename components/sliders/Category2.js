@@ -7,32 +7,32 @@ SwiperCore.use([Navigation]);
 const data = [
     {
         img: "img-big1.png",
-        title: "Software",
+        title: "Business Builder",
         count: 55
     },
     {
         img: "img-big2.png",
-        title: "Finance",
+        title: "Funding Builder",
         count: 35
     },
     {
         img: "img-big3.png",
-        title: "Recruting",
+        title: "Career Builder ",
         count: 20
     },
     {
-        img: "img-big1.png",
-        title: "Management",
+        img: "1.png",
+        title: "Resources",
         count: 15
     },
     {
-        img: "img-big2.png",
-        title: "Advertising",
+        img: "3.jpg",
+        title: "Ecosystem Partners",
         count: 10
     },
     {
-        img: "img-big3.png",
-        title: "Advertising",
+        img: "2.jpg",
+        title: "Accessibility",
         count: 10
     }
 ];
@@ -82,10 +82,10 @@ const CategorySlider2 = () => {
                                             <div className="box-cover-img">
                                                 <div className="content-bottom">
                                                     <h6 className="color-white mb-5">{item.title}</h6>
-                                                    <p className="color-white font-xs">
+                                                    {/* <p className="color-white font-xs">
                                                         <span>{item.count}</span>
                                                         <span> Jobs Available</span>
-                                                    </p>
+                                                    </p> */}
                                                 </div>
                                             </div>
                                         </a>

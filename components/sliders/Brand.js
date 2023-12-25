@@ -20,52 +20,52 @@ const BrandSlider = () => {
                 >
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/microsoft.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/Aston_Uni.jpg" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/sony.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/Tech-Nation-logo.png" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/acer.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/NatWest-Logo.png" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/nokia.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/somerset house.png" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/assus.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/womanwho_logo.jpg" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/casio.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/TheDataCompany_logo-2.png" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/dell.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/UoB Crest Logo RGB Stacked Positive.jpg" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/panasonic.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/WMEH.jpg" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/vaio.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/alison online.jpg" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
-                            <img src="assets/imgs/slider/logo/sharp.svg" alt="jobBox" />
+                            <img src="assets/imgs/slider/logo/big5Logo.png" alt="HibretOne" />
                         </a>
                     </SwiperSlide>
                 </Swiper>
