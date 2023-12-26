@@ -15,7 +15,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
       })
     return (
         <>
-        
+
             <header className={scroll ? "header sticky-bar stick" : "header sticky-bar"}>
                 <div className="container">
                     <div className="main-header">
@@ -32,7 +32,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Entrepreneurial Assessments</a></Link>
+                                                <Link legacyBehavior href="/entrepreneurial-assessments"><a>Entrepreneurial Assessments</a></Link>
                                             </li>
                                             <li>
                                                 <Link legacyBehavior href="/"><a>Entrepreneur Academy</a></Link>
@@ -43,11 +43,11 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/"><a>Funding Builder</a></Link>
+                                        <Link legacyBehavior href="/funding-builder"><a>Funding Builder</a></Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/"><a>R&D Tax Credits Calculator</a></Link>
+                                                <Link legacyBehavior href="/r&d-tax-credits-calculator"><a>R&D Tax Credits Calculator</a></Link>
                                             </li>
                                             <li>
                                                 <Link legacyBehavior href="/"><a>Investability Rating</a></Link>
@@ -93,7 +93,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                             </li>
                                         </ul>
                                     </li>
-                                
+
                                     <li className="has-children">
                                     <Link legacyBehavior href="/"><a>About Us</a></Link>
 
@@ -108,7 +108,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                     </li>
                                 </ul>
                             </nav>
-                            <div className={`burger-icon burger-icon-white ${openClass && "burger-close"}`} 
+                            <div className={`burger-icon burger-icon-white ${openClass && "burger-close"}`}
                             onClick={()=>{handleOpen(); handleRemove()}}>
                                 <span className="burger-icon-top" /><span className="burger-icon-mid" /><span className="burger-icon-bottom" /></div>
                         </div>
