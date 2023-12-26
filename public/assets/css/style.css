@@ -1371,7 +1371,7 @@ span.btn {
 }
 
 .assessment-question {
-  height: 80px;
+  min-height: 12.5vh;
 }
 
 i.assessment-icon * {
@@ -1407,7 +1407,7 @@ i.assessment-icon:hover * {
   background-color: transparent;
   border: 1px solid #adadad;
   line-height: 26px;
-  height: 70px;
+  height: 25vh;
   padding: 10px 25px;
 }
 
@@ -1832,7 +1832,7 @@ label {
   margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 600;
-  width: 30%;
+  width: 50%;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -1840,6 +1840,7 @@ label {
 
 .strengths-and-ideal-jobs div {
   display: inline-block;
+  margin: 0 auto;
 }
 
 .strengths-and-ideal-jobs.disabled {
