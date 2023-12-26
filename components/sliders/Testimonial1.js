@@ -17,7 +17,7 @@ const TestimonialSlider1 = () => {
                     <SwiperSlide>
                         <div className="card-grid-6 hover-up">
                             <div className="card-text-desc mt-10">
-                                <p className="font-md color-text-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque metus. Vivamus consectetur ultricies commodo. Pellentesque at nisl sit amet neque finibus egestas ut at magna. Cras tincidunt tortor sed eros aliquam eleifend.</p>
+                                <p className="font-md color-text-paragraph">Thanks to Drew's support, I got a fully funded grant from Coventry University to update my company's logo, branding, and homepage, taking us to the next level.</p>
                             </div>
                             <div className="card-image">
                                 <div className="image">
@@ -26,8 +26,8 @@ const TestimonialSlider1 = () => {
                                     </figure>
                                 </div>
                                 <div className="card-profile">
-                                    <h6>Mark Adair</h6>
-                                    <span>Businessmen</span>
+                                    <h6>Ameesha Green</h6>
+                                    <span>Director, The Book Shelf</span>
                                 </div>
                             </div>
                         </div>
@@ -35,7 +35,8 @@ const TestimonialSlider1 = () => {
                     <SwiperSlide>
                         <div className="card-grid-6 hover-up">
                             <div className="card-text-desc mt-10">
-                                <p className="font-md color-text-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque metus. Vivamus consectetur ultricies commodo. Pellentesque at nisl sit amet neque finibus egestas ut at magna. Cras tincidunt tortor sed eros aliquam eleifend.</p>
+                                <p className="font-md color-text-paragraph">Drew provides consistent and essential support to entrepreneurs in in our West Midlands Eco-system. This support provides essential lifeblood for entrepreneurial growth and ultimately their survival. Essential support on funding and access to finance.</p>
+                                <p className="font-md color-text-paragraph">He is a super connector that pulls together the wide-reaching information available across the region and provides a single point of truth to entrepreneurs via his newsletter. His Show Me The Money workshops pull together experts and funders from across the region.</p>
                             </div>
                             <div className="card-image">
                                 <div className="image">
@@ -44,8 +45,8 @@ const TestimonialSlider1 = () => {
                                     </figure>
                                 </div>
                                 <div className="card-profile">
-                                    <h6>Mark Adair</h6>
-                                    <span>Businessmen</span>
+                                    <h6>Pam Sheemar</h6>
+                                    <span>Director, Commercial Banking NatWest</span>
                                 </div>
                             </div>
                         </div>
