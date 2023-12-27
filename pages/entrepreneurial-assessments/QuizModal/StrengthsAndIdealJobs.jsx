@@ -14,7 +14,7 @@ const StrengthsAndIdealJobs = props => {
 
   return (
     <>
-    <div className={`strengths-and-ideal-jobs ${props.isActive ? "active" : "disabled"}`}>
+    <div className={`strengths-and-ideal-jobs text-center ${props.isActive ? "active" : "disabled"}`}>
       <div className="strengths" onClick={props.isActive ? toggleOpen : null} data-value="Strengths" >
         <div className="circle d-flex justify-content-center">
           <img alt="Strengths Icon" src="assets/imgs/page/entrepreneurial-assessments/exercise.png" data-value="Strengths" />

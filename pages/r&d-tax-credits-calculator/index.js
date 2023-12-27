@@ -156,9 +156,9 @@ export default function TaxCreditsCalculator() {
                                                     <label className="fs-3 mb-30 lh-lg">Your headcount...</label><br />
                                                     <div className="btn-group btn-group-lg">
                                                         <input type="radio" className="btn-check" value="A" name="headcount" id="headcount-less" />
-                                                        <label htmlFor="headcount-less" className="btn btn-switch">Less than 500</label>
+                                                        <label style={{"font-size": "3vh", "line-height": "4vh"}} htmlFor="headcount-less" className="btn btn-switch">Less than 500</label>
                                                         <input type="radio" className="btn-check" value="B" name="headcount" id="headcount-more" />
-                                                        <label htmlFor="headcount-more" className="btn btn-switch">More than 500</label>
+                                                        <label style={{"font-size": "3vh", "line-height": "4vh"}} htmlFor="headcount-more" className="btn btn-switch">More than 500</label>
                                                     </div>
                                                     <div className="button-group mt-30">
                                                         <button className="btn btn-default mr-10 ml-10 fs-5" onClick={handleNext}>Next</button>
@@ -168,9 +168,9 @@ export default function TaxCreditsCalculator() {
                                                     <label className="fs-3 mb-30 lh-lg">Your turnover...</label><br />
                                                     <div className="btn-group btn-group-lg" role="group">
                                                         <input type="radio" className="btn-check" value="A" name="turnover" id="turnover-no-more" />
-                                                        <label htmlFor="turnover-no-more" className="btn btn-switch">No more than £100 million</label>
+                                                        <label style={{"font-size": "3vh", "line-height": "4vh"}} htmlFor="turnover-no-more" className="btn btn-switch">No more than £100 million</label>
                                                         <input type="radio" className="btn-check" value="B" name="turnover" id="turnover-more" />
-                                                        <label htmlFor="turnover-more" className="btn btn-switch">More than £100 million</label>
+                                                        <label style={{"font-size": "3vh", "line-height": "4vh"}} htmlFor="turnover-more" className="btn btn-switch">More than £100 million</label>
                                                     </div>
                                                     <div className="button-group mt-30">
                                                         <button className="btn btn-default mr-10 ml-10 fs-5" onClick={handlePrevious}>Back</button>
@@ -181,9 +181,9 @@ export default function TaxCreditsCalculator() {
                                                     <label className="fs-3 mb-30 lh-lg">Your balance sheet...</label><br />
                                                     <div className="btn-group btn-group-lg">
                                                         <input type="radio" className="btn-check" value="A" name="balance-sheet" id="balance-sheet-less"/>
-                                                        <label htmlFor="balance-sheet-less" className="btn btn-switch">Less than £86 million</label>
+                                                        <label style={{"font-size": "3vh", "line-height": "4vh"}} htmlFor="balance-sheet-less" className="btn btn-switch">Less than £86 million</label>
                                                         <input type="radio" className="btn-check" value="B" name="balance-sheet" id="balance-sheet-more" />
-                                                        <label htmlFor="balance-sheet-more" className="btn btn-switch">More than £86 million</label>
+                                                        <label style={{"font-size": "3vh", "line-height": "4vh"}} htmlFor="balance-sheet-more" className="btn btn-switch">More than £86 million</label>
                                                     </div>
                                                     <div className="button-group mt-30">
                                                         <button className="btn btn-default mr-10 ml-10 fs-5" onClick={handlePrevious}>Back</button>
@@ -194,9 +194,9 @@ export default function TaxCreditsCalculator() {
                                                     <label className="fs-3 mb-30 lh-lg">Is your company...</label><br />
                                                     <div className="btn-group btn-group-lg">
                                                         <input type="radio" className="btn-check" value="A" name="company" id="company-profit" />
-                                                        <label htmlFor="company-profit" className="btn btn-switch">Profit-making</label>
+                                                        <label style={{"font-size": "3vh", "line-height": "4vh"}} htmlFor="company-profit" className="btn btn-switch">Profit-making</label>
                                                         <input type="radio" className="btn-check" value="B" name="company" id="company-loss" />
-                                                        <label htmlFor="company-loss" className="btn btn-switch">Loss-making</label>
+                                                        <label style={{"font-size": "3vh", "line-height": "4vh"}} htmlFor="company-loss" className="btn btn-switch">Loss-making</label>
                                                     </div>
                                                     <div className="button-group mt-30">
                                                         <button className="btn btn-default mr-10 ml-10 fs-5" onClick={handlePrevious}>Back</button>
