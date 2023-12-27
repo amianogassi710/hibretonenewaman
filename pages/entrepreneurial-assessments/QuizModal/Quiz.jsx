@@ -14,6 +14,7 @@ const Quiz = props => {
   const [questions,setQuestions] = useState([])
   const [time,setTime] = useState("")
   const [uizardText,setUizardText] = useState("")
+  const [answers,setAnswers] = useState([])
 
   const nextOnEnter = (e) => {
     var currentForm = formGroupRef.current[formIndex]
@@ -44,6 +45,7 @@ const Quiz = props => {
         setTime(data.time)
         setQuestions(data.assessment)
         setUizardText(data["uizard-html"])
+        setAnswers(data["answers"])
       } catch (error) {
         console.log("Couldn't retrieve quiz: ", error);
       }
@@ -255,27 +257,27 @@ const Quiz = props => {
             <form onSubmit={handleSubmit}>
               {/* Loops through all the provided questions */}
               {questions.map((question) => (
-                <div className="assessment-form-group" style={{display: question.fields.question_number === 1 ? "block" : "none"}} key={question.fields.question_number}>
-                  <Question section={question.fields.section} question={question.fields.question_text} />
+                <div className="assessment-form-group" style={{display: question.question_number === 1 ? "block" : "none"}} key={question.question_number}>
+                  <Question section={question.section} question={question.question_text} />
                     <ul className="assessment-radio-group">
-                      {question.fields.answers.map((answer) => (
+                      {answers.map((answer) => (
                         <li
-                          className={`${question.fields.question_number}-${answer.value}`}
+                          className={`${question.question_number}-${answer.value}`}
                           key={answer.value}
                         >
                             <input
                               type="radio"
-                              name={`q${question.fields.question_number}`}
-                              id={`q${question.fields.question_number}-${answer.answer.toLowerCase()}`}
+                              name={`q${question.question_number}`}
+                              id={`q${question.question_number}-${answer.text}`}
                               value={answer.value}
                             />
-                          <label htmlFor={`q${question.fields.question_number}-${answer.answer.toLowerCase()}`}>
-                            {answer.answer}
+                          <label htmlFor={`q${question.question_number}-${answer.text}`}>
+                            {answer.text}
                           </label>
                         </li>
                       ))}
                     </ul>
-                    <Button number={question.fields.question_number} />
+                    <Button number={question.question_number} />
                   </div>
               ))}
 
