@@ -2,8 +2,7 @@ import Swal from "sweetalert2";
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import StrengthsAndIdealJobs from "./StrengthsAndIdealJobs.jsx";
-import { IoCloseOutline } from "react-icons/io5";
-import { IoIosInformationCircleOutline,IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Questions from '../Questions.json'
 
 

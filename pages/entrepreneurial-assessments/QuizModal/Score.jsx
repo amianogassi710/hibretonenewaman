@@ -145,14 +145,7 @@ const Score = props => {
 
   return (
     <>
-        <div className="assessment-modal-header d-flex justify-content-space-between pr-20 pl-20">
-        <div className="d-flex">
-          <h4 className="text-reset">{props.assessment.replace("-"," ")}</h4>
-        </div>
-        <div className="close">
-          <i className="assessment-icon d-flex justify-content-center align-items-center" onClick={props.onClose}><IoCloseOutline size={32.5} /></i>
-        </div>
-      </div>
+        
         <div className="content p-20">
           <h3 className="score">Your Results:  {props.feedback.score}</h3>
 
