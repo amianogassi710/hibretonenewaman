@@ -10,34 +10,6 @@ const TaxCreditsCalculatorModal = props => {
   const formGroupRef = useRef([])
   const inputRef = useRef([])
 
-  const nextOnEnter = (e) => {
-    var currentForm = formGroupRef.current[question-1]
-    if (e.keyCode === 13) {
-        e.preventDefault()
-      // Default function of enter submits form so only eliminate when not on the last question
-      if (question < 6) {
-        handleNext()
-      } else if (!handleValidateForm(currentForm)) {
-        Swal.fire({
-          text: "Please fill in the response before proceeding to the next question.",
-          icon: "warning",
-          confirmButtonText: "OK",
-          confirmButtonColor: '#ff9494'
-        });
-        return;
-      } else {
-        handleSubmit(e)
-      }
-    }
-  };
-
-  useEffect(() => {
-    document.body.addEventListener('keydown', nextOnEnter)
-    return function cleanup() {
-      document.body.removeEventListener('keydown', nextOnEnter)
-    }
-  },[nextOnEnter])
-
   useEffect(() => {
     // Gets all the form sections in the quiz
     formGroupRef.current = document.querySelectorAll("form .assessment-form-group")
