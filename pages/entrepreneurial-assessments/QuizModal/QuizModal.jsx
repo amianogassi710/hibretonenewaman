@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import AssessmentModal from '../../../components/elements/AssessmentModal/AssessmentModal';
+import AssessmentModal from '../../../components/elements/AssessmentModal';
 import Quiz from './Quiz';
 import Start from './Start';
 import Score from './Score';
+import Questions from '../Questions.json'
 
 const QuizModal = props => {
   const [startOpen,setStartOpen] = useState(true)
   const [quizOpen,setQuizOpen] = useState(false)
   const [scoreOpen,setScoreOpen] = useState(false)
   const [feedback,setFeedback] = useState({})
+  const assessment = Questions[`${props.assessment}`]
 
   const closeOnEscape = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
@@ -49,7 +51,7 @@ const QuizModal = props => {
 
 
   return (
-    <AssessmentModal isOpen={props.show} onClose={handleCloseModal}>
+    <AssessmentModal isOpen={props.show} onClose={handleCloseModal} header={`${props.assessment}`} uizardHTML="Hello There!">
         <Start onClose={handleCloseModal} assessment={props.assessment} onStart={handleStartQuiz} show={startOpen} />
         <Quiz onClose={handleCloseModal} assessment={props.assessment} onSubmit={handleSubmitQuiz} show={quizOpen} isLoggedIn={props.isLoggedIn} />
         <Score onClose={handleCloseModal} assessment={props.assessment} onRetake={handleRetake} show={scoreOpen} feedback={feedback} />

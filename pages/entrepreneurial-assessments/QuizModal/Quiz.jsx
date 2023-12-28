@@ -2,8 +2,8 @@ import Swal from "sweetalert2";
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import StrengthsAndIdealJobs from "./StrengthsAndIdealJobs.jsx";
-import { IoCloseOutline } from "react-icons/io5";
-import { IoIosInformationCircleOutline,IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import Questions from '../Questions.json'
 
 
 const Quiz = props => {
@@ -39,15 +39,23 @@ const Quiz = props => {
 
   useEffect(() => {
     const getQuiz = async () => {
-      try {
-        const response = await axios.get(`/assessments/questions/${props.assessment}`)
-        const data = response.data;
-        setTime(data.time)
-        setQuestions(data.assessment)
-        setUizardText(data["uizard-html"])
-        setAnswers(data["answers"])
-      } catch (error) {
-        console.log("Couldn't retrieve quiz: ", error);
+      if (props.assessment !== "Personality") {
+        const assessment = Questions[`${props.assessment}`]
+        setTime(assessment["time"])
+        setQuestions(assessment["assessment"])
+        setUizardText(assessment["uizard-html"])
+        setAnswers(assessment["answers"])
+      } else {
+        try {
+          const response = await axios.get(`/assessments/personality`)
+          const data = response.data;
+          setTime(data.time)
+          setQuestions(data.assessment)
+          setUizardText(data["uizard-html"])
+          setAnswers(data["answers"])
+        } catch (error) {
+          console.log("Couldn't retrieve quiz: ", error);
+        }
       }
     };
     getQuiz();
@@ -194,7 +202,7 @@ const Quiz = props => {
     }
   }
 
-  const Button = ({number}) => {
+  const Button = () => {
     // Also 1-indexed
     return (
       <div className="button-group d-flex align-items-center mt-15">
@@ -204,16 +212,6 @@ const Quiz = props => {
         <span className="ml-5">Or Press ENTER</span>
       </div>
     )
-  }
-
-  const handleUIzard = () => {
-    Swal.fire({
-      title: props.assessment.replace("-",""),
-      html: uizardText,
-      showCloseButton: true,
-      confirmButtonText: "Close",
-      confirmButtonColor: "#046893"
-    });
   }
 
   const Question = ({ section, question }) => {
@@ -243,15 +241,6 @@ const Quiz = props => {
 
   return (
     <>
-      <div className="assessment-modal-header d-flex justify-content-space-between pr-20 pl-20">
-        <div className="d-flex">
-          <h4 className="text-reset">{props.assessment.replace("-"," ")}</h4>
-          <i className="uizard assessment-icon d-flex justify-content-center align-items-center ml-10" onClick={handleUIzard}><IoIosInformationCircleOutline size={30}/></i>
-        </div>
-        <div className="close">
-          <i className="assessment-icon d-flex justify-content-center align-items-center" onClick={props.onClose}><IoCloseOutline size={32.5} /></i>
-        </div>
-      </div>
       <div className="assessment-modal-body text-center">
         <h4 className="mb-20 mt-10 col-12">Take this simple {time} assessment</h4>
             <form onSubmit={handleSubmit}>
@@ -267,11 +256,12 @@ const Quiz = props => {
                         >
                             <input
                               type="radio"
+                              style={{"fontHeight": "3vh", "lineHeight": "4vh"}}
                               name={`q${question.question_number}`}
                               id={`q${question.question_number}-${answer.text}`}
                               value={answer.value}
                             />
-                          <label htmlFor={`q${question.question_number}-${answer.text}`}>
+                          <label style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor={`q${question.question_number}-${answer.text}`}>
                             {answer.text}
                           </label>
                         </li>
