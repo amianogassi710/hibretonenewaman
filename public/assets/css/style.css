@@ -1416,7 +1416,7 @@ i.assessment-icon:hover * {
   transition: 0.2s;
 }
 
-input:checked + .btn.btn-switch {
+input:checked + .btn.btn-switch, input:checked + label {
   color: #ffffff;
   background-color: #3C65F5;
 }
@@ -1635,14 +1635,10 @@ label {
 }
 
 .assessment-radio-group li label:hover {
-  border: 1px solid white;
-  background-color: rgba(226,226,226,0.5);
+  background-color: #3C65F5;
+  opacity: 0.4;
+  color: white;
   transition: 0.1s ease-in-out;
-}
-
-:checked + label {
-  background-color: rgba(226,226,226,0.5);
-  font-weight: bold;
 }
 
 .assessment-form-group {
