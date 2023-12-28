@@ -51,7 +51,7 @@ const QuizModal = props => {
 
 
   return (
-    <AssessmentModal isOpen={props.show} onClose={handleCloseModal} header={`${props.assessment.replace("-"," ")}`} uizardHTML="Hello There!">
+    <AssessmentModal isOpen={props.show} onClose={handleCloseModal} header={`${props.assessment}`} uizardHTML="Hello There!">
         <Start onClose={handleCloseModal} assessment={props.assessment} onStart={handleStartQuiz} show={startOpen} />
         <Quiz onClose={handleCloseModal} assessment={props.assessment} onSubmit={handleSubmitQuiz} show={quizOpen} isLoggedIn={props.isLoggedIn} />
         <Score onClose={handleCloseModal} assessment={props.assessment} onRetake={handleRetake} show={scoreOpen} feedback={feedback} />
