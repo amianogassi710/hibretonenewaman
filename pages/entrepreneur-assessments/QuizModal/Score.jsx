@@ -65,6 +65,7 @@ const Score = props => {
   const Feedback = () => {
     if (props.assessment === "Entrepreneurial-Readiness") {
       const feedback = props.feedback.feedback
+      console.log(feedback)
       let j = 0
       return (
         <>

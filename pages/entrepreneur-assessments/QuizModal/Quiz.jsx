@@ -10,7 +10,6 @@ const Quiz = props => {
   const [formIndex,setFormIndex] = useState(0)
   const checkBoxesRef = useRef([])
   const [progress, setProgress] = useState(0)
-  const questions = props.assessment.assessment
 
   const nextOnEnter = (e) => {
     var currentForm = formGroupRef.current[formIndex]
@@ -114,7 +113,7 @@ const Quiz = props => {
       // Extract relevant form data
       const checkedInputs = document.querySelectorAll('input:checked');
       const formData = {
-        "assessment": props.assessment,
+        "assessment": props.title,
         "answers": []
       };
       var i = 1;
@@ -217,7 +216,7 @@ const Quiz = props => {
         <h4 className="mb-20 mt-10 col-12">Take this simple {props.assessment.time} assessment</h4>
             <form onSubmit={handleSubmit}>
               {/* Loops through all the provided questions */}
-              {questions.map((question) => (
+              {props.assessment.assessment.map((question) => (
                 <div className="assessment-form-group" style={{display: question.question_number === 1 ? "block" : "none"}} key={question.question_number}>
                   <Question section={question.section} question={question.question_text} />
                     <ul className="assessment-radio-group">
