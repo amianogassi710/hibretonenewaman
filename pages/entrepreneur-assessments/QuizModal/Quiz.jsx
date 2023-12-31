@@ -16,7 +16,7 @@ const Quiz = props => {
     if (e.keyCode === 13) {
         e.preventDefault()
       // Default function of enter submits form so only eliminate when not on the last question
-      if (formIndex < questions.length) {
+      if (formIndex < props.assessment.assessment.length) {
         handleGoNext()
       } else if (!handleValidateForm(currentForm)) {
         Swal.fire({
@@ -56,7 +56,7 @@ const Quiz = props => {
 
       var nextFormIndex = formIndex + 1;
       setFormIndex(nextFormIndex);
-      setProgress((nextFormIndex+1)/(questions.length+1)*100)
+      setProgress((nextFormIndex+1)/(props.assessment.assessment.length+1)*100)
 
       var nextForm = formGroupRef.current[nextFormIndex];
       nextForm.style.display = "block";
@@ -76,7 +76,7 @@ const Quiz = props => {
 
     var previousFormIndex = formIndex - 1;
     setFormIndex(previousFormIndex);
-    setProgress((previousFormIndex+1)/(questions.length+1)*100)
+    setProgress((previousFormIndex+1)/(props.assessment.assessment.length+1)*100)
 
     var previousForm = formGroupRef.current[previousFormIndex];
     previousForm.style.display = "block";
@@ -144,7 +144,7 @@ const Quiz = props => {
           </button>
         </div>
       )
-    } else if (number < questions.length) {
+    } else if (number < props.assessment.assessment.length) {
       return (
         <>
         <div className="button-group d-flex">
@@ -215,7 +215,7 @@ const Quiz = props => {
       <div className="assessment-modal-body text-center">
         <h4 className="mb-20 mt-10 col-12">Take this simple {props.assessment.time} assessment</h4>
             <form onSubmit={handleSubmit}>
-              {/* Loops through all the provided questions */}
+              {/* Loops through all the provided props.assessment.assessment */}
               {props.assessment.assessment.map((question) => (
                 <div className="assessment-form-group" style={{display: question.question_number === 1 ? "block" : "none"}} key={question.question_number}>
                   <Question section={question.section} question={question.question_text} />
@@ -274,8 +274,8 @@ const Quiz = props => {
       </div>
       <div className="assessment-modal-footer">
         <div className="tracker lh-sm">
-          {/* questions.length + 1 to include gender question */}
-          <p>Question {formIndex+1} of {questions.length+1}</p>
+          {/* props.assessment.assessment.length + 1 to include gender question */}
+          <p>Question {formIndex+1} of {props.assessment.assessment.length+1}</p>
           <div className="progress-bar">
             <div className="bar" style={{width: `${progress}%`}}>
               <span className="progression"></span>
