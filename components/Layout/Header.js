@@ -32,7 +32,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/entrepreneurial-assessments"><a>Entrepreneurial Assessments</a></Link>
+                                                <Link legacyBehavior href="/entrepreneur-assessments"><a>Entrepreneur Assessments</a></Link>
                                             </li>
                                             <li>
                                                 <Link legacyBehavior href="/"><a>Entrepreneur Academy</a></Link>
@@ -57,9 +57,6 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                             </li>
                                             <li>
                                                 <Link legacyBehavior href="/"><a>Grant Writer</a></Link>
-                                            </li>
-                                            <li>
-                                                <Link legacyBehavior href="/"><a>Investability Rating</a></Link>
                                             </li>
                                         </ul>
                                     </li>
@@ -89,7 +86,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                                 <Link legacyBehavior href="/"><a>Career Guidance</a></Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Job Connect</a></Link>
+                                                <Link legacyBehavior href="/job-connect"><a>Job Connect</a></Link>
                                             </li>
                                         </ul>
                                     </li>

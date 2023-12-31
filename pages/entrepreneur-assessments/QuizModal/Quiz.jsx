@@ -3,18 +3,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import StrengthsAndIdealJobs from "./StrengthsAndIdealJobs.jsx";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import Questions from '../Questions.json'
 
 
 const Quiz = props => {
   const formGroupRef = useRef([])
   const [formIndex,setFormIndex] = useState(0)
   const checkBoxesRef = useRef([])
-  const [progress,setProgress] = useState(0)
-  const [questions,setQuestions] = useState([])
-  const [time,setTime] = useState("")
-  const [uizardText,setUizardText] = useState("")
-  const [answers,setAnswers] = useState([])
+  const [progress, setProgress] = useState(0)
 
   const nextOnEnter = (e) => {
     var currentForm = formGroupRef.current[formIndex]
@@ -36,30 +31,6 @@ const Quiz = props => {
       }
     }
   };
-
-  useEffect(() => {
-    const getQuiz = async () => {
-      if (props.assessment !== "Personality") {
-        const assessment = Questions[`${props.assessment}`]
-        setTime(assessment["time"])
-        setQuestions(assessment["assessment"])
-        setUizardText(assessment["uizard-html"])
-        setAnswers(assessment["answers"])
-      } else {
-        try {
-          const response = await axios.get(`/assessments/personality`)
-          const data = response.data;
-          setTime(data.time)
-          setQuestions(data.assessment)
-          setUizardText(data["uizard-html"])
-          setAnswers(data["answers"])
-        } catch (error) {
-          console.log("Couldn't retrieve quiz: ", error);
-        }
-      }
-    };
-    getQuiz();
-  },[])
 
   useEffect(() => {
     document.body.addEventListener('keydown', nextOnEnter)
@@ -142,7 +113,7 @@ const Quiz = props => {
       // Extract relevant form data
       const checkedInputs = document.querySelectorAll('input:checked');
       const formData = {
-        "assessment": props.assessment,
+        "assessment": props.title,
         "answers": []
       };
       var i = 1;
@@ -242,14 +213,14 @@ const Quiz = props => {
   return (
     <>
       <div className="assessment-modal-body text-center">
-        <h4 className="mb-20 mt-10 col-12">Take this simple {time} assessment</h4>
+        <h4 className="mb-20 mt-10 col-12">Take this simple {props.assessment.time} assessment</h4>
             <form onSubmit={handleSubmit}>
               {/* Loops through all the provided questions */}
-              {questions.map((question) => (
+              {props.assessment.assessment.map((question) => (
                 <div className="assessment-form-group" style={{display: question.question_number === 1 ? "block" : "none"}} key={question.question_number}>
                   <Question section={question.section} question={question.question_text} />
                     <ul className="assessment-radio-group">
-                      {answers.map((answer) => (
+                      {props.assessment.answers.map((answer) => (
                         <li
                           className={`${question.question_number}-${answer.value}`}
                           key={answer.value}

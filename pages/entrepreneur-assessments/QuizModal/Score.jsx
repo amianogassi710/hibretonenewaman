@@ -65,6 +65,7 @@ const Score = props => {
   const Feedback = () => {
     if (props.assessment === "Entrepreneurial-Readiness") {
       const feedback = props.feedback.feedback
+      console.log(feedback)
       let j = 0
       return (
         <>
@@ -145,12 +146,12 @@ const Score = props => {
 
   return (
     <>
-        
+
         <div className="content p-20">
           <h3 className="score">Your Results:  {props.feedback.score}</h3>
 
           <h4 className="thank-you">
-            Thank you for completing the {props.assessment.replace("-"," ")} Assessment!
+            Thank you for completing the {props.title} Assessment!
           </h4>
 
           <Feedback />

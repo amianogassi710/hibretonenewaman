@@ -11,7 +11,7 @@ const AssessmentModal = ({ isOpen, onClose, children, header, uizardHTML }) => {
 
   const handleUIzard = () => {
     Swal.fire({
-      title: props.assessment.replace("-",""),
+      title: header.replace("-"," "),
       html: uizardHTML,
       showCloseButton: true,
       confirmButtonText: "Close",

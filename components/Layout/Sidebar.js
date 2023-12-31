@@ -66,95 +66,86 @@ const Sidebar = ({ openClass }) => {
                                          <li className={isActive.key == 2 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(2)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/jobs-grid"><a>Find a Job</a></Link>
+                                            <Link legacyBehavior href="/"><a>Business Builder</a></Link>
 
                                             <ul className={isActive.key == 2 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>
-                                                    <Link legacyBehavior href="/jobs-grid"><a>Jobs Grid</a></Link>
+                                                    <Link legacyBehavior href="/entrepreneur-assessments"><a>Entrepreneur Assessments</a></Link>
                                                     </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/jobs-list"><a>Jobs List</a></Link>
+                                                    <Link legacyBehavior href="/"><a>Entrepreneur Academy</a></Link>
                                                     </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/job-details"><a>Jobs Details</a></Link>
-                                                    </li>
-                                                <li>
-                                                    <Link legacyBehavior href="/job-details-2"><a>Jobs Details 2            </a></Link>
+                                                    <Link legacyBehavior href="/"><a>Scholarships & Bursaries</a></Link>
                                                     </li>
                                             </ul>
                                         </li>
                                          <li className={isActive.key == 3 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(3)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/companies-grid"><a>Recruiters</a></Link>
+                                            <Link legacyBehavior href="/"><a>Funding Builder</a></Link>
 
                                             <ul className={isActive.key == 3 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>
-                                                    <Link legacyBehavior href="/companies-grid"><a>Recruiters</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/r&d-tax-credits-calculator"><a>R&D Tax Credits Calculator</a></Link>
+                                                </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/company-details"><a>Company Details</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/"><a>Investability Rating</a></Link>
+                                                </li>
+                                                <li>
+                                                    <Link legacyBehavior href="/grant-finder"><a>Grant Finder</a></Link>
+                                                </li>
+                                                <li>
+                                                    <Link legacyBehavior href="/"><a>Grant Writer</a></Link>
+                                                </li>
                                             </ul>
                                         </li>
                                          <li className={isActive.key == 4 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(4)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/candidates-grid"><a>Candidates</a></Link>
+                                            <Link legacyBehavior href="/candidates-grid"><a>Resource Builder</a></Link>
 
                                             <ul className={isActive.key == 4 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>
-                                                    <Link legacyBehavior href="/candidates-grid"><a>Candidates Grid</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/"><a>Ecosystem Connector</a></Link>
+                                                </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/candidate-details"><a>Candidate Details</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/"><a>Business Problem Pivots</a></Link>
+                                                </li>
+                                                <li>
+                                                    <Link legacyBehavior href="/"><a>Industry Intelligence</a></Link>
+                                                </li>
                                             </ul>
                                         </li>
                                          <li className={isActive.key == 5 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(5)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/blog-grid"><a>Pages</a></Link>
+                                            <Link legacyBehavior href="/blog-grid"><a>Career Builder</a></Link>
 
                                             <ul className={isActive.key == 5 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-about"><a>About Us</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/"><a>Online Courses</a></Link>
+                                                </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-pricing"><a>Pricing Plan</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/"><a>Career Guidance</a></Link>
+                                                </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-contact"><a>Contact Us</a></Link>
-                                                    </li>
-                                                <li>
-                                                    <Link legacyBehavior href="/page-register"><a>Register</a></Link>
-                                                    </li>
-                                                <li>
-                                                    <Link legacyBehavior href="/page-signin"><a>Signin</a></Link>
-                                                    </li>
-                                                <li>
-                                                    <Link legacyBehavior href="/page-reset-password"><a>Reset Password</a></Link>
-                                                    </li>
-                                                <li>
-                                                    <Link legacyBehavior href="/page-content-protected"><a>Content Protected</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/job-connect"><a>Job Connect</a></Link>
+                                                </li>
                                             </ul>
                                         </li>
                                          <li className={isActive.key == 6 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(6)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/blog-grid"><a>Blog</a></Link>
+                                            <Link legacyBehavior href="/blog-grid"><a>About Us</a></Link>
 
                                             <ul className={isActive.key == 6 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>
-                                                    <Link legacyBehavior href="/blog-grid"><a>Blog Grid</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/"><a>Pricing</a></Link>
+                                                </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/blog-grid-2"><a>Blog Grid 2</a></Link>
-                                                    </li>
-                                                <li>
-                                                    <Link legacyBehavior href="/blog-details"><a>Blog Single</a></Link>
-                                                    </li>
+                                                    <Link legacyBehavior href="/"><a>Contact Us</a></Link>
+                                                </li>
                                             </ul>
                                         </li>
                                         <li>

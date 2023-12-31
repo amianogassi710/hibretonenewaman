@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Layout from "../components/Layout/Layout";
-import BlogSlider from "./../components/sliders/Blog";
+import Layout from "../../components/Layout/Layout";
+import BlogSlider from "../../components/sliders/Blog";
 
-export default function JobGrid() {
+export default function JobConnect() {
     return (
         <>
             <Layout>
@@ -12,11 +12,10 @@ export default function JobGrid() {
                             <div className="banner-hero banner-single banner-single-bg">
                                 <div className="block-banner text-center">
                                     <h3 className="wow animate__animated animate__fadeInUp">
-                                        <span className="color-brand-2">22 Grants</span> Available Now
+                                        <span className="color-brand-2">- Jobs</span> Available Now
                                     </h3>
                                     <div className="font-sm color-text-paragraph-2 mt-10 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                                        Discover the latest grant and programmes for your business type, <br className="d-none d-xl-block" />
-                                        stage, sector and region.
+                                        Searching the internet for the highest number of jobs and connecting you to new employment opportunities.
                                     </div>
                                     <div className="form-find text-start mt-40 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
                                         <form>
