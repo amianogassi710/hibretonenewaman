@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import Layout from "../../components/Layout/Layout";
 import TaxCreditsCalculatorModal from './TaxCreditsCalculatorModal/TaxCreditsCalculatorModal';
 
@@ -11,16 +11,6 @@ export default function TaxCreditsCalculator() {
     const toggleOpen = e => {
         setIsOpen(prevOpen => !prevOpen)
     }
-
-    const handleSubmit = e => {
-        setResult(e)
-        setStart(false)
-    }
-
-    const handleRetake = e => {
-        setResult(0)
-        toggleOpen()
-      }
 
     return (
         <>
@@ -53,11 +43,7 @@ export default function TaxCreditsCalculator() {
                                                 <p className="fs-4 lh-base mb-25">The hibretOne platform includes an R&D Tax Credit Calculator, enabling business owners to guesstimate how much they could be owed. Research estimates that £84bn in R&D tax relief available to SMEs remains unclaimed. </p><br />
                                                 <button className="btn btn-default mr-10 ml-10 fs-5" onClick={toggleOpen}>Start</button>
                                             </div>
-                                            <TaxCreditsCalculatorModal show={isOpen} onClose={toggleOpen} handleSubmit={handleSubmit} />
-                                            <div className="calculator-results" style={{display: !start ? "block" : "none"}}>
-                                                <h4>Result: £{result.toFixed(2)}</h4><br />
-                                                <button className="btn btn-default fs-5 mx-auto" onClick={handleRetake}>Retake</button>
-                                            </div>
+                                            <TaxCreditsCalculatorModal show={isOpen} onClose={toggleOpen} />
                                         </div>
                                     </div>
                                 </div>
