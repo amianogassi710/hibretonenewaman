@@ -55,7 +55,7 @@ const Quiz = props => {
       currentForm.style.display = "none";
 
       var nextFormIndex = formIndex + 1;
-      setFormIndex(nextFormIndex);
+      setFormIndex(prevFormIndex => prevFormIndex + 1);
       setProgress((nextFormIndex+1)/(props.assessment.assessment.length+1)*100)
 
       var nextForm = formGroupRef.current[nextFormIndex];
@@ -98,6 +98,7 @@ const Quiz = props => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    props.onLoad()
     var currentForm = formGroupRef.current[formIndex];
     if (!handleValidateForm(currentForm)) {
       Swal.fire({
@@ -135,7 +136,6 @@ const Quiz = props => {
   }
 
   const QuizButton = ({ number }) => {
-    // 1-indexed so question 1 === 1, question 2 === 2, etc.
     if (number === 0) {
       return (
         <div className="button-group d-flex">
