@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from '../../components/Layout/Layout'
 import QuizModal from './QuizModal/QuizModal';
 import axios from 'axios';
+import Loading from '../../components/elements/Loading';
 
 function App() {
   const [open,setOpen] = useState(false)
@@ -34,7 +35,7 @@ function App() {
   if (Object.keys(data).length === 0) {
     return (
       <Layout>
-        <p>loading</p>
+        <Loading />
       </Layout>
     );
   }

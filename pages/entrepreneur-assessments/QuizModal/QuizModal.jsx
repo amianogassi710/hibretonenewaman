@@ -3,13 +3,14 @@ import AssessmentModal from '../../../components/elements/AssessmentModal';
 import Quiz from './Quiz';
 import Start from './Start';
 import Score from './Score';
+import Loading from '../../../components/elements/Loading';
 
 const QuizModal = props => {
   const [startOpen,setStartOpen] = useState(true)
   const [quizOpen,setQuizOpen] = useState(false)
   const [scoreOpen,setScoreOpen] = useState(false)
   const [feedback,setFeedback] = useState({})
-  const assessment = props.assessment
+  const [loading, setLoading] = useState(false)
 
   const closeOnEscape = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
@@ -31,7 +32,7 @@ const QuizModal = props => {
 
   const handleSubmitQuiz = (e) => {
     setFeedback(e)
-    setQuizOpen(prevQuizOpen => !prevQuizOpen);
+    setLoading(prevLoading => !prevLoading)
     setScoreOpen(prevScoreOpen => !prevScoreOpen)
   }
 
@@ -48,11 +49,25 @@ const QuizModal = props => {
     setQuizOpen(true)
   }
 
+  const handleLoading = (e) => {
+    setQuizOpen(prevQuizOpen => !prevQuizOpen)
+    setLoading(prevLoading => !prevLoading)
+  }
+
+  const LoadingScreen = ({isLoading}) => {
+    if (isLoading) {
+      return <Loading />
+    } else {
+      return null
+    }
+  }
+
 
   return (
     <AssessmentModal isOpen={props.show} onClose={handleCloseModal} header={`${props.title}`} uizardHTML={props.uizard}>
         <Start onClose={handleCloseModal} assessment={props.assessment} onStart={handleStartQuiz} show={startOpen} />
-        <Quiz onClose={handleCloseModal} assessment={props.assessment} title={`${props.title}`} onSubmit={handleSubmitQuiz} show={quizOpen} isLoggedIn={props.isLoggedIn} />
+        <Quiz onClose={handleCloseModal} assessment={props.assessment} title={`${props.title}`} onSubmit={handleSubmitQuiz} show={quizOpen} isLoggedIn={props.isLoggedIn} onLoad={handleLoading} />
+        <LoadingScreen isLoading={loading} />
         <Score onClose={handleCloseModal} assessment={props.title} onRetake={handleRetake} header={`${props.title}`} show={scoreOpen} feedback={feedback} />
     </AssessmentModal>
   );
