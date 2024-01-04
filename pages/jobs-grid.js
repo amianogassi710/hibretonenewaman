@@ -15,7 +15,7 @@ export default function JobGrid() {
                                         <span className="color-brand-2">22 Grants</span> Available Now
                                     </h3>
                                     <div className="font-sm color-text-paragraph-2 mt-10 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                                        Discover the latest grant and programmes for your business type, <br className="d-none d-xl-block" />
+                                    Funding database covering local, national, and international sources of funding. <br className="d-none d-xl-block" />
                                         stage, sector and region.
                                     </div>
                                     <div className="form-find text-start mt-40 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
