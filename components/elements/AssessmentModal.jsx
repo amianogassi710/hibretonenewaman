@@ -15,7 +15,7 @@ const AssessmentModal = ({ isOpen, onClose, children, header, uizardHTML }) => {
       html: uizardHTML,
       showCloseButton: true,
       confirmButtonText: "Close",
-      confirmButtonColor: "#046893"
+      confirmButtonColor: "#3C65F5"
     });
   }
 

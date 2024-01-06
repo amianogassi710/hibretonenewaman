@@ -139,6 +139,9 @@ const Quiz = props => {
     if (number === 0) {
       return (
         <div className="button-group d-flex">
+          <button type="button" className="btn btn-quiz disabled">
+            <IoIosArrowUp />
+          </button>
           <button type="button" className="btn btn-quiz" onClick={handleGoNext}>
             <IoIosArrowDown />
           </button>
