@@ -1,10 +1,15 @@
 import React from 'react';
 import Link from "next/link";
 
-const Modal = () => {
+const Modal = props => {
+
+    if (!props.show) {
+        return null;
+    }
+
     return (
         <>
-            <div className="modal fade" id="ModalApplyJobForm" tabIndex={-1} aria-hidden="true">
+            <div className="modal" id="ModalApplyJobForm" tabIndex={-1} aria-hidden="true">
                 <div className="modal-dialog modal-lg">
                     <div className="modal-content apply-job-form">
                         <button className="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" />

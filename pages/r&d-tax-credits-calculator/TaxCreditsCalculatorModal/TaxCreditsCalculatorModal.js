@@ -9,6 +9,7 @@ const TaxCreditsCalculatorModal = props => {
   const [showQuestion,setShowQuestion] = useState(true)
   const [showResult, setShowResult] = useState(false)
   const [loading,setLoading] = useState(false)
+  const uizardHTML = "<p>Don't worry if you don’t know the exact figures for tax credits calculator - estimated values will still give you a good idea of what your claim could be.</p>"
 
   const handleSubmit = e => {
     setResult(e)
@@ -40,7 +41,7 @@ const TaxCreditsCalculatorModal = props => {
   }
 
   return (
-    <AssessmentModal isOpen={props.show} onClose={handleClose} header={"R&D Tax Credits Calculator"} uizardHTML={"<p>Hello there!</p>"}>
+    <AssessmentModal isOpen={props.show} onClose={handleClose} header={"R&D Tax Credits Calculator"} uizardHTML={uizardHTML}>
       <Questions onClose={handleClose} show={showQuestion} onSubmit={handleSubmit} onLoad={handleLoad} />
       <LoadingScreen onClose={handleClose} isLoading={loading} />
       <Result onClose={handleClose} result={result} show={showResult} onRetake={handleRetake} />

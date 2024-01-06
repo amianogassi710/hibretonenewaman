@@ -127,6 +127,9 @@ const Questions = props => {
     if (question === 1) {
       return (
         <div className="button-group d-flex">
+          <button type="button" className="btn btn-quiz disabled">
+            <IoIosArrowUp />
+          </button>
           <button type="button" className="btn btn-quiz" onClick={handleNext}>
             <IoIosArrowDown />
           </button>
@@ -178,74 +181,86 @@ const Questions = props => {
     <div className="assessment-modal-body text-center p-5">
     <form className="text-center" onSubmit={handleSubmit}>
       <div className="assessment-form-group" style={{display: question === 1 ? "block" : "none"}}>
-        <label className="fs-3 mb-30 lh-lg">Your headcount...</label>
+        <div className='assessment-question'>
+          <label className="fs-3 lh-lg">Your headcount...</label>
+        </div>
         <ul className="assessment-radio-group">
           <li className="headcount-less">
             <input type="radio" name="headcount" id="headcount-less" value="A" />
-            <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor="headcount-less">Less than 500</label>
+            <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="headcount-less">Less than 500</label>
           </li>
           <li className="headcount-more">
             <input type="radio" name="headcount" id="headcount-more" value="B" />
-            <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor="headcount-more">More than 500</label>
+            <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="headcount-more">More than 500</label>
           </li>
         </ul>
         <Button />
       </div>
         <div className="assessment-form-group" style={{display: question === 2 ? "block" : "none"}}>
-            <label className="fs-3 mb-30 lh-lg">Your turnover...</label>
+          <div className='assessment-question'>
+            <label className="fs-3 lh-lg">Your turnover...</label>
+          </div>
             <ul className="assessment-radio-group">
               <li className="turnover-less">
                 <input type="radio" name="turnover" id="turnover-no-more" value="A" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor="turnover-no-more">No more than £100 million</label>
+                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="turnover-no-more">No more than £100 million</label>
               </li>
               <li className="turnover-more">
                 <input type="radio" name="turnover" id="turnover-more" value="B" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor="turnover-more">More than £100 million</label>
+                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="turnover-more">More than £100 million</label>
               </li>
             </ul>
             <Button />
         </div>
         <div className="assessment-form-group" style={{display: question === 3 ? "block" : "none"}}>
-            <label className="fs-3 mb-30 lh-lg">Your balance sheet...</label>
+          <div className='assessment-question'>
+            <label className="fs-3 lh-lg">Your balance sheet...</label>
+          </div>
             <ul className="assessment-radio-group">
               <li className="balance-sheet-less">
                 <input type="radio" name="balance-sheet" id="balance-sheet-less" value="A" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor="balance-sheet-less">Less than £86 million</label>
+                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="balance-sheet-less">Less than £86 million</label>
               </li>
               <li className="balance-sheet-more">
                 <input type="radio" name="balance-sheet" id="balance-sheet-more" value="B" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor="balance-sheet-more">More than £86 million</label>
+                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="balance-sheet-more">More than £86 million</label>
               </li>
             </ul>
             <Button />
         </div>
         <div className="assessment-form-group" style={{display: question === 4 ? "block" : "none"}}>
-            <label className="fs-3 mb-30 lh-lg">Is your company...</label>
+          <div className='assessment-question'>
+            <label className="fs-3 lh-lg">Is your company...</label>
+          </div>
             <ul className="assessment-radio-group">
               <li className="company-profit">
                 <input type="radio" name="company" id="company-profit" value="A" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor="company-profit">Profit-making</label>
+                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="company-profit">Profit-making</label>
               </li>
               <li className="company-loss">
                 <input type="radio" name="company" id="company-loss" value="B" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor="company-loss">Loss-making</label>
+                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="company-loss">Loss-making</label>
               </li>
             </ul>
             <Button />
         </div>
         <div className="assessment-form-group" style={{display: question === 5 ? "block" : "none"}}>
-            <label className="fs-3 mb-30 lh-lg">Company staff, software, consumable items costs relating to R&D?</label>
-            <div className="input group d-flex" role="group">
+          <div className='assessment-question'>
+            <label className="fs-3 lh-lg">Company staff, software, consumable items costs relating to R&D?</label>
+          </div>
+            <div className="input group d-flex mb-50" role="group">
                 <span className="currency fs-1 d-flex align-items-center col-1">£</span>
-                <input type="number" className="fs-3 rounded" name="costs" placeholder="Costs" />
+                <input type="number" className="fs-3 rounded input" name="costs" placeholder="Costs" />
             </div>
             <Button />
         </div>
         <div className="assessment-form-group" style={{display: question === 6 ? "block" : "none"}}>
-            <label className="fs-3 mb-30 lh-lg">What are your subcontractor costs relating to R&D activities?</label>
-            <div className="input group d-flex" role="group">
+          <div className='assessment-question'>
+            <label className="fs-3 mb-24 lh-lg">What are your subcontractor costs relating to R&D activities?</label>
+          </div>
+            <div className="input group d-flex mb-50" role="group">
                 <span className="currency fs-1 d-flex align-items-center col-1">£</span>
-                <input type="number" className="fs-3 rounded" name="subcontractor-costs" placeholder="Costs" />
+                <input type="number" className="fs-3 rounded input" name="subcontractor-costs" placeholder="Costs" />
             </div>
             <div className="button-group d-flex align-items-center mt-15">
               <button type="button" className="btn btn-quiz" onClick={handleSubmit}>
