@@ -98,8 +98,8 @@ const Quiz = props => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    props.onLoad()
     var currentForm = formGroupRef.current[formIndex];
+    // If last question isn't complete, error pops up
     if (!handleValidateForm(currentForm)) {
       Swal.fire({
         text: "Please fill in the response before proceeding to the next question.",
@@ -109,6 +109,9 @@ const Quiz = props => {
       });
       return;
     }
+    // Open Loading Screen
+    props.onLoad()
+    // Creates feedback variable in the outer scope
     var feedback = {}
     try {
       // Extract relevant form data
@@ -117,6 +120,7 @@ const Quiz = props => {
         "assessment": props.title,
         "answers": []
       };
+      // Put data into correct format for the backend
       var i = 1;
       Array.from(checkedInputs).forEach(input => {
         formData["answers"].push({
@@ -127,6 +131,7 @@ const Quiz = props => {
       });
       const request = await axios.post(`/assessments/feedback`, formData)
       feedback = request.data
+      // Reset assessment
       setFormIndex(0)
       setProgress(0)
     } catch (error) {
@@ -135,6 +140,7 @@ const Quiz = props => {
     props.onSubmit(feedback)
   }
 
+  // Dynamically Loading Number
   const QuizButton = ({ number }) => {
     if (number === 0) {
       return (
@@ -177,7 +183,6 @@ const Quiz = props => {
   }
 
   const Button = () => {
-    // Also 1-indexed
     return (
       <div className="button-group d-flex align-items-center mt-15">
         <button type="button" className="btn btn-quiz" onClick={handleGoNext}>
@@ -188,6 +193,7 @@ const Quiz = props => {
     )
   }
 
+  // Dynamically Loading the Questions
   const Question = ({ section, question }) => {
     if (section) {
       return (

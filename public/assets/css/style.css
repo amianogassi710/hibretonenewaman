@@ -1385,8 +1385,25 @@ span.btn {
   user-select: none;
 }
 
+.inner-button button {
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  opacity: 0.6;
+}
+
+.inner-button button:hover {
+  opacity: 1;
+  scale: 130%;
+}
+
+
 .assessment-question {
   min-height: 12vh;
+}
+
+.assessment-question label {
+  padding-bottom: 5px;
   border-bottom: 1px solid #adadad;
   width: 100%;
 }
@@ -3355,7 +3372,7 @@ ul li:last-child .card-list-4 {
   border-radius: 8px;
   display: inline-block;
   width: 100%;
-  padding: 10px 10px;
+  padding: 5px 5px;
 }
 .banner-hero .block-banner .form-find form {
   display: flex;
@@ -3415,7 +3432,7 @@ ul li:last-child .card-list-4 {
   background-color: #9777fa;
 }
 .banner-hero .block-banner .form-find .box-industry {
-  width: 100%;
+  width: 80%;
   max-width: 180px;
 }
 .banner-hero .block-banner .form-find .box-industry .select2::before {
@@ -3531,13 +3548,11 @@ ul li:last-child .card-list-4 {
 .banner-hero.hero-2::before {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #05264E;
-  opacity: 0;
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.8);
 }
 .banner-hero.hero-2 .banner-inner {
   z-index: 2;
@@ -3601,10 +3616,9 @@ ul li:last-child .card-list-4 {
   text-align: left;
 }
 .banner-hero.hero-3 {
-  background: #3C65F5;
-}
-.banner-hero.hero-3::before {
-  display: none;
+  background: url("../imgs/page/job-connect/hero.jpg") no-repeat center;
+  background-size: cover;
+  background-position: center 25%
 }
 
 @keyframes hero-thumb-animation {
@@ -6458,13 +6472,23 @@ ul li:last-child .card-list-4 {
   width: 100%;
 }
 
-.bg-img-about.banner-hero {
+.bg-img-about {
   position: relative;
   width: 100%;
   padding: 100px 0px 80px 0px;
   max-width: 100%;
   background: url(../imgs/page/r&d-tax-credits-calculator/Hero.jpeg) no-repeat top center;
   background-size: cover;
+}
+
+.b-img-about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .bg-img-about .container {
@@ -8243,6 +8267,15 @@ ul li:last-child .card-list-4 {
   border: 1px solid #E0E6F7;
 }
 
+.banner-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
 .list-tags-banner-2 {
   color: #66789C;
   font-size: 14px;

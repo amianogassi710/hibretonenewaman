@@ -4,7 +4,7 @@ import QuizModal from './QuizModal/QuizModal';
 import axios from 'axios';
 import Loading from '../../components/elements/Loading';
 
-function App() {
+export default function Index() {
   const [open,setOpen] = useState(false)
   const [assessment,setAssessment] = useState("")
   const [data,setData] = useState({})
@@ -52,5 +52,3 @@ function App() {
     </Layout>
   );
 }
-
-export default App;
