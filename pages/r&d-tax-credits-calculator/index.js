@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Layout from "../../components/Layout/Layout";
 import TaxCreditsCalculatorModal from './TaxCreditsCalculatorModal/TaxCreditsCalculatorModal';
 
-export default function TaxCreditsCalculator() {
+export default function Index() {
     const [isOpen,setIsOpen] = useState(false)
     const [result,setResult] = useState(0)
     const [start,setStart] = useState(true)
