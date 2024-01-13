@@ -13,7 +13,12 @@ const nextConfig = {
         source: '/assessments/:path*',
         destination: 'https://entrepreneurial-assessments-backend.vercel.app/:path*', // Your FastAPI endpoint
       },
+      {
+        source: '/grant/:path*',
+        destination: 'https://grantfinder-backend-fastapi.onrender.com/grant/:path*', // Your FastAPI endpoint
+      },
       // Add more rewrites as needed
+      
     ];
   },
 };
