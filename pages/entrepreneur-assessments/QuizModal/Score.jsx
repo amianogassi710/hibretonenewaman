@@ -1,54 +1,24 @@
 import Swal from "sweetalert2";
+import React, { useState } from 'react';
 import StrengthsAndIdealJobs from "./StrengthsAndIdealJobs.jsx";
-import { IoCloseOutline  } from "react-icons/io5";
-import { IoIosInformationCircleOutline } from "react-icons/io"
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import EnquiryModal from "../../../components/elements/EnquiryModal.js";
 
 const Score = props => {
+  const [enquiry,setEnquiry] = useState(false)
 
   if (!props.show) {
     return null;
   }
 
-  const handleEnquiries = async () => {
-    const { value: formValues } = await Swal.fire({
-      title: "Enquiries",
-      html: `
-      <div>
-        <input id="name" class="swal2-input" placeholder="Full Name">
-        <input id="email" class="swal2-input" placeholder="Email">
-        <input id="phone-number" class="swal2-input" placeholder="Phone Number">
-        <select id="category" class="swal2-input">
-          <option>Example1</option>
-          <option>Example2</option>
-          <option>Example3</option>
-        </select>
-        <textarea id="enquiry" class="swal2-textarea" placeholder="Enter Text" height=100></textarea><br/>
-        <input id="data-privacy" type="checkbox" class="swal2-input-checkbox"/> I agree to share my data with 3rd party services
-      </div>
-      `,
-      focusConfirm: false,
-      confirmButtonText: "Send",
-      confirmButtonColor: "#387A6E",
-      showCloseButton: true,
-      preConfirm: () => {
-        const name = document.getElementById("name").value
-        const email = document.getElementById("email").value
-        const phoneNumber = document.getElementById("phone-number").value
-        const enquiry = document.getElementById("enquiry").value
-        if (!name | !email | !phoneNumber | !enquiry) {
-          Swal.showValidationMessage('<i class="fa fa-info-circle"></i> Please complete all fields')
-        }
-        return [
-          name,
-          email,
-          phoneNumber,
-          enquiry,
-        ];
-      }
-    });
-    if (formValues) {
-      Swal.fire(JSON.stringify(formValues));
-    }
+  const handleEnquiries = e => {
+    e.preventDefault()
+    setEnquiry(true)
+  }
+
+  const handleCloseEnquiry = e => {
+    e.preventDefault()
+    setEnquiry(false)
   }
 
   const handlePersonalityEnquiry = e => {
@@ -65,6 +35,7 @@ const Score = props => {
   const Feedback = () => {
     if (props.assessment === "Entrepreneurial-Readiness") {
       const feedback = props.feedback.feedback
+      console.log(feedback)
       let j = 0
       return (
         <>
@@ -143,21 +114,15 @@ const Score = props => {
     }
   }
 
+
   return (
     <>
-        <div className="assessment-modal-header d-flex justify-content-space-between pr-20 pl-20">
-        <div className="d-flex">
-          <h4 className="text-reset">{props.assessment.replace("-"," ")}</h4>
-        </div>
-        <div className="close">
-          <i className="assessment-icon d-flex justify-content-center align-items-center" onClick={props.onClose}><IoCloseOutline size={32.5} /></i>
-        </div>
-      </div>
+
         <div className="content p-20">
           <h3 className="score">Your Results:  {props.feedback.score}</h3>
 
           <h4 className="thank-you">
-            Thank you for completing the {props.assessment.replace("-"," ")} Assessment!
+            Thank you for completing the {props.title} Assessment!
           </h4>
 
           <Feedback />
@@ -175,6 +140,7 @@ const Score = props => {
             <button className="btn btn-quiz mx-1" onClick={props.onClose}>Close</button>
           </div>
         </div>
+        <EnquiryModal isOpen={enquiry} onClose={handleCloseEnquiry} />
     </>
   )
 }

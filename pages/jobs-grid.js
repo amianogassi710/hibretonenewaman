@@ -1515,7 +1515,7 @@ export default function JobGrid() {
                                                     </ul>
                                                 </div>
                                             </div>
-                                            {/* <div className="filter-block mb-20">
+                                            <div className="filter-block mb-20">
                                                 <h5 className="medium-heading mb-25">Salary Range</h5>
                                                 <div className="list-checkbox pb-20">
                                                     <div className="row position-relative mt-10 mb-20">
@@ -1824,14 +1824,14 @@ export default function JobGrid() {
                                                         </li>
                                                     </ul>
                                                 </div>
-                                            </div>*/}
+                                            </div>
                                          </div>
-                                     </div> 
+                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    {/* <section className="section-box mt-50 mb-50">
+                    <section className="section-box mt-50 mb-50">
                         <div className="container">
                             <div className="text-start">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">News and Blog</h2>
@@ -1850,8 +1850,8 @@ export default function JobGrid() {
                                 </div>
                             </div>
                         </div>
-                    </section> */}
-                    {/* <section className="section-box mt-50 mb-20">
+                    </section>
+                    <section className="section-box mt-50 mb-20">
                         <div className="container">
                             <div className="box-newsletter">
                                 <div className="row">
@@ -1876,7 +1876,7 @@ export default function JobGrid() {
                                 </div>
                             </div>
                         </div>
-                    </section> */}
+                    </section>
                                         <section className="section-box mt-50 mb-20">
                         <div className="container">
                             <div className="box-newsletter box-newsletter-3">

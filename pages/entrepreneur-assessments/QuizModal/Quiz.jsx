@@ -2,25 +2,21 @@ import Swal from "sweetalert2";
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import StrengthsAndIdealJobs from "./StrengthsAndIdealJobs.jsx";
-import { IoCloseOutline } from "react-icons/io5";
-import { IoIosInformationCircleOutline,IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 
 const Quiz = props => {
   const formGroupRef = useRef([])
   const [formIndex,setFormIndex] = useState(0)
   const checkBoxesRef = useRef([])
-  const [progress,setProgress] = useState(0)
-  const [questions,setQuestions] = useState([])
-  const [time,setTime] = useState("")
-  const [uizardText,setUizardText] = useState("")
+  const [progress, setProgress] = useState(0)
 
   const nextOnEnter = (e) => {
     var currentForm = formGroupRef.current[formIndex]
     if (e.keyCode === 13) {
         e.preventDefault()
       // Default function of enter submits form so only eliminate when not on the last question
-      if (formIndex < questions.length) {
+      if (formIndex < props.assessment.assessment.length) {
         handleGoNext()
       } else if (!handleValidateForm(currentForm)) {
         Swal.fire({
@@ -35,21 +31,6 @@ const Quiz = props => {
       }
     }
   };
-
-  useEffect(() => {
-    const getQuiz = async () => {
-      try {
-        const response = await axios.get(`/assessments/questions/${props.assessment}`)
-        const data = response.data;
-        setTime(data.time)
-        setQuestions(data.assessment)
-        setUizardText(data["uizard-html"])
-      } catch (error) {
-        console.log("Couldn't retrieve quiz: ", error);
-      }
-    };
-    getQuiz();
-  },[])
 
   useEffect(() => {
     document.body.addEventListener('keydown', nextOnEnter)
@@ -74,8 +55,8 @@ const Quiz = props => {
       currentForm.style.display = "none";
 
       var nextFormIndex = formIndex + 1;
-      setFormIndex(nextFormIndex);
-      setProgress((nextFormIndex+1)/(questions.length+1)*100)
+      setFormIndex(prevFormIndex => prevFormIndex + 1);
+      setProgress((nextFormIndex+1)/(props.assessment.assessment.length+1)*100)
 
       var nextForm = formGroupRef.current[nextFormIndex];
       nextForm.style.display = "block";
@@ -95,7 +76,7 @@ const Quiz = props => {
 
     var previousFormIndex = formIndex - 1;
     setFormIndex(previousFormIndex);
-    setProgress((previousFormIndex+1)/(questions.length+1)*100)
+    setProgress((previousFormIndex+1)/(props.assessment.assessment.length+1)*100)
 
     var previousForm = formGroupRef.current[previousFormIndex];
     previousForm.style.display = "block";
@@ -118,6 +99,7 @@ const Quiz = props => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     var currentForm = formGroupRef.current[formIndex];
+    // If last question isn't complete, error pops up
     if (!handleValidateForm(currentForm)) {
       Swal.fire({
         text: "Please fill in the response before proceeding to the next question.",
@@ -127,14 +109,18 @@ const Quiz = props => {
       });
       return;
     }
+    // Open Loading Screen
+    props.onLoad()
+    // Creates feedback variable in the outer scope
     var feedback = {}
     try {
       // Extract relevant form data
       const checkedInputs = document.querySelectorAll('input:checked');
       const formData = {
-        "assessment": props.assessment,
+        "assessment": props.title,
         "answers": []
       };
+      // Put data into correct format for the backend
       var i = 1;
       Array.from(checkedInputs).forEach(input => {
         formData["answers"].push({
@@ -145,6 +131,7 @@ const Quiz = props => {
       });
       const request = await axios.post(`/assessments/feedback`, formData)
       feedback = request.data
+      // Reset assessment
       setFormIndex(0)
       setProgress(0)
     } catch (error) {
@@ -153,17 +140,20 @@ const Quiz = props => {
     props.onSubmit(feedback)
   }
 
+  // Dynamically Loading Number
   const QuizButton = ({ number }) => {
-    // 1-indexed so question 1 === 1, question 2 === 2, etc.
     if (number === 0) {
       return (
         <div className="button-group d-flex">
+          <button type="button" className="btn btn-quiz disabled">
+            <IoIosArrowUp />
+          </button>
           <button type="button" className="btn btn-quiz" onClick={handleGoNext}>
             <IoIosArrowDown />
           </button>
         </div>
       )
-    } else if (number < questions.length) {
+    } else if (number < props.assessment.assessment.length) {
       return (
         <>
         <div className="button-group d-flex">
@@ -192,8 +182,7 @@ const Quiz = props => {
     }
   }
 
-  const Button = ({number}) => {
-    // Also 1-indexed
+  const Button = () => {
     return (
       <div className="button-group d-flex align-items-center mt-15">
         <button type="button" className="btn btn-quiz" onClick={handleGoNext}>
@@ -204,16 +193,7 @@ const Quiz = props => {
     )
   }
 
-  const handleUIzard = () => {
-    Swal.fire({
-      title: props.assessment.replace("-",""),
-      html: uizardText,
-      showCloseButton: true,
-      confirmButtonText: "Close",
-      confirmButtonColor: "#046893"
-    });
-  }
-
+  // Dynamically Loading the Questions
   const Question = ({ section, question }) => {
     if (section) {
       return (
@@ -241,41 +221,33 @@ const Quiz = props => {
 
   return (
     <>
-      <div className="assessment-modal-header d-flex justify-content-space-between pr-20 pl-20">
-        <div className="d-flex">
-          <h4 className="text-reset">{props.assessment.replace("-"," ")}</h4>
-          <i className="uizard assessment-icon d-flex justify-content-center align-items-center ml-10" onClick={handleUIzard}><IoIosInformationCircleOutline size={30}/></i>
-        </div>
-        <div className="close">
-          <i className="assessment-icon d-flex justify-content-center align-items-center" onClick={props.onClose}><IoCloseOutline size={32.5} /></i>
-        </div>
-      </div>
       <div className="assessment-modal-body text-center">
-        <h4 className="mb-20 mt-10 col-12">Take this simple {time} assessment</h4>
+        <h4 className="mb-20 mt-10 col-12">Take this simple {props.assessment.time} assessment</h4>
             <form onSubmit={handleSubmit}>
-              {/* Loops through all the provided questions */}
-              {questions.map((question) => (
-                <div className="assessment-form-group" style={{display: question.fields.question_number === 1 ? "block" : "none"}} key={question.fields.question_number}>
-                  <Question section={question.fields.section} question={question.fields.question_text} />
+              {/* Loops through all the provided props.assessment.assessment */}
+              {props.assessment.assessment.map((question) => (
+                <div className="assessment-form-group" style={{display: question.question_number === 1 ? "block" : "none"}} key={question.question_number}>
+                  <Question section={question.section} question={question.question_text} />
                     <ul className="assessment-radio-group">
-                      {question.fields.answers.map((answer) => (
+                      {props.assessment.answers.map((answer) => (
                         <li
-                          className={`${question.fields.question_number}-${answer.value}`}
+                          className={`${question.question_number}-${answer.value}`}
                           key={answer.value}
                         >
                             <input
                               type="radio"
-                              name={`q${question.fields.question_number}`}
-                              id={`q${question.fields.question_number}-${answer.answer.toLowerCase()}`}
+                              style={{"fontHeight": "3vh", "lineHeight": "4vh"}}
+                              name={`q${question.question_number}`}
+                              id={`q${question.question_number}-${answer.text}`}
                               value={answer.value}
                             />
-                          <label htmlFor={`q${question.fields.question_number}-${answer.answer.toLowerCase()}`}>
-                            {answer.answer}
+                          <label style={{"fontHeight": "3vh", "lineHeight": "4vh"}} htmlFor={`q${question.question_number}-${answer.text}`}>
+                            {answer.text}
                           </label>
                         </li>
                       ))}
                     </ul>
-                    <Button number={question.fields.question_number} />
+                    <Button number={question.question_number} />
                   </div>
               ))}
 
@@ -311,8 +283,8 @@ const Quiz = props => {
       </div>
       <div className="assessment-modal-footer">
         <div className="tracker lh-sm">
-          {/* questions.length + 1 to include gender question */}
-          <p>Question {formIndex+1} of {questions.length+1}</p>
+          {/* props.assessment.assessment.length + 1 to include gender question */}
+          <p>Question {formIndex+1} of {props.assessment.assessment.length+1}</p>
           <div className="progress-bar">
             <div className="bar" style={{width: `${progress}%`}}>
               <span className="progression"></span>
