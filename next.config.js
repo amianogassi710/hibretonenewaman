@@ -14,8 +14,8 @@ const nextConfig = {
         destination: 'https://entrepreneurial-assessments-backend.vercel.app/:path*', // Your FastAPI endpoint
       },
       {
-        source: '/grant/:path*',
-        destination: 'https://grantfinder-backend-fastapi.onrender.com/grant/:path*', // Your FastAPI endpoint
+        source: '/grants/:path*',
+        destination: 'https://grantfinder-backend-fastapi.onrender.com/grants/:path*', // Your FastAPI endpoint
       },
       // Add more rewrites as needed
       

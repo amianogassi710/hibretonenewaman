@@ -22,7 +22,7 @@ const TestimonialSlider1 = () => {
                             <div className="card-image">
                                 <div className="image">
                                     <figure>
-                                        <img alt="jobBox" src="assets/imgs/page/about/user1.png" />
+                                        <img alt="jobBox" src="assets/imgs/page/about/customer1.jpg" />
                                     </figure>
                                 </div>
                                 <div className="card-profile">
@@ -41,7 +41,7 @@ const TestimonialSlider1 = () => {
                             <div className="card-image">
                                 <div className="image">
                                     <figure>
-                                        <img alt="jobBox" src="assets/imgs/page/about/user2.png" />
+                                        <img alt="jobBox" src="assets/imgs/page/about/customer2.jpg" />
                                     </figure>
                                 </div>
                                 <div className="card-profile">
@@ -54,12 +54,13 @@ const TestimonialSlider1 = () => {
                     <SwiperSlide>
                         <div className="card-grid-6 hover-up">
                             <div className="card-text-desc mt-10">
-                                <p className="font-md color-text-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque metus. Vivamus consectetur ultricies commodo. Pellentesque at nisl sit amet neque finibus egestas ut at magna. Cras tincidunt tortor sed eros aliquam eleifend.</p>
+                                <p className="font-md color-text-paragraph">I've just been part of the inaugural Department for International Trade's UK Black Founders Mission' to NYC. My face and company featured on the famous big screen on the Nasdaq Building in Times Square. </p>
+                                <p className="font-md color-text-paragraph">Without Drew's introduction to the DIT programme it would never have happened, and we wouldn't have made the connections that are now enabling us to grow our business in the lucrative US market.</p>
                             </div>
                             <div className="card-image">
                                 <div className="image">
                                     <figure>
-                                        <img alt="jobBox" src="assets/imgs/page/about/user3.png" />
+                                        <img alt="jobBox" src="assets/imgs/page/about/customer3.jpg" />
                                     </figure>
                                 </div>
                                 <div className="card-profile">
