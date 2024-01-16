@@ -21,7 +21,7 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                     <div className="main-header">
                         <div className="header-left">
                             <div className="header-logo">
-                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="assets/imgs/template/hibretOne-logo.png" /></a></Link>
+                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="/assets/imgs/template/hibretOne-logo.png" /></a></Link>
                             </div>
                         </div>
                         <div className="header-nav">

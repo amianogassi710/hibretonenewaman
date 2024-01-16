@@ -86,7 +86,7 @@ const CategoryTab2 = () => {
                                 <div className="card-grid-2 grid-bd-16 hover-up">
                                     <div className="card-block-info">
                                         <h5>
-                                            <Link legacyBehavior href="/"><a>{grant.title}</a></Link>
+                                            <Link legacyBehavior href={`/grant-details/${grant.grant_id}`}><a>{grant.title}</a></Link>
                                         </h5>
                                         <div className="mt-5">
                                             <span className="card-location mr-15">{grant.location}</span>
