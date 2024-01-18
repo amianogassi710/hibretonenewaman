@@ -14,6 +14,10 @@ const nextConfig = {
         destination: 'https://entrepreneurial-assessments-backend.vercel.app/:path*', // Your FastAPI endpoint
       },
       // Add more rewrites as needed
+      {
+        source: '/jobs/:path*',
+        destination: 'http://127.0.0.1:8000/:path*',
+      },
     ];
   },
 };

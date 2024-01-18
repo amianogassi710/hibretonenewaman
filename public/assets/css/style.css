@@ -1451,6 +1451,10 @@ i.assessment-icon:hover * {
   transition: 0.2s;
 }
 
+.content-media {
+  border-radius: 16px;
+}
+
 input:checked + .btn.btn-switch, input:checked + label {
   color: #ffffff;
   background-color: #3C65F5;
@@ -3552,7 +3556,7 @@ ul li:last-child .card-list-4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
 }
 .banner-hero.hero-2 .banner-inner {
   z-index: 2;
@@ -3619,6 +3623,16 @@ ul li:last-child .card-list-4 {
   background: url("../imgs/page/job-connect/hero.jpg") no-repeat center;
   background-size: cover;
   background-position: center 25%
+}
+
+.banner-hero.hero-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 @keyframes hero-thumb-animation {
