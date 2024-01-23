@@ -14,6 +14,7 @@ export default function Index() {
 
         return () => clearInterval(intervalId)
     },[])
+
     return (
         <>
             <Layout>

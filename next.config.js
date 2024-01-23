@@ -18,7 +18,6 @@ const nextConfig = {
         destination: 'https://grantfinder-backend-fastapi.onrender.com/grants/:path*', // Your FastAPI endpoint
       },
       // Add more rewrites as needed
-      
     ];
   },
 };
