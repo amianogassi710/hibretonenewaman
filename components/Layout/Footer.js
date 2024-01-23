@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="footer-col-1 col-md-3 col-sm-12">
-                        <Link legacyBehavior href="/"><a><img alt="jobBox" src="assets/imgs/template/hibretOne-logo.png" /></a></Link>
+                        <Link legacyBehavior href="/"><a><img alt="jobBox" src="/assets/imgs/template/hibretOne-logo.png" /></a></Link>
                         <div className="mt-20 mb-20 font-xs color-text-paragraph-2">HibretOne is a revolutionary platform delivering the most comprehensive first-line business resources, tools and funding</div>
                         <div className="footer-social">
                             <a className="icon-socials icon-facebook" href="#" />

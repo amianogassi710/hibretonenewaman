@@ -17,23 +17,21 @@ export default function Home() {
                         <div className="banner-hero hero-2">
                             <div className="banner-inner">
                                 <div className="block-banner">
+                                    <img src="assets/imgs/page/homepage1/WHITE-hibretOne-Logo.svg" alt="" />
                                     <h1 className="text-30 color-white wow animate__animated animate__fadeInUp">
-                                    Free First-line 
-                                    <span className="color-blue"> Entrepreneurship </span>
-                                    And 
-                                    <span className="color-blue"> Learning </span>
-                                        <br className="d-none d-lg-block" />
-                                        Support For Every User In Every Sector, Forever!
+                                    A groundbreaking initiative <span className="color-blue"> empowering aspirers </span>, founders, leaders and organisations <span className="color-blue"> to positively transform </span> the economy, society and community through <span className="color-blue"> entrepreneurship </span> & education.
+                                    <span className="color-blue">  </span>
+
                                     </h1>
-                                    <div className="font-lg font-regular color-white mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                                    {/* <div className="font-lg font-regular color-white mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                                     A revolutionary platform delivering the most comprehensive first-line business resources, tools and funding, all in one place
-                                    </div>
-                                    <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
+                                    </div> */}
+                                    {/* <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
                                         <form>
                                             <input className="form-input mr-10" type="text" placeholder="" />
                                             <button className="btn btn-default btn-find font-sm">Search</button>
                                         </form>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="mt-60">
                                     <div className="row">
@@ -66,7 +64,7 @@ export default function Home() {
                                                 <h4 className="color-white">
                                                     <span className="count">212+</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Jobs</p>
+                                                <p className="font-sm color-text-mutted">Freelancers</p>
                                             </div>
                                         </div>
                                     </div>

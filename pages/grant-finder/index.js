@@ -132,14 +132,14 @@ stage, sector and region.</p>
                         <div className="container">
                             <div className="text-center">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Browse by category</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the job that’s perfect for you. about 800+ new jobs everyday</p>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the grant that’s perfect for you. about 800+ new grants everyday</p>
                             </div>
                             <div className="box-swiper mt-50">
                                 <CategorySlider />
                             </div>
                         </div>
                     </div>
-                </section>
+                    </section>
                     <section className="section-box mt-50 mb-30 bg-border-3 pt-100 pb-100">
                         <div className="container">
                             <div className="row">

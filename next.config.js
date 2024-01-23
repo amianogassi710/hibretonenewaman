@@ -13,11 +13,11 @@ const nextConfig = {
         source: '/assessments/:path*',
         destination: 'https://entrepreneurial-assessments-backend.vercel.app/:path*', // Your FastAPI endpoint
       },
-      // Add more rewrites as needed
       {
-        source: '/jobs/:path*',
-        destination: 'http://127.0.0.1:8000/:path*',
+        source: '/grants/:path*',
+        destination: 'https://grantfinder-backend-fastapi.onrender.com/grants/:path*', // Your FastAPI endpoint
       },
+      // Add more rewrites as needed
     ];
   },
 };
