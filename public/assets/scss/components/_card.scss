@@ -307,13 +307,13 @@
 
 .card-image-top {
     border: 1px solid $color-border-2;
-    padding: 12px 12px 20px 12px;
+    padding: 12px 12px 12px 12px;
     border-radius: 16px;
     margin-bottom: 24px;
     .image {
         overflow: hidden;
         position: relative;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         height: 261px;
         width: 100%;
         border-radius: 10px;
@@ -331,9 +331,9 @@
             align-items: center;
             padding: 0px 10px;
             height: 24px;
-            background: $color-border-2;
+            background: #3c65f5de;
             border-radius: 5px;
-            color: $color-brand-2;
+            color: white;
             min-width: 42px;
         }
         img {
