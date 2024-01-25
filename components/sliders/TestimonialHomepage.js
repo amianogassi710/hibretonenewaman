@@ -98,25 +98,6 @@ const TestimonialSliderHomePage = () => {
                             </div>
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide className="swiper-slide hover-up">
-                        <div className="card-review-1">
-                            <div className="image-review">
-                                {" "}
-                                <img src="assets/imgs/page/homepage4/user.png" alt="jobBox" />
-                            </div>
-                            <div className="review-info">
-                                <div className="review-name">
-                                    <h5>Ellis Kim</h5>
-                                    <span className="font-xs">Digital Artist</span>
-                                </div>
-                                <div className="review-rating">
-                                    {" "}
-                                    <img src="assets/imgs/template/icons/star.svg" alt="jobBox" /> <img src="assets/imgs/template/icons/star.svg" alt="jobBox" /> <img src="assets/imgs/template/icons/star.svg" alt="jobBox" /> <img src="assets/imgs/template/icons/star.svg" alt="jobBox" /> <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
-                                </div>
-                                <div className="review-comment">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid unt. Labore et dolore nostrud temp exercitation.</div>
-                            </div>
-                        </div>
-                    </SwiperSlide>
                 </Swiper>
             </div>
         </>
