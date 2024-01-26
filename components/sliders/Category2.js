@@ -6,33 +6,38 @@ SwiperCore.use([Navigation]);
 
 const data = [
     {
-        img: "img-big1.png",
+        img: "1.jpg",
         title: "Business Builder",
         count: 55
     },
     {
-        img: "img-big2.png",
+        img: "2.jpg",
         title: "Funding Builder",
         count: 35
     },
     {
-        img: "img-big3.png",
-        title: "Career Builder ",
+        img: "3.jpg",
+        title: "Resources Builder",
         count: 20
     },
     {
-        img: "1.png",
-        title: "Resources",
+        img: "4.jpg",
+        title: "Career Builder",
         count: 15
     },
     {
-        img: "3.jpg",
-        title: "Ecosystem Partners",
+        img: "5.jpg",
+        title: "Ecosystem Connect",
         count: 10
     },
     {
-        img: "2.jpg",
-        title: "Accessibility",
+        img: "6.jpg",
+        title: "Industry Intelligence",
+        count: 10
+    },
+    {
+        img: "7.jpg",
+        title: "Problem Triage",
         count: 10
     }
 ];
@@ -76,7 +81,7 @@ const CategorySlider2 = () => {
                     {data.map((item, i) => (
                         <SwiperSlide key={i}>
                             <div className="swiper-slide hover-up">
-                                <div className="card-grid-5 card-category hover-up" style={{ backgroundImage: `url(assets/imgs/page/homepage2/${item.img})` }}>
+                                <div className="card-grid-5 card-category hover-up" style={{ backgroundImage: `url(assets/imgs/page/homepage1/how-we-help/${item.img})` }}>
                                     {/* <Link legacyBehavior href="/"> */}
                                         <a>
                                             <div className="box-cover-img">
