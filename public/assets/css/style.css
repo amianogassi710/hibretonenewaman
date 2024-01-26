@@ -1448,6 +1448,12 @@ i.assessment-icon:hover * {
 
 .content-media {
   border-radius: 16px;
+  transition: 0.05s ease-in-out;
+}
+
+.content-media:hover {
+  scale: 1.03;
+  transition: 0.05s ease-in-out;
 }
 
 input:checked + .btn.btn-switch, input:checked + label {
@@ -1971,6 +1977,49 @@ label {
   background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
+}
+
+.sign-up {
+  border-radius: 12px;
+  background: #FEBA54;
+  padding: 30px 50px;
+  width: 65vw;
+}
+
+.btn.btn-sign-up {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: black;
+  font-weight: 800;
+  line-height: 26px;
+  padding: 5px 25px;
+  transition: 0.2s ease-in-out
+}
+
+.btn.btn-sign-up:hover {
+  color: black;
+  background-color: white;
+  transition: 0.2s ease-in-out;
+  scale: 1.06
+}
+
+.btn.btn-sign-up-inverted {
+  display: flex;
+  align-items: center;
+  color: black;
+  background-color: #FEBA54;
+  font-weight: 800;
+  line-height: 26px;
+  padding: 10px 25px;
+  transition: 0.2s ease-in-out
+}
+
+.btn.btn-sign-up-inverted:hover {
+  background-color: black;
+  color: white;
+  transition: 0.2s ease-in-out;
+  scale: 1.06
 }
 
 .modal {
@@ -6476,6 +6525,31 @@ ul li:last-child .card-list-4 {
 .leaflet-map {
   height: 528px;
   width: 100%;
+}
+
+.bg-img-calculator {
+  background: url(../imgs/page/r&d-tax-credits-calculator/Hero.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding: 20px 0px;
+}
+
+.bg-img-calculator::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../imgs/page/about/bg-black-trans.png) repeat-x bottom left;
+}
+.bg-img-calculator h2, .bg-img-calculator p {
+  z-index: 2;
+  position: relative;
+  color: #ffffff;
+  padding-left: 10px;
+  border-left: 10px solid #83CBFF;
 }
 
 .bg-img-about {
