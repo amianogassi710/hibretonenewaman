@@ -265,6 +265,7 @@ export default function Home() {
                                         </div>
                                         <div className="text-info">
                                             <h3>Improving startup success</h3>
+                                            <div class="empty-line"></div>
                                             <p className="font-sm color-text-paragraph-2">Creating higher-skilled employment opportunities for low-paid and unsuccessful entrepreneurs.‘80% of cooperatives are still trading after</p>
                                             <div className="mt-15">
                                                 <Link legacyBehavior href="#">
@@ -295,7 +296,7 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-0">
+                    <section className="section-box mt-50">
                         <div className="section-box wow animate__animated animate__fadeIn">
                             <div className="container">
                                 <div className="text-center">
@@ -317,12 +318,14 @@ export default function Home() {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-xl-4 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/page/homepage4/img-newsletter.png" alt="joxBox" />
+                                        <img src="assets/imgs/page/homepage1/newsletter.png" alt="joxBox" />
                                     </div>
                                     <div className="col-xl-8 col-lg-12 col-12 text-center">
-                                        <div className="d-inline-block text-start">
-                                            <h2 className="color-white">Sign-up to our Show Me the Money newsletter</h2>
-                                            <p className="mt-10 font-lg color-white">Funding, research and opportunities delivered directly to your inbox</p>
+                                        <div className="d-inline-block">
+                                            <div>
+                                                <h2 className="color-white">Sign-up to our Show Me the Money newsletter</h2>
+                                                <p className="mt-10 font-lg color-white">Funding, research and opportunities delivered directly to your inbox</p>
+                                            <div/>
                                             <div className="box-form-newsletter mt-40">
                                                 <form className="form-newsletter">
                                                     <input className="input-newsletter" type="text" placeholder="Enter your email here" />
@@ -331,6 +334,7 @@ export default function Home() {
                                             </div>
                                         </div>
                                     </div>
+                                </div>
                                 </div>
                             </div>
                         </div>

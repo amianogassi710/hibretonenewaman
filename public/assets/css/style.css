@@ -2593,6 +2593,9 @@ ul li:last-child .card-list-4 {
   display: inline-block;
   width: 100%;
 }
+.box-radius-8 .text-info .empty-line {
+  margin-bottom: 35px;
+}
 
 .card-category {
   height: 255px;

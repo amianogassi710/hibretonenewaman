@@ -686,6 +686,9 @@ ul {
     .text-info {
         display: inline-block;
         width: 100%;
+        .empty-line{
+            margin-bottom: 35px;
+        }
     }
 }
 
