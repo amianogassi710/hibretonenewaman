@@ -81,7 +81,7 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-80">
+                    <section className="section-box mt-20">
                         <div className="container">
                             <div className="text-center">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Who we Help</h2>
