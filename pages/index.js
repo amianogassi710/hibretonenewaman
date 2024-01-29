@@ -74,6 +74,8 @@ export default function Home() {
                             <div className="list-brands mt-40 mb-30">
                                 <div className="box-swiper">
                                     <h2 className="text-center section-title mb-40 wow animate__animated animate__fadeInUp">Our Founding Supporters</h2>
+                                    <div className="swiper-button-next" />
+                                    <div className="swiper-button-prev" />
                                     <BrandSlider />
                                 </div>
                             </div>
@@ -94,7 +96,7 @@ export default function Home() {
                                         <Link legacyBehavior href="/">
                                             <a>
                                                 <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/1.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag ">Entrepreneurs</span>
+                                                    <span className="lbl-hot btn btn-tag color-1">Entrepreneurs</span>
                                                 </div>
                                             </a>
                                         </Link>
@@ -105,7 +107,7 @@ export default function Home() {
                                         <Link legacyBehavior href="/">
                                             <a>
                                                 <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/2.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag">Underrepresented</span>
+                                                    <span className="lbl-hot btn btn-tag color-3">Underrepresented</span>
                                                 </div>
                                             </a>
                                         </Link>
@@ -116,7 +118,7 @@ export default function Home() {
                                         <Link legacyBehavior href="/">
                                             <a>
                                                 <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/3.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag">Startups and Scaleups</span>
+                                                    <span className="lbl-hot btn btn-tag color-2">Startups and Scaleups</span>
                                                 </div>
                                             </a>
                                         </Link>
@@ -127,7 +129,7 @@ export default function Home() {
                                         <Link legacyBehavior href="/">
                                             <a>
                                                 <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/4.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag">Aspirers</span>
+                                                    <span className="lbl-hot btn btn-tag color-2">Aspirers</span>
                                                 </div>
                                             </a>
                                         </Link>
@@ -138,7 +140,7 @@ export default function Home() {
                                         <Link legacyBehavior href="/">
                                             <a>
                                                 <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/5.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag">Communities</span>
+                                                    <span className="lbl-hot btn btn-tag color-1">Communities</span>
                                                 </div>
                                             </a>
                                         </Link>
@@ -149,7 +151,7 @@ export default function Home() {
                                         <Link legacyBehavior href="/">
                                             <a>
                                                 <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/6.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag">Low-income Earners</span>
+                                                    <span className="lbl-hot btn btn-tag color-3">Low-income Earners</span>
                                                 </div>
                                             </a>
                                         </Link>
@@ -308,6 +310,8 @@ export default function Home() {
                                     </p>
                                 </div>
                                 <div className="box-swiper mt-50">
+                                    <div className="swiper-button-next" />
+                                    <div className="swiper-button-prev" />
                                     <TestimonialSliderHomePage />
                                 </div>
                             </div>

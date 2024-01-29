@@ -331,10 +331,20 @@
             align-items: center;
             padding: 0px 10px;
             height: 24px;
-            background: #3c65f5de;
             border-radius: 5px;
             color: white;
             min-width: 42px;
+        }
+        .color-1 {
+            background: #3c65f5de;
+        }
+        .color-2 {
+            background: rgba(82, 0, 255, 0.45);
+
+;
+        }
+        .color-3 {
+            background: rgba(58, 171, 103, 0.75);
         }
         img {
             border-radius: 0px;
