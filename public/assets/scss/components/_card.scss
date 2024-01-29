@@ -709,8 +709,8 @@ ul {
         text-align: center;
         img {
             margin: -44px 0px 0px 0px;
-            width: 88px;
-            height: 88px;
+            width: 115px;
+            height: 115px;
             border-radius: 50%;
         }
     }
@@ -727,4 +727,12 @@ ul {
             margin-right: 5px;
         }
     }
+}
+
+.btn-show-more{
+  background-color: transparent;
+  color: blue;
+  border: none;
+  cursor: pointer;
+
 }
