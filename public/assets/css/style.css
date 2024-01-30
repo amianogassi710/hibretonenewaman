@@ -1605,9 +1605,6 @@ label {
 }
 .box-swiper .swiper-container {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .box-swiper .swiper-container .item-logo {
   border: 1px solid rgba(6, 18, 36, 0.1);
