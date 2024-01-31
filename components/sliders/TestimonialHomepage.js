@@ -2,14 +2,14 @@ import SwiperCore, { Navigation } from "swiper";
 import { useEffect, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
-
+;
 SwiperCore.use([Navigation]);
 
 const TestimonialSliderHomePage = () => {
     const [showMore1, setShowMore1] = useState(false);
     const [showMore2, setShowMore2] = useState(false);
     const [showMore3, setShowMore3] = useState(false);
-    const [showMore4, setShowMore4] = useState(false);
+    const [showMore4, setShowMore4] = useState(false)
 
     return (
         <>

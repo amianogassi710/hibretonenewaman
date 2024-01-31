@@ -7,6 +7,8 @@ import BrandSlider from "./../components/sliders/Brand";
 import CategorySlider2 from "./../components/sliders/Category2";
 import TopRekruterSlider from "./../components/sliders/TopRekruter";
 import TestimonialSliderHomePage from "./../components/sliders/TestimonialHomepage";
+import WhoWeHelp from "../components/elements/WhoWeHelp";
+import Subscription from "../components/Layout/Subscription"
 export default function Home() {
     return (
          <>
@@ -88,77 +90,7 @@ export default function Home() {
                                 <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Aspirers wanting to create wealth through enterprise</p>
                             </div>
                         </div>
-                        <div className="container">
-                            <div className="row mt-50">
-
-                                <div className="col-xl-4 col-lg-4 col-md-7 col-sm-12 col-12">
-                                    <div className="card-image-top hover-up">
-                                        <Link legacyBehavior href="/">
-                                            <a>
-                                                <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/1.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag color-1">Entrepreneurs</span>
-                                                </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="col-xl-4 col-lg-4 col-md-7 col-sm-12 col-12">
-                                    <div className="card-image-top hover-up">
-                                        <Link legacyBehavior href="/">
-                                            <a>
-                                                <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/2.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag color-3">Underrepresented</span>
-                                                </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="col-xl-4 col-lg-4 col-md-7 col-sm-12 col-12">
-                                    <div className="card-image-top hover-up">
-                                        <Link legacyBehavior href="/">
-                                            <a>
-                                                <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/3.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag color-2">Startups and Scaleups</span>
-                                                </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="col-xl-4 col-lg-4 col-md-7 col-sm-12 col-12">
-                                    <div className="card-image-top hover-up">
-                                        <Link legacyBehavior href="/">
-                                            <a>
-                                                <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/4.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag color-2">Aspirers</span>
-                                                </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="col-xl-4 col-lg-4 col-md-7 col-sm-12 col-12">
-                                    <div className="card-image-top hover-up">
-                                        <Link legacyBehavior href="/">
-                                            <a>
-                                                <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/5.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag color-1">Communities</span>
-                                                </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="col-xl-4 col-lg-4 col-md-7 col-sm-12 col-12">
-                                    <div className="card-image-top hover-up">
-                                        <Link legacyBehavior href="/">
-                                            <a>
-                                                <div className="image" style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/6.jpg)" }}>
-                                                    <span className="lbl-hot btn btn-tag color-3">Low-income Earners</span>
-                                                </div>
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <WhoWeHelp />
                     </section>
                     <section className="section-box mt-50">
                         {/* <div className="y-button hover-up">
@@ -317,32 +249,7 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-50 mb-20">
-                        <div className="box-newsletter box-newsletter-2">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-xl-4 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/page/homepage1/newsletter.png" alt="joxBox" />
-                                    </div>
-                                    <div className="col-xl-8 col-lg-12 col-12 text-center">
-                                        <div className="d-inline-block">
-                                            <div>
-                                                <h2 className="color-white">Sign-up to our Show Me the Money newsletter</h2>
-                                                <p className="mt-10 font-lg color-white">Funding, research and opportunities delivered directly to your inbox</p>
-                                            <div/>
-                                            <div className="box-form-newsletter mt-40">
-                                                <form className="form-newsletter">
-                                                    <input className="input-newsletter" type="text" placeholder="Enter your email here" />
-                                                    <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <Subscription/>
                 </div>
             </Layout>
         </>
