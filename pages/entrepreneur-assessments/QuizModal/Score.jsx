@@ -40,13 +40,17 @@ const Score = props => {
       return (
         <>
           <div className="feedback-content">
+            <h6 className="score">Your Results: {props.feedback.score}</h6>
+            <p className=" fw-bold thank-you mb-5">
+              Thank you for completing the {props.title} Assessment!
+            </p>
             <div className="suggestion">
-              <h4>
+              <p className="fw-bold">
               {feedback["header"]}
-              </h4>
+              </p>
             </div>
             <div className="feedback">
-              <p>Follow these recommendations, then retake the assessment.</p>
+              <p>Follow these recommendations then, if needed, retake the assessment:</p>
               <ul>
                 {feedback["recommendations"].map((recommendation) => (
                   <li key={j += 1}>{recommendation}</li>
@@ -60,27 +64,30 @@ const Score = props => {
       const feedback = props.feedback
       return (
         <div className="feedback-content">
+          <h6 className="thank-you mb-5">
+            Thank you for completing the {props.title} Assessment!
+          </h6>
+          <h6 className="score">Your Results:</h6>
           {Object.entries(feedback).map(([category,result]) => {
             const trait = category.split("_").map(word => word[0].toUpperCase() + word.substring(1)).join(" ")
             return (
             <div className={`${category}`} key={`${category}`}>
               <div className="personality">
-                <p><strong>{trait}</strong>
-                <i
-                  data-value={trait}
-                  onClick={handlePersonalityEnquiry}
-                  >
-                    <IoIosInformationCircleOutline data-value={trait} size={25}/>
-                  </i>
-                </p>
-                <div className="result">
-                  <div className="result-bar">
+                <p className="mr-40"><strong>{trait}</strong></p>
+                <div className="result mr-20">
+                  <div className="result-bar mr-20">
                     <div className="bar" style={{width: `${result}`}}>
                       <span className="progression"></span>
                     </div>
                   </div>
                   {result}
                 </div>
+                <i
+                  data-value={trait}
+                  onClick={handlePersonalityEnquiry}
+                  >
+                    <IoIosInformationCircleOutline className="mb-1" data-value={trait} size={20}/>
+                  </i>
               </div>
             </div>
           )})}
@@ -92,13 +99,15 @@ const Score = props => {
       return (
         <>
           <div className="feedback-content">
-            <h4>{feedback["result"]}</h4>
+            <h6 className="score">Your Results: <span className="fw-stronger">{feedback["result"]}</span></h6>
+
+            <h6 className="thank-you mb-5">
+              Thank you for completing the {props.title} Assessment!
+            </h6>
             <div className="suggestion">
-              <h5>
               {feedback["header"].split("<br />").map((text) => (
                 <p key={j += 1}>{text}</p>
               ))}
-              </h5>
             </div>
             <div className="feedback">
               <p>Next step:</p>
@@ -119,19 +128,12 @@ const Score = props => {
     <>
 
         <div className="content p-20">
-          <h3 className="score">Your Results:  {props.feedback.score}</h3>
-
-          <h4 className="thank-you">
-            Thank you for completing the {props.title} Assessment!
-          </h4>
-
           <Feedback />
-
         </div>
         <div className="icons d-flex justify-content-center">
           <StrengthsAndIdealJobs isActive={true} />
         </div>
-        <div className="footer pb-20">
+        <div className="footer pb-15">
           <div className="button-group d-flex justify-content-center">
             <button id="retake-btn" type="button" className="btn btn-quiz mx-1" onClick={props.onRetake}>Retake Assessment</button>
             <button type="button" id="subscribe-button" className="btn btn-quiz mx-1" onClick={handleEnquiries}>

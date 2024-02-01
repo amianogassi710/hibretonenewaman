@@ -61,58 +61,8 @@ export default function Index() {
   const Results = ({results}) => {
     if (Object.keys(results).length > 0) {
       console.log(results)
-      const reason_examples = Object.values(results.reason_examples).slice(0,10)
-      const category_examples = Object.values(results.category_examples).slice(0,10)
       return (
         <section className="section-box mt-30">
-          <div className="row mt-20 mb-30 text-center">
-            <div className="col">
-              <h4>Issue:</h4>
-              <strong>{results.closest_reason}</strong>
-            </div>
-            <div className="col">
-              <h4>Category:</h4>
-              <strong>{results.category}</strong>
-            </div>
-          </div>
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Accordion Item #2
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Accordion Item #3
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                </div>
-              </div>
-            </div>
-          </div>
          <div className="container">
             <div className="row mt-20 text-center">
               <div className="col">
@@ -121,7 +71,7 @@ export default function Index() {
               </div>
               <div className="col">
                 <h4>Category:</h4>
-                <strong>{results.category}</strong>
+                <strong>{results.failure_category}</strong>
               </div>
             </div>
             <div className="row mt-30 text-center">
@@ -129,30 +79,30 @@ export default function Index() {
             </div>
             <div className="row mt-20 text-center">
               <div className="col">
-                <h6>{results.reason_percentage.toFixed(2)}% of companies failed due to: {results.closest_reason}</h6>
-                <ul>
-                  {reason_examples.map((example) => (
-                    <li>{example}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="col">
-                <h6>{results.category_percentage.toFixed(2)}% of companies failed due to category: {results.category}</h6>
-                <ul>
-                  {category_examples.map((example) => (
-                    <li>{example}</li>
-                  ))}
-                </ul>
+                <h4>Problem Overview</h4>
+                <p>{Object.values(results.feedback["Problem Overview"])}</p>
               </div>
             </div>
-            <div className="row mt-20">
-              <div className="text-center mt-20 col-md-6">
-                <h3>Company Sector Analysis</h3>
-                <PieGraph data={results.sector_reasons} />
+            <div className="row mt-20 text-center">
+              <div className="col">
+                <h4>Pivots you could use</h4>
+                <p>{Object.values(results.feedback["Problem Pivots"])}</p>
               </div>
-              <div className="text-center col-md-6">
-                <h3>Company Stage Analysis</h3>
-                <PieGraph data={results.stage_reasons} />
+            </div>
+            <div className="row mt-20 text-center">
+              <div className="col">
+                <h4>Resources</h4>
+                <p>{Object.values(results.feedback["Resources"])}</p>
+              </div>
+            </div>
+            <div className="row mt-20 text-center">
+              <div className="col">
+                <h6>Examples of Businesses that suceeded in pivoting</h6>
+                <p>{Object.values(results.feedback["Pivot Successes"])}</p>
+              </div>
+              <div className="col">
+                <h6>Examples of Businesses that failed in pivoting</h6>
+                <p>{Object.values(results.feedback["Failures"])}</p>
               </div>
             </div>
          </div>
@@ -168,15 +118,15 @@ export default function Index() {
             <Layout>
                 <div>
                     <section className="section-box">
-                        <div className="banner-hero hero-2 hero-3">
+                        <div className="banner-hero hero-3">
                             <div className="banner-inner">
                                 <div className="block-banner text-start">
-                                    <h1 className="text-42 color-white wow animate__animated animate__fadeInRight">
+                                    <h2 className="text-42 color-white wow animate__animated animate__fadeInRight">
                                         Business Problem <span className="color-brand-2 fw-bolder">Triage</span>
-                                    </h1>
-                                    <div className="font-lg font-regular color-white mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                                    </h2>
+                                    <p className="font-lg font-regular color-white mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                                         Tried and tested options for your business problems,<br />empowering and informing your decision making
-                                    </div>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -187,18 +137,10 @@ export default function Index() {
                           <div className=" col-lg-8 col-md-12 text-center">
                             <h2>Proven Choices to Business Problems</h2>
                             <form className="mt-20" onSubmit={handleOnSubmit}>
-                              <div className="row">
-                                <div className="col">
-                                  <input id="failure_reason" type="text" className="fs-6" ref={formRef} placeholder="Describe your business problem" />
-                                </div>
-                                <div className="col-2">
-                                  <button type="submit" className="btn btn-default" onClick={handleOnSubmit}>Search</button>
-                                </div>
-                              </div>
-                              <div className="row mt-20">
+                              <div className="row mb-20">
                                 <div className="col">
                                   <div className="box-industry">
-                                      <select id="country_of_origin" className="form-input mr-10 select-active input-location">
+                                      <select id="country_of_origin" className="form-input select-active input-location dropdown">
                                           <option value>Country of Origin</option>
                                           <option value="Aland Islands">Aland Islands</option>
                                           <option value="Afghanistan">Afghanistan</option>
@@ -430,8 +372,8 @@ export default function Index() {
                                           <option value="Uganda">Uganda</option>
                                           <option value="Ukraine">Ukraine</option>
                                           <option value="United Arab Emirates">United Arab Emirates</option>
-                                          <option value="United Kingdom">United Kingdom (UK)</option>
-                                          <option value="United States">USA (US)</option>
+                                          <option value="United Kingdom">United Kingdom</option>
+                                          <option value="United States">United States</option>
                                           <option value="Uruguay">Uruguay</option>
                                           <option value="Uzbekistan">Uzbekistan</option>
                                           <option value="Vanuatu">Vanuatu</option>
@@ -448,7 +390,7 @@ export default function Index() {
                                   </div>
                                 </div>
                                 <div className="col">
-                                  <select id="company_sector">
+                                  <select id="company_sector" className="form-input mr-4 select-active input-location dropdown">
                                     <option>Company Sector</option>
                                     <option value="Finances">Finances</option>
                                     <option value="Marketing">Marketing</option>
@@ -469,7 +411,7 @@ export default function Index() {
                                   </select>
                                 </div>
                                 <div className="col">
-                                  <select id="failure_stage">
+                                  <select id="failure_stage" className="form-input select-active input-location dropdown">
                                     <option>Failure Stage</option>
                                     <option value="Startup">Startup</option>
                                     <option value="Scaleup">Scaleup</option>
@@ -477,6 +419,14 @@ export default function Index() {
                                     <option value="Decline">Decline</option>
                                     <option value="Unsure">Unsure</option>
                                   </select>
+                                </div>
+                              </div>
+                              <div className="row">
+                                <div className="col">
+                                  <input id="failure_reason" type="text" className="fs-6" ref={formRef} placeholder="Describe your business problem" />
+                                </div>
+                                <div className="col-2 text-end">
+                                  <button type="submit" className="btn btn-default" onClick={handleOnSubmit}>Search</button>
                                 </div>
                               </div>
                             </form>
