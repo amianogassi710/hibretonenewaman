@@ -9,8 +9,8 @@ const BrandSlider = () => {
         <>
             <div className="swiper-container swiper-group-9 swiper">
                 <Swiper
-                    slidesPerView={9}
-                    spaceBetween={30}
+                    slidesPerView={7}
+                    spaceBetween={40}
                     loop={true}
                     navigation={{
                         prevEl: ".swiper-button-prev",
@@ -18,6 +18,7 @@ const BrandSlider = () => {
                     }}
                     className="swiper-wrapper"
                 >
+                    
                     <SwiperSlide>
                         <a href="#">
                             <img src="assets/imgs/slider/logo/Aston_Uni.jpg" alt="HibretOne" />
@@ -49,9 +50,11 @@ const BrandSlider = () => {
                         </a>
                     </SwiperSlide>
                     <SwiperSlide>
+                    <div className="image-wrapper">
                         <a href="#">
                             <img src="assets/imgs/slider/logo/UoB Crest Logo RGB Stacked Positive.jpg" alt="HibretOne" />
                         </a>
+                    </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">

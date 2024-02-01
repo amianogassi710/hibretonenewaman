@@ -307,13 +307,13 @@
 
 .card-image-top {
     border: 1px solid $color-border-2;
-    padding: 12px 12px 20px 12px;
+    padding: 12px 12px 12px 12px;
     border-radius: 16px;
     margin-bottom: 24px;
     .image {
         overflow: hidden;
         position: relative;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         height: 261px;
         width: 100%;
         border-radius: 10px;
@@ -331,10 +331,20 @@
             align-items: center;
             padding: 0px 10px;
             height: 24px;
-            background: $color-border-2;
             border-radius: 5px;
-            color: $color-brand-2;
+            color: white;
             min-width: 42px;
+        }
+        .color-1 {
+            background: #3c65f5de;
+        }
+        .color-2 {
+            background: rgba(82, 0, 255, 0.45);
+
+;
+        }
+        .color-3 {
+            background: rgba(58, 171, 103, 0.75);
         }
         img {
             border-radius: 0px;
@@ -686,6 +696,9 @@ ul {
     .text-info {
         display: inline-block;
         width: 100%;
+        .empty-line{
+            margin-bottom: 35px;
+        }
     }
 }
 
@@ -706,8 +719,8 @@ ul {
         text-align: center;
         img {
             margin: -44px 0px 0px 0px;
-            width: 88px;
-            height: 88px;
+            width: 115px;
+            height: 115px;
             border-radius: 50%;
         }
     }
@@ -724,4 +737,12 @@ ul {
             margin-right: 5px;
         }
     }
+}
+
+.btn-show-more{
+  background-color: transparent;
+  color: blue;
+  border: none;
+  cursor: pointer;
+
 }

@@ -2,6 +2,7 @@
     position: relative;
     .swiper-container {
         position: relative;
+
         .item-logo {
             border: 1px solid $border-color-1;
             padding: 22px 18px;
@@ -14,6 +15,7 @@
             flex-wrap: wrap;
             img {
                 max-width: 100%;
+                
             }
             &:hover {
                 border: 1px solid $border-color-1-hover;
@@ -123,7 +125,12 @@
         left: auto;
     }
 }
+.image-wrapper {
+    display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
 .swiper-pagination {
     .swiper-pagination-bullet {
         background-color: $color-brand-2;
