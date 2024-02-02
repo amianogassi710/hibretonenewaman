@@ -1435,6 +1435,15 @@ span.btn {
   scale: 130%;
 }
 
+.features-inner {
+  display: flex;
+  background: white;
+}
+
+.features-content {
+  border: 1px solid #adadad
+}
+
 .assessment-question label {
   font-size: 15px;
   min-height: 7.6vh;
@@ -3769,11 +3778,6 @@ ul li:last-child .card-list-4 {
   border-left: 10px solid #83CBFF;
 }
 
-.dropdown {
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid #d8e2ff;
-}
 .banner-hero.hero-3::before {
   content: "";
   position: absolute;
@@ -3782,6 +3786,37 @@ ul li:last-child .card-list-4 {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
+}
+
+.banner-hero.bg-img-assessment {
+  display: flex;
+  height: 40vh;
+  background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top center;
+  background-size: cover;
+}
+
+.banner-hero.bg-img-assessment h2, .banner-hero.bg-img-assessment p {
+  z-index: 2;
+  position: relative;
+  color: #ffffff;
+  padding-left: 10px;
+  border-left: 10px solid #83CBFF;
+}
+
+.banner-hero.bg-img-assessment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.dropdown {
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid #d8e2ff;
 }
 
 @keyframes hero-thumb-animation {

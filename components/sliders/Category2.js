@@ -47,7 +47,7 @@ const CategorySlider2 = () => {
         <>
             <div className="swiper-container swiper-group-6 mh-none swiper categories-slide-2">
                 <Swiper
-                    slidesPerView={6}
+                    slidesPerView="auto"
                     spaceBetween={30}
                     loop={true}
                     navigation={{
@@ -83,17 +83,15 @@ const CategorySlider2 = () => {
                             <div className="swiper-slide hover-up">
                                 <div className="card-grid-5 card-category hover-up" style={{ backgroundImage: `url(assets/imgs/page/homepage1/how-we-help/${item.img})` }}>
                                     {/* <Link legacyBehavior href="/"> */}
-                                        <a>
-                                            <div className="box-cover-img">
-                                                <div className="content-bottom">
-                                                    <h6 className="color-white mb-5">{item.title}</h6>
-                                                    {/* <p className="color-white font-xs">
-                                                        <span>{item.count}</span>
-                                                        <span> Jobs Available</span>
-                                                    </p> */}
-                                                </div>
+                                        <div className="box-cover-img">
+                                            <div className="content-bottom">
+                                                <h6 className="color-white mb-5">{item.title}</h6>
+                                                {/* <p className="color-white font-xs">
+                                                    <span>{item.count}</span>
+                                                    <span> Jobs Available</span>
+                                                </p> */}
                                             </div>
-                                        </a>
+                                        </div>
                                     {/* </Link> */}
                                 </div>
                             </div>

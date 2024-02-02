@@ -24,10 +24,6 @@ const Layout = ({ children }) => {
             <Header handleOpen={handleOpen} handleRemove={handleRemove} openClass={openClass} />
             <Sidebar openClass={openClass} />
             <main className="main">
-                <div className="background-style-container">
-                    <img src="assets/imgs/page/layout/bg-1.png" className="background-shape-1" />
-                    <img src="assets/imgs/page/layout/bg-2.png" className="background-shape-2" />
-                </div>
                 {children}
             </main>
             <Footer />

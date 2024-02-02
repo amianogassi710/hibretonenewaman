@@ -89,6 +89,14 @@ export default function Home() {
                                 <h5>Access proven resources for business success!</h5>
                                 <p className="fs-6">Discover how hibretOne can transform your ideas into reality.</p>
                             </div>
+
+
+                        </div> */}
+                        <div className="y-button hover-up">
+                            <div className="text">
+                                <h3 className="text-start">Access proven resources for business success!</h3>
+                                <p className="text-start">Discover how hibretOne can transform your ideas into reality.</p>
+                            </div>
                             <div className="col d-flex align-items-center">
                                 <button className="btn btn-sign-up fs-6">Kickstart Your Business Today</button>
                             </div>
@@ -180,7 +188,7 @@ export default function Home() {
                                         </div>
                                         <div className="text-info">
                                             <h3>Improving startup success</h3>
-                                            <div class="empty-line"></div>
+                                            <div className="empty-line"></div>
                                             <p className="font-sm color-text-paragraph-2">Creating higher-skilled employment opportunities for low-paid and unsuccessful entrepreneurs.‘80% of cooperatives are still trading after</p>
                                             <div className="mt-15">
                                                 <Link legacyBehavior href="#">

@@ -116,7 +116,6 @@ export default function Index() {
     return (
         <>
             <Layout>
-                <div>
                     <section className="section-box">
                         <div className="banner-hero hero-3">
                             <div className="banner-inner">
@@ -447,7 +446,6 @@ export default function Index() {
                         </div>
                       </div>
                     </section>
-                </div>
             </Layout>
         </>
     );
