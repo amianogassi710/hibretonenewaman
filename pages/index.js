@@ -24,15 +24,6 @@ export default function Home() {
                                     <span className="color-blue">  </span>
 
                                     </h1>
-                                    {/* <div className="font-lg font-regular color-white mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                                    A revolutionary platform delivering the most comprehensive first-line business resources, tools and funding, all in one place
-                                    </div> */}
-                                    {/* <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
-                                        <form>
-                                            <input className="form-input mr-10" type="text" placeholder="" />
-                                            <button className="btn btn-default btn-find font-sm">Search</button>
-                                        </form>
-                                    </div> */}
                                 </div>
                                 <div className="mt-60">
                                     <div className="row">
@@ -92,15 +83,13 @@ export default function Home() {
                         </div>
                         <WhoWeHelp />
                     </section>
-                    <section className="section-box mt-50">
-                        {/* <div className="y-button hover-up">
-                            <div className="text">
-                                <h3 className="text-start">Access proven resources for business success!</h3>
-                                <p className="text-start">Discover how biznetOne can transform your ideas into reality.</p>
+                    <section className="section-box mt-20">
+                        <div className="container d-flex justify-content-center sign-up">
+                            <div className="col-8 m-10">
+                                <h5>Access proven resources for business success!</h5>
+                                <p className="fs-6">Discover how hibretOne can transform your ideas into reality.</p>
                             </div>
-                            <div className="button">
-                                <a href="#" class="button">Kickstart Your Business Today</a>
-                            </div>
+
 
                         </div> */}
                         <div className="y-button hover-up">
@@ -108,8 +97,8 @@ export default function Home() {
                                 <h3 className="text-start">Access proven resources for business success!</h3>
                                 <p className="text-start">Discover how hibretOne can transform your ideas into reality.</p>
                             </div>
-                            <div className="button">
-                                <a href="#" className="button">Kickstart Your Business Today</a>
+                            <div className="col d-flex align-items-center">
+                                <button className="btn btn-sign-up fs-6">Kickstart Your Business Today</button>
                             </div>
                         </div>
                     </section>
@@ -126,7 +115,7 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box bg-15 pt-50 pb-50 mt-80">
+                    <section className="section-box pt-50 pb-50 mt-80">
                         <div className="container">
                             <div className="row">
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-30">
@@ -245,6 +234,9 @@ export default function Home() {
                                     <div className="swiper-button-next" />
                                     <div className="swiper-button-prev" />
                                     <TestimonialSliderHomePage />
+                                </div>
+                                <div className="col d-flex justify-content-center align-items-center">
+                                    <button className="btn btn-sign-up-inverted fs-6">Kickstart Your Business Today</button>
                                 </div>
                             </div>
                         </div>
