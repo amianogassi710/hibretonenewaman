@@ -2,11 +2,10 @@
 import React, { useState } from 'react';
 import Layout from "../../components/Layout/Layout";
 import TaxCreditsCalculatorModal from './TaxCreditsCalculatorModal/TaxCreditsCalculatorModal';
+import Subscription from '../../components/Layout/Subscription';
 
 export default function Index() {
     const [isOpen,setIsOpen] = useState(false)
-    const [result,setResult] = useState(0)
-    const [start,setStart] = useState(true)
 
     const toggleOpen = e => {
         setIsOpen(prevOpen => !prevOpen)
@@ -34,7 +33,7 @@ export default function Index() {
                             <h2 className="section-title mb-10">How Much Can You Claim?</h2>
                             <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">Answer these simple questions for a quick answer</p>
                         </div>
-                        <div className="text-center mt-20" style={{display: start ? "block" : "none"}}>
+                        <div className="text-center mt-20">
                             <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
                         </div>
                         <TaxCreditsCalculatorModal show={isOpen} onClose={toggleOpen} />
@@ -51,7 +50,7 @@ export default function Index() {
                                         <p className="font-sm color-text-paragraph mt-10">With 80% of eligible businesses not having made a claim, use our simple calculator to see if you may qualify. To claim you need to explain how a project: looked for an advance in the field, had to overcome the scientific or technological uncertainty, tried to overcome the scientific or technological uncertainty, could not be easily worked out by a professional in the field.</p>
                                         <p className="font-sm color-text-paragraph mt-10 mb-10">Watch this simple video to learn more about how the scheme can be used.</p>
                                     </div>
-                                    <div className="mt-20 mb-30" style={{display: start ? "block" : "none"}}>
+                                    <div className="mt-20 mb-30">
                                         <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
                                     </div>
                                 </div>
@@ -88,7 +87,7 @@ export default function Index() {
                                         <p className="font-sm color-text-paragraph mt-10"><span className="fw-bold" style={{color: "#f58a3c"}}>A loss-making SME: </span>A payable credit can be claimed by loss-making SMEs. With an R&D tax credit incentive of up to 18.6%, if a company spent £500,000 per year on R&D it could potentially claim back up to £93,000.</p>
                                         <p className="font-sm color-text-paragraph mt-10"><span className="fw-bold" style={{color: "#3aab67"}}>A loss-making, R&D intensive SME: </span>At least 40% of a company’s total expenditure being spent on R&D. Businesses in this category may be eligible for up to 27%. If you spent £500,000 per year on R&D you could potentially claim back up to £135,000.</p>
                                     </div>
-                                    <div className="mt-20 mb-30" style={{display: start ? "block" : "none"}}>
+                                    <div className="mt-20 mb-30">
                                         <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
                                     </div>
                                 </div>
@@ -106,7 +105,7 @@ export default function Index() {
                                         <p className="font-md fw-bold color-text-paragraph mt-20">Around <span style={{color: "#3C65F5"}}>£7 billion</span> of tax relief is paid to UK businesses through R&D Tax Credits every year.</p>
                                         <p className="font-sm color-text-paragraph mt-20">UK Government encourages innovation as it is vital for improving the UK’s productivity, performance and competitiveness. Hence, research and development (R&D) incentives for small and medium size enterprises (SMEs) and large companies have been improved over several years to encourage and reward greater UK innovation.</p>
                                     </div>
-                                    <div className="mt-30 mb-20" style={{display: start ? "block" : "none"}}>
+                                    <div className="mt-30 mb-20">
                                         <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
                                     </div>
                                 </div>
@@ -134,7 +133,7 @@ export default function Index() {
                                         <h6 className="font-sm fw-bold color-text-paragraph mt-5" style={{color: "#f58a3c"}}>Calculating R&D tax credits for SMEs</h6>
                                         <p className="font-sm color-text-paragraph">To qualify as an SME, your company must have fewer than 500 staff and a turnover of under £100 million GBP’s or a balance sheet total under £86 million GBP’s.</p>
                                     </div>
-                                    <div className="mt-20 mb-20" style={{display: start ? "block" : "none"}}>
+                                    <div className="mt-20 mb-20">
                                         <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
                                     </div>
                                 </div>
@@ -167,29 +166,7 @@ export default function Index() {
                 <div className="col d-flex justify-content-center align-items-center">
                     <button className="btn btn-sign-up-inverted fs-6">Kickstart Your Business Today</button>
                 </div>
-                <section className="section-box mt-50 mb-20">
-                        <div className="box-newsletter box-newsletter-2">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-xl-4 col-12 text-center d-none d-xl-block">
-                                        <img src="assets/imgs/page/homepage4/img-newsletter.png" alt="joxBox" />
-                                    </div>
-                                    <div className="col-xl-8 col-lg-12 col-12 text-center">
-                                        <div className="d-inline-block text-start">
-                                            <h2 className="color-white">Subscribe our newsletter</h2>
-                                            <p className="mt-10 font-lg color-white">New Things Will Always Update Regularl</p>
-                                            <div className="box-form-newsletter mt-40">
-                                                <form className="form-newsletter">
-                                                    <input className="input-newsletter" type="text" placeholder="Enter your email here" />
-                                                    <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                <Subscription />
             </div>
         </Layout>
         </>
