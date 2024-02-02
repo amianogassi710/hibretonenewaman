@@ -708,6 +708,10 @@ h6 {
   color: #85FF83;
 }
 
+.color-black {
+  color: black;
+}
+
 .color-blue {
   color: rgb(131, 203, 255);
 }
@@ -1476,7 +1480,6 @@ i.assessment-icon:hover * {
   color: #05264E;
   background-color: transparent;
   border: 1px solid #adadad;
-  line-height: 26px;
   height: 25vh;
   padding: 10px 25px;
 }
@@ -1713,7 +1716,7 @@ label {
 }
 
 .feedback ul {
-  padding-left: 50px;
+  padding-left: 40px;
   list-style: disc;
   font-size: 13px;
 }
@@ -6631,6 +6634,55 @@ ul li:last-child .card-list-4 {
   height: 528px;
   width: 100%;
 }
+
+.neurodivergent-container {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.feedback-content {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.feedback-container {
+  height: 15vh;
+  overflow-y: scroll;
+  border: 1px solid #adadad;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.bg-img-calculator {
+  background: url(../imgs/page/r&d-tax-credits-calculator/Hero.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.bg-img-calculator div {
+  z-index: 2;
+}
+
+.bg-img-calculator h2, .bg-img-calculator p {
+  border-left: 10px solid #83CBFF;
+  padding-left: 10px;
+  color: white;
+}
+
+.bg-img-calculator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #05264E;
+}
+
 
 .bg-img-about {
   background: url(../imgs/page/about/img-about.png) no-repeat top center;
