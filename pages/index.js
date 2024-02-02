@@ -93,16 +93,6 @@ export default function Home() {
                         <WhoWeHelp />
                     </section>
                     <section className="section-box mt-50">
-                        {/* <div className="y-button hover-up">
-                            <div className="text">
-                                <h3 className="text-start">Access proven resources for business success!</h3>
-                                <p className="text-start">Discover how biznetOne can transform your ideas into reality.</p>
-                            </div>
-                            <div className="button">
-                                <a href="#" class="button">Kickstart Your Business Today</a>
-                            </div>
-
-                        </div> */}
                         <div className="y-button hover-up">
                             <div className="text">
                                 <h3 className="text-start">Access proven resources for business success!</h3>
