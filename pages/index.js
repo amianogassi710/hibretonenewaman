@@ -101,7 +101,7 @@ export default function Home() {
                             <div className="button">
                                 <a href="#" class="button">Kickstart Your Business Today</a>
                             </div>
-                            
+
                         </div> */}
                         <div className="y-button hover-up">
                             <div className="text">
@@ -109,8 +109,8 @@ export default function Home() {
                                 <p className="text-start">Discover how hibretOne can transform your ideas into reality.</p>
                             </div>
                             <div className="button">
-                                <a href="#" class="button">Kickstart Your Business Today</a>
-                            </div>   
+                                <a href="#" className="button">Kickstart Your Business Today</a>
+                            </div>
                         </div>
                     </section>
                     <section className="section-box mt-50">
@@ -199,7 +199,7 @@ export default function Home() {
                                         </div>
                                         <div className="text-info">
                                             <h3>Improving startup success</h3>
-                                            <div class="empty-line"></div>
+                                            <div className="empty-line"></div>
                                             <p className="font-sm color-text-paragraph-2">Creating higher-skilled employment opportunities for low-paid and unsuccessful entrepreneurs.‘80% of cooperatives are still trading after</p>
                                             <div className="mt-15">
                                                 <Link legacyBehavior href="#">
