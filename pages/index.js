@@ -89,9 +89,7 @@ export default function Home() {
                                 <h5>Access proven resources for business success!</h5>
                                 <p className="fs-6">Discover how hibretOne can transform your ideas into reality.</p>
                             </div>
-
-
-                        </div> */}
+                        </div>
                         <div className="y-button hover-up">
                             <div className="text">
                                 <h3 className="text-start">Access proven resources for business success!</h3>
