@@ -3,6 +3,7 @@ import Layout from '../../components/Layout/Layout'
 import QuizModal from './QuizModal/QuizModal';
 import axios from 'axios';
 import Loading from '../../components/elements/Loading';
+import Subscription from '../../components/Layout/Subscription';
 
 export default function Index() {
   const [open,setOpen] = useState(false)
@@ -49,6 +50,7 @@ export default function Index() {
         <button onClick={toggleOpen} value="Dyslexia-Screener">Dyslexia</button>
         <QuizModal onClose={toggleOpen} title={`${assessment}`} assessment={data[`${assessment}`]} uizard={uizard} show={open} isLoggedIn={true}/>
       </div>
+      <Subscription />
     </Layout>
   );
 }
