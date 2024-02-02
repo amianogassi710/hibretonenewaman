@@ -84,12 +84,6 @@ export default function Home() {
                         <WhoWeHelp />
                     </section>
                     <section className="section-box mt-20">
-                        <div className="container d-flex justify-content-center sign-up">
-                            <div className="col-8 m-10">
-                                <h5>Access proven resources for business success!</h5>
-                                <p className="fs-6">Discover how hibretOne can transform your ideas into reality.</p>
-                            </div>
-                        </div>
                         <div className="y-button hover-up">
                             <div className="text">
                                 <h3 className="text-start">Access proven resources for business success!</h3>
