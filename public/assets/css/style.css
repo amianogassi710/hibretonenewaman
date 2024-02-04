@@ -8041,7 +8041,7 @@ ul li:last-child .card-list-4 {
 
 .bg-img-assessment {
   display: flex;
-  height: 40vh;
+  height: 30vh;
   background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top center;
   background-size: cover;
 }
@@ -8057,9 +8057,11 @@ ul li:last-child .card-list-4 {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  opacity: 0.8;
+  background: #05264E;
 }
 
 .assessment-form-group {
@@ -8298,7 +8300,7 @@ ul li:last-child .card-list-4 {
 
 .bg-img-calculator {
   display: flex;
-  height: 40vh;
+  height: 30vh;
   background: url(../imgs/page/r&d-tax-credits-calculator/Hero.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -8314,9 +8316,11 @@ ul li:last-child .card-list-4 {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  opacity: 0.8;
+  background: #05264E;
 }
 
 .content-media {
