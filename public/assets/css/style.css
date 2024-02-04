@@ -708,10 +708,6 @@ h6 {
   color: #85FF83;
 }
 
-.color-black {
-  color: black;
-}
-
 .color-blue {
   color: rgb(131, 203, 255);
 }
@@ -1040,6 +1036,31 @@ h6,
   background-color: #05264E;
   transform: translateY(-2px);
   transition: 0.2s;
+}
+.btn.btn-quiz {
+  color: white;
+  background-color: #05264E;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #05264E;
+  border: 1px solid #adadad;
+  line-height: 26px;
+  padding: 2px 15px;
+  font-size: 13px;
+}
+.btn.btn-quiz:hover {
+  background-color: rgb(81, 81, 81);
+  color: white;
+}
+
+input:checked + .btn.btn-switch, input:checked + label {
+  background-color: #3C65F5;
+  font-weight: bold;
+  color: white;
 }
 
 .btn-grey {
@@ -1423,97 +1444,6 @@ span.btn {
   user-select: none;
 }
 
-.inner-button button {
-  border: none;
-  background-color: transparent;
-  padding: 5px;
-  opacity: 0.6;
-}
-
-.inner-button button:hover {
-  opacity: 1;
-  scale: 130%;
-}
-
-.features-inner {
-  display: flex;
-  background: white;
-}
-
-.features-content {
-  border: 1px solid #adadad
-}
-
-.assessment-question label {
-  font-size: 15px;
-  min-height: 7.6vh;
-}
-
-.section-name {
-  border-bottom: 1px solid #adadad;
-  margin-bottom: 5px;
-}
-
-i.assessment-icon * {
-  color: white;
-  transition: 0.1s ease-in-out;
-}
-
-i.assessment-icon:hover * {
-  color: black;
-  scale: 105%;
-  transition: 0.2s ease-in-out;
-}
-
-.btn.btn-quiz {
-  margin-top: 5px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  color: white;
-  background-color: #05264E;
-  border: 1px solid #adadad;
-  line-height: 26px;
-  padding: 2px 20px;
-  font-size: 13px;
-}
-
-.btn.btn-quiz:hover {
-  color: white;
-  background-color: rgb(81, 81, 81);
-}
-
-.btn.btn-switch {
-  display: flex;
-  align-items: center;
-  color: #05264E;
-  background-color: transparent;
-  border: 1px solid #adadad;
-  height: 25vh;
-  padding: 10px 25px;
-}
-
-.btn.btn-switch:hover {
-  background-color: #dcdcdc;
-  transition: 0.2s;
-}
-
-.content-media {
-  border-radius: 16px;
-  transition: 0.05s ease-in-out;
-}
-
-.content-media:hover {
-  scale: 1.03;
-  transition: 0.05s ease-in-out;
-}
-
-input:checked + .btn.btn-switch, input:checked + label {
-  background-color: #3C65F5;
-  font-weight: bold;
-  color: white;
-}
-
 .cb-container input {
   position: absolute;
   opacity: 0;
@@ -1671,442 +1601,6 @@ label {
 
 .mt-6 {
   margin-top: 6px !important;
-}
-
-.assessment-modal {
-  z-index: 2;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.assessment-modal-content {
-  display: inline-table;
-  align-items: center;
-  width: 90vw;
-  max-width: 600px;
-  height: 45vh;
-  background-color: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.assessment-modal-header{
-  color: white;
-  width: 100%;
-  height: 60px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3C65F5;
-}
-
-.assessment-modal-footer {
-  display: inline-flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  background-color: #D2E4EC;
-  padding: 0 30px;
-}
-
-.assessment-modal-body {
-  margin: 0px auto;
-  width: 100%;
-  padding: 10px;
-}
-
-.feedback ul {
-  padding-left: 40px;
-  list-style: disc;
-  font-size: 13px;
-}
-
-.enquiry-modal {
-  z-index: 2;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.enquiry-modal-content {
-  display: inline-table;
-  align-items: center;
-  width: 40vw;
-  background-color: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.enquiry-modal-header{
-  color: white;
-  width: 100%;
-  height: 70px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3C65F5;
-}
-
-.enquiry-modal-footer {
-  display: inline-flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  height: 30px;
-  background-color: #D2E4EC;
-  padding: 5px;
-}
-
-.enquiry-modal-body {
-  margin: 0px auto;
-  padding: 10px 0px;
-  width: 95%;
-  height: auto
-}
-
-.assessment-radio-group {
-  display: inline-block;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.assessment-radio-group li {
-  list-style: none;
-}
-
-.assessment-radio-group li input {
-  display: none ;
-}
-
-.assessment-radio-group li label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  margin-top: 1px;
-  font-size: 12px;
-  border: 1px solid #adadad;
-  border-radius: 10px;
-  transition: 0.1s ease-in-out;
-  height: 35px;
-}
-
-.assessment-radio-group li label:hover {
-  background-color: #F2F4FA;
-  transition: 0.1s ease-in-out;
-  color: black;
-}
-
-.assessment-form-group {
-  margin: 0 auto;
-  padding: 5px 15px 10px;
-  font-size: 13px;
-  text-align: start;
-  width: 90%;
-  border: 1px solid #adadad;
-  border-radius: 15px;
-}
-
-.assessment-form {
-  margin: 0;
-}
-
-.tracker {
-  width: 50%;
-  display: grid;
-  text-align: start;
-  margin: 0 0 0 20px;
-  font-weight: 600;
-  font-size: 85%
-}
-
-.progress-bar {
-  position: relative;
-  height: 8px;
-  width: 60%;
-  background-color: #ffffff;
-  border-radius: 15px;
-}
-
-.bar {
-  position: absolute;
-  height: 100%;
-  background-color: black;
-  border-radius: inherit;
-}
-
-.uizard {
-  transition: 0.1s ease-in-out;
-}
-
-.uizard:hover {
-  transition: 0.1s ease-in-out;
-}
-
-.result p {
-  margin: 0 5px 0 0;
-}
-
-.result {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: start;
-  font-weight: 600;
-}
-
-.result-bar {
-  position: relative;
-  height: 10px;
-  width: 80%;
-  background-color: #d6d6d6;
-  border-radius: 15px;
-}
-
-.bar {
-  position: absolute;
-  height: 100%;
-  background-color: #05264E;
-  border-radius: inherit;
-}
-
-.personality {
-  display: flex;
-  align-items: center;
-}
-
-.personality p i {
-  padding: 5px 0 0 10px;
-  transition: 0.1s ease-in-out;
-}
-
-.personality p i:hover {
-  scale: 120%;
-  transition: 0.1s ease-in-out;
-}
-
-.personality p {
- width: 35%;
-}
-
-.logo img {
-  position: relative;
-  width: 120px;
-  float: left;
-  cursor: pointer;
-}
-
-.content img{
-  width: 100%
-}
-
-.strengths-and-ideal-jobs-modal {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.strengths-and-ideal-jobs-modal-content {
-  width: 700px;
-  background-color: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  height: 450px;
-}
-
-.strengths-and-ideal-jobs-modal-header {
-  color: white;
-  width: 100%;
-  height: 50px;
-  background-color: #3C65F5;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 45px;
-  font-size: 25px;
-}
-
-.strengths-and-ideal-jobs-modal-body {
-  padding: 10px 0px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.endpoint-container {
-  padding: 10px 0px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 50px;
-  margin: 20px auto;
-  width: 80%;
-  height: 300px;
-}
-
-.endpoint-container div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 80%;
-  padding: 5px 10px 10px 5px;
-  background: #ffffff;
-  background-clip: content-box;
-  border-radius: 5px;
-  box-shadow: inset -6px -6px 0 7.5px #D2E4EC;
-  transition: 0.1s ease-in-out;
-}
-
-.endpoint-container div:hover {
-  box-shadow: inset -6px -6px 0 7.5px #3C65F5;
-  background-color: #D2E4EC;
-  transition: 0.1s ease-in-out;
-  font-size: 110%;
-  transform: translate(0,-5px);
-  font-weight: 700;
-}
-
-.strengths-and-ideal-jobs {
-  position: relative;
-  font-weight: 600;
-  width: 50%;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.strengths-and-ideal-jobs div {
-  display: inline-block;
-  margin: 0 auto;
-}
-
-.strengths-and-ideal-jobs.disabled {
-  opacity: 0.5
-}
-
-.strengths-and-ideal-jobs div img {
-  height: 25px;
-  filter: invert(1);
-}
-
-.strengths-and-ideal-jobs div label {
-  font-size: 85%
-}
-
-.strengths-and-ideal-jobs.active div .circle {
-  transition: 0.2s ease-in-out
-}
-
-.strengths-and-ideal-jobs.active div .circle:hover {
-  scale: 120%;
-  transform: translate(0,-3px);
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 10px 30px 0 rgba(0,0,0,0.19);
-  transition: 0.2s ease-in-out;
-}
-
-.circle {
-  height:40px;
-  width: 40px;
-  background-color: #05264E;
-  border-radius: 100%;
-}
-
-.circle img {
-  scale: 85%
-}
-
-.sign-up {
-  border-radius: 12px;
-  background: #FEBA54;
-  padding: 30px 50px;
-  width: 65vw;
-}
-
-.btn.btn-sign-up {
-  display: flex;
-  align-items: center;
-  color: white;
-  background-color: black;
-  font-weight: 800;
-  line-height: 26px;
-  padding: 5px 25px;
-  transition: 0.2s ease-in-out
-}
-
-.btn.btn-sign-up:hover {
-  color: black;
-  background-color: white;
-  transition: 0.2s ease-in-out;
-  scale: 1.06
-}
-
-.btn.btn-sign-up-inverted {
-  display: flex;
-  align-items: center;
-  color: black;
-  background-color: #FEBA54;
-  font-weight: 800;
-  line-height: 26px;
-  padding: 10px 25px;
-  transition: 0.2s ease-in-out
-}
-
-.btn.btn-sign-up-inverted:hover {
-  background-color: black;
-  color: white;
-  transition: 0.2s ease-in-out;
-  scale: 1.06
-}
-
-.background-style-container {
-  width: inherit;
-  overflow: hidden;
-}
-
-.background-shape-1, .background-shape-2 {
-  position: absolute;
-  border-radius: 16px;
-  z-index: -1;
-}
-
-.background-shape-1 {
-  top: 400px;
-  left: 0;
-  height: 1100px;
-}
-
-.background-shape-2 {
-  top: 2000px;
-  right: 0;
-  height: 1100px;
-}
-
-.modal {
-  z-index: 5;
 }
 
 .modal-lg, .modal-xl {
@@ -3769,54 +3263,8 @@ ul li:last-child .card-list-4 {
 .banner-hero.hero-3 {
   background: #3C65F5;
 }
-
-.banner-hero.hero-3 h2, .banner-hero.hero-3 p {
-  z-index: 2;
-  position: relative;
-  color: #ffffff;
-  padding-left: 10px;
-  border-left: 10px solid #83CBFF;
-}
-
 .banner-hero.hero-3::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.banner-hero.bg-img-assessment {
-  display: flex;
-  height: 40vh;
-  background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top center;
-  background-size: cover;
-}
-
-.banner-hero.bg-img-assessment h2, .banner-hero.bg-img-assessment p {
-  z-index: 2;
-  position: relative;
-  color: #ffffff;
-  padding-left: 10px;
-  border-left: 10px solid #83CBFF;
-}
-
-.banner-hero.bg-img-assessment::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.dropdown {
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid #d8e2ff;
+  display: none;
 }
 
 @keyframes hero-thumb-animation {
@@ -3874,6 +3322,106 @@ ul li:last-child .card-list-4 {
   -moz-animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
   -o-animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
   animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+}
+
+.assessment-modal {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.assessment-modal-content {
+  display: inline-table;
+  align-items: center;
+  width: 90vw;
+  max-width: 600px;
+  height: 45vh;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.assessment-modal-header {
+  color: white;
+  width: 100%;
+  height: 60px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3C65F5;
+}
+.assessment-modal-header h5 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.assessment-modal-header i {
+  margin-left: 5px;
+}
+
+.assessment-modal-footer {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: #D2E4EC;
+  padding: 0 30px;
+}
+
+.assessment-modal-body {
+  margin: 0px auto;
+  width: 100%;
+  padding: 10px;
+}
+.assessment-modal-body h6 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.assessment-icon {
+  color: white;
+  transition: 0.1s ease-in-out;
+}
+.assessment-icon:hover {
+  color: #05264E;
+  scale: 105%;
+  transition: 0.2s ease-in-out;
+}
+
+.tracker {
+  width: 50%;
+  display: grid;
+  text-align: start;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 85%;
+}
+.tracker p {
+  margin-bottom: 0;
+}
+
+.assessment-progress-bar {
+  position: relative;
+  height: 8px;
+  width: 60%;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.bar {
+  position: absolute;
+  height: 100%;
+  background-color: #05264E;
+  border-radius: inherit;
 }
 
 .header {
@@ -5551,7 +5099,7 @@ ul li:last-child .card-list-4 {
 }
 
 /***************************
-    Page section margin
+    Page section margin 
 ****************************/
 .mtb-0 {
   margin: 0;
@@ -6669,55 +6217,6 @@ ul li:last-child .card-list-4 {
   height: 528px;
   width: 100%;
 }
-
-.neurodivergent-container {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.feedback-content {
-  margin: 0 auto;
-  width: 90%;
-}
-
-.feedback-container {
-  height: 15vh;
-  overflow-y: scroll;
-  border: 1px solid #adadad;
-  border-radius: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 13px;
-}
-
-.bg-img-calculator {
-  background: url(../imgs/page/r&d-tax-credits-calculator/Hero.jpg) no-repeat center center;
-  background-size: cover;
-  position: relative;
-}
-
-.bg-img-calculator div {
-  z-index: 2;
-}
-
-.bg-img-calculator h2, .bg-img-calculator p {
-  border-left: 10px solid #83CBFF;
-  padding-left: 10px;
-  color: white;
-}
-
-.bg-img-calculator::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  background: #05264E;
-}
-
 
 .bg-img-about {
   background: url(../imgs/page/about/img-about.png) no-repeat top center;
@@ -8540,6 +8039,296 @@ ul li:last-child .card-list-4 {
   background-color: #ffffff !important;
 }
 
+.bg-img-assessment {
+  display: flex;
+  height: 40vh;
+  background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top center;
+  background-size: cover;
+}
+.bg-img-assessment h2, .bg-img-assessment p {
+  z-index: 2;
+  position: relative;
+  color: white;
+  padding-left: 10px;
+  border-left: 10px solid #83cbff;
+}
+.bg-img-assessment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.assessment-form-group {
+  margin: 0 auto;
+  padding: 5px 15px 10px;
+  text-align: start;
+  width: 90%;
+  border: 1px solid #adadad;
+  border-radius: 15px;
+}
+
+.assessment-questionlabel {
+  font-size: 15px;
+  min-height: 7.6vh;
+}
+
+.assessment-radio-group {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.assessment-radio-group li {
+  list-style: none;
+}
+.assessment-radio-group li input {
+  display: none;
+}
+.assessment-radio-group li label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-top: 1px;
+  border: 1px solid #adadad;
+  border-radius: 10px;
+  transition: 0.1s ease-in-out;
+  height: 35px;
+}
+.assessment-radio-group li label:hover {
+  background-color: #f2f4fa;
+  transition: 0.1s ease-in-out;
+  color: black;
+}
+
+.section-name {
+  border-bottom: 1px solid #adadad;
+  margin-bottom: 5px;
+}
+
+.strengths-and-ideal-jobs {
+  position: relative;
+  font-weight: 600;
+  width: 50%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.strengths-and-ideal-jobs div {
+  display: inline-block;
+  margin: 0 auto;
+}
+.strengths-and-ideal-jobs div img {
+  height: 25px;
+  filter: invert(1);
+}
+.strengths-and-ideal-jobs div label {
+  font-size: 85%;
+}
+.strengths-and-ideal-jobs .disabled {
+  opacity: 0.5;
+}
+
+.circle {
+  height: 40px;
+  width: 40px;
+  background-color: #05264E;
+  border-radius: 100px;
+  transition: 0.2s ease-in-out;
+}
+.circle:hover {
+  scale: 120%;
+  transform: translate(0, -2px);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.2s ease-in-out;
+}
+.circle img {
+  scale: 85%;
+}
+
+.strengths-and-ideal-jobs-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.strengths-and-ideal-jobs-modal-content {
+  width: 700px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 450px;
+}
+
+.strengths-and-ideal-jobs-modal-header {
+  color: white;
+  width: 100%;
+  height: 50px;
+  background-color: #3C65F5;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 45px;
+  font-size: 25px;
+}
+
+.strengths-and-ideal-jobs-modal-body {
+  padding: 10px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uizard {
+  transition: 0.1s ease-in-out;
+}
+
+.uizard:hover {
+  transition: 0.1s ease-in-out;
+}
+
+.result p {
+  margin: 0 5px 0 0;
+}
+
+.result {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  font-weight: 600;
+}
+
+.result-bar {
+  position: relative;
+  height: 10px;
+  width: 80%;
+  background-color: #d6d6d6;
+  border-radius: 15px;
+}
+
+.bar {
+  position: absolute;
+  height: 100%;
+  background-color: #05264E;
+  border-radius: inherit;
+}
+
+.personality {
+  display: flex;
+  align-items: center;
+}
+.personality p {
+  width: 35%;
+}
+.personality i {
+  padding: 5px 0 0 10px;
+  transition: 0.1s ease-in-out;
+}
+.personality i:hover {
+  scale: 120%;
+  transition: 0.1s ease-in-out;
+}
+
+.feedback-content {
+  margin: 0 auto;
+  width: 90%;
+}
+.feedback-content * {
+  color: black;
+}
+
+.feedback-container {
+  height: 15vh;
+  overflow-y: scroll;
+  border: 1px solid #adadad;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.neurodivergent-container {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.endpoint-container {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 50px;
+  margin: 20px auto;
+  width: 80%;
+  height: 300px;
+}
+.endpoint-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  padding: 5px 10px 10px 5px;
+  background-clip: content-box;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: inset -6px -6px 0 7.5px #d2e4ec;
+  transition: 0.1s ease-in-out;
+}
+.endpoint-container div:hover {
+  box-shadow: inset -6px -6px 0 7.5px #3c65f5;
+  background-color: #d2e4ec;
+  transition: 0.1s ease-in-out;
+  font-size: 110%;
+  transform: translate(0, -5px);
+  font-weight: 700;
+}
+
+.bg-img-calculator {
+  display: flex;
+  height: 40vh;
+  background: url(../imgs/page/r&d-tax-credits-calculator/Hero.jpg) no-repeat center center;
+  background-size: cover;
+}
+.bg-img-calculator h2, .bg-img-calculator p {
+  z-index: 2;
+  position: relative;
+  color: white;
+  padding-left: 10px;
+  border-left: 10px solid #83cbff;
+}
+.bg-img-calculator::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.content-media {
+  border-radius: 16px;
+  transition: 0.05s ease-in-out;
+  max-height: 65vh;
+}
+.content-media:hover {
+  scale: 1.02;
+  transition: 0.05s ease-in-out;
+}
+
 @media (max-width: 1399.98px) {
   .custom-class {
     display: block;
@@ -9244,4 +9033,4 @@ ul li:last-child .card-list-4 {
   .header-right {
     display: none;
   }
-}
+}/*# sourceMappingURL=style.css.map */

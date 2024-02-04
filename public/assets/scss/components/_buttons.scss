@@ -16,7 +16,33 @@
             transition: 0.2s;
         }
     }
+    &.btn-quiz {
+        color: white;
+        background-color: #05264E;
+        border-radius: 10px;
+        margin-top: 5px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color: #05264E;
+        border: 1px solid #adadad;
+        line-height: 26px;
+        padding: 2px 15px;
+        font-size: 13px;
+        &:hover {
+            background-color: rgb(81, 81, 81);
+            color: white;
+        }
+    }
 }
+
+input:checked + .btn.btn-switch, input:checked + label {
+    background-color: #3C65F5;
+    font-weight: bold;
+    color: white;
+}
+
 .btn-grey
 {
     padding: 17px 20px;
