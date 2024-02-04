@@ -274,7 +274,7 @@ const Questions = props => {
         <div className="tracker lh-sm">
         {/* questions.length + 1 to include gender question */}
         <p>Question {question} of 6</p>
-        <div className="progress-bar">
+        <div className="assessment-progress-bar">
             <div className="bar" style={{width: `${progress}%`}}>
             <span className="progression"></span>
             </div>

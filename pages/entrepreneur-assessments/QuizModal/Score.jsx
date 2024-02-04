@@ -66,9 +66,9 @@ const Score = props => {
       const feedback = props.feedback
       return (
         <div className="feedback-content">
-          <p className="fw-bold color-black mb-5">
+          <h6 className="fw-bold color-black mb-10">
             Thank you for completing the {props.title} Assessment!
-          </p>
+          </h6>
           <h6 className="score">Your Results:</h6>
           <div className="mb-10">
             {Object.entries(feedback).map(([category,result]) => {
