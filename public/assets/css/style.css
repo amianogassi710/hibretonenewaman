@@ -1443,7 +1443,6 @@ span.btn {
   -ms-user-select: none;
   user-select: none;
 }
-
 .cb-container input {
   position: absolute;
   opacity: 0;
@@ -3262,9 +3261,6 @@ ul li:last-child .card-list-4 {
 }
 .banner-hero.hero-3 {
   background: #3C65F5;
-}
-.banner-hero.hero-3::before {
-  display: none;
 }
 
 @keyframes hero-thumb-animation {

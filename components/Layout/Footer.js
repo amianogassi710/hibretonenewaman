@@ -16,7 +16,8 @@ const Footer = () => {
                             <a className="icon-socials icon-linkedin" href="#" /></div>
                     </div>
                     <div className="footer-col-2 col-md-2 col-xs-6">
-                        <h6 className="mb-20">Resources</h6>
+                        <h6 className="mb-20">Contact Us
+                        </h6>
                         <ul className="menu-footer">
                             <li>
                                 <a href="#">About us</a></li>
@@ -67,13 +68,13 @@ const Footer = () => {
                                 <a href="#">FAQ</a></li>
                         </ul>
                     </div>
-                    {/* <div className="footer-col-6 col-md-3 col-sm-12">
+                    <div className="footer-col-6 col-md-3 col-sm-12">
                         <h6 className="mb-20">Download App</h6>
                         <p className="color-text-paragraph-2 font-xs">Download our Apps and get extra 15% Discount on your first Order…!</p>
                         <div className="mt-15">
                             <a className="mr-5" href="#"><img src="assets/imgs/template/icons/app-store.png" alt="joxBox" /></a>
                             <a href="#"><img src="assets/imgs/template/icons/android.png" alt="joxBox" /></a></div>
-                    </div> */}
+                    </div>
                 </div>
                 <div className="footer-bottom mt-50">
                     <div className="row">
