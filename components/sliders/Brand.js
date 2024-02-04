@@ -8,10 +8,14 @@ const BrandSlider = () => {
     return (
         <>
             <div className="swiper-container swiper-group-9 swiper">
+                
                 <Swiper
                     slidesPerView={7}
                     spaceBetween={40}
                     loop={true}
+                    autoplay={{
+                        delay: 1500
+                      }}
                     navigation={{
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"

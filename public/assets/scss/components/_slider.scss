@@ -61,7 +61,10 @@
     .swiper-button-next,
     .swiper-button-prev {
         width: 40px;
-        margin-top: -55px;
+    
+    }
+    .swiper-button-margin{
+        margin-top: 25px;
     }
     .swiper-button-next {
         left: auto;

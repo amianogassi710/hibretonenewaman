@@ -39,6 +39,36 @@ const data = [
         img: "7.jpg",
         title: "Problem Triage",
         count: 10
+    },
+    {
+        img: "8.jpeg",
+        title: "Grant Finder",
+        count: 10
+    },
+    {
+        img: "9.jpeg",
+        title: "Grant Writer",
+        count: 10
+    },
+    {
+        img: "10.jpeg",
+        title: "Scholarships & Bursaries",
+        count: 10
+    },
+    {
+        img: "11.jpeg",
+        title: "Free Courses",
+        count: 10
+    },
+    {
+        img: "12.jpeg",
+        title: "Mentor Masterclasses",
+        count: 10
+    },
+    {
+        img: "13.jpeg",
+        title: "R&D Tax Calculator",
+        count: 10
     }
 ];
 

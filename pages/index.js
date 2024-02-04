@@ -30,33 +30,33 @@ export default function Home() {
                                         <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
                                             <div className="d-inline-block text-center">
                                                 <h4 className="color-white">
-                                                    <span className="count">231+</span>
+                                                    <span className="count">£430BN+</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Grants Posted</p>
+                                                <p className="font-sm color-text-mutted">Potential Boost</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
                                             <div className="d-inline-block text-center">
                                                 <h4 className="color-white">
-                                                    <span className="count">297+</span>
+                                                    <span className="count">26.7M+</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Online Courses</p>
+                                                <p className="font-sm color-text-mutted">Prospective Aspirers</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
                                             <div className="d-inline-block text-center">
                                                 <h4 className="color-white">
-                                                    <span className="count">235+</span>
+                                                    <span className="count">18:1</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Scholarships</p>
+                                                <p className="font-sm color-text-mutted">Return on Investment</p>
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
                                             <div className="d-inline-block text-center">
                                                 <h4 className="color-white">
-                                                    <span className="count">212+</span>
+                                                    <span className="count">£1BN</span>
                                                 </h4>
-                                                <p className="font-sm color-text-mutted">Freelancers</p>
+                                                <p className="font-sm color-text-mutted">Annual Target</p>
                                             </div>
                                         </div>
                                     </div>
@@ -67,9 +67,12 @@ export default function Home() {
                             <div className="list-brands mt-40 mb-30">
                                 <div className="box-swiper">
                                     <h2 className="text-center section-title mb-40 wow animate__animated animate__fadeInUp">Our Founding Supporters</h2>
-                                    <div className="swiper-button-next" />
-                                    <div className="swiper-button-prev" />
+                                    
+
+                                    <div className="swiper-button-next swiper-button-margin" />
+                                    <div className="swiper-button-prev swiper-button-margin" />
                                     <BrandSlider />
+                                    
                                 </div>
                             </div>
                         </div>

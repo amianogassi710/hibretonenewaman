@@ -67,7 +67,7 @@ const WhoWeHelp = () => {
                         <div className="card-image-top hover-up">
                             <Link legacyBehavior href="/">
                                 <a>
-                                    <div className="image" onMouseOver={showOverlay1} onMouseLeave={hideOverlay1} style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/1.jpg)" }}>
+                                    <div className="image" onMouseEnter={showOverlay1} onMouseLeave={hideOverlay1} style={{ backgroundImage: "url(assets/imgs/page/homepage1/who-we-help/1.jpg)" }}>
                                         <span className="lbl-hot btn btn-tag color-1">Entrepreneurs</span>
                                         {show1 && (
                                                 <div className="overlay">
