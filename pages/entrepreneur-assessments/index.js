@@ -85,19 +85,17 @@ export default function Index() {
   return (
     <Layout>
       <section className="slider__area">
-            <div className="slider__active swiper-container">
-                <div className="banner-hero bg-img-assessment">
-                    <div className="container d-flex align-items-center">
-                        <div className="row">
-                            <div className="col-lg-8">
-                                <h2 className="mb-10">Entrepreneurial Assessments</h2>
-                                <p className="font-lg color-text-paragraph-2">Take these simple diverse tests to understand your skills, traits and abilities to run your own enterprise.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+         <div className="banner-hero bg-img-assessment">
+            <div className="container d-flex align-items-center">
+               <div className="row">
+                     <div className="col-lg-8">
+                        <h2 className="mb-10">Entrepreneurial Assessments</h2>
+                        <p className="font-lg color-text-paragraph-2">Take these simple diverse tests to understand your skills, traits and abilities to run your own enterprise.</p>
+                     </div>
+               </div>
             </div>
-         </section>
+         </div>
+      </section>
          {/* <section className="features-area pb-160">
             <div className="container">
                <div className="features-inner p-relative z-index-1 white-bg">

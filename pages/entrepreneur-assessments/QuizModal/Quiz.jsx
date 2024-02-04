@@ -188,7 +188,7 @@ const Quiz = props => {
         <button type="button" className="btn btn-quiz" onClick={handleGoNext}>
           Next
         </button>
-        <span className="ml-5 answer-label pb-5">Or Press ENTER</span>
+        <span className="ml-5 answer-label">Or Press ENTER</span>
       </div>
     )
   }
@@ -222,7 +222,7 @@ const Quiz = props => {
   return (
     <>
       <div className="assessment-modal-body text-center">
-        <h6 className="mb-5 col-12">Take this simple {props.assessment.time} assessment</h6>
+        <h6 className="mb-10 col-12">Take this simple {props.assessment.time} assessment</h6>
           <form onSubmit={handleSubmit}>
             {/* Loops through all the provided props.assessment.assessment */}
             {props.assessment.assessment.map((question) => (
@@ -283,13 +283,11 @@ const Quiz = props => {
         <StrengthsAndIdealJobs isActive={false} />
       </div>
       <div className="assessment-modal-footer">
-        <div className="tracker lh-sm">
+        <div className="tracker">
           {/* props.assessment.assessment.length + 1 to include gender question */}
           <p>Question {formIndex+1} of {props.assessment.assessment.length+1}</p>
-          <div className="progress-bar mt-1">
-            <div className="bar" style={{width: `${progress}%`}}>
-              <span className="progression"></span>
-            </div>
+          <div className="assessment-progress-bar">
+            <div className="bar" style={{width: `${progress}%`}} />
           </div>
         </div>
           <QuizButton number={formIndex} />

@@ -26,7 +26,7 @@ const AssessmentModal = ({ isOpen, onClose, children, header, uizardHTML }) => {
         <div className="assessment-modal-header d-flex justify-content-space-between pr-20 pl-20">
           <div className="d-flex">
             <h5 className="text-reset">{header.replace("-"," ")}</h5>
-            <i className="uizard assessment-icon d-flex justify-content-center align-items-center " onClick={handleUIzard}><IoIosInformationCircleOutline className="ml-4 pb-5" size={25}/></i>
+            <i className="uizard assessment-icon" onClick={handleUIzard}><IoIosInformationCircleOutline size={25}/></i>
           </div>
           <div className="close">
             <i className="assessment-icon d-flex justify-content-center align-items-center" onClick={onClose}><IoCloseOutline size={30} /></i>
