@@ -1674,7 +1674,7 @@ label {
   position: relative;
   width: 100%;
 }
-.box-swiper .swiper-slide {
+.box-swiper .centered-swiper {
   margin: auto 40px auto 0px !important;
 }
 .box-swiper .swiper-button-next:after,

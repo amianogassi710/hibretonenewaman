@@ -25,34 +25,34 @@ const BrandSlider = () => {
                     className="swiper-wrapper"
                 >
                     
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/Aston_Uni.jpg" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/Tech-Nation-logo.png" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/NatWest-Logo.png" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/somerset house.png" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/womanwho_logo.jpg" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/TheDataCompany_logo-2.png" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/UoB Crest Logo RGB Stacked Positive.jpg" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/WMEH.jpg" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/alison online.jpg" alt="HibretOne" />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="centered-swiper">
                         <img src="assets/imgs/slider/logo/big5Logo.png" alt="HibretOne" />
                     </SwiperSlide>
                 </Swiper>
