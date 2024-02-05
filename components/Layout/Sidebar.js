@@ -37,7 +37,7 @@ const Sidebar = ({ openClass }) => {
                                 {/* mobile menu start*/}
                                 <nav>
                                     <ul className="mobile-menu font-heading">
-                                         <li className={isActive.key == 1 ? "has-children active" : "has-children"}>
+                                         {/* <li className={isActive.key == 1 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(1)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
                                             <Link legacyBehavior href="/"><a className="active">Home</a></Link>
@@ -62,7 +62,7 @@ const Sidebar = ({ openClass }) => {
                                                     <Link legacyBehavior href="/index-6"><a>Home 6</a></Link>
                                                     </li>
                                             </ul>
-                                        </li>
+                                        </li> */}
                                          <li className={isActive.key == 2 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(2)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
