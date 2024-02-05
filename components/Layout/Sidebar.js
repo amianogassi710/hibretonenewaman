@@ -170,7 +170,7 @@ const Sidebar = ({ openClass }) => {
                                         </li>
                                 </ul>
                             </div>
-                            <div className="site-copyright">Copyright 2024 © hibretOne </div>
+                            <div className="site-copyright">Copyright 2024 © hibretOne</div>
                         </div>
                     </div>
                 </div>
