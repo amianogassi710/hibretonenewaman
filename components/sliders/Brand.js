@@ -14,8 +14,10 @@ const BrandSlider = () => {
                     spaceBetween={40}
                     loop={true}
                     autoplay={{
-                        delay: 1500
+                        delay: 2000
                       }}
+                    centeredSlides={true}
+                    // breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 7 }, 1920: { slidesPerView: 8 } }}
                     navigation={{
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"
@@ -24,54 +26,34 @@ const BrandSlider = () => {
                 >
                     
                     <SwiperSlide>
-                   
-                            <img src="assets/imgs/slider/logo/Aston_Uni.jpg" alt="HibretOne" />
-               
+                        <img src="assets/imgs/slider/logo/Aston_Uni.jpg" alt="HibretOne" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/Tech-Nation-logo.png" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/Tech-Nation-logo.png" alt="HibretOne" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/NatWest-Logo.png" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/NatWest-Logo.png" alt="HibretOne" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/somerset house.png" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/somerset house.png" alt="HibretOne" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/womanwho_logo.jpg" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/womanwho_logo.jpg" alt="HibretOne" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/TheDataCompany_logo-2.png" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/TheDataCompany_logo-2.png" alt="HibretOne" />
                     </SwiperSlide>
                     <SwiperSlide>
-                    <div className="image-wrapper">
                         <img src="assets/imgs/slider/logo/UoB Crest Logo RGB Stacked Positive.jpg" alt="HibretOne" />
-                    </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/WMEH.jpg" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/WMEH.jpg" alt="HibretOne" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/alison online.jpg" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/alison online.jpg" alt="HibretOne" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/big5Logo.png" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/big5Logo.png" alt="HibretOne" />
                     </SwiperSlide>
                 </Swiper>
             </div>
