@@ -93,7 +93,7 @@ export default function Home() {
                                 <p className="text-start">Discover how hibretOne can transform your ideas into reality.</p>
                             </div>
                             <div className="col d-flex align-items-center">
-                                <button className="btn btn-sign-up fs-6">Kickstart Your Business Today</button>
+                                <button className="btn-sign-up fs-6">Kickstart Your Business Today</button>
                             </div>
                         </div>
                     </section>
@@ -231,7 +231,7 @@ export default function Home() {
                                     <TestimonialSliderHomePage />
                                 </div>
                                 <div className="col d-flex justify-content-center align-items-center">
-                                    <button className="btn btn-sign-up-inverted fs-6">Kickstart Your Business Today</button>
+                                    <button className="btn btn-sign-up-inverted fs-6 hover-up">Kickstart Your Business Today</button>
                                 </div>
                             </div>
                         </div>

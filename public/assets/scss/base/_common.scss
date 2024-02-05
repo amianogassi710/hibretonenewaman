@@ -354,84 +354,29 @@ a {
     display: inline-block;
     width: 100%;
     overflow: visible;
-    // .y-button{
-    //         width: 1100px;
-    //         height: 157px;
-    //         margin: 0 auto;
-    //         background-color: rgba(254, 186, 84, 1);
-    //         border-radius: 12px;
-    //         text-align: center;
-    //         line-height: 150px; 
-    //         transition: transform 0.3s ease; 
-    //         padding: 30px;
-    //         .text{
-    //             width: 500px;
-    //         }
-    //         .button{
-    //             width: 300px;
-    //         }
-    //         // .h1{
-    //         //     font-family: Arial, sans-serif;
-    //         //     font-weight: bold;
-    //         //     color: #000;
-    //         //     margin: 0;
-    //         //   }
-              
-    //         // .p {
-    //         //     font-family: Arial, sans-serif;
-    //         //     font-size: 18px;
-    //         //     color: #000;
-    //         //     margin: 10px 0;
-    //         //  }
-              
-    //         // .a.button {
-    //         //     display: inline-block;
-    //         //     font-family: Arial, sans-serif;
-    //         //     font-size: 18px;
-    //         //     font-weight: bold;
-    //         //     color: #fff;
-    //         //     background-color: #000;
-    //         //     padding: 10px 20px;
-    //         //     border-radius: 10px;
-    //         //     text-decoration: none;
-    //         //   }
-    // }
     .y-button {
+        max-width: 1000px;
         display: flex;
-        width: 1100px;
-        height: 157px;
-        margin: 0 auto;
-        justify-content: space-between;
+        width: auto;
+        height: auto;
+        margin:auto;
+        // justify-content: space-between;
         align-items: center;
-        background-color: rgba(254, 186, 84, 1);; // 橙色背景色
+        background-color: rgba(254, 186, 84, 1);
         padding: 20px;
-        border-radius: 12px; // 圆角
+        border-radius: 12px; 
       
        .text {
          color: white;
       
          h3{
-            font-size: 30px;
+            font-size: 25px;
          }
          p{
             font-size: 16px;
          }
        }
       
-       .button {
-         a {
-           background-color: black;
-           color: white;
-           font-size: 20px;
-           padding: 10px 20px;
-           border-radius: 12px; // 圆角
-           text-decoration:none;
-      
-           &:hover {
-             background-color:#333333; // 鼠标悬停时变暗
-            }
-          }
-       }
       }
       
 }

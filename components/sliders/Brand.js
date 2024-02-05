@@ -24,9 +24,9 @@ const BrandSlider = () => {
                 >
                     
                     <SwiperSlide>
-                        <a href="#">
+                   
                             <img src="assets/imgs/slider/logo/Aston_Uni.jpg" alt="HibretOne" />
-                        </a>
+               
                     </SwiperSlide>
                     <SwiperSlide>
                         <a href="#">
@@ -55,9 +55,7 @@ const BrandSlider = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                     <div className="image-wrapper">
-                        <a href="#">
-                            <img src="assets/imgs/slider/logo/UoB Crest Logo RGB Stacked Positive.jpg" alt="HibretOne" />
-                        </a>
+                        <img src="assets/imgs/slider/logo/UoB Crest Logo RGB Stacked Positive.jpg" alt="HibretOne" />
                     </div>
                     </SwiperSlide>
                     <SwiperSlide>

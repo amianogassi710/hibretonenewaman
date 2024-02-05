@@ -43,6 +43,29 @@ input:checked + .btn.btn-switch, input:checked + label {
     color: white;
 }
 
+.btn-sign-up-inverted {
+    display: flex;
+    align-items: center;
+    color: black;
+    background-color: #FEBA54;
+    font-weight: 800;
+    line-height: 26px;
+    padding: 10px 25px;
+    transition: 0.2s ease-in-out
+  }
+  
+.btn-sign-up {
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    font-weight: 800;
+    line-height: 26px;
+    padding: 10px 25px;
+    margin-left: 30px;
+    border-radius: 8px;
+}
+
 .btn-grey
 {
     padding: 17px 20px;
