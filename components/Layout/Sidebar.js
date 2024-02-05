@@ -160,21 +160,17 @@ const Sidebar = ({ openClass }) => {
                                     <li>
                                         <Link legacyBehavior href="#"><a>Profile</a></Link>
                                         </li>
-                                    <li>
-                                        <Link legacyBehavior href="#"><a>Work Preferences</a></Link>
-                                        </li>
+
                                     <li>
                                         <Link legacyBehavior href="#"><a>Account Settings</a></Link>
                                         </li>
-                                    <li>
-                                        <Link legacyBehavior href="#"><a>Go Pro</a></Link>
-                                        </li>
+
                                     <li>
                                         <Link legacyBehavior href="/page-signin"><a>Sign Out</a></Link>
                                         </li>
                                 </ul>
                             </div>
-                            <div className="site-copyright">Copyright 2022 © JobBox. <br />Designed by AliThemes.</div>
+                            <div className="site-copyright">Copyright 2024 © hibretOne </div>
                         </div>
                     </div>
                 </div>
