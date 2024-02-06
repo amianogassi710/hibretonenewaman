@@ -43,7 +43,7 @@ export default function Index() {
                     <div className="post-loop-grid">
                         <div className="container">
                             <div className="row mt-50">
-                                <div className="col-lg-6 col-md-12 col-sm-12 mt-20 pr-60">
+                                <div className="col-lg-6 col-md-12 col-sm-12 mt-10 pr-60">
                                     <h4 className="mt-5">Using the R&D Tax Credit Scheme</h4>
                                     <div className="mt-10">
                                         <h6 className="mt-10 font-md"><strong>Nearly £84 billion of R&D tax relief is unclaimed in the UK according to the Treasury.</strong></h6>
@@ -88,7 +88,7 @@ export default function Index() {
                     <div className="post-loop-grid">
                         <div className="container">
                             <div className="row mt-10">
-                                <div className="col-lg-6 col-md-12 col-sm-12 pt-40 pl-60 mt-20 pr-60">
+                                <div className="col-lg-6 col-md-12 col-sm-12 pl-60 mt-20 pr-60">
                                     <h3>Encouraging Innovation</h3>
                                     <div className="mt-20">
                                         <p className="font-md fw-bold color-text-paragraph mt-20">Around <span style={{color: "#3C65F5"}}>£7 billion</span> of tax relief is paid to UK businesses through R&D Tax Credits every year.</p>
@@ -112,7 +112,7 @@ export default function Index() {
                                 <div className="col-lg-6 col-md-12 col-sm-12">
                                     <img className="content-media" src="assets/imgs/page/r&d-tax-credits-calculator/Tax.jpeg" alt="joxBox" />
                                 </div>
-                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 pl-50">
+                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 pl-50 mt-10 ">
                                     <h4 className="mt-5">Staying on top of the Changes</h4>
                                     <div className="mt-10">
                                         <h6 className="font-md fw-bold color-text-paragraph mt-5" style={{color: "#1740d0"}}>Calculating R&D tax credits for SMEs</h6>
