@@ -20,8 +20,12 @@ const nextConfig = {
       {
         source: '/business-problem-triage/:path*',
         destination: 'http://127.0.0.1:8000/search/:path*'
-      }
+      },
       // Add more rewrites as needed
+      {
+        source: '/auth/:path*',
+        destination: 'http://8.134.196.184:8000/:path*', // Your FastAPI endpoint
+      },
     ];
   },
 };
