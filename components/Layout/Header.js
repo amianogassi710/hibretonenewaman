@@ -3,12 +3,14 @@ import Link from 'next/link';
 import React from 'react';
 import {useState, useEffect} from "react";
 import {useLocalStorage} from "react-use";
+import {useRouter} from "next/router";
 
 const Header = ({handleOpen, handleRemove, openClass}) => {
     const [scroll, setScroll] = useState(0)
     const [clientSide, setClientSide] = useState(false);
-    const [isLoggedIn,setIsLoggedIn] = useLocalStorage("is_logged_in", false);
+    const [isLoggedIn, setIsLoggedIn] = useLocalStorage("is_logged_in", false);
     const [userAccount, setUserAccount] = useLocalStorage("user_account", {});
+    const router = useRouter();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,14 +21,26 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
         };
         document.addEventListener("scroll", handleScroll);
 
+        if (isLoggedIn) {
+            fetch('/auth/login/jwt', {
+                method: 'POST',
+            }).then(response => {
+                if (response.status !== 200) {
+                    setIsLoggedIn(false);
+                }
+            });
+        }
         setClientSide(true);
+
     }, [scroll]);
 
     const handleLogout = async (e) => {
-        setIsLoggedIn(false);
         await fetch('/auth/logout', {
             method: 'POST'
         });
+        setIsLoggedIn(false);
+        setUserAccount({});
+        router.push('/');
     };
 
 
@@ -40,7 +54,8 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                     <div className="main-header">
                         <div className="header-left">
                             <div className="header-logo">
-                            <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox" src="/assets/imgs/template/hibretOne-logo.png" /></a></Link>
+                                <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox"
+                                                                                         src="/assets/imgs/template/hibretOne-logo.png"/></a></Link>
                             </div>
                         </div>
                         <div className="header-nav">
@@ -67,7 +82,8 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/r&d-tax-credits-calculator"><a>R&D Tax Credits Calculator</a></Link>
+                                                <Link legacyBehavior href="/r&d-tax-credits-calculator"><a>R&D Tax
+                                                    Credits Calculator</a></Link>
                                             </li>
                                             <li>
                                                 <Link legacyBehavior href="/"><a>Investability Rating</a></Link>
@@ -111,11 +127,11 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                     </li>
 
                                     <li className="has-children">
-                                    <Link legacyBehavior href="/"><a>About Us</a></Link>
+                                        <Link legacyBehavior href="/"><a>About Us</a></Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Pricing</a></Link>
+                                                <Link legacyBehavior href="/page-pricing"><a>Pricing</a></Link>
                                             </li>
                                             <li>
                                                 <Link legacyBehavior href="/"><a>Contact Us</a></Link>
@@ -125,8 +141,12 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                 </ul>
                             </nav>
                             <div className={`burger-icon burger-icon-white ${openClass && "burger-close"}`}
-                            onClick={()=>{handleOpen(); handleRemove()}}>
-                                <span className="burger-icon-top" /><span className="burger-icon-mid" /><span className="burger-icon-bottom" /></div>
+                                 onClick={() => {
+                                     handleOpen();
+                                     handleRemove()
+                                 }}>
+                                <span className="burger-icon-top"/><span className="burger-icon-mid"/><span
+                                className="burger-icon-bottom"/></div>
                         </div>
                         <div className="header-right">
                             {clientSide && isLoggedIn ? (
@@ -136,9 +156,10 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                             <li className="has-children">
                                                 <a href="#">Hi, {userAccount.first_name || 'Guest'}</a>
                                                 <ul className="sub-menu">
-                                                    <li><Link legacyBehavior href="/candidate-profile"><a>Profile</a></Link></li>
+                                                    <li><Link legacyBehavior
+                                                              href="/candidate-profile"><a>Profile</a></Link></li>
                                                     <li><Link legacyBehavior href="#"><a>Settings</a></Link></li>
-                                                    <li><a href="/" onClick={handleLogout}>Logout</a></li>
+                                                    <li><a href="#" onClick={handleLogout}>Logout</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -159,14 +180,14 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                     </div>
                 </div>
             </header>
-            
+
             <div className="mobile-header-active mobile-header-wrapper-style perfect-scrollbar">
                 <div className="mobile-header-wrapper-inner">
                     <div className="mobile-header-content-area">
                         <div className="perfect-scroll">
                             <div className="mobile-search mobile-header-border mb-30">
                                 <form action="#">
-                                    <input type="text" placeholder="Search…" /><i className="fi-rr-search" />
+                                    <input type="text" placeholder="Search…"/><i className="fi-rr-search"/>
                                 </form>
                             </div>
                             <div className="mobile-menu-wrap mobile-header-border">
@@ -211,7 +232,8 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                                     <Link legacyBehavior href="/job-details"><a>Jobs Details</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/job-details-2"><a>Jobs Details 2            </a></Link>
+                                                    <Link legacyBehavior href="/job-details-2"><a>Jobs Details
+                                                        2 </a></Link>
                                                 </li>
                                             </ul>
                                         </li>
@@ -235,7 +257,8 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                                     <Link legacyBehavior href="/candidates-grid"><a>Candidates Grid</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/candidate-details"><a>Candidate Details</a></Link>
+                                                    <Link legacyBehavior href="/candidate-details"><a>Candidate
+                                                        Details</a></Link>
                                                 </li>
                                             </ul>
                                         </li>
@@ -259,10 +282,12 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                                     <Link legacyBehavior href="/page-signin"><a>Signin</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-reset-password"><a>Reset Password</a></Link>
+                                                    <Link legacyBehavior href="/page-reset-password"><a>Reset
+                                                        Password</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-content-protected"><a>Content Protected</a></Link>
+                                                    <Link legacyBehavior href="/page-content-protected"><a>Content
+                                                        Protected</a></Link>
                                                 </li>
                                             </ul>
                                         </li>
@@ -307,7 +332,7 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="site-copyright">Copyright 2022 © JobBox. <br />Designed by AliThemes.</div>
+                            <div className="site-copyright">Copyright 2022 © JobBox. <br/>Designed by AliThemes.</div>
                         </div>
                     </div>
                 </div>
