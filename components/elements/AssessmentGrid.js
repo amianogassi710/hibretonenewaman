@@ -4,6 +4,7 @@ function Grid({ data, clickAction }) {
    const [active, setActive] = useState(1);
    const [selectedCategory,setSelectedCategory] = useState("All")
 
+
    const handleOnClick = (index,category) => {
        setActive(index);
        setSelectedCategory(category)
@@ -46,7 +47,7 @@ function Grid({ data, clickAction }) {
     </div>
       <div className="row">
         {Object.keys(filteredData).map((key) => (
-               <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6" key={key} data-key={key} onClick={data[key].available ? clickAction : null}>
+               <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6" key={key} data-key={key} onClick={data[key].available ? () => clickAction(data,key) : null}>
                   <div className="grid__item white-bg transition-3 mb-30" data-key={key}>
                      <div className="grid__thumb w-img fix grid_thumb_height grid_thumb" data-key={key}>
                         <img src={`assets/imgs/page/entrepreneurial-assessments/${key}.jpg`} alt="Assessment Image" data-key={key} />
@@ -68,8 +69,7 @@ function Grid({ data, clickAction }) {
                      <div className="grid__bottom d-flex">
                         <div className="col-6 grid__tutor">
                            <a>
-                              <img src="" alt="" />
-                              Provider Name
+                              {data[key].provider}
                            </a>
                         </div>
                         <div className="col-6 text-end">
