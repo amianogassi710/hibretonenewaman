@@ -43,6 +43,17 @@ export default function Index() {
    },
    {
       id: 2,
+      icon_img: <svg width="41" height="38" viewBox="0 0 41 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M39.3333 27.9821V4.84788C39.3333 2.54788 37.455 0.84205 35.1742 1.03372H35.0592C31.0342 1.37872 24.92 3.42955 21.5083 5.57622L21.1825 5.78705C20.6267 6.13205 19.7067 6.13205 19.1508 5.78705L18.6717 5.49955C15.26 3.37205 9.165 1.34038 5.14 1.01455C2.85917 0.822883 1 2.54788 1 4.82872V27.9821C1 29.8221 2.495 31.547 4.335 31.777L4.89083 31.8537C9.05 32.4096 15.4708 34.5179 19.1508 36.5304L19.2275 36.5687C19.745 36.8562 20.5692 36.8562 21.0675 36.5687C24.7475 34.537 31.1875 32.4096 35.3658 31.8537L35.9983 31.777C37.8383 31.547 39.3333 29.8221 39.3333 27.9821Z" stroke="#031220" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+         <path d="M20.1666 6.41956V35.1696" stroke="#3D6CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+         <path d="M12.0209 12.1696H7.70837" stroke="#3D6CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+         <path d="M13.4584 17.9196H7.70837" stroke="#3D6CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>,
+      title: 'Neurodiverse Gifted',
+      content: 'Is your idea worth turning into a social enterprise or '
+   },
+   {
+      id: 3,
       icon_img: <svg width="44" height="40" viewBox="0 0 44 40" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path d="M6.7168 31.4941V18.0775" stroke="#3D6CE7" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
          <path d="M14.3835 31.4941V18.0775" stroke="#3D6CE7" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
@@ -56,17 +67,6 @@ export default function Index() {
       </svg>,
       title: 'Enterprise',
       content: 'Appreciating your neurodiversity traits can benefit starting a business'
-   },
-   {
-      id: 3,
-      icon_img: <svg width="41" height="38" viewBox="0 0 41 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <path d="M39.3333 27.9821V4.84788C39.3333 2.54788 37.455 0.84205 35.1742 1.03372H35.0592C31.0342 1.37872 24.92 3.42955 21.5083 5.57622L21.1825 5.78705C20.6267 6.13205 19.7067 6.13205 19.1508 5.78705L18.6717 5.49955C15.26 3.37205 9.165 1.34038 5.14 1.01455C2.85917 0.822883 1 2.54788 1 4.82872V27.9821C1 29.8221 2.495 31.547 4.335 31.777L4.89083 31.8537C9.05 32.4096 15.4708 34.5179 19.1508 36.5304L19.2275 36.5687C19.745 36.8562 20.5692 36.8562 21.0675 36.5687C24.7475 34.537 31.1875 32.4096 35.3658 31.8537L35.9983 31.777C37.8383 31.547 39.3333 29.8221 39.3333 27.9821Z" stroke="#031220" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-         <path d="M20.1666 6.41956V35.1696" stroke="#3D6CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-         <path d="M12.0209 12.1696H7.70837" stroke="#3D6CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-         <path d="M13.4584 17.9196H7.70837" stroke="#3D6CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>,
-      title: 'Neurodiverse Gifted',
-      content: 'Is your idea worth turning into a social enterprise or '
    },
 ]
 
@@ -153,7 +153,8 @@ export default function Index() {
                     <div className="post-loop-grid">
                         <div className="container">
                             <div className="row mt-50">
-                                <div className="col-lg-6 col-md-12 col-sm-12 mt-10 pr-60">
+                                <div className="col-lg-6 col-md-12 col-sm-12 mt-10 pr-60 d-flex align-items-center">
+                                 <div>
                                     <h4 className="mt-5">Recognising Neuro-diversity Talent</h4>
                                     <div className="mt-10">
                                         <h6 className="mt-10 font-md">Is it ADHD? Or learning disabilities, OCD, or something else? Take these self-tests to learn whether you or your child has signs that resemble one of the related traits and the positive impacts of them.</h6>
@@ -161,6 +162,7 @@ export default function Index() {
                                     <div className="mt-20 mb-30">
                                         <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
                                     </div>
+                                 </div>
                                 </div>
                                 <div className="col-lg-6 col-md-12 col-sm-12">
                                     <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
@@ -176,7 +178,8 @@ export default function Index() {
                                 <div className="col-lg-6 col-md-12 col-sm-12">
                                     <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
                                 </div>
-                                <div className="col-lg-6 col-md-12 col-sm-12 pl-30 mt-10">
+                                <div className="col-lg-6 col-md-12 col-sm-12 pl-30 mt-10 d-flex align-items-center">
+                                 <div>
                                     <h4>Supporting Diverse Talent</h4>
                                     <div className="mt-10">
                                         <p className="mt-10 font-md">People with ADHD are 500% more likely to be entrepreneurs. People with dyslexia are 230% more likely to be entrepreneurs.</p>
@@ -185,7 +188,8 @@ export default function Index() {
                                     <div className="mt-20 mb-30">
                                         <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
                                     </div>
-                                </div>
+                                 </div>
+                              </div>
                             </div>
                         </div>
                     </div>
