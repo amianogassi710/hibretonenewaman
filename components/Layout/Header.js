@@ -1,18 +1,37 @@
 ﻿/* eslint-disable @next/next/no-html-link-for-pages */
 import Link from 'next/link';
 import React from 'react';
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
+import {useLocalStorage} from "react-use";
 
-const Header = ({handleOpen,handleRemove,openClass}) => {
+const Header = ({handleOpen, handleRemove, openClass}) => {
     const [scroll, setScroll] = useState(0)
+    const [clientSide, setClientSide] = useState(false);
+    const [isLoggedIn,setIsLoggedIn] = useLocalStorage("is_logged_in", false);
+    const [userAccount, setUserAccount] = useLocalStorage("user_account", {});
+
     useEffect(() => {
-        document.addEventListener("scroll", () => {
-          const scrollCheck = window.scrollY > 100
-          if (scrollCheck !== scroll) {
-            setScroll(scrollCheck)
-          }
-        })
-      })
+        const handleScroll = () => {
+            const scrollCheck = window.scrollY > 100;
+            if (scrollCheck !== scroll) {
+                setScroll(scrollCheck);
+            }
+        };
+        document.addEventListener("scroll", handleScroll);
+
+        setClientSide(true);
+    }, [scroll]);
+
+    const handleLogout = async (e) => {
+        setIsLoggedIn(false);
+        await fetch('/auth/logout', {
+            method: 'POST'
+        });
+    };
+
+
+    if (!clientSide) return null;
+
     return (
         <>
 
@@ -32,7 +51,8 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/entrepreneur-assessments"><a>Entrepreneur Assessments</a></Link>
+                                                <Link legacyBehavior href="/entrepreneur-assessments"><a>Entrepreneur
+                                                    Assessments</a></Link>
                                             </li>
                                             <li>
                                                 <Link legacyBehavior href="/"><a>Entrepreneur Academy</a></Link>
@@ -109,11 +129,32 @@ const Header = ({handleOpen,handleRemove,openClass}) => {
                                 <span className="burger-icon-top" /><span className="burger-icon-mid" /><span className="burger-icon-bottom" /></div>
                         </div>
                         <div className="header-right">
-                            <div className="block-signin">
-                                <Link legacyBehavior href="page-register"><a className="text-link-bd-btom hover-up">Register</a></Link>
-                                <Link legacyBehavior href="page-signin"><a className="btn btn-default btn-shadow ml-40 hover-up">Sign in</a></Link>
-                                {/* <Link legacyBehavior href="/"><a className="btn btn-default btn-shadow ml-40 hover-up">Become a Partner</a></Link> */}
-                            </div>
+                            {clientSide && isLoggedIn ? (
+                                <>
+                                    <nav className="nav-main-menu">
+                                        <ul className="main-menu">
+                                            <li className="has-children">
+                                                <a href="#">Hi, {userAccount.first_name || 'Guest'}</a>
+                                                <ul className="sub-menu">
+                                                    <li><Link legacyBehavior href="/candidate-profile"><a>Profile</a></Link></li>
+                                                    <li><Link legacyBehavior href="#"><a>Settings</a></Link></li>
+                                                    <li><a href="/" onClick={handleLogout}>Logout</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </>
+
+                            ) : (
+                                <div className="block-signin">
+                                    <Link legacyBehavior href="/page-register">
+                                        <a className="text-link-bd-btom hover-up">Register</a>
+                                    </Link>
+                                    <Link legacyBehavior href="/page-signin">
+                                        <a className="btn btn-default btn-shadow ml-40 hover-up">Sign in</a>
+                                    </Link>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
