@@ -46,8 +46,7 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
 
     if (!clientSide) return null;
 
-    return (
-        <>
+    return (<>
 
             <header className={scroll ? "header sticky-bar stick" : "header sticky-bar"}>
                 <div className="container">
@@ -149,8 +148,7 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                 className="burger-icon-bottom"/></div>
                         </div>
                         <div className="header-right">
-                            {clientSide && isLoggedIn ? (
-                                <>
+                            {clientSide && isLoggedIn ? (<>
                                     <nav className="nav-main-menu">
                                         <ul className="main-menu">
                                             <li className="has-children">
@@ -166,16 +164,14 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                     </nav>
                                 </>
 
-                            ) : (
-                                <div className="block-signin">
+                            ) : (<div className="block-signin">
                                     <Link legacyBehavior href="/page-register">
                                         <a className="text-link-bd-btom hover-up">Register</a>
                                     </Link>
                                     <Link legacyBehavior href="/page-signin">
                                         <a className="btn btn-default btn-shadow ml-40 hover-up">Sign in</a>
                                     </Link>
-                                </div>
-                            )}
+                                </div>)}
                         </div>
                     </div>
                 </div>
@@ -337,8 +333,7 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                     </div>
                 </div>
             </div>
-        </>
-    );
+        </>);
 };
 
 export default Header;
