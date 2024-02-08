@@ -9,9 +9,13 @@ import AssessmentGrid from '../../components/elements/AssessmentGrid';
 
 export default function Index() {
   const [open,setOpen] = useState(false)
-  const [assessment,setAssessment] = useState("")
+  const [assessment,setAssessment] = useState({})
   const [data,setData] = useState({})
   const [uizard, setUizard] = useState("")
+  const [assessmentTitle, setAssessmentTitle] = useState("")
+
+  const traits = data.Traits
+  const business = data.Business
 
 
   useEffect(() => {
@@ -66,11 +70,12 @@ export default function Index() {
    },
 ]
 
-  const toggleOpen = e => {
+  const toggleOpen = (assessmentData,assessment) => {
     if (open === false) {
       // Sets the assessment to load into the modal
-      setAssessment(() => e.target.dataset.key)
-      setUizard(data[`${e.target.dataset.key}`].uizard)
+      setAssessmentTitle(assessment)
+      setAssessment(assessmentData[assessment])
+      setUizard(assessmentData[assessment].uizard)
     }
     setOpen(!open);
   }
@@ -133,10 +138,58 @@ export default function Index() {
                   <p>Free, scientifically validated entrepreneurial, personality & neurodiversity tests</p>
                </div>
             </div>
-            <AssessmentGrid data={data} clickAction={toggleOpen} />
+            <AssessmentGrid data={traits} clickAction={toggleOpen} />
+            <div className="col-xxl-12">
+               <div className=" text-center mt-60 mb-60">
+                  <h2>Business Idea Validation</h2>
+                  <p>Basic assessment of your idea and business opportunity</p>
+               </div>
+            </div>
+            <AssessmentGrid data={business} clickAction={toggleOpen} />
          </div>
-         <QuizModal onClose={toggleOpen} title={`${assessment}`} assessment={data[`${assessment}`]} uizard={uizard} show={open} isLoggedIn={true}/>
+         <QuizModal onClose={toggleOpen} title={`${assessmentTitle}`} assessment={assessment} uizard={uizard} show={open} isLoggedIn={true}/>
       </section>
+      <section className="section-box">
+                    <div className="post-loop-grid">
+                        <div className="container">
+                            <div className="row mt-50">
+                                <div className="col-lg-6 col-md-12 col-sm-12 mt-10 pr-60">
+                                    <h4 className="mt-5">Recognising Neuro-diversity Talent</h4>
+                                    <div className="mt-10">
+                                        <h6 className="mt-10 font-md">Is it ADHD? Or learning disabilities, OCD, or something else? Take these self-tests to learn whether you or your child has signs that resemble one of the related traits and the positive impacts of them.</h6>
+                                    </div>
+                                    <div className="mt-20 mb-30">
+                                        <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
+                                    </div>
+                                </div>
+                                <div className="col-lg-6 col-md-12 col-sm-12">
+                                    <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="section-box ">
+                    <div className="post-loop-grid">
+                        <div className="container">
+                            <div className="row mt-30">
+                                <div className="col-lg-6 col-md-12 col-sm-12">
+                                    <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
+                                </div>
+                                <div className="col-lg-6 col-md-12 col-sm-12 pl-30 mt-10">
+                                    <h4>Supporting Diverse Talent</h4>
+                                    <div className="mt-10">
+                                        <p className="mt-10 font-md">People with ADHD are 500% more likely to be entrepreneurs. People with dyslexia are 230% more likely to be entrepreneurs.</p>
+                                        <p className="font-md mt-10">A large number of tech professionals and Silicon Valley entrepreneurs have Aspergers. Famous entrepreneurs with Aspergers include Elon Musk, Bill Gates and Nikola Tesla.</p>
+                                    </div>
+                                    <div className="mt-20 mb-30">
+                                        <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
       <Subscription />
     </Layout>
