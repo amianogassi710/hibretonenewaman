@@ -73,16 +73,15 @@ const Score = props => {
           <div className="mb-10">
             {Object.entries(feedback).map(([category,result]) => {
               const trait = category.split("_").map(word => word[0].toUpperCase() + word.substring(1)).join(" ")
+              console.log(`${trait}: ${result}`)
               return (
               <div className={`${category}`} key={`${category}`}>
                 <div className="personality">
                   <p className="mr-40"><strong>{trait}</strong></p>
-                  <div className="result mr-20">
-                    <div className="result-bar mr-20">
-                      <div className="bar" style={{width: `${result}`}}>
-                        <span className="progression"></span>
-                      </div>
-                    </div>
+                  <a className="progress-bar mr-10" style={{"backgroundColor": "#d6d6d6"}}>
+                    <a className="bar" style={{width: `${result}`}} />
+                  </a>
+                  <div className="percent">
                     {result}
                   </div>
                   <i

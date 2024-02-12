@@ -286,11 +286,13 @@ const Quiz = props => {
         <div className="tracker">
           {/* props.assessment.assessment.length + 1 to include gender question */}
           <p>Question {formIndex+1} of {props.assessment.assessment.length+1}</p>
-          <div className="assessment-progress-bar">
-            <div className="bar" style={{width: `${progress}%`}} />
-          </div>
+          <a className="progress-bar" style={{"backgroundColor": "white"}}>
+            <a className="bar" style={{width: `${progress}%`}} />
+          </a>
         </div>
+        <div>
           <QuizButton number={formIndex} />
+        </div>
       </div>
     </>
   )

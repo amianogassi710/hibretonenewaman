@@ -22,14 +22,14 @@ const AssessmentModal = ({ isOpen, onClose, children, header, uizardHTML }) => {
 
   return (
     <div className="assessment-modal" onClick={onClose}>
-      <div className="assessment-modal-content col-8 row-8" onClick={e => e.stopPropagation()}>
-        <div className="assessment-modal-header d-flex justify-content-space-between pr-20 pl-20">
-          <div className="d-flex">
-            <h5 className="text-reset">{header.replace("-"," ")}</h5>
+      <div className="assessment-modal-content" onClick={e => e.stopPropagation()}>
+        <div className="assessment-modal-header d-inline-flex pr-5 pl-5 pt-10">
+          <div className="d-flex col-8">
+            <h5 className="text-reset">{header.replaceAll("-"," ")}</h5>
             <i className="uizard assessment-icon" onClick={handleUIzard}><IoIosInformationCircleOutline size={25}/></i>
           </div>
-          <div className="close">
-            <i className="assessment-icon d-flex justify-content-center align-items-center" onClick={onClose}><IoCloseOutline size={30} /></i>
+          <div className="close col-6 text-end">
+            <i className="assessment-icon d-flex justify-content-end align-items-center mt-5" onClick={onClose}><IoCloseOutline size={30} /></i>
           </div>
         </div>
         {children}
