@@ -1061,6 +1061,7 @@ input:checked + .btn.btn-switch, input:checked + label {
   line-height: 26px;
   padding: 10px 25px;
   transition: 0.2s ease-in-out;
+  padding: 20px 100px 20px 100px;
 }
 
 .btn-sign-up {
@@ -2673,8 +2674,8 @@ ul li:last-child .card-list-4 {
 }
 .card-review-1 .image-review img {
   margin: -44px 0px 0px 0px;
-  width: 115px;
-  height: 115px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
 }
 .card-review-1 .review-name {
