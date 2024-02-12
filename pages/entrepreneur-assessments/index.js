@@ -160,7 +160,7 @@ export default function Index() {
                                         <h6 className="mt-10 font-md">Is it ADHD? Or learning disabilities, OCD, or something else? Take these self-tests to learn whether you or your child has signs that resemble one of the related traits and the positive impacts of them.</h6>
                                     </div>
                                     <div className="mt-20 mb-30">
-                                        <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
+                                        <button className="btn btn-default fs-6">Read More</button>
                                     </div>
                                  </div>
                                 </div>
@@ -186,7 +186,7 @@ export default function Index() {
                                         <p className="font-md mt-10">A large number of tech professionals and Silicon Valley entrepreneurs have Aspergers. Famous entrepreneurs with Aspergers include Elon Musk, Bill Gates and Nikola Tesla.</p>
                                     </div>
                                     <div className="mt-20 mb-30">
-                                        <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
+                                        <button className="btn btn-default fs-6">Read More</button>
                                     </div>
                                  </div>
                               </div>
