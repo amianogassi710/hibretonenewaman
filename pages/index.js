@@ -9,6 +9,8 @@ import TopRekruterSlider from "./../components/sliders/TopRekruter";
 import TestimonialSliderHomePage from "./../components/sliders/TestimonialHomepage";
 import WhoWeHelp from "../components/elements/WhoWeHelp";
 import Subscription from "../components/Layout/Subscription"
+import KickstartButton from "../components/elements/KickstartButton";
+import YellowBanner from "../components/elements/YellowBanner";
 export default function Home() {
     return (
          <>
@@ -87,15 +89,7 @@ export default function Home() {
                         <WhoWeHelp />
                     </section>
                     <section className="section-box mt-20">
-                        <div className="y-button hover-up">
-                            <div className="text">
-                                <h3 className="text-start">Access proven resources for business success!</h3>
-                                <p className="text-start">Discover how hibretOne can transform your ideas into reality.</p>
-                            </div>
-                            <div className="col d-flex align-items-center">
-                                <button className="btn-sign-up fs-6">Kickstart Your Business Today</button>
-                            </div>
-                        </div>
+                        <YellowBanner/>
                     </section>
                     <section className="section-box mt-50">
                         <div className="section-box wow animate__animated animate__fadeIn">
@@ -230,9 +224,7 @@ export default function Home() {
                                     <div className="swiper-button-prev" />
                                     <TestimonialSliderHomePage />
                                 </div>
-                                <div className="col d-flex justify-content-center align-items-center">
-                                    <button className="btn btn-sign-up-inverted fs-6 hover-up">Kickstart Your Business Today</button>
-                                </div>
+                                <KickstartButton/>
                             </div>
                         </div>
                     </section>
