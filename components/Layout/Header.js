@@ -103,6 +103,9 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                                 <Link legacyBehavior href="/"><a>Ecosystem Connector</a></Link>
                                             </li>
                                             <li>
+                                                <Link legacyBehavior href="/business-plan-writer"><a>Business Plan Writer</a></Link>
+                                            </li>
+                                            <li>
                                                 <Link legacyBehavior href="/"><a>Business Problem Pivots</a></Link>
                                             </li>
                                             <li>
