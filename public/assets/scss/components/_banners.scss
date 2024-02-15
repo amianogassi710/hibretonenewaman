@@ -121,9 +121,9 @@
             .input-keysearch {
                 background: url(../imgs/page/homepage1/key-numbers.svg) no-repeat left 10px center;
             }
-            .input-industry {
-                background: url(../imgs/template/icons/icon-job.svg) no-repeat left 18px center;
-            }
+            // .input-industry {
+            //     background: url(../imgs/template/icons/icon-job.svg) no-repeat left 18px center;
+            // }
         }
         .list-tags-banner {
             position: relative;
@@ -153,7 +153,7 @@
         position: relative;
         &::after {
             content: "";
-            background-color: #3C65F5;
+            //background-color: #3C65F5;
             height: 25px;
             position: absolute;
             width: 100%;

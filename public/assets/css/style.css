@@ -2237,7 +2237,10 @@ label {
   height: 13px;
   display: flex;
 }
-.card-grid-2 .employers-info {
+.card-grid-2 .card-height {
+  height: 200px;
+}
+.card-grid-2 .grand-finder .employers-info {
   border-top: 1px solid #E0E6F7;
   padding-top: 20px;
 }
@@ -3109,9 +3112,6 @@ ul li:last-child .card-list-4 {
 .banner-hero .block-banner .form-find .input-keysearch {
   background: url(../imgs/page/homepage1/key-numbers.svg) no-repeat left 10px center;
 }
-.banner-hero .block-banner .form-find .input-industry {
-  background: url(../imgs/template/icons/icon-job.svg) no-repeat left 18px center;
-}
 .banner-hero .block-banner .list-tags-banner {
   position: relative;
 }
@@ -3140,7 +3140,6 @@ ul li:last-child .card-list-4 {
 }
 .banner-hero .color-brand-2::after {
   content: "";
-  background-color: #3C65F5;
   height: 25px;
   position: absolute;
   width: 100%;
