@@ -114,7 +114,7 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                         <Link legacyBehavior href="/blog-grid"><a>Career Builder</a></Link>
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Online Courses</a></Link>
+                                                <Link legacyBehavior href="/online-courses"><a>Online Courses</a></Link>
                                             </li>
                                             <li>
                                                 <Link legacyBehavior href="/"><a>Career Guidance</a></Link>
