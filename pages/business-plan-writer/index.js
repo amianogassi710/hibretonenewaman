@@ -1,13 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Layout from "../../components/Layout/Layout";
-import BusinessPlanWizard from './BusinessPlanWizard/BusinessPlanWizard';
+import BusinessPlanStepForm from './BusinessPlanWizard/BusinessPlanStepForm';
+import {BusinessPlanProvider} from "./BusinessPlanWizard/BusinessPlanProvider";
+
 
 export default function Index() {
+
     return (
         <>
             <Layout>
-                <BusinessPlanWizard/>
+                <BusinessPlanProvider>
+                    <BusinessPlanStepForm/>
+                </BusinessPlanProvider>
             </Layout>
         </>
     );
