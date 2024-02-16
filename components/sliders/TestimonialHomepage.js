@@ -19,14 +19,17 @@ const TestimonialSliderHomePage = () => {
         <>
             <div className="swiper-container swiper-group-4-border swiper">
                 <Swiper
-                    slidesPerView={4}
+                    slidesPerView={1}
                     spaceBetween={30}
                     loop={true}
+                    breakpoints={{ 640: {
+                        slidesPerView: 3
+                      }}}
                     navigation={{
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"
                     }}
-                    className="swiper-wrapper  pb-70 pt-5"
+                    className="swiper-wrapper pb-70 pt-5"
                 >
                     <SwiperSlide className="swiper-slide hover-up">
                         <div className="card-review-1">
@@ -45,7 +48,7 @@ const TestimonialSliderHomePage = () => {
                                     <img src="assets/imgs/template/icons/star.svg" alt="jobBox" /> <img src="assets/imgs/template/icons/star.svg" alt="jobBox" /> <img src="assets/imgs/template/icons/star.svg" alt="jobBox" /> <img src="assets/imgs/template/icons/star.svg" alt="jobBox" /> <img src="assets/imgs/template/icons/star.svg" alt="jobBox" />
                                 </div>
                                 <div className="review-comment">
-                                    {showMore1 ? "Thanks to Drew's support, I got a fully funded grant from Coventry University to update my company's logo, branding, and homepage, taking us to the next level." : "Thanks to Drew's support, I got a fully funded grant from Coventry University to update my company's logo, branding, and homepage"}
+                                    {showMore1 ? "Thanks to Drew's support, I got a fully funded grant from Coventry University to update my company's logo, branding, and homepage, taking us to the next level." : "Thanks to Drew's support, I got a fully funded grant from Coventry University to update my company's logo, branding, and homepage, taking us to the "}
                                     <button className="btn-show-more" onClick={() => setShowMore1(!showMore1)}>{showMore1 ? "show less" : "...more"}</button>
                                 </div> 
                             </div>
@@ -70,7 +73,7 @@ const TestimonialSliderHomePage = () => {
                                 <div className="review-comment">
                                     {showMore2 ? "Drew provides consistent and essential support to entrepreneurs in in our West Midlands Eco-system. This support provides essential lifeblood for\
 entrepreneurial growth and ultimately their survival. Essential support on funding and access to finance. \
-He is a super connector that pulls together the wide-reaching information available across the region and provides a single point of truth to entrepreneurs via his newsletter. His Show Me The Money workshops pull together experts and funders from across the region." : "Drew provides consistent and essential support to entrepreneurs in in our West Midlands Eco-system. This support provides "}
+He is a super connector that pulls together the wide-reaching information available across the region and provides a single point of truth to entrepreneurs via his newsletter. His Show Me The Money workshops pull together experts and funders from across the region." : "Drew provides consistent and essential support to entrepreneurs in in our West Midlands Eco-system. This support provides essential lifeblood for"}
                                     <button className="btn-show-more" onClick={() => setShowMore2(!showMore2)}>{showMore2 ? "show less" : "...more"}</button>
                                 </div> 
                             </div>

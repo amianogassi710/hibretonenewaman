@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-const CategoryTab2 = () => {
+const GrantFinderCategoryTab = () => {
     const [active, setActive] = useState(1);
     const [data,setData] = useState([])
     const [grantDetails,setGrantDetails] = useState([])
@@ -55,16 +55,16 @@ const CategoryTab2 = () => {
     };
     return (
         <>
-            <div className="list-tabs mt-40  text-start">
+            <div className="list-tabs mt-40  text-center">
                 <ul className="nav nav-tabs" role="tablist">
                     <li>
-                        <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1)}><img src="/assets/imgs/page/homepage1/1.svg" alt="jobBox" /> Arts</a>
+                        <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1)}><img src="/assets/imgs/page/homepage1/1.svg" alt="jobBox" /> Community</a>
                         </li>
                     <li>
-                        <a className={active === 2 ? "active" : ""} onClick={() => handleOnClick(2)}><img src="/assets/imgs/page/homepage1/2.svg" alt="jobBox" /> International</a>
+                        <a className={active === 2 ? "active" : ""} onClick={() => handleOnClick(2)}><img src="/assets/imgs/page/homepage1/2.svg" alt="jobBox" /> Environment</a>
                         </li>
                     <li>
-                        <a className={active === 3 ? "active" : ""} onClick={() => handleOnClick(3)} ><img src="/assets/imgs/page/homepage1/3.svg" alt="jobBox" /> Civil Society</a>
+                        <a className={active === 3 ? "active" : ""} onClick={() => handleOnClick(3)} ><img src="/assets/imgs/page/homepage1/3.svg" alt="jobBox" /> Research</a>
                         </li>
                     <li>
                         <a className={active === 4 ? "active" : ""} onClick={() => handleOnClick(4)} ><img src="/assets/imgs/page/homepage1/4.svg" alt="jobBox" /> Technology</a>
@@ -73,7 +73,7 @@ const CategoryTab2 = () => {
                         <a className={active === 5 ? "active" : ""} onClick={() => handleOnClick(5)} ><img src="/assets/imgs/page/homepage1/5.svg" alt="jobBox" /> Education</a>
                         </li>
                     <li>
-                        <a className={active === 6 ? "active" : ""} onClick={() => handleOnClick(6)} ><img src="/assets/imgs/page/homepage1/6.svg" alt="jobBox" /> Other</a>
+                        <a className={active === 6 ? "active" : ""} onClick={() => handleOnClick(6)} ><img src="/assets/imgs/page/homepage1/6.svg" alt="jobBox" /> Business</a>
                         </li>
                 </ul>
             </div>
@@ -82,7 +82,7 @@ const CategoryTab2 = () => {
                 <div className={`tab-pane fade ${active == i && "show active"}`}>
                         <div className="row">
                             {item.map((grant, j) => (
-                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 card-height">
                                 <div className="card-grid-2 grid-bd-16 hover-up">
                                     <div className="card-block-info">
                                         <h5>
@@ -93,10 +93,12 @@ const CategoryTab2 = () => {
                                         <span className="card-time">closing date: {grant.closing_date}</span></div>
                                         <div className="card-2-bottom mt-20">
                                             <div className="row">
-                                                <div className="col-xl-7 col-md-7 mb-2">
-                                                    <Link legacyBehavior href="/jobs-grid"><a className="btn btn-tags-sm mr-5">{grant.category_name}</a></Link>
+                                                <div className="col-xl-8 col-md-7 mb-2">
+                                                    {grant.category_name.map((one_category_name) => (
+                                                        <Link legacyBehavior href=""><a className="btn btn-tags-sm mr-5">{one_category_name}</a></Link>
+                                                    ))}
                                                 </div>
-                                                <div className="col-xl-5 col-md-5 text-lg-end"><span className="card-text-price">£{grant.total_size_of_grant_scheme}</span><span className="text-muted"></span></div>
+                                                <div className="col-xl-4 col-md-5 text-lg-end"><span className="card-text-price">{grant.total_size_of_grant_scheme}</span><span className="text-muted"></span></div>
                                             </div>
                                         </div>
                                         <p className="font-sm color-text-paragraph mt-20">{grant.description}</p>
@@ -112,4 +114,4 @@ const CategoryTab2 = () => {
     );
 };
 
-export default CategoryTab2;
+export default GrantFinderCategoryTab;

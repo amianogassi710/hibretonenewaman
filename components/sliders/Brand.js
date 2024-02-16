@@ -1,6 +1,7 @@
-import SwiperCore, { Navigation } from "swiper";
+ import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
+import dynamic from 'next/dynamic'
 
 SwiperCore.use([Navigation]);
 
@@ -10,14 +11,18 @@ const BrandSlider = () => {
             <div className="swiper-container swiper-group-9 swiper">
                 
                 <Swiper
-                    slidesPerView={7}
+                    slidesPerView={3}
                     spaceBetween={40}
                     loop={true}
                     autoplay={{
                         delay: 2000
                       }}
                     centeredSlides={true}
-                    // breakpoints={{ 768: { slidesPerView: 2 }, 1024: { slidesPerView: 7 }, 1920: { slidesPerView: 8 } }}
+                      // when window width is >= 320px
+                    breakpoints={{ 640: {
+                        slidesPerView: 7,
+                        spaceBetween: 40
+                      }}}
                     navigation={{
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"
