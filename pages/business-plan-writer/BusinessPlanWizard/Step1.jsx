@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {useSessionStorage} from 'react-use';
 import {
     FormControl,
     RadioGroup,
@@ -10,11 +11,20 @@ import {
     Button
 } from '@mui/material';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import {useBusinessPlan} from "./BusinessPlanProvider";
 
 const Step1 = ({nextStep}) => {
-    const {step1FormData, setStep1FormData} = useBusinessPlan();
-    const [error, setError] = React.useState({businessType: false, planUsage: false});
+    const [step1FormData, setStep1FormData] = useSessionStorage('BusinessPlanStepForm.step1FormData', {
+        businessType: '',
+        planUsage: ''
+    });
+    const [error, setError] = useState({businessType: false, planUsage: false});
+    const [clientSide, setClientSide] = useState(false);
+
+    useEffect(() => {
+        setClientSide(true);
+    }, []);
+
+    if (!clientSide) return null;
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -58,7 +68,8 @@ const Step1 = ({nextStep}) => {
                         value={step1FormData.businessType || ''}
                         onChange={handleChange}
                     >
-                        <FormControlLabel value="existing" control={<Radio size="small"/>} label="Existing business"/>
+                        <FormControlLabel value="existing" control={<Radio size="small"/>}
+                                          label="Existing business"/>
                         <FormControlLabel value="upcoming" control={<Radio size="small"/>}
                                           label="Upcoming unlaunched business"/>
                     </RadioGroup>

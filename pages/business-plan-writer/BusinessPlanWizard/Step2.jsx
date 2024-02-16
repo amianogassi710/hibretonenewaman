@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import { useSessionStorage } from 'react-use';
 import {
     Box,
     Grid,
@@ -13,10 +14,16 @@ import {
 } from '@mui/material';
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import {useBusinessPlan} from "./BusinessPlanProvider";
 
 const Step2 = ({previousStep, nextStep}) => {
-    const {step2FormData, setStep2FormData} = useBusinessPlan();
+    const [step2FormData, setStep2FormData] = useSessionStorage('step2FormData', {
+        businessName: '',
+        businessDescription: '',
+        numberOfEmployees: '',
+        productOrService: '',
+        productServiceAccess: '',
+        serviceArea: ''
+    });
 
     const [error, setError] = React.useState({
         businessName: false,
@@ -26,6 +33,14 @@ const Step2 = ({previousStep, nextStep}) => {
         productServiceAccess: false,
         serviceArea: false
     });
+
+    const [clientSide, setClientSide] = useState(false);
+
+    useEffect(() => {
+        setClientSide(true);
+    }, []);
+
+    if (!clientSide) return null;
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -49,7 +64,6 @@ const Step2 = ({previousStep, nextStep}) => {
     const onFinish = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            console.log('Received values of form: ', step2FormData);
             nextStep();
         }
     };
