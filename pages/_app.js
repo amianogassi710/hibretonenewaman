@@ -1,6 +1,5 @@
 import "../public/assets/css/style.css";
 import "../styles/globals.css";
-import 'antd/dist/antd.css';
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
