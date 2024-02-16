@@ -16,7 +16,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
 const Step2 = ({previousStep, nextStep}) => {
-    const [step2FormData, setStep2FormData] = useSessionStorage('step2FormData', {
+    const [step2FormData, setStep2FormData] = useSessionStorage('BusinessPlanStepForm.step2FormData', {
         businessName: '',
         businessDescription: '',
         numberOfEmployees: '',
@@ -25,7 +25,7 @@ const Step2 = ({previousStep, nextStep}) => {
         serviceArea: ''
     });
 
-    const [error, setError] = React.useState({
+    const [error, setError] = useState({
         businessName: false,
         businessDescription: false,
         numberOfEmployees: false,
