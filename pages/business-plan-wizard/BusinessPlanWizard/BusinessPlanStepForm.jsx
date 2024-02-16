@@ -18,8 +18,10 @@ const BusinessPlanStepForm = () => {
         'Business Plan Objective',
         'Basic Business Information',
         'Customer Group Details',
-        'Step 4',
-        'Step 5',
+        'Product or Service Details',
+        'Success Drivers',
+        'Initial Investment Details',
+        'Financial Details and Plan Language',
     ];
 
     React.useEffect(() => {
@@ -31,7 +33,7 @@ const BusinessPlanStepForm = () => {
     return (
         <Box sx={{width: '100%', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
             <Typography variant="h6" sx={{textAlign: 'center', mb: 4}}>Business Plan Writer</Typography>
-            <Box sx={{width: '75%'}}>
+            <Box sx={{width: '70%'}}>
                 <Stepper activeStep={currentStep - 1} alternativeLabel>
                     {stepsItems.map((label) => (
                         <Step key={label}>
@@ -46,6 +48,8 @@ const BusinessPlanStepForm = () => {
                 {currentStep === 3 && <Step3 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 4 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 5 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 6 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 7 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
             </Box>
         </Box>
     );

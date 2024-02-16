@@ -17,14 +17,14 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
 const Step3 = ({previousStep, nextStep}) => {
-    const [step3FormData, setStep3FormData] = useSessionStorage('step3FormData', {
+    const [step3FormData, setStep3FormData] = useSessionStorage('BusinessPlanStepForm.step3FormData', {
         group1Description: '',
         group1IncomeLevel: '',
         group2Description: '',
         group2IncomeLevel: '',
     });
 
-    const [error, setError] = useSessionStorage('step3FormError', {
+    const [error, setError] = useState({
         group1Description: false,
         group1IncomeLevel: false,
     });
@@ -109,7 +109,7 @@ const Step3 = ({previousStep, nextStep}) => {
 
                 {/* Customer Group 2 */}
                 <Grid item>
-                    <FormControl fullWidth error={error.group2Description}>
+                    <FormControl fullWidth>
                         <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Customer Group 2 Description', false)}
                         </Typography>
@@ -124,7 +124,7 @@ const Step3 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid item>
-                    <FormControl component="fieldset" required error={error.group1IncomeLevel}>
+                    <FormControl component="fieldset">
                         <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Customer Group 2 Income Level', false)}
                         </Typography>
