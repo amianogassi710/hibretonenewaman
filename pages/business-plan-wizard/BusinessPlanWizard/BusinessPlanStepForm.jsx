@@ -1,9 +1,10 @@
 import React from 'react';
-import {useSessionStorage} from 'react-use'; // 确保已经导入 useSessionStorage
+import {useSessionStorage} from 'react-use';
 import {Box, Typography, Stepper, Step, StepLabel} from '@mui/material';
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
+import Step4 from "./Step4";
 
 const BusinessPlanStepForm = () => {
     const [currentStepStr, setCurrentStepStr] = useSessionStorage('currentStep', '1');
@@ -46,7 +47,7 @@ const BusinessPlanStepForm = () => {
                 {currentStep === 1 && <Step1 nextStep={nextStep}/>}
                 {currentStep === 2 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 3 && <Step3 nextStep={nextStep} previousStep={previousStep}/>}
-                {currentStep === 4 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 4 && <Step4 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 5 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 6 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 7 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}

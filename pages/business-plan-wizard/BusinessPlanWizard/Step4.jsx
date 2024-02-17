@@ -14,17 +14,17 @@ import {
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
-const Step3 = ({previousStep, nextStep}) => {
-    const [step3FormData, setStep3FormData] = useSessionStorage('BusinessPlanStepForm.step3FormData', {
-        group1Description: '',
-        group1IncomeLevel: '',
-        group2Description: '',
-        group2IncomeLevel: '',
+const Step4 = ({previousStep, nextStep}) => {
+    const [step4FormData, setStep4FormData] = useSessionStorage('BusinessPlanStepForm.step4FormData', {
+        product1Name: '',
+        product1Description: '',
+        product2Name: '',
+        product2Description: '',
     });
 
     const [error, setError] = useState({
-        group1Description: false,
-        group1IncomeLevel: false,
+        product1Name: false,
+        product1Description: false,
     });
 
     const [clientSide, setClientSide] = useState(false);
@@ -37,7 +37,7 @@ const Step3 = ({previousStep, nextStep}) => {
 
     const handleChange = (e) => {
         const {name, value} = e.target;
-        setStep3FormData(prevState => ({
+        setStep4FormData(prevState => ({
             ...prevState,
             [name]: value
         }));
@@ -46,17 +46,15 @@ const Step3 = ({previousStep, nextStep}) => {
 
     const validateForm = () => {
         const newErrors = {...error};
-        newErrors.group1Description = !step3FormData.group1Description;
-        newErrors.group1IncomeLevel = !step3FormData.group1IncomeLevel;
-        // No validation for optional fields
+        newErrors.product1Name = !step4FormData.product1Name;
+        newErrors.product1Description = !step4FormData.product1Description;
         setError(newErrors);
-        return !newErrors.group1Description && !newErrors.group1IncomeLevel;
+        return !newErrors.product1Name && !newErrors.product1Description;
     };
 
     const onFinish = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            console.log('Received values of form: ', step3FormData);
             nextStep();
         }
     };
@@ -69,64 +67,60 @@ const Step3 = ({previousStep, nextStep}) => {
 
     return (
         <form noValidate autoComplete="off" onSubmit={onFinish}>
-            {/* Customer Group 1 */}
             <Grid container direction="column" spacing={2}>
                 <Grid item>
                     <Typography variant="h6" component="legend">
-                        Customer Group 1 (required)
+                        Product or Service 1 (required)
                     </Typography>
                     <Divider/>
                 </Grid>
                 <Grid item>
-                    <FormControl fullWidth required error={error.group1Description}>
+                    <FormControl fullWidth required error={error.product1Name}>
                         <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
-                            {requiredLabel('Customer Group 1 Description', true)}
+                            {requiredLabel('Product or Service 1 Name', true)}
                         </Typography>
                         <Input
-                            name="group1Description"
-                            placeholder="Enter description"
-                            value={step3FormData.group1Description}
+                            name="product1Name"
+                            placeholder="Enter name of product or service 1"
+                            value={step4FormData.product1Name}
                             onChange={handleChange}
                             variant="outlined"
                         />
-                        {error.group1Description && <FormHelperText>Please input a description.</FormHelperText>}
+                        {error.product1Name && <FormHelperText>Please input a name.</FormHelperText>}
                     </FormControl>
                 </Grid>
 
                 <Grid item>
-                    <FormControl component="fieldset" required error={error.group1IncomeLevel}>
+                    <FormControl fullWidth required error={error.product1Description}>
                         <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
-                            {requiredLabel('Customer Group 1 Income Level', true)}
+                            {requiredLabel('Product or Service 1 Description', true)}
                         </Typography>
-                        <RadioGroup
-                            name="group1IncomeLevel"
-                            value={step3FormData.group1IncomeLevel}
+                        <Input
+                            name="product1Description"
+                            placeholder="Enter description of product or service 1"
+                            value={step4FormData.product1Description}
                             onChange={handleChange}
-                        >
-                            <FormControlLabel value="Low-income" control={<Radio/>} label="Low-income"/>
-                            <FormControlLabel value="Medium-income" control={<Radio/>} label="Medium-income"/>
-                            <FormControlLabel value="High-income" control={<Radio/>} label="High-income"/>
-                        </RadioGroup>
-                        {error.group1IncomeLevel && <FormHelperText>Please select an income level.</FormHelperText>}
+                            variant="outlined"
+                        />
+                        {error.product1Description && <FormHelperText>Please input the description.</FormHelperText>}
                     </FormControl>
                 </Grid>
 
-                {/* Customer Group 2 */}
                 <Grid item>
                     <Typography variant="h6" component="legend">
-                        Customer Group 2 (optional)
+                        Product or Service 2 (optional)
                     </Typography>
                     <Divider/>
                 </Grid>
                 <Grid item>
                     <FormControl fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
-                            {requiredLabel('Customer Group 2 Description', false)}
+                            {requiredLabel('Product or Service 2 Name', false)}
                         </Typography>
                         <Input
-                            name="group2Description"
-                            placeholder="Enter description (optional)"
-                            value={step3FormData.group2Description}
+                            name="product2Name"
+                            placeholder="Enter name of product or service 2"
+                            value={step4FormData.product2Name}
                             onChange={handleChange}
                             variant="outlined"
                         />
@@ -134,19 +128,17 @@ const Step3 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid item>
-                    <FormControl component="fieldset">
+                    <FormControl fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
-                            {requiredLabel('Customer Group 2 Income Level', false)}
+                            {requiredLabel('Product or Service 2 Description', false)}
                         </Typography>
-                        <RadioGroup
-                            name="group2IncomeLevel"
-                            value={step3FormData.group2IncomeLevel}
+                        <Input
+                            name="product2Description"
+                            placeholder="Enter description of product or service 2"
+                            value={step4FormData.product2Description}
                             onChange={handleChange}
-                        >
-                            <FormControlLabel value="Low-income" control={<Radio/>} label="Low-income"/>
-                            <FormControlLabel value="Medium-income" control={<Radio/>} label="Medium-income"/>
-                            <FormControlLabel value="High-income" control={<Radio/>} label="High-income"/>
-                        </RadioGroup>
+                            variant="outlined"
+                        />
                     </FormControl>
                 </Grid>
 
@@ -173,4 +165,4 @@ const Step3 = ({previousStep, nextStep}) => {
     );
 };
 
-export default Step3;
+export default Step4;
