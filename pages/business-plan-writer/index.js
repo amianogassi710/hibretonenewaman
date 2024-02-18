@@ -4,6 +4,7 @@ import Layout from "../../components/Layout/Layout";
 import Subscription from "../../components/Layout/Subscription";
 import Link from '@mui/material/Link';
 import YellowBanner from "../../components/elements/YellowBanner";
+import {Grid} from "@mui/material";
 
 
 export default function Index() {
@@ -33,68 +34,71 @@ export default function Index() {
                                     minutes</p>
                             </div>
                             <div className="text-center mt-20">
-                                <a href="/business-plan-wizard" target="_blank" rel="noopener noreferrer"
-                                   className="btn btn-default fs-6">Get Started</a>
+                                <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
+                                    Started</Link>
                             </div>
                         </div>
                     </section>
 
-                    <section className="section-box">
+                    <section className="section-box mt-30">
                         <div className="post-loop-grid">
                             <div className="container">
-                                <div className="row mt-50">
-                                    <div className="col-lg-6 col-md-12 col-sm-12 mt-10">
-                                        <h4 className="mt-5">Using the Business Plan Writer</h4>
+                                <Grid container alignItems="center" style={{minWidth: '100%'}}>
+                                    <Grid item xs={12} md={12} lg={6} sx={{paddingLeft: {lg: '10px'}}}>
+                                        <h4>Using the Business Plan Writer</h4>
                                         <div className="mt-10">
-                                            <h6 className="mt-10 font-md"><strong>See how easily you can create your own
-                                                Business Plan</strong></h6>
-                                            <p className="font-md color-text-paragraph mt-10">Business plans are
-                                                essential for credibility, to improve chances of success, to validate
-                                                your idea and to secure investment. The hibretOne Business Plan writer
-                                                creates a plan which includes: Executive Summary, Business overview,
-                                                Sales and marketing, Operations and Management, Financial Plan...
-                                                <Link href="#" color="primary">
-                                                    read more
-                                                </Link>
+                                            <h6 className="mt-10 font-md"><strong>See how easily you can create your
+                                                own Business Plan</strong></h6>
+                                            <p className="font-md color-text-paragraph mt-10">
+                                                Business plans are essential for credibility, to improve chances of
+                                                success, to validate your idea and to secure investment. The
+                                                hibretOne Business Plan writer creates a plan which includes:
+                                                Executive Summary, Business overview, Sales and marketing,
+                                                Operations and Management, Financial Plan...
+                                                <Link href="#" color="primary">read more</Link>
                                             </p>
                                         </div>
                                         <div className="mt-20 mb-30">
                                             <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                 Started</Link>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-12 col-sm-12">
-                                        <iframe width="560" height="315"
-                                                src="https://www.youtube.com/embed/4SyjPUEXUng?si=GE9BO5WNIANzNXZ9"
-                                                title="YouTube video player" frameBorder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowFullScreen></iframe>
-                                    </div>
-                                </div>
+                                    </Grid>
+                                    <Grid item xs={12} md={12} lg={6}>
+                                        <iframe
+                                            className={"content-media"}
+                                            width="560" height="315"
+                                            src="https://www.youtube.com/embed/4SyjPUEXUng?si=GE9BO5WNIANzNXZ9"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowFullScreen>
+                                        </iframe>
+                                    </Grid>
+                                </Grid>
                             </div>
                         </div>
                     </section>
 
-                    <section className="section-box mt-20">
+                    <section className="section-box mt-30">
                         <YellowBanner/>
                     </section>
 
-                    <section className="section-box ">
+                    <section className="section-box mt-30">
                         <div className="post-loop-grid">
                             <div className="container">
-                                <div className="row mt-30">
-                                    <div className="col-lg-6 col-md-12 col-sm-12">
+                                <Grid container alignItems="center" style={{minWidth: '100%'}}>
+                                    <Grid item xs={12} md={12} lg={6}>
                                         <img className="content-media"
                                              src="assets/imgs/page/business-plan-writer/coffee-cup.jpeg"
                                              alt="joxBox"/>
-                                    </div>
-                                    <div className="col-lg-6 col-md-12 col-sm-12 mt-10">
+                                    </Grid>
+                                    <Grid item xs={12} md={12} lg={6} sx={{paddingLeft: {lg: '30px'}}}>
                                         <h4>Business Plan creation for everyone</h4>
                                         <div className="mt-10">
                                             <p className="font-md color-text-paragraph mt-10">In
-                                                For aspirers who are neurodiverse, speak English as a second language,
-                                                with limited business skills, or lower levels of education, creating a
-                                                Business Plan can be daunting. We are here to help, to teach, to not
+                                                For aspirers who are neurodiverse, speak English as a second
+                                                language, with limited business skills, or lower levels of education,
+                                                creating
+                                                a Business Plan can be daunting. We are here to help, to teach, to not
                                                 judge and to provide solutions to build your business in smart,
                                                 efficient ways...
                                                 <Link href="#" color="primary">
@@ -106,26 +110,30 @@ export default function Index() {
                                             <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                 Started</Link>
                                         </div>
-                                    </div>
-                                </div>
+                                    </Grid>
+                                </Grid>
                             </div>
                         </div>
                     </section>
                     <section className="section-box mt-30">
                         <div className="post-loop-grid">
                             <div className="container">
-                                <div className="row mt-10">
-                                    <div className="col-lg-6 col-md-12 col-sm-12 mt-40">
+                                <Grid container alignItems="center" style={{minWidth: '100%'}}>
+                                    <Grid item xs={12} md={12} lg={6} sx={{paddingLeft: {lg: '10px'}}}>
                                         <h4>A business plan builds credibility & gives confidence to your idea
                                         </h4>
                                         <div className="mt-20">
-                                            <h6 className="mt-10 font-md"><strong>Once your plan is done, you can:</strong></h6>
+                                            <h6 className="mt-10 font-md"><strong>Once your plan is done, you
+                                                can:</strong></h6>
                                             <ul className="mt-10">
                                                 <li className="font-md color-text-paragraph">
-                                                    &#8226; Download your plan as a PDF or Word doc so you can share it easily.
+                                                    &#8226; Download your plan as a PDF or Word doc so you can share
+                                                    it
+                                                    easily.
                                                 </li>
                                                 <li className="font-md color-text-paragraph">
-                                                    &#8226; Print out your plan to get a clean, professional document.
+                                                    &#8226; Print out your plan to get a clean, professional
+                                                    document.
                                                 </li>
                                                 <li className="font-md color-text-paragraph">
                                                     &#8226; Save to update in the future.
@@ -139,27 +147,27 @@ export default function Index() {
                                             <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                 Started</Link>
                                         </div>
-                                    </div>
-                                    <div className="col-lg-6 col-md-12 col-sm-12">
+                                    </Grid>
+                                    <Grid item xs={12} md={12} lg={6}>
                                         <img className="content-media"
                                              src="assets/imgs/page/business-plan-writer/Royalty-free-images-22.jpeg"
                                              alt="joxBox"/>
-                                    </div>
-                                </div>
+                                    </Grid>
+                                </Grid>
                             </div>
                         </div>
                     </section>
                     <section className="section-box mt-30">
                         <div className="post-loop-grid">
                             <div className="container">
-                                <div className="row">
-                                    <div className="col-lg-6 col-md-12 col-sm-12">
+                                <Grid container alignItems="center" style={{minWidth: '100%'}}>
+                                    <Grid item xs={12} md={12} lg={6}>
                                         <img className="content-media"
                                              src="assets/imgs/page/business-plan-writer/Royalty-free-images-14.jpeg"
                                              alt="joxBox"/>
-                                    </div>
-                                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 pl-20 mt-5 ">
-                                        <h4 className="mt-5">Everyone with a good idea should have effective tools</h4>
+                                    </Grid>
+                                    <Grid item xs={12} md={12} lg={6} sx={{paddingLeft: {lg: '30px'}}}>
+                                        <h4>Everyone with a good idea should have effective tools</h4>
                                         <div className="mt-10">
                                             <p className="font-md color-text-paragraph mt-20">
                                                 You are capable enough to plan,
@@ -173,8 +181,8 @@ export default function Index() {
                                             <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                 Started</Link>
                                         </div>
-                                    </div>
-                                </div>
+                                    </Grid>
+                                </Grid>
                             </div>
                         </div>
                     </section>
@@ -182,5 +190,6 @@ export default function Index() {
                 </div>
             </Layout>
         </>
-    );
+    )
+        ;
 }
