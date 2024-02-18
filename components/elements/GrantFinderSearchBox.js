@@ -1,9 +1,11 @@
 import React from 'react';
-
+import Link from "next/link";
 function GrantFinderSearchBox() {
   return (
+    <>
     <div className="form-find text-start mt-40 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
     <form>
+    <input className="form-input mr-10" type="text" placeholder="Your keyword... " />
         <div className="box-industry">
             <select className="form-input mr-10 select-active input-industry">
                 <option value>Category</option>
@@ -265,7 +267,7 @@ function GrantFinderSearchBox() {
                 <option value="ZW">Zimbabwe</option>
             </select>
         </div>
-        <div className="box-industry">
+        <div className="box-industry mr-20">
             <select className="form-input mr-10 select-active input-industry">
                 <option value>Region</option>
                 <option value={0}>Yorkshire and The Humber</option>
@@ -282,10 +284,35 @@ function GrantFinderSearchBox() {
                 <option value={11}>North East</option>
             </select>
         </div>
-        <input className="form-input input-keysearch mr-10" type="text" placeholder="Your keyword... " />
+    
         <button className="btn btn-default btn-find font-sm">Search</button>
     </form>
     </div>
+    <div className="list-tags-banner mt-10 ml-20 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+        <strong>Popular Searches:</strong>
+        <Link legacyBehavior href="#">
+            <a>Designer, </a>
+        </Link>
+        <Link legacyBehavior href="#">
+            <a>Web, </a>
+        </Link>
+        <Link legacyBehavior href="#">
+            <a>IOS, </a>
+        </Link>
+        <Link legacyBehavior href="#">
+            <a>Developer, </a>
+        </Link>
+        <Link legacyBehavior href="#">
+            <a>PHP, </a>
+        </Link>
+        <Link legacyBehavior href="#">
+            <a>Senior, </a>
+        </Link>
+        <Link legacyBehavior href="#">
+            <a>Engineer, </a>
+        </Link>
+        </div>
+                                            </>
   );
 }
 

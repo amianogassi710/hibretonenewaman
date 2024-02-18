@@ -27,7 +27,7 @@ export default function Index2() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box overflow-visible mt-50 mb-0">
+                    {/* <section className="section-box overflow-visible mt-50 mb-50">
                         <div className="container">
                             <div className="row">
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
@@ -37,11 +37,6 @@ export default function Index2() {
 
                                         </h1>
                                         <h5>Total Grants</h5>
-                                        {/* <p className="font-sm color-text-paragraph mt-10">
-                                            We always provide people a <br className="d-none d-lg-block" />
-                                            complete solution upon focused of
-                                            <br className="d-none d-lg-block" /> any business
-                                        </p> */}
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
@@ -50,11 +45,7 @@ export default function Index2() {
                                             <span className="count">3200+</span>
                                         </h1>
                                         <h5>Number of Grants</h5>
-                                        {/* <p className="font-sm color-text-paragraph mt-10">
-                                            We always provide people a <br className="d-none d-lg-block" />
-                                            complete solution upon focused of <br className="d-none d-lg-block" />
-                                            any business
-                                        </p> */}
+
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
@@ -63,11 +54,7 @@ export default function Index2() {
                                             <span className="count">1100+</span>
                                         </h1>
                                         <h5>Founders</h5>
-                                        {/* <p className="font-sm color-text-paragraph mt-10">
-                                            We always provide people a <br className="d-none d-lg-block" />
-                                            complete solution upon focused of <br className="d-none d-lg-block" />
-                                            any business
-                                        </p> */}
+   
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
@@ -76,26 +63,63 @@ export default function Index2() {
                                             <span className="count">£7.3</span>
                                         </h1>
                                         <h5>Supported</h5>
-                                        {/* <p className="font-sm color-text-paragraph mt-10">
-                                            We always provide people a <br className="d-none d-lg-block" />
-                                            complete solution upon focused of <br className="d-none d-lg-block" />
-                                            any business
-                                        </p> */}
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> */}
                     <section className="section-box mt-0">
-                    <div className="container">
+                        <div className="container">
                         
                             <div className="banner-hero">
                                 <div className="block-banner">
-                                <div className="text-center">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Funding for Every Type of Enterprise</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the right grants for you.</p>
+                                    <div className="text-center">
+                                        <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Funding for Every Type of Enterprise</h2>
+                                        <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the right grants for you.</p>
+                                    </div>
+                                        <GrantFinderSearchBox/>
+                                </div>
+                                
                             </div>
-                                    <GrantFinderSearchBox/>
+                        </div>
+                    </section>
+                    <section className="section-box overflow-visible mt-0 mb-110">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div className="text-center">
+                                        <h1 className="color-brand-2">
+                                            <span className="count">£100M</span>
+
+                                        </h1>
+                                        <h5>Total Grants</h5>
+                                    </div>
+                                </div>
+                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div className="text-center">
+                                        <h1 className="color-brand-2">
+                                            <span className="count">3200+</span>
+                                        </h1>
+                                        <h5>Number of Grants</h5>
+
+                                    </div>
+                                </div>
+                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div className="text-center">
+                                        <h1 className="color-brand-2">
+                                            <span className="count">1100+</span>
+                                        </h1>
+                                        <h5>Founders</h5>
+   
+                                    </div>
+                                </div>
+                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div className="text-center">
+                                        <h1 className="color-brand-2">
+                                            <span className="count">£7.3</span>
+                                        </h1>
+                                        <h5>Supported</h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +130,8 @@ export default function Index2() {
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Explore a Selection of Grants</h2>
                                 <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Over 20 new grants uploaded everyday.</p>
                             </div>
-                            <div className="mt-50">
+                            <div className="mt-0">
+
                                 <GrantFinderCategoryTab/>
                             </div>
                         </div>
@@ -151,7 +176,7 @@ export default function Index2() {
                                     
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-30">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CIoWgp020B0?si=JXBFLD2VmMtHcDwG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CIoWgp020B0?si=JXBFLD2VmMtHcDwG" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                 </div>
                             </div>
 

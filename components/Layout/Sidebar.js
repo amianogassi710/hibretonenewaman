@@ -1,7 +1,7 @@
 ﻿import Link from "next/link";
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
-import { useState } from "react";
+import React, { useState } from "react";
 
 const Sidebar = ({ openClass }) => {
     const [isActive, setIsActive] = useState({
@@ -108,6 +108,9 @@ const Sidebar = ({ openClass }) => {
                                             <ul className={isActive.key == 4 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>
                                                     <Link legacyBehavior href="/"><a>Ecosystem Connector</a></Link>
+                                                </li>
+                                                <li>
+                                                    <Link legacyBehavior href="/business-plan-writer"><a>Business Plan Writer</a></Link>
                                                 </li>
                                                 <li>
                                                     <Link legacyBehavior href="/"><a>Business Problem Pivots</a></Link>

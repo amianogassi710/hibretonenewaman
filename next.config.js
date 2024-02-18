@@ -2,8 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  transpilePackages: [ "antd", "@ant-design", "rc-util", "rc-pagination", "rc-picker", "rc-notification", "rc-tooltip", "rc-tree", "rc-table" ],
-
   async rewrites() {
     return [
       {
@@ -24,8 +22,12 @@ const nextConfig = {
       },
       {
         source: '/auth/:path*',
-        destination: 'http://8.134.196.184:8000/:path*', // Your endpoint
+        destination: 'http://8.134.196.184:8000/:path*', // auth-service FastAPI endpoint
       },
+      {
+        source: '/business-plan-writer/:path*',
+        destination: 'http://8.134.196.184:8001/:path*', // business-plan-writer-backend FastAPI endpoint
+      }
     ];
   },
 };

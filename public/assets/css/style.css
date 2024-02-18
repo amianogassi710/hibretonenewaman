@@ -3029,7 +3029,7 @@ ul li:last-child .card-list-4 {
 .banner-hero .block-banner {
   position: relative;
   z-index: 12;
-  padding: 50px 180px 80px 192px;
+  padding: 50px 180px 50px 192px;
 }
 .banner-hero .block-banner .form-find {
   background: #ffffff;
@@ -8483,6 +8483,31 @@ ul li:last-child .card-list-4 {
   .features__border-right::after {
     display: none;
   }
+}
+
+.bg-img-business-plan-writer {
+  display: flex;
+  height: 30vh;
+  background: url(../imgs/page/business-plan-writer/Hero.jpg) no-repeat center center;
+  background-size: cover;
+}
+.bg-img-business-plan-writer h2, .bg-img-business-plan-writer p {
+  z-index: 2;
+  position: relative;
+  color: white;
+  padding-left: 10px;
+  border-left: 10px solid #83cbff;
+}
+.bg-img-business-plan-writer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #05264E;
 }
 
 .bg-img-calculator {
