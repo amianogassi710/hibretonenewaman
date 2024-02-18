@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import SidebarRelatedCourse from './SidebarRelatedCourse';
 
 const CourseDetailsRightSide = ({ courseData }) => {
    // paymentInformation

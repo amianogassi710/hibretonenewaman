@@ -1,13 +1,7 @@
 import Layout from "../components/Layout/Layout";
 import Link from "next/link";
 import React, {useState} from 'react';
-// Import Material UI components
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import {Button, Modal} from 'antd';
 import {useRouter} from 'next/router'; // Import useRouter for navigation
 
 export default function Register() {
@@ -141,25 +135,22 @@ export default function Register() {
 
     // Dialog component integrated within your return statement
     const SuccessDialog = () => (
-        <Dialog
+        <Modal
+            title="Registration Successful!"
             open={open}
-            onClose={() => handleCloseDialog()}
-            aria-labelledby="success-dialog-title"
-            aria-describedby="success-dialog-description"
-        >
-            <DialogTitle id="success-dialog-title">{"Registration Successful!"}</DialogTitle>
-            <DialogContent>
-                <DialogContentText id="success-dialog-description">
-                    You have successfully registered. Would you like to log in now?
-                </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={() => handleCloseDialog()}>Not Now</Button>
-                <Button onClick={() => handleCloseDialog(true)} autoFocus>
+            onOk={() => handleCloseDialog(true)}
+            onCancel={() => handleCloseDialog()}
+            footer={[
+                <Button key="back" onClick={() => handleCloseDialog()}>
+                    Not Now
+                </Button>,
+                <Button key="submit" type="primary" onClick={() => handleCloseDialog(true)}>
                     Go to Login
-                </Button>
-            </DialogActions>
-        </Dialog>
+                </Button>,
+            ]}
+        >
+            <p>You have successfully registered. Would you like to log in now?</p>
+        </Modal>
     );
 
 
