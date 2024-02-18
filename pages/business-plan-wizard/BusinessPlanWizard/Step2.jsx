@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { useSessionStorage } from 'react-use';
+import {useSessionStorage} from 'react-use';
 import {
     Box,
     Grid,
@@ -16,7 +16,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
 const Step2 = ({previousStep, nextStep}) => {
-    const [step2FormData, setStep2FormData] = useSessionStorage('step2FormData', {
+    const [step2FormData, setStep2FormData] = useSessionStorage('BusinessPlanStepForm.step2FormData', {
         businessName: '',
         businessDescription: '',
         numberOfEmployees: '',
@@ -25,7 +25,7 @@ const Step2 = ({previousStep, nextStep}) => {
         serviceArea: ''
     });
 
-    const [error, setError] = React.useState({
+    const [error, setError] = useState({
         businessName: false,
         businessDescription: false,
         numberOfEmployees: false,
@@ -79,7 +79,7 @@ const Step2 = ({previousStep, nextStep}) => {
             <Grid container direction="column" spacing={2}>
                 <Grid item>
                     <FormControl fullWidth required error={error.businessName}>
-                        <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                        <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Your business name')}
                         </Typography>
                         <Input
@@ -94,7 +94,7 @@ const Step2 = ({previousStep, nextStep}) => {
 
                 <Grid item>
                     <FormControl fullWidth required error={error.businessDescription}>
-                        <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                        <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Your business description')}
                         </Typography>
                         <Input
@@ -112,7 +112,7 @@ const Step2 = ({previousStep, nextStep}) => {
 
                 <Grid item>
                     <FormControl required error={error.numberOfEmployees}>
-                        <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                        <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Number of employees')}
                         </Typography>
                         <Input
@@ -132,11 +132,10 @@ const Step2 = ({previousStep, nextStep}) => {
 
                 <Grid item>
                     <FormControl component="fieldset" required error={error.productOrService}>
-                        <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                        <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Do you offer a product or service?')}
                         </Typography>
                         <RadioGroup
-                            row
                             name="productOrService"
                             value={step2FormData.productOrService}
                             onChange={handleChange}
@@ -151,11 +150,10 @@ const Step2 = ({previousStep, nextStep}) => {
 
                 <Grid item>
                     <FormControl component="fieldset" required error={error.productServiceAccess}>
-                        <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                        <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('How can customer get your product or service?')}
                         </Typography>
                         <RadioGroup
-                            row
                             name="productServiceAccess"
                             value={step2FormData.productServiceAccess}
                             onChange={handleChange}
@@ -172,7 +170,7 @@ const Step2 = ({previousStep, nextStep}) => {
 
                 <Grid item>
                     <FormControl fullWidth required error={error.serviceArea}>
-                        <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                        <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Where do you serve your customers?')}
                         </Typography>
                         <Input
@@ -185,6 +183,10 @@ const Step2 = ({previousStep, nextStep}) => {
                         />
                         {error.serviceArea && <FormHelperText>Please input your service area.</FormHelperText>}
                     </FormControl>
+                </Grid>
+
+                <Grid item>
+                    <br/>
                 </Grid>
 
                 <Box sx={{display: 'flex', flexDirection: 'row', pt: 2}}>

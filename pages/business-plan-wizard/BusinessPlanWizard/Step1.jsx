@@ -60,7 +60,7 @@ const Step1 = ({nextStep}) => {
         <Grid container direction="column" spacing={2} component="form" noValidate autoComplete="off">
             <Grid item>
                 <FormControl component="fieldset" error={error.businessType}>
-                    <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                    <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                         {requiredLabel('Is this an existing or an upcoming business?')}
                     </Typography>
                     <RadioGroup
@@ -79,7 +79,7 @@ const Step1 = ({nextStep}) => {
 
             <Grid item>
                 <FormControl component="fieldset" error={error.planUsage}>
-                    <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                    <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                         {requiredLabel('What will you use this business plan for?')}
                     </Typography>
                     <RadioGroup
@@ -103,6 +103,9 @@ const Step1 = ({nextStep}) => {
                     </RadioGroup>
                     {error.planUsage && <FormHelperText>Please select an option.</FormHelperText>}
                 </FormControl>
+            </Grid>
+            <Grid item>
+                <br/>
             </Grid>
 
             <Grid item container justifyContent="flex-end">

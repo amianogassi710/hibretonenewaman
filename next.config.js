@@ -22,8 +22,12 @@ const nextConfig = {
       },
       {
         source: '/auth/:path*',
-        destination: 'http://8.134.196.184:8000/:path*', // Your FastAPI endpoint
+        destination: 'http://8.134.196.184:8000/:path*', // auth-service FastAPI endpoint
       },
+      {
+        source: '/business-plan-writer/:path*',
+        destination: 'http://8.134.196.184:8001/:path*', // business-plan-writer-backend FastAPI endpoint
+      }
     ];
   },
 };
