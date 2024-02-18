@@ -4,8 +4,9 @@ import QuizModal from './QuizModal/QuizModal';
 import axios from 'axios';
 import Loading from '../../components/elements/Loading';
 import Subscription from '../../components/Layout/Subscription';
-import Link from 'next/link';
 import AssessmentGrid from '../../components/elements/AssessmentGrid';
+import YellowBanner from '../../components/elements/YellowBanner';
+import KickstartButton from '../../components/elements/KickstartButton';
 
 export default function Index() {
   const [open,setOpen] = useState(false)
@@ -130,7 +131,10 @@ export default function Index() {
             </div>
          </div>
       </section>
-      <section className="grid__area container pt-100 pb-70 assessment-container">
+      <section className='section-box mt-100'>
+         <YellowBanner />
+      </section>
+      <section className="grid__area container pb-70 assessment-container">
          <div className="row">
             <div className="col-xxl-12">
                <div className=" text-center mb-60">
@@ -171,7 +175,7 @@ export default function Index() {
                         </div>
                     </div>
                 </section>
-                <section className="section-box ">
+                <section className="section-box mb-100">
                     <div className="post-loop-grid">
                         <div className="container">
                             <div className="row mt-30">
@@ -194,7 +198,7 @@ export default function Index() {
                         </div>
                     </div>
                 </section>
-
+      <KickstartButton />
       <Subscription />
     </Layout>
   );
