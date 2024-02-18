@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Layout from "../../components/Layout/Layout";
 import TaxCreditsCalculatorModal from './TaxCreditsCalculatorModal/TaxCreditsCalculatorModal';
 import Subscription from '../../components/Layout/Subscription';
+import YellowBanner from '../../components/elements/YellowBanner';
+import KickstartButton from '../../components/elements/KickstartButton';
 
 export default function Index() {
     const [isOpen,setIsOpen] = useState(false)
@@ -38,6 +40,9 @@ export default function Index() {
                         </div>
                         <TaxCreditsCalculatorModal show={isOpen} onClose={toggleOpen} />
                     </div>
+                </section>
+                <section className="section-box mt-50 mb-30">
+                    <YellowBanner />
                 </section>
                 <section className="section-box">
                     <div className="post-loop-grid">
@@ -152,6 +157,7 @@ export default function Index() {
                         </div>
                     </div>
                 </section>
+                <KickstartButton />
                 <Subscription />
             </div>
         </Layout>
