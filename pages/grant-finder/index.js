@@ -116,7 +116,7 @@ export default function Index2() {
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                     <div className="text-center">
                                         <h1 className="color-brand-2">
-                                            <span className="count">£7.3</span>
+                                            <span className="count">£7.3M</span>
                                         </h1>
                                         <h5>Supported</h5>
                                     </div>
