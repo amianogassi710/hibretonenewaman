@@ -3029,7 +3029,7 @@ ul li:last-child .card-list-4 {
 .banner-hero .block-banner {
   position: relative;
   z-index: 12;
-  padding: 50px 180px 80px 192px;
+  padding: 50px 180px 50px 192px;
 }
 .banner-hero .block-banner .form-find {
   background: #ffffff;
