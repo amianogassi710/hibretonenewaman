@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useSessionStorage} from 'react-use';
 import {
     Box,
@@ -9,7 +9,10 @@ import {
     FormControl,
     Button,
     Typography,
-    FormHelperText, Input, Divider
+    FormHelperText,
+    Input,
+    Divider,
+    CircularProgress, Chip
 } from '@mui/material';
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
@@ -29,11 +32,90 @@ const Step3 = ({previousStep, nextStep}) => {
 
     const [clientSide, setClientSide] = useState(false);
 
+    const [showSuggestions1, setShowSuggestions1] = useState(false);
+    const [suggestions1, setSuggestions1] = useState([]);
+    const [loading1, setLoading1] = useState(false);
+    const [loadedSuggestions1, setLoadedSuggestions1] = useState(false);
+
+    const [showSuggestions2, setShowSuggestions2] = useState(false);
+    const [suggestions2, setSuggestions2] = useState([]);
+    const [loading2, setLoading2] = useState(false);
+    const [loadedSuggestions2, setLoadedSuggestions2] = useState(false);
+
     useEffect(() => {
         setClientSide(true);
     }, []);
 
     if (!clientSide) return null;
+
+    const mockSuggestions = [
+        'London-based Small Business Owners',
+        'Young Professionals Seeking Convenient Services',
+        'Online Shoppers',
+        'Digital Nomads'
+    ];
+
+    const loadSuggestions1 = () => {
+        if (!loadedSuggestions1) {
+            setLoading1(true);
+            setTimeout(() => {
+                setSuggestions1(mockSuggestions);
+                setLoading1(false);
+                setLoadedSuggestions1(true);
+            }, 2000);
+        }
+    };
+    const handleRegenerateClick1 = () => {
+        setLoading1(true);
+        setTimeout(() => {
+            setSuggestions1([
+                ...mockSuggestions,
+                'Additional Suggestion ' + (suggestions1.length + 1)
+            ]);
+            setLoading1(false);
+        }, 2000);
+    };
+    const handleFocus1 = () => {
+        setShowSuggestions1(true);
+        loadSuggestions1();
+    };
+    const handleSuggestionClick1 = (suggestion) => {
+        setStep3FormData(prevState => ({
+            ...prevState,
+            group1Description: suggestion
+        }));
+    };
+
+    const loadSuggestions2 = () => {
+        if (!loadedSuggestions2) {
+            setLoading2(true);
+            setTimeout(() => {
+                setSuggestions2(mockSuggestions);
+                setLoading2(false);
+                setLoadedSuggestions2(true);
+            }, 2000);
+        }
+    };
+    const handleRegenerateClick2 = () => {
+        setLoading2(true);
+        setTimeout(() => {
+            setSuggestions2([
+                ...mockSuggestions,
+                'Additional Suggestion ' + (suggestions1.length + 1)
+            ]);
+            setLoading2(false);
+        }, 2000);
+    };
+    const handleFocus2 = () => {
+        setShowSuggestions2(true);
+        loadSuggestions2();
+    };
+    const handleSuggestionClick2 = (suggestion) => {
+        setStep3FormData(prevState => ({
+            ...prevState,
+            group2Description: suggestion
+        }));
+    };
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -43,6 +125,7 @@ const Step3 = ({previousStep, nextStep}) => {
         }));
         setError(prev => ({...prev, [name]: false}));
     };
+
 
     const validateForm = () => {
         const newErrors = {...error};
@@ -87,10 +170,57 @@ const Step3 = ({previousStep, nextStep}) => {
                             placeholder="Enter description"
                             value={step3FormData.group1Description}
                             onChange={handleChange}
+                            onFocus={handleFocus1}
                             variant="outlined"
                         />
                         {error.group1Description && <FormHelperText>Please input a description.</FormHelperText>}
                     </FormControl>
+                    {loading1 && (
+                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                            <CircularProgress/>
+                        </Box>
+                    )}
+                    {!loading1 && showSuggestions1 && (
+                        <Box sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
+                            {suggestions1.map((suggestion, index) => (
+                                <Chip
+                                    key={index}
+                                    label={suggestion}
+                                    onClick={() => handleSuggestionClick1(suggestion)}
+                                    sx={{
+                                        borderRadius: 4,
+                                        backgroundColor: '#ffffff',
+                                        color: '#1976d2',
+                                        border: '1px solid #1976d2',
+                                        '&:hover': {
+                                            backgroundColor: '#eeeeee',
+                                        },
+                                    }}
+                                />
+                            ))}
+                        </Box>
+                    )}
+                    {showSuggestions1 && (
+                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                            <Button
+                                onClick={handleRegenerateClick1}
+                                disabled={loading1}
+                                sx={{
+                                    borderRadius: 16,
+                                    width: '30%',
+                                    textTransform: 'none',
+                                    padding: '10px 0',
+                                    backgroundColor: '#1976d2',
+                                    '&:hover': {
+                                        backgroundColor: '#115293',
+                                    },
+                                }}
+                                variant="contained"
+                            >
+                                Regenerate Suggestions
+                            </Button>
+                        </Box>
+                    )}
                 </Grid>
 
                 <Grid item>
@@ -128,9 +258,56 @@ const Step3 = ({previousStep, nextStep}) => {
                             placeholder="Enter description (optional)"
                             value={step3FormData.group2Description}
                             onChange={handleChange}
+                            onFocus={handleFocus2}
                             variant="outlined"
                         />
                     </FormControl>
+                    {loading2 && (
+                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                            <CircularProgress/>
+                        </Box>
+                    )}
+                    {!loading2 && showSuggestions2 && (
+                        <Box sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
+                            {suggestions2.map((suggestion, index) => (
+                                <Chip
+                                    key={index}
+                                    label={suggestion}
+                                    onClick={() => handleSuggestionClick2(suggestion)}
+                                    sx={{
+                                        borderRadius: 4,
+                                        backgroundColor: '#ffffff',
+                                        color: '#1976d2',
+                                        border: '1px solid #1976d2',
+                                        '&:hover': {
+                                            backgroundColor: '#eeeeee',
+                                        },
+                                    }}
+                                />
+                            ))}
+                        </Box>
+                    )}
+                    {showSuggestions2 && (
+                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                            <Button
+                                onClick={handleRegenerateClick2}
+                                disabled={loading2}
+                                sx={{
+                                    borderRadius: 16,
+                                    width: '30%',
+                                    textTransform: 'none',
+                                    padding: '10px 0',
+                                    backgroundColor: '#1976d2',
+                                    '&:hover': {
+                                        backgroundColor: '#115293',
+                                    },
+                                }}
+                                variant="contained"
+                            >
+                                Regenerate Suggestions
+                            </Button>
+                        </Box>
+                    )}
                 </Grid>
 
                 <Grid item>
