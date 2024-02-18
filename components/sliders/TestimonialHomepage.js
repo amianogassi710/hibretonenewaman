@@ -19,9 +19,12 @@ const TestimonialSliderHomePage = () => {
         <>
             <div className="swiper-container swiper-group-4-border swiper">
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={1}
                     spaceBetween={30}
                     loop={true}
+                    breakpoints={{ 640: {
+                        slidesPerView: 3
+                      }}}
                     navigation={{
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next"

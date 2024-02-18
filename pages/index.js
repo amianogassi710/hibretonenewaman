@@ -1,9 +1,8 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../components/Layout/Layout";
-import CategoryTab2 from "./../components/elements/CategoryTab2";
 import BlogSlider from "./../components/sliders/Blog";
-import BrandSlider from "./../components/sliders/Brand";
+
 import CategorySlider2 from "./../components/sliders/Category2";
 import TopRekruterSlider from "./../components/sliders/TopRekruter";
 import TestimonialSliderHomePage from "./../components/sliders/TestimonialHomepage";
@@ -11,6 +10,9 @@ import WhoWeHelp from "../components/elements/WhoWeHelp";
 import Subscription from "../components/Layout/Subscription"
 import KickstartButton from "../components/elements/KickstartButton";
 import YellowBanner from "../components/elements/YellowBanner";
+import dynamic from 'next/dynamic'
+const NoSSRBrandSlider = dynamic(() => import('./../components/sliders/Brand'), { ssr: false })
+const NoSSRTestimonialSliderHomePage = dynamic(() => import('./../components/sliders/TestimonialHomepage'), { ssr: false })
 export default function Home() {
     return (
          <>
@@ -73,7 +75,7 @@ export default function Home() {
 
                                     <div className="swiper-button-next swiper-button-margin" />
                                     <div className="swiper-button-prev swiper-button-margin" />
-                                    <BrandSlider />
+                                    <NoSSRBrandSlider />
                                     
                                 </div>
                             </div>
@@ -222,7 +224,7 @@ export default function Home() {
                                 <div className="box-swiper mt-50">
                                     <div className="swiper-button-next" />
                                     <div className="swiper-button-prev" />
-                                    <TestimonialSliderHomePage />
+                                    <NoSSRTestimonialSliderHomePage />
                                 </div>
                                 <KickstartButton/>
                             </div>

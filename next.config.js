@@ -16,7 +16,7 @@ const nextConfig = {
       },
       {
         source: '/grants/:path*',
-        destination: 'https://grantfinder-backend-fastapi.onrender.com/grants/:path*',
+        destination: 'http://8.134.152.28:8000/grants/:path*', // Your FastAPI endpoint
       },
       {
         source: '/alison-courses/:path*',

@@ -1,129 +1,113 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Layout from "../../components/Layout/Layout";
-import CategoryTab2 from "../../components/elements/CategoryTab2";
+import GrantFinderCategoryTab from "../../components/elements/GrantFinderCategoryTab";
 import CategorySlider from "../../components/sliders/Category";
 import TestimonialSlider from "../../components/sliders/Testimonial1";
 import Location from "../../components/elements/Location";
+import YellowBanner from "../../components/elements/YellowBanner";
+import KickstartButton from "../../components/elements/KickstartButton";
+import TestimonialSliderHomePage from "./../../components/sliders/TestimonialHomepage";
+import Subscription from "../../components/Layout/Subscription"
+import GrantFinderSearchBox from "./../../components/elements/GrantFinderSearchBox";
 export default function Index2() {
     return (
         <>
             <Layout>
                 <div>
                     <section className="section-box">
-                        <div className="banner-hero hero-grant">
-                            <div className="banner-inner">
-                                <div className="block-banner">
-                                    <h1 className="text-42 color-white wow animate__animated animate__fadeInUp">
-                                        <span className="color-green">Grant Finder</span>
-                                        <br className="d-none d-lg-block" />
-                                        Finding Your Next Funding
-                                    </h1>
-                                    <div className="font-lg font-regular color-white mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                                        Search for the latest public, private, personal, academic and voluntary sector grant funding. 100’s of new grants added every week
-                                    </div>
-                                    <div className="form-find mt-40 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
-                                        <form>
-                                            <div className="box-industry">
-                                                <select className="form-input mr-10 select-active input-industry">
-                                                    <option value={0}>Industry</option>
-                                                    <option value={1}>Software</option>
-                                                    <option value={2}>Finance</option>
-                                                    <option value={3}>Recruting</option>
-                                                    <option value={4}>Management</option>
-                                                    <option value={5}>Advertising</option>
-                                                    <option value={6}>Development</option>
-                                                </select>
-                                            </div>
-                                            <div className="box-industry">
-                                                <select className="form-input mr-10 select-active input-location">
-                                                    <Location/>
-                                                </select>
-                                            </div>
-                                            <input className="form-input input-keysearch mr-10" type="text" placeholder="Your keyword... " />
-                                            <button className="btn btn-default btn-find font-sm">Search</button>
-                                        </form>
-                                    </div>
-                                    <div className="list-tags-banner mt-20 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
-                                        <strong>Popular Searches:</strong>
-                                        <Link legacyBehavior href="#">
-                                            <a>Natwest </a>
-                                        </Link>
-                                        <Link legacyBehavior href="#">
-                                            <a>Deutsche </a>
-                                        </Link>
-                                        <Link legacyBehavior href="#">
-                                            <a>West Midlands </a>
-                                        </Link>
-                                        <Link legacyBehavior href="#">
-                                            <a>Barclays </a>
-                                        </Link>
-                                        <Link legacyBehavior href="#">
-                                            <a>Aston </a>
-                                        </Link>
-                                        <Link legacyBehavior href="#">
-                                            <a>Bootcamp </a>
-                                        </Link>
-                                        <Link legacyBehavior href="#">
-                                            <a>Funding </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                                <div className="mt-60">
-                                    <div className="row">
-                                        <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
-                                            <div className="d-inline-block text-start">
-                                                <h4 className="color-white">
-                                                    {" "}
-                                                    <span className="count">100</span>
-                                                    <span> M+</span>
-                                                </h4>
-                                                <p className="font-sm color-text-mutted">Total Value of Grants</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
-                                            <div className="d-inline-block text-start">
-                                                <h4 className="color-white">
-                                                    <span className="count">1</span>
-                                                    <span> K+</span>
-                                                </h4>
-                                                <p className="font-sm color-text-mutted">Total No. of Grants</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
-                                            <div className="d-inline-block text-start">
-                                                <h4 className="color-white">
-                                                    {" "}
-                                                    <span className="count">1</span>
-                                                    <span> K+</span>
-                                                </h4>
-                                                <p className="font-sm color-text-mutted">Total No. of Funders</p>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-3 col-sm-3 col-6 text-center mb-20">
-                                            <div className="d-inline-block text-start">
-                                                <h4 className="color-white">
-                                                    {" "}
-                                                    <span className="count">20</span>
-                                                    <span> +</span>
-                                                </h4>
-                                                <p className="font-sm color-text-mutted">Grants Posted This Week</p>
-                                            </div>
-                                        </div>
+                        <div className=" banner-hero bg-img-calculator">
+                            <div className="container d-flex align-items-center">
+                                <div className="row">
+                                    <div className="col">
+                                        <h2 className="mb-10">Grant Finder</h2>
+                                        <p className="font-lg color-text-paragraph-2">Search for the latest personal, public, private, academic and voluntary sector grant funding</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-30">
+                    <section className="section-box overflow-visible mt-50 mb-0">
                         <div className="container">
-                            <div className="text-start">
+                            <div className="row">
+                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div className="text-center">
+                                        <h1 className="color-brand-2">
+                                            <span className="count">£100M</span>
+
+                                        </h1>
+                                        <h5>Total Grants</h5>
+                                        {/* <p className="font-sm color-text-paragraph mt-10">
+                                            We always provide people a <br className="d-none d-lg-block" />
+                                            complete solution upon focused of
+                                            <br className="d-none d-lg-block" /> any business
+                                        </p> */}
+                                    </div>
+                                </div>
+                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div className="text-center">
+                                        <h1 className="color-brand-2">
+                                            <span className="count">3200+</span>
+                                        </h1>
+                                        <h5>Number of Grants</h5>
+                                        {/* <p className="font-sm color-text-paragraph mt-10">
+                                            We always provide people a <br className="d-none d-lg-block" />
+                                            complete solution upon focused of <br className="d-none d-lg-block" />
+                                            any business
+                                        </p> */}
+                                    </div>
+                                </div>
+                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div className="text-center">
+                                        <h1 className="color-brand-2">
+                                            <span className="count">1100+</span>
+                                        </h1>
+                                        <h5>Founders</h5>
+                                        {/* <p className="font-sm color-text-paragraph mt-10">
+                                            We always provide people a <br className="d-none d-lg-block" />
+                                            complete solution upon focused of <br className="d-none d-lg-block" />
+                                            any business
+                                        </p> */}
+                                    </div>
+                                </div>
+                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                                    <div className="text-center">
+                                        <h1 className="color-brand-2">
+                                            <span className="count">£7.3</span>
+                                        </h1>
+                                        <h5>Supported</h5>
+                                        {/* <p className="font-sm color-text-paragraph mt-10">
+                                            We always provide people a <br className="d-none d-lg-block" />
+                                            complete solution upon focused of <br className="d-none d-lg-block" />
+                                            any business
+                                        </p> */}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section className="section-box mt-0">
+                    <div className="container">
+                        
+                            <div className="banner-hero">
+                                <div className="block-banner">
+                                <div className="text-center">
+                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Funding for Every Type of Enterprise</h2>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the right grants for you.</p>
+                            </div>
+                                    <GrantFinderSearchBox/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section className="section-box mt-0">
+                        <div className="container">
+                            <div className="text-center">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Explore a Selection of Grants</h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Discover grant funding for your business type, 
-stage, sector and region.</p>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Over 20 new grants uploaded everyday.</p>
                             </div>
                             <div className="mt-50">
-                                <CategoryTab2 />
+                                <GrantFinderCategoryTab/>
                             </div>
                         </div>
                     </section>
@@ -140,29 +124,43 @@ stage, sector and region.</p>
                         </div>
                     </div>
                     </section>
-                    <section className="section-box mt-50 mb-30 bg-border-3 pt-100 pb-100">
+                    <section className="section-box mt-20">
+                        <YellowBanner/>
+                    </section>
+                    <section className="section-box pt-50 pb-50 mt-80">
                         <div className="container">
+                            <div className="text-center mb-50">
+                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">How It Works</h2>
+                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Just via some simple steps, you will find your ideal grants you are looking for!</p>
+                            </div>
                             <div className="row">
-                                <div className="col-lg-6">
-                                    <img className="bdrd-10" src="assets/imgs/page/homepage5/img-profile.png" alt="jobBox" />
-                                </div>
-                                <div className="col-lg-6">
-                                    <div className="pl-30">
-                                        <h5 className="color-brand-2 mb-15 mt-15">Create Profile</h5>
-                                        <h2 className="color-brand-1 mt-0 mb-15">Create Your Personal Account Profile</h2>
-                                        <p className="font-lg color-text-paragraph-2">Work Profile is a personality assessment that measures an individual's work personality through their workplace traits, social and emotional traits; as well as the values and aspirations that drive them forward.</p>
-                                        <div className="mt-20">
-                                            <a className="btn btn-default">Create Profile</a>
-                                        </div>
+                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                    {/* <h2 className="mb-40">Delivering Economic, Social  and Moral impact</h2> */}
+                                    <div className="box-checkbox mb-30">
+                                        <h6>Economic</h6>
+                                        <p className="font-md color-text-paragraph-2 justify-content-between">Entrepreneurship is multifaceted - job creation, innovation, economic growth, wealth creation, tax revenue, diversity. A thriving entrepreneurial environment is often seen as a key driver of economic prosperity and societal progress.</p>
                                     </div>
+                                    <div className="box-checkbox mb-30">
+                                        <h6>Social</h6>
+                                        <p className="font-md color-text-paragraph-2">Entrepreneurship goes beyond economic impact. The potential to drive positive social change, address societal challenges, and contribute to the overall well-being of communities. Creating jobs which contribute to reducing unemployment rates and improving the economic well-being of communities.</p>
+                                    </div>
+                                    <div className="box-checkbox mb-30">
+                                        <h6>Moral</h6>
+                                        <p className="font-md color-text-paragraph-2">Entrepreneurship involves leadership grounded in ethical principles. Many successful entrepreneurs engage in philanthropy and charitable activities, using their wealth and influence to address issues contributing to the society’s welfare. Valuing diversity and inclusion in more equitable and just societies.</p>
+                                    </div>
+                                    
+                                </div>
+                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-30">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CIoWgp020B0?si=JXBFLD2VmMtHcDwG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                             </div>
+
                         </div>
                     </section>
                     <section className="section-box mt-70 mb-40">
                         <div className="container">
-                            <div className="text-start">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">How It Works</h2>
+                            <div className="text-center">
+                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Simple steps for grant funding access</h2>
                                 <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Just via some simple steps, you will find your ideal candidates you are looking for!</p>
                             </div>
                             <div className="mt-70">
@@ -217,43 +215,28 @@ stage, sector and region.</p>
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-0">
+
+                    <section className="section-box mt-50">
                         <div className="section-box wow animate__animated animate__fadeIn">
                             <div className="container">
                                 <div className="text-center">
-                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Here from some winners</h2>
+                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">Testimonials</h2>
                                     <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                    Successfully discovered grant funding and programmes
-                                        <br className="d-none d-lg-block" />
-                                        to build their business
+                                    Trusted feedback from the aspirers and the ecosystem
+                                        {/* <br className="d-none d-lg-block" />
+                                        and feed back to us! */}
                                     </p>
                                 </div>
                                 <div className="box-swiper mt-50">
-                                    <TestimonialSlider />
+                                    <div className="swiper-button-next" />
+                                    <div className="swiper-button-prev" />
+                                    <TestimonialSliderHomePage />
                                 </div>
+                                <KickstartButton/>
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-50 mb-20">
-                        <div className="container">
-                            <div className="box-newsletter box-newsletter-3">
-                                <div className="row">
-                                    <div className="col-xl-12 text-center">
-                                        <div className="d-inline-block">
-                                            <h2 className="color-white mt-30">Subscribe our newsletter</h2>
-                                            <p className="mt-10 font-lg color-white">New Things Will Always Update Regularl</p>
-                                            <div className="box-form-newsletter mt-30">
-                                                <form className="form-newsletter">
-                                                    <input className="input-newsletter" type="text" placeholder="Enter your email here" />
-                                                    <button className="btn btn-default font-heading icon-send-letter">Subscribe</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+                    <Subscription/>
                 </div>
             </Layout>
         </>
