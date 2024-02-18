@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { useSessionStorage } from 'react-use';
+import {useSessionStorage} from 'react-use';
 import {
     Box,
     Grid,
@@ -136,7 +136,6 @@ const Step2 = ({previousStep, nextStep}) => {
                             {requiredLabel('Do you offer a product or service?')}
                         </Typography>
                         <RadioGroup
-                            row
                             name="productOrService"
                             value={step2FormData.productOrService}
                             onChange={handleChange}
@@ -155,7 +154,6 @@ const Step2 = ({previousStep, nextStep}) => {
                             {requiredLabel('How can customer get your product or service?')}
                         </Typography>
                         <RadioGroup
-                            row
                             name="productServiceAccess"
                             value={step2FormData.productServiceAccess}
                             onChange={handleChange}

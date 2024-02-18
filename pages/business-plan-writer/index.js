@@ -102,7 +102,7 @@ export default function Index() {
                                                 </Link>
                                             </p>
                                         </div>
-                                        <div className="mt-10 mb-30">
+                                        <div className="mt-20 mb-30">
                                             <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                 Started</Link>
                                         </div>
@@ -119,22 +119,23 @@ export default function Index() {
                                         <h4>A business plan builds credibility & gives confidence to your idea
                                         </h4>
                                         <div className="mt-20">
-                                            <p className="font-md color-text-paragraph mt-20">
-                                                Once your plan is done, you can:
-                                                <ul>
-                                                    <li>&#8226; Download your plan as a PDF or Word doc so you can share
-                                                        it easily.
-                                                    </li>
-                                                    <li>&#8226; Print out your plan to get a clean, professional
-                                                        document.
-                                                    </li>
-                                                    <li>&#8226; Save to update in the future.</li>
-                                                    <li>&#8226; Share with a business advisor for another perspective.
-                                                    </li>
-                                                </ul>
-                                            </p>
+                                            <h6 className="mt-10 font-md"><strong>Once your plan is done, you can:</strong></h6>
+                                            <ul className="mt-10">
+                                                <li className="font-md color-text-paragraph">
+                                                    &#8226; Download your plan as a PDF or Word doc so you can share it easily.
+                                                </li>
+                                                <li className="font-md color-text-paragraph">
+                                                    &#8226; Print out your plan to get a clean, professional document.
+                                                </li>
+                                                <li className="font-md color-text-paragraph">
+                                                    &#8226; Save to update in the future.
+                                                </li>
+                                                <li className="font-md color-text-paragraph">
+                                                    &#8226; Share with a business advisor for another perspective.
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div className="mt-30 mb-20">
+                                        <div className="mt-20 mb-20">
                                             <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                 Started</Link>
                                         </div>
@@ -168,7 +169,7 @@ export default function Index() {
                                                 Even if you fail we can help you gain a better paying job.
                                             </p>
                                         </div>
-                                        <div className="mt-10 mb-20">
+                                        <div className="mt-20 mb-20">
                                             <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                 Started</Link>
                                         </div>
