@@ -16,8 +16,21 @@ import {
 } from '@mui/material';
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import axios from "axios";
 
 const Step3 = ({previousStep, nextStep}) => {
+    const [step1FormData, setStep1FormData] = useSessionStorage('BusinessPlanStepForm.step1FormData', {
+        businessType: '',
+        planUsage: ''
+    });
+    const [step2FormData, setStep2FormData] = useSessionStorage('BusinessPlanStepForm.step2FormData', {
+        businessName: '',
+        businessDescription: '',
+        numberOfEmployees: '',
+        productOrService: '',
+        productServiceAccess: '',
+        serviceArea: ''
+    });
     const [step3FormData, setStep3FormData] = useSessionStorage('BusinessPlanStepForm.step3FormData', {
         group1Description: '',
         group1IncomeLevel: '',
@@ -48,32 +61,30 @@ const Step3 = ({previousStep, nextStep}) => {
 
     if (!clientSide) return null;
 
-    const mockSuggestions = [
-        'London-based Small Business Owners',
-        'Young Professionals Seeking Convenient Services',
-        'Online Shoppers',
-        'Digital Nomads'
-    ];
+    const fetchSuggestionData1 = async () => {
+        try {
+            const response = await axios.post('/business-plan-writer/suggestion/customer-description', {
+                step1: step1FormData,
+                step2: step2FormData
+            });
+            const suggestions = response.data.suggestion;
+            setSuggestions1(suggestions);
+            setLoading1(false);
+            setLoadedSuggestions1(true);
+        } catch (error) {
+        }
+    };
 
     const loadSuggestions1 = () => {
         if (!loadedSuggestions1) {
             setLoading1(true);
-            setTimeout(() => {
-                setSuggestions1(mockSuggestions);
-                setLoading1(false);
-                setLoadedSuggestions1(true);
-            }, 2000);
+            fetchSuggestionData1();
         }
     };
+
     const handleRegenerateClick1 = () => {
         setLoading1(true);
-        setTimeout(() => {
-            setSuggestions1([
-                ...mockSuggestions,
-                'Additional Suggestion ' + (suggestions1.length + 1)
-            ]);
-            setLoading1(false);
-        }, 2000);
+        fetchSuggestionData1();
     };
     const handleFocus1 = () => {
         setShowSuggestions1(true);
@@ -86,25 +97,28 @@ const Step3 = ({previousStep, nextStep}) => {
         }));
     };
 
+    const fetchSuggestionData2 = async () => {
+        try {
+            const response = await axios.post('/business-plan-writer/suggestion/customer-description', {
+                step1: step1FormData,
+                step2: step2FormData
+            });
+            const suggestions = response.data.suggestion;
+            setSuggestions2(suggestions);
+            setLoading2(false);
+            setLoadedSuggestions2(true);
+        } catch (error) {
+        }
+    };
     const loadSuggestions2 = () => {
         if (!loadedSuggestions2) {
             setLoading2(true);
-            setTimeout(() => {
-                setSuggestions2(mockSuggestions);
-                setLoading2(false);
-                setLoadedSuggestions2(true);
-            }, 2000);
+            fetchSuggestionData2();
         }
     };
     const handleRegenerateClick2 = () => {
         setLoading2(true);
-        setTimeout(() => {
-            setSuggestions2([
-                ...mockSuggestions,
-                'Additional Suggestion ' + (suggestions1.length + 1)
-            ]);
-            setLoading2(false);
-        }, 2000);
+        fetchSuggestionData2();
     };
     const handleFocus2 = () => {
         setShowSuggestions2(true);
@@ -162,7 +176,7 @@ const Step3 = ({previousStep, nextStep}) => {
                 </Grid>
                 <Grid item>
                     <FormControl fullWidth required error={error.group1Description}>
-                        <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                        <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Customer Group 1 Description', true)}
                         </Typography>
                         <Input
@@ -225,7 +239,7 @@ const Step3 = ({previousStep, nextStep}) => {
 
                 <Grid item>
                     <FormControl component="fieldset" required error={error.group1IncomeLevel}>
-                        <Typography variant="subtitle2" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
+                        <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Customer Group 1 Income Level', true)}
                         </Typography>
                         <RadioGroup
