@@ -16,7 +16,7 @@ export default function Index2() {
             <Layout>
                 <div>
                     <section className="section-box">
-                        <div className=" banner-hero bg-img-calculator">
+                        <div className=" banner-hero bg-img-grant-finder">
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
