@@ -17,6 +17,7 @@ import {
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import axios from "axios";
+import StyledFormControlLabel from "./StyledFormControlLabel";
 
 const Step3 = ({previousStep, nextStep}) => {
     const [step1FormData, setStep1FormData] = useSessionStorage('BusinessPlanStepForm.step1FormData', {
@@ -238,7 +239,7 @@ const Step3 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid item>
-                    <FormControl component="fieldset" required error={error.group1IncomeLevel}>
+                    <FormControl component="fieldset" required error={error.group1IncomeLevel} fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Customer Group 1 Income Level', true)}
                         </Typography>
@@ -247,9 +248,9 @@ const Step3 = ({previousStep, nextStep}) => {
                             value={step3FormData.group1IncomeLevel}
                             onChange={handleChange}
                         >
-                            <FormControlLabel value="Low-income" control={<Radio/>} label="Low-income"/>
-                            <FormControlLabel value="Medium-income" control={<Radio/>} label="Medium-income"/>
-                            <FormControlLabel value="High-income" control={<Radio/>} label="High-income"/>
+                            <StyledFormControlLabel value="Low-income" control={<Radio/>} label="Low-income"/>
+                            <StyledFormControlLabel value="Medium-income" control={<Radio/>} label="Medium-income"/>
+                            <StyledFormControlLabel value="High-income" control={<Radio/>} label="High-income"/>
                         </RadioGroup>
                         {error.group1IncomeLevel && <FormHelperText>Please select an income level.</FormHelperText>}
                     </FormControl>
@@ -325,7 +326,7 @@ const Step3 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid item>
-                    <FormControl component="fieldset">
+                    <FormControl component="fieldset" fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Customer Group 2 Income Level', false)}
                         </Typography>
@@ -334,9 +335,9 @@ const Step3 = ({previousStep, nextStep}) => {
                             value={step3FormData.group2IncomeLevel}
                             onChange={handleChange}
                         >
-                            <FormControlLabel value="Low-income" control={<Radio/>} label="Low-income"/>
-                            <FormControlLabel value="Medium-income" control={<Radio/>} label="Medium-income"/>
-                            <FormControlLabel value="High-income" control={<Radio/>} label="High-income"/>
+                            <StyledFormControlLabel value="Low-income" control={<Radio/>} label="Low-income"/>
+                            <StyledFormControlLabel value="Medium-income" control={<Radio/>} label="Medium-income"/>
+                            <StyledFormControlLabel value="High-income" control={<Radio/>} label="High-income"/>
                         </RadioGroup>
                     </FormControl>
                 </Grid>
