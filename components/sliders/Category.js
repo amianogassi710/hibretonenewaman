@@ -9,8 +9,6 @@ import { Grid } from "swiper";
 
 const CategorySlider = () => {
     const [data,setData] = useState([])
-
-    useEffect(()=>{
     const getCategories= async()=>{
         const reqOptions ={
             method:'GET',
@@ -28,6 +26,8 @@ const CategorySlider = () => {
             setData(data)
         }
     }
+
+    useEffect(()=>{
     getCategories()
 },[])
     return (
