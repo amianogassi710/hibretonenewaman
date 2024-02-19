@@ -142,23 +142,23 @@ const Step4 = ({previousStep, nextStep}) => {
                     </FormControl>
                 </Grid>
 
-                <Box sx={{display: 'flex', flexDirection: 'row', pt: 2}}>
-                    <Button
-                        color="inherit"
-                        onClick={previousStep}
-                        sx={{mr: 1}}
-                    >
-                        <KeyboardArrowLeft/> Back
-                    </Button>
-                    <Box sx={{flex: '1 1 auto'}}/>
-                    <Button
-                        onClick={onFinish}
-                    >
-                        Next <KeyboardArrowRight/>
-                    </Button>
-                </Box>
-                <Grid item>
-                    <br/>
+                <Grid container justifyContent="flex-start" spacing={2} sx={{mt: 2}}>
+                    <Grid item>
+                        <Button
+                            color="inherit"
+                            onClick={previousStep}
+                            sx={{mr: 1}}
+                        >
+                            <KeyboardArrowLeft/> Back
+                        </Button>
+                    </Grid>
+                    <Grid item>
+                        <Button
+                            onClick={onFinish}
+                        >
+                            Next <KeyboardArrowRight/>
+                        </Button>
+                    </Grid>
                 </Grid>
             </Grid>
         </form>
