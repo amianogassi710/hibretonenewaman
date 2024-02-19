@@ -28,7 +28,7 @@ const BusinessPlanStepForm = () => {
     return (<Grid container justifyContent="center" alignItems="center" direction="column"
                   sx={{width: '100%', margin: '0 auto'}}>
         <Grid item xs={12} md={12} lg={6}
-              sx={{display: 'flex', alignItems: 'center', width: {xs: '100%', md: '55%', lg: '50%'}, margin: '0 auto'}}>
+              sx={{display: 'flex', alignItems: 'center', width: {xs: '100%', md: '65%', lg: '65%'}, margin: '0 auto'}}>
             <Box sx={{width: 100, mb: 3}}>
                 <Link legacyBehavior href="/business-plan-writer">
                     <IconButton sx={{
@@ -44,7 +44,7 @@ const BusinessPlanStepForm = () => {
             </Typography>
             <Box sx={{width: 100}}/>
         </Grid>
-        <Grid item xs={12} md={12} lg={6} sx={{width: {xs: '90%', md: '65%', lg: '50%'}, margin: '0 auto'}}>
+        <Grid item xs={12} md={12} lg={6} sx={{width: {xs: '90%', md: '65%', lg: '65%'}, margin: '0 auto'}}>
             <Stepper activeStep={currentStep - 1} alternativeLabel>
                 {stepsItems.map((label) => (<Step key={label}>
                     <StepLabel>{label}</StepLabel>
