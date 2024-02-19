@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useSessionStorage} from 'react-use';
 import {
-    Box,
     Grid,
     Input,
     Radio,
     RadioGroup,
-    FormControlLabel,
     FormControl,
     Button,
     Typography,
@@ -14,6 +12,7 @@ import {
 } from '@mui/material';
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import StyledFormControlLabel from "./StyledFormControlLabel";
 
 const Step2 = ({previousStep, nextStep}) => {
     const [step2FormData, setStep2FormData] = useSessionStorage('BusinessPlanStepForm.step2FormData', {
@@ -131,7 +130,7 @@ const Step2 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid item>
-                    <FormControl component="fieldset" required error={error.productOrService}>
+                    <FormControl component="fieldset" required error={error.productOrService} fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Do you offer a product or service?')}
                         </Typography>
@@ -140,8 +139,8 @@ const Step2 = ({previousStep, nextStep}) => {
                             value={step2FormData.productOrService}
                             onChange={handleChange}
                         >
-                            <FormControlLabel value="product" control={<Radio size="small"/>} label="Product"/>
-                            <FormControlLabel value="service" control={<Radio size="small"/>}
+                            <StyledFormControlLabel value="product" control={<Radio/>} label="Product"/>
+                            <StyledFormControlLabel value="service" control={<Radio/>}
                                               label="Service (retail businesses are considered service)"/>
                         </RadioGroup>
                         {error.productOrService && <FormHelperText>Please select an option.</FormHelperText>}
@@ -149,7 +148,7 @@ const Step2 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid item>
-                    <FormControl component="fieldset" required error={error.productServiceAccess}>
+                    <FormControl component="fieldset" required error={error.productServiceAccess} fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('How can customer get your product or service?')}
                         </Typography>
@@ -158,10 +157,10 @@ const Step2 = ({previousStep, nextStep}) => {
                             value={step2FormData.productServiceAccess}
                             onChange={handleChange}
                         >
-                            <FormControlLabel value="online" control={<Radio size="small"/>} label="Online"/>
-                            <FormControlLabel value="physical" control={<Radio size="small"/>}
+                            <StyledFormControlLabel value="online" control={<Radio/>} label="Online"/>
+                            <StyledFormControlLabel value="physical" control={<Radio/>}
                                               label="Physical Location"/>
-                            <FormControlLabel value="both" control={<Radio size="small"/>}
+                            <StyledFormControlLabel value="both" control={<Radio/>}
                                               label="Both online and physical location"/>
                         </RadioGroup>
                         {error.productServiceAccess && <FormHelperText>Please select an option.</FormHelperText>}
@@ -185,25 +184,24 @@ const Step2 = ({previousStep, nextStep}) => {
                     </FormControl>
                 </Grid>
 
-                <Grid item>
-                    <br/>
+                <Grid container justifyContent="flex-start" spacing={2} sx={{mt: 2}}>
+                    <Grid item>
+                        <Button
+                            color="inherit"
+                            onClick={previousStep}
+                            sx={{mr: 1}}
+                        >
+                            <KeyboardArrowLeft/> Back
+                        </Button>
+                    </Grid>
+                    <Grid item>
+                        <Button
+                            onClick={onFinish}
+                        >
+                            Next <KeyboardArrowRight/>
+                        </Button>
+                    </Grid>
                 </Grid>
-
-                <Box sx={{display: 'flex', flexDirection: 'row', pt: 2}}>
-                    <Button
-                        color="inherit"
-                        onClick={previousStep}
-                        sx={{mr: 1}}
-                    >
-                        <KeyboardArrowLeft/> Back
-                    </Button>
-                    <Box sx={{flex: '1 1 auto'}}/>
-                    <Button
-                        onClick={onFinish}
-                    >
-                        Next <KeyboardArrowRight/>
-                    </Button>
-                </Box>
             </Grid>
         </form>
     );

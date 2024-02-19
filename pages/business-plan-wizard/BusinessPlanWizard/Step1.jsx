@@ -3,7 +3,6 @@ import {useSessionStorage} from 'react-use';
 import {
     FormControl,
     RadioGroup,
-    FormControlLabel,
     Radio,
     Grid,
     Typography,
@@ -11,6 +10,8 @@ import {
     Button
 } from '@mui/material';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import StyledFormControlLabel from "./StyledFormControlLabel";
 
 const Step1 = ({nextStep}) => {
     const [step1FormData, setStep1FormData] = useSessionStorage('BusinessPlanStepForm.step1FormData', {
@@ -59,7 +60,7 @@ const Step1 = ({nextStep}) => {
     return (
         <Grid container direction="column" spacing={2} component="form" noValidate autoComplete="off">
             <Grid item>
-                <FormControl component="fieldset" error={error.businessType}>
+                <FormControl component="fieldset" error={error.businessType} fullWidth>
                     <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                         {requiredLabel('Is this an existing or an upcoming business?')}
                     </Typography>
@@ -68,9 +69,9 @@ const Step1 = ({nextStep}) => {
                         value={step1FormData.businessType || ''}
                         onChange={handleChange}
                     >
-                        <FormControlLabel value="existing" control={<Radio size="small"/>}
+                        <StyledFormControlLabel value="existing" control={<Radio/>}
                                           label="Existing business"/>
-                        <FormControlLabel value="upcoming" control={<Radio size="small"/>}
+                        <StyledFormControlLabel value="upcoming" control={<Radio/>}
                                           label="Upcoming unlaunched business"/>
                     </RadioGroup>
                     {error.businessType && <FormHelperText>Please select an option.</FormHelperText>}
@@ -78,7 +79,7 @@ const Step1 = ({nextStep}) => {
             </Grid>
 
             <Grid item>
-                <FormControl component="fieldset" error={error.planUsage}>
+                <FormControl component="fieldset" error={error.planUsage} fullWidth>
                     <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                         {requiredLabel('What will you use this business plan for?')}
                     </Typography>
@@ -87,31 +88,35 @@ const Step1 = ({nextStep}) => {
                         value={step1FormData.planUsage || ''}
                         onChange={handleChange}
                     >
-                        <FormControlLabel value="investors" control={<Radio size="small"/>}
+                        <StyledFormControlLabel value="investors" control={<Radio/>}
                                           label="To be used to request fund from investors"/>
-                        <FormControlLabel value="banks" control={<Radio size="small"/>}
+                        <StyledFormControlLabel value="banks" control={<Radio/>}
                                           label="To be used to request fund from banks"/>
-                        <FormControlLabel value="selfLearning" control={<Radio size="small"/>}
+                        <StyledFormControlLabel value="selfLearning" control={<Radio/>}
                                           label="For self-learning"/>
-                        <FormControlLabel value="schoolProject" control={<Radio size="small"/>}
+                        <StyledFormControlLabel value="schoolProject" control={<Radio/>}
                                           label="To be used as reference for school/university project"/>
-                        <FormControlLabel value="workplaceProject" control={<Radio size="small"/>}
+                        <StyledFormControlLabel value="workplaceProject" control={<Radio/>}
                                           label="To be used as reference for workplace projects"/>
-                        <FormControlLabel value="nonFinancial" control={<Radio size="small"/>}
+                        <StyledFormControlLabel value="nonFinancial" control={<Radio/>}
                                           label="To be used to submit to a non-financial institution for approval"/>
-                        <FormControlLabel value="other" control={<Radio size="small"/>} label="Other reasons"/>
+                        <StyledFormControlLabel value="other" control={<Radio/>} label="Other reasons"/>
                     </RadioGroup>
                     {error.planUsage && <FormHelperText>Please select an option.</FormHelperText>}
                 </FormControl>
             </Grid>
-            <Grid item>
-                <br/>
-            </Grid>
 
-            <Grid item container justifyContent="flex-end">
-                <Button onClick={onFinish}>
-                    Next <KeyboardArrowRight/>
-                </Button>
+            <Grid container justifyContent="flex-start" spacing={2} sx={{mt: 2}}>
+                <Grid item>
+                    <Button disabled>
+                        <KeyboardArrowLeft /> Back
+                    </Button>
+                </Grid>
+                <Grid item>
+                    <Button onClick={onFinish}>
+                        Next <KeyboardArrowRight />
+                    </Button>
+                </Grid>
             </Grid>
         </Grid>
     );
