@@ -29,25 +29,6 @@ const GrantFinderCategoryTab = () => {
             getGrantDetails(i)
         }
         setGrantDetails(grantList)
-
-        const getCategories= async()=>{
-            const reqOptions ={
-                method:'GET',
-                headers:{
-                    'Content-Type':'application/json'
-                },
-            }
-            const response = await fetch("/grants/grant-categories", reqOptions)
-            const data = await response.json()
-    
-            if(!response.ok){
-                console.log({"error":data.detail})
-            }
-            else{
-                setData(data)
-            }
-        }
-        getCategories()
     },[])
 
     const handleOnClick = (index) => {

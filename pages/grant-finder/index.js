@@ -10,6 +10,10 @@ import KickstartButton from "../../components/elements/KickstartButton";
 import TestimonialSliderHomePage from "./../../components/sliders/TestimonialHomepage";
 import Subscription from "../../components/Layout/Subscription"
 import GrantFinderSearchBox from "./../../components/elements/GrantFinderSearchBox";
+import dynamic from 'next/dynamic'
+const NoSSRGrantFinderCategoryTab = dynamic(() => import('../../components/elements/GrantFinderCategoryTab'), { ssr: false })
+const NoSSRCategorySlider = dynamic(() => import('../../components/sliders/Category'), { ssr: false })
+const NoSSRTestimonialSliderHomePage = dynamic(() => import('../../components/sliders/TestimonialHomepage'), { ssr: false })
 export default function Index2() {
     return (
         <>
@@ -132,7 +136,7 @@ export default function Index2() {
                             </div>
                             <div className="mt-0">
 
-                                <GrantFinderCategoryTab/>
+                                <NoSSRGrantFinderCategoryTab/>
                             </div>
                         </div>
                     </section>
@@ -144,7 +148,7 @@ export default function Index2() {
                                 <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Find the grant that’s perfect for you. about 800+ new grants everyday</p>
                             </div>
                             <div className="box-swiper mt-50">
-                                <CategorySlider />
+                                <NoSSRCategorySlider />
                             </div>
                         </div>
                     </div>
@@ -255,7 +259,7 @@ export default function Index2() {
                                 <div className="box-swiper mt-50">
                                     <div className="swiper-button-next" />
                                     <div className="swiper-button-prev" />
-                                    <TestimonialSliderHomePage />
+                                    <NoSSRTestimonialSliderHomePage />
                                 </div>
                                 <KickstartButton/>
                             </div>
