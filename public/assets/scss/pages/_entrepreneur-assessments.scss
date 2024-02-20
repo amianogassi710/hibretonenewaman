@@ -1,3 +1,4 @@
+
 .bg-img-assessment {
   display:flex;
   height: 40vh;
@@ -26,17 +27,13 @@
 .assessment {
   &-form-group {
     margin: 0 auto;
-    padding: 5px 15px 10px;
+    padding: 5px 5px 10px;
     text-align: start;
     width: 90%;
-    border: 1px solid #adadad;
-    border-radius: 15px;
   }
   &-question {
-    &label {
-      font-size: 15px;
-      min-height: 7.6vh;
-    }
+    min-height: 9.5vh;
+
   }
   &-radio-group {
     display: inline-block;
@@ -48,18 +45,23 @@
       input {
         display: none;
       }
+      input:checked + .btn.btn-switch, input:checked + label {
+        background-color: #3C65F5;
+        font-weight: bold;
+        color: white;
+      }
       label {
+        cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 10px;
-        margin-top: 1px;
-        border: 1px solid #adadad;
-        border-radius: 10px;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+        background-color: rgba(0,0,0,0.04);
+        border-radius: 7.5px;
         transition: 0.1s ease-in-out;
         height: 35px;
         &:hover {
-          background-color: #f2f4fa;
           transition: 0.1s ease-in-out;
           color: black;
         }
@@ -68,25 +70,21 @@
   }
 }
 
-.section-name {
-  border-bottom: 1px solid #adadad;
-  margin-bottom: 5px;
-}
 
 .circle {
-  height: 40px;
-  width: 40px;
-  background-color: #05264E;
+  height: 55px;
+  width: 55px;
+  background-color: #EFF2FB;
   border-radius: 100px;
   transition: 0.2s ease-in-out;
   &:hover {
-    scale: 120%;
+    scale: 110%;
     transform: translate(0,-2px);
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 10px 30px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.1), 0 5px 15px 0 rgba(0,0,0,0.1);
     transition: 0.2s ease-in-out
   }
   img {
-    scale: 85%;
+    scale: 155%;
   }
 }
 
@@ -102,7 +100,6 @@
     margin: 0 auto;
     img {
       height: 25px;
-      filter: invert(1)
     }
     label {
       font-size: 85%;

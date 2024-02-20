@@ -17,30 +17,39 @@
         }
     }
     &.btn-quiz {
-        color: white;
-        background-color: #05264E;
-        border-radius: 10px;
-        margin-top: 5px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        color: white;
-        background-color: #05264E;
-        border: 1px solid #adadad;
-        line-height: 26px;
-        padding: 2px 15px;
-        font-size: 13px;
-        &:hover {
-            background-color: rgb(81, 81, 81);
+        &-1 {
             color: white;
+            background-color: rgba(60, 101, 245, 1);
+            border-radius: 7.5px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            line-height: 26px;
+            padding: 2px 10px;
+            font-size: 13px;
+            &:hover {
+                background-color: rgb(81, 81, 81);
+                color: black;
+            }
+        }
+        &-2 {
+            color: black;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 5px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            line-height: 26px;
+            padding: 7px 10px;
+            margin-right: 10px;
+            font-size: 13px;
+            &:hover {
+                background-color: rgb(81, 81, 81);
+                color: black;
+            }
         }
     }
-}
-
-input:checked + .btn.btn-switch, input:checked + label {
-    background-color: #3C65F5;
-    font-weight: bold;
-    color: white;
 }
 
 .btn-sign-up-inverted {
@@ -54,7 +63,7 @@ input:checked + .btn.btn-switch, input:checked + label {
     transition: 0.2s ease-in-out;
     padding: 20px 100px 20px 100px;
   }
-  
+
 .btn-sign-up {
     display: flex;
     align-items: center;
