@@ -3,7 +3,6 @@ import {useSessionStorage} from 'react-use';
 import {
     Grid,
     Input,
-    Radio,
     RadioGroup,
     FormControl,
     Button,
@@ -139,9 +138,10 @@ const Step2 = ({previousStep, nextStep}) => {
                             value={step2FormData.productOrService}
                             onChange={handleChange}
                         >
-                            <StyledFormControlLabel value="product" control={<Radio/>} label="Product"/>
-                            <StyledFormControlLabel value="service" control={<Radio/>}
-                                              label="Service (retail businesses are considered service)"/>
+                            <StyledFormControlLabel value="product" groupValue={step2FormData.productOrService}
+                                                     label="Product"/>
+                            <StyledFormControlLabel value="service" groupValue={step2FormData.productOrService}
+                                                     label="Service (retail businesses are considered service)"/>
                         </RadioGroup>
                         {error.productOrService && <FormHelperText>Please select an option.</FormHelperText>}
                     </FormControl>
@@ -157,11 +157,12 @@ const Step2 = ({previousStep, nextStep}) => {
                             value={step2FormData.productServiceAccess}
                             onChange={handleChange}
                         >
-                            <StyledFormControlLabel value="online" control={<Radio/>} label="Online"/>
-                            <StyledFormControlLabel value="physical" control={<Radio/>}
-                                              label="Physical Location"/>
-                            <StyledFormControlLabel value="both" control={<Radio/>}
-                                              label="Both online and physical location"/>
+                            <StyledFormControlLabel value="online" groupValue={step2FormData.productServiceAccess}
+                                                     label="Online"/>
+                            <StyledFormControlLabel value="physical" groupValue={step2FormData.productServiceAccess}
+                                                     label="Physical Location"/>
+                            <StyledFormControlLabel value="both" groupValue={step2FormData.productServiceAccess}
+                                                     label="Both online and physical location"/>
                         </RadioGroup>
                         {error.productServiceAccess && <FormHelperText>Please select an option.</FormHelperText>}
                     </FormControl>

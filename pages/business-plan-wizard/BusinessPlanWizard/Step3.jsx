@@ -248,9 +248,12 @@ const Step3 = ({previousStep, nextStep}) => {
                             value={step3FormData.group1IncomeLevel}
                             onChange={handleChange}
                         >
-                            <StyledFormControlLabel value="Low-income" control={<Radio/>} label="Low-income"/>
-                            <StyledFormControlLabel value="Medium-income" control={<Radio/>} label="Medium-income"/>
-                            <StyledFormControlLabel value="High-income" control={<Radio/>} label="High-income"/>
+                            <StyledFormControlLabel value="Low-income" groupValue={step3FormData.group1IncomeLevel}
+                                                    label="Low-income"/>
+                            <StyledFormControlLabel value="Medium-income" groupValue={step3FormData.group1IncomeLevel}
+                                                    label="Medium-income"/>
+                            <StyledFormControlLabel value="High-income" groupValue={step3FormData.group1IncomeLevel}
+                                                    label="High-income"/>
                         </RadioGroup>
                         {error.group1IncomeLevel && <FormHelperText>Please select an income level.</FormHelperText>}
                     </FormControl>
@@ -335,9 +338,12 @@ const Step3 = ({previousStep, nextStep}) => {
                             value={step3FormData.group2IncomeLevel}
                             onChange={handleChange}
                         >
-                            <StyledFormControlLabel value="Low-income" control={<Radio/>} label="Low-income"/>
-                            <StyledFormControlLabel value="Medium-income" control={<Radio/>} label="Medium-income"/>
-                            <StyledFormControlLabel value="High-income" control={<Radio/>} label="High-income"/>
+                            <StyledFormControlLabel value="Low-income" groupValue={step3FormData.group2IncomeLevel}
+                                                    label="Low-income"/>
+                            <StyledFormControlLabel value="Medium-income" groupValue={step3FormData.group2IncomeLevel}
+                                                    label="Medium-income"/>
+                            <StyledFormControlLabel value="High-income" groupValue={step3FormData.group2IncomeLevel}
+                                                    label="High-income"/>
                         </RadioGroup>
                     </FormControl>
                 </Grid>
