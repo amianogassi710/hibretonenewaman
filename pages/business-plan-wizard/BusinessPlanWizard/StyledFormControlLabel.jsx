@@ -20,6 +20,7 @@ const StyledFormControlLabel = ({ label, value, groupValue}) => {
                 '&:hover': {
                     borderColor: theme.palette.primary.main, // Border color on hover
                     backgroundColor: theme.palette.action.hover,
+                    color: 'rgba(0, 0, 0, 0.87)',
                 },
                 '.Mui-checked &': {
                     borderColor: theme.palette.primary.main, // Maintain border color for selected item
