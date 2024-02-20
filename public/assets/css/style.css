@@ -1026,30 +1026,37 @@ h6,
   transform: translateY(-2px);
   transition: 0.2s;
 }
-.btn.btn-quiz {
+.btn.btn-quiz-1 {
   color: white;
-  background-color: #05264E;
-  border-radius: 10px;
+  background-color: rgb(60, 101, 245);
+  border-radius: 7.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  line-height: 26px;
+  padding: 2px 10px;
+  font-size: 13px;
+}
+.btn.btn-quiz-1:hover {
+  background-color: rgb(81, 81, 81);
+  color: black;
+}
+.btn.btn-quiz-2 {
+  color: black;
+  background-color: white;
+  border-radius: 5px;
   margin-top: 5px;
   font-weight: bold;
   display: flex;
   align-items: center;
-  color: white;
-  background-color: #05264E;
-  border: 1px solid #adadad;
   line-height: 26px;
-  padding: 2px 15px;
+  padding: 7px 10px;
+  margin-right: 10px;
   font-size: 13px;
 }
-.btn.btn-quiz:hover {
+.btn.btn-quiz-2:hover {
   background-color: rgb(81, 81, 81);
-  color: white;
-}
-
-input:checked + .btn.btn-switch, input:checked + label {
-  background-color: #3C65F5;
-  font-weight: bold;
-  color: white;
+  color: black;
 }
 
 .btn-sign-up-inverted {
@@ -3346,7 +3353,7 @@ ul li:last-child .card-list-4 {
   z-index: 2;
   position: fixed;
   left: 0;
-  top: 0;
+  top: 60px;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
@@ -3360,41 +3367,50 @@ ul li:last-child .card-list-4 {
   display: inline-table;
   align-items: center;
   width: 90vw;
-  max-width: 600px;
-  height: 40vh;
-  background-color: #fff;
+  max-width: 700px;
+  height: 37.5vh;
   border-radius: 15px;
   overflow: hidden;
+  background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top;
+  background-size: cover;
+  background-color: rgba(5, 35, 70, 0.9);
+  background-blend-mode: overlay;
 }
 
 .assessment-modal-header {
   color: white;
   width: 100%;
-  height: 7.5vh;
-  background-color: #3C65F5;
+  height: 9.5vh;
 }
-.assessment-modal-header h5 {
+.assessment-modal-header h4 {
+  margin-top: -5px;
   font-weight: bold;
+  font-size: 30px;
   left: 0;
+  z-index: 1;
 }
 .assessment-modal-header i {
   margin-left: 5px;
+  z-index: 1;
 }
-.assessment-modal-header .close {
-  margin-right: 20px;
-  width: 35px;
+.assessment-modal-header p {
+  color: white;
+  margin-top: -10px;
 }
 
 .assessment-modal-footer {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 50px;
-  background-color: #D2E4EC;
+  height: 60px;
+  color: white;
+  z-index: 1;
+  padding-left: 45px;
 }
 
 .assessment-modal-body {
   margin: 0px auto;
+  background-color: white;
   width: 100%;
   padding: 10px;
 }
@@ -3414,20 +3430,25 @@ ul li:last-child .card-list-4 {
 }
 
 .tracker {
-  width: 55%;
+  width: 50%;
   font-weight: 600;
   font-size: 85%;
+  z-index: 2;
+}
+.tracker p {
+  color: white;
 }
 
 .progress-bar {
-  height: 10px;
-  width: 60%;
+  height: 5px;
+  width: 85%;
   border-radius: 15px;
+  margin-top: -10px;
 }
 
 .bar {
   height: inherit;
-  background-color: #05264E;
+  background-color: #3AAB67;
   border-radius: inherit;
 }
 
@@ -3444,19 +3465,28 @@ ul li:last-child .card-list-4 {
   border-radius: 20px;
   cursor: pointer;
 }
+.grid__item a {
+  text-decoration: none;
+}
 .grid__item:hover {
   box-shadow: 0px 30px 50px -14px rgba(26, 31, 35, 0.07);
 }
 .grid__item:hover .grid_thumb img {
   transform: scale(1.1);
+  z-index: -1;
+}
+.grid__item:hover .grid__category {
+  color: white;
+  background: #3C66ED;
+  z-index: 2;
 }
 .grid__content {
   padding-top: 23px;
-  padding-bottom: 10px;
+  height: 22.5vh;
 }
 .grid__content p {
   color: var(--tp-text-1);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   height: 7.5vh;
   margin-top: 10px;
 }
@@ -3473,26 +3503,11 @@ ul li:last-child .card-list-4 {
   border-radius: 50%;
   box-shadow: 0px 20px 30px rgba(5, 34, 109, 0.14);
 }
-.grid__category {
-  display: inline-block;
-  height: 24px;
-  width: auto;
-  line-height: 24px;
-  text-align: center;
-  padding: 0 13px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #3C66ED;
-  background: rgba(61, 108, 231, 0.07);
-}
-.grid__tag {
-  margin-bottom: 12px;
-  border-radius: 5px;
-}
 .grid__title {
   font-size: 20px;
   color: #05264E;
   font-weight: 500;
+  width: 50%;
 }
 .grid__title a:hover {
   color: var(--tp-theme-1);
@@ -3514,37 +3529,34 @@ ul li:last-child .card-list-4 {
   border-radius: 50%;
   margin-right: 10px;
 }
-.grid__complete {
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  border: 2px solid rgba(67, 86, 255, 0.1);
-  border-radius: 100%;
-}
-.grid__complete:hover {
-  color: var(--tp-theme-1);
-}
-.grid__complete a {
-  color: var(--tp-text-1);
-  display: inline-block;
-}
-.grid__complete i {
-  font-size: 16px;
-  color: var(--tp-text-1);
-  margin-right: 8px;
-}
-.grid__complete svg {
-  margin-right: 5px;
-  width: 16px;
-  height: 16px;
-}
 .grid_thumb {
+  position: relative;
   width: 100%;
-  height: 230px;
+  height: 210px;
   border-radius: 10px;
 }
 .grid_thumb img {
   object-fit: cover;
+  z-index: 0;
+  margin-top: -24px;
+}
+.grid_thumb .grid__category {
+  position: absolute;
+  z-index: 2;
+  margin: 15px;
+  height: 24px;
+  width: auto;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 13px;
+  font-size: 13px;
+  font-weight: 700;
+  background: #3C66ED;
+  color: #ffffff;
+  border-radius: 10px;
+}
+.grid__progress_circle {
+  width: 50px;
 }
 
 .header {
@@ -7691,6 +7703,7 @@ ul li:last-child .card-list-4 {
 }
 .nav-tabs li a {
   display: inline-block;
+  text-decoration: none;
   margin: 0px 5px;
   box-shadow: 0px 2px 4px -5px rgb(10, 42, 105);
   align-items: center;
@@ -8192,15 +8205,12 @@ ul li:last-child .card-list-4 {
 
 .assessment-form-group {
   margin: 0 auto;
-  padding: 5px 15px 10px;
+  padding: 5px 5px 10px;
   text-align: start;
   width: 90%;
-  border: 1px solid #adadad;
-  border-radius: 15px;
 }
-.assessment-questionlabel {
-  font-size: 15px;
-  min-height: 7.6vh;
+.assessment-question {
+  min-height: 9.5vh;
 }
 .assessment-radio-group {
   display: inline-block;
@@ -8214,43 +8224,43 @@ ul li:last-child .card-list-4 {
 .assessment-radio-group li input {
   display: none;
 }
+.assessment-radio-group li input:checked + .btn.btn-switch, .assessment-radio-group li input:checked + label {
+  background-color: #3C65F5;
+  font-weight: bold;
+  color: white;
+}
 .assessment-radio-group li label {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
-  margin-top: 1px;
-  border: 1px solid #adadad;
-  border-radius: 10px;
+  padding: 5px 20px;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 7.5px;
   transition: 0.1s ease-in-out;
   height: 35px;
 }
 .assessment-radio-group li label:hover {
-  background-color: #f2f4fa;
   transition: 0.1s ease-in-out;
   color: black;
 }
 
-.section-name {
-  border-bottom: 1px solid #adadad;
-  margin-bottom: 5px;
-}
-
 .circle {
-  height: 40px;
-  width: 40px;
-  background-color: #05264E;
+  height: 55px;
+  width: 55px;
+  background-color: #EFF2FB;
   border-radius: 100px;
   transition: 0.2s ease-in-out;
 }
 .circle:hover {
-  scale: 120%;
+  scale: 110%;
   transform: translate(0, -2px);
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1);
   transition: 0.2s ease-in-out;
 }
 .circle img {
-  scale: 85%;
+  scale: 155%;
 }
 
 .strengths-and-ideal-jobs {
@@ -8267,7 +8277,6 @@ ul li:last-child .card-list-4 {
 }
 .strengths-and-ideal-jobs div img {
   height: 25px;
-  filter: invert(1);
 }
 .strengths-and-ideal-jobs div label {
   font-size: 85%;

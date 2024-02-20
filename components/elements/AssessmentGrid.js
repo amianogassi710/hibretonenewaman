@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css'
 
 function Grid({ data, clickAction }) {
    const [active, setActive] = useState(1);
@@ -20,7 +22,7 @@ function Grid({ data, clickAction }) {
 
   return (
     <>
-    <div className="list-tabs mb-50 text-center">
+    <div className="list-tabs mb-50 d-flex justify-content-center">
         <ul className="nav nav-tabs" role="tablist">
             <li>
                 <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1,"All")}>All</a>
@@ -50,31 +52,35 @@ function Grid({ data, clickAction }) {
                <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6" key={key} data-key={key} onClick={data[key].available ? () => clickAction(data,key) : null}>
                   <div className="grid__item white-bg transition-3 mb-30" data-key={key}>
                      <div className="grid__thumb w-img fix grid_thumb_height grid_thumb" data-key={key}>
+                        <div className="grid__tag" data-key={key}>
+                           <a className="grid__category" data-key={key}>{data[key].category}</a>
+                        </div>
                         <img src={`assets/imgs/page/entrepreneurial-assessments/${key}.jpg`} alt="Assessment Image" data-key={key} />
                      </div>
                      <div className="grid__content" data-key={key}>
-                        <div className="grid__top d-flex">
-                           <div className="grid__tag col-6" data-key={key}>
-                              <a className="grid__category" data-key={key}>{data[key].category}</a>
-                           </div>
-                           <div className="grid__price col-6 text-end" data-key={key}>
-                              <span data-key={key}>{data[key].price ? data[key].price : "Free"}</span>
+                        <div className="grid__top d-flex align-items-center">
+                           <h3 className="grid__title fw-bold col-10" data-key={key}>
+                              <a data-key={key}>{key.replaceAll("-"," ")}</a>
+                           </h3>
+                           <div className="col-2 grid__progress_circle mr-10 d-flex justify-content-end">
+                              <CircularProgressbar
+                                 strokeWidth={15}
+                                 value={50}
+                                 text={`${50}%`}
+                                 styles={buildStyles({
+                                    textSize: '25px',
+                                    pathColor: '#3AAB67',
+                                    textColor: '#000000'
+                                 })}
+                              />
                            </div>
                         </div>
-                        <h3 className="grid__title fw-bold" data-key={key}>
-                           <a data-key={key}>{key.replaceAll("-"," ")}</a>
-                        </h3>
                         <p data-key={key}>{data[key].description}</p>
                      </div>
-                     <div className="grid__bottom d-flex">
-                        <div className="col-6 grid__tutor">
+                     <div className="grid__bottom">
+                        <div className="grid__tutor">
                            <a>
                               {data[key].provider}
-                           </a>
-                        </div>
-                        <div className="col-6 text-end">
-                           <a className="grid__complete">
-
                            </a>
                         </div>
                      </div>
@@ -83,7 +89,7 @@ function Grid({ data, clickAction }) {
             ))}
       </div>
 
-         </>
+   </>
   )
 }
 

@@ -8,6 +8,19 @@ import AssessmentGrid from '../../components/elements/AssessmentGrid';
 import YellowBanner from '../../components/elements/YellowBanner';
 import KickstartButton from '../../components/elements/KickstartButton';
 
+function useLockBodyScroll(open) {
+   useEffect(() => {
+     if (open) {
+       // Prevent scrolling on mount
+       document.body.style.overflow = 'hidden';
+     }
+     return () => {
+       // Re-enable scrolling when component unmounts
+       document.body.style.overflow = 'visible';
+     };
+   }, [open]); // Empty array ensures effect is only run on mount and unmount
+ }
+
 export default function Index() {
   const [open,setOpen] = useState(false)
   const [assessment,setAssessment] = useState({})
@@ -17,6 +30,8 @@ export default function Index() {
 
   const traits = data.Traits
   const business = data.Business
+
+  useLockBodyScroll(open);
 
 
   useEffect(() => {
@@ -131,27 +146,27 @@ export default function Index() {
             </div>
          </div>
       </section>
-      <section className='section-box mt-100'>
-         <YellowBanner />
-      </section>
       <section className="grid__area container pb-70 assessment-container">
          <div className="row">
             <div className="col-xxl-12">
-               <div className=" text-center mb-60">
+               <div className=" text-center mb-30">
                   <h2>Skills, Personality & Trait Quizzes</h2>
                   <p>Free, scientifically validated entrepreneurial, personality & neurodiversity tests</p>
                </div>
             </div>
+            <section className='section-box mb-50'>
+               <YellowBanner />
+            </section>
             <AssessmentGrid data={traits} clickAction={toggleOpen} />
             <div className="col-xxl-12">
-               <div className=" text-center mt-60 mb-60">
+               <div className=" text-center mt-40 mb-60">
                   <h2>Business Idea Validation</h2>
                   <p>Basic assessment of your idea and business opportunity</p>
                </div>
             </div>
             <AssessmentGrid data={business} clickAction={toggleOpen} />
          </div>
-         <QuizModal onClose={toggleOpen} title={`${assessmentTitle}`} assessment={assessment} uizard={uizard} show={open} isLoggedIn={true}/>
+         <QuizModal onClose={toggleOpen} title={`${assessmentTitle}`} assessment={assessment} uizard={uizard} time={assessment.time} show={open} isLoggedIn={true}/>
       </section>
       <section className="section-box">
                     <div className="post-loop-grid">

@@ -6,8 +6,7 @@ import Score from './Score';
 import Loading from '../../../components/elements/Loading';
 
 const QuizModal = props => {
-  const [startOpen,setStartOpen] = useState(true)
-  const [quizOpen,setQuizOpen] = useState(false)
+  const [quizOpen,setQuizOpen] = useState(true)
   const [scoreOpen,setScoreOpen] = useState(false)
   const [feedback,setFeedback] = useState({})
   const [loading, setLoading] = useState(false)
@@ -25,11 +24,6 @@ const QuizModal = props => {
     }
   },[closeOnEscape])
 
-  const handleStartQuiz = (e) => {
-    setStartOpen(prevStartOpen => !prevStartOpen);
-    setQuizOpen(prevQuizOpen => !prevQuizOpen);
-  }
-
   const handleSubmitQuiz = (e) => {
     setFeedback(e)
     setLoading(prevLoading => !prevLoading)
@@ -39,9 +33,8 @@ const QuizModal = props => {
   const handleCloseModal = (e) => {
 
     props.onClose()
-    setQuizOpen(false)
+    setQuizOpen(true)
     setScoreOpen(false)
-    setStartOpen(true)
   }
 
   const handleRetake = (e) => {
@@ -64,8 +57,7 @@ const QuizModal = props => {
 
 
   return (
-    <AssessmentModal isOpen={props.show} onClose={handleCloseModal} header={`${props.title}`} uizardHTML={props.uizard}>
-        <Start onClose={handleCloseModal} assessment={props.assessment} onStart={handleStartQuiz} show={startOpen} />
+    <AssessmentModal isOpen={props.show} onClose={handleCloseModal} header={`${props.title}`} uizardHTML={props.uizard} time={props.time}>
         <Quiz onClose={handleCloseModal} assessment={props.assessment} title={`${props.title}`} onSubmit={handleSubmitQuiz} show={quizOpen} isLoggedIn={props.isLoggedIn} onLoad={handleLoading} />
         <LoadingScreen isLoading={loading} />
         <Score onClose={handleCloseModal} assessment={props.title} onRetake={handleRetake} header={`${props.title}`} show={scoreOpen} feedback={feedback} />
