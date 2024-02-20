@@ -3,7 +3,6 @@ import {useSessionStorage} from 'react-use';
 import {
     FormControl,
     RadioGroup,
-    Radio,
     Grid,
     Typography,
     FormHelperText,
@@ -69,10 +68,10 @@ const Step1 = ({nextStep}) => {
                         value={step1FormData.businessType || ''}
                         onChange={handleChange}
                     >
-                        <StyledFormControlLabel value="existing" control={<Radio/>}
-                                          label="Existing business"/>
-                        <StyledFormControlLabel value="upcoming" control={<Radio/>}
-                                          label="Upcoming unlaunched business"/>
+                        <StyledFormControlLabel value="existing" groupValue={step1FormData.businessType}
+                                                 label="Existing business"/>
+                        <StyledFormControlLabel value="upcoming" groupValue={step1FormData.businessType}
+                                                 label="Upcoming unlaunched business"/>
                     </RadioGroup>
                     {error.businessType && <FormHelperText>Please select an option.</FormHelperText>}
                 </FormControl>
@@ -88,19 +87,20 @@ const Step1 = ({nextStep}) => {
                         value={step1FormData.planUsage || ''}
                         onChange={handleChange}
                     >
-                        <StyledFormControlLabel value="investors" control={<Radio/>}
-                                          label="To be used to request fund from investors"/>
-                        <StyledFormControlLabel value="banks" control={<Radio/>}
-                                          label="To be used to request fund from banks"/>
-                        <StyledFormControlLabel value="selfLearning" control={<Radio/>}
-                                          label="For self-learning"/>
-                        <StyledFormControlLabel value="schoolProject" control={<Radio/>}
-                                          label="To be used as reference for school/university project"/>
-                        <StyledFormControlLabel value="workplaceProject" control={<Radio/>}
-                                          label="To be used as reference for workplace projects"/>
-                        <StyledFormControlLabel value="nonFinancial" control={<Radio/>}
-                                          label="To be used to submit to a non-financial institution for approval"/>
-                        <StyledFormControlLabel value="other" control={<Radio/>} label="Other reasons"/>
+                        <StyledFormControlLabel value="investors" groupValue={step1FormData.planUsage}
+                                                 label="To be used to request fund from investors"/>
+                        <StyledFormControlLabel value="banks" groupValue={step1FormData.planUsage}
+                                                 label="To be used to request fund from banks"/>
+                        <StyledFormControlLabel value="selfLearning" groupValue={step1FormData.planUsage}
+                                                 label="For self-learning"/>
+                        <StyledFormControlLabel value="schoolProject" groupValue={step1FormData.planUsage}
+                                                 label="To be used as reference for school/university project"/>
+                        <StyledFormControlLabel value="workplaceProject" groupValue={step1FormData.planUsage}
+                                                 label="To be used as reference for workplace projects"/>
+                        <StyledFormControlLabel value="nonFinancial" groupValue={step1FormData.planUsage}
+                                                 label="To be used to submit to a non-financial institution for approval"/>
+                        <StyledFormControlLabel value="other" groupValue={step1FormData.planUsage}
+                                                 label="Other reasons"/>
                     </RadioGroup>
                     {error.planUsage && <FormHelperText>Please select an option.</FormHelperText>}
                 </FormControl>
@@ -109,12 +109,12 @@ const Step1 = ({nextStep}) => {
             <Grid container justifyContent="flex-start" spacing={2} sx={{mt: 2}}>
                 <Grid item>
                     <Button disabled>
-                        <KeyboardArrowLeft /> Back
+                        <KeyboardArrowLeft/> Back
                     </Button>
                 </Grid>
                 <Grid item>
                     <Button onClick={onFinish}>
-                        Next <KeyboardArrowRight />
+                        Next <KeyboardArrowRight/>
                     </Button>
                 </Grid>
             </Grid>

@@ -5,7 +5,6 @@ import BusinessPlanStepForm from "./BusinessPlanWizard/BusinessPlanStepForm";
 
 
 export default function Index() {
-
     return (
         <>
             <Layout>

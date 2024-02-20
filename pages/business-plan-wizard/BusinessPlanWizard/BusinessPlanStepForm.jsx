@@ -3,10 +3,12 @@ import {useSessionStorage} from 'react-use';
 import {Typography, Stepper, Step, StepLabel, Grid, IconButton, Box} from '@mui/material';
 import Step1 from "./Step1";
 import Step2 from "./Step2";
-import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Link from "next/link";
 import {ArrowBack} from "@mui/icons-material";
+import dynamic from "next/dynamic";
+
+const NoSSRStep3 = dynamic(() => import('./Step3'), { ssr: false })
 
 const BusinessPlanStepForm = () => {
     const [currentStepStr, setCurrentStepStr] = useSessionStorage('currentStep', '1');
@@ -54,7 +56,7 @@ const BusinessPlanStepForm = () => {
         <Grid item xs={12} md={12} lg={6} sx={{mt: 4, width: {xs: '90%', md: '50%', lg: '50%'}}}>
             {currentStep === 1 && <Step1 nextStep={nextStep}/>}
             {currentStep === 2 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 3 && <Step3 nextStep={nextStep} previousStep={previousStep}/>}
+            {currentStep === 3 && <NoSSRStep3 nextStep={nextStep} previousStep={previousStep}/>}
             {currentStep === 4 && <Step4 nextStep={nextStep} previousStep={previousStep}/>}
             {currentStep === 5 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
             {currentStep === 6 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
