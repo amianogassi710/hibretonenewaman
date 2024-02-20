@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import StrengthsAndIdealJobs from "./StrengthsAndIdealJobs.jsx";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { FaArrowRightLong } from "react-icons/fa6"
 
 
 const Quiz = props => {
@@ -145,10 +146,10 @@ const Quiz = props => {
     if (number === 0) {
       return (
         <div className="button-group d-flex">
-          <button type="button" className="btn btn-quiz disabled">
+          <button type="button" className="btn btn-quiz-2 disabled">
             <IoIosArrowUp />
           </button>
-          <button type="button" className="btn btn-quiz" onClick={handleGoNext}>
+          <button type="button" className="btn btn-quiz-2" onClick={handleGoNext}>
             <IoIosArrowDown />
           </button>
         </div>
@@ -157,10 +158,10 @@ const Quiz = props => {
       return (
         <>
         <div className="button-group d-flex">
-          <button type="button" className="btn btn-quiz" onClick={handleGoBack}>
+          <button type="button" className="btn btn-quiz-2" onClick={handleGoBack}>
             <IoIosArrowUp />
           </button>
-          <button type="button" className="btn btn-quiz" onClick={handleGoNext}>
+          <button type="button" className="btn btn-quiz-2" onClick={handleGoNext}>
             <IoIosArrowDown />
           </button>
         </div>
@@ -170,10 +171,10 @@ const Quiz = props => {
       return (
         <>
         <div className="button-group d-flex">
-          <button type="button" className="btn btn-quiz" onClick={handleGoBack}>
+          <button type="button" className="btn btn-quiz-2" onClick={handleGoBack}>
             <IoIosArrowUp />
           </button>
-          <button type="button" className="btn btn-quiz" onClick={handleSubmit}>
+          <button type="button" className="btn btn-quiz-2" onClick={handleSubmit}>
             <IoIosArrowDown />
           </button>
         </div>
@@ -184,11 +185,12 @@ const Quiz = props => {
 
   const Button = () => {
     return (
-      <div className="button-group d-flex align-items-end">
-        <button type="button" className="btn btn-quiz" onClick={handleGoNext}>
+      <div className="button-group d-flex align-items-center mt-10">
+        <button type="button" className="btn btn-quiz-1" onClick={handleGoNext}>
           Next
+          <FaArrowRightLong className="ml-5" />
         </button>
-        <span className="ml-5 answer-label">Or Press ENTER</span>
+        <span className="ml-10 fs-sm answer-label">or press Enter</span>
       </div>
     )
   }
@@ -198,22 +200,34 @@ const Quiz = props => {
     if (section) {
       return (
         <>
-          <div className="section">
-            <div className="section-name fw-bolder">
-              <h6>{section}</h6>
+        <div className="container p-0">
+          <div className="row">
+            <div className="col-9 text-start">
+              <div className="assessment-question fs-5 fw-bold d-flex align-items-center">
+                <label>{question}</label>
+              </div>
+            </div>
+            <div className="col-3 d-flex align-items-center mb-10">
+              <div className="section-name fw-bolder">
+                <h6>{section}</h6>
+              </div>
             </div>
           </div>
-          <div className="assessment-question">
-            <label>{question}</label>
-          </div>
+        </div>
         </>
       )
     } else {
       return (
         <>
-          <div className="assessment-question">
-            <label className="mt-5">{question}</label>
+        <div className="container p-0">
+          <div className="row">
+            <div className="col text-start">
+              <div className="assessment-question fs-5 fw-bold d-flex align-items-center">
+                <label>{question}</label>
+              </div>
+            </div>
           </div>
+        </div>
         </>
       )
     }
@@ -222,7 +236,6 @@ const Quiz = props => {
   return (
     <>
       <div className="assessment-modal-body text-center">
-        <h6 className="mb-10 col-12">Take this simple {props.assessment.time} assessment</h6>
           <form onSubmit={handleSubmit}>
             {/* Loops through all the provided props.assessment.assessment */}
             {props.assessment.assessment.map((question) => (
@@ -272,26 +285,25 @@ const Quiz = props => {
                 </li>
               </ul>
               <div className="button-group d-flex align-items-center">
-                <button type="button" className="btn btn-quiz" onClick={handleSubmit}>
+                <button type="button" className="btn btn-quiz-1" onClick={handleSubmit}>
                   Submit
                 </button>
               </div>
             </div>
           </form>
+        <div className="icons d-flex justify-content-center">
+          <StrengthsAndIdealJobs isActive={false} />
+        </div>
       </div>
-      <div className="icons d-flex justify-content-center">
-        <StrengthsAndIdealJobs isActive={false} />
-      </div>
-      <div className="assessment-modal-footer">
-        <div className="tracker">
-          {/* props.assessment.assessment.length + 1 to include gender question */}
+      <div className="assessment-modal-footer d-flex justify-content-space-between">
+        <div className="col-6">
+          <QuizButton number={formIndex} />
+        </div>
+        <div className="tracker col">
           <p>Question {formIndex+1} of {props.assessment.assessment.length+1}</p>
           <a className="progress-bar" style={{"backgroundColor": "white"}}>
             <a className="bar" style={{width: `${progress}%`}} />
           </a>
-        </div>
-        <div>
-          <QuizButton number={formIndex} />
         </div>
       </div>
     </>

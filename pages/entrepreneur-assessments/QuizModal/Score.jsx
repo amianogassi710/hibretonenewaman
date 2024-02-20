@@ -132,23 +132,24 @@ const Score = props => {
 
   return (
     <>
-
+      <div className="assessment-modal-body">
         <div className="content pt-10">
           <Feedback />
         </div>
-        <div className="icons d-flex justify-content-center">
+        <div className="icons mt-10 d-flex justify-content-center">
           <StrengthsAndIdealJobs isActive={true} />
         </div>
         <div className="footer pb-15">
           <div className="button-group d-flex justify-content-center">
-            <button id="retake-btn" type="button" className="btn btn-quiz mx-1" onClick={props.onRetake}>Retake Assessment</button>
-            <button type="button" id="subscribe-button" className="btn btn-quiz mx-1" onClick={handleEnquiries}>
+            <button id="retake-btn" type="button" className="btn btn-quiz-1 mx-1" onClick={props.onRetake}>Retake Assessment</button>
+            <button type="button" id="subscribe-button" className="btn btn-quiz-1 mx-1" onClick={handleEnquiries}>
               Need Specialist Help
             </button>
-            <button className="btn btn-quiz mx-1" onClick={props.onClose}>Close</button>
+            <button className="btn btn-quiz-1 mx-1" onClick={props.onClose}>Close</button>
           </div>
         </div>
         <EnquiryModal isOpen={enquiry} onClose={handleCloseEnquiry} />
+      </div>
     </>
   )
 }
