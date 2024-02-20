@@ -16,7 +16,7 @@ export default function Index2() {
             <Layout>
                 <div>
                     <section className="section-box">
-                        <div className=" banner-hero bg-img-calculator">
+                        <div className=" banner-hero bg-img-grant-finder">
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
@@ -116,7 +116,7 @@ export default function Index2() {
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                     <div className="text-center">
                                         <h1 className="color-brand-2">
-                                            <span className="count">£7.3</span>
+                                            <span className="count">£7.3M</span>
                                         </h1>
                                         <h5>Supported</h5>
                                     </div>
