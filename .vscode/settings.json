@@ -11,5 +11,6 @@
             "savePath": "/public/assets/css",
             "savePathReplacementPairs": null
         }
-    ]
+    ],
+    "prettier.tabWidth": 4
 }
