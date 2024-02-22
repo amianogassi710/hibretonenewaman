@@ -6,7 +6,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { FaArrowRightLong } from "react-icons/fa6"
 
 
-const Quiz = props => {
+const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
   const formGroupRef = useRef([])
   const [formIndex,setFormIndex] = useState(0)
   const checkBoxesRef = useRef([])
@@ -17,7 +17,7 @@ const Quiz = props => {
     if (e.keyCode === 13) {
         e.preventDefault()
       // Default function of enter submits form so only eliminate when not on the last question
-      if (formIndex < props.assessment.assessment.length) {
+      if (formIndex < assessment.assessment.length) {
         handleGoNext()
       } else if (!handleValidateForm(currentForm)) {
         Swal.fire({
@@ -45,7 +45,7 @@ const Quiz = props => {
     formGroupRef.current = document.querySelectorAll("form .assessment-form-group")
   },[formGroupRef.current])
 
-  if (!props.show) {
+  if (!show) {
     return null;
   }
 
@@ -57,7 +57,7 @@ const Quiz = props => {
 
       var nextFormIndex = formIndex + 1;
       setFormIndex(prevFormIndex => prevFormIndex + 1);
-      setProgress((nextFormIndex+1)/(props.assessment.assessment.length+1)*100)
+      setProgress((nextFormIndex+1)/(assessment.assessment.length+1)*100)
 
       var nextForm = formGroupRef.current[nextFormIndex];
       nextForm.style.display = "block";
@@ -77,7 +77,7 @@ const Quiz = props => {
 
     var previousFormIndex = formIndex - 1;
     setFormIndex(previousFormIndex);
-    setProgress((previousFormIndex+1)/(props.assessment.assessment.length+1)*100)
+    setProgress((previousFormIndex+1)/(assessment.assessment.length+1)*100)
 
     var previousForm = formGroupRef.current[previousFormIndex];
     previousForm.style.display = "block";
@@ -111,14 +111,14 @@ const Quiz = props => {
       return;
     }
     // Open Loading Screen
-    props.onLoad()
+    onLoad()
     // Creates feedback variable in the outer scope
     var feedback = {}
     try {
       // Extract relevant form data
       const checkedInputs = document.querySelectorAll('input:checked');
       const formData = {
-        "assessment": props.title,
+        "assessment": title,
         "answers": []
       };
       // Put data into correct format for the backend
@@ -138,7 +138,7 @@ const Quiz = props => {
     } catch (error) {
       console.error("Error submitting form: ",error)
     }
-    props.onSubmit(feedback)
+    onSubmit(feedback)
   }
 
   // Dynamically Loading Number
@@ -154,7 +154,7 @@ const Quiz = props => {
           </button>
         </div>
       )
-    } else if (number < props.assessment.assessment.length) {
+    } else if (number < assessment.assessment.length) {
       return (
         <>
         <div className="button-group d-flex">
@@ -237,12 +237,12 @@ const Quiz = props => {
     <>
       <div className="assessment-modal-body text-center">
           <form onSubmit={handleSubmit}>
-            {/* Loops through all the provided props.assessment.assessment */}
-            {props.assessment.assessment.map((question) => (
+            {/* Loops through all the provided assessment.assessment */}
+            {assessment.assessment.map((question) => (
               <div className="assessment-form-group" style={{display: question.question_number === 1 ? "block" : "none"}} key={question.question_number}>
                 <Question section={question.section} question={question.question_text} />
                   <ul className="assessment-radio-group">
-                    {props.assessment.answers.map((answer) => (
+                    {assessment.answers.map((answer) => (
                       <li
                         className={`${question.question_number}-${answer.value}`}
                         key={answer.value}
@@ -307,7 +307,7 @@ const Quiz = props => {
           <QuizButton number={formIndex} />
         </div>
         <div className="tracker col">
-          <p>Question {formIndex+1} of {props.assessment.assessment.length+1}</p>
+          <p>Question {formIndex+1} of {assessment.assessment.length+1}</p>
           <a className="progress-bar" style={{"backgroundColor": "white"}}>
             <a className="bar" style={{width: `${progress}%`}} />
           </a>

@@ -27,6 +27,7 @@ export default function Index() {
   const [data,setData] = useState({})
   const [uizard, setUizard] = useState("")
   const [assessmentTitle, setAssessmentTitle] = useState("")
+  const [progress,setProgress] = useState({})
 
   const traits = data.Traits
   const business = data.Business
@@ -164,9 +165,9 @@ export default function Index() {
                   <p>Basic assessment of your idea and business opportunity</p>
                </div>
             </div>
-            <AssessmentGrid data={business} clickAction={toggleOpen} />
+            <AssessmentGrid data={business} clickAction={toggleOpen} progress={progress}/>
          </div>
-         <QuizModal onClose={toggleOpen} title={`${assessmentTitle}`} assessment={assessment} uizard={uizard} time={assessment.time} show={open} isLoggedIn={true}/>
+         <QuizModal onClose={toggleOpen} title={`${assessmentTitle}`} assessment={assessment} uizard={uizard} time={assessment.time} show={open} isLoggedIn={true} />
       </section>
       <section className="section-box">
                     <div className="post-loop-grid">

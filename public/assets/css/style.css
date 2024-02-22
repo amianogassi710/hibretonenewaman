@@ -8492,6 +8492,16 @@ ul li:last-child .card-list-4 {
   }
 }
 
+.section-name {
+  background-color: #3C65F5;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.section-name h6 {
+  color: white;
+  line-height: 3vh;
+}
+
 .bg-img-calculator {
   display: flex;
   height: 30vh;
