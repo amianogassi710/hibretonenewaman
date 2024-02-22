@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import AssessmentModal from '../../../components/elements/AssessmentModal';
 import Quiz from './Quiz';
-import Start from './Start';
 import Score from './Score';
 import Loading from '../../../components/elements/Loading';
 
