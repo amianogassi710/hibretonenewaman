@@ -3,7 +3,7 @@
   z-index: 2;
   position: fixed;
   left: 0;
-  top: 60px;
+  top: 70px;
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.6);
@@ -30,23 +30,49 @@
 .assessment-modal-header {
   color: white;
   width: 100%;
-  height: 9.5vh;
-  h4 {
-    margin-top: -5px;
+  @include media-breakpoint-up(sm) {
+    height: 10vh;
+    h5 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    height: 11vh;
+    h5 {
+      margin-bottom: 5px;
+      font-size: 12.5px;
+    }
+    p {
+      font-size: 12.5px;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    height: 12.5vh;
+    h5 {
+      margin-bottom: 5px;
+      font-size: 12.5px;
+    }
+    p {
+      font-size: 12.5px;
+    }
+  }
+  h5 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     left: 0;
     z-index: 1;
   }
-  i {
-    margin-left: 5px;
-    z-index: 1;
-  }
   p {
+    line-height: 2vh;
     color: white;
   }
 }
 
+.assessment-modal-close {
+  float: right;
+}
 
 .assessment-modal-footer {
   display: flex;
@@ -62,7 +88,7 @@
   margin: 0px auto;
   background-color: white;
   width: 100%;
-  padding: 10px;
+  padding: 1px;
   h6 {
     font-weight: bold;
     margin: 0;

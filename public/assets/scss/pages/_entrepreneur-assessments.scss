@@ -27,13 +27,24 @@
 .assessment {
   &-form-group {
     margin: 0 auto;
-    padding: 5px 5px 10px;
+    padding: 2px 2px 7.5px;
     text-align: start;
     width: 90%;
   }
   &-question {
-    min-height: 9.5vh;
-
+    height: 75px;
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    @include media-breakpoint-up(sm) {
+      font-size: 17.5px;
+      line-height: 25px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 13px;
+      line-height: 17.5px;
+    }
   }
   &-radio-group {
     display: inline-block;
@@ -61,6 +72,12 @@
         border-radius: 7.5px;
         transition: 0.1s ease-in-out;
         height: 35px;
+        @include media-breakpoint-up(md) {
+          font-size: 15px;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 13px;
+        }
         &:hover {
           transition: 0.1s ease-in-out;
           color: black;
@@ -83,8 +100,19 @@
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.1), 0 5px 15px 0 rgba(0,0,0,0.1);
     transition: 0.2s ease-in-out
   }
-  img {
-    scale: 155%;
+  @include media-breakpoint-up(sm) {
+    height: 55px;
+    width: 55px;
+    img {
+      scale: 155%;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    height: 45px;
+    width: 45px;
+    img {
+      scale: 130%;
+    }
   }
 }
 
@@ -123,7 +151,7 @@
       background-color: #fff;
       border-radius: 15px;
       overflow: hidden;
-      height: 450px;
+      height: 55vh;
     }
     &-header {
       color: white;
@@ -333,9 +361,21 @@
 .section-name {
   background-color: #3C65F5;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 2px 5px;
   h6 {
     color: white;
     line-height: 3vh;
+    @include media-breakpoint-up(md) {
+      font-size: 17.5px;
+      line-height: 20px;
+    }
+    @include media-breakpoint-up(sm) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 10px;
+      line-height: 15px;
+    }
   }
 }
