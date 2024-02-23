@@ -49,7 +49,7 @@ function Grid({ data, clickAction }) {
     </div>
       <div className="row">
         {Object.keys(filteredData).map((key) => (
-               <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6" key={key} data-key={key} onClick={data[key].available ? () => clickAction(data,key) : null}>
+               <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6" key={key} data-key={key} onClick={data[key].available ? () => clickAction(data[key],key) : null}>
                   <div className="grid__item white-bg transition-3 mb-30" data-key={key}>
                      <div className="grid__thumb w-img fix grid_thumb_height grid_thumb" data-key={key}>
                         <div className="grid__tag" data-key={key}>

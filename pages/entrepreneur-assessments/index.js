@@ -38,7 +38,7 @@ export default function Index() {
   useEffect(() => {
     const getQuiz = async () => {
       try {
-        const response = await axios.get(`/assessments/get_assessments`)
+        const response = await axios.get(`/assessments/assessments`)
         setData(response.data)
       } catch (error) {
         console.log("Couldn't retrieve quiz: ", error);
@@ -91,8 +91,8 @@ export default function Index() {
     if (open === false) {
       // Sets the assessment to load into the modal
       setAssessmentTitle(assessment)
-      setAssessment(assessmentData[assessment])
-      setUizard(assessmentData[assessment].uizard)
+      setAssessment(assessmentData)
+      setUizard(assessmentData.uizard)
     }
     setOpen(!open);
   }

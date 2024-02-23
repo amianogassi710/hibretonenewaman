@@ -17,7 +17,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
     if (e.keyCode === 13) {
         e.preventDefault()
       // Default function of enter submits form so only eliminate when not on the last question
-      if (formIndex < assessment.assessment.length) {
+      if (formIndex < assessment.questions.length) {
         handleGoNext()
       } else if (!handleValidateForm(currentForm)) {
         Swal.fire({
@@ -57,7 +57,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
 
       var nextFormIndex = formIndex + 1;
       setFormIndex(prevFormIndex => prevFormIndex + 1);
-      setProgress((nextFormIndex+1)/(assessment.assessment.length+1)*100)
+      setProgress((nextFormIndex+1)/(assessment.questions.length+1)*100)
 
       var nextForm = formGroupRef.current[nextFormIndex];
       nextForm.style.display = "block";
@@ -77,7 +77,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
 
     var previousFormIndex = formIndex - 1;
     setFormIndex(previousFormIndex);
-    setProgress((previousFormIndex+1)/(assessment.assessment.length+1)*100)
+    setProgress((previousFormIndex+1)/(assessment.questions.length+1)*100)
 
     var previousForm = formGroupRef.current[previousFormIndex];
     previousForm.style.display = "block";
@@ -154,7 +154,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
           </button>
         </div>
       )
-    } else if (number < assessment.assessment.length) {
+    } else if (number < assessment.questions.length) {
       return (
         <>
         <div className="button-group d-flex">
@@ -201,9 +201,9 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
       return (
         <>
         <div className="container p-0">
-          <div className="row">
+          <div className="row d-flex mr-30">
             <div className="col-9 text-start">
-              <div className="assessment-question fs-5 fw-bold d-flex align-items-center">
+              <div className="assessment-question fw-bold d-flex align-items-center">
                 <label>{question}</label>
               </div>
             </div>
@@ -222,7 +222,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
         <div className="container p-0">
           <div className="row">
             <div className="col text-start">
-              <div className="assessment-question fs-5 fw-bold d-flex align-items-center">
+              <div className="assessment-question fw-bold d-flex align-items-center">
                 <label>{question}</label>
               </div>
             </div>
@@ -237,8 +237,8 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
     <>
       <div className="assessment-modal-body text-center">
           <form onSubmit={handleSubmit}>
-            {/* Loops through all the provided assessment.assessment */}
-            {assessment.assessment.map((question) => (
+            {/* Loops through all the provided assessment.questions */}
+            {assessment.questions.map((question) => (
               <div className="assessment-form-group" style={{display: question.question_number === 1 ? "block" : "none"}} key={question.question_number}>
                 <Question section={question.section} question={question.question_text} />
                   <ul className="assessment-radio-group">
@@ -270,7 +270,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
             <div className="container p-0">
               <div className="row">
                 <div className="col-9 text-start">
-                  <div className="assessment-question fs-5 fw-bold d-flex align-items-center">
+                  <div className="assessment-question fw-bold d-flex align-items-center">
                     <label>Select Your Gender:</label>
                   </div>
                 </div>
@@ -283,18 +283,30 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
             </div>
               <ul className="assessment-radio-group">
                 <li className="gender-male">
-                  <input type="radio" name="gender" id="gender-male" value="male" />
+                  <input
+                    type="radio"
+                    style={{"fontHeight": "3vh", "lineHeight": "4vh"}}
+                    name="gender"
+                    id="gender-male"
+                    value="male" />
                   <label htmlFor="gender-male">Male</label>
                 </li>
                 <li className="gender-female">
-                  <input type="radio" name="gender" id="gender-female" value="female" />
+                  <input
+                    type="radio"
+                    style={{"fontHeight": "3vh", "lineHeight": "4vh"}}
+                    name="gender"
+                    id="gender-female"
+                    value="female" />
                   <label htmlFor="gender-female">Female</label>
                 </li>
               </ul>
-              <div className="button-group d-flex align-items-center">
+              <div className="button-group d-flex align-items-center mt-10">
                 <button type="button" className="btn btn-quiz-1" onClick={handleSubmit}>
                   Submit
+                  <FaArrowRightLong className="ml-5" />
                 </button>
+                <span className="ml-10 fs-sm answer-label">or press Enter</span>
               </div>
             </div>
           </form>
@@ -307,7 +319,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
           <QuizButton number={formIndex} />
         </div>
         <div className="tracker col">
-          <p>Question {formIndex+1} of {assessment.assessment.length+1}</p>
+          <p>Question {formIndex+1} of {assessment.questions.length+1}</p>
           <a className="progress-bar" style={{"backgroundColor": "white"}}>
             <a className="bar" style={{width: `${progress}%`}} />
           </a>
