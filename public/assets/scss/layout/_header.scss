@@ -72,7 +72,7 @@
                 font-family: $font-heading;
                 font-style: normal;
                 font-weight: 500;
-                font-size: $font-sm;
+                font-size: $font-md;
                 line-height: 18px;
                 color: $color-brand;
                 display: block;
@@ -106,7 +106,7 @@
                 top: 100%;
                 left: 0px;
                 z-index: 999;
-                min-width: 260px;
+                min-width: 300px;
                 border-radius: 10px;
                 border: 1px solid #ececec;
                 -webkit-box-shadow: $box-shadow-2;
@@ -120,7 +120,7 @@
                     a {
                         padding-top: 8px;
                         padding-bottom: 8px;
-                        font-size: 14px;
+                        font-size: $font-md;
                         color: $color-black-1;
                         position: relative;
                         padding: 14px 22px 10px 35px;
@@ -170,7 +170,7 @@
         font-family: $font-heading;
         font-style: normal;
         font-weight: 500;
-        font-size: $font-sm;
+        font-size: $font-md;
         line-height: 150%;
         color: $color-brand;
         display: inline-block;

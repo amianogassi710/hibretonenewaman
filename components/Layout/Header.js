@@ -1,12 +1,12 @@
 ﻿/* eslint-disable @next/next/no-html-link-for-pages */
-import Link from 'next/link';
-import React from 'react';
-import {useState, useEffect} from "react";
-import {useLocalStorage} from "react-use";
-import {useRouter} from "next/router";
+import Link from "next/link";
+import React from "react";
+import { useState, useEffect } from "react";
+import { useLocalStorage } from "react-use";
+import { useRouter } from "next/router";
 
-const Header = ({handleOpen, handleRemove, openClass}) => {
-    const [scroll, setScroll] = useState(0)
+const Header = ({ handleOpen, handleRemove, openClass }) => {
+    const [scroll, setScroll] = useState(0);
     const [clientSide, setClientSide] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useLocalStorage("is_logged_in", false);
     const [userAccount, setUserAccount] = useLocalStorage("user_account", {});
@@ -22,159 +22,278 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
         document.addEventListener("scroll", handleScroll);
 
         if (isLoggedIn) {
-            fetch('/auth/login/jwt', {
-                method: 'POST',
-            }).then(response => {
+            fetch("/auth/login/jwt", {
+                method: "POST",
+            }).then((response) => {
                 if (response.status !== 200) {
                     setIsLoggedIn(false);
                 }
             });
         }
         setClientSide(true);
-
     }, [scroll]);
 
     const handleLogout = async (e) => {
-        await fetch('/auth/logout', {
-            method: 'POST'
+        await fetch("/auth/logout", {
+            method: "POST",
         });
         setIsLoggedIn(false);
         setUserAccount({});
-        router.push('/');
+        router.push("/");
     };
-
 
     if (!clientSide) return null;
 
-    return (<>
-
-            <header className={scroll ? "header sticky-bar stick" : "header sticky-bar"}>
+    return (
+        <>
+            <header
+                className={
+                    scroll ? "header sticky-bar stick" : "header sticky-bar"
+                }
+            >
                 <div className="container">
                     <div className="main-header">
                         <div className="header-left">
                             <div className="header-logo">
-                                <Link legacyBehavior href="/"><a className="d-flex"><img alt="jobBox"
-                                                                                         src="/assets/imgs/template/hibretOne-logo.png"/></a></Link>
+                                <Link legacyBehavior href="/">
+                                    <a className="d-flex">
+                                        <img
+                                            alt="jobBox"
+                                            src="/assets/imgs/template/hibretOne-logo.png"
+                                        />
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="header-nav">
                             <nav className="nav-main-menu">
                                 <ul className="main-menu">
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/"><a>Business Builder</a></Link>
+                                        <Link legacyBehavior href="/">
+                                            <a>Business Builder</a>
+                                        </Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/entrepreneur-assessments"><a>Entrepreneur
-                                                    Assessments</a></Link>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/entrepreneur-assessments"
+                                                >
+                                                    <a>
+                                                        Entrepreneur Assessments
+                                                    </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Entrepreneur Academy</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>Entrepreneur Academy</a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Scholarship & Bursaries</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>
+                                                        Scholarship & Bursaries
+                                                    </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/funding-builder"><a>Funding Builder</a></Link>
+                                        <Link
+                                            legacyBehavior
+                                            href="/funding-builder"
+                                        >
+                                            <a>Funding Builder</a>
+                                        </Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/r&d-tax-credits-calculator"><a>R&D Tax
-                                                    Credits Calculator</a></Link>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/r&d-tax-credits-calculator"
+                                                >
+                                                    <a>
+                                                        R&D Tax Credits
+                                                        Calculator
+                                                    </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Investability Rating</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>Investability Rating</a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/grant-finder"><a>Grant Finder</a></Link>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/grant-finder"
+                                                >
+                                                    <a>Grant Finder</a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Grant Writer</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>Grant Writer</a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/"><a>Resource Builder</a></Link>
+                                        <Link legacyBehavior href="/">
+                                            <a>Resource Builder</a>
+                                        </Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Ecosystem Connector</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>Ecosystem Connector</a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/business-plan-writer"><a>Business Plan Writer</a></Link>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/business-plan-writer"
+                                                >
+                                                    <a>Business Plan Writer</a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Business Problem Pivots</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>
+                                                        Business Problem Pivots
+                                                    </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Industry Intelligence</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>Industry Intelligence</a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/blog-grid"><a>Career Builder</a></Link>
+                                        <Link legacyBehavior href="/blog-grid">
+                                            <a>Career Builder</a>
+                                        </Link>
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/online-courses"><a>Online Courses</a></Link>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/online-courses"
+                                                >
+                                                    <a>Online Courses</a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Career Guidance</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>Career Guidance</a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/job-connect"><a>Job Connect</a></Link>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/job-connect"
+                                                >
+                                                    <a>Job Connect</a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
 
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/"><a>About Us</a></Link>
+                                        <Link legacyBehavior href="/">
+                                            <a>About Us</a>
+                                        </Link>
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/page-pricing"><a>Pricing</a></Link>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/page-pricing"
+                                                >
+                                                    <a>Pricing</a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/"><a>Contact Us</a></Link>
+                                                <Link legacyBehavior href="/">
+                                                    <a>Contact Us</a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                 </ul>
                             </nav>
-                            <div className={`burger-icon burger-icon-white ${openClass && "burger-close"}`}
-                                 onClick={() => {
-                                     handleOpen();
-                                     handleRemove()
-                                 }}>
-                                <span className="burger-icon-top"/><span className="burger-icon-mid"/><span
-                                className="burger-icon-bottom"/></div>
+                            <div
+                                className={`burger-icon burger-icon-white ${
+                                    openClass && "burger-close"
+                                }`}
+                                onClick={() => {
+                                    handleOpen();
+                                    handleRemove();
+                                }}
+                            >
+                                <span className="burger-icon-top" />
+                                <span className="burger-icon-mid" />
+                                <span className="burger-icon-bottom" />
+                            </div>
                         </div>
                         <div className="header-right">
-                            {clientSide && isLoggedIn ? (<>
+                            {clientSide && isLoggedIn ? (
+                                <>
                                     <nav className="nav-main-menu">
                                         <ul className="main-menu">
                                             <li className="has-children">
-                                                <a href="#">Hi, {userAccount.first_name || 'Guest'}</a>
+                                                <a href="#">
+                                                    Hi,{" "}
+                                                    {userAccount.first_name ||
+                                                        "Guest"}
+                                                </a>
                                                 <ul className="sub-menu">
-                                                    <li><Link legacyBehavior
-                                                              href="/candidate-profile"><a>Profile</a></Link></li>
-                                                    <li><Link legacyBehavior href="#"><a>Settings</a></Link></li>
-                                                    <li><a href="#" onClick={handleLogout}>Logout</a></li>
+                                                    <li>
+                                                        <Link
+                                                            legacyBehavior
+                                                            href="/candidate-profile"
+                                                        >
+                                                            <a>Profile</a>
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            legacyBehavior
+                                                            href="#"
+                                                        >
+                                                            <a>Settings</a>
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            onClick={
+                                                                handleLogout
+                                                            }
+                                                        >
+                                                            Logout
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </nav>
                                 </>
-
-                            ) : (<div className="block-signin">
+                            ) : (
+                                <div className="block-signin">
                                     <Link legacyBehavior href="/page-register">
-                                        <a className="text-link-bd-btom hover-up">Register</a>
+                                        <a className="text-link-bd-btom hover-up">
+                                            Register
+                                        </a>
                                     </Link>
                                     <Link legacyBehavior href="/page-signin">
-                                        <a className="btn btn-default btn-shadow ml-40 hover-up">Sign in</a>
+                                        <a className="btn btn-default btn-shadow ml-40 hover-up">
+                                            Sign in
+                                        </a>
                                     </Link>
-                                </div>)}
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -186,7 +305,8 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                         <div className="perfect-scroll">
                             <div className="mobile-search mobile-header-border mb-30">
                                 <form action="#">
-                                    <input type="text" placeholder="Search…"/><i className="fi-rr-search"/>
+                                    <input type="text" placeholder="Search…" />
+                                    <i className="fi-rr-search" />
                                 </form>
                             </div>
                             <div className="mobile-menu-wrap mobile-header-border">
@@ -194,119 +314,267 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                 <nav>
                                     <ul className="mobile-menu font-heading">
                                         <li className="has-children">
-                                            <Link legacyBehavior href="/"><a className="active">Home</a></Link>
+                                            <Link legacyBehavior href="/">
+                                                <a className="active">Home</a>
+                                            </Link>
 
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <Link legacyBehavior href="/"><a>Home 1</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/"
+                                                    >
+                                                        <a>Home 1</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/index-2"><a>Home 2</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/index-2"
+                                                    >
+                                                        <a>Home 2</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/index-3"><a>Home 3</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/index-3"
+                                                    >
+                                                        <a>Home 3</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/index-4"><a>Home 4</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/index-4"
+                                                    >
+                                                        <a>Home 4</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/index-5"><a>Home 5</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/index-5"
+                                                    >
+                                                        <a>Home 5</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/index-6"><a>Home 6</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/index-6"
+                                                    >
+                                                        <a>Home 6</a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="has-children">
-                                            <Link legacyBehavior href="/jobs-grid"><a>Find a Job</a></Link>
+                                            <Link
+                                                legacyBehavior
+                                                href="/jobs-grid"
+                                            >
+                                                <a>Find a Job</a>
+                                            </Link>
 
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <Link legacyBehavior href="/jobs-grid"><a>Jobs Grid</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/jobs-grid"
+                                                    >
+                                                        <a>Jobs Grid</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/jobs-list"><a>Jobs List</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/jobs-list"
+                                                    >
+                                                        <a>Jobs List</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/job-details"><a>Jobs Details</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/job-details"
+                                                    >
+                                                        <a>Jobs Details</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/job-details-2"><a>Jobs Details
-                                                        2 </a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/job-details-2"
+                                                    >
+                                                        <a>Jobs Details 2 </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="has-children">
-                                            <Link legacyBehavior href="/companies-grid"><a>Recruiters</a></Link>
+                                            <Link
+                                                legacyBehavior
+                                                href="/companies-grid"
+                                            >
+                                                <a>Recruiters</a>
+                                            </Link>
 
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <Link legacyBehavior href="/companies-grid"><a>Recruiters</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/companies-grid"
+                                                    >
+                                                        <a>Recruiters</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/company-details"><a>Company Details</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/company-details"
+                                                    >
+                                                        <a>Company Details</a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="has-children">
-                                            <Link legacyBehavior href="/candidates-grid"><a>Candidates</a></Link>
+                                            <Link
+                                                legacyBehavior
+                                                href="/candidates-grid"
+                                            >
+                                                <a>Candidates</a>
+                                            </Link>
 
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <Link legacyBehavior href="/candidates-grid"><a>Candidates Grid</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/candidates-grid"
+                                                    >
+                                                        <a>Candidates Grid</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/candidate-details"><a>Candidate
-                                                        Details</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/candidate-details"
+                                                    >
+                                                        <a>Candidate Details</a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="has-children">
-                                            <Link legacyBehavior href="/blog-grid"><a>Pages</a></Link>
+                                            <Link
+                                                legacyBehavior
+                                                href="/blog-grid"
+                                            >
+                                                <a>Pages</a>
+                                            </Link>
 
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <Link legacyBehavior href="/page-about"><a>About Us</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/page-about"
+                                                    >
+                                                        <a>About Us</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-pricing"><a>Pricing Plan</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/page-pricing"
+                                                    >
+                                                        <a>Pricing Plan</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-contact"><a>Contact Us</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/page-contact"
+                                                    >
+                                                        <a>Contact Us</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-register"><a>Register</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/page-register"
+                                                    >
+                                                        <a>Register</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-signin"><a>Signin</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/page-signin"
+                                                    >
+                                                        <a>Signin</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-reset-password"><a>Reset
-                                                        Password</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/page-reset-password"
+                                                    >
+                                                        <a>Reset Password</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/page-content-protected"><a>Content
-                                                        Protected</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/page-content-protected"
+                                                    >
+                                                        <a>Content Protected</a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="has-children">
-                                            <Link legacyBehavior href="/blog-grid"><a>Blog</a></Link>
+                                            <Link
+                                                legacyBehavior
+                                                href="/blog-grid"
+                                            >
+                                                <a>Blog</a>
+                                            </Link>
 
                                             <ul className="sub-menu">
                                                 <li>
-                                                    <Link legacyBehavior href="/blog-grid"><a>Blog Grid</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/blog-grid"
+                                                    >
+                                                        <a>Blog Grid</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/blog-grid-2"><a>Blog Grid 2</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/blog-grid-2"
+                                                    >
+                                                        <a>Blog Grid 2</a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/blog-details"><a>Blog Single</a></Link>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="/blog-details"
+                                                    >
+                                                        <a>Blog Single</a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <Link legacyBehavior href="/page-contact"><a>Contact</a></Link>
+                                            <Link
+                                                legacyBehavior
+                                                href="/page-contact"
+                                            >
+                                                <a>Contact</a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </nav>
@@ -315,28 +583,45 @@ const Header = ({handleOpen, handleRemove, openClass}) => {
                                 <h6 className="mb-10">Your Account</h6>
                                 <ul className="mobile-menu font-heading">
                                     <li>
-                                        <Link legacyBehavior href="#"><a>Profile</a></Link>
+                                        <Link legacyBehavior href="#">
+                                            <a>Profile</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link legacyBehavior href="#"><a>Work Preferences</a></Link>
+                                        <Link legacyBehavior href="#">
+                                            <a>Work Preferences</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link legacyBehavior href="#"><a>Account Settings</a></Link>
+                                        <Link legacyBehavior href="#">
+                                            <a>Account Settings</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link legacyBehavior href="#"><a>Go Pro</a></Link>
+                                        <Link legacyBehavior href="#">
+                                            <a>Go Pro</a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link legacyBehavior href="/page-signin"><a>Sign Out</a></Link>
+                                        <Link
+                                            legacyBehavior
+                                            href="/page-signin"
+                                        >
+                                            <a>Sign Out</a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="site-copyright">Copyright 2022 © JobBox. <br/>Designed by AliThemes.</div>
+                            <div className="site-copyright">
+                                Copyright 2022 © JobBox. <br />
+                                Designed by AliThemes.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </>);
+        </>
+    );
 };
 
 export default Header;
