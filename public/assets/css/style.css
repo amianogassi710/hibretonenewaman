@@ -186,7 +186,7 @@ select,
 button,
 textarea {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 *:focus,
@@ -462,7 +462,7 @@ a {
   color: #4F5E64;
   line-height: 26px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .select2-search.select2-search--dropdown {
@@ -547,7 +547,7 @@ h1 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 56px;
+  font-size: 58px;
   line-height: 71px;
   color: #05264E;
 }
@@ -605,29 +605,29 @@ h6 {
 
 .font-lg {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 26px;
 }
 
 .font-md {
-  font-size: 16px !important;
+  font-size: 18px !important;
   line-height: 24px !important;
 }
 
 .font-sm {
   font-weight: 500;
-  font-size: 14px !important;
+  font-size: 16px !important;
   line-height: 22px !important;
 }
 
 .font-xs {
   font-weight: 500 !important;
-  font-size: 12px !important;
+  font-size: 14px !important;
   line-height: 18px !important;
 }
 
 .font-xxs {
-  font-size: 10px !important;
+  font-size: 12px !important;
   line-height: 16px;
 }
 
@@ -660,7 +660,7 @@ h6 {
 }
 
 .text-14 {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 14px;
   font-weight: 500;
   display: inline-block;
@@ -768,7 +768,7 @@ h6 {
   top: -25px;
   right: -14px;
   color: #66789C;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
 }
 .box-progress-bar .progress .bg-paragraph-2::before {
@@ -792,7 +792,7 @@ h6 {
   top: -25px;
   right: -14px;
   color: #66789C;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
 }
 .box-progress-bar .progress .bg-brand-2::before {
@@ -1011,7 +1011,7 @@ h6,
   font-family: "Plus Jakarta Sans", sans-serif;
   border-radius: 8px;
   padding: 13px 25px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1;
   transition: 0.2s;
 }
@@ -1089,13 +1089,13 @@ h6,
   background: #E0E6F7;
   border-radius: 8px;
   color: #3C65F5;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 14px;
 }
 
 .btn-grey-small {
   background-color: #EFF3FC;
-  font-size: 12px;
+  font-size: 14px;
   padding: 7px 10px;
   border-radius: 5px;
   color: #4F5E64 !important;
@@ -1110,7 +1110,7 @@ h6,
   background: #E0E6F7;
   border-radius: 4px;
   color: #05264E;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   font-weight: 600;
 }
@@ -1124,7 +1124,7 @@ h6,
   padding: 12px 10px;
   min-width: 95px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 14px;
   text-transform: capitalize;
 }
 
@@ -1208,7 +1208,7 @@ h6,
   border-radius: 5px;
   color: #3C65F5;
   min-width: 42px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   background-color: rgba(81, 146, 255, 0.12);
 }
@@ -1218,7 +1218,7 @@ h6,
   background: #EFF2FB;
   border-radius: 8px;
   color: #05264E;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   margin-bottom: 10px;
 }
@@ -1229,7 +1229,7 @@ h6,
   background-color: #ffffff;
   border-radius: 8px;
   color: #3C65F5;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
 }
 
@@ -1289,7 +1289,7 @@ h6,
   border-radius: 10px;
   background: #ffffff;
   color: #4F5E64;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   transition-duration: 0.2s;
   font-weight: bold;
@@ -1346,7 +1346,7 @@ h6,
   font-family: "Plus Jakarta Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 18px;
   color: #05264E;
   text-decoration: underline;
@@ -1359,7 +1359,7 @@ h6,
   background: url(../imgs/page/homepage2/arrow-right.svg) no-repeat right 15px top 3px;
   color: #3C65F5;
   padding: 0px 40px 0px 0px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 12px;
   font-weight: bold;
 }
@@ -1537,7 +1537,7 @@ input[type=tel] {
   height: 50px;
   box-shadow: none;
   padding-left: 20px;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
 }
 input[type=text]:focus,
@@ -1554,7 +1554,7 @@ select {
   border: 0px solid #B4C0E0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  font-size: 16px;
+  font-size: 18px;
   color: #4F5E64;
 }
 
@@ -1562,7 +1562,7 @@ option {
   background: #fff;
   border: 0px solid #626262;
   padding-left: 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 textarea {
@@ -1571,7 +1571,7 @@ textarea {
   height: 50px;
   box-shadow: none;
   padding: 10px 10px 10px 20px;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
   min-height: 250px;
 }
@@ -1582,7 +1582,7 @@ textarea:focus {
 
 /*contact form*/
 .contact-from-area .contact-form-style button {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   padding: 20px 40px;
   color: #ffffff;
@@ -1605,7 +1605,7 @@ textarea:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
   padding-left: 20px;
-  font-size: 16px;
+  font-size: 18px;
   width: 100%;
 }
 .form-group input:focus {
@@ -1674,7 +1674,7 @@ label {
   padding-right: 10px;
 }
 .box-swiper .swiper-container .item-logo .text-info-right h4 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   margin-bottom: 3px;
 }
@@ -1967,7 +1967,7 @@ label {
 .noUi-tooltip {
   position: absolute;
   top: -30px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   color: #3C65F5;
   font-weight: 500;
@@ -2014,7 +2014,7 @@ label {
 }
 
 .card-time {
-  font-size: 12px;
+  font-size: 14px;
   color: #A0ABB8;
   display: inline-block;
   padding: 0px 15px 0px 15px;
@@ -2022,7 +2022,7 @@ label {
 }
 
 .card-briefcase {
-  font-size: 12px;
+  font-size: 14px;
   color: #A0ABB8;
   display: inline-block;
   padding: 0px 15px 0px 15px;
@@ -2030,7 +2030,7 @@ label {
 }
 
 .card-location {
-  font-size: 12px;
+  font-size: 14px;
   color: #A0ABB8;
   display: inline-block;
   padding: 0px 0px 0px 20px;
@@ -2047,7 +2047,7 @@ label {
   background: #F8FAFF;
 }
 .card-grid-2 i {
-  font-size: 20px;
+  font-size: 22px;
   color: #A0ABB8;
   margin-left: 5px;
 }
@@ -2116,7 +2116,7 @@ label {
   border-radius: 5px;
   color: #ffffff;
   min-width: 42px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
 }
 .card-grid-2.grid-bd-16 .card-block-info .card-text-price {
@@ -2150,7 +2150,7 @@ label {
   vertical-align: middle;
   position: relative;
   padding: 4px 0px 4px 40px;
-  font-size: 14px;
+  font-size: 16px;
   max-width: 90%;
   min-height: 44px;
 }
@@ -2171,7 +2171,7 @@ label {
 .card-grid-2 .card-block-info .card-2-img-text span {
   display: inline-block;
   color: #05264E;
-  font-size: 14px;
+  font-size: 16px;
 }
 .card-grid-2 .card-block-info .card-2-img-text img {
   max-width: 100%;
@@ -2183,7 +2183,7 @@ label {
   font-size: 22px;
 }
 .card-grid-2 .card-block-info .card-text-price span {
-  font-size: 14px;
+  font-size: 16px;
   color: #4F5E64;
   font-weight: 400;
 }
@@ -2206,7 +2206,7 @@ label {
 }
 .card-grid-2 .card-block-info .card-grid-2-img-medium {
   padding-left: 55px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   font-family: "Plus Jakarta Sans", sans-serif;
   color: #151515;
@@ -2222,7 +2222,7 @@ label {
   text-align: center;
 }
 .card-grid-2 .card-block-info .card-profile strong {
-  font-size: 18px;
+  font-size: 20px;
   color: #05264E;
   line-height: 18px;
   font-weight: bold;
@@ -2269,7 +2269,7 @@ label {
   padding-right: 15px;
 }
 .card-grid-2 .card-grid-2-image-left .right-info .name-job {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 26px;
   color: #05264E;
   font-weight: bold;
@@ -2282,7 +2282,7 @@ label {
   background: url(../imgs/template/icons/location.svg) no-repeat 0px 5px;
   display: inline-block;
   padding: 0px 0px 0px 20px;
-  font-size: 12px;
+  font-size: 14px;
   color: #A0ABB8;
 }
 
@@ -2391,7 +2391,7 @@ label {
   vertical-align: middle;
   position: relative;
   padding: 4px 0px 4px 40px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .card-grid-3 .card-block-info .card-2-img-text .card-grid-2-img-small {
   background: #e4e4e4;
@@ -2410,13 +2410,13 @@ label {
 .card-grid-3 .card-block-info .card-2-img-text span {
   display: inline-block;
   color: #05264E;
-  font-size: 14px;
+  font-size: 16px;
 }
 .card-grid-3 .card-block-info .card-2-img-text img {
   max-width: 100%;
 }
 .card-grid-3 .card-block-info .card-time {
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   padding: 0px 15px 0px 25px;
   background: url(../imgs/template/icons/time.svg) no-repeat 0px 3px;
@@ -2428,7 +2428,7 @@ label {
   font-size: 22px;
 }
 .card-grid-3 .card-block-info .card-text-price span {
-  font-size: 14px;
+  font-size: 16px;
   color: #4F5E64;
   font-weight: 400;
 }
@@ -2450,14 +2450,14 @@ label {
   line-height: 18px !important;
 }
 .card-grid-3 .card-block-info .card-profile strong {
-  font-size: 18px;
+  font-size: 20px;
   color: #05264E;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: bold;
   display: block;
 }
 .card-grid-3 .card-block-info .card-profile span {
-  font-size: 16px;
+  font-size: 18px;
   color: #4F5E64;
 }
 .card-grid-3 .card-grid-3-image-circle {
@@ -2602,7 +2602,7 @@ label {
   padding: 0px 35px 0px 0px;
   background: url(../imgs/template/icons/arrow-right.svg) no-repeat right top 2px;
   color: #3C65F5;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
 }
 
@@ -2774,13 +2774,13 @@ ul li:last-child .card-list-4 {
 }
 .box-image-job .job-top-creator ul li .job-info-creator strong {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 .box-image-job .job-top-creator ul li .job-info-creator span {
   color: #4F5E64;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .list-partners {
@@ -2859,7 +2859,7 @@ ul li:last-child .card-list-4 {
 }
 
 .text-mutted {
-  font-size: 16px;
+  font-size: 18px;
   color: #4F5E64;
   line-height: 16px;
 }
@@ -2940,7 +2940,7 @@ ul li:last-child .card-list-4 {
 }
 .breadcrumbs li {
   color: #66789C;
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   padding-left: 20px;
   position: relative;
@@ -2955,7 +2955,7 @@ ul li:last-child .card-list-4 {
   background: url(../imgs/template/icons/arrow-breadcrumb.svg) no-repeat center;
 }
 .breadcrumbs li a {
-  font-size: 14px;
+  font-size: 16px;
   color: #66789C;
   text-decoration: none;
   line-height: 14px;
@@ -3124,7 +3124,7 @@ ul li:last-child .card-list-4 {
 }
 .banner-hero .block-banner .list-tags-banner a {
   color: #4F5E64;
-  font-size: 14px;
+  font-size: 16px;
   margin-left: 2px;
   text-decoration: underline;
   margin-right: 5px;
@@ -3132,7 +3132,7 @@ ul li:last-child .card-list-4 {
 .banner-hero .block-banner .list-tags-banner strong {
   font-weight: 700;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #4F5E64;
 }
 .banner-hero .heading-banner {
@@ -3157,7 +3157,7 @@ ul li:last-child .card-list-4 {
 }
 .banner-hero .banner-description {
   position: relative;
-  font-size: 18px;
+  font-size: 20px;
   color: #4F5E64;
 }
 .banner-hero.banner-image-single {
@@ -3676,7 +3676,7 @@ ul li:last-child .card-list-4 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 18px;
   color: #05264E;
   display: block;
@@ -3709,7 +3709,7 @@ ul li:last-child .card-list-4 {
   top: 100%;
   left: 0px;
   z-index: 999;
-  min-width: 260px;
+  min-width: 300px;
   border-radius: 10px;
   border: 1px solid #ececec;
   -webkit-box-shadow: 0px 10px 20px -5px rgba(10, 42, 105, 0.06);
@@ -3725,7 +3725,7 @@ ul li:last-child .card-list-4 {
 .header .main-menu li ul li a {
   padding-top: 8px;
   padding-bottom: 8px;
-  font-size: 14px;
+  font-size: 18px;
   color: #253D4E;
   position: relative;
   padding: 14px 22px 10px 35px;
@@ -3770,7 +3770,7 @@ ul li:last-child .card-list-4 {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 150%;
   color: #05264E;
   display: inline-block;
@@ -3993,7 +3993,7 @@ ul li:last-child .card-list-4 {
   content: "\f113";
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li a {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1;
   text-transform: capitalize;
   font-weight: 500;
@@ -4024,7 +4024,7 @@ ul li:last-child .card-list-4 {
   transition-duration: 0.2s;
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li ul li a {
-  font-size: 14px;
+  font-size: 18px;
   display: block;
   font-weight: 500;
   color: #253D4E;
@@ -4074,7 +4074,7 @@ ul li:last-child .card-list-4 {
   margin-bottom: 0;
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-header-info-wrap .single-mobile-header-info a {
-  font-size: 14px;
+  font-size: 18px;
   display: block;
   font-weight: 500;
   color: #05264E;
@@ -4083,7 +4083,7 @@ ul li:last-child .card-list-4 {
   color: #05264E;
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-header-info-wrap .single-mobile-header-info a i {
-  font-size: 14px;
+  font-size: 18px;
   color: #05264E;
   margin-right: 8px;
 }
@@ -4104,7 +4104,7 @@ ul li:last-child .card-list-4 {
   padding-bottom: 0px;
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-header-info-wrap .single-mobile-header-info .lang-curr-dropdown ul li a {
-  font-size: 16px;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
 }
@@ -4118,7 +4118,7 @@ ul li:last-child .card-list-4 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .site-copyright {
-  font-size: 12px;
+  font-size: 14px;
   color: #4F5E64;
 }
 
@@ -4317,7 +4317,7 @@ ul li:last-child .card-list-4 {
 }
 .widget-categories li a {
   color: #05264E;
-  font-size: 16px;
+  font-size: 18px;
 }
 .widget-categories li span.count {
   background-color: rgba(81, 146, 255, 0.12);
@@ -4395,7 +4395,7 @@ ul li:last-child .card-list-4 {
 }
 .footer .menu-footer li a {
   color: #4F5E64;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
   transition-duration: 0.2s;
 }
@@ -4431,7 +4431,7 @@ ul li:last-child .card-list-4 {
   border-top: 1px solid #E0E6F7;
   padding: 30px 0px;
   color: #4F5E64;
-  font-size: 14px;
+  font-size: 16px;
 }
 .footer .footer-bottom strong {
   color: #05264E;
@@ -6081,14 +6081,14 @@ ul li:last-child .card-list-4 {
 }
 
 .text-lg {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
   letter-spacing: 0.5px;
 }
 
 .text-blue {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   color: #3C65F5;
   font-weight: 600;
   line-height: 24px;
@@ -6305,7 +6305,7 @@ ul li:last-child .card-list-4 {
   color: #A0ABB8;
 }
 .block-pricing .text-desc-package {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 20px;
   color: #4F5E64;
 }
@@ -6320,7 +6320,7 @@ ul li:last-child .card-list-4 {
   padding: 4px 0px 4px 35px;
   background: url(../imgs/template/icons/check-circle.svg) no-repeat left center;
   margin-bottom: 20px;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 20px;
   color: #4F5E64;
 }
@@ -6353,7 +6353,7 @@ ul li:last-child .card-list-4 {
 }
 
 .heading-md-regular {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 24px;
   color: #05264E;
   font-weight: 500;
@@ -6383,7 +6383,7 @@ ul li:last-child .card-list-4 {
 
 .text-gray-200 {
   color: #4F5E64;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /*page-faqs*/
@@ -6505,7 +6505,7 @@ ul li:last-child .card-list-4 {
   border-radius: 15px;
 }
 .single-body p {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 15px;
   color: #4F5E64;
   line-height: 1.5;
@@ -6519,7 +6519,7 @@ ul li:last-child .card-list-4 {
   margin: 30px 0 25px 0;
 }
 .single-body .excerpt p {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.5;
   color: #05264E;
 }
@@ -6631,7 +6631,7 @@ ul li:last-child .card-list-4 {
   padding: 20px;
   width: 100%;
   color: #A0ABB8;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 26px;
   font-weight: 500;
   min-height: 150px;
@@ -6646,7 +6646,7 @@ ul li:last-child .card-list-4 {
 .nav-tavs-profile ul li a {
   display: block;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   padding-top: 7px;
   padding-bottom: 7px;
   background-position: 17px center;
@@ -6669,7 +6669,7 @@ ul li:last-child .card-list-4 {
   width: 100%;
   border: 2px solid #E0E6F6;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
 }
 .form-contact .form-control:focus {
@@ -6718,7 +6718,7 @@ ul li:last-child .card-list-4 {
 
 .link-red {
   color: #E45959;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 12px;
   font-weight: 500;
 }
@@ -6817,7 +6817,7 @@ ul li:last-child .card-list-4 {
 }
 
 .content-single p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 200%;
   color: #4F5E64;
   line-height: 32px;
@@ -6832,7 +6832,7 @@ ul li:last-child .card-list-4 {
 .content-single ul {
   padding-left: 30px;
   line-height: 32px;
-  font-size: 16px;
+  font-size: 18px;
   color: #4F5E64;
   list-style: disc;
 }
@@ -6845,7 +6845,7 @@ ul li:last-child .card-list-4 {
 .author-single span {
   position: relative;
   background-color: #ffffff;
-  font-size: 18px;
+  font-size: 20px;
   color: #4F5E64;
   line-height: 28px;
   font-weight: bold;
@@ -6926,7 +6926,7 @@ ul li:last-child .card-list-4 {
   position: relative;
 }
 .sidebar-border .sidebar-heading .avatar-sidebar .sidebar-info .sidebar-company, .sidebar-shadow .sidebar-heading .avatar-sidebar .sidebar-info .sidebar-company {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 18px;
   font-weight: bold;
@@ -6934,7 +6934,7 @@ ul li:last-child .card-list-4 {
   padding-top: 5px;
 }
 .sidebar-border .sidebar-heading .avatar-sidebar .sidebar-info .sidebar-website-text, .sidebar-shadow .sidebar-heading .avatar-sidebar .sidebar-info .sidebar-website-text {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 18px;
   color: #05264E;
 }
@@ -6956,7 +6956,7 @@ ul li:last-child .card-list-4 {
 }
 
 .text-description {
-  font-size: 14px;
+  font-size: 16px;
   color: #66789C;
   line-height: 22px;
   display: inline-block;
@@ -7017,7 +7017,7 @@ ul li:last-child .card-list-4 {
   display: list-item !important;
   padding-bottom: 5px !important;
   color: #4F5E64;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
 }
 
@@ -7064,7 +7064,7 @@ ul li:last-child .card-list-4 {
 .job-overview .sidebar-text-info .small-heading {
   width: 100%;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
   font-weight: 500;
 }
@@ -7076,7 +7076,7 @@ ul li:last-child .card-list-4 {
 }
 
 .job-meta {
-  font-size: 10px;
+  font-size: 12px;
   color: #4F5E64;
 }
 .job-meta .company {
@@ -7161,7 +7161,7 @@ ul li:last-child .card-list-4 {
 
 .link-reset {
   float: right;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   color: #66789C;
   font-weight: 500;
@@ -7239,7 +7239,7 @@ ul li:last-child .card-list-4 {
   line-height: 26px;
   text-decoration: none;
   position: relative;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 .paginations .pager li a:hover {
@@ -7299,7 +7299,7 @@ ul li:last-child .card-list-4 {
 }
 
 .text-body-999 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px;
   color: #66789C;
 }
@@ -7313,7 +7313,7 @@ ul li:last-child .card-list-4 {
 }
 .box-email-reminder .form-group input::placeholder {
   color: #4F5E64;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .job-fillter .box-button-find {
@@ -7341,7 +7341,7 @@ ul li:last-child .card-list-4 {
   border: 0px;
 }
 .job-fillter .dropdown .dropdown-toggle {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
 }
 .job-fillter .dropdown .dropdown-toggle .fi-rr-angle-small-down {
@@ -7368,7 +7368,7 @@ ul li:last-child .card-list-4 {
 .text-sortby {
   color: #A0ABB8;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -7393,7 +7393,7 @@ ul li:last-child .card-list-4 {
 .dropdown-sort .dropdown-toggle {
   padding: 0px;
   outline: none;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -7420,13 +7420,13 @@ ul li:last-child .card-list-4 {
 }
 
 .text-normal {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px;
   color: #4F5E64;
 }
 
 .text-small {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   color: #4F5E64;
   font-weight: 500;
@@ -7454,7 +7454,7 @@ ul li:last-child .card-list-4 {
   right: 0px;
   transform: translateY(-50%);
   padding: 4px 5px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   border-radius: 7px;
   background: #E0E6F7;
@@ -7494,7 +7494,7 @@ ul li:last-child .card-list-4 {
 
 .buttons-filter .btn {
   padding: 12px 15px;
-  font-size: 14px;
+  font-size: 16px;
   color: #4F5E64;
 }
 .buttons-filter .btn-default {
@@ -7508,7 +7508,7 @@ ul li:last-child .card-list-4 {
   text-align: center;
   height: 35px;
   color: #4F5E64;
-  font-size: 14px;
+  font-size: 16px;
 }
 .input-disabled:focus {
   color: #66789C;
@@ -7516,7 +7516,7 @@ ul li:last-child .card-list-4 {
 
 .lb-slider {
   font-weight: 600;
-  font-size: 10px;
+  font-size: 12px;
   color: #4F5E64;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
@@ -7544,13 +7544,13 @@ ul li:last-child .card-list-4 {
   padding-top: 0px;
 }
 .content-page .display-list .card-grid-2 .card-block-info .card-text-price {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   padding-top: 8px;
   display: inline-block;
 }
 .content-page .display-list .card-grid-2 .card-block-info .card-text-price span {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 12px;
 }
 
@@ -7577,7 +7577,7 @@ ul li:last-child .card-list-4 {
   text-align: center;
 }
 .box-list-character ul li a {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 28px;
   color: #4F5E64;
   text-transform: uppercase;
@@ -7725,7 +7725,7 @@ ul li:last-child .card-list-4 {
 .login-register input {
   height: 53px;
   line-height: 53px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .bg-homepage1 {
@@ -7762,7 +7762,7 @@ ul li:last-child .card-list-4 {
   border: 1px solid #E0E6F7;
   border-radius: 8px;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 18px;
   text-align: left;
@@ -7866,7 +7866,7 @@ ul li:last-child .card-list-4 {
   background-size: cover;
 }
 .box-we-hiring .text-we-are {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   color: #A0ABB8;
   font-weight: bold;
@@ -7883,7 +7883,7 @@ ul li:last-child .card-list-4 {
   text-transform: uppercase;
 }
 .box-we-hiring .text-2 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 23px;
   color: #66789C;
   font-weight: 500;
@@ -8205,7 +8205,7 @@ ul li:last-child .card-list-4 {
 
 .list-tags-banner-2 {
   color: #66789C;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 26px;
 }
 .list-tags-banner-2 a {
@@ -11061,7 +11061,7 @@ ul li:last-child .card-list-4 {
   }
   .paginations .pager li a {
     line-height: 24px;
-    font-size: 16px;
+    font-size: 18px;
   }
   .box-radius-8 {
     flex-wrap: wrap;
@@ -11078,7 +11078,7 @@ ul li:last-child .card-list-4 {
     line-height: 28px;
   }
   .box-newsletter-2 .font-lg {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
   }
 }
