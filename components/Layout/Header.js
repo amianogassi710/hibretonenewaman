@@ -57,7 +57,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                             <div className="header-logo">
                                 <Link legacyBehavior href="/">
                                     <a className="d-flex">
-                                        <img
+                                        <img className="logo-img"
                                             alt="jobBox"
                                             src="/assets/imgs/template/hibretOne-logo.png"
                                         />
