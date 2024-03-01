@@ -37,13 +37,7 @@ export default function Home() {
                                             {" "}
                                             Empowering aspirers{" "}
                                         </span>
-                                        , founders, leaders and organisations{" "}
-                                        <span className="color-blue">
-                                            {" "}
-                                            to positively transform{" "}
-                                        </span>{" "}
-                                        the economy, society and community
-                                        through{" "}
+                                        to transform the economy, society and community through{" "}
                                         <span className="color-blue">
                                             {" "}
                                             entrepreneurship{" "}

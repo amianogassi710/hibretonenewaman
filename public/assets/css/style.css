@@ -847,6 +847,26 @@ iframe {
   background-position: 16px center;
 }
 
+.font-force-sm {
+  font-size: 16px !important;
+}
+
+.font-force-md {
+  font-size: 18px !important;
+}
+
+.font-force-lg {
+  font-size: 20px !important;
+}
+
+.font-force-xl {
+  font-size: 22px !important;
+}
+
+.font-force-xxl {
+  font-size: 24px !important;
+}
+
 a,
 button,
 img,
@@ -3894,6 +3914,11 @@ ul li:last-child .card-list-4 {
 .mobile-menu-active .body-overlay-1 {
   opacity: 1;
   visibility: visible;
+}
+
+.logo-img {
+  max-width: 125%;
+  height: auto;
 }
 
 .mobile-header-wrapper-style {
