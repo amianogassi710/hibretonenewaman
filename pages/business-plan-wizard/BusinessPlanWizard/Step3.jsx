@@ -3,9 +3,7 @@ import {useSessionStorage} from 'react-use';
 import {
     Box,
     Grid,
-    Radio,
     RadioGroup,
-    FormControlLabel,
     FormControl,
     Button,
     Typography,
@@ -50,11 +48,13 @@ const Step3 = ({previousStep, nextStep}) => {
     const [suggestions1, setSuggestions1] = useState([]);
     const [loading1, setLoading1] = useState(false);
     const [loadedSuggestions1, setLoadedSuggestions1] = useState(false);
+    const [errorMsg1, setErrorMsg1] = useState('');
 
     const [showSuggestions2, setShowSuggestions2] = useState(false);
     const [suggestions2, setSuggestions2] = useState([]);
     const [loading2, setLoading2] = useState(false);
     const [loadedSuggestions2, setLoadedSuggestions2] = useState(false);
+    const [errorMsg2, setErrorMsg2] = useState('');
 
     useEffect(() => {
         setClientSide(true);
@@ -67,12 +67,19 @@ const Step3 = ({previousStep, nextStep}) => {
             const response = await axios.post('/business-plan-writer/suggestion/customer-description', {
                 step1: step1FormData,
                 step2: step2FormData
-            });
+            }, {timeout: 5000});
+
+            if (response.status !== 200) {
+                throw new Error('Failed to fetch suggestions');
+            }
+
             const suggestions = response.data.suggestion;
             setSuggestions1(suggestions);
+        } catch (error) {
+            setErrorMsg1('Failed to generate suggestions. Please try again.');
+        } finally {
             setLoading1(false);
             setLoadedSuggestions1(true);
-        } catch (error) {
         }
     };
 
@@ -99,16 +106,25 @@ const Step3 = ({previousStep, nextStep}) => {
     };
 
     const fetchSuggestionData2 = async () => {
+        setLoading2(true);
+        setErrorMsg2('');
         try {
             const response = await axios.post('/business-plan-writer/suggestion/customer-description', {
                 step1: step1FormData,
                 step2: step2FormData
-            });
+            }, {timeout: 5000});
+
+            if (response.status !== 200) {
+                throw new Error('Failed to fetch suggestions');
+            }
+
             const suggestions = response.data.suggestion;
             setSuggestions2(suggestions);
+        } catch (error) {
+            setErrorMsg2('Failed to generate suggestions. Please try again.');
+        } finally {
             setLoading2(false);
             setLoadedSuggestions2(true);
-        } catch (error) {
         }
     };
     const loadSuggestions2 = () => {
@@ -215,6 +231,11 @@ const Step3 = ({previousStep, nextStep}) => {
                             ))}
                         </Box>
                     )}
+                    {errorMsg1 && (
+                        <Box sx={{color: 'red', textAlign: 'center', mt: 2}}>
+                            {errorMsg1}
+                        </Box>
+                    )}
                     {showSuggestions1 && (
                         <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <Button
@@ -303,6 +324,11 @@ const Step3 = ({previousStep, nextStep}) => {
                                     }}
                                 />
                             ))}
+                        </Box>
+                    )}
+                    {errorMsg2 && (
+                        <Box sx={{color: 'red', textAlign: 'center', mt: 2}}>
+                            {errorMsg2}
                         </Box>
                     )}
                     {showSuggestions2 && (

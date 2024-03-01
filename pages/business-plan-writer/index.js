@@ -49,7 +49,7 @@ export default function Index() {
                                         <div className="mt-10">
                                             <h6 className="mt-10 font-md"><strong>See how easily you can create your
                                                 own Business Plan</strong></h6>
-                                            <p className="font-md color-text-paragraph mt-10">
+                                            <p className="font-md color-text-paragraph mt-10 mr-10">
                                                 Business plans are essential for credibility, to improve chances of
                                                 success, to validate your idea and to secure investment. The
                                                 hibretOne Business Plan writer creates a plan which includes:
