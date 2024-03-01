@@ -85,6 +85,7 @@ const Step2 = ({previousStep, nextStep}) => {
                             placeholder="Enter your business name"
                             value={step2FormData.businessName}
                             onChange={handleChange}
+                            autoComplete="on"
                         />
                         {error.businessName && <FormHelperText>Please input your business name.</FormHelperText>}
                     </FormControl>
@@ -102,6 +103,7 @@ const Step2 = ({previousStep, nextStep}) => {
                             value={step2FormData.businessDescription}
                             onChange={handleChange}
                             sx={{fontSize: '0.875rem'}}
+                            autoComplete="on"
                         />
                         {error.businessDescription &&
                             <FormHelperText>Please input your business description.</FormHelperText>}
