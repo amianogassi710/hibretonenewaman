@@ -1,11 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useSessionStorage} from 'react-use';
 import {
-    Box,
     Grid,
-    Radio,
-    RadioGroup,
-    FormControlLabel,
     FormControl,
     Button,
     Typography,
@@ -80,6 +76,7 @@ const Step4 = ({previousStep, nextStep}) => {
                             {requiredLabel('Product or Service 1 Name', true)}
                         </Typography>
                         <Input
+                            id="product1Name"
                             name="product1Name"
                             placeholder="Enter name of product or service 1"
                             value={step4FormData.product1Name}
@@ -97,7 +94,9 @@ const Step4 = ({previousStep, nextStep}) => {
                             {requiredLabel('Product or Service 1 Description', true)}
                         </Typography>
                         <Input
+                            id="product1Description"
                             name="product1Description"
+                            type="text"
                             placeholder="Enter description of product or service 1"
                             value={step4FormData.product1Description}
                             onChange={handleChange}
@@ -120,6 +119,7 @@ const Step4 = ({previousStep, nextStep}) => {
                             {requiredLabel('Product or Service 2 Name', false)}
                         </Typography>
                         <Input
+                            id="product2Name"
                             name="product2Name"
                             placeholder="Enter name of product or service 2"
                             value={step4FormData.product2Name}
@@ -136,6 +136,7 @@ const Step4 = ({previousStep, nextStep}) => {
                             {requiredLabel('Product or Service 2 Description', false)}
                         </Typography>
                         <Input
+                            id="product2Description"
                             name="product2Description"
                             placeholder="Enter description of product or service 2"
                             value={step4FormData.product2Description}

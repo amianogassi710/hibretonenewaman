@@ -7,6 +7,7 @@ import {
     FormControl,
     Button,
     Typography,
+    TextField,
     FormHelperText
 } from '@mui/material';
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
@@ -81,7 +82,9 @@ const Step2 = ({previousStep, nextStep}) => {
                             {requiredLabel('Your business name')}
                         </Typography>
                         <Input
+                            id="businessName"
                             name="businessName"
+                            type="text"
                             placeholder="Enter your business name"
                             value={step2FormData.businessName}
                             onChange={handleChange}
@@ -99,6 +102,7 @@ const Step2 = ({previousStep, nextStep}) => {
                         <Input
                             id="businessDescription"
                             name="businessDescription"
+                            type="text"
                             placeholder="e.g. hotel / restaurant / online clothing store / Auto Repair / Real Estate Agent"
                             value={step2FormData.businessDescription}
                             onChange={handleChange}
@@ -115,7 +119,7 @@ const Step2 = ({previousStep, nextStep}) => {
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
                             {requiredLabel('Number of employees')}
                         </Typography>
-                        <Input
+                        <TextField
                             id="numberOfEmployees"
                             name="numberOfEmployees"
                             type="number"
@@ -123,7 +127,8 @@ const Step2 = ({previousStep, nextStep}) => {
                             placeholder="0"
                             value={step2FormData.numberOfEmployees}
                             onChange={handleChange}
-                            sx={{fontSize: '0.875rem', width: '40%'}}
+                            sx={{fontSize: '0.875rem', width: '200px'}}
+                            autoComplete="on"
                         />
                         {error.numberOfEmployees &&
                             <FormHelperText>Please input the number of employees.</FormHelperText>}
@@ -136,6 +141,7 @@ const Step2 = ({previousStep, nextStep}) => {
                             {requiredLabel('Do you offer a product or service?')}
                         </Typography>
                         <RadioGroup
+                            id="productOrService"
                             name="productOrService"
                             value={step2FormData.productOrService}
                             onChange={handleChange}
@@ -155,6 +161,7 @@ const Step2 = ({previousStep, nextStep}) => {
                             {requiredLabel('How can customer get your product or service?')}
                         </Typography>
                         <RadioGroup
+                            id="productServiceAccess"
                             name="productServiceAccess"
                             value={step2FormData.productServiceAccess}
                             onChange={handleChange}
@@ -182,6 +189,7 @@ const Step2 = ({previousStep, nextStep}) => {
                             value={step2FormData.serviceArea}
                             onChange={handleChange}
                             sx={{fontSize: '0.875rem'}}
+                            autoComplete="on"
                         />
                         {error.serviceArea && <FormHelperText>Please input your service area.</FormHelperText>}
                     </FormControl>

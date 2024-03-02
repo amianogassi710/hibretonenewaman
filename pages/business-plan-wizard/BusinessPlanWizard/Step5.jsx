@@ -74,7 +74,9 @@ const Step5 = ({previousStep, nextStep}) => {
                             {requiredLabel('Success Driver 1 (required)', true)}
                         </Typography>
                         <Input
+                            id="successDriver1"
                             name="successDriver1"
+                            type="text"
                             placeholder="E.g. Our product is high quality and affordable."
                             value={step5FormData.successDriver1}
                             onChange={handleChange}
@@ -91,7 +93,9 @@ const Step5 = ({previousStep, nextStep}) => {
                             {requiredLabel('Success Driver 2 (optional)', false)}
                         </Typography>
                         <Input
+                            id="successDriver2"
                             name="successDriver2"
+                            type="text"
                             placeholder="E.g. Our marketing team is highly skilled and experienced."
                             value={step5FormData.successDriver2}
                             onChange={handleChange}
@@ -113,7 +117,9 @@ const Step5 = ({previousStep, nextStep}) => {
                             {requiredLabel('Weakness 1 (optional)', false)}
                         </Typography>
                         <Input
+                            id="weakness1"
                             name="weakness1"
+                            type="text"
                             placeholder="E.g. We are a new company and have not yet established a customer base."
                             value={step5FormData.weakness1}
                             onChange={handleChange}
@@ -129,7 +135,9 @@ const Step5 = ({previousStep, nextStep}) => {
                             {requiredLabel('Weakness 2 (optional)', false)}
                         </Typography>
                         <Input
+                            id="weakness2"
                             name="weakness2"
+                            type="text"
                             placeholder="E.g. Our budget is limited and we cannot afford to hire a large team."
                             value={step5FormData.weakness2}
                             onChange={handleChange}
