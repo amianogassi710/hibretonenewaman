@@ -1,5 +1,6 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import { useEffect, useState } from "react"
 import Layout from "../components/Layout/Layout";
 import BlogSlider from "./../components/sliders/Blog";
 
@@ -19,6 +20,11 @@ const NoSSRTestimonialSliderHomePage = dynamic(
     () => import("./../components/sliders/TestimonialHomepage"),
     { ssr: false }
 );
+// const [showMore1, setShowMore1] = useState(false);
+// const [showMore2, setShowMore2] = useState(false);
+// const [showMore3, setShowMore3] = useState(false);
+// const [showMore4, setShowMore4] = useState(false)
+
 export default function Home() {
     return (
         <>
@@ -29,15 +35,20 @@ export default function Home() {
                             <div className="banner-inner">
                                 <div className="block-banner">
                                     <img
-                                        src="assets/imgs/page/homepage1/WHITE-hibretOne-Logo.svg"
+                                        src="assets/imgs/page/homepage1/WHITE hibretOne Logo.png"
                                         alt=""
+                                        style={{
+                                            height: "100px",
+                                            width: "auto",
+                                        }}
                                     />
                                     <h1 className="text-30 color-white wow animate__animated animate__fadeInUp">
                                         <span className="color-blue">
                                             {" "}
                                             Empowering aspirers{" "}
                                         </span>
-                                        to transform the economy, society and community through{" "}
+                                        to transform the economy, society and
+                                        community through{" "}
                                         <span className="color-blue">
                                             {" "}
                                             entrepreneurship{" "}
@@ -151,8 +162,11 @@ export default function Home() {
                     </section>
                     <section className="section-box pt-50 pb-50 mt-80">
                         <div className="container">
+                            <h2 className="section-title text-center mb-40 wow animate__animated animate__fadeInUp">
+                                Delivering Economic, Social and Moral impact
+                            </h2>
                             <div className="row">
-                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-30">
+                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-30 no-padding">
                                     <img
                                         className="img-job-search"
                                         src="assets/imgs/page/homepage1/Business.jpg"
@@ -160,13 +174,9 @@ export default function Home() {
                                     />
                                 </div>
                                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                    <h2 className="mb-40">
-                                        Delivering Economic, Social and Moral
-                                        impact
-                                    </h2>
                                     <div className="box-checkbox mb-30">
-                                        <h6>Economic</h6>
-                                        <p className="font-md color-text-paragraph-2 justify-content-between">
+                                        <h6 style={{ color: '#3C65F5' }}>Economic</h6>
+                                        <p className="font-md color-text-paragraph-2" style={{ textAlign: 'justify' }}>
                                             Entrepreneurship is multifaceted -
                                             job creation, innovation, economic
                                             growth, wealth creation, tax
@@ -177,8 +187,8 @@ export default function Home() {
                                         </p>
                                     </div>
                                     <div className="box-checkbox mb-30">
-                                        <h6>Social</h6>
-                                        <p className="font-md color-text-paragraph-2">
+                                        <h6 style={{ color: '#3AAB67' }}>Social</h6>
+                                        <p className="font-md color-text-paragraph-2" style={{ textAlign: 'justify' }}>
                                             Entrepreneurship goes beyond
                                             economic impact. The potential to
                                             drive positive social change,
@@ -191,8 +201,8 @@ export default function Home() {
                                         </p>
                                     </div>
                                     <div className="box-checkbox mb-30">
-                                        <h6>Moral</h6>
-                                        <p className="font-md color-text-paragraph-2">
+                                        <h6 style={{ color: '#F58A3C' }}>Moral</h6>
+                                        <p className="font-md color-text-paragraph-2" style={{ textAlign: 'justify' }}>
                                             Entrepreneurship involves leadership
                                             grounded in ethical principles. Many
                                             successful entrepreneurs engage in
@@ -203,6 +213,7 @@ export default function Home() {
                                             welfare. Valuing diversity and
                                             inclusion in more equitable and just
                                             societies.
+                                            
                                         </p>
                                     </div>
                                 </div>
@@ -218,7 +229,7 @@ export default function Home() {
                                 </h2>
                                 <div className="col-lg-6 col-md-12 mb-15 mb-lg-0">
                                     <div className="box-radius-8 bg-urgent hover-up">
-                                        <div className="image">
+                                        <div className="image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                             <figure>
                                                 <img
                                                     src="assets/imgs/page/homepage1/opportunities/1.jpg"
@@ -227,7 +238,7 @@ export default function Home() {
                                             </figure>
                                         </div>
                                         <div className="text-info">
-                                            <h3>
+                                            <h3 className="pb-20">
                                                 Making entrepreneurship
                                                 inclusive
                                             </h3>
@@ -239,20 +250,21 @@ export default function Home() {
                                                 billion of new value could be
                                                 added to the UK economy if women
                                                 started
+                                                <button className="btn-show-more" >...more</button>
                                             </p>
-                                            <div className="mt-15">
+                                            {/* <div className="mt-15">
                                                 <Link legacyBehavior href="#">
                                                     <a className="btn btn-arrow-right">
                                                         Read More
                                                     </a>
                                                 </Link>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-12">
                                     <div className="box-radius-8 bg-9 hover-up">
-                                        <div className="image">
+                                        <div className="image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                             <figure>
                                                 <img
                                                     src="assets/imgs/page/homepage1/opportunities/2.jpg"
@@ -261,7 +273,7 @@ export default function Home() {
                                             </figure>
                                         </div>
                                         <div className="text-info">
-                                            <h3>
+                                            <h3 className="pb-20">
                                                 Career pathways into better-paid
                                                 jobs
                                             </h3>
@@ -272,20 +284,21 @@ export default function Home() {
                                                 entrepreneurs.‘Average
                                                 self-employed female worker
                                                 would earn just over 76% more
+                                                <button className="btn-show-more" >...more</button>
                                             </p>
-                                            <div className="mt-15">
+                                            {/* <div className="mt-15">
                                                 <Link legacyBehavior href="#">
                                                     <a className="btn btn-arrow-right">
                                                         Read More
                                                     </a>
                                                 </Link>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-12 mb-15 mb-lg-0">
                                     <div className="box-radius-8 bg-16 hover-up">
-                                        <div className="image">
+                                        <div className="image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                             <figure>
                                                 <img
                                                     src="assets/imgs/page/homepage1/opportunities/3.jpg"
@@ -294,7 +307,7 @@ export default function Home() {
                                             </figure>
                                         </div>
                                         <div className="text-info">
-                                            <h3>Improving startup success</h3>
+                                            <h3 className="pb-40">Improving startup success</h3>
                                             <div className="empty-line"></div>
                                             <p className="font-sm color-text-paragraph-2">
                                                 Creating higher-skilled
@@ -303,20 +316,21 @@ export default function Home() {
                                                 entrepreneurs.‘80% of
                                                 cooperatives are still trading
                                                 after
+                                                <button className="btn-show-more" >...more</button>
                                             </p>
-                                            <div className="mt-15">
+                                            {/* <div className="mt-15">
                                                 <Link legacyBehavior href="#">
                                                     <a className="btn btn-arrow-right">
                                                         Read More
                                                     </a>
                                                 </Link>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-12">
                                     <div className="box-radius-8 bg-17 hover-up">
-                                        <div className="image">
+                                        <div className="image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                                             <figure>
                                                 <img
                                                     src="assets/imgs/page/homepage1/opportunities/4.jpg"
@@ -325,7 +339,7 @@ export default function Home() {
                                             </figure>
                                         </div>
                                         <div className="text-info">
-                                            <h3>
+                                            <h3 className="pb-20">
                                                 Partnership and revenue
                                                 opportunities
                                             </h3>
@@ -336,14 +350,15 @@ export default function Home() {
                                                 corporates believe that startups
                                                 can have a positive impact on a
                                                 large company’s approach to
+                                                <button className="btn-show-more" >...more</button>
                                             </p>
-                                            <div className="mt-15">
+                                            {/* <div className="mt-15">
                                                 <Link legacyBehavior href="#">
                                                     <a className="btn btn-arrow-right">
                                                         Read More
                                                     </a>
                                                 </Link>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>

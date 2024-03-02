@@ -59,8 +59,12 @@
 }
 .box-checkbox {
     padding: 0px 0px 0px 30px;
-    background: url(../imgs/page/homepage3/check-box.svg) no-repeat 0px 4px;
+    // background: url(../imgs/page/homepage3/check-box.svg) no-repeat 0px 4px;
 }
 .img-job-search {
-    max-width: 90%;
+    max-width: 100%;
+}
+
+.no-padding {
+    padding: 0px !important;
 }
