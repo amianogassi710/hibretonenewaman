@@ -1,11 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useSessionStorage} from 'react-use';
 import {
-    Box,
     Grid,
-    Radio,
-    RadioGroup,
-    FormControlLabel,
     FormControl,
     Button,
     Typography,
@@ -14,17 +10,16 @@ import {
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 
-const Step4 = ({previousStep, nextStep}) => {
-    const [step4FormData, setStep4FormData] = useSessionStorage('BusinessPlanStepForm.step4FormData', {
-        product1Name: '',
-        product1Description: '',
-        product2Name: '',
-        product2Description: '',
+const Step5 = ({previousStep, nextStep}) => {
+    const [step5FormData, setStep5FormData] = useSessionStorage('BusinessPlanStepForm.step5FormData', {
+        successDriver1: '',
+        successDriver2: '',
+        weakness1: '',
+        weakness2: '',
     });
 
     const [error, setError] = useState({
-        product1Name: false,
-        product1Description: false,
+        successDriver1: false,
     });
 
     const [clientSide, setClientSide] = useState(false);
@@ -33,23 +28,22 @@ const Step4 = ({previousStep, nextStep}) => {
         setClientSide(true);
     }, []);
 
-    if (!clientSide) return null;
-
     const handleChange = (e) => {
         const {name, value} = e.target;
-        setStep4FormData(prevState => ({
+        setStep5FormData(prevState => ({
             ...prevState,
             [name]: value
         }));
         setError(prev => ({...prev, [name]: false}));
     };
 
+    if (!clientSide) return null;
+
     const validateForm = () => {
         const newErrors = {...error};
-        newErrors.product1Name = !step4FormData.product1Name;
-        newErrors.product1Description = !step4FormData.product1Description;
+        newErrors.successDriver1 = !step5FormData.successDriver1;
         setError(newErrors);
-        return !newErrors.product1Name && !newErrors.product1Description;
+        return !newErrors.successDriver1;
     };
 
     const onFinish = (e) => {
@@ -70,59 +64,58 @@ const Step4 = ({previousStep, nextStep}) => {
             <Grid container direction="column" spacing={2}>
                 <Grid item>
                     <Typography variant="h6" component="legend">
-                        Product or Service 1 (required)
+                        Success Drivers
                     </Typography>
                     <Divider/>
                 </Grid>
                 <Grid item>
-                    <FormControl fullWidth required error={error.product1Name}>
+                    <FormControl fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
-                            {requiredLabel('Product or Service 1 Name', true)}
+                            {requiredLabel('Success Driver 1 (required)', true)}
                         </Typography>
                         <Input
-                            name="product1Name"
-                            placeholder="Enter name of product or service 1"
-                            value={step4FormData.product1Name}
+                            name="successDriver1"
+                            placeholder="E.g. Our product is high quality and affordable."
+                            value={step5FormData.successDriver1}
                             onChange={handleChange}
                             variant="outlined"
                             autoComplete="on"
                         />
-                        {error.product1Name && <FormHelperText>Please input a name.</FormHelperText>}
+                        {error.successDriver1 && <FormHelperText>Please input a Success Driver.</FormHelperText>}
                     </FormControl>
                 </Grid>
 
                 <Grid item>
-                    <FormControl fullWidth required error={error.product1Description}>
+                    <FormControl fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
-                            {requiredLabel('Product or Service 1 Description', true)}
+                            {requiredLabel('Success Driver 2 (optional)', false)}
                         </Typography>
                         <Input
-                            name="product1Description"
-                            placeholder="Enter description of product or service 1"
-                            value={step4FormData.product1Description}
+                            name="successDriver2"
+                            placeholder="E.g. Our marketing team is highly skilled and experienced."
+                            value={step5FormData.successDriver2}
                             onChange={handleChange}
                             variant="outlined"
                             autoComplete="on"
                         />
-                        {error.product1Description && <FormHelperText>Please input the description.</FormHelperText>}
                     </FormControl>
                 </Grid>
 
                 <Grid item>
                     <Typography variant="h6" component="legend">
-                        Product or Service 2 (optional)
+                        Weakness
                     </Typography>
                     <Divider/>
                 </Grid>
                 <Grid item>
                     <FormControl fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
-                            {requiredLabel('Product or Service 2 Name', false)}
+                            {requiredLabel('Weakness 1 (optional)', false)}
                         </Typography>
                         <Input
-                            name="product2Name"
-                            placeholder="Enter name of product or service 2"
-                            value={step4FormData.product2Name}
+                            name="weakness1"
+                            placeholder="E.g. We are a new company and have not yet established a customer base."
+                            value={step5FormData.weakness1}
                             onChange={handleChange}
                             variant="outlined"
                             autoComplete="on"
@@ -133,12 +126,12 @@ const Step4 = ({previousStep, nextStep}) => {
                 <Grid item>
                     <FormControl fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>
-                            {requiredLabel('Product or Service 2 Description', false)}
+                            {requiredLabel('Weakness 2 (optional)', false)}
                         </Typography>
                         <Input
-                            name="product2Description"
-                            placeholder="Enter description of product or service 2"
-                            value={step4FormData.product2Description}
+                            name="weakness2"
+                            placeholder="E.g. Our budget is limited and we cannot afford to hire a large team."
+                            value={step5FormData.weakness2}
                             onChange={handleChange}
                             variant="outlined"
                             autoComplete="on"
@@ -169,4 +162,4 @@ const Step4 = ({previousStep, nextStep}) => {
     );
 };
 
-export default Step4;
+export default Step5;
