@@ -73,7 +73,7 @@ const Step2 = ({previousStep, nextStep}) => {
     );
 
     return (
-        <form noValidate autoComplete="off" onSubmit={onFinish}>
+        <form noValidate autoComplete="on" onSubmit={onFinish}>
             <Grid container direction="column" spacing={2}>
                 <Grid item>
                     <FormControl fullWidth required error={error.businessName}>

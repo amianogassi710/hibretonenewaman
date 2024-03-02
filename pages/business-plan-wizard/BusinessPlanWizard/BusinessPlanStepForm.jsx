@@ -9,6 +9,9 @@ import dynamic from "next/dynamic";
 
 const NoSSRStep3 = dynamic(() => import('./Step3'), { ssr: false })
 const NoSSRStep4 = dynamic(() => import('./Step4'), { ssr: false })
+const NoSSRStep5 = dynamic(() => import('./Step5'), { ssr: false })
+const NoSSRStep6 = dynamic(() => import('./Step6'), { ssr: false })
+import Step7 from './Step7';
 
 const BusinessPlanStepForm = () => {
     const [currentStepStr, setCurrentStepStr] = useSessionStorage('currentStep', '1');
@@ -58,9 +61,9 @@ const BusinessPlanStepForm = () => {
             {currentStep === 2 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
             {currentStep === 3 && <NoSSRStep3 nextStep={nextStep} previousStep={previousStep}/>}
             {currentStep === 4 && <NoSSRStep4 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 5 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 6 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 7 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
+            {currentStep === 5 && <NoSSRStep5 nextStep={nextStep} previousStep={previousStep}/>}
+            {currentStep === 6 && <NoSSRStep6 nextStep={nextStep} previousStep={previousStep}/>}
+            {currentStep === 7 && <Step7 nextStep={nextStep} previousStep={previousStep}/>}
         </Grid>
     </Grid>);
 };
