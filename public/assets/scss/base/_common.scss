@@ -800,7 +800,7 @@ iframe {
 
 .background-random {
     position: relative;
-    overflow: hidden; /* 隐藏伪元素超出的部分 */
+    overflow: hidden; 
   }
   
 
@@ -808,21 +808,21 @@ iframe {
   .background-random::after {
     content: "";
     position: absolute;
-    width: 800px; /* 矩形的宽度 */
-    height: 1500px; /* 矩形的高度 */
-    background: #F2F6FD; /* 矩形的背景颜色 */
-    transform-origin: top left; /* 以左上角为旋转中心 */
+    width: 800px; 
+    height: 1500px; 
+    background: #F2F6FD; 
+    transform-origin: top left; 
     z-index: -1;
   }
 
   .background-random::before {
-    transform: rotate(-8deg); /* 第一个矩形的旋转角度 */
-    top: 150px; /* 第一个矩形距离容器顶部的距离 */
-    left: -300px; /* 第一个矩形距离容器左侧的距离 */
+    transform: rotate(-8deg); 
+    top: 150px; 
+    left: -300px; 
   }
 
   .background-random::after {
-    transform: rotate(8deg); /* 第二个矩形的旋转角度 */
-    top: 1200px; /* 第二个矩形距离容器顶部的距离 */
-    right: -300px; /* 第二个矩形距离容器左侧的距离 */
+    transform: rotate(8deg); 
+    top: 1200px; 
+    right: -300px; 
   }
