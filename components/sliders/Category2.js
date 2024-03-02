@@ -8,67 +8,67 @@ const data = [
     {
         img: "1.jpg",
         title: "Business Builder",
-        count: 55
+        link: "/business-builder"
     },
     {
         img: "2.jpg",
         title: "Funding Builder",
-        count: 35
+        link: "/funding-builder"
     },
     {
         img: "3.jpg",
         title: "Resources Builder",
-        count: 20
+        link: "/resources-builder"
     },
     {
         img: "4.jpg",
         title: "Career Builder",
-        count: 15
+        link: "/career-builder"
     },
     {
         img: "5.jpg",
         title: "Ecosystem Connect",
-        count: 10
+        link: "/ecosystem-connect"
     },
     {
         img: "6.jpg",
         title: "Industry Intelligence",
-        count: 10
+        link: "/industry-intelligence"
     },
     {
         img: "7.jpg",
         title: "Problem Triage",
-        count: 10
+        link: "/problem-triage"
     },
     {
         img: "8.jpeg",
         title: "Grant Finder",
-        count: 10
+        link: "/grant-finder"
     },
     {
         img: "9.jpeg",
         title: "Grant Writer",
-        count: 10
+        link: "/grant-writer"
     },
     {
         img: "10.jpeg",
         title: "Scholarships & Bursaries",
-        count: 10
+        link: "/scholarships-bursaries"
     },
     {
         img: "11.jpeg",
         title: "Free Courses",
-        count: 10
+        link: "/free-courses"
     },
     {
         img: "12.jpeg",
         title: "Mentor Masterclasses",
-        count: 10
+        link: "/mentor-masterclasses"
     },
     {
         img: "13.jpeg",
         title: "R&D Tax Calculator",
-        count: 10
+        link: "/r&d-tax-credits-calculator"
     }
 ];
 
@@ -111,8 +111,8 @@ const CategorySlider2 = () => {
                     {data.map((item, i) => (
                         <SwiperSlide key={i}>
                             <div className="swiper-slide hover-up">
-                                <div className="card-grid-5 card-category hover-up" style={{ backgroundImage: `url(assets/imgs/page/homepage1/how-we-help/${item.img})` }}>
-                                    {/* <Link legacyBehavior href="/"> */}
+                                <div className="card-grid-5 card-category hover-up" style={{cursor: 'pointer', backgroundImage: `url(assets/imgs/page/homepage1/how-we-help/${item.img})` }}>
+                                    <Link legacyBehavior href={item.link}>
                                         <div className="box-cover-img">
                                             <div className="content-bottom">
                                                 <h6 className="color-white mb-5">{item.title}</h6>
@@ -122,7 +122,7 @@ const CategorySlider2 = () => {
                                                 </p> */}
                                             </div>
                                         </div>
-                                    {/* </Link> */}
+                                    </Link>
                                 </div>
                             </div>
                         </SwiperSlide>

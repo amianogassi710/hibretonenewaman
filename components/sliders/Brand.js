@@ -93,7 +93,7 @@ const BrandSlider = () => {
 
                     <SwiperSlide className="centered-swiper">
                         <img
-                            src="assets/imgs/slider/logo/drop logo.webp"
+                            src="assets/imgs/slider/logo/drop logo.jpg"
                             alt="HibretOne"
                         />
                     </SwiperSlide>
