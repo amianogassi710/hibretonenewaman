@@ -114,7 +114,7 @@ export default function Home() {
                         <div className="container">
                             <div className="list-brands mt-40 mb-30">
                                 <div className="box-swiper">
-                                    <h2 className="text-center section-title mb-40 wow animate__animated animate__fadeInUp">
+                                    <h2 className="text-center section-title mb-20 wow animate__animated animate__fadeInUp">
                                         Our Founding Supporters
                                     </h2>
 
