@@ -20,18 +20,21 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
             }
         };
         document.addEventListener("scroll", handleScroll);
+        setClientSide(true);
+    }, [scroll]);
 
+    useEffect(() => {
         if (isLoggedIn) {
             fetch("/auth/login/jwt", {
                 method: "POST",
             }).then((response) => {
                 if (response.status !== 200) {
                     setIsLoggedIn(false);
+                    setUserAccount({});
                 }
             });
         }
-        setClientSide(true);
-    }, [scroll]);
+    },[isLoggedIn])
 
     const handleLogout = async (e) => {
         await fetch("/auth/logout", {

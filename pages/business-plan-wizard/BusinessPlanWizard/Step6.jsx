@@ -132,6 +132,7 @@ const Step6 = ({previousStep, nextStep}) => {
                         Total Initial Investment
                     </Typography>
                     <TextField
+                        id="totalInitialInvestment"
                         label={currencySymbols[step6FormData.currency] || ""}
                         name="totalInitialInvestment"
                         type="number"
@@ -180,9 +181,11 @@ const Step6 = ({previousStep, nextStep}) => {
 
                 <Grid item xs={6}>
                     <Input
+                        id="investmentItem1"
                         name="investmentItem1"
                         value={step6FormData.investmentItem1}
                         onChange={handleChange}
+                        type="text"
                         variant="outlined"
                         autoComplete="on"
                         fullWidth
@@ -190,7 +193,7 @@ const Step6 = ({previousStep, nextStep}) => {
                 </Grid>
                 <Grid item xs={5}>
                     <TextField
-
+                        id="investmentAmount1"
                         label={currencySymbols[step6FormData.currency] || ""}
                         name="investmentAmount1"
                         type="number"
@@ -213,8 +216,10 @@ const Step6 = ({previousStep, nextStep}) => {
 
                 <Grid item xs={6}>
                     <Input
+                        id="investmentItem2"
                         name="investmentItem2"
                         value={step6FormData.investmentItem2}
+                        type="text"
                         onChange={handleChange}
                         variant="outlined"
                         autoComplete="on"
@@ -223,6 +228,7 @@ const Step6 = ({previousStep, nextStep}) => {
                 </Grid>
                 <Grid item xs={5}>
                     <TextField
+                        id="investmentAmount2"
                         label={currencySymbols[step6FormData.currency] || ""}
                         name="investmentAmount2"
                         type="number"
@@ -245,8 +251,10 @@ const Step6 = ({previousStep, nextStep}) => {
 
                 <Grid item xs={6}>
                     <Input
+                        id="investmentItem3"
                         name="investmentItem3"
                         value={step6FormData.investmentItem3}
+                        type="text"
                         onChange={handleChange}
                         variant="outlined"
                         autoComplete="on"
@@ -255,6 +263,7 @@ const Step6 = ({previousStep, nextStep}) => {
                 </Grid>
                 <Grid item xs={5}>
                     <TextField
+                        id="investmentAmount3"
                         label={currencySymbols[step6FormData.currency] || ""}
                         name="investmentAmount3"
                         type="number"
@@ -277,8 +286,10 @@ const Step6 = ({previousStep, nextStep}) => {
 
                 <Grid item xs={6}>
                     <Input
+                        id="investmentItem4"
                         name="investmentItem4"
                         value={step6FormData.investmentItem4}
+                        type="text"
                         onChange={handleChange}
                         variant="outlined"
                         autoComplete="on"
@@ -287,6 +298,7 @@ const Step6 = ({previousStep, nextStep}) => {
                 </Grid>
                 <Grid item xs={5}>
                     <TextField
+                        id="investmentAmount4"
                         label={currencySymbols[step6FormData.currency] || ""}
                         name="investmentAmount4"
                         type="number"
@@ -309,8 +321,10 @@ const Step6 = ({previousStep, nextStep}) => {
 
                 <Grid item xs={6}>
                     <Input
+                        id="investmentItem5"
                         name="investmentItem5"
                         value={step6FormData.investmentItem5}
+                        type="text"
                         onChange={handleChange}
                         variant="outlined"
                         autoComplete="on"
@@ -319,6 +333,7 @@ const Step6 = ({previousStep, nextStep}) => {
                 </Grid>
                 <Grid item xs={5}>
                     <TextField
+                        id="investmentAmount5"
                         label={currencySymbols[step6FormData.currency] || ""}
                         name="investmentAmount5"
                         type="number"

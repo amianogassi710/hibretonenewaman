@@ -75,6 +75,7 @@ const Step3 = ({previousStep, nextStep}) => {
 
             const suggestions = response.data.suggestion;
             setSuggestions1(suggestions);
+            setErrorMsg1('');
         } catch (error) {
             setErrorMsg1('Failed to generate suggestions. Please try again.');
         } finally {
@@ -120,6 +121,7 @@ const Step3 = ({previousStep, nextStep}) => {
 
             const suggestions = response.data.suggestion;
             setSuggestions2(suggestions);
+            setErrorMsg2('');
         } catch (error) {
             setErrorMsg2('Failed to generate suggestions. Please try again.');
         } finally {
@@ -182,8 +184,7 @@ const Step3 = ({previousStep, nextStep}) => {
     );
 
     return (
-        <form noValidate autoComplete="off" onSubmit={onFinish}>
-            {/* Customer Group 1 */}
+        <form noValidate autoComplete="on" onSubmit={onFinish}>
             <Grid container direction="column" spacing={2}>
                 <Grid item>
                     <Typography variant="h6" component="legend">
@@ -197,12 +198,14 @@ const Step3 = ({previousStep, nextStep}) => {
                             {requiredLabel('Customer Group 1 Description', true)}
                         </Typography>
                         <Input
+                            id="group1Description"
                             name="group1Description"
                             placeholder="Enter description"
                             value={step3FormData.group1Description}
                             onChange={handleChange}
                             onFocus={handleFocus1}
                             variant="outlined"
+                            autoComplete="on"
                         />
                         {error.group1Description && <FormHelperText>Please input a description.</FormHelperText>}
                     </FormControl>
@@ -265,6 +268,7 @@ const Step3 = ({previousStep, nextStep}) => {
                             {requiredLabel('Customer Group 1 Income Level', true)}
                         </Typography>
                         <RadioGroup
+                            id="group1IncomeLevel"
                             name="group1IncomeLevel"
                             value={step3FormData.group1IncomeLevel}
                             onChange={handleChange}
@@ -293,12 +297,14 @@ const Step3 = ({previousStep, nextStep}) => {
                             {requiredLabel('Customer Group 2 Description', false)}
                         </Typography>
                         <Input
+                            id="group2Description"
                             name="group2Description"
                             placeholder="Enter description (optional)"
                             value={step3FormData.group2Description}
                             onChange={handleChange}
                             onFocus={handleFocus2}
                             variant="outlined"
+                            autoComplete="on"
                         />
                     </FormControl>
                     {loading2 && (
@@ -360,6 +366,7 @@ const Step3 = ({previousStep, nextStep}) => {
                             {requiredLabel('Customer Group 2 Income Level', false)}
                         </Typography>
                         <RadioGroup
+                            id="group2IncomeLevel"
                             name="group2IncomeLevel"
                             value={step3FormData.group2IncomeLevel}
                             onChange={handleChange}

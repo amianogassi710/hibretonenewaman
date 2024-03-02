@@ -4,7 +4,7 @@ import {
     Select,
     MenuItem,
     FormControl,
-    Typography, Divider, Button, FormHelperText, InputLabel, TextField, Input
+    Typography, Divider, Button, FormHelperText, InputLabel, TextField
 } from '@mui/material';
 import {useSessionStorage} from "react-use";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
@@ -100,6 +100,7 @@ const Step7 = ({previousStep, nextStep}) => {
                             {requiredLabel('Expected First Year Revenue', true)}
                         </Typography>
                         <TextField
+                            id="expectedRevenue"
                             label={currencySymbols[step6FormData.currency] || ""}
                             name="expectedRevenue"
                             type="number"
@@ -120,6 +121,7 @@ const Step7 = ({previousStep, nextStep}) => {
                             {requiredLabel('How much do you expect your revenue to grow each year?', true)}
                         </Typography>
                         <TextField
+                            id="growthRate"
                             label="%"
                             name="growthRate"
                             type="number"
@@ -165,6 +167,7 @@ const Step7 = ({previousStep, nextStep}) => {
 
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage1"
                             label="%"
                             name="revenuePercentage1"
                             type="number"
@@ -192,6 +195,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage2"
                             label="%"
                             name="revenuePercentage2"
                             type="number"
@@ -218,6 +222,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage3"
                             label="%"
                             name="revenuePercentage3"
                             type="number"
@@ -244,6 +249,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage4"
                             label="%"
                             name="revenuePercentage4"
                             type="number"
@@ -270,6 +276,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage5"
                             label="%"
                             name="revenuePercentage5"
                             type="number"
@@ -296,6 +303,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage6"
                             label="%"
                             name="revenuePercentage6"
                             type="number"
@@ -322,6 +330,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage7"
                             label="%"
                             name="revenuePercentage7"
                             type="number"
@@ -348,6 +357,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage8"
                             label="%"
                             name="revenuePercentage8"
                             type="number"
@@ -374,6 +384,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage9"
                             label="%"
                             name="revenuePercentage9"
                             type="number"
@@ -400,6 +411,7 @@ const Step7 = ({previousStep, nextStep}) => {
                     </Grid>
                     <Grid item xs={4}>
                         <TextField
+                            id="revenuePercentage10"
                             label="%"
                             name="revenuePercentage10"
                             type="number"

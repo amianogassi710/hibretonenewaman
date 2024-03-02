@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import BackToTop from '../elements/BackToTop';
 import Footer from './Footer';
-import Header from './Header';
-import Sidebar from './Sidebar';
 
-const Layout = ({ children }) => {
+const NoSSRHeader = dynamic(() => import('./Header'), {ssr: false})
+import Sidebar from './Sidebar';
+import dynamic from "next/dynamic";
+
+const Layout = ({children}) => {
     const [openClass, setOpenClass] = useState('');
 
     const handleOpen = () => {
@@ -20,14 +22,14 @@ const Layout = ({ children }) => {
     }
     return (
         <>
-            <div className="body-overlay-1" onClick={handleRemove} />
-            <Header handleOpen={handleOpen} handleRemove={handleRemove} openClass={openClass} />
-            <Sidebar openClass={openClass} />
+            <div className="body-overlay-1" onClick={handleRemove}/>
+            <NoSSRHeader handleOpen={handleOpen} handleRemove={handleRemove} openClass={openClass}/>
+            <Sidebar openClass={openClass}/>
             <main className="main">
                 {children}
             </main>
-            <Footer />
-            <BackToTop />
+            <Footer/>
+            <BackToTop/>
         </>
     );
 };
