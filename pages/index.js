@@ -1,6 +1,6 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import BlogSlider from "./../components/sliders/Blog";
 
@@ -125,246 +125,306 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-20">
-                        <div className="container">
-                            <div className="text-center">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
-                                    Who we Help
-                                </h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                    Aspirers wanting to create wealth through
-                                    enterprise
-                                </p>
-                            </div>
-                        </div>
-                        <WhoWeHelp />
-                    </section>
-                    <section className="section-box mt-20">
-                        <YellowBanner />
-                    </section>
-                    <section className="section-box mt-50">
-                        <div className="section-box wow animate__animated animate__fadeIn">
+                    <div className="background-random">
+                        <section className="section-box mt-20">
                             <div className="container">
                                 <div className="text-center">
                                     <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
-                                        How we Help
+                                        Who we Help
                                     </h2>
                                     <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                        Evidence-led resources & tools to build
-                                        enterprise success
+                                        Aspirers wanting to create wealth
+                                        through enterprise
                                     </p>
                                 </div>
-                                <div className="box-swiper mt-50">
-                                    <CategorySlider2 />
-                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <section className="section-box pt-50 pb-50 mt-80">
-                        <div className="container">
-                            <h2 className="section-title text-center mb-40 wow animate__animated animate__fadeInUp">
-                                Delivering Economic, Social and Moral impact
-                            </h2>
-                            <div className="row">
-                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-30 no-padding">
-                                    <img
-                                        className="img-job-search"
-                                        src="assets/imgs/page/homepage1/Business.jpg"
-                                        alt=""
-                                    />
-                                </div>
-                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                    <div className="box-checkbox mb-30">
-                                        <h6 style={{ color: '#3C65F5' }}>Economic</h6>
-                                        <p className="font-md color-text-paragraph-2" style={{ textAlign: 'justify' }}>
-                                            Entrepreneurship is multifaceted -
-                                            job creation, innovation, economic
-                                            growth, wealth creation, tax
-                                            revenue, diversity. A thriving
-                                            entrepreneurial environment is often
-                                            seen as a key driver of economic
-                                            prosperity and societal progress.
+                            <WhoWeHelp />
+                        </section>
+                        <section className="section-box mt-20">
+                            <YellowBanner />
+                        </section>
+                        <section className="section-box mt-50">
+                            <div className="section-box wow animate__animated animate__fadeIn">
+                                <div className="container">
+                                    <div className="text-center">
+                                        <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
+                                            How we Help
+                                        </h2>
+                                        <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
+                                            Evidence-led resources & tools to
+                                            build enterprise success
                                         </p>
                                     </div>
-                                    <div className="box-checkbox mb-30">
-                                        <h6 style={{ color: '#3AAB67' }}>Social</h6>
-                                        <p className="font-md color-text-paragraph-2" style={{ textAlign: 'justify' }}>
-                                            Entrepreneurship goes beyond
-                                            economic impact. The potential to
-                                            drive positive social change,
-                                            address societal challenges, and
-                                            contribute to the overall well-being
-                                            of communities. Creating jobs which
-                                            contribute to reducing unemployment
-                                            rates and improving the economic
-                                            well-being of communities.
-                                        </p>
-                                    </div>
-                                    <div className="box-checkbox mb-30">
-                                        <h6 style={{ color: '#F58A3C' }}>Moral</h6>
-                                        <p className="font-md color-text-paragraph-2" style={{ textAlign: 'justify' }}>
-                                            Entrepreneurship involves leadership
-                                            grounded in ethical principles. Many
-                                            successful entrepreneurs engage in
-                                            philanthropy and charitable
-                                            activities, using their wealth and
-                                            influence to address issues
-                                            contributing to the society’s
-                                            welfare. Valuing diversity and
-                                            inclusion in more equitable and just
-                                            societies.
-                                            
-                                        </p>
+                                    <div className="box-swiper mt-50">
+                                        <CategorySlider2 />
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                    <section className="section-box mt-50">
-                        <div className="container">
-                            <div className="row">
-                                <h2 className="text-center section-title mb-40 wow animate__animated animate__fadeInUp">
-                                    Opportunities for entrepreneurs, at all
-                                    stages of growth
+                        </section>
+                        <section className="section-box pt-50 pb-20 mt-10">
+                            <div className="container">
+                                <h2 className="section-title text-center mb-40 wow animate__animated animate__fadeInUp">
+                                    Delivering Economic, Social and Moral impact
                                 </h2>
-                                <div className="col-lg-6 col-md-12 mb-15 mb-lg-0">
-                                    <div className="box-radius-8 bg-urgent hover-up">
-                                        <div className="image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                            <figure>
-                                                <img
-                                                    src="assets/imgs/page/homepage1/opportunities/1.jpg"
-                                                    alt="jobBox"
-                                                />
-                                            </figure>
-                                        </div>
-                                        <div className="text-info">
-                                            <h3 className="pb-20">
-                                                Making entrepreneurship
-                                                inclusive
-                                            </h3>
-                                            <p className="font-sm color-text-paragraph-2">
-                                                Removing barriers for the
-                                                underrepresented, the overlooked
-                                                and the missing
-                                                entrepreneurs.‘Up to £250
-                                                billion of new value could be
-                                                added to the UK economy if women
-                                                started
-                                                <button className="btn-show-more" >...more</button>
-                                            </p>
-                                            {/* <div className="mt-15">
-                                                <Link legacyBehavior href="#">
-                                                    <a className="btn btn-arrow-right">
-                                                        Read More
-                                                    </a>
-                                                </Link>
-                                            </div> */}
-                                        </div>
+                                <div className="row">
+                                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-30 no-padding">
+                                        <img
+                                            className="img-job-search"
+                                            src="assets/imgs/page/homepage1/Business.jpg"
+                                            alt=""
+                                        />
                                     </div>
-                                </div>
-                                <div className="col-lg-6 col-md-12">
-                                    <div className="box-radius-8 bg-9 hover-up">
-                                        <div className="image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                            <figure>
-                                                <img
-                                                    src="assets/imgs/page/homepage1/opportunities/2.jpg"
-                                                    alt="jobBox"
-                                                />
-                                            </figure>
-                                        </div>
-                                        <div className="text-info">
-                                            <h3 className="pb-20">
-                                                Career pathways into better-paid
-                                                jobs
-                                            </h3>
-                                            <p className="font-sm color-text-paragraph-2">
-                                                Creating higher-skilled
-                                                employment opportunities for
-                                                low-paid and unsuccessful
-                                                entrepreneurs.‘Average
-                                                self-employed female worker
-                                                would earn just over 76% more
-                                                <button className="btn-show-more" >...more</button>
+                                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                                        <div className="box-checkbox mb-30">
+                                            <h6 style={{ color: "#3C65F5" }}>
+                                                Economic
+                                            </h6>
+                                            <p
+                                                className="font-md color-text-paragraph-2"
+                                                style={{ textAlign: "justify" }}
+                                            >
+                                                Entrepreneurship is multifaceted
+                                                - job creation, innovation,
+                                                economic growth, wealth
+                                                creation, tax revenue,
+                                                diversity. A thriving
+                                                entrepreneurial environment is
+                                                often seen as a key driver of
+                                                economic prosperity and societal
+                                                progress.
                                             </p>
-                                            {/* <div className="mt-15">
-                                                <Link legacyBehavior href="#">
-                                                    <a className="btn btn-arrow-right">
-                                                        Read More
-                                                    </a>
-                                                </Link>
-                                            </div> */}
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-12 mb-15 mb-lg-0">
-                                    <div className="box-radius-8 bg-16 hover-up">
-                                        <div className="image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                            <figure>
-                                                <img
-                                                    src="assets/imgs/page/homepage1/opportunities/3.jpg"
-                                                    alt="jobBox"
-                                                />
-                                            </figure>
-                                        </div>
-                                        <div className="text-info">
-                                            <h3 className="pb-40">Improving startup success</h3>
-                                            <div className="empty-line"></div>
-                                            <p className="font-sm color-text-paragraph-2">
-                                                Creating higher-skilled
-                                                employment opportunities for
-                                                low-paid and unsuccessful
-                                                entrepreneurs.‘80% of
-                                                cooperatives are still trading
-                                                after
-                                                <button className="btn-show-more" >...more</button>
+                                        <div className="box-checkbox mb-30">
+                                            <h6 style={{ color: "#3AAB67" }}>
+                                                Social
+                                            </h6>
+                                            <p
+                                                className="font-md color-text-paragraph-2"
+                                                style={{ textAlign: "justify" }}
+                                            >
+                                                Entrepreneurship goes beyond
+                                                economic impact. The potential
+                                                to drive positive social change,
+                                                address societal challenges, and
+                                                contribute to the overall
+                                                well-being of communities.
+                                                Creating jobs which contribute
+                                                to reducing unemployment rates
+                                                and improving the economic
+                                                well-being of communities.
                                             </p>
-                                            {/* <div className="mt-15">
-                                                <Link legacyBehavior href="#">
-                                                    <a className="btn btn-arrow-right">
-                                                        Read More
-                                                    </a>
-                                                </Link>
-                                            </div> */}
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-6 col-md-12">
-                                    <div className="box-radius-8 bg-17 hover-up">
-                                        <div className="image" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                                            <figure>
-                                                <img
-                                                    src="assets/imgs/page/homepage1/opportunities/4.jpg"
-                                                    alt="jobBox"
-                                                />
-                                            </figure>
-                                        </div>
-                                        <div className="text-info">
-                                            <h3 className="pb-20">
-                                                Partnership and revenue
-                                                opportunities
-                                            </h3>
-                                            <p className="font-sm color-text-paragraph-2">
-                                                Creating startup and scale up
-                                                B2B  social capital connections
-                                                in a safe space.‘80% of
-                                                corporates believe that startups
-                                                can have a positive impact on a
-                                                large company’s approach to
-                                                <button className="btn-show-more" >...more</button>
+                                        <div className="box-checkbox mb-30">
+                                            <h6 style={{ color: "#F58A3C" }}>
+                                                Moral
+                                            </h6>
+                                            <p
+                                                className="font-md color-text-paragraph-2"
+                                                style={{ textAlign: "justify" }}
+                                            >
+                                                Entrepreneurship involves
+                                                leadership grounded in ethical
+                                                principles. Many successful
+                                                entrepreneurs engage in
+                                                philanthropy and charitable
+                                                activities, using their wealth
+                                                and influence to address issues
+                                                contributing to the society’s
+                                                welfare. Valuing diversity and
+                                                inclusion in more equitable and
+                                                just societies.
                                             </p>
-                                            {/* <div className="mt-15">
-                                                <Link legacyBehavior href="#">
-                                                    <a className="btn btn-arrow-right">
-                                                        Read More
-                                                    </a>
-                                                </Link>
-                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                        <section className="section-box mt-10">
+                            <div className="container">
+                                <div className="row">
+                                    <h2 className="text-center section-title mb-40 wow animate__animated animate__fadeInUp">
+                                        Opportunities for entrepreneurs, at all
+                                        stages of growth
+                                    </h2>
+                                    <div className="col-lg-6 col-md-12 mb-15 mb-lg-0">
+                                        <div className="box-radius-8 bg-urgent hover-up">
+                                            <div
+                                                className="image"
+                                                style={{
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <figure>
+                                                    <img
+                                                        src="assets/imgs/page/homepage1/opportunities/1.jpg"
+                                                        alt="jobBox"
+                                                    />
+                                                </figure>
+                                            </div>
+                                            <div className="text-info">
+                                                <h3 className="pb-20">
+                                                    Making entrepreneurship
+                                                    inclusive
+                                                </h3>
+                                                <p className="font-sm color-text-paragraph-2">
+                                                    Removing barriers for the
+                                                    underrepresented, the
+                                                    overlooked and the missing
+                                                    entrepreneurs.‘Up to £250
+                                                    billion of new value could
+                                                    be added to the UK economy
+                                                    if women started
+                                                    <button className="btn-show-more">
+                                                        ...more
+                                                    </button>
+                                                </p>
+                                                {/* <div className="mt-15">
+                                                <Link legacyBehavior href="#">
+                                                    <a className="btn btn-arrow-right">
+                                                        Read More
+                                                    </a>
+                                                </Link>
+                                            </div> */}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 col-md-12">
+                                        <div className="box-radius-8 bg-9 hover-up">
+                                            <div
+                                                className="image"
+                                                style={{
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <figure>
+                                                    <img
+                                                        src="assets/imgs/page/homepage1/opportunities/2.jpg"
+                                                        alt="jobBox"
+                                                    />
+                                                </figure>
+                                            </div>
+                                            <div className="text-info">
+                                                <h3 className="pb-20">
+                                                    Career pathways into
+                                                    better-paid jobs
+                                                </h3>
+                                                <p className="font-sm color-text-paragraph-2">
+                                                    Creating higher-skilled
+                                                    employment opportunities for
+                                                    low-paid and unsuccessful
+                                                    entrepreneurs.‘Average
+                                                    self-employed female worker
+                                                    would earn just over 76%
+                                                    more
+                                                    <button className="btn-show-more">
+                                                        ...more
+                                                    </button>
+                                                </p>
+                                                {/* <div className="mt-15">
+                                                <Link legacyBehavior href="#">
+                                                    <a className="btn btn-arrow-right">
+                                                        Read More
+                                                    </a>
+                                                </Link>
+                                            </div> */}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 col-md-12 mb-15 mb-lg-0">
+                                        <div className="box-radius-8 bg-16 hover-up">
+                                            <div
+                                                className="image"
+                                                style={{
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <figure>
+                                                    <img
+                                                        src="assets/imgs/page/homepage1/opportunities/3.jpg"
+                                                        alt="jobBox"
+                                                    />
+                                                </figure>
+                                            </div>
+                                            <div className="text-info">
+                                                <h3 className="pb-40">
+                                                    Improving startup success
+                                                </h3>
+                                                <div className="empty-line"></div>
+                                                <p className="font-sm color-text-paragraph-2">
+                                                    Creating higher-skilled
+                                                    employment opportunities for
+                                                    low-paid and unsuccessful
+                                                    entrepreneurs.‘80% of
+                                                    cooperatives are still
+                                                    trading after
+                                                    <button className="btn-show-more">
+                                                        ...more
+                                                    </button>
+                                                </p>
+                                                {/* <div className="mt-15">
+                                                <Link legacyBehavior href="#">
+                                                    <a className="btn btn-arrow-right">
+                                                        Read More
+                                                    </a>
+                                                </Link>
+                                            </div> */}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6 col-md-12">
+                                        <div className="box-radius-8 bg-17 hover-up">
+                                            <div
+                                                className="image"
+                                                style={{
+                                                    display: "flex",
+                                                    justifyContent: "center",
+                                                    alignItems: "center",
+                                                }}
+                                            >
+                                                <figure>
+                                                    <img
+                                                        src="assets/imgs/page/homepage1/opportunities/4.jpg"
+                                                        alt="jobBox"
+                                                    />
+                                                </figure>
+                                            </div>
+                                            <div className="text-info">
+                                                <h3 className="pb-20">
+                                                    Partnership and revenue
+                                                    opportunities
+                                                </h3>
+                                                <p className="font-sm color-text-paragraph-2">
+                                                    Creating startup and scale
+                                                    up B2B  social capital
+                                                    connections in a safe
+                                                    space.‘80% of corporates
+                                                    believe that startups can
+                                                    have a positive impact on a
+                                                    large company’s approach to
+                                                    <button className="btn-show-more">
+                                                        ...more
+                                                    </button>
+                                                </p>
+                                                {/* <div className="mt-15">
+                                                <Link legacyBehavior href="#">
+                                                    <a className="btn btn-arrow-right">
+                                                        Read More
+                                                    </a>
+                                                </Link>
+                                            </div> */}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
                     <section className="section-box mt-50">
                         <div className="section-box wow animate__animated animate__fadeIn">
                             <div className="container">
@@ -388,6 +448,7 @@ export default function Home() {
                             </div>
                         </div>
                     </section>
+                    </div>
                     <Subscription />
                 </div>
             </Layout>
