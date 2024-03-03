@@ -58,7 +58,7 @@ const Footer = () => {
                             <li>
                                 <a href="#">Accessibility</a></li>
                             <li>
-                                <a href="#">Schools, Students & Academia</a></li>
+                                <a href="#">Schools</a></li>
                         </ul>
                     </div>
                     <div className="footer-col-5 col-md-2 col-xs-6">
@@ -71,12 +71,13 @@ const Footer = () => {
                             <li>
                                 <a href="#">Events</a></li>
                             <li>
+                                <a href="#">Universities</a></li>
+                            <li>
                                 <a href="#">Contact</a></li>
                         </ul>
                     </div>
                     <div className="footer-col-6 col-md-3 col-sm-12">
                         <h6 className="mb-20">Download App</h6>
-                        <p className="color-text-paragraph-2 font-xs">Download our Apps and get extra 15% Discount on your first Order…!</p>
                         <div className="mt-15">
                             <a className="mr-5" href="#"><img src="assets/imgs/template/icons/app-store.png" alt="joxBox" /></a>
                             <a href="#"><img src="assets/imgs/template/icons/android.png" alt="joxBox" /></a></div>
