@@ -2588,8 +2588,8 @@ label {
 }
 .card-grid-5 .box-cover-img .content-bottom {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0px;
+  left: 10px;
 }
 .card-grid-5 .img-main {
   width: 100%;
