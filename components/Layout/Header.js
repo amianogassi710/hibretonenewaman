@@ -23,19 +23,6 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
         setClientSide(true);
     }, [scroll]);
 
-    useEffect(() => {
-        if (isLoggedIn) {
-            fetch("/auth/login/jwt", {
-                method: "POST",
-            }).then((response) => {
-                if (response.status !== 200) {
-                    setIsLoggedIn(false);
-                    setUserAccount({});
-                }
-            });
-        }
-    },[isLoggedIn])
-
     const handleLogout = async (e) => {
         await fetch("/auth/logout", {
             method: "POST",

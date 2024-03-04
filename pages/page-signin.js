@@ -3,8 +3,8 @@
 import Layout from "../components/Layout/Layout";
 import Link from "next/link";
 import React, {useState} from 'react';
-import { useLocalStorage } from 'react-use';
-import { useRouter } from 'next/router';
+import {useLocalStorage} from 'react-use';
+import {useRouter} from 'next/router';
 
 export default function Signin() {
     const [email, setEmail] = useState('');
@@ -14,8 +14,8 @@ export default function Signin() {
     const [passwordError, setPasswordError] = useState('');
     const [loginError, setLoginError] = useState(''); // Add a state for login errors
 
-    const [userInfo, setUserInfo] = useLocalStorage('user_account', null);
     const [isLoggedIn, setIsLoggedIn] = useLocalStorage('is_logged_in', false);
+    const [userAccount, setUserAccount] = useLocalStorage("user_account", {});
 
     const router = useRouter();
 
@@ -51,7 +51,7 @@ export default function Signin() {
             return;
         }
         try {
-            const response = await fetch('/auth/login/internal', {
+            const responseInternal = await fetch('/auth/login/internal', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -62,16 +62,25 @@ export default function Signin() {
                 }),
             });
 
-            if (!response.ok) {
+            if (!responseInternal.ok) {
                 setLoginError('Failed to login. Please check your email and password.');
                 return;
             }
 
-            const data = await response.json();
-            setUserInfo(data.user_account);
+            const dataInternal = await responseInternal.json();
+            setUserAccount(dataInternal.user_account);
             setIsLoggedIn(true);
 
-            router. push('/');
+            const responseJwt = await fetch("/auth/login/jwt", {
+                method: "POST",
+            });
+
+            if (!responseJwt.ok) {
+                setIsLoggedIn(false);
+                setUserAccount({});
+            }
+
+            router.push('/');
 
         } catch (error) {
             console.error('Login error:', error);
