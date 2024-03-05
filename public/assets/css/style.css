@@ -10458,6 +10458,34 @@ ul li:last-child .card-list-4 {
   background: #05264E;
 }
 
+.background-random-business-plan-writer {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-random-business-plan-writer::before,
+.background-random-business-plan-writer::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 1500px;
+  background: #F2F6FD;
+  transform-origin: top right;
+  z-index: -1;
+}
+
+.background-random-business-plan-writer::before {
+  transform: rotate(-25deg);
+  top: -50px;
+  left: -500px;
+}
+
+.background-random-business-plan-writer::after {
+  transform: rotate(25deg);
+  top: 800px;
+  right: -500px;
+}
+
 @media (max-width: 1399.98px) {
   .custom-class {
     display: block;
@@ -11162,4 +11190,6 @@ ul li:last-child .card-list-4 {
   .header-right {
     display: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
