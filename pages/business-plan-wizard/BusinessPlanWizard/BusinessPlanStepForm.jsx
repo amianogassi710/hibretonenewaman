@@ -17,18 +17,10 @@ const BusinessPlanStepForm = () => {
     const [currentStepStr, setCurrentStepStr] = useSessionStorage('currentStep', '1');
     const currentStep = parseInt(currentStepStr, 10);
 
-    const [clientSide, setClientSide] = React.useState(false);
-
     const nextStep = () => setCurrentStepStr(String(currentStep + 1));
     const previousStep = () => setCurrentStepStr(String(currentStep - 1));
 
     const stepsItems = ['Business Plan Objective', 'Basic Business Information', 'Customer Group Details', 'Product or Service Details', 'Success Drivers', 'Initial Investment Details', 'Financial Details and Plan Language',];
-
-    React.useEffect(() => {
-        setClientSide(true);
-    }, []);
-
-    if (!clientSide) return null;
 
     return (
         <Grid container justifyContent="center" alignItems="center" direction="column"

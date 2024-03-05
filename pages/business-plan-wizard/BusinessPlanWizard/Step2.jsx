@@ -33,14 +33,6 @@ const Step2 = ({previousStep, nextStep}) => {
         serviceArea: false
     });
 
-    const [clientSide, setClientSide] = useState(false);
-
-    useEffect(() => {
-        setClientSide(true);
-    }, []);
-
-    if (!clientSide) return null;
-
     const handleChange = (e) => {
         const {name, value} = e.target;
         setStep2FormData(prevState => ({

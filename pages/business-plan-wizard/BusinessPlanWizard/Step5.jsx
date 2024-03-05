@@ -22,12 +22,6 @@ const Step5 = ({previousStep, nextStep}) => {
         successDriver1: false,
     });
 
-    const [clientSide, setClientSide] = useState(false);
-
-    useEffect(() => {
-        setClientSide(true);
-    }, []);
-
     const handleChange = (e) => {
         const {name, value} = e.target;
         setStep5FormData(prevState => ({
@@ -36,8 +30,6 @@ const Step5 = ({previousStep, nextStep}) => {
         }));
         setError(prev => ({...prev, [name]: false}));
     };
-
-    if (!clientSide) return null;
 
     const validateForm = () => {
         const newErrors = {...error};

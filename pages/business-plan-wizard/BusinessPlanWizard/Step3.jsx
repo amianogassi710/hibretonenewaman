@@ -42,8 +42,6 @@ const Step3 = ({previousStep, nextStep}) => {
         group1IncomeLevel: false,
     });
 
-    const [clientSide, setClientSide] = useState(false);
-
     const [showSuggestions1, setShowSuggestions1] = useState(false);
     const [suggestions1, setSuggestions1] = useState([]);
     const [loading1, setLoading1] = useState(false);
@@ -55,12 +53,6 @@ const Step3 = ({previousStep, nextStep}) => {
     const [loading2, setLoading2] = useState(false);
     const [loadedSuggestions2, setLoadedSuggestions2] = useState(false);
     const [errorMsg2, setErrorMsg2] = useState('');
-
-    useEffect(() => {
-        setClientSide(true);
-    }, []);
-
-    if (!clientSide) return null;
 
     const fetchSuggestionData1 = async () => {
         try {
