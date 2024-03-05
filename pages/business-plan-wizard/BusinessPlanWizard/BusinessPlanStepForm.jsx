@@ -1,16 +1,16 @@
 import React from 'react';
 import {useSessionStorage} from 'react-use';
-import {Typography, Stepper, Step, StepLabel, Grid, IconButton, Box} from '@mui/material';
+import {Typography, Stepper, Step, StepLabel, Grid, IconButton, Box, MobileStepper} from '@mui/material';
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Link from "next/link";
 import {ArrowBack} from "@mui/icons-material";
 import dynamic from "next/dynamic";
 
-const NoSSRStep3 = dynamic(() => import('./Step3'), { ssr: false })
-const NoSSRStep4 = dynamic(() => import('./Step4'), { ssr: false })
-const NoSSRStep5 = dynamic(() => import('./Step5'), { ssr: false })
-const NoSSRStep6 = dynamic(() => import('./Step6'), { ssr: false })
+const NoSSRStep3 = dynamic(() => import('./Step3'), {ssr: false})
+const NoSSRStep4 = dynamic(() => import('./Step4'), {ssr: false})
+const NoSSRStep5 = dynamic(() => import('./Step5'), {ssr: false})
+const NoSSRStep6 = dynamic(() => import('./Step6'), {ssr: false})
 import Step7 from './Step7';
 
 const BusinessPlanStepForm = () => {
@@ -30,42 +30,81 @@ const BusinessPlanStepForm = () => {
 
     if (!clientSide) return null;
 
-    return (<Grid container justifyContent="center" alignItems="center" direction="column"
-                  sx={{width: '100%', margin: '0 auto'}}>
-        <Grid item xs={12} md={12} lg={6}
-              sx={{display: 'flex', alignItems: 'center', width: {xs: '100%', md: '65%', lg: '65%'}, margin: '0 auto'}}>
-            <Box sx={{width: 100, mb: 3}}>
-                <Link legacyBehavior href="/business-plan-writer">
-                    <IconButton sx={{
-                        transform: 'scale(1.25)',
-                        color: 'primary.main',
-                    }}>
-                        <ArrowBack/>
-                    </IconButton>
-                </Link>
-            </Box>
-            <Typography variant="h6" sx={{flexGrow: 2, textAlign: 'center', mb: 3}}>
-                Business Plan Writer
-            </Typography>
-            <Box sx={{width: 100}}/>
+    return (
+        <Grid container justifyContent="center" alignItems="center" direction="column"
+              sx={{width: '100%', margin: '0 auto'}}>
+            <Grid item xs={12} md={12} lg={6}
+                  sx={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      width: {xs: '100%', md: '70%', lg: '60%'},
+                      margin: '0 auto'
+                  }}>
+                <Box sx={{width: 30, mb: 1}}>
+                    <Link legacyBehavior href="/business-plan-writer">
+                        <IconButton sx={{
+                            transform: 'scale(1.25)',
+                            color: 'primary.main',
+                        }}>
+                            <ArrowBack/>
+                        </IconButton>
+                    </Link>
+                </Box>
+                <Typography variant="h6" sx={{flexGrow: 2, textAlign: 'center', mb: 1}}>
+                    Business Plan Writer
+                </Typography>
+                <Box sx={{width: 30}}/>
+            </Grid>
+            <Grid item lg={12} justifyContent="center"
+                  sx={{width: {lg: '65%'}, mt: 1, display: {xs: 'none', md: "none", lg: 'flex'}}}>
+                <Stepper activeStep={currentStep - 1} alternativeLabel>
+                    {stepsItems.map((label) => (<Step key={label}>
+                        <StepLabel>{label}</StepLabel>
+                    </Step>))}
+                </Stepper>
+            </Grid>
+            <Grid item xs={12}
+                  sx={{
+                      display: {xs: 'flex', md: "flex", lg: 'none'},
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: '100%', // This ensures the Grid item is full width
+                  }}
+            >
+                <MobileStepper
+                    variant="progress"
+                    steps={stepsItems.length}
+                    position="static"
+                    activeStep={currentStep - 1}
+                    sx={{
+                        width: '100%',
+                        justifyContent: 'center',
+                        flexGrow: 1,
+                    }}
+                />
+            </Grid>
+            <Grid item xs={12}
+                  sx={{
+                      display: { xs: 'flex', md: "flex", lg: 'none' },
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: '100%',
+                  }}>
+                <Typography sx={{ color: 'primary.main', textAlign: 'center' }}>
+                    {stepsItems[currentStep - 1]} ({currentStep}/{stepsItems.length})
+                </Typography>
+            </Grid>
+            <Grid item xs={12} md={12} lg={6} sx={{mt: 2, width: {xs: '90%', md: '60%', lg: '50%'}}}>
+                {currentStep === 1 && <Step1 nextStep={nextStep}/>}
+                {currentStep === 2 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 3 && <NoSSRStep3 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 4 && <NoSSRStep4 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 5 && <NoSSRStep5 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 6 && <NoSSRStep6 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 7 && <Step7 nextStep={nextStep} previousStep={previousStep}/>}
+            </Grid>
         </Grid>
-        <Grid item xs={12} md={12} lg={6} sx={{width: {xs: '90%', md: '65%', lg: '65%'}, margin: '0 auto'}}>
-            <Stepper activeStep={currentStep - 1} alternativeLabel>
-                {stepsItems.map((label) => (<Step key={label}>
-                    <StepLabel>{label}</StepLabel>
-                </Step>))}
-            </Stepper>
-        </Grid>
-        <Grid item xs={12} md={12} lg={6} sx={{mt: 4, width: {xs: '90%', md: '50%', lg: '50%'}}}>
-            {currentStep === 1 && <Step1 nextStep={nextStep}/>}
-            {currentStep === 2 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 3 && <NoSSRStep3 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 4 && <NoSSRStep4 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 5 && <NoSSRStep5 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 6 && <NoSSRStep6 nextStep={nextStep} previousStep={previousStep}/>}
-            {currentStep === 7 && <Step7 nextStep={nextStep} previousStep={previousStep}/>}
-        </Grid>
-    </Grid>);
+    );
 };
 
 export default BusinessPlanStepForm;

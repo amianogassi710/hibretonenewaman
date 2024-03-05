@@ -31,6 +31,12 @@ const Step7 = ({previousStep, nextStep}) => {
         revenuePercentage2: '',
         revenuePercentage3: '',
         revenuePercentage4: '',
+        revenuePercentage5: '1',
+        revenuePercentage6: '2',
+        revenuePercentage7: '0',
+        revenuePercentage8: '1',
+        revenuePercentage9: '0',
+        revenuePercentage10: '20',
     });
     const [error, setError] = useState({
         language: false,
