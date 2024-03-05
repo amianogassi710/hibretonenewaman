@@ -17,12 +17,12 @@ const StyledFormControlLabel = ({ label, value, groupValue}) => {
                 width: '100%',
                 backgroundColor: isSelected ? theme.palette.primary.main : '#fff',
                 color: isSelected ? '#fff' : 'rgba(0, 0, 0, 0.87)',
-                '&:hover': {
-                    borderColor: theme.palette.primary.main, // Border color on hover
-                    backgroundColor: theme.palette.action.hover,
-                    color: 'rgba(0, 0, 0, 0.87)',
-                },
-                '.Mui-checked &': {
+                // '&:hover': {
+                //     borderColor: theme.palette.primary.main, // Border color on hover
+                //     backgroundColor: theme.palette.action.hover,
+                //     color: 'rgba(0, 0, 0, 0.87)',
+                // },
+                '.Mui-checked ,&:hover': {
                     borderColor: theme.palette.primary.main, // Maintain border color for selected item
                 },
                 '& .MuiRadio-root': {
