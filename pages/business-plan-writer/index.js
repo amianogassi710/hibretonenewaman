@@ -2,7 +2,7 @@
 import React from 'react';
 import Layout from "../../components/Layout/Layout";
 import Subscription from "../../components/Layout/Subscription";
-import Link from '@mui/material/Link';
+import Link from "next/link";
 import YellowBanner from "../../components/elements/YellowBanner";
 import {Grid} from "@mui/material";
 
