@@ -18,13 +18,6 @@ const Step1 = ({nextStep}) => {
         planUsage: ''
     });
     const [error, setError] = useState({businessType: false, planUsage: false});
-    const [clientSide, setClientSide] = useState(false);
-
-    useEffect(() => {
-        setClientSide(true);
-    }, []);
-
-    if (!clientSide) return null;
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -58,7 +51,7 @@ const Step1 = ({nextStep}) => {
 
     return (
         <form noValidate autoComplete="on" onSubmit={onFinish}>
-            <Grid container direction="column" spacing={2} component="form" noValidate autoComplete="off">
+            <Grid container direction="column" spacing={2}>
                 <Grid item>
                     <FormControl component="fieldset" error={error.businessType} fullWidth>
                         <Typography variant="subtitle1" component="legend" sx={{mb: 1, fontWeight: 'bold'}}>

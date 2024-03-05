@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 
 const Header = ({ handleOpen, handleRemove, openClass }) => {
     const [scroll, setScroll] = useState(0);
-    const [clientSide, setClientSide] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useLocalStorage("is_logged_in", false);
     const [userAccount, setUserAccount] = useLocalStorage("user_account", {});
     const router = useRouter();
@@ -20,7 +19,6 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
             }
         };
         document.addEventListener("scroll", handleScroll);
-        setClientSide(true);
     }, [scroll]);
 
     const handleLogout = async (e) => {
@@ -31,8 +29,6 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
         setUserAccount({});
         router.push("/");
     };
-
-    if (!clientSide) return null;
 
     return (
         <>
@@ -228,7 +224,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                             </div>
                         </div>
                         <div className="header-right">
-                            {clientSide && isLoggedIn ? (
+                            {isLoggedIn ? (
                                 <>
                                     <nav className="nav-main-menu">
                                         <ul className="main-menu">

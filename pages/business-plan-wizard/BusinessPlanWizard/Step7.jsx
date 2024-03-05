@@ -88,7 +88,7 @@ const Step7 = ({previousStep, nextStep}) => {
     const onFinish = (e) => {
         e.preventDefault();
         if (validateForm()) {
-            nextStep();
+
         }
     };
 

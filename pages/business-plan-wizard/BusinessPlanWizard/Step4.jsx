@@ -23,14 +23,6 @@ const Step4 = ({previousStep, nextStep}) => {
         product1Description: false,
     });
 
-    const [clientSide, setClientSide] = useState(false);
-
-    useEffect(() => {
-        setClientSide(true);
-    }, []);
-
-    if (!clientSide) return null;
-
     const handleChange = (e) => {
         const {name, value} = e.target;
         setStep4FormData(prevState => ({
