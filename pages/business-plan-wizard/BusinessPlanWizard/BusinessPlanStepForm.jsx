@@ -1,17 +1,17 @@
 import React from 'react';
 import {useSessionStorage} from 'react-use';
 import {Typography, Stepper, Step, StepLabel, Grid, IconButton, Box, MobileStepper} from '@mui/material';
-import Step1 from "./Step1";
-import Step2 from "./Step2";
 import Link from "next/link";
 import {ArrowBack} from "@mui/icons-material";
 import dynamic from "next/dynamic";
 
+const NoSSRStep1 = dynamic(() => import('./Step1'), {ssr: false})
+const NoSSRStep2 = dynamic(() => import('./Step2'), {ssr: false})
 const NoSSRStep3 = dynamic(() => import('./Step3'), {ssr: false})
 const NoSSRStep4 = dynamic(() => import('./Step4'), {ssr: false})
 const NoSSRStep5 = dynamic(() => import('./Step5'), {ssr: false})
 const NoSSRStep6 = dynamic(() => import('./Step6'), {ssr: false})
-import Step7 from './Step7';
+const NoSSRStep7 = dynamic(() => import('./Step6'), {ssr: false})
 
 const BusinessPlanStepForm = () => {
     const [currentStepStr, setCurrentStepStr] = useSessionStorage('currentStep', '1');
@@ -95,13 +95,13 @@ const BusinessPlanStepForm = () => {
                 </Typography>
             </Grid>
             <Grid item xs={12} md={12} lg={6} sx={{mt: 2, width: {xs: '90%', md: '60%', lg: '50%'}}}>
-                {currentStep === 1 && <Step1 nextStep={nextStep}/>}
-                {currentStep === 2 && <Step2 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 1 && <NoSSRStep1 nextStep={nextStep}/>}
+                {currentStep === 2 && <NoSSRStep2 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 3 && <NoSSRStep3 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 4 && <NoSSRStep4 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 5 && <NoSSRStep5 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 6 && <NoSSRStep6 nextStep={nextStep} previousStep={previousStep}/>}
-                {currentStep === 7 && <Step7 nextStep={nextStep} previousStep={previousStep}/>}
+                {currentStep === 7 && <NoSSRStep7 nextStep={nextStep} previousStep={previousStep}/>}
             </Grid>
         </Grid>
     );
