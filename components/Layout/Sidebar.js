@@ -1,5 +1,4 @@
 ﻿import Link from "next/link";
-import PerfectScrollbar from 'react-perfect-scrollbar';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import React, { useState } from "react";
 
@@ -96,7 +95,7 @@ const Sidebar = ({ openClass }) => {
                                                     <Link legacyBehavior href="/grant-finder"><a>Grant Finder</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/"><a>Grant Writer</a></Link>
+                                                    <Link legacyBehavior href="https://www.grant.ecites.co.ke/login.php"><a>Grant Writer</a></Link>
                                                 </li>
                                             </ul>
                                         </li>
