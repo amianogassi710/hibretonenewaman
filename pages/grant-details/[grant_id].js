@@ -32,7 +32,7 @@ export default function GrantDetails() {
                     'Content-Type':'application/json'
                 },
             }
-            var url = "http://8.134.152.28:8000/grants/grant-details/items/" + grant_id
+            var url = "/grants/grant-details/items/" + grant_id
             const response = await fetch(url, reqOptions)
 
             const data = await response.json()

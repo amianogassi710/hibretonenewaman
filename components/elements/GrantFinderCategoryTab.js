@@ -14,7 +14,7 @@ const GrantFinderCategoryTab = () => {
                     'Content-Type':'application/json'
                 },
             }
-            var url = "http://8.134.152.28:8000/grants/grant-details/" + i + "/items";
+            var url = "/grants/grant-details/" + i + "/items";
             const response = await fetch(url, reqOptions)
 
             const data = await response.json()
