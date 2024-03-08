@@ -16,7 +16,7 @@ const CategorySlider = () => {
                 'Content-Type':'application/json'
             },
         }
-        const response = await fetch("/grants/grant-categories", reqOptions)
+        const response = await fetch("http://8.134.152.28:8000/grants/grant-categories", reqOptions)
         const data = await response.json()
 
         if(!response.ok){

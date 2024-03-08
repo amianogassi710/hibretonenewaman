@@ -12,10 +12,10 @@ const nextConfig = {
         source: '/assessments/:path*',
         destination: 'https://entrepreneurial-assessments-backend.vercel.app/:path*',
       },
-      {
-        source: '/grants/:path*',
-        destination: 'http://8.134.152.28:8000/grants/:path*', // Your FastAPI endpoint
-      },
+      // {
+      //   source: '/grants/:path*',
+      //   destination: 'http://8.134.152.28:8000/grants/:path*', // Your FastAPI endpoint
+      // },
       {
         source: '/alison-courses/:path*',
         destination: 'http://127.0.0.1:8000/:path*'
