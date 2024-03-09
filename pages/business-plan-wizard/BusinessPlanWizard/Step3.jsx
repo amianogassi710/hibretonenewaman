@@ -54,27 +54,43 @@ const Step3 = ({previousStep, nextStep}) => {
     const [loadedSuggestions2, setLoadedSuggestions2] = useState(false);
     const [errorMsg2, setErrorMsg2] = useState('');
 
-    const fetchSuggestionData1 = async () => {
+    const fetchSuggestionData = async ({
+                                           setLoading,
+                                           setErrorMsg,
+                                           setSuggestions,
+                                           setLoadedSuggestions
+                                       }) => {
+        setLoading(true);
+        setErrorMsg('');
         try {
             const response = await axios.post('/business-plan-writer/suggestion/customer-description', {
                 step1: step1FormData,
                 step2: step2FormData
-            }, {timeout: 5000});
+            }, {timeout: 6000});
 
             if (response.status !== 200) {
                 throw new Error('Failed to fetch suggestions');
             }
 
             const suggestions = response.data.suggestion;
-            setSuggestions1(suggestions);
-            setErrorMsg1('');
+            setSuggestions(suggestions);
+            setErrorMsg('');
         } catch (error) {
-            setErrorMsg1('Failed to generate suggestions. Please try again.');
+            setErrorMsg('Failed to generate suggestions. Please try again.');
         } finally {
-            setLoading1(false);
-            setLoadedSuggestions1(true);
+            setLoading(false);
+            setLoadedSuggestions(true);
         }
     };
+
+    const fetchSuggestionData1 = () => {
+        fetchSuggestionData({
+            setLoading: setLoading1,
+            setErrorMsg: setErrorMsg1,
+            setSuggestions: setSuggestions1,
+            setLoadedSuggestions: setLoadedSuggestions1
+        });
+    }
 
     const loadSuggestions1 = () => {
         if (!loadedSuggestions1) {
@@ -98,29 +114,14 @@ const Step3 = ({previousStep, nextStep}) => {
         }));
     };
 
-    const fetchSuggestionData2 = async () => {
-        setLoading2(true);
-        setErrorMsg2('');
-        try {
-            const response = await axios.post('/business-plan-writer/suggestion/customer-description', {
-                step1: step1FormData,
-                step2: step2FormData
-            }, {timeout: 5000});
-
-            if (response.status !== 200) {
-                throw new Error('Failed to fetch suggestions');
-            }
-
-            const suggestions = response.data.suggestion;
-            setSuggestions2(suggestions);
-            setErrorMsg2('');
-        } catch (error) {
-            setErrorMsg2('Failed to generate suggestions. Please try again.');
-        } finally {
-            setLoading2(false);
-            setLoadedSuggestions2(true);
-        }
-    };
+    const fetchSuggestionData2 = () => {
+        fetchSuggestionData({
+            setLoading: setLoading2,
+            setErrorMsg: setErrorMsg2,
+            setSuggestions: setSuggestions2,
+            setLoadedSuggestions: setLoadedSuggestions2
+        });
+    }
     const loadSuggestions2 = () => {
         if (!loadedSuggestions2) {
             setLoading2(true);
