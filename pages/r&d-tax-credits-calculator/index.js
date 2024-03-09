@@ -1,10 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from "../../components/Layout/Layout";
 import TaxCreditsCalculatorModal from './TaxCreditsCalculatorModal/TaxCreditsCalculatorModal';
 import Subscription from '../../components/Layout/Subscription';
 import YellowBanner from '../../components/elements/YellowBanner';
 import KickstartButton from '../../components/elements/KickstartButton';
+
+function useLockBodyScroll(open) {
+    useEffect(() => {
+        if (open) {
+            document.body.style.overflow="hidden";
+        }
+        return () => {
+            document.body.style.overflow = "visible";
+        }
+    },[open])
+}
 
 export default function Index() {
     const [isOpen,setIsOpen] = useState(false)
@@ -12,6 +23,8 @@ export default function Index() {
     const toggleOpen = e => {
         setIsOpen(prevOpen => !prevOpen)
     }
+
+    useLockBodyScroll(isOpen)
 
     return (
         <>

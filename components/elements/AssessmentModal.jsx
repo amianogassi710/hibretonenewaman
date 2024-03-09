@@ -23,16 +23,16 @@ const AssessmentModal = ({ isOpen, onClose, children, header, uizardHTML, time }
   return (
     <div className="assessment-modal" onClick={onClose}>
       <div className="assessment-modal-content" onClick={e => e.stopPropagation()}>
-        <div className="assessment-modal-close mr-10">
-          <i className="assessment-icon mt-5" onClick={onClose}><IoCloseOutline size={30} /></i>
-        </div>
-        <div className="assessment-modal-header container">
-            <div className="d-flex text-center">
-              <div className="col ml-50">
-                <h5 className="text-reset">{header.replaceAll("-"," ")}</h5>
-                <p>Take this simple {time} assessment</p>
-              </div>
+        <div className="assessment-modal-header ">
+          <div className="d-flex text-center">
+            <div className="col">
+              <h5 className="text-reset">{header.replaceAll("-"," ")}</h5>
+              <p className="text-reset">Take this simple {time} assessment</p>
             </div>
+          </div>
+          <div className="assessment-modal-close mr-10">
+            <i className="assessment-icon" onClick={onClose}><IoCloseOutline size={27.5} /></i>
+          </div>
         </div>
         {children}
       </div>
