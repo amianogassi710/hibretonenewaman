@@ -41,7 +41,7 @@ const TaxCreditsCalculatorModal = props => {
   }
 
   return (
-    <AssessmentModal isOpen={props.show} onClose={handleClose} header={"R&D Tax Credits Calculator"} uizardHTML={uizardHTML}>
+    <AssessmentModal isOpen={props.show} onClose={handleClose} header={"R&D Tax Credits Calculator"} >
       <Questions onClose={handleClose} show={showQuestion} onSubmit={handleSubmit} onLoad={handleLoad} />
       <LoadingScreen onClose={handleClose} isLoading={loading} />
       <Result onClose={handleClose} result={result} show={showResult} onRetake={handleRetake} />
