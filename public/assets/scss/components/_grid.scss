@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .grid {
   &__area {
     margin-top: 100px;
@@ -29,8 +31,8 @@
   }
 
   &__content {
-    padding-top: 23px;
-    height: 27.5vh;
+    padding-top: 20px;
+    height: 25vh;
     & p{
         color: var(--tp-text-1);
         margin-bottom: 10px;
@@ -54,10 +56,20 @@
     }
   }
   &__title {
-    font-size: 20px;
     color: #05264E;
     font-weight: 500;
-    width: 50%;
+    max-height: 100px;
+    overflow: hidden;
+
+    &-1 {
+      font-size: 20px;
+      width: 55%
+    }
+
+    &-2 {
+      font-size: 17.5px;
+      width: 100%
+    }
 
     & a{
         &:hover{
@@ -88,10 +100,10 @@
   &_thumb{
       position: relative;
       width: 100%;
-      height: 210px;
+      height: 33%;
       border-radius: 10px;
       @include media-breakpoint-up(sm) {
-        height: 210px;
+        max-height: 210px;
         h5 {
           margin-top: 5px;
           margin-bottom: 5px;
@@ -99,7 +111,7 @@
         }
       }
       @include media-breakpoint-down(sm) {
-        height: 145px;
+        max-height: 145px;
         h5 {
           margin-bottom: 5px;
           font-size: 12.5px;

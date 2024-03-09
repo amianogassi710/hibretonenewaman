@@ -18,67 +18,82 @@
   align-items: center;
   width: 90vw;
   max-width: 700px;
-  height: 37.5vh;
+  height: 35vh;
   border-radius: 15px;
   overflow: hidden;
   background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top;
   background-size: cover;
-  background-color: rgba(5,35,70,0.9);
+  background-color: rgba(5,38,78,0.8);
   background-blend-mode:overlay;
 }
 
 .assessment-modal-header {
+  position: relative;
   color: white;
   width: 100%;
-  @include media-breakpoint-up(sm) {
-    height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  @include media-breakpoint-down(xxl) {
+    height: 7.5vh;
     h5 {
-      margin-top: 5px;
-      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 22.5px;
+      left: 0;
+      z-index: 1;
+    }
+    p {
+      line-height: 1.5vh;
+      color: white;
+      font-size: 15px;
+    }
+  }
+  @include media-breakpoint-down(md) {
+    height: 9vh;
+    h5 {
+      font-weight: bold;
       font-size: 20px;
+      left: 0;
+      z-index: 1;
+    }
+    p {
+      line-height: 1vh;
+      font-size: 15px;
+      color: white;
     }
   }
   @include media-breakpoint-down(sm) {
-    height: 11vh;
+    height: 10vh;
     h5 {
-      margin-bottom: 5px;
-      font-size: 12.5px;
+      font-weight: bold;
+      font-size: 14px;
+      left: 0;
+      z-index: 1;
     }
     p {
-      font-size: 12.5px;
+      line-height: 1vh;
+      font-size: 10px;
+      color: white;
     }
-  }
-  @include media-breakpoint-down(xs) {
-    height: 12.5vh;
-    h5 {
-      margin-bottom: 5px;
-      font-size: 12.5px;
-    }
-    p {
-      font-size: 12.5px;
-    }
-  }
-  h5 {
-    font-weight: bold;
-    font-size: 25px;
-    left: 0;
-    z-index: 1;
-  }
-  p {
-    line-height: 2vh;
-    color: white;
   }
 }
 
 .assessment-modal-close {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .assessment-modal-footer {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 60px;
+  min-height: 70px;
+  height: 7.5vh;
   color: white;
   z-index: 1;
   padding-left: 45px;
