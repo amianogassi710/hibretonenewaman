@@ -4,18 +4,18 @@ import Layout from "../../components/Layout/Layout";
 import BusinessPlanStepForm from "./BusinessPlanWizard/BusinessPlanStepForm";
 
 export default function Index() {
-    useEffect(() => {
-        const handleBeforeUnload = (e) => {
-            e.preventDefault();
-            e.returnValue = '';
-        };
-
-        window.addEventListener('beforeunload', handleBeforeUnload);
-
-        return () => {
-            window.removeEventListener('beforeunload', handleBeforeUnload);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const handleBeforeUnload = (e) => {
+    //         e.preventDefault();
+    //         e.returnValue = '';
+    //     };
+    //
+    //     window.addEventListener('beforeunload', handleBeforeUnload);
+    //
+    //     return () => {
+    //         window.removeEventListener('beforeunload', handleBeforeUnload);
+    //     };
+    // }, []);
 
     return (
         <>

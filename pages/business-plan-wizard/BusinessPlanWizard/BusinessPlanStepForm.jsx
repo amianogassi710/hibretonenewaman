@@ -77,16 +77,17 @@ const BusinessPlanStepForm = () => {
             </Grid>
             <Grid item xs={12}
                   sx={{
-                      display: { xs: 'flex', md: "flex", lg: 'none' },
+                      display: {xs: 'flex', md: "flex", lg: 'none'},
                       alignItems: 'center',
                       justifyContent: 'center',
                       width: '100%',
                   }}>
-                <Typography sx={{ color: 'primary.main', textAlign: 'center' }}>
+                <Typography sx={{color: 'primary.main', textAlign: 'center'}}>
                     {stepsItems[currentStep - 1]} ({currentStep}/{stepsItems.length})
                 </Typography>
             </Grid>
-            <Grid item xs={12} md={12} lg={6} sx={{mt: 2, width: {xs: '90%', md: '60%', lg: '50%'}}}>
+            <Grid item xs={12} md={12} lg={6}
+                  sx={{mt: 2, minWidth: {xs: '90%', md: '60%', lg: '50%'}, width: {xs: '90%', md: '60%', lg: '50%'}}}>
                 {currentStep === 1 && <NoSSRStep1 nextStep={nextStep}/>}
                 {currentStep === 2 && <NoSSRStep2 nextStep={nextStep} previousStep={previousStep}/>}
                 {currentStep === 3 && <NoSSRStep3 nextStep={nextStep} previousStep={previousStep}/>}
