@@ -5,11 +5,12 @@ import {
     FormControl,
     Button,
     Typography,
-    FormHelperText, Input, Divider, Box, CircularProgress, Chip
+    FormHelperText, Input, Divider, CircularProgress, Chip
 } from '@mui/material';
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import axios from "axios";
+import CustomListItem from "./CustomedListItem";
 
 const Step5 = ({previousStep, nextStep}) => {
     const [step1FormData, setStep1FormData] = useSessionStorage('BusinessPlanStepForm.step1FormData', {
@@ -311,37 +312,28 @@ const Step5 = ({previousStep, nextStep}) => {
                         {error.successDriver1 && <FormHelperText>Please input a Success Driver.</FormHelperText>}
                     </FormControl>
                     {loading1 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <CircularProgress/>
-                        </Box>
+                        </Grid>
                     )}
                     {!loading1 && showSuggestions1 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
                             {suggestions1.map((suggestion, index) => (
-                                <Chip
+                                <CustomListItem
                                     key={index}
-                                    label={suggestion}
-                                    onClick={() => handleSuggestionClick1(suggestion)}
-                                    sx={{
-                                        borderRadius: 4,
-                                        backgroundColor: '#ffffff',
-                                        color: '#1976d2',
-                                        border: '1px solid #1976d2',
-                                        '&:hover': {
-                                            backgroundColor: '#eeeeee',
-                                        },
-                                    }}
+                                    suggestion={suggestion}
+                                    handleClick={() => handleSuggestionClick1(suggestion)}
                                 />
                             ))}
-                        </Box>
+                        </Grid>
                     )}
                     {errorMsg1 && (
-                        <Box sx={{color: 'red', textAlign: 'center', mt: 2}}>
+                        <Grid sx={{color: 'red', textAlign: 'center', mt: 2}}>
                             {errorMsg1}
-                        </Box>
+                        </Grid>
                     )}
                     {showSuggestions1 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <Button
                                 onClick={handleRegenerateClick1}
                                 disabled={loading1}
@@ -359,7 +351,7 @@ const Step5 = ({previousStep, nextStep}) => {
                             >
                                 Regenerate Suggestions
                             </Button>
-                        </Box>
+                        </Grid>
                     )}
                 </Grid>
 
@@ -381,37 +373,28 @@ const Step5 = ({previousStep, nextStep}) => {
                         />
                     </FormControl>
                     {loading2 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <CircularProgress/>
-                        </Box>
+                        </Grid>
                     )}
                     {!loading2 && showSuggestions2 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
                             {suggestions2.map((suggestion, index) => (
-                                <Chip
+                                <CustomListItem
                                     key={index}
-                                    label={suggestion}
-                                    onClick={() => handleSuggestionClick2(suggestion)}
-                                    sx={{
-                                        borderRadius: 4,
-                                        backgroundColor: '#ffffff',
-                                        color: '#1976d2',
-                                        border: '1px solid #1976d2',
-                                        '&:hover': {
-                                            backgroundColor: '#eeeeee',
-                                        },
-                                    }}
+                                    suggestion={suggestion}
+                                    handleClick={() => handleSuggestionClick2(suggestion)}
                                 />
                             ))}
-                        </Box>
+                        </Grid>
                     )}
                     {errorMsg2 && (
-                        <Box sx={{color: 'red', textAlign: 'center', mt: 2}}>
+                        <Grid sx={{color: 'red', textAlign: 'center', mt: 2}}>
                             {errorMsg2}
-                        </Box>
+                        </Grid>
                     )}
                     {showSuggestions2 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <Button
                                 onClick={handleRegenerateClick2}
                                 disabled={loading2}
@@ -429,7 +412,7 @@ const Step5 = ({previousStep, nextStep}) => {
                             >
                                 Regenerate Suggestions
                             </Button>
-                        </Box>
+                        </Grid>
                     )}
                 </Grid>
 
@@ -457,37 +440,28 @@ const Step5 = ({previousStep, nextStep}) => {
                         />
                     </FormControl>
                     {loading3 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <CircularProgress/>
-                        </Box>
+                        </Grid>
                     )}
                     {!loading3 && showSuggestions3 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
                             {suggestions3.map((suggestion, index) => (
-                                <Chip
+                                <CustomListItem
                                     key={index}
-                                    label={suggestion}
-                                    onClick={() => handleSuggestionClick3(suggestion)}
-                                    sx={{
-                                        borderRadius: 4,
-                                        backgroundColor: '#ffffff',
-                                        color: '#1976d2',
-                                        border: '1px solid #1976d2',
-                                        '&:hover': {
-                                            backgroundColor: '#eeeeee',
-                                        },
-                                    }}
+                                    suggestion={suggestion}
+                                    handleClick={() => handleSuggestionClick3(suggestion)}
                                 />
                             ))}
-                        </Box>
+                        </Grid>
                     )}
                     {errorMsg3 && (
-                        <Box sx={{color: 'red', textAlign: 'center', mt: 2}}>
+                        <Grid sx={{color: 'red', textAlign: 'center', mt: 2}}>
                             {errorMsg3}
-                        </Box>
+                        </Grid>
                     )}
                     {showSuggestions3 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <Button
                                 onClick={handleRegenerateClick3}
                                 disabled={loading3}
@@ -505,7 +479,7 @@ const Step5 = ({previousStep, nextStep}) => {
                             >
                                 Regenerate Suggestions
                             </Button>
-                        </Box>
+                        </Grid>
                     )}
                 </Grid>
 
@@ -527,37 +501,28 @@ const Step5 = ({previousStep, nextStep}) => {
                         />
                     </FormControl>
                     {loading4 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <CircularProgress/>
-                        </Box>
+                        </Grid>
                     )}
                     {!loading4 && showSuggestions4 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 1, mt: 2}}>
                             {suggestions4.map((suggestion, index) => (
-                                <Chip
+                                <CustomListItem
                                     key={index}
-                                    label={suggestion}
-                                    onClick={() => handleSuggestionClick4(suggestion)}
-                                    sx={{
-                                        borderRadius: 4,
-                                        backgroundColor: '#ffffff',
-                                        color: '#1976d2',
-                                        border: '1px solid #1976d2',
-                                        '&:hover': {
-                                            backgroundColor: '#eeeeee',
-                                        },
-                                    }}
+                                    suggestion={suggestion}
+                                    handleClick={() => handleSuggestionClick4(suggestion)}
                                 />
                             ))}
-                        </Box>
+                        </Grid>
                     )}
                     {errorMsg4 && (
-                        <Box sx={{color: 'red', textAlign: 'center', mt: 2}}>
+                        <Grid sx={{color: 'red', textAlign: 'center', mt: 2}}>
                             {errorMsg4}
-                        </Box>
+                        </Grid>
                     )}
                     {showSuggestions4 && (
-                        <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
+                        <Grid sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
                             <Button
                                 onClick={handleRegenerateClick4}
                                 disabled={loading4}
@@ -575,7 +540,7 @@ const Step5 = ({previousStep, nextStep}) => {
                             >
                                 Regenerate Suggestions
                             </Button>
-                        </Box>
+                        </Grid>
                     )}
                 </Grid>
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { ListItem, ListItemText } from '@mui/material';
+import {ListItem, ListItemText} from '@mui/material';
 
-const CustomListItem = ({ suggestion, handleClick }) => {
+const CustomListItem = ({suggestion, handleClick}) => {
     return (
         <ListItem
             button
@@ -32,7 +32,10 @@ const CustomListItem = ({ suggestion, handleClick }) => {
             <ListItemText
                 primary={suggestion}
                 primaryTypographyProps={{
-                    style: { whiteSpace: 'pre-line', overflow: 'hidden', textOverflow: 'ellipsis' }
+                    style: {
+                        whiteSpace: 'pre-line', overflow: 'hidden', textOverflow: 'ellipsis',
+                        textAlign: 'center'
+                    }
                 }}
             />
         </ListItem>

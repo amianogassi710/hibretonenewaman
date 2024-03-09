@@ -173,7 +173,7 @@ const Step4 = ({previousStep, nextStep}) => {
                 step2: step2FormData,
                 step3: step3FormData,
                 productOrServiceName: productOrServiceName,
-            }, {timeout: 6000});
+            }, {timeout: 10000});
 
             if (response.status !== 200) {
                 throw new Error('Failed to fetch suggestions');
