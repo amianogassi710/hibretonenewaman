@@ -126,7 +126,8 @@ export default function Index() {
                <div className="row">
                   {
                      featuresData.map(feature => {
-                        return <div key={feature.id} className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
+                        return (
+                        <div key={feature.id} className="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
                            <div className="features__item features__border-right d-sm-flex align-items-startwhite-bg mb-30 pl-25 pr-10">
                               <div className="features__icon mr-10">
                                  {feature.icon_img}
@@ -140,7 +141,7 @@ export default function Index() {
                               </div>
                            </div>
                         </div>
-                     })
+                     )})
                   }
 
                </div>

@@ -75,14 +75,14 @@ function Grid({ data, clickAction }) {
                               />
                            </div>
                         </div>
+                     </div>
+                     <div className="grid__description">
                         <p data-key={key}>{data[key].description}</p>
                      </div>
-                     <div className="grid__bottom">
-                        <div className="grid__tutor">
-                           <a>
-                              {data[key].provider}
-                           </a>
-                        </div>
+                     <div className="grid__tutor">
+                        <a>
+                           {data[key].provider}
+                        </a>
                      </div>
                   </div>
                </div>
