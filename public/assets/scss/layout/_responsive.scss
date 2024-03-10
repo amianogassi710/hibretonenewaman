@@ -29,27 +29,6 @@
         max-height: 85px;
         bottom: 10px;
     }
-}
-
-@include media-breakpoint-down(xl) {
-    //max-width: 1199.98px
-    .swiper-style-2 .item-5 {
-        width: 25%;
-    }
-    .box-we-hiring {
-        max-width: 100%;
-        padding: 20px 10px 20px 120px;
-    }
-    .box-we-hiring::before {
-        height: 89px;
-        width: 90px;
-    }
-    .box-we-hiring::after {
-        bottom: 10px;
-        right: 10px;
-        height: 90px;
-        width: 138px;
-    }
     .header .main-header .header-right {
         display: none;
     }
@@ -71,6 +50,27 @@
     .header .nav-main-menu {
         display: none;
     }
+}
+
+@include media-breakpoint-down(xl) {
+    //max-width: 1199.98px
+    .swiper-style-2 .item-5 {
+        width: 25%;
+    }
+    .box-we-hiring {
+        max-width: 100%;
+        padding: 20px 10px 20px 120px;
+    }
+    .box-we-hiring::before {
+        height: 89px;
+        width: 90px;
+    }
+    .box-we-hiring::after {
+        bottom: 10px;
+        right: 10px;
+        height: 90px;
+        width: 138px;
+    }
     .box-image-job .img-job-1 {
         top: -40px;
         left: -50px;
@@ -88,7 +88,7 @@
     .bg-homepage1 {
         background-size: auto;
     }
-    
+
 }
 
 @include media-breakpoint-down(lg) {
@@ -321,7 +321,7 @@
                 padding-top: 0px;
                 padding-bottom: 0px;
                 overflow: visible;
-            }    
+            }
         }
     }
     .block-banner-1 {
@@ -347,7 +347,7 @@
         margin-bottom: 50px;
     }
     .banner-hero
-    { 
+    {
         &.banner-homepage5 {
             background-color: $background-white;
         }
