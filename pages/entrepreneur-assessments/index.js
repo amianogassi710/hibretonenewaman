@@ -7,6 +7,8 @@ import Subscription from '../../components/Layout/Subscription';
 import AssessmentGrid from '../../components/elements/AssessmentGrid';
 import YellowBanner from '../../components/elements/YellowBanner';
 import KickstartButton from '../../components/elements/KickstartButton';
+import { Grid } from '@mui/material'
+import Link from 'next/link';
 
 function useLockBodyScroll(open) {
    useEffect(() => {
@@ -67,7 +69,7 @@ export default function Index() {
          <path d="M13.4584 17.9196H7.70837" stroke="#3D6CE7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>,
       title: 'Neurodiverse Gifted',
-      content: 'Is your idea worth turning into a social enterprise or '
+      content: 'Appreciating your neurodiversity traits can benefit starting a business'
    },
    {
       id: 3,
@@ -83,7 +85,7 @@ export default function Index() {
          <path d="M22.0501 13.2858C23.6379 13.2858 24.9251 11.9986 24.9251 10.4108C24.9251 8.82295 23.6379 7.53577 22.0501 7.53577C20.4623 7.53577 19.1751 8.82295 19.1751 10.4108C19.1751 11.9986 20.4623 13.2858 22.0501 13.2858Z" stroke="#031220" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
       </svg>,
       title: 'Enterprise',
-      content: 'Appreciating your neurodiversity traits can benefit starting a business'
+      content: 'Is your idea worth turning into a social enterprise or '
    },
 ]
 
@@ -173,45 +175,79 @@ export default function Index() {
       <section className="section-box">
                     <div className="post-loop-grid">
                         <div className="container">
-                            <div className="row mt-50">
-                                <div className="col-lg-6 col-md-12 col-sm-12 mt-10 pr-60 d-flex align-items-center">
-                                 <div>
-                                    <h4 className="mt-5">Recognising Neuro-diversity Talent</h4>
-                                    <div className="mt-10">
-                                        <h6 className="mt-10 font-md">Is it ADHD? Or learning disabilities, OCD, or something else? Take these self-tests to learn whether you or your child has signs that resemble one of the related traits and the positive impacts of them.</h6>
-                                    </div>
-                                    <div className="mt-20 mb-30">
-                                        <button className="btn btn-default fs-6">Read More</button>
-                                    </div>
-                                 </div>
-                                </div>
-                                <div className="col-lg-6 col-md-12 col-sm-12">
-                                    <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
-                                </div>
-                            </div>
+                                    <Grid container className='mb-50' alignItems="center" style={{minWidth: '100%'}}
+                                          sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
+                                        <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}}}>
+                                          <h4 className="mt-5">Recognising Neuro-diversity Talent</h4>
+                                          <div className="mt-10">
+                                             <h6 className="mt-10 font-md">Is it ADHD? Or learning disabilities, OCD, or something else? Take these self-tests to learn whether you or your child has signs that resemble one of the related traits and the positive impacts of them.</h6>
+                                          </div>
+                                          <div className="mt-20 mb-30">
+                                             <button className="btn btn-default fs-6">Read More</button>
+                                          </div>
+                                        </Grid>
+                                        <Grid item lg={6}>
+                                          <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container alignItems="center" style={{minWidth: '100%'}}
+                                          sx={{display: {xs: 'flex', md: "flex", lg: 'none'}}}>
+                                        <Grid item xs={12} md={12} sx={{marginBottom: '20px'}}>
+                                            <h4>Recognising Neuro-diversity Talent</h4>
+                                        </Grid>
+                                        <Grid item xs={12} md={12}>
+                                        <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
+                                        </Grid>
+                                        <Grid item xs={12} md={12}>
+                                             <div className="mt-10">
+                                                <p className="mt-10 font-md">Is it ADHD? Or learning disabilities, OCD, or something else? Take these self-tests to learn whether you or your child has signs that resemble one of the related traits and the positive impacts of them.</p>
+                                             </div>
+                                             <div className="mt-20 mb-30">
+                                                <button className="btn btn-default fs-6">Read More</button>
+                                             </div>
+                                        </Grid>
+                                    </Grid>
                         </div>
                     </div>
                 </section>
                 <section className="section-box mb-100">
                     <div className="post-loop-grid">
                         <div className="container">
-                            <div className="row mt-30">
-                                <div className="col-lg-6 col-md-12 col-sm-12">
-                                    <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
-                                </div>
-                                <div className="col-lg-6 col-md-12 col-sm-12 pl-30 mt-10 d-flex align-items-center">
-                                 <div>
-                                    <h4>Supporting Diverse Talent</h4>
-                                    <div className="mt-10">
-                                        <p className="mt-10 font-md">People with ADHD are 500% more likely to be entrepreneurs. People with dyslexia are 230% more likely to be entrepreneurs.</p>
-                                        <p className="font-md mt-10">A large number of tech professionals and Silicon Valley entrepreneurs have Aspergers. Famous entrepreneurs with Aspergers include Elon Musk, Bill Gates and Nikola Tesla.</p>
-                                    </div>
-                                    <div className="mt-20 mb-30">
-                                        <button className="btn btn-default fs-6">Read More</button>
-                                    </div>
-                                 </div>
-                              </div>
-                            </div>
+                                    <Grid container alignItems="center" style={{minWidth: '100%'}}
+                                          sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
+                                        <Grid item lg={6}>
+                                          <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
+                                        </Grid>
+                                        <Grid item lg={6} sx={{paddingLeft: {lg: '50px'}}}>
+
+                                          <h4>Supporting Diverse Talent</h4>
+                                          <div className="mt-10">
+                                             <p className="mt-10 font-md">People with ADHD are 500% more likely to be entrepreneurs. People with dyslexia are 230% more likely to be entrepreneurs.</p>
+                                             <p className="font-md mt-10">A large number of tech professionals and Silicon Valley entrepreneurs have Aspergers. Famous entrepreneurs with Aspergers include Elon Musk, Bill Gates and Nikola Tesla.</p>
+                                          </div>
+                                          <div className="mt-20 mb-30">
+                                             <button className="btn btn-default fs-6">Read More</button>
+                                          </div>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid container alignItems="center" style={{minWidth: '100%'}}
+                                          sx={{display: {xs: 'flex', md: "flex", lg: 'none'}}}>
+                                        <Grid item xs={12} md={12} sx={{marginBottom: '20px'}}>
+                                          <h4>Supporting Diverse Talent</h4>
+                                        </Grid>
+                                        <Grid item xs={12} md={12}>
+                                        <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
+                                        </Grid>
+                                        <Grid item xs={12} md={12}>
+                                          <div className="mt-10">
+                                             <p className="mt-10 font-md">People with ADHD are 500% more likely to be entrepreneurs. People with dyslexia are 230% more likely to be entrepreneurs.</p>
+                                             <p className="font-md mt-10">A large number of tech professionals and Silicon Valley entrepreneurs have Aspergers. Famous entrepreneurs with Aspergers include Elon Musk, Bill Gates and Nikola Tesla.</p>
+                                          </div>
+                                             <div className="mt-20 mb-30">
+                                                <button className="btn btn-default fs-6">Read More</button>
+                                             </div>
+                                        </Grid>
+                                    </Grid>
                         </div>
                     </div>
                 </section>
