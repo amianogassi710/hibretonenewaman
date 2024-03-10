@@ -20,15 +20,15 @@ const Result = props => {
 
   return (
     <>
-      <div className="assessment-modal-body text-center p-5">
+      <div className="assessment-modal-body text-center p-10">
         <div className="calculator-results">
           <p className='mb-20 fs-5'>You could receive an estimated:</p>
           <h4>£{props.result.toFixed(2)}</h4><br />
           <p className='mb-20 fs-5'>As a tax liability reduction or tax credit.</p>
           <div className="button-group d-flex justify-content-center">
-            <button className="btn btn-quiz fs-5" onClick={handleEnquiry}>Need Help</button>
-            <button className="btn btn-quiz fs-5 mr-10 ml-10" onClick={props.onRetake}>Calculate Again</button>
-            <button className="btn btn-quiz fs-5" onClick={props.onClose}>Close</button>
+            <button className="btn btn-quiz-1 fs-6" onClick={handleEnquiry}>Need Help</button>
+            <button className="btn btn-quiz-1 fs-6 mr-10 ml-10" onClick={props.onRetake}>Calculate Again</button>
+            <button className="btn btn-quiz-1 fs-6" onClick={props.onClose}>Close</button>
           </div>
         </div>
       </div>
