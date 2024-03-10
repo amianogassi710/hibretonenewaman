@@ -261,8 +261,12 @@
 }
 
 .features{
+  &__area {
+    border-radius: 10px;
+  }
   &__inner{
-    background-color: white;
+    border-radius: 10px;
+      background-color: white;
       margin-top: -40px;
       padding: 40px 60px;
       padding-bottom: 10px;
