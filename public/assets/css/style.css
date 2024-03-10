@@ -10576,25 +10576,6 @@ ul li:last-child .card-list-4 {
     max-height: 85px;
     bottom: 10px;
   }
-}
-@media (max-width: 1199.98px) {
-  .swiper-style-2 .item-5 {
-    width: 25%;
-  }
-  .box-we-hiring {
-    max-width: 100%;
-    padding: 20px 10px 20px 120px;
-  }
-  .box-we-hiring::before {
-    height: 89px;
-    width: 90px;
-  }
-  .box-we-hiring::after {
-    bottom: 10px;
-    right: 10px;
-    height: 90px;
-    width: 138px;
-  }
   .header .main-header .header-right {
     display: none;
   }
@@ -10615,6 +10596,25 @@ ul li:last-child .card-list-4 {
   }
   .header .nav-main-menu {
     display: none;
+  }
+}
+@media (max-width: 1199.98px) {
+  .swiper-style-2 .item-5 {
+    width: 25%;
+  }
+  .box-we-hiring {
+    max-width: 100%;
+    padding: 20px 10px 20px 120px;
+  }
+  .box-we-hiring::before {
+    height: 89px;
+    width: 90px;
+  }
+  .box-we-hiring::after {
+    bottom: 10px;
+    right: 10px;
+    height: 90px;
+    width: 138px;
   }
   .box-image-job .img-job-1 {
     top: -40px;
