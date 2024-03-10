@@ -116,7 +116,7 @@ export default function Index() {
                <div className="row">
                   <div className="col-lg-8">
                      <h2 className="mb-10">Entrepreneurial Assessments</h2>
-                     <p className="font-lg color-text-paragraph-2">Take these simple diverse tests to understand your skills, traits and abilities to run your own enterprise.</p>
+                     <p className="color-text-paragraph-2">Take these simple diverse tests to understand your skills, traits and abilities to run your own enterprise.</p>
                   </div>
                </div>
             </div>
