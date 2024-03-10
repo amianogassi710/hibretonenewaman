@@ -62,9 +62,9 @@ export default function Index() {
                 <section className="section-box">
                     <div className="post-loop-grid">
                         <div className="container">
-                            <Grid container alignItems="center" style={{minWidth: '100%'}}
+                            <Grid container className="mb-20" alignItems="center" style={{minWidth: '100%'}}
                                     sx={{display: {xs: 'none', md: 'none', lg: 'flex'}}}>
-                                <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}}}>
+                                <Grid item lg={6} className="mt-40" sx={{paddingRight: {lg: '40px'}}}>
                                     <h4>Using the R&D Tax Credit Scheme</h4>
                                     <div className="mt-10">
                                         <h6 className="mt-10 font-md"><strong>Nearly £84 billion of R&D tax relief is unclaimed in the UK according to the Treasury.</strong></h6>
@@ -79,7 +79,7 @@ export default function Index() {
                                 <Grid item lg={6}>
                                     <iframe
                                         className={"content-media"}
-                                        width="560" height="315"
+                                        width="560" height="400"
                                         src="https://www.youtube.com/embed/-OinRckvals?si=TUyb8vFa2udkyE4S"
                                         title="YouTube video player" frameborder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -125,7 +125,7 @@ export default function Index() {
                                 <Grid item lg={6}>
                                     <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
                                 </Grid>
-                                <Grid item lg={6} sx={{paddingLeft: {lg: '30px'}}}>
+                                <Grid item className="mt-30" lg={6} sx={{paddingLeft: {lg: '10px'}}}>
                                     <h4>Examples of R&D tax credit claims</h4>
                                     <div className="mt-10">
                                         <p className="font-sm fw-bold color-text-paragraph">Size of your claim will depend on the scale of your R&D activity and your costs.</p>
@@ -144,7 +144,7 @@ export default function Index() {
                                 <Grid item xs={12} md={12} sx={{marginBottom: '20px'}}>
                                     <h4>Examples of R&D tax credit claims</h4>
                                 </Grid>
-                                <Grid item xs={12} md={12} style={{"width": "100%", "aspectRation": "2/1"}}>
+                                <Grid item xs={12} md={12}>
                                     <div>
 
                                     <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
@@ -166,12 +166,12 @@ export default function Index() {
                         </div>
                     </div>
                 </section>
-                <section className="section-box mt-30">
+                <section className="section-box mt-40">
                     <div className="post-loop-grid">
                         <div className="container">
                             <Grid container alignItems="center" style={{minWidth: '100%'}}
                                     sx={{display: {xs: 'none', md: 'none', lg: 'flex'}}}>
-                                <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}}}>
+                                <Grid  className="mt-40" item lg={6} sx={{paddingLeft: {lg: '10px'}}}>
                                     <h3>Encouraging Innovation</h3>
                                     <div className="mt-20">
                                         <p className="font-md fw-bold color-text-paragraph mt-20">Around <span style={{color: "#3C65F5"}}>£7 billion</span> of tax relief is paid to UK businesses through R&D Tax Credits every year.</p>
@@ -181,7 +181,7 @@ export default function Index() {
                                         <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
                                     </div>
                                 </Grid>
-                                <Grid item lg={6}>
+                                <Grid item lg={6} className="d-flex justify-content-center">
                                     <img className="content-media" src="assets/imgs/page/r&d-tax-credits-calculator/BTW.jpeg" alt="joxBox" />
                                 </Grid>
                             </Grid>
@@ -254,7 +254,7 @@ export default function Index() {
                         </div>
                     </div>
                 </section>
-                <section className="section-box mt-20">
+                <section className="section-box mt-40">
                     <div className="post-loop-grid">
                         <div className="container">
                             <Grid container alignItems="center" style={{minWidth: '100%'}}
