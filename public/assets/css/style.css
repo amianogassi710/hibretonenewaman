@@ -3547,14 +3547,15 @@ ul li:last-child .card-list-4 {
 }
 
 .grid__area {
-  margin-top: 100px;
+  margin-top: 40px;
 }
 .grid__area div {
   margin: 0 auto;
 }
 .grid__item {
   padding: 25px 25px;
-  box-shadow: 0px 1px 2px rgba(26, 31, 35, 0.07);
+  border: 0.5px solid rgba(26, 31, 35, 0.1);
+  box-shadow: 0px 1px 2px rgba(26, 31, 35, 0.1);
   background-color: white;
   border-radius: 20px;
   cursor: pointer;
@@ -3576,17 +3577,30 @@ ul li:last-child .card-list-4 {
 }
 .grid__content {
   padding-top: 20px;
-  height: 25vh;
+  font-size: 16px;
+  height: 80px;
 }
-.grid__content p {
+@media (max-width: 374.98px) {
+  .grid__content {
+    height: 100px;
+  }
+}
+.grid__description {
+  font-size: 16px;
   color: var(--tp-text-1);
   margin-bottom: 10px;
-  height: 7.5vh;
+  height: 100px;
   margin-top: 10px;
+}
+@media (max-width: 374.98px) {
+  .grid__description {
+    font-size: 15px;
+    height: 115px;
+  }
 }
 .grid__price span {
   display: inline-block;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: white;
   width: 50px;
@@ -3600,12 +3614,27 @@ ul li:last-child .card-list-4 {
 .grid__title {
   color: #05264E;
   font-weight: 500;
-  max-height: 100px;
+  height: 100px;
   overflow: hidden;
 }
 .grid__title-1 {
-  font-size: 20px;
-  width: 55%;
+  font-size: 19px;
+  line-height: 27.5px;
+}
+@media (max-width: 991.98px) {
+  .grid__title-1 {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .grid__title-1 {
+    width: 70%;
+  }
+}
+@media (max-width: 374.98px) {
+  .grid__title-1 {
+    font-size: 16px;
+  }
 }
 .grid__title-2 {
   font-size: 17.5px;
@@ -3614,8 +3643,10 @@ ul li:last-child .card-list-4 {
 .grid__title a:hover {
   color: var(--tp-theme-1);
 }
+.grid__tutor {
+  height: 30px;
+}
 .grid__tutor a {
-  display: inline-block;
   padding: 5px 23px;
   border: 2px solid rgba(67, 86, 255, 0.1);
   border-radius: 22px;
@@ -3636,27 +3667,22 @@ ul li:last-child .card-list-4 {
   width: 100%;
   height: 33%;
   border-radius: 10px;
+  aspect-ratio: 1.75/1;
 }
-@media (min-width: 576px) {
-  .grid_thumb {
-    max-height: 210px;
-  }
+@media (min-width: 992px) {
   .grid_thumb h5 {
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 20px;
   }
 }
-@media (max-width: 575.98px) {
-  .grid_thumb {
-    max-height: 145px;
-  }
+@media (max-width: 991.98px) {
   .grid_thumb h5 {
     margin-bottom: 5px;
-    font-size: 12.5px;
+    font-size: 16px;
   }
   .grid_thumb p {
-    font-size: 12.5px;
+    font-size: 16px;
   }
 }
 .grid_thumb img {
@@ -8589,7 +8615,11 @@ ul li:last-child .card-list-4 {
   font-weight: 700;
 }
 
+.features__area {
+  border-radius: 10px;
+}
 .features__inner {
+  border-radius: 10px;
   background-color: white;
   margin-top: -40px;
   padding: 40px 60px;
