@@ -42,7 +42,6 @@ const Step7 = ({previousStep, nextStep}) => {
         profitMargin: '0',
     });
     const [error, setError] = useState({
-        language: false,
         expectedRevenue: false,
         growthRate: false,
     });
@@ -98,7 +97,6 @@ const Step7 = ({previousStep, nextStep}) => {
 
     const validateForm = () => {
         const newErrors = {...error};
-        newErrors.language = !step7FormData.language;
         newErrors.expectedRevenue = !step7FormData.expectedRevenue;
         newErrors.growthRate = !step7FormData.growthRate;
         setError(newErrors);
@@ -497,7 +495,7 @@ const Step7 = ({previousStep, nextStep}) => {
                         <Button
                             onClick={onFinish}
                         >
-                            Next <KeyboardArrowRight/>
+                            Next<KeyboardArrowRight/>
                         </Button>
                     </Grid>
                 </Grid>
