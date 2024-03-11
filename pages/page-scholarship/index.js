@@ -1,7 +1,7 @@
 import Layout from "../components/Layout/Layout";
-import TestimonialSlider1 from "./../components/sliders/Testimonial1";
+import React from 'react';
 
-export default function Scholarship() {
+export default function index() {
     return (
         <>
             <Layout>
