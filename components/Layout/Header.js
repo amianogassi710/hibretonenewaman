@@ -76,7 +76,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/">
+                                                <Link legacyBehavior href="/page-scholarship">
                                                     <a>
                                                         Scholarship & Bursaries
                                                     </a>
