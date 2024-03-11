@@ -67,7 +67,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 5px 20px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         background-color: rgba(0,0,0,0.04);
         border-radius: 7.5px;
         transition: 0.1s ease-in-out;
@@ -89,8 +89,8 @@
 
 
 .circle {
-  height: 55px;
-  width: 55px;
+  height: 50px;
+  width: 50px;
   background-color: #EFF2FB;
   border-radius: 100px;
   transition: 0.2s ease-in-out;
@@ -127,7 +127,7 @@
     display: inline-block;
     margin: 0 auto;
     img {
-      height: 25px;
+      height: 20px;
     }
     label {
       font-size: 85%;
@@ -261,8 +261,13 @@
 }
 
 .features{
+  &__area {
+    border-radius: 10px;
+    font-size: 16px;
+  }
   &__inner{
-    background-color: white;
+    border-radius: 10px;
+      background-color: white;
       margin-top: -40px;
       padding: 40px 60px;
       padding-bottom: 10px;

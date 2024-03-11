@@ -3257,7 +3257,6 @@ ul li:last-child .card-list-4 {
   position: relative;
   width: 100%;
   padding: 180px 0px 150px 0px;
-  max-width: 100%;
   background: url(../imgs/page/homepage1/homepage-hero2.jpg) no-repeat top center;
   background-size: cover;
 }
@@ -3401,11 +3400,12 @@ ul li:last-child .card-list-4 {
   z-index: 2;
   position: fixed;
   left: 0;
-  top: 70px;
+  top: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
+  padding-top: 70px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -3416,69 +3416,88 @@ ul li:last-child .card-list-4 {
   align-items: center;
   width: 90vw;
   max-width: 700px;
-  height: 37.5vh;
+  height: 35vh;
   border-radius: 15px;
   overflow: hidden;
   background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top;
   background-size: cover;
-  background-color: rgba(5, 35, 70, 0.9);
+  background-color: rgba(5, 38, 78, 0.8);
   background-blend-mode: overlay;
 }
 
 .assessment-modal-header {
+  position: relative;
   color: white;
   width: 100%;
-  height: 12.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 }
-@media (min-width: 576px) {
+@media (max-width: 1399.98px) {
   .assessment-modal-header {
-    height: 10vh;
+    height: 7.5vh;
   }
   .assessment-modal-header h5 {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 22.5px;
+    left: 0;
+    z-index: 1;
+  }
+  .assessment-modal-header p {
+    line-height: 1.5vh;
+    color: white;
+    font-size: 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .assessment-modal-header {
+    height: 9vh;
+  }
+  .assessment-modal-header h5 {
+    font-weight: bold;
     font-size: 20px;
+    left: 0;
+    z-index: 1;
+  }
+  .assessment-modal-header p {
+    line-height: 1vh;
+    font-size: 15px;
+    color: white;
   }
 }
 @media (max-width: 575.98px) {
   .assessment-modal-header {
-    height: 11vh;
+    height: 10vh;
   }
   .assessment-modal-header h5 {
-    margin-bottom: 5px;
-    font-size: 12.5px;
+    font-weight: bold;
+    font-size: 14px;
+    left: 0;
+    z-index: 1;
   }
   .assessment-modal-header p {
-    font-size: 12.5px;
+    line-height: 1vh;
+    font-size: 10px;
+    color: white;
   }
-}
-.assessment-modal-header h5 {
-  margin-bottom: 5px;
-  font-size: 12.5px;
-}
-.assessment-modal-header p {
-  font-size: 12.5px;
-}
-.assessment-modal-header h5 {
-  font-weight: bold;
-  font-size: 25px;
-  left: 0;
-  z-index: 1;
-}
-.assessment-modal-header p {
-  line-height: 2vh;
-  color: white;
 }
 
 .assessment-modal-close {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
 .assessment-modal-footer {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 60px;
+  min-height: 70px;
+  height: 7.5vh;
   color: white;
   z-index: 1;
   padding-left: 45px;
@@ -3528,14 +3547,18 @@ ul li:last-child .card-list-4 {
 }
 
 .grid__area {
-  margin-top: 100px;
+  margin-top: 40px;
+}
+.grid__area p {
+  font-size: 16px;
 }
 .grid__area div {
   margin: 0 auto;
 }
 .grid__item {
   padding: 25px 25px;
-  box-shadow: 0px 1px 2px rgba(26, 31, 35, 0.07);
+  border: 0.5px solid rgba(26, 31, 35, 0.1);
+  box-shadow: 0px 1px 2px rgba(26, 31, 35, 0.1);
   background-color: white;
   border-radius: 20px;
   cursor: pointer;
@@ -3556,18 +3579,31 @@ ul li:last-child .card-list-4 {
   z-index: 2;
 }
 .grid__content {
-  padding-top: 23px;
-  height: 27.5vh;
+  padding-top: 20px;
+  font-size: 16px;
+  height: 80px;
 }
-.grid__content p {
+@media (max-width: 374.98px) {
+  .grid__content {
+    height: 100px;
+  }
+}
+.grid__description {
+  font-size: 16px;
   color: var(--tp-text-1);
   margin-bottom: 10px;
-  height: 7.5vh;
+  height: 100px;
   margin-top: 10px;
+}
+@media (max-width: 374.98px) {
+  .grid__description {
+    font-size: 15px;
+    height: 115px;
+  }
 }
 .grid__price span {
   display: inline-block;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: white;
   width: 50px;
@@ -3579,16 +3615,41 @@ ul li:last-child .card-list-4 {
   box-shadow: 0px 20px 30px rgba(5, 34, 109, 0.14);
 }
 .grid__title {
-  font-size: 20px;
   color: #05264E;
   font-weight: 500;
-  width: 50%;
+  height: 100px;
+  overflow: hidden;
+}
+.grid__title-1 {
+  font-size: 19px;
+  line-height: 27.5px;
+}
+@media (max-width: 991.98px) {
+  .grid__title-1 {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .grid__title-1 {
+    width: 70%;
+  }
+}
+@media (max-width: 374.98px) {
+  .grid__title-1 {
+    font-size: 16px;
+  }
+}
+.grid__title-2 {
+  font-size: 17.5px;
+  width: 100%;
 }
 .grid__title a:hover {
   color: var(--tp-theme-1);
 }
+.grid__tutor {
+  height: 30px;
+}
 .grid__tutor a {
-  display: inline-block;
   padding: 5px 23px;
   border: 2px solid rgba(67, 86, 255, 0.1);
   border-radius: 22px;
@@ -3607,29 +3668,24 @@ ul li:last-child .card-list-4 {
 .grid_thumb {
   position: relative;
   width: 100%;
-  height: 210px;
+  height: 33%;
   border-radius: 10px;
+  aspect-ratio: 1.75/1;
 }
-@media (min-width: 576px) {
-  .grid_thumb {
-    height: 210px;
-  }
+@media (min-width: 992px) {
   .grid_thumb h5 {
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 20px;
   }
 }
-@media (max-width: 575.98px) {
-  .grid_thumb {
-    height: 145px;
-  }
+@media (max-width: 991.98px) {
   .grid_thumb h5 {
     margin-bottom: 5px;
-    font-size: 12.5px;
+    font-size: 16px;
   }
   .grid_thumb p {
-    font-size: 12.5px;
+    font-size: 16px;
   }
 }
 .grid_thumb img {
@@ -4496,10 +4552,9 @@ ul li:last-child .card-list-4 {
 .footer .footer-hero {
   position: relative;
   width: 100%;
-  padding: 180px 0px 150px 0px;
-  max-width: 100%;
+  padding: 135px 0px 90px 0px;
   background: url(../imgs/template/footer.png) no-repeat top center;
-  background-size: cover;
+  background-size: contain;
 }
 
 #scrollUp {
@@ -8366,7 +8421,7 @@ ul li:last-child .card-list-4 {
   align-items: center;
   justify-content: space-between;
   padding: 5px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   background-color: rgba(0, 0, 0, 0.04);
   border-radius: 7.5px;
   transition: 0.1s ease-in-out;
@@ -8388,8 +8443,8 @@ ul li:last-child .card-list-4 {
 }
 
 .circle {
-  height: 55px;
-  width: 55px;
+  height: 50px;
+  width: 50px;
   background-color: #EFF2FB;
   border-radius: 100px;
   transition: 0.2s ease-in-out;
@@ -8432,7 +8487,7 @@ ul li:last-child .card-list-4 {
   margin: 0 auto;
 }
 .strengths-and-ideal-jobs div img {
-  height: 25px;
+  height: 20px;
 }
 .strengths-and-ideal-jobs div label {
   font-size: 85%;
@@ -8562,7 +8617,12 @@ ul li:last-child .card-list-4 {
   font-weight: 700;
 }
 
+.features__area {
+  border-radius: 10px;
+  font-size: 16px;
+}
 .features__inner {
+  border-radius: 10px;
   background-color: white;
   margin-top: -40px;
   padding: 40px 60px;
@@ -10458,6 +10518,34 @@ ul li:last-child .card-list-4 {
   background: #05264E;
 }
 
+.background-random-business-plan-writer {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-random-business-plan-writer::before,
+.background-random-business-plan-writer::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 1500px;
+  background: #F2F6FD;
+  transform-origin: top right;
+  z-index: -1;
+}
+
+.background-random-business-plan-writer::before {
+  transform: rotate(-25deg);
+  top: -50px;
+  left: -500px;
+}
+
+.background-random-business-plan-writer::after {
+  transform: rotate(25deg);
+  top: 800px;
+  right: -500px;
+}
+
 @media (max-width: 1399.98px) {
   .custom-class {
     display: block;
@@ -10488,25 +10576,6 @@ ul li:last-child .card-list-4 {
     max-height: 85px;
     bottom: 10px;
   }
-}
-@media (max-width: 1199.98px) {
-  .swiper-style-2 .item-5 {
-    width: 25%;
-  }
-  .box-we-hiring {
-    max-width: 100%;
-    padding: 20px 10px 20px 120px;
-  }
-  .box-we-hiring::before {
-    height: 89px;
-    width: 90px;
-  }
-  .box-we-hiring::after {
-    bottom: 10px;
-    right: 10px;
-    height: 90px;
-    width: 138px;
-  }
   .header .main-header .header-right {
     display: none;
   }
@@ -10527,6 +10596,25 @@ ul li:last-child .card-list-4 {
   }
   .header .nav-main-menu {
     display: none;
+  }
+}
+@media (max-width: 1199.98px) {
+  .swiper-style-2 .item-5 {
+    width: 25%;
+  }
+  .box-we-hiring {
+    max-width: 100%;
+    padding: 20px 10px 20px 120px;
+  }
+  .box-we-hiring::before {
+    height: 89px;
+    width: 90px;
+  }
+  .box-we-hiring::after {
+    bottom: 10px;
+    right: 10px;
+    height: 90px;
+    width: 138px;
   }
   .box-image-job .img-job-1 {
     top: -40px;

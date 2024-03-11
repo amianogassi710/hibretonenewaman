@@ -94,9 +94,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                
+
             </div>
-            <div className="footer-hero"></div>
+        <div className="footer-hero"></div>
         </footer>
 
     );

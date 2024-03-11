@@ -18,7 +18,7 @@ const nextConfig = {
       },
       {
         source: '/alison-courses/:path*',
-        destination: 'http://127.0.0.1:8000/:path*'
+        destination: 'https://alison-courses-backend.vercel.app/:path*'
       },
       {
         source: '/auth/:path*',

@@ -59,14 +59,14 @@ function Grid({ data, clickAction }) {
                      </div>
                      <div className="grid__content" data-key={key}>
                         <div className="grid__top d-flex align-items-center">
-                           <h3 className="grid__title fw-bold col-10" data-key={key}>
+                           <h3 className="grid__title-1 fw-bold col-10" data-key={key}>
                               <a data-key={key}>{key.replaceAll("-"," ")}</a>
                            </h3>
                            <div className="col-2 grid__progress_circle mr-10 d-flex justify-content-end">
                               <CircularProgressbar
                                  strokeWidth={15}
-                                 value={50}
-                                 text={`${50}%`}
+                                 value={0}
+                                 text={`${0}%`}
                                  styles={buildStyles({
                                     textSize: '25px',
                                     pathColor: '#3AAB67',
@@ -75,14 +75,14 @@ function Grid({ data, clickAction }) {
                               />
                            </div>
                         </div>
+                     </div>
+                     <div className="grid__description">
                         <p data-key={key}>{data[key].description}</p>
                      </div>
-                     <div className="grid__bottom">
-                        <div className="grid__tutor">
-                           <a>
-                              {data[key].provider}
-                           </a>
-                        </div>
+                     <div className="grid__tutor">
+                        <a>
+                           {data[key].provider}
+                        </a>
                      </div>
                   </div>
                </div>

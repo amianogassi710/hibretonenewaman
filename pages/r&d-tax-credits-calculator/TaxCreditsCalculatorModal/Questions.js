@@ -127,10 +127,10 @@ const Questions = props => {
     if (question === 1) {
       return (
         <div className="button-group d-flex">
-          <button type="button" className="btn btn-quiz disabled">
+          <button type="button" className="btn btn-quiz-2 disabled">
             <IoIosArrowUp />
           </button>
-          <button type="button" className="btn btn-quiz" onClick={handleNext}>
+          <button type="button" className="btn btn-quiz-2" onClick={handleNext}>
             <IoIosArrowDown />
           </button>
         </div>
@@ -139,10 +139,10 @@ const Questions = props => {
       return (
         <>
         <div className="button-group d-flex">
-          <button type="button" className="btn btn-quiz" onClick={handlePrevious}>
+          <button type="button" className="btn btn-quiz-2" onClick={handlePrevious}>
             <IoIosArrowUp />
           </button>
-          <button type="button" className="btn btn-quiz" onClick={handleNext}>
+          <button type="button" className="btn btn-quiz-2" onClick={handleNext}>
             <IoIosArrowDown />
           </button>
         </div>
@@ -152,10 +152,10 @@ const Questions = props => {
       return (
         <>
         <div className="button-group d-flex">
-          <button type="button" className="btn btn-quiz" onClick={handlePrevious}>
+          <button type="button" className="btn btn-quiz-2" onClick={handlePrevious}>
             <IoIosArrowUp />
           </button>
-          <button type="button" className="btn btn-quiz" onClick={handleSubmit}>
+          <button type="button" className="btn btn-quiz-2" onClick={handleSubmit}>
             <IoIosArrowDown />
           </button>
         </div>
@@ -168,7 +168,7 @@ const Questions = props => {
     // Also 1-indexed
     return (
       <div className="button-group d-flex align-items-center mt-15">
-        <button type="button" className="btn btn-quiz" onClick={handleNext}>
+        <button type="button" className="btn btn-quiz-1" onClick={handleNext}>
           Next
         </button>
         <span className="ml-5">Or Press ENTER</span>
@@ -178,75 +178,75 @@ const Questions = props => {
 
   return (
     <>
-    <div className="assessment-modal-body text-center p-5">
-    <form className="text-center" onSubmit={handleSubmit}>
+    <div className="assessment-modal-body text-center p-y-10 ">
+    <form className="text-center mb-10" onSubmit={handleSubmit}>
       <div className="assessment-form-group" style={{display: question === 1 ? "block" : "none"}}>
-        <div className='assessment-question'>
-          <label className="fs-3 lh-lg">Your headcount...</label>
+        <div className='assessment-question fw-bold d-flex align-items-center'>
+          <label>Your headcount...</label>
         </div>
         <ul className="assessment-radio-group">
           <li className="headcount-less">
             <input type="radio" name="headcount" id="headcount-less" value="A" />
-            <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="headcount-less">Less than 500</label>
+            <label className="p-4" style={{"fontHeight": "2.5vh", "lineHeight": "1.5vh"}} htmlFor="headcount-less">Less than 500</label>
           </li>
           <li className="headcount-more">
             <input type="radio" name="headcount" id="headcount-more" value="B" />
-            <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="headcount-more">More than 500</label>
+            <label className="p-4" style={{"fontHeight": "2.5vh", "lineHeight": "1.5vh"}} htmlFor="headcount-more">More than 500</label>
           </li>
         </ul>
         <Button />
       </div>
         <div className="assessment-form-group" style={{display: question === 2 ? "block" : "none"}}>
-          <div className='assessment-question'>
-            <label className="fs-3 lh-lg">Your turnover...</label>
+          <div className='assessment-question fw-bold d-flex align-items-center'>
+            <label>Your turnover...</label>
           </div>
             <ul className="assessment-radio-group">
               <li className="turnover-less">
                 <input type="radio" name="turnover" id="turnover-no-more" value="A" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="turnover-no-more">No more than £100 million</label>
+                <label className="p-4" style={{"fontHeight": "2.5vh", "lineHeight": "1.5vh"}} htmlFor="turnover-no-more">No more than £100 million</label>
               </li>
               <li className="turnover-more">
                 <input type="radio" name="turnover" id="turnover-more" value="B" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="turnover-more">More than £100 million</label>
+                <label className="p-4" style={{"fontHeight": "2.5vh", "lineHeight": "1.5vh"}} htmlFor="turnover-more">More than £100 million</label>
               </li>
             </ul>
             <Button />
         </div>
         <div className="assessment-form-group" style={{display: question === 3 ? "block" : "none"}}>
-          <div className='assessment-question'>
-            <label className="fs-3 lh-lg">Your balance sheet...</label>
+          <div className='assessment-question fw-bold d-flex align-items-center'>
+            <label>Your balance sheet...</label>
           </div>
             <ul className="assessment-radio-group">
               <li className="balance-sheet-less">
                 <input type="radio" name="balance-sheet" id="balance-sheet-less" value="A" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="balance-sheet-less">Less than £86 million</label>
+                <label className="p-4" style={{"fontHeight": "2.5vh", "lineHeight": "1.5vh"}} htmlFor="balance-sheet-less">Less than £86 million</label>
               </li>
               <li className="balance-sheet-more">
                 <input type="radio" name="balance-sheet" id="balance-sheet-more" value="B" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="balance-sheet-more">More than £86 million</label>
+                <label className="p-4" style={{"fontHeight": "2.5vh", "lineHeight": "1.5vh"}} htmlFor="balance-sheet-more">More than £86 million</label>
               </li>
             </ul>
             <Button />
         </div>
         <div className="assessment-form-group" style={{display: question === 4 ? "block" : "none"}}>
-          <div className='assessment-question'>
-            <label className="fs-3 lh-lg">Is your company...</label>
+          <div className='assessment-question fw-bold d-flex align-items-center'>
+            <label>Is your company...</label>
           </div>
             <ul className="assessment-radio-group">
               <li className="company-profit">
                 <input type="radio" name="company" id="company-profit" value="A" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="company-profit">Profit-making</label>
+                <label className="p-4" style={{"fontHeight": "2.5vh", "lineHeight": "1.5vh"}} htmlFor="company-profit">Profit-making</label>
               </li>
               <li className="company-loss">
                 <input type="radio" name="company" id="company-loss" value="B" />
-                <label className="p-4" style={{"fontHeight": "3vh", "lineHeight": "2vh"}} htmlFor="company-loss">Loss-making</label>
+                <label className="p-4" style={{"fontHeight": "2.5vh", "lineHeight": "1.5vh"}} htmlFor="company-loss">Loss-making</label>
               </li>
             </ul>
             <Button />
         </div>
         <div className="assessment-form-group" style={{display: question === 5 ? "block" : "none"}}>
-          <div className='assessment-question'>
-            <label className="fs-3 lh-lg">Company staff, software, consumable items costs relating to R&D?</label>
+          <div className='assessment-question fw-bold d-flex align-items-center'>
+            <label>Company staff, software, consumable items costs relating to R&D?</label>
           </div>
             <div className="input group d-flex mb-50" role="group">
                 <span className="currency fs-1 d-flex align-items-center col-1">£</span>
@@ -255,33 +255,32 @@ const Questions = props => {
             <Button />
         </div>
         <div className="assessment-form-group" style={{display: question === 6 ? "block" : "none"}}>
-          <div className='assessment-question'>
-            <label className="fs-3 mb-24 lh-lg">What are your subcontractor costs relating to R&D activities?</label>
+          <div className='assessment-question fw-bold d-flex align-items-center'>
+            <label>What are your subcontractor costs relating to R&D activities?</label>
           </div>
             <div className="input group d-flex mb-50" role="group">
                 <span className="currency fs-1 d-flex align-items-center col-1">£</span>
                 <input type="number" className="fs-3 rounded input" name="subcontractor-costs" placeholder="Costs" />
             </div>
             <div className="button-group d-flex align-items-center mt-15">
-              <button type="button" className="btn btn-quiz" onClick={handleSubmit}>
+              <button type="button" className="btn btn-quiz-1" onClick={handleSubmit}>
                 Submit
               </button>
             </div>
         </div>
       </form>
     </div>
-    <div className="assessment-modal-footer">
-        <div className="tracker lh-sm">
-        {/* questions.length + 1 to include gender question */}
-        <p>Question {question} of 6</p>
-        <div className="assessment-progress-bar">
-            <div className="bar" style={{width: `${progress}%`}}>
-            <span className="progression"></span>
-            </div>
-        </div>
+    <div className="assessment-modal-footer d-flex justify-content-space-between">
+      <div className="col-6">
+        <QuizButton />
       </div>
-      <QuizButton />
-  </div>
+      <div className="tracker col">
+        <p>Question {question} of 6</p>
+        <a className="progress-bar" style={{"backgroundColor": "white"}}>
+          <a className="bar" style={{width: `${progress}%`}} />
+        </a>
+      </div>
+    </div>
   </>
   )
 }

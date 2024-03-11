@@ -59,15 +59,15 @@
         }
         &.icon-facebook {
             background: url(../imgs/template/icons/facebook.svg) no-repeat 0px 0px;
-            transition-duration: 0.2s;           
+            transition-duration: 0.2s;
         }
         &.icon-twitter {
             background: url(../imgs/template/icons/twitter.svg) no-repeat 0px 0px;
-            transition-duration: 0.2s;           
+            transition-duration: 0.2s;
         }
         &.icon-linkedin {
             background: url(../imgs/template/icons/linkedin.svg) no-repeat 0px 0px;
-            transition-duration: 0.2s;           
+            transition-duration: 0.2s;
         }
     }
     .footer-bottom {
@@ -86,10 +86,9 @@
     .footer-hero {
         position: relative;
         width: 100%;
-        padding: 180px 0px 150px 0px;
-        max-width: 100%;
+        padding: 135px 0px 90px 0px;
         background: url(../imgs/template/footer.png) no-repeat top center;
-        background-size: cover;
+        background-size: contain;
     }
 }
 #scrollUp {
