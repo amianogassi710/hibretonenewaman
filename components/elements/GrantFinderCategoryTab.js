@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+
+
 const GrantFinderCategoryTab = () => {
     const [active, setActive] = useState(1);
     const [data,setData] = useState([])
@@ -24,10 +26,13 @@ const GrantFinderCategoryTab = () => {
             else{
                 grantList[i] = data
             }
+        
+
         }
         for (let i = 1; i <= 6; i++) {
             getGrantDetails(i)
         }
+
         setGrantDetails(grantList)
     },[])
 
