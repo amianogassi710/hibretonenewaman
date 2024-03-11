@@ -1,35 +1,38 @@
 import Link from "next/link";
-import SwiperCore, { Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import React, { useEffect, useState } from "react";
+import SwiperCore, {Navigation} from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
+import React, {useEffect, useState} from "react";
+
 SwiperCore.use([Navigation]);
 
 import "swiper/css/grid";
-import { Grid } from "swiper";
+import axiosFetchWithRetry from "../elements/fetchWithRetry";
 
 const CategorySlider = () => {
-    const [data,setData] = useState([])
-    const getCategories= async()=>{
-        const reqOptions ={
-            method:'GET',
-            headers:{
-                'Content-Type':'application/json'
+    const [data, setData] = useState([])
+    const getCategories = async () => {
+        const reqOptions = {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json'
             },
-        }
-        const response = await fetch("/grants/grant-categories", reqOptions)
-        const data = await response.json()
+        };
 
-        if(!response.ok){
-            console.log({"error":data.detail})
-        }
-        else{
-            setData(data)
+        try {
+            const data = await axiosFetchWithRetry({
+                url: "/grants/grant-categories",
+                reqOptions: reqOptions,
+                timeout: 2000,
+            });
+            setData(data);
+        } catch (error) {
+            console.error({"error": error.message});
         }
     }
 
-    useEffect(()=>{
-    getCategories()
-},[])
+    useEffect(() => {
+        getCategories()
+    }, [])
     return (
         <>
             <div className="swiper-container swiper-group-5">
@@ -71,7 +74,8 @@ const CategorySlider = () => {
                                     <a>
                                         <div className="item-logo">
                                             <div className="image-left">
-                                                <img alt="jobBox" src={`assets/imgs/page/homepage1/${item.category_id}.svg`} />
+                                                <img alt="jobBox"
+                                                     src={`assets/imgs/page/homepage1/${item.category_id}.svg`}/>
                                             </div>
                                             <div className="text-info-right">
                                                 <h4>{item.category_name}</h4>
@@ -89,8 +93,8 @@ const CategorySlider = () => {
                 </Swiper>
             </div>
 
-            <div className="swiper-button-next" />
-            <div className="swiper-button-prev" />
+            <div className="swiper-button-next"/>
+            <div className="swiper-button-prev"/>
         </>
     );
 };
