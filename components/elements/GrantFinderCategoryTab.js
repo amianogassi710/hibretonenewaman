@@ -1,6 +1,6 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-
+import React, {useEffect, useState} from "react";
+import axiosFetchWithRetry from "./fetchWithRetry";
 
 const GrantFinderCategoryTab = () => {
     const [active, setActive] = useState(1);
@@ -30,16 +30,10 @@ const GrantFinderCategoryTab = () => {
             } catch (error) {
                 console.error({"error": error.message});
             }
-            else{
-                grantList[i] = data
-            }
-        
-
-        }
+        };
         for (let i = 1; i <= 6; i++) {
             getGrantDetails(i)
         }
-
         setGrantDetails(grantList)
     }, [])
 
