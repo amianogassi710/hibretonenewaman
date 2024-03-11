@@ -24,19 +24,22 @@ const Step7 = ({previousStep, nextStep}) => {
         currency: '',
     });
     const [step7FormData, setStep7FormData] = useSessionStorage('BusinessPlanStepForm.step7FormData', {
-        language: '',
         expectedRevenue: '',
         growthRate: '',
-        revenuePercentage1: '',
-        revenuePercentage2: '',
-        revenuePercentage3: '',
-        revenuePercentage4: '',
+        revenuePercentage1: '40',
+        revenuePercentage2: '6',
+        revenuePercentage3: '5',
+        revenuePercentage4: '0',
         revenuePercentage5: '1',
         revenuePercentage6: '2',
         revenuePercentage7: '0',
         revenuePercentage8: '1',
         revenuePercentage9: '0',
-        revenuePercentage10: '20',
+        taxPercentage: '20',
+        incomeTax: '0',
+        totalCost: '0',
+        netProfit: '0',
+        profitMargin: '0',
     });
     const [error, setError] = useState({
         language: false,
@@ -45,23 +48,44 @@ const Step7 = ({previousStep, nextStep}) => {
     });
 
     useEffect(() => {
-        // Check if the session storage for this form data is empty or not
-        const storedData = sessionStorage.getItem('BusinessPlanStepForm.step7FormData');
-        if (!storedData) {
-            setStep7FormData({
-                revenuePercentage1: '40',
-                revenuePercentage2: '6',
-                revenuePercentage3: '5',
-                revenuePercentage4: '0',
-                revenuePercentage5: '1',
-                revenuePercentage6: '2',
-                revenuePercentage7: '0',
-                revenuePercentage8: '1',
-                revenuePercentage9: '0',
-                revenuePercentage10: '20',
-            });
-        }
-    }, [setStep7FormData]);
+        const {expectedRevenue, taxPercentage, ...rest} = step7FormData;
+        const revenue = Number(expectedRevenue);
+
+        const costPercentages = Object.keys(rest).reduce((acc, key) => {
+            if (!['language', 'growthRate', 'incomeTax', 'totalCost', 'netProfit', 'profitMargin'].includes(key)) {
+                acc[key] = rest[key];
+            }
+            return acc;
+        }, {});
+
+        const costsExcludingTax = Object.values(costPercentages).reduce((total, percentage) => {
+            return total + (revenue * (Number(percentage) / 100));
+        }, 0);
+
+        const incomeTaxExpense = calculateIncomeTax(revenue, costsExcludingTax, Number(taxPercentage));
+        const totalCostWithTax = costsExcludingTax + incomeTaxExpense;
+
+        const netProfitCalc = revenue - totalCostWithTax;
+        const profitMarginCalc = (netProfitCalc / revenue) * 100;
+
+        setStep7FormData(prevFormData => ({
+            ...prevFormData,
+            incomeTax: incomeTaxExpense.toString(),
+            totalCost: totalCostWithTax.toString(),
+            netProfit: netProfitCalc.toString(),
+            profitMargin: profitMarginCalc.toString(),
+        }));
+    }, [step7FormData, setStep7FormData]);
+
+
+    const calculateTotalCost = (percentage) => {
+        return (parseFloat(percentage) / 100 * (parseFloat(step7FormData.expectedRevenue) || 0)).toFixed(2);
+    };
+
+    const calculateIncomeTax = (revenue, totalCostsExcludingTax, taxPercentage) => {
+        const earningsBeforeTaxes = revenue - totalCostsExcludingTax;
+        return earningsBeforeTaxes * (taxPercentage / 100);
+    }
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -81,14 +105,10 @@ const Step7 = ({previousStep, nextStep}) => {
         return !newErrors.language && !newErrors.expectedRevenue && !newErrors.growthRate;
     };
 
-    const calculateTotalCost = (percentage) => {
-        return (parseFloat(percentage) / 100 * (parseFloat(step7FormData.expectedRevenue) || 0)).toFixed(2);
-    };
-
     const onFinish = (e) => {
         e.preventDefault();
         if (validateForm()) {
-
+            nextStep();
         }
     };
 
@@ -274,13 +294,13 @@ const Step7 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid container alignItems="center" spacing={2} sx={{mt: 0}}>
-                    <Grid item xs={4} container justifyContent="center" alignItems="center">
+                    <Grid item xs={12} md={12} lg={4} container justifyContent="center" alignItems="center">
                         <Typography variant="subtitle1" component="legend"
                                     sx={{fontWeight: 'bold', ml: 2}}>
                             5. General & Administrative
                         </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <TextField
                             id="revenuePercentage5"
                             label="%"
@@ -293,7 +313,7 @@ const Step7 = ({previousStep, nextStep}) => {
                             fullWidth
                         />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
                             {currencySymbols[step6FormData.currency] || ""} {calculateTotalCost(step7FormData.revenuePercentage5)}
                         </Typography>
@@ -301,13 +321,13 @@ const Step7 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid container alignItems="center" spacing={2} sx={{mt: 0}}>
-                    <Grid item xs={4} container justifyContent="center" alignItems="center">
+                    <Grid item s={12} md={12} lg={4} container justifyContent="center" alignItems="center">
                         <Typography variant="subtitle1" component="legend"
                                     sx={{fontWeight: 'bold', ml: 2}}>
                             6. Depreciation
                         </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <TextField
                             id="revenuePercentage6"
                             label="%"
@@ -320,7 +340,7 @@ const Step7 = ({previousStep, nextStep}) => {
                             fullWidth
                         />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
                             {currencySymbols[step6FormData.currency] || ""} {calculateTotalCost(step7FormData.revenuePercentage6)}
                         </Typography>
@@ -328,13 +348,13 @@ const Step7 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid container alignItems="center" spacing={2} sx={{mt: 0}}>
-                    <Grid item xs={4} container justifyContent="center" alignItems="center">
+                    <Grid item s={12} md={12} lg={4} container justifyContent="center" alignItems="center">
                         <Typography variant="subtitle1" component="legend"
                                     sx={{fontWeight: 'bold', ml: 2}}>
                             7. Utilities
                         </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <TextField
                             id="revenuePercentage7"
                             label="%"
@@ -347,7 +367,7 @@ const Step7 = ({previousStep, nextStep}) => {
                             fullWidth
                         />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
                             {currencySymbols[step6FormData.currency] || ""} {calculateTotalCost(step7FormData.revenuePercentage7)}
                         </Typography>
@@ -355,13 +375,13 @@ const Step7 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid container alignItems="center" spacing={2} sx={{mt: 0}}>
-                    <Grid item xs={4} container justifyContent="center" alignItems="center">
+                    <Grid item s={12} md={12} lg={4} container justifyContent="center" alignItems="center">
                         <Typography variant="subtitle1" component="legend"
                                     sx={{fontWeight: 'bold', ml: 2}}>
                             8. Other Expenses
                         </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <TextField
                             id="revenuePercentage8"
                             label="%"
@@ -374,7 +394,7 @@ const Step7 = ({previousStep, nextStep}) => {
                             fullWidth
                         />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
                             {currencySymbols[step6FormData.currency] || ""} {calculateTotalCost(step7FormData.revenuePercentage8)}
                         </Typography>
@@ -382,13 +402,13 @@ const Step7 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid container alignItems="center" spacing={2} sx={{mt: 0}}>
-                    <Grid item xs={4} container justifyContent="center" alignItems="center">
+                    <Grid item s={12} md={12} lg={4} container justifyContent="center" alignItems="center">
                         <Typography variant="subtitle1" component="legend"
                                     sx={{fontWeight: 'bold', ml: 2}}>
                             9. Interest Expense
                         </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <TextField
                             id="revenuePercentage9"
                             label="%"
@@ -401,7 +421,7 @@ const Step7 = ({previousStep, nextStep}) => {
                             fullWidth
                         />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
                             {currencySymbols[step6FormData.currency] || ""} {calculateTotalCost(step7FormData.revenuePercentage9)}
                         </Typography>
@@ -409,28 +429,28 @@ const Step7 = ({previousStep, nextStep}) => {
                 </Grid>
 
                 <Grid container alignItems="center" spacing={2} sx={{mt: 0, mb: 2}}>
-                    <Grid item xs={4} container justifyContent="center" alignItems="center">
+                    <Grid item s={12} md={12} lg={4} container justifyContent="center" alignItems="center">
                         <Typography variant="subtitle1" component="legend"
                                     sx={{fontWeight: 'bold', ml: 2}}>
                             10. Income Taxes (from EBT)
                         </Typography>
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <TextField
-                            id="revenuePercentage10"
+                            id="taxPercentage"
                             label="%"
-                            name="revenuePercentage10"
+                            name="taxPercentage"
                             type="number"
-                            value={step7FormData.revenuePercentage10}
+                            value={step7FormData.taxPercentage}
                             onChange={handleChange}
                             variant="outlined"
                             autoComplete="on"
                             fullWidth
                         />
                     </Grid>
-                    <Grid item xs={4}>
+                    <Grid item s={12} md={12} lg={4}>
                         <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
-                            {currencySymbols[step6FormData.currency] || ""} {calculateTotalCost(step7FormData.revenuePercentage10)}
+                            {currencySymbols[step6FormData.currency] || ""} {parseFloat(step7FormData.incomeTax).toFixed(2)}
                         </Typography>
                     </Grid>
                 </Grid>
@@ -440,9 +460,8 @@ const Step7 = ({previousStep, nextStep}) => {
                     <Typography variant="h6" component="legend">
                         {'Your First Year Total Cost is:'}
                     </Typography>
-
                     <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
-                        {currencySymbols[step6FormData.currency] || ""} {calculateTotalCost(step7FormData.revenuePercentage10)}
+                        {currencySymbols[step6FormData.currency] || ""}{" "}{parseFloat(step7FormData.totalCost).toFixed(2)}
                     </Typography>
                 </Grid>
 
@@ -450,9 +469,8 @@ const Step7 = ({previousStep, nextStep}) => {
                     <Typography variant="h6" component="legend">
                         {'Your First Year Net Profit is:'}
                     </Typography>
-
                     <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
-                        {currencySymbols[step6FormData.currency] || ""} {calculateTotalCost(step7FormData.revenuePercentage10)}
+                        {currencySymbols[step6FormData.currency] || ""}{" "}{parseFloat(step7FormData.netProfit).toFixed(2)}
                     </Typography>
                 </Grid>
 
@@ -460,52 +478,9 @@ const Step7 = ({previousStep, nextStep}) => {
                     <Typography variant="h6" component="legend">
                         {'Your Net Profit Margin is:'}
                     </Typography>
-
                     <Typography variant="subtitle1" component="legend" sx={{fontWeight: 'bold'}}>
-                        {"%"} {calculateTotalCost(step7FormData.revenuePercentage10)}
+                        {parseFloat(step7FormData.profitMargin).toFixed(2)}{" "}{"%"}
                     </Typography>
-                </Grid>
-                <Divider/>
-
-                <Grid container alignItems="center" sx={{mt: 4}}>
-                    <Grid item sx={{ml: 2}}>
-                        <Typography variant="h6" component="legend">
-                            {requiredLabel('Business Plan Language', true)}
-                        </Typography>
-                    </Grid>
-                    <Grid item sx={{ml: 2}}>
-                        <FormControl fullWidth required error={error.language}>
-                            <InputLabel id="language-select-label" sx={{
-                                color: 'primary.main', fontWeight: 'bold'
-                            }}>Language</InputLabel>
-                            <Select
-                                labelId="language-select-label"
-                                id="language-select"
-                                name="language"
-                                value={step7FormData.language}
-                                onChange={handleChange}
-                                label="Language"
-                                sx={{
-                                    width: '250px', color: 'primary.main', fontWeight: 'bold'
-                                }}
-                            >
-                                <MenuItem value="en-US">English (US)</MenuItem>
-                                <MenuItem value="en-UK">English (UK)</MenuItem>
-                                <MenuItem value="de">German</MenuItem>
-                                <MenuItem value="fr">French</MenuItem>
-                                <MenuItem value="es">Spanish</MenuItem>
-                                <MenuItem value="it">Italian</MenuItem>
-                                <MenuItem value="nl">Dutch</MenuItem>
-                                <MenuItem value="ja">Japanese</MenuItem>
-                                <MenuItem value="ar">Arabic</MenuItem>
-                                <MenuItem value="sv">Swedish</MenuItem>
-                                <MenuItem value="fi">Finnish</MenuItem>
-                                <MenuItem value="no">Norwegian</MenuItem>
-                                <MenuItem value="da">Danish</MenuItem>
-                            </Select>
-                            {error.language && <FormHelperText>Please input a Language.</FormHelperText>}
-                        </FormControl>
-                    </Grid>
                 </Grid>
 
                 <Grid container justifyContent="flex-start" spacing={2} sx={{mt: 2}}>

@@ -16,6 +16,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import axios from "axios";
 import StyledFormControlLabel from "./StyledFormControlLabel";
+import RegenerateButton from "./RegenerateButton";
 
 const Step3 = ({previousStep, nextStep}) => {
     const [step1FormData, setStep1FormData] = useSessionStorage('BusinessPlanStepForm.step1FormData', {
@@ -234,23 +235,12 @@ const Step3 = ({previousStep, nextStep}) => {
                     )}
                     {showSuggestions1 && (
                         <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
-                            <Button
+                            <RegenerateButton
                                 onClick={handleRegenerateClick1}
                                 disabled={loading1}
-                                sx={{
-                                    borderRadius: 16,
-                                    width: '30%',
-                                    textTransform: 'none',
-                                    padding: '10px 0',
-                                    backgroundColor: '#1976d2',
-                                    '&:hover': {
-                                        backgroundColor: '#115293',
-                                    },
-                                }}
-                                variant="contained"
                             >
                                 Regenerate Suggestions
-                            </Button>
+                            </RegenerateButton>
                         </Box>
                     )}
                 </Grid>
@@ -332,23 +322,12 @@ const Step3 = ({previousStep, nextStep}) => {
                     )}
                     {showSuggestions2 && (
                         <Box sx={{display: 'flex', justifyContent: 'center', mt: 2}}>
-                            <Button
+                            <RegenerateButton
                                 onClick={handleRegenerateClick2}
                                 disabled={loading2}
-                                sx={{
-                                    borderRadius: 16,
-                                    width: '30%',
-                                    textTransform: 'none',
-                                    padding: '10px 0',
-                                    backgroundColor: '#1976d2',
-                                    '&:hover': {
-                                        backgroundColor: '#115293',
-                                    },
-                                }}
-                                variant="contained"
                             >
                                 Regenerate Suggestions
-                            </Button>
+                            </RegenerateButton>
                         </Box>
                     )}
                 </Grid>
