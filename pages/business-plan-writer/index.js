@@ -3,6 +3,7 @@ import React from 'react';
 import Layout from "../../components/Layout/Layout";
 import Subscription from "../../components/Layout/Subscription";
 import Link from "next/link";
+import {Link as MUILink} from "@mui/material";
 import YellowBanner from "../../components/elements/YellowBanner";
 import {Grid} from "@mui/material";
 
@@ -32,8 +33,7 @@ export default function Index() {
                                     <h2 className="section-title mb-10">Transform your business idea into a business
                                         plan</h2>
                                     <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">Takes less than
-                                        15
-                                        minutes</p>
+                                        15 minutes</p>
                                 </div>
                                 <div className="text-center mt-20">
                                     <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
@@ -47,24 +47,26 @@ export default function Index() {
                                 <div className="container">
                                     <Grid container alignItems="center" style={{minWidth: '100%'}}
                                           sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
-                                        <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}}}>
-                                            <h4>Using the Business Plan Writer</h4>
-                                            <div className="mt-10">
+                                        <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}, paddingRight: {lg: '40px'}}}>
+                                            <Grid item>
+                                                <h4>Using the Business Plan Writer</h4>
+                                            </Grid>
+                                            <Grid item sx={{mt: 1}}>
                                                 <h6 className="mt-10 font-md"><strong>See how easily you can create your
                                                     own Business Plan</strong></h6>
-                                                <p className="font-md color-text-paragraph mt-10 mr-10">
+                                                <p className="font-md color-text-paragraph mt-10">
                                                     Business plans are essential for credibility, to improve chances of
                                                     success, to validate your idea and to secure investment. The
                                                     hibretOne Business Plan writer creates a plan which includes:
                                                     Executive Summary, Business overview, Sales and marketing,
                                                     Operations and Management, Financial Plan...
-                                                    <Link href="#" color="primary">read more</Link>
+                                                    <MUILink href="#" color="primary">read more</MUILink>
                                                 </p>
-                                            </div>
-                                            <div className="mt-20 mb-30">
+                                            </Grid>
+                                            <Grid item sx={{mt: 2}}>
                                                 <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                     Started</Link>
-                                            </div>
+                                            </Grid>
                                         </Grid>
                                         <Grid item lg={6}>
                                             <iframe
@@ -102,7 +104,7 @@ export default function Index() {
                                                     hibretOne Business Plan writer creates a plan which includes:
                                                     Executive Summary, Business overview, Sales and marketing,
                                                     Operations and Management, Financial Plan...
-                                                    <Link href="#" color="primary">read more</Link>
+                                                    <MUILink href="#" color="primary">read more</MUILink>
                                                 </p>
                                             </div>
                                             <div className="mt-20 mb-30">
@@ -141,9 +143,7 @@ export default function Index() {
                                                     not
                                                     judge and to provide solutions to build your business in smart,
                                                     efficient ways...
-                                                    <Link href="#" color="primary">
-                                                        read more
-                                                    </Link>
+                                                    <MUILink href="#" color="primary">read more</MUILink>
                                                 </p>
                                             </div>
                                             <div className="mt-20 mb-30">
@@ -173,9 +173,7 @@ export default function Index() {
                                                     not
                                                     judge and to provide solutions to build your business in smart,
                                                     efficient ways...
-                                                    <Link href="#" color="primary">
-                                                        read more
-                                                    </Link>
+                                                    <MUILink href="#" color="primary">read more</MUILink>
                                                 </p>
                                             </div>
                                             <div className="mt-20 mb-30">
@@ -192,10 +190,12 @@ export default function Index() {
                                 <div className="container">
                                     <Grid container alignItems="center" style={{minWidth: '100%'}}
                                           sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
-                                        <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}}}>
-                                            <h4>A business plan builds credibility & gives confidence to your idea
-                                            </h4>
-                                            <div className="mt-20">
+                                        <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}, paddingRight: {lg: '40px'}}}>
+                                            <Grid item>
+                                                <h4>A business plan builds credibility & gives confidence to your idea
+                                                </h4>
+                                            </Grid>
+                                            <Grid item sx={{mb: 2}}>
                                                 <h6 className="mt-10 font-md"><strong>Once your plan is done, you
                                                     can:</strong></h6>
                                                 <ul className="mt-10">
@@ -215,11 +215,11 @@ export default function Index() {
                                                         &#8226; Share with a business advisor for another perspective.
                                                     </li>
                                                 </ul>
-                                            </div>
-                                            <div className="mt-20 mb-20">
+                                            </Grid>
+                                            <Grid item sx={{mt: 2}}>
                                                 <Link href="/business-plan-wizard" className="btn btn-default fs-6">Get
                                                     Started</Link>
-                                            </div>
+                                            </Grid>
                                         </Grid>
                                         <Grid item lg={6}>
                                             <img className="content-media"
