@@ -16,6 +16,17 @@
             transition: 0.2s;
         }
     }
+    &.btn-start {
+        color: $color-white;
+        background-color: rgba(58, 171, 103, 1);
+        line-height: 26px;
+        padding: 10px 25px;
+        &:hover {
+            background-color: $color-brand;
+            transform: translateY(-2px);
+            transition: 0.2s;
+        }
+    }
     &.btn-quiz {
         &-1 {
             color: white;
