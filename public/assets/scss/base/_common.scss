@@ -181,6 +181,10 @@ input:focus::-moz-placeholder {
         margin-top: 2px;
     }
 }
+p {
+    color: rgba(51,51,51,0.7);
+    font-size: 16px;
+}
 a {
     color: $color-brand;
     &:hover {
@@ -364,11 +368,11 @@ a {
         align-items: center;
         background-color: rgba(254, 186, 84, 1);
         padding: 20px;
-        border-radius: 12px; 
-      
+        border-radius: 12px;
+
        .text {
          color: white;
-      
+
          h3{
             font-size: 25px;
          }
@@ -376,9 +380,9 @@ a {
             font-size: 16px;
          }
        }
-      
+
       }
-      
+
 }
 .text-shadow {
     text-shadow: $text-shadow;
@@ -800,29 +804,29 @@ iframe {
 
 .background-random {
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
   }
-  
+
 
 .background-random::before,
   .background-random::after {
     content: "";
     position: absolute;
-    width: 800px; 
-    height: 1500px; 
-    background: #F2F6FD; 
-    transform-origin: top left; 
+    width: 800px;
+    height: 1500px;
+    background: #F2F6FD;
+    transform-origin: top left;
     z-index: -1;
   }
 
   .background-random::before {
-    transform: rotate(-8deg); 
-    top: 150px; 
-    left: -300px; 
+    transform: rotate(-8deg);
+    top: 150px;
+    left: -300px;
   }
 
   .background-random::after {
-    transform: rotate(8deg); 
-    top: 1200px; 
-    right: -300px; 
+    transform: rotate(8deg);
+    top: 1200px;
+    right: -300px;
   }
