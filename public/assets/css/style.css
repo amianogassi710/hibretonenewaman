@@ -597,7 +597,11 @@ h6 {
   color: #05264E;
 }
 
-.font-lg, .font-md, .font-sm, .font-xs, .font-xxs {
+.font-lg,
+.font-md,
+.font-sm,
+.font-xs,
+.font-xxs {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -878,7 +882,7 @@ iframe {
   position: absolute;
   width: 800px;
   height: 1500px;
-  background: #F2F6FD;
+  background: #f2f6fd;
   transform-origin: top left;
   z-index: -1;
 }
@@ -893,6 +897,90 @@ iframe {
   transform: rotate(8deg);
   top: 1200px;
   right: -300px;
+}
+
+.MuiInput-input {
+  border: none !important;
+}
+
+.color-background-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.color-background-1::before {
+  content: "";
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(162, 223, 236, 0.6);
+  transform: skewY(-7deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  left: 50%;
+  margin-left: -40%;
+}
+
+.color-background-2 {
+  position: relative;
+  z-index: 1;
+}
+
+.color-background-2::before {
+  content: "";
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 236, 134, 0.6);
+  transform: skewY(-7deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  left: 50%;
+  margin-left: -40%;
+}
+
+.color-background-3 {
+  position: relative;
+  z-index: 1;
+}
+
+.color-background-3::before {
+  content: "";
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 190, 144, 0.6);
+  transform: skewY(-7deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  left: 50%;
+  margin-left: -40%;
+}
+
+.color-background-4 {
+  position: relative;
+  z-index: 1;
+}
+
+.color-background-4::before {
+  content: "";
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(236, 162, 224, 0.4901960784);
+  transform: skewY(-7deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  left: 50%;
+  margin-left: -40%;
 }
 
 a,
@@ -1129,6 +1217,15 @@ h6,
   padding: 10px 25px;
   margin-left: 30px;
   border-radius: 8px;
+}
+
+.btn-green {
+  background: #4B9838 !important;
+  background-image: url(../imgs/page/homepage1/search-icon.svg);
+}
+
+.btn-grey-small {
+  background-color: #EFF3FC;
 }
 
 .btn-grey {
@@ -3153,7 +3250,7 @@ ul li:last-child .card-list-4 {
 }
 .banner-hero .block-banner .form-find .box-industry {
   width: 100%;
-  max-width: 180px;
+  max-width: 580px;
 }
 .banner-hero .block-banner .form-find .box-industry .select2::before {
   content: "";

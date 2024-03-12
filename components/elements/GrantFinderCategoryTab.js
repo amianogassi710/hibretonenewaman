@@ -1,19 +1,19 @@
 import Link from "next/link";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import axiosFetchWithRetry from "./fetchWithRetry";
 
 const GrantFinderCategoryTab = () => {
     const [active, setActive] = useState(1);
-    const [data,setData] = useState([])
-    const [grantDetails,setGrantDetails] = useState([])
+    const [data, setData] = useState([]);
+    const [grantDetails, setGrantDetails] = useState([]);
 
     useEffect(() => {
-        var grantList = []
+        var grantList = [];
         const getGrantDetails = async (i) => {
             const reqOptions = {
-                method: 'get', // Axios 使用 'get' 而不是 'GET'
+                method: "get",
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json",
                 },
             };
 
@@ -26,80 +26,160 @@ const GrantFinderCategoryTab = () => {
                     timeout: 2000,
                 });
 
-                grantList[i] = data; // 假设grantList是一个在外部定义的数组
+                grantList[i] = data;
             } catch (error) {
-                console.error({"error": error.message});
+                console.error({ error: error.message });
             }
         };
         for (let i = 1; i <= 6; i++) {
-            getGrantDetails(i)
+            getGrantDetails(i);
         }
-        setGrantDetails(grantList)
-    }, [])
+        setGrantDetails(grantList);
+    }, []);
 
     const handleOnClick = (index) => {
-        setActive(index); // remove the curly braces
+        setActive(index);
     };
     return (
         <>
             <div className="list-tabs mt-40  text-center">
                 <ul className="nav nav-tabs" role="tablist">
                     <li>
-                        <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1)}><img
-                            src="/assets/imgs/page/homepage1/1.svg" alt="jobBox"/> Community</a>
+                        <a
+                            className={active === 1 ? "active" : ""}
+                            onClick={() => handleOnClick(1)}
+                        >
+                            <img
+                                src="/assets/imgs/page/homepage1/1.svg"
+                                alt="jobBox"
+                            />{" "}
+                            Community
+                        </a>
                     </li>
                     <li>
-                        <a className={active === 2 ? "active" : ""} onClick={() => handleOnClick(2)}><img
-                            src="/assets/imgs/page/homepage1/2.svg" alt="jobBox"/> Environment</a>
+                        <a
+                            className={active === 2 ? "active" : ""}
+                            onClick={() => handleOnClick(2)}
+                        >
+                            <img
+                                src="/assets/imgs/page/homepage1/2.svg"
+                                alt="jobBox"
+                            />{" "}
+                            Environment
+                        </a>
                     </li>
                     <li>
-                        <a className={active === 3 ? "active" : ""} onClick={() => handleOnClick(3)}><img
-                            src="/assets/imgs/page/homepage1/3.svg" alt="jobBox"/> Research</a>
+                        <a
+                            className={active === 3 ? "active" : ""}
+                            onClick={() => handleOnClick(3)}
+                        >
+                            <img
+                                src="/assets/imgs/page/homepage1/3.svg"
+                                alt="jobBox"
+                            />{" "}
+                            Research
+                        </a>
                     </li>
                     <li>
-                        <a className={active === 4 ? "active" : ""} onClick={() => handleOnClick(4)}><img
-                            src="/assets/imgs/page/homepage1/4.svg" alt="jobBox"/> Technology</a>
+                        <a
+                            className={active === 4 ? "active" : ""}
+                            onClick={() => handleOnClick(4)}
+                        >
+                            <img
+                                src="/assets/imgs/page/homepage1/4.svg"
+                                alt="jobBox"
+                            />{" "}
+                            Technology
+                        </a>
                     </li>
                     <li>
-                        <a className={active === 5 ? "active" : ""} onClick={() => handleOnClick(5)}><img
-                            src="/assets/imgs/page/homepage1/5.svg" alt="jobBox"/> Education</a>
+                        <a
+                            className={active === 5 ? "active" : ""}
+                            onClick={() => handleOnClick(5)}
+                        >
+                            <img
+                                src="/assets/imgs/page/homepage1/5.svg"
+                                alt="jobBox"
+                            />{" "}
+                            Education
+                        </a>
                     </li>
                     <li>
-                        <a className={active === 6 ? "active" : ""} onClick={() => handleOnClick(6)}><img
-                            src="/assets/imgs/page/homepage1/6.svg" alt="jobBox"/> Business</a>
+                        <a
+                            className={active === 6 ? "active" : ""}
+                            onClick={() => handleOnClick(6)}
+                        >
+                            <img
+                                src="/assets/imgs/page/homepage1/6.svg"
+                                alt="jobBox"
+                            />{" "}
+                            Business
+                        </a>
                     </li>
                 </ul>
             </div>
             <div className="tab-content mt-50" id="myTabContent-1">
                 {grantDetails.map((item, i) => (
-                    <div className={`tab-pane fade ${active == i && "show active"}`}>
+                    <div
+                        className={`tab-pane fade ${
+                            active == i && "show active"
+                        }`}
+                    >
                         <div className="row">
                             {item.map((grant, j) => (
                                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 card-height">
                                     <div className="card-grid-2 grid-bd-16 hover-up">
                                         <div className="card-block-info">
                                             <h5>
-                                                <Link legacyBehavior
-                                                      href={`/grant-details/${grant.grant_id}`}><a>{grant.title}</a></Link>
+                                                <Link
+                                                    legacyBehavior
+                                                    href={`/grant-details/${grant.grant_id}`}
+                                                >
+                                                    <a>{grant.title}</a>
+                                                </Link>
                                             </h5>
                                             <div className="mt-5">
-                                                <span className="card-location mr-15">{grant.location}</span>
-                                                <span className="card-time">closing date: {grant.closing_date}</span>
+                                                <span className="card-location mr-15">
+                                                    {grant.location}
+                                                </span>
+                                                <span className="card-time">
+                                                    closing date:{" "}
+                                                    {grant.closing_date}
+                                                </span>
                                             </div>
                                             <div className="card-2-bottom mt-20">
                                                 <div className="row">
                                                     <div className="col-xl-8 col-md-7 mb-2">
-                                                        {grant.category_name.map((one_category_name) => (
-                                                            <Link legacyBehavior href=""><a
-                                                                className="btn btn-tags-sm mr-5">{one_category_name}</a></Link>
-                                                        ))}
+                                                        {grant.category_name.map(
+                                                            (
+                                                                one_category_name
+                                                            ) => (
+                                                                <Link
+                                                                    legacyBehavior
+                                                                    href=""
+                                                                >
+                                                                    <a className="btn btn-tags-sm mr-5">
+                                                                        {
+                                                                            one_category_name
+                                                                        }
+                                                                    </a>
+                                                                </Link>
+                                                            )
+                                                        )}
                                                     </div>
-                                                    <div className="col-xl-4 col-md-5 text-lg-end"><span
-                                                        className="card-text-price">{grant.total_size_of_grant_scheme}</span><span
-                                                        className="text-muted"></span></div>
+                                                    <div className="col-xl-4 col-md-5 text-lg-end">
+                                                        <span className="card-text-price">
+                                                            {
+                                                                grant.total_size_of_grant_scheme
+                                                            }
+                                                        </span>
+                                                        <span className="text-muted"></span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <p className="font-sm color-text-paragraph mt-20">{grant.description}</p>
+                                            <p className="font-sm color-text-paragraph mt-20">
+                                                {grant.description}
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
