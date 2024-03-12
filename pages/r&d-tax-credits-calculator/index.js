@@ -249,10 +249,32 @@ export default function Index() {
                                     </div>
                                 </Grid>
                             </Grid>
+                            <Grid container alignItems="center" style={{minWidth: '100%'}}
+                                    sx={{display: {xs: 'flex', md: 'flex', lg: 'none'}}}>
+                                <Grid item xs={12} md={12} sx={{marginBottom: '20px'}}>
+                                    <h4>Staying on top of the Changes</h4>
+                                </Grid>
+                                <Grid item xs={12} md={12}>
+                                    <img className="content-media" src="assets/imgs/page/r&d-tax-credits-calculator/Tax.jpeg" alt="joxBox" />
+                                </Grid>
+                                <Grid item xs={12} md={12}>
+                                    <div className="mt-10">
+                                        <h6 className="font-md fw-bold color-text-paragraph mt-5" style={{color: "#1740d0"}}>Calculating R&D tax credits for SMEs</h6>
+                                        <p className="font-sm color-text-paragraph">To qualify as an SME, your company must have fewer than 500 staff and a turnover of under £100 million GBP’s or a balance sheet total under £86 million GBP’s.</p>
+                                        <h6 className="font-md fw-bold color-text-paragraph mt-5" style={{color: "#3aab67"}}>Changes to R&D tax credit scheme</h6>
+                                        <p className="font-sm color-text-paragraph">The government makes ongoing reforms to R&D tax credit relief schemes. Contact a Preferred Partner tax advisor for the latest information.</p>
+                                        <h6 className="font-md fw-bold color-text-paragraph mt-5" style={{color: "#f58a3c"}}>Calculating R&D tax credits for SMEs</h6>
+                                        <p className="font-sm color-text-paragraph">To qualify as an SME, your company must have fewer than 500 staff and a turnover of under £100 million GBP’s or a balance sheet total under £86 million GBP’s.</p>
+                                    </div>
+                                    <div className="mt-10 mb-20">
+                                        <button className="btn btn-default fs-6" onClick={toggleOpen}>Get Started</button>
+                                    </div>
+                                </Grid>
+                            </Grid>
                         </div>
                     </div>
                 </section>
-                <section className="section-box mt-40 mb-20">
+                <section className="section-box mt-40">
                     <div className="post-loop-grid">
                         <div className="container">
                             <Grid container alignItems="center" style={{minWidth: '100%'}}
@@ -283,6 +305,28 @@ export default function Index() {
                                 <Grid item xs={12} md={12}>
                                     <div className="mb-30">
                                         <p className="color-text-paragraph">Keep up to date with UK Government R&D Tax Credit schemes. Along with calculations, provides detailed information on what can be claimed and what cannot be claimed, if your advance is in the arts, humanities, social sciences, including economics.</p>
+                                    </div>
+                                    <div className="mt-10 mb-50">
+                                        <a className="btn btn-default fs-6" target="_blank" href="https://www.gov.uk/">
+                                            gov.uk
+                                        </a>
+                                    </div>
+                                </Grid>
+                                <Grid item lg={6}>
+                                    <img className="content-media" style={{"minWidth": "35vw"}} src="assets/imgs/page/r&d-tax-credits-calculator/Government.png" alt="joxBox" />
+                                </Grid>
+                            </Grid>
+                            <Grid container alignItems="center" style={{minWidth: '100%'}}
+                                    sx={{display: {xs: 'flex', md: "flex", lg: 'none'}}}>
+                                <Grid item xs={12} md={12} sx={{marginBottom: '20px'}}>
+                                    <h3>UK Government Website</h3>
+                                </Grid>
+                                <Grid item xs={12} md={12}>
+                                    <img className="content-media" style={{"minWidth": "35vw"}} src="assets/imgs/page/r&d-tax-credits-calculator/Government.png" alt="joxBox" />
+                                </Grid>
+                                <Grid item xs={12} md={12}>
+                                    <div className="mt-10">
+                                        <p className="font-md color-text-paragraph">Keep up to date with UK Government R&D Tax Credit schemes. Along with calculations, provides detailed information on what can be claimed and what cannot be claimed, if your advance is in the arts, humanities, social sciences, including economics.</p>
                                     </div>
                                     <div className="mt-10 mb-50">
                                         <a className="btn btn-default fs-6" target="_blank" href="https://www.gov.uk/">
