@@ -88,7 +88,6 @@
     .bg-homepage1 {
         background-size: auto;
     }
-
 }
 
 @include media-breakpoint-down(lg) {
@@ -346,8 +345,7 @@
     .box-step {
         margin-bottom: 50px;
     }
-    .banner-hero
-    {
+    .banner-hero {
         &.banner-homepage5 {
             background-color: $background-white;
         }
@@ -724,8 +722,9 @@
     .section-title-large {
         font-size: 38px;
     }
-    .block-banner-1 img, .block-banner-2 img, .block-banner-3 img
-    {
+    .block-banner-1 img,
+    .block-banner-2 img,
+    .block-banner-3 img {
         margin-bottom: 15px;
     }
 }
@@ -784,11 +783,44 @@
     }
 }
 
-
 /*OTHER SCREEN*/
 
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
     .header-right {
         display: none;
+    }
+}
+
+.card-overflow {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+
+    .card-block-info {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        p {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+
+        h5{
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+
+        .card-2-bottom {
+            margin-top: auto;
+        }
     }
 }

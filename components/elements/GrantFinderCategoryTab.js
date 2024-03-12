@@ -128,7 +128,7 @@ const GrantFinderCategoryTab = () => {
                         <div className="row">
                             {item.map((grant, j) => (
                                 <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 card-height">
-                                    <div className="card-grid-2 grid-bd-16 hover-up">
+                                    <div className="card-grid-2 grid-bd-16 hover-up card-overflow">
                                         <div className="card-block-info">
                                             <h5>
                                                 <Link

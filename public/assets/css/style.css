@@ -11307,7 +11307,9 @@ ul li:last-child .card-list-4 {
   .section-title-large {
     font-size: 38px;
   }
-  .block-banner-1 img, .block-banner-2 img, .block-banner-3 img {
+  .block-banner-1 img,
+  .block-banner-2 img,
+  .block-banner-3 img {
     margin-bottom: 15px;
   }
 }
@@ -11363,4 +11365,33 @@ ul li:last-child .card-list-4 {
   .header-right {
     display: none;
   }
+}
+.card-overflow {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+}
+.card-overflow .card-block-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card-overflow .card-block-info p {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.card-overflow .card-block-info h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+.card-overflow .card-block-info .card-2-bottom {
+  margin-top: auto;
 }/*# sourceMappingURL=style.css.map */
