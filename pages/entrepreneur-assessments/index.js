@@ -108,6 +108,9 @@ export default function Index() {
     );
   }
 
+  console.log("Index")
+  console.log(data)
+
   return (
     <Layout>
       <section className="slider__area">
@@ -168,7 +171,7 @@ export default function Index() {
                   <p>Basic assessment of your idea and business opportunity</p>
                </div>
             </div>
-            <AssessmentGrid data={business} clickAction={toggleOpen} progress={progress}/>
+            {<AssessmentGrid data={business} clickAction={toggleOpen} progress={progress}/>}
          </div>
          <QuizModal onClose={toggleOpen} title={`${assessmentTitle}`} assessment={assessment} uizard={uizard} time={assessment.time} show={open} isLoggedIn={true} />
       </section>

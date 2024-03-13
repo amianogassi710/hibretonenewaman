@@ -20,6 +20,9 @@ function Grid({ data, clickAction }) {
       return filtered
    },{})
 
+   console.log("Grid")
+   console.log(data)
+
   return (
     <>
     <div className="list-tabs mb-50 d-flex justify-content-center">

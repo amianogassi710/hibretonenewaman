@@ -26,7 +26,8 @@
 .content-media {
   border-radius: 16px;
   transition: 0.05s ease-in-out;
-  max-height: 65vh;
+  width: 100%;
+  max-width: 1000px;
   &:hover {
     scale: 1.02;
     transition: 0.05s ease-in-out;
