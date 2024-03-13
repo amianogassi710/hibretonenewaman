@@ -8782,7 +8782,8 @@ ul li:last-child .card-list-4 {
 .content-media {
   border-radius: 16px;
   transition: 0.05s ease-in-out;
-  max-height: 65vh;
+  width: 100%;
+  max-width: 1000px;
 }
 .content-media:hover {
   scale: 1.02;
