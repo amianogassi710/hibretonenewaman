@@ -65,6 +65,28 @@ const BusinessPlanStepForm = () => {
                           display: {xs: 'flex', md: "flex", lg: 'none'},
                           alignItems: 'center',
                           justifyContent: 'center',
+                          width: '100%', // This ensures the Grid item is full width
+                      }}
+                >
+                    <MobileStepper
+                        variant="progress"
+                        steps={stepsItems.length}
+                        position="static"
+                        activeStep={currentStep - 1}
+                        sx={{
+                            width: '100%',
+                            justifyContent: 'center',
+                            flexGrow: 1,
+                        }}
+                    />
+                </Grid>
+            )}
+            {currentStep <= 7 && (
+                <Grid item xs={12}
+                      sx={{
+                          display: {xs: 'flex', md: "flex", lg: 'none'},
+                          alignItems: 'center',
+                          justifyContent: 'center',
                           width: '100%',
                       }}>
                     <Typography sx={{color: 'primary.main', textAlign: 'center'}}>

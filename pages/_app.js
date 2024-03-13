@@ -1,7 +1,8 @@
 import "../public/assets/css/style.css";
 import "../styles/globals.css";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {useLocalStorage} from "react-use";
+import {createTheme, ThemeProvider, CssBaseline} from '@mui/material';
 
 function MyApp({Component, pageProps}) {
     const [isLoggedIn, setIsLoggedIn] = useLocalStorage("is_logged_in", false);
@@ -10,6 +11,14 @@ function MyApp({Component, pageProps}) {
         require("../public/assets/js/bootstrap.bundle.min.js");
     }, []);
 
+    const theme = createTheme({
+        typography: {
+            fontFamily: [
+                'Plus Jakarta Sans',
+                'sans-serif',
+            ].join(','),
+        },
+    });
     useEffect(() => {
         if (isLoggedIn) {
             fetch("/auth/login/jwt", {
@@ -23,7 +32,12 @@ function MyApp({Component, pageProps}) {
         }
     }, [])
 
-    return <Component {...pageProps} />;
+    return (
+
+        <ThemeProvider theme={theme}>
+            <CssBaseline/>
+            <Component {...pageProps} />
+        </ThemeProvider>);
 }
 
 export default MyApp;
