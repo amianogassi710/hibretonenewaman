@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import { Autocomplete, TextField, Button, Grid } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
 
 function GrantFinderSearchBox() {
     const StyledTextField = styled(TextField)({
@@ -95,9 +95,8 @@ function GrantFinderSearchBox() {
                             )}
                         />
                     </Grid>
-                    
+
                     <Grid item xs={12} lg={3}>
-                        
                         <Autocomplete
                             clearOnEscape
                             options={locations}
@@ -110,7 +109,7 @@ function GrantFinderSearchBox() {
                             )}
                         />
                     </Grid>
-                    
+
                     <Grid item xs={12} lg={2}>
                         <Button
                             variant="contained"
@@ -118,17 +117,17 @@ function GrantFinderSearchBox() {
                             size="large"
                             startIcon={<SearchIcon />}
                             sx={{
-                                backgroundColor: "#3AAB67", 
+                                backgroundColor: "rgb(58, 171, 103)",
                                 "&:hover": {
-                                    backgroundColor: "#339e5c", 
+                                    backgroundColor: "#339e5c",
                                 },
+                                height: "45px",
                             }}
                         >
                             Search
                         </Button>
                     </Grid>
                 </Grid>
-                
             </div>
             <div
                 className="list-tags-banner mt-10 mb-30 ml-20 wow animate__animated animate__fadeInUp"
@@ -136,25 +135,25 @@ function GrantFinderSearchBox() {
             >
                 <strong>Popular Searches:</strong>
                 <Link legacyBehavior href="#">
-                    <a>Designer, </a>
+                    <a>Education </a>
                 </Link>
                 <Link legacyBehavior href="#">
-                    <a>Web, </a>
+                    <a>Small Business </a>
                 </Link>
                 <Link legacyBehavior href="#">
-                    <a>IOS, </a>
+                    <a>Research </a>
                 </Link>
                 <Link legacyBehavior href="#">
-                    <a>Developer, </a>
+                    <a>Nonprofit </a>
                 </Link>
                 <Link legacyBehavior href="#">
-                    <a>PHP, </a>
+                    <a>Healthcare </a>
                 </Link>
                 <Link legacyBehavior href="#">
-                    <a>Senior, </a>
+                    <a>Technology </a>
                 </Link>
                 <Link legacyBehavior href="#">
-                    <a>Engineer, </a>
+                    <a>Environmental </a>
                 </Link>
             </div>
         </>

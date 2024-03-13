@@ -92,30 +92,6 @@ const GrantFinderCategoryTab = () => {
                             Technology
                         </a>
                     </li>
-                    <li>
-                        <a
-                            className={active === 5 ? "active" : ""}
-                            onClick={() => handleOnClick(5)}
-                        >
-                            <img
-                                src="/assets/imgs/page/homepage1/5.svg"
-                                alt="jobBox"
-                            />{" "}
-                            Education
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={active === 6 ? "active" : ""}
-                            onClick={() => handleOnClick(6)}
-                        >
-                            <img
-                                src="/assets/imgs/page/homepage1/6.svg"
-                                alt="jobBox"
-                            />{" "}
-                            Business
-                        </a>
-                    </li>
                 </ul>
             </div>
             <div className="tab-content mt-50" id="myTabContent-1">
