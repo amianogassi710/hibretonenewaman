@@ -10,8 +10,8 @@ import {
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import axios from "axios";
-import CustomListItem from "./CustomedListItem";
-import RegenerateButton from "./RegenerateButton";
+import CustomListItem from "../../../components/elements/CustomedListItem";
+import RegenerateButton from "../../../components/elements/RegenerateButton";
 
 const Step5 = ({previousStep, nextStep}) => {
     const [step1FormData, setStep1FormData] = useSessionStorage('BusinessPlanStepForm.step1FormData', {

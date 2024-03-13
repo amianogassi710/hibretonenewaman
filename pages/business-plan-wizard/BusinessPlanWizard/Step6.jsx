@@ -17,7 +17,7 @@ import {useSessionStorage} from "react-use";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import axios from "axios";
-import RegenerateButton from "./RegenerateButton";
+import RegenerateButton from "../../../components/elements/RegenerateButton";
 
 const currencySymbols = {
     USD: '$', // US Dollar

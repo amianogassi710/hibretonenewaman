@@ -16,7 +16,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import axios from "axios";
 import StyledFormControlLabel from "./StyledFormControlLabel";
-import RegenerateButton from "./RegenerateButton";
+import RegenerateButton from "../../../components/elements/RegenerateButton";
 
 const Step3 = ({previousStep, nextStep}) => {
     const [step1FormData, setStep1FormData] = useSessionStorage('BusinessPlanStepForm.step1FormData', {
