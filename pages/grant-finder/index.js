@@ -44,47 +44,6 @@ export default function Index2() {
                             </div>
                         </div>
                     </section>
-                    {/* <section className="section-box overflow-visible mt-50 mb-50">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                                    <div className="text-center">
-                                        <h1 className="color-brand-2">
-                                            <span className="count">£100M</span>
-
-                                        </h1>
-                                        <h5>Total Grants</h5>
-                                    </div>
-                                </div>
-                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                                    <div className="text-center">
-                                        <h1 className="color-brand-2">
-                                            <span className="count">3200+</span>
-                                        </h1>
-                                        <h5>Number of Grants</h5>
-
-                                    </div>
-                                </div>
-                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                                    <div className="text-center">
-                                        <h1 className="color-brand-2">
-                                            <span className="count">1100+</span>
-                                        </h1>
-                                        <h5>Founders</h5>
-   
-                                    </div>
-                                </div>
-                                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                                    <div className="text-center">
-                                        <h1 className="color-brand-2">
-                                            <span className="count">£7.3</span>
-                                        </h1>
-                                        <h5>Supported</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section> */}
                     <section className="section-box mt-0">
                         <div className="container">
                             <div className="banner-hero">
@@ -107,7 +66,7 @@ export default function Index2() {
                             <div className="row">
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                     <div className="text-center">
-                                        <h1 className="color-brand-2">
+                                        <h1 className="color-brand-2 color-background-1">
                                             <span className="count">£100M</span>
                                         </h1>
                                         <h5>Total Grants</h5>
@@ -115,7 +74,7 @@ export default function Index2() {
                                 </div>
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                     <div className="text-center">
-                                        <h1 className="color-brand-2">
+                                        <h1 className="color-brand-2 color-background-2">
                                             <span className="count">3200+</span>
                                         </h1>
                                         <h5>Number of Grants</h5>
@@ -123,7 +82,7 @@ export default function Index2() {
                                 </div>
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                     <div className="text-center">
-                                        <h1 className="color-brand-2">
+                                        <h1 className="color-brand-2 color-background-3">
                                             <span className="count">1100+</span>
                                         </h1>
                                         <h5>Founders</h5>
@@ -131,7 +90,7 @@ export default function Index2() {
                                 </div>
                                 <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                     <div className="text-center">
-                                        <h1 className="color-brand-2">
+                                        <h1 className="color-brand-2 color-background-4">
                                             <span className="count">£7.3M</span>
                                         </h1>
                                         <h5>Supported</h5>

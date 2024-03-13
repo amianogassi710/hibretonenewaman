@@ -21,7 +21,24 @@ export default function GrantsList() {
                                     {/* <div className="font-sm color-text-paragraph-2 mt-10 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                                     Search for the latest personal, public, private, academic and voluntary sector grant funding
                                     </div> */}
-                                    <GrantFinderSearchBox/>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section className="section-box mt-0">
+                        <div className="container">
+                            <div className="banner-hero">
+                                <div className="block-banner">
+                                    <div className="text-center">
+                                        <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
+                                            Funding for Every Type of Enterprise
+                                        </h2>
+                                        <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
+                                            Find the right grants for you.
+                                        </p>
+                                    </div>
+                                    <GrantFinderSearchBox />
                                 </div>
                             </div>
                         </div>

@@ -38,7 +38,7 @@
     .block-banner {
         position: relative;
         z-index: 12;
-        padding: 50px 180px 50px 192px;
+        padding: 50px 10px 50px 10px;
         .form-find {
             background: #ffffff;
             box-shadow: $box-shadow-1;
@@ -105,7 +105,7 @@
             }
             .box-industry {
                 width: 100%;
-                max-width: 180px;
+                max-width: 580px;
                 .select2 {
                     &::before {
                         content: "";
