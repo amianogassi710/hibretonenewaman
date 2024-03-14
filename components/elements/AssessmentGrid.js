@@ -25,7 +25,7 @@ function Grid({ data, clickAction }) {
 
   return (
     <>
-    <div className="list-tabs mb-50 d-flex justify-content-center">
+    <div className="list-tabs mb-30 d-flex justify-content-center">
         <ul className="nav nav-tabs" role="tablist">
             <li>
                 <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1,"All")}>All</a>
@@ -50,10 +50,13 @@ function Grid({ data, clickAction }) {
                 </li>
         </ul>
     </div>
+    <div className="category-description text-center mb-30">
+      <p>Simple assessment quizzes align with the six categories determining an entrepreneurs success</p>
+    </div>
       <div className="row">
         {Object.keys(filteredData).map((key) => (
                <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6" key={key} data-key={key} onClick={data[key].available ? () => clickAction(data[key],key) : null}>
-                  <div className="grid__item white-bg transition-3 mb-30" data-key={key}>
+                  <div className={`${data[key].available ? "grid__item available" : "grid__item"} white-bg transition-3 mb-30`} data-key={key}>
                      <div className="grid__thumb w-img fix grid_thumb_height grid_thumb" data-key={key}>
                         <div className="grid__tag" data-key={key}>
                            <a className="grid__category" data-key={key}>{data[key].category}</a>

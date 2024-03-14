@@ -258,9 +258,7 @@ li.hr span {
   display: block;
 }
 
-p {
-  color: #4F5E64;
-} /*--- Common Classes---------------------*/
+/*--- Common Classes---------------------*/
 ::selection {
   background: #05264E; /* WebKit/Blink Browsers */
   color: #fff;
@@ -1126,9 +1124,9 @@ h4 {
 
 /*TYPOGRAPHY*/
 body {
-  color: #05264E;
+  color: rgba(51, 51, 51, 0.7);
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   font-style: normal;
   font-weight: 400;
@@ -3674,22 +3672,24 @@ ul li:last-child .card-list-4 {
   box-shadow: 0px 1px 2px rgba(26, 31, 35, 0.1);
   background-color: white;
   border-radius: 20px;
+}
+.grid__item.available {
   cursor: pointer;
 }
-.grid__item a {
-  text-decoration: none;
-}
-.grid__item:hover {
+.grid__item.available:hover {
   box-shadow: 0px 30px 50px -14px rgba(26, 31, 35, 0.07);
 }
-.grid__item:hover .grid_thumb img {
+.grid__item.available:hover .grid_thumb img {
   transform: scale(1.1);
   z-index: -1;
 }
-.grid__item:hover .grid__category {
+.grid__item.available:hover .grid__category {
   color: white;
   background: #3C66ED;
   z-index: 2;
+}
+.grid__item a {
+  text-decoration: none;
 }
 .grid__content {
   padding-top: 20px;
@@ -3823,6 +3823,10 @@ ul li:last-child .card-list-4 {
 }
 .grid__progress_circle {
   width: 50px;
+}
+
+.nav-tabs:hover {
+  cursor: pointer;
 }
 
 .enquiry-modal {
@@ -10845,6 +10849,236 @@ ul li:last-child .card-list-4 {
   height: 100%;
   opacity: 0.8;
   background: #05264E;
+}
+
+.bg-img-scholarship {
+  display: flex;
+  height: 30vh;
+  background: url(../imgs/page/scholarship/hero-image.png) no-repeat center center;
+  background-size: cover;
+}
+.bg-img-scholarship h2, .bg-img-scholarship p {
+  z-index: 2;
+  position: relative;
+  color: white;
+  padding-left: 10px;
+  border-left: 10px solid #83cbff;
+}
+.bg-img-scholarship::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.primary-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border: 1px solid rgb(60, 101, 245);
+  border-radius: 8px;
+  background-color: rgb(60, 101, 245);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.rounded-corners {
+  border-radius: 10px;
+}
+
+.pd-l {
+  padding-left: 130px;
+}
+
+.pd-r {
+  padding-right: 130px;
+}
+
+.mg-t {
+  margin-top: 10px;
+}
+
+.mgb-70 {
+  margin-bottom: 70px;
+}
+
+.mgt-70 {
+  margin-top: 70px;
+}
+
+.mgl {
+  margin-left: 130px;
+}
+
+.text-heading {
+  margin-top: 0px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45.36px;
+  color: rgb(5, 38, 78);
+  margin-bottom: 13px;
+  width: 570px;
+}
+
+.para {
+  margin-top: 0px;
+  font-family: "Plus Jakarta Sans";
+  font-weight: 500px;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgb(67, 85, 121);
+  text-align: justify;
+  margin-bottom: 13px;
+}
+
+.scholarship-supporter-pic {
+  width: 603px;
+  height: 400px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox-pic {
+  width: 16px;
+  height: 16px;
+  margin-right: 38px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  background-image: url(../imgs/page/scholarship/Checkbox.png);
+  background-size: contain;
+  background-position: center;
+}
+
+.bullet-row {
+  margin-top: 0px;
+  display: flex;
+  align-items: top;
+  justify-content: top;
+  margin-bottom: 0px;
+}
+
+.stats-heading {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 59px;
+  width: 78%;
+  height: 83px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stat-box {
+  width: 148px;
+  height: 83px;
+  display: flex;
+  justify-content: center;
+}
+
+.stat-nums {
+  width: 166px;
+  height: 45px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0em;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.box {
+  width: 143px;
+  height: 43px;
+  position: relative;
+  top: 0px;
+  margin-left: 73px;
+  background-size: cover;
+  background-position: center;
+}
+
+.blue-box {
+  background-image: url("../imgs/page/scholarship/blue-box.png");
+}
+
+.yellow-box {
+  background-image: url("../imgs/page/scholarship/yellow-box.png");
+}
+
+.beige-box {
+  background-image: url("../imgs/page/scholarship/beige-box.png");
+}
+
+.pink-box {
+  background-image: url("../imgs/page/scholarship/pink-box.png");
+}
+
+.stat-name {
+  width: 297px;
+  height: 34px;
+  margin-top: 0px;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+  .stat-box {
+    width: 50%;
+    margin-bottom: 25px;
+    column-gap: 25px;
+  }
+}
+.background-shape-1, .background-shape-2 {
+  position: absolute;
+  background: rgb(244, 247, 255);
+  mix-blend-mode: darken;
+  border-radius: 16px;
+}
+
+.background-shape-1 {
+  top: 500.99px;
+  left: -1930.99px;
+  width: 127.5%;
+  height: 2800.78px;
+  transform: rotate(-101.49deg);
+}
+
+.background-shape-2 {
+  top: 3500px;
+  left: 800px;
+  width: 130.2%;
+  height: 900px;
+  transform: rotate(-104.48deg);
 }
 
 @media (max-width: 1399.98px) {
