@@ -145,7 +145,7 @@ export default function Index() {
                                                     <MUILink href="#" color="primary">read more</MUILink>
                                                 </p>
                                             </div>
-                                            <div className="mt-20 mb-30">
+                                            <div className="mt-20">
                                                 <Link href="/business-plan-wizard" className="btn btn-start fs-6">Get
                                                     Started</Link>
                                             </div>
@@ -259,7 +259,7 @@ export default function Index() {
                                                     </li>
                                                 </ul>
                                             </div>
-                                            <div className="mt-20 mb-20">
+                                            <div className="mt-20">
                                                 <Link href="/business-plan-wizard" className="btn btn-start fs-6">Get
                                                     Started</Link>
                                             </div>
@@ -318,7 +318,7 @@ export default function Index() {
                                                     if you fail we can help you gain a better paying job.
                                                 </p>
                                             </div>
-                                            <div className="mt-20 mb-20">
+                                            <div className="mt-20">
                                                 <Link href="/business-plan-wizard" className="btn btn-start fs-6">Get
                                                     Started</Link>
                                             </div>
