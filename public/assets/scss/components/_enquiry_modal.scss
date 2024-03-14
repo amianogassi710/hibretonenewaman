@@ -1,5 +1,5 @@
 
-.assessment-modal {
+.enquiry-modal {
   z-index: 2;
   position: fixed;
   left: 0;
@@ -14,21 +14,21 @@
   overflow: hidden;
 }
 
-.assessment-modal-content {
+.enquiry-modal-content {
   display: inline-table;
   align-items: center;
   width: 90vw;
-  max-width: 700px;
+  max-width: 500px;
   height: 35vh;
+  max-height: 900px;
   border-radius: 15px;
-  overflow: hidden;
   background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top;
   background-size: cover;
   background-color: rgba(5,38,78,0.8);
   background-blend-mode:overlay;
 }
 
-.assessment-modal-header {
+.enquiry-modal-header {
   position: relative;
   color: white;
   width: 100%;
@@ -80,7 +80,7 @@
   }
 }
 
-.assessment-modal-close {
+.enquiry-modal-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -89,7 +89,7 @@
   cursor: pointer;
 }
 
-.assessment-modal-footer {
+.enquiry-modal-footer {
   display: flex;
   align-items: center;
   width: 100%;
@@ -100,7 +100,7 @@
   padding-left: 45px;
 }
 
-.assessment-modal-body {
+.enquiry-modal-body {
   margin: 0px auto;
   background-color: white;
   width: 100%;
@@ -108,6 +108,9 @@
   h6 {
     font-weight: bold;
     margin: 0;
+  }
+  textarea {
+    height: 50px;
   }
 }
 
