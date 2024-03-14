@@ -916,7 +916,7 @@ iframe {
 .color-background-1::before {
   content: "";
   display: inline-block;
-  width: 80%;
+  width: 60%;
   height: 80%;
   background-color: rgba(162, 223, 236, 0.6);
   transform: skewY(-7deg);
@@ -924,7 +924,7 @@ iframe {
   top: 0;
   right: 0;
   z-index: -1;
-  left: 50%;
+  left: 60%;
   margin-left: -40%;
 }
 
@@ -936,7 +936,7 @@ iframe {
 .color-background-2::before {
   content: "";
   display: inline-block;
-  width: 80%;
+  width: 60%;
   height: 80%;
   background-color: rgba(255, 236, 134, 0.6);
   transform: skewY(-7deg);
@@ -944,7 +944,7 @@ iframe {
   top: 0;
   right: 0;
   z-index: -1;
-  left: 50%;
+  left: 60%;
   margin-left: -40%;
 }
 
@@ -956,7 +956,7 @@ iframe {
 .color-background-3::before {
   content: "";
   display: inline-block;
-  width: 80%;
+  width: 60%;
   height: 80%;
   background-color: rgba(255, 190, 144, 0.6);
   transform: skewY(-7deg);
@@ -964,7 +964,7 @@ iframe {
   top: 0;
   right: 0;
   z-index: -1;
-  left: 50%;
+  left: 60%;
   margin-left: -40%;
 }
 
@@ -976,7 +976,7 @@ iframe {
 .color-background-4::before {
   content: "";
   display: inline-block;
-  width: 80%;
+  width: 60%;
   height: 80%;
   background-color: rgba(236, 162, 224, 0.4901960784);
   transform: skewY(-7deg);
@@ -984,7 +984,7 @@ iframe {
   top: 0;
   right: 0;
   z-index: -1;
-  left: 50%;
+  left: 60%;
   margin-left: -40%;
 }
 
