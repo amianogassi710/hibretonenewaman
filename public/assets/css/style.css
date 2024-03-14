@@ -3609,8 +3609,8 @@ ul li:last-child .card-list-4 {
   display: flex;
   align-items: center;
   width: 100%;
-  min-height: 70px;
-  height: 7.5vh;
+  min-height: 60px;
+  height: 7vh;
   color: white;
   z-index: 1;
   padding-left: 45px;
@@ -3823,6 +3823,159 @@ ul li:last-child .card-list-4 {
 }
 .grid__progress_circle {
   width: 50px;
+}
+
+.enquiry-modal {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  padding-top: 70px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.enquiry-modal-content {
+  display: inline-table;
+  align-items: center;
+  width: 90vw;
+  max-width: 500px;
+  height: 35vh;
+  max-height: 900px;
+  border-radius: 15px;
+  background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top;
+  background-size: cover;
+  background-color: rgba(5, 38, 78, 0.8);
+  background-blend-mode: overlay;
+}
+
+.enquiry-modal-header {
+  position: relative;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+@media (max-width: 1399.98px) {
+  .enquiry-modal-header {
+    height: 7.5vh;
+  }
+  .enquiry-modal-header h5 {
+    font-weight: bold;
+    font-size: 22.5px;
+    left: 0;
+    z-index: 1;
+  }
+  .enquiry-modal-header p {
+    line-height: 1.5vh;
+    color: white;
+    font-size: 15px;
+  }
+}
+@media (max-width: 767.98px) {
+  .enquiry-modal-header {
+    height: 9vh;
+  }
+  .enquiry-modal-header h5 {
+    font-weight: bold;
+    font-size: 20px;
+    left: 0;
+    z-index: 1;
+  }
+  .enquiry-modal-header p {
+    line-height: 1vh;
+    font-size: 15px;
+    color: white;
+  }
+}
+@media (max-width: 575.98px) {
+  .enquiry-modal-header {
+    height: 10vh;
+  }
+  .enquiry-modal-header h5 {
+    font-weight: bold;
+    font-size: 14px;
+    left: 0;
+    z-index: 1;
+  }
+  .enquiry-modal-header p {
+    line-height: 1vh;
+    font-size: 10px;
+    color: white;
+  }
+}
+
+.enquiry-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.enquiry-modal-footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 60px;
+  height: 7vh;
+  color: white;
+  z-index: 1;
+  padding-left: 45px;
+}
+
+.enquiry-modal-body {
+  margin: 0px auto;
+  background-color: white;
+  width: 100%;
+  padding: 1px;
+}
+.enquiry-modal-body h6 {
+  font-weight: bold;
+  margin: 0;
+}
+.enquiry-modal-body textarea {
+  height: 50px;
+}
+
+.assessment-icon {
+  color: white;
+  transition: 0.1s ease-in-out;
+}
+.assessment-icon:hover {
+  color: #05264E;
+  scale: 105%;
+  transition: 0.2s ease-in-out;
+}
+
+.tracker {
+  width: 50%;
+  font-weight: 600;
+  font-size: 85%;
+  z-index: 2;
+}
+.tracker p {
+  color: white;
+}
+
+.progress-bar {
+  height: 5px;
+  width: 85%;
+  border-radius: 15px;
+}
+
+.bar {
+  height: inherit;
+  background-color: #3AAB67;
+  border-radius: inherit;
 }
 
 .header {
@@ -8851,6 +9004,14 @@ ul li:last-child .card-list-4 {
   }
 }
 
+.sm_img_container {
+  position: relative;
+  width: 100%;
+  height: 33%;
+  border-radius: 10px;
+  aspect-ratio: 1.8/1;
+}
+
 .bg-img-calculator {
   display: flex;
   height: 30vh;
@@ -10658,6 +10819,32 @@ ul li:last-child .card-list-4 {
   transform: rotate(25deg);
   top: 800px;
   right: -500px;
+}
+
+.bg-img-triage {
+  display: flex;
+  height: 40vh;
+  background: url(../imgs/page/business-problem-triage/Hero.jpg) no-repeat center;
+  background-size: cover;
+  z-index: -1;
+}
+.bg-img-triage h2, .bg-img-triage p {
+  z-index: 1;
+  position: relative;
+  color: white;
+  padding-left: 10px;
+  border-left: 10px solid #83cbff;
+}
+.bg-img-triage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #05264E;
 }
 
 @media (max-width: 1399.98px) {

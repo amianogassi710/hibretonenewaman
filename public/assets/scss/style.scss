@@ -47,7 +47,8 @@ TABLE CONTENT
 'components/misc',
 'components/banners',
 'components/assessment-modal',
-'components/grid';
+'components/grid',
+'components/enquiry_modal';
 
 // Layout-related sections
 @import 'layout/header',
@@ -76,7 +77,8 @@ TABLE CONTENT
 'pages/r&d-tax-credits-calculator',
 'pages/_online-courses',
 'pages/grant-finder',
-'pages/business-plan-writer';
+'pages/business-plan-writer',
+'pages/business-problem-triage';
 
 // Responsive
 @import 'layout/responsive';
