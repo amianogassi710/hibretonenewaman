@@ -8,7 +8,7 @@ SwiperCore.use([Navigation]);
 import "swiper/css/grid";
 import axiosFetchWithRetry from "../elements/fetchWithRetry";
 
-const CategorySlider = () => {
+const CategorySlider1 = () => {
     const [data, setData] = useState([]);
     const getCategories = async () => {
         const reqOptions = {
@@ -65,7 +65,7 @@ const CategorySlider = () => {
                             spaceBetween: 30,
                         },
                     }}
-                    className="swiper-wrapper pb-10 pt-5 swiper-grid-jobobx"
+                    className="swiper-wrapper pb-70 pt-5 swiper-grid-jobobx"
                 >
                     {data.map((item, i) => (
                         <SwiperSlide key={i}>
@@ -104,4 +104,4 @@ const CategorySlider = () => {
     );
 };
 
-export default CategorySlider;
+export default CategorySlider1;
