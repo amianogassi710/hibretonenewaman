@@ -3674,22 +3674,24 @@ ul li:last-child .card-list-4 {
   box-shadow: 0px 1px 2px rgba(26, 31, 35, 0.1);
   background-color: white;
   border-radius: 20px;
+}
+.grid__item.available {
   cursor: pointer;
 }
-.grid__item a {
-  text-decoration: none;
-}
-.grid__item:hover {
+.grid__item.available:hover {
   box-shadow: 0px 30px 50px -14px rgba(26, 31, 35, 0.07);
 }
-.grid__item:hover .grid_thumb img {
+.grid__item.available:hover .grid_thumb img {
   transform: scale(1.1);
   z-index: -1;
 }
-.grid__item:hover .grid__category {
+.grid__item.available:hover .grid__category {
   color: white;
   background: #3C66ED;
   z-index: 2;
+}
+.grid__item a {
+  text-decoration: none;
 }
 .grid__content {
   padding-top: 20px;
@@ -3823,6 +3825,10 @@ ul li:last-child .card-list-4 {
 }
 .grid__progress_circle {
   width: 50px;
+}
+
+.nav-tabs:hover {
+  cursor: pointer;
 }
 
 .enquiry-modal {

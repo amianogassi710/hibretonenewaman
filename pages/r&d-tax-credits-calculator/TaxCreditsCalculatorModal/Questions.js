@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
@@ -8,30 +8,6 @@ const Questions = props => {
   const [progress,setProgress] = useState(0);
   const formGroupRef = useRef([])
   const inputRef = useRef([])
-
-  useEffect(() => {
-    // Gets all the form sections in the quiz
-    formGroupRef.current = document.querySelectorAll("form .assessment-form-group")
-    console.log(question)
-  },[formGroupRef.current])
-
-  const handleClose = e => {
-    setQuestion(1)
-    setProgress(0)
-    const checkedInputs = document.querySelectorAll('input:checked');
-    const costs = document.querySelectorAll('input[type="number"]')
-    checkedInputs.forEach(input => {
-        input.checked = false
-    })
-
-    costs.forEach(input => {
-        input.value = ""
-    })
-  }
-
-  if (!props.show) {
-    return null;
-  }
 
   const handleValidateForm = form => {
     inputRef.current = form.querySelectorAll("input")
@@ -120,6 +96,57 @@ const Questions = props => {
     }
     handleClose()
     props.onSubmit(res)
+  }
+
+  const nextOnEnter = useCallback((e) => {
+    var currentForm = formGroupRef.current[question-1];
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      if (question < 6 && handleValidateForm(currentForm)) {
+        handleNext(e);
+      } else if (question === 6 && handleValidateForm(currentForm)) {
+        handleSubmit(e);
+      } else {
+        // Show validation error if needed
+        Swal.fire({
+          text: "Please fill in the response before proceeding to the next question.",
+          icon: "warning",
+          confirmButtonText: "OK",
+          confirmButtonColor: '#ff9494'
+        });
+      }
+    }
+  }, [question, handleValidateForm, handleNext, handleSubmit]);
+
+  useEffect(() => {
+    document.body.addEventListener('keydown', nextOnEnter)
+    return function cleanup() {
+      document.body.removeEventListener('keydown', nextOnEnter)
+    }
+  },[nextOnEnter])
+
+  useEffect(() => {
+    // Gets all the form sections in the quiz
+    formGroupRef.current = document.querySelectorAll("form .assessment-form-group")
+    console.log(question)
+  },[formGroupRef.current])
+
+  const handleClose = e => {
+    setQuestion(1)
+    setProgress(0)
+    const checkedInputs = document.querySelectorAll('input:checked');
+    const costs = document.querySelectorAll('input[type="number"]')
+    checkedInputs.forEach(input => {
+        input.checked = false
+    })
+
+    costs.forEach(input => {
+        input.value = ""
+    })
+  }
+
+  if (!props.show) {
+    return null;
   }
 
   const QuizButton = () => {
