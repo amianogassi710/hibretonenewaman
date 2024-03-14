@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import axiosFetchWithRetry from "./fetchWithRetry";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const GrantFinderCategoryTab = () => {
     const [active, setActive] = useState(1);
@@ -42,7 +43,7 @@ const GrantFinderCategoryTab = () => {
     };
     return (
         <>
-            <div className="list-tabs mt-40  text-center">
+            {/* <div className="list-tabs mt-40  text-center">
                 <ul className="nav nav-tabs" role="tablist">
                     <li>
                         <a
@@ -93,76 +94,211 @@ const GrantFinderCategoryTab = () => {
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div className="tab-content mt-50" id="myTabContent-1">
-                {grantDetails.map((item, i) => (
-                    <div
-                        className={`tab-pane fade ${
-                            active == i && "show active"
-                        }`}
+            </div> */}
+            <div className="box-swiper mt-50">
+                <div className="swiper-container">
+                    <Swiper
+                        slidesPerView={4}
+                        spaceBetween={30}
+                        navigation={{
+                            prevEl: ".swiper-button-prev",
+                            nextEl: ".swiper-button-next",
+                        }}
+                        breakpoints={{
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 30,
+                            },
+                            575: {
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                            },
+                            767: {
+                                slidesPerView: 2,
+                                spaceBetween: 30,
+                            },
+                            991: {
+                                slidesPerView: 3,
+                                spaceBetween: 30,
+                            },
+                            1199: {
+                                slidesPerView: 4,
+                                spaceBetween: 30,
+                            },
+                        }}
+                        className="swiper-wrapper pb-10 pt-5 swiper-grid-jobobx"
                     >
-                        <div className="row">
-                            {item.map((grant, j) => (
-                                <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 card-height">
-                                    <div className="card-grid-2 grid-bd-16 hover-up card-overflow">
-                                        <div className="card-block-info">
-                                            <h5>
-                                                <Link
-                                                    legacyBehavior
-                                                    href={`/grant-details/${grant.grant_id}`}
-                                                >
-                                                    <a>{grant.title}</a>
-                                                </Link>
-                                            </h5>
-                                            <div className="mt-5">
-                                                <span className="card-location mr-15">
-                                                    {grant.location}
-                                                </span>
-                                                <span className="card-time">
-                                                    closing date:{" "}
-                                                    {grant.closing_date}
-                                                </span>
-                                            </div>
-                                            <div className="card-2-bottom mt-20">
-                                                <div className="row">
-                                                    <div className="col-xl-8 col-md-7 mb-2">
-                                                        {grant.category_name.map(
-                                                            (
-                                                                one_category_name
-                                                            ) => (
-                                                                <Link
-                                                                    legacyBehavior
-                                                                    href=""
-                                                                >
-                                                                    <a className="btn btn-tags-sm mr-5">
-                                                                        {
-                                                                            one_category_name
-                                                                        }
-                                                                    </a>
-                                                                </Link>
-                                                            )
-                                                        )}
-                                                    </div>
-                                                    <div className="col-xl-4 col-md-5 text-lg-end">
-                                                        <span className="card-text-price">
-                                                            {
-                                                                grant.total_size_of_grant_scheme
-                                                            }
-                                                        </span>
-                                                        <span className="text-muted"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p className="font-sm color-text-paragraph mt-20">
-                                                {grant.description}
-                                            </p>
+                        <SwiperSlide>
+                            <div
+                                className="swiper-slide hover-up"
+                                style={{ cursor: "pointer" }}
+                            >
+                                <a
+                                    className={active === 1 ? "active" : ""}
+                                    onClick={() => handleOnClick(1)}
+                                >
+                                    <div className="item-logo">
+                                        <div className="image-left">
+                                            <img
+                                                alt="jobBox"
+                                                src={`assets/imgs/page/homepage1/1.svg`}
+                                            />
+                                        </div>
+                                        <div className="text-info-right">
+                                            <h4></h4>
+                                            <p className="font-xs">Community</p>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
+                                </a>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="swiper-slide hover-up">
+                                <Link
+                                    legacyBehavior
+                                    href="/grant-finder/grants-list"
+                                >
+                                    <a>
+                                        <div className="item-logo">
+                                            <div className="image-left">
+                                                <img
+                                                    alt="jobBox"
+                                                    src={`assets/imgs/page/homepage1/1.svg`}
+                                                />
+                                            </div>
+                                            <div className="text-info-right">
+                                                <h4></h4>
+                                                <p className="font-xs">
+                                                    Community
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="swiper-slide hover-up">
+                                <Link
+                                    legacyBehavior
+                                    href="/grant-finder/grants-list"
+                                >
+                                    <a>
+                                        <div className="item-logo">
+                                            <div className="image-left">
+                                                <img
+                                                    alt="jobBox"
+                                                    src={`assets/imgs/page/homepage1/1.svg`}
+                                                />
+                                            </div>
+                                            <div className="text-info-right">
+                                                <h4></h4>
+                                                <p className="font-xs">
+                                                    Community
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="swiper-slide hover-up">
+                                <Link
+                                    legacyBehavior
+                                    href="/grant-finder/grants-list"
+                                >
+                                    <a>
+                                        <div className="item-logo">
+                                            <div className="image-left">
+                                                <img
+                                                    alt="jobBox"
+                                                    src={`assets/imgs/page/homepage1/1.svg`}
+                                                />
+                                            </div>
+                                            <div className="text-info-right">
+                                                <h4></h4>
+                                                <p className="font-xs">
+                                                    Community
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </Link>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+                <div className="tab-content mt-50" id="myTabContent-1">
+                    {grantDetails.map((item, i) => (
+                        <div
+                            className={`tab-pane fade ${
+                                active == i && "show active"
+                            }`}
+                        >
+                            <div className="row">
+                                {item.map((grant, j) => (
+                                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 card-height">
+                                        <div className="card-grid-2 grid-bd-16 hover-up card-overflow">
+                                            <div className="card-block-info">
+                                                <h5>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href={`/grant-details/${grant.grant_id}`}
+                                                    >
+                                                        <a>{grant.title}</a>
+                                                    </Link>
+                                                </h5>
+                                                <div className="mt-5">
+                                                    <span className="card-location mr-15">
+                                                        {grant.location}
+                                                    </span>
+                                                    <span className="card-time">
+                                                        closing date:{" "}
+                                                        {grant.closing_date}
+                                                    </span>
+                                                </div>
+                                                <div className="card-2-bottom mt-20">
+                                                    <div className="row">
+                                                        <div className="col-xl-8 col-md-7 mb-2">
+                                                            {grant.category_name.map(
+                                                                (
+                                                                    one_category_name
+                                                                ) => (
+                                                                    <Link
+                                                                        legacyBehavior
+                                                                        href=""
+                                                                    >
+                                                                        <a className="btn btn-tags-sm mr-5">
+                                                                            {
+                                                                                one_category_name
+                                                                            }
+                                                                        </a>
+                                                                    </Link>
+                                                                )
+                                                            )}
+                                                        </div>
+                                                        <div className="col-xl-4 col-md-5 text-lg-end">
+                                                            <span className="card-text-price">
+                                                                {
+                                                                    grant.total_size_of_grant_scheme
+                                                                }
+                                                            </span>
+                                                            <span className="text-muted"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p className="font-sm color-text-paragraph mt-20">
+                                                    {grant.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </>
     );

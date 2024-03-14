@@ -9,30 +9,82 @@ import "swiper/css/grid";
 import axiosFetchWithRetry from "../elements/fetchWithRetry";
 
 const CategorySlider = () => {
-    const [data, setData] = useState([]);
-    const getCategories = async () => {
-        const reqOptions = {
-            method: "get",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
+    // const [data, setData] = useState([]);
+    // const getCategories = async () => {
+    //     const reqOptions = {
+    //         method: "get",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //     };
 
-        try {
-            const data = await axiosFetchWithRetry({
-                url: "/grants/grant-categories",
-                reqOptions: reqOptions,
-                timeout: 2000,
-            });
-            setData(data);
-        } catch (error) {
-            console.error({ error: error.message });
+    //     try {
+    //         const data = await axiosFetchWithRetry({
+    //             url: "/grants/grant-categories",
+    //             reqOptions: reqOptions,
+    //             timeout: 2000,
+    //         });
+    //         setData(data);
+    //     } catch (error) {
+    //         console.error({ error: error.message });
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     getCategories();
+    // }, []);
+    const data = [
+        {
+            "category_id": 1,
+            "category_name": "Community",
+            "total_num": 24
+        },
+        {
+            "category_id": 2,
+            "category_name": "Environment",
+            "total_num": 23
+        },
+        {
+            "category_id": 3,
+            "category_name": "Research",
+            "total_num": 39
+        },
+        {
+            "category_id": 4,
+            "category_name": "Technology",
+            "total_num": 21
+        },
+        {
+            "category_id": 5,
+            "category_name": "Education",
+            "total_num": 19
+        },
+        {
+            "category_id": 6,
+            "category_name": "Business",
+            "total_num": 21
+        },
+        {
+            "category_id": 7,
+            "category_name": "Disability",
+            "total_num": 0
+        },
+        {
+            "category_id": 8,
+            "category_name": "Equal Opportunities",
+            "total_num": 0
+        },
+        {
+            "category_id": 9,
+            "category_name": "People & Families",
+            "total_num": 0
+        },
+        {
+            "category_id": 10,
+            "category_name": "Health",
+            "total_num": 0
         }
-    };
-
-    useEffect(() => {
-        getCategories();
-    }, []);
+    ];
     return (
         <>
             <div className="swiper-container swiper-group-5">
@@ -61,7 +113,7 @@ const CategorySlider = () => {
                             spaceBetween: 30,
                         },
                         1199: {
-                            slidesPerView: 5,
+                            slidesPerView: 4,
                             spaceBetween: 30,
                         },
                     }}
@@ -77,10 +129,10 @@ const CategorySlider = () => {
                                     <a>
                                         <div className="item-logo">
                                             <div className="image-left">
-                                                <img
-                                                    alt="jobBox"
+                                                {/* <img
+                                                    alt=""
                                                     src={`assets/imgs/page/homepage1/${item.category_id}.svg`}
-                                                />
+                                                /> */}
                                             </div>
                                             <div className="text-info-right">
                                                 <h4>{item.category_name}</h4>
