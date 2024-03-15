@@ -3933,7 +3933,7 @@ ul li:last-child .card-list-4 {
   height: 7vh;
   color: white;
   z-index: 1;
-  padding-left: 45px;
+  padding: 20px 0;
 }
 
 .enquiry-modal-body {
@@ -8840,19 +8840,20 @@ ul li:last-child .card-list-4 {
 }
 .feedback-container {
   height: 15vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   border: 1px solid #adadad;
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 13px;
+  padding-top: 10px;
+  font-size: 16px;
 }
 .feedback-container li {
   padding-left: 20px;
 }
 
 .neurodivergent-container {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 

@@ -51,7 +51,7 @@ const Score = props => {
             </div>
             <div className="feedback color-black mt-5">
               <p>Follow these recommendations then, if needed, retake the assessment:</p>
-              <div className="feedback-container">
+              <div className="feedback-container mt-10">
                 <ul>
                   {feedback["recommendations"].map((recommendation) => (
                     <li key={j += 1}>{recommendation}</li>
