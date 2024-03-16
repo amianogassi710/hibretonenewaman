@@ -8,34 +8,61 @@ const GrantFinderCategoryTab = () => {
     const [data, setData] = useState([]);
     const [grantDetails, setGrantDetails] = useState([]);
 
+    // useEffect(() => {
+    //     var grantList = [];
+    //     const getGrantDetails = async (i) => {
+    //         const reqOptions = {
+    //             method: "get",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //         };
+
+    //         const url = "/grants/grant-details/" + i + "/items";
+
+    //         try {
+    //             const data = await axiosFetchWithRetry({
+    //                 url: url,
+    //                 reqOptions: reqOptions,
+    //                 timeout: 2000,
+    //             });
+
+    //             grantList[i] = data;
+    //         } catch (error) {
+    //             console.error({ error: error.message });
+    //         }
+    //     };
+    //     for (let i = 1; i <= 4; i++) {
+    //         getGrantDetails(i);
+    //     }
+    //     setGrantDetails(grantList);
+    // }, []);
     useEffect(() => {
-        var grantList = [];
-        const getGrantDetails = async (i) => {
-            const reqOptions = {
-                method: "get",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-            };
-
-            const url = "/grants/grant-details/" + i + "/items";
-
-            try {
-                const data = await axiosFetchWithRetry({
-                    url: url,
-                    reqOptions: reqOptions,
-                    timeout: 2000,
-                });
-
-                grantList[i] = data;
-            } catch (error) {
-                console.error({ error: error.message });
+        const fetchGrantDetails = async () => {
+            const grantDetailsPromises = [];
+            for (let i = 1; i <= 4; i++) {
+                grantDetailsPromises.push(
+                    axiosFetchWithRetry({
+                        url: "/grants/grant-details/" + i + "/items",
+                        reqOptions: {
+                            method: "get",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                        },
+                        timeout: 2000,
+                    }).catch((error) => console.error({ error: error.message }))
+                );
             }
+            Promise.all(grantDetailsPromises).then((grantDetails) => {
+                // This ensures you're updating the state based on the results of all promises.
+                setGrantDetails(
+                    grantDetails.filter((detail) => detail !== undefined)
+                );
+            });
         };
-        for (let i = 1; i <= 6; i++) {
-            getGrantDetails(i);
-        }
-        setGrantDetails(grantList);
+
+        fetchGrantDetails();
     }, []);
 
     const handleOnClick = (index) => {
@@ -132,11 +159,9 @@ const GrantFinderCategoryTab = () => {
                             <div
                                 className="swiper-slide hover-up"
                                 style={{ cursor: "pointer" }}
+                                onClick={() => handleOnClick(1)} 
                             >
-                                <a
-                                    className={active === 1 ? "active" : ""}
-                                    onClick={() => handleOnClick(1)}
-                                >
+                                <a>
                                     <div className="item-logo">
                                         <div className="image-left">
                                             <img
@@ -145,95 +170,82 @@ const GrantFinderCategoryTab = () => {
                                             />
                                         </div>
                                         <div className="text-info-right">
-                                            <h4></h4>
-                                            <p className="font-xs">Community</p>
+                                            <h4>Community</h4>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="swiper-slide hover-up">
-                                <Link
-                                    legacyBehavior
-                                    href="/grant-finder/grants-list"
-                                >
-                                    <a>
-                                        <div className="item-logo">
-                                            <div className="image-left">
-                                                <img
-                                                    alt="jobBox"
-                                                    src={`assets/imgs/page/homepage1/1.svg`}
-                                                />
-                                            </div>
-                                            <div className="text-info-right">
-                                                <h4></h4>
-                                                <p className="font-xs">
-                                                    Community
-                                                </p>
-                                            </div>
+                            <div
+                                className="swiper-slide hover-up"
+                                style={{ cursor: "pointer" }}
+                                onClick={() => handleOnClick(2)}
+                            >
+                                <a>
+                                    <div className="item-logo">
+                                        <div className="image-left">
+                                            <img
+                                                alt="jobBox"
+                                                src={`assets/imgs/page/homepage1/2.svg`}
+                                            />
                                         </div>
-                                    </a>
-                                </Link>
+                                        <div className="text-info-right">
+                                            <h4>Environment</h4>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="swiper-slide hover-up">
-                                <Link
-                                    legacyBehavior
-                                    href="/grant-finder/grants-list"
-                                >
-                                    <a>
-                                        <div className="item-logo">
-                                            <div className="image-left">
-                                                <img
-                                                    alt="jobBox"
-                                                    src={`assets/imgs/page/homepage1/1.svg`}
-                                                />
-                                            </div>
-                                            <div className="text-info-right">
-                                                <h4></h4>
-                                                <p className="font-xs">
-                                                    Community
-                                                </p>
-                                            </div>
+                            <div
+                                className="swiper-slide hover-up"
+                                style={{ cursor: "pointer" }}
+                                onClick={() => handleOnClick(3)}
+                            >
+                                <a>
+                                    <div className="item-logo">
+                                        <div className="image-left">
+                                            <img
+                                                alt="jobBox"
+                                                src={`assets/imgs/page/homepage1/3.svg`}
+                                            />
                                         </div>
-                                    </a>
-                                </Link>
+                                        <div className="text-info-right">
+                                            <h4>Research</h4>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="swiper-slide hover-up">
-                                <Link
-                                    legacyBehavior
-                                    href="/grant-finder/grants-list"
-                                >
-                                    <a>
-                                        <div className="item-logo">
-                                            <div className="image-left">
-                                                <img
-                                                    alt="jobBox"
-                                                    src={`assets/imgs/page/homepage1/1.svg`}
-                                                />
-                                            </div>
-                                            <div className="text-info-right">
-                                                <h4></h4>
-                                                <p className="font-xs">
-                                                    Community
-                                                </p>
-                                            </div>
+                            <div
+                                className="swiper-slide hover-up"
+                                style={{ cursor: "pointer" }}
+                                onClick={() => handleOnClick(4)}
+                            >
+                                <a>
+                                    <div className="item-logo">
+                                        <div className="image-left">
+                                            <img
+                                                alt="jobBox"
+                                                src={`assets/imgs/page/homepage1/4.svg`}
+                                            />
                                         </div>
-                                    </a>
-                                </Link>
+                                        <div className="text-info-right">
+                                            <h4>Technology</h4>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div className="tab-content mt-50" id="myTabContent-1">
+                <div className="tab-content mt-10" id="myTabContent-1">
                     {grantDetails.map((item, i) => (
                         <div
                             className={`tab-pane fade ${
-                                active == i && "show active"
+                                active == i+1 && "show active"
                             }`}
                         >
                             <div className="row">

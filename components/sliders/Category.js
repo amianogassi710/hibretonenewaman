@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useEffect, useState } from "react";
 
 SwiperCore.use([Navigation]);
-
+import { TbDisabled } from "react-icons/tb";
 import "swiper/css/grid";
 import axiosFetchWithRetry from "../elements/fetchWithRetry";
 
@@ -133,6 +133,7 @@ const CategorySlider = () => {
                                                     alt=""
                                                     src={`assets/imgs/page/homepage1/${item.category_id}.svg`}
                                                 /> */}
+                                                <TbDisabled size={50} style={{ color: '#4294FF' }}/>
                                             </div>
                                             <div className="text-info-right">
                                                 <h4>{item.category_name}</h4>
