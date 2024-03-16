@@ -212,12 +212,13 @@
   }
   &-container {
     height: 15vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     border: 1px solid #adadad;
     border-radius: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 13px;
+    padding-top: 10px;
+    font-size: 16px;
     li {
       padding-left: 20px;
     }
@@ -225,7 +226,7 @@
 }
 
 .neurodivergent-container {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 10px;
 }
 

@@ -108,9 +108,6 @@ export default function Index() {
     );
   }
 
-  console.log("Index")
-  console.log(data)
-
   return (
     <Layout>
       <section className="slider__area">
@@ -190,7 +187,7 @@ export default function Index() {
                      </div>
                      </Grid>
                      <Grid item lg={6}>
-                     <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
+                        <iframe className="content-media" width="600" height="400" src="https://www.youtube.com/embed/KZaD0hD3mOg?si=5lKeQBnzQRAmPUdf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                      </Grid>
                </Grid>
                <Grid container alignItems="center" style={{minWidth: '100%'}}
