@@ -105,7 +105,7 @@ const countries = [
             <section className="section-box mt-75">
               <div className="post-loop-grid">
                   <div className="container">
-                    <Grid container className='mb-50' alignItems="center" style={{minWidth: '100%'}}
+                    <Grid container alignItems="center" style={{minWidth: '100%'}}
                           sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
                           <Grid item lg={6} sx={{paddingRight: {lg: '75px'}}}>
                           <h3 className="mt-5">Using Data to Inform Decisions</h3>
