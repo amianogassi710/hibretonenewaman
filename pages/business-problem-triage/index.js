@@ -144,7 +144,7 @@ const countries = [
                   </div>
               </div>
             </section>
-            <section className="section-box mb-100">
+            <section className="section-box mt-100">
               <div className="post-loop-grid">
                   <div className="container">
                     <Grid container alignItems="center" style={{minWidth: '100%'}}
@@ -186,7 +186,7 @@ const countries = [
                   </div>
               </div>
             </section>
-            <section className="section-box mt-75">
+            <section className="section-box mt-100">
               <div className="post-loop-grid">
                   <div className="container">
                     <Grid container className='mb-50' alignItems="center" style={{minWidth: '100%'}}
