@@ -7,20 +7,6 @@ import { Autocomplete, TextField, Button, Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 function GrantFinderSearchBox() {
-    const StyledTextField = styled(TextField)({
-        "& .MuiInput-underline:before": {
-            // 默认情况下隐藏底部边线
-            borderBottom: "none",
-        },
-        "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
-            // 鼠标悬浮时隐藏底部边线
-            borderBottom: "none",
-        },
-        "& .MuiInput-underline:after": {
-            // 输入时隐藏底部边线
-            borderBottom: "none",
-        },
-    });
 
     const categories = [
         "Community",

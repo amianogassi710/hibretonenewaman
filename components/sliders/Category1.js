@@ -2,7 +2,17 @@ import Link from "next/link";
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useEffect, useState } from "react";
-import { GiHealthNormal } from "react-icons/gi";
+
+import { TbDisabled } from "react-icons/tb";
+import { MdFamilyRestroom, MdOutlineDiversity1, MdOutlineCastForEducation, MdOutlineBusinessCenter } from "react-icons/md";
+import { GiHealthNormal, GiConvict, GiArchiveResearch, GiTechnoHeart, GiRegeneration } from "react-icons/gi";
+import { PiPaintBrushBold } from "react-icons/pi";
+import { LuTrees } from "react-icons/lu"; 
+import { FaUserFriends, FaHotel, FaEnvira } from "react-icons/fa";
+import { FaHandsPraying } from "react-icons/fa6";
+import { GrUserWorker } from "react-icons/gr";
+import { FaRunning } from "react-icons/fa";
+import { RiCommunityLine } from "react-icons/ri";
 
 SwiperCore.use([Navigation]);
 
@@ -86,6 +96,29 @@ const CategorySlider1 = () => {
             total_num: 0,
         },
     ];
+
+    const iconsMap = {
+        "Disability": TbDisabled,
+        "People & Families": MdFamilyRestroom,
+        "Equality & Diversity": MdOutlineDiversity1,
+        "Health": GiHealthNormal,
+        "Arts": PiPaintBrushBold,
+        "Rural": LuTrees,
+        "Religion": FaHandsPraying,
+        "Social Enterprise": FaUserFriends,
+        "Leisure & Tourism": FaHotel,
+        "Employment": GrUserWorker,
+        "Crime": GiConvict,
+        "Young People": FaRunning,
+        "Community": RiCommunityLine,
+        "Environment": FaEnvira,
+        "Research": GiArchiveResearch,
+        "Technology": GiTechnoHeart,
+        "Education": MdOutlineCastForEducation,
+        "Business": MdOutlineBusinessCenter,
+        "Regeneration": GiRegeneration,
+    };
+    
     return (
         <>
             <div className="swiper-container swiper-group-5">
@@ -130,10 +163,17 @@ const CategorySlider1 = () => {
                                     <a>
                                         <div className="item-logo">
                                             <div className="image-left">
-                                                {/* <img
-                                                    alt=""
-                                                    src={`assets/imgs/page/homepage1/${item.category_id}.svg`}
-                                                /> */}
+                                                {React.createElement(
+                                                        iconsMap[
+                                                            item.category_name
+                                                        ],
+                                                        {
+                                                            size: 50,
+                                                            style: {
+                                                                color: "#4294FF",
+                                                            },
+                                                        }
+                                                    )}
                                             </div>
                                             <div className="text-info-right">
                                                 <h4>{item.category_name}</h4>

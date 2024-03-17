@@ -3,40 +3,16 @@ import React, { useEffect, useState } from "react";
 import axiosFetchWithRetry from "./fetchWithRetry";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { RiCommunityLine } from "react-icons/ri";
+import { FaEnvira } from "react-icons/fa";
+import { GiArchiveResearch, GiTechnoHeart } from "react-icons/gi";
+
+
 const GrantFinderCategoryTab = () => {
     const [active, setActive] = useState(1);
     const [data, setData] = useState([]);
     const [grantDetails, setGrantDetails] = useState([]);
 
-    // useEffect(() => {
-    //     var grantList = [];
-    //     const getGrantDetails = async (i) => {
-    //         const reqOptions = {
-    //             method: "get",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //         };
-
-    //         const url = "/grants/grant-details/" + i + "/items";
-
-    //         try {
-    //             const data = await axiosFetchWithRetry({
-    //                 url: url,
-    //                 reqOptions: reqOptions,
-    //                 timeout: 2000,
-    //             });
-
-    //             grantList[i] = data;
-    //         } catch (error) {
-    //             console.error({ error: error.message });
-    //         }
-    //     };
-    //     for (let i = 1; i <= 4; i++) {
-    //         getGrantDetails(i);
-    //     }
-    //     setGrantDetails(grantList);
-    // }, []);
     useEffect(() => {
         const fetchGrantDetails = async () => {
             const grantDetailsPromises = [];
@@ -68,60 +44,9 @@ const GrantFinderCategoryTab = () => {
     const handleOnClick = (index) => {
         setActive(index);
     };
+
     return (
         <>
-            {/* <div className="list-tabs mt-40  text-center">
-                <ul className="nav nav-tabs" role="tablist">
-                    <li>
-                        <a
-                            className={active === 1 ? "active" : ""}
-                            onClick={() => handleOnClick(1)}
-                        >
-                            <img
-                                src="/assets/imgs/page/homepage1/1.svg"
-                                alt="jobBox"
-                            />{" "}
-                            Community
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={active === 2 ? "active" : ""}
-                            onClick={() => handleOnClick(2)}
-                        >
-                            <img
-                                src="/assets/imgs/page/homepage1/2.svg"
-                                alt="jobBox"
-                            />{" "}
-                            Environment
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={active === 3 ? "active" : ""}
-                            onClick={() => handleOnClick(3)}
-                        >
-                            <img
-                                src="/assets/imgs/page/homepage1/3.svg"
-                                alt="jobBox"
-                            />{" "}
-                            Research
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={active === 4 ? "active" : ""}
-                            onClick={() => handleOnClick(4)}
-                        >
-                            <img
-                                src="/assets/imgs/page/homepage1/4.svg"
-                                alt="jobBox"
-                            />{" "}
-                            Technology
-                        </a>
-                    </li>
-                </ul>
-            </div> */}
             <div className="box-swiper mt-50">
                 <div className="swiper-container">
                     <Swiper
@@ -156,96 +81,85 @@ const GrantFinderCategoryTab = () => {
                         className="swiper-wrapper pb-10 pt-5 swiper-grid-jobobx"
                     >
                         <SwiperSlide>
-                            <div
-                                className="swiper-slide hover-up"
-                                style={{ cursor: "pointer" }}
-                                onClick={() => handleOnClick(1)} 
-                            >
-                                <a>
-                                    <div className="item-logo">
-                                        <div className="image-left">
-                                            <img
-                                                alt="jobBox"
-                                                src={`assets/imgs/page/homepage1/1.svg`}
-                                            />
-                                        </div>
-                                        <div className="text-info-right">
-                                            <h4>Community</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div
-                                className="swiper-slide hover-up"
-                                style={{ cursor: "pointer" }}
-                                onClick={() => handleOnClick(2)}
-                            >
-                                <a>
-                                    <div className="item-logo">
-                                        <div className="image-left">
-                                            <img
-                                                alt="jobBox"
-                                                src={`assets/imgs/page/homepage1/2.svg`}
-                                            />
-                                        </div>
-                                        <div className="text-info-right">
-                                            <h4>Environment</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div
-                                className="swiper-slide hover-up"
-                                style={{ cursor: "pointer" }}
-                                onClick={() => handleOnClick(3)}
-                            >
-                                <a>
-                                    <div className="item-logo">
-                                        <div className="image-left">
-                                            <img
-                                                alt="jobBox"
-                                                src={`assets/imgs/page/homepage1/3.svg`}
-                                            />
-                                        </div>
-                                        <div className="text-info-right">
-                                            <h4>Research</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div
-                                className="swiper-slide hover-up"
-                                style={{ cursor: "pointer" }}
-                                onClick={() => handleOnClick(4)}
-                            >
-                                <a>
-                                    <div className="item-logo">
-                                        <div className="image-left">
-                                            <img
-                                                alt="jobBox"
-                                                src={`assets/imgs/page/homepage1/4.svg`}
-                                            />
-                                        </div>
-                                        <div className="text-info-right">
-                                            <h4>Technology</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </SwiperSlide>
+    <div
+        className="swiper-slide hover-up"
+        style={{ cursor: "pointer" }}
+        onClick={() => handleOnClick("1")}
+    >
+        <a>
+            <div className="item-logo">
+                <div className="image-left">
+                    <RiCommunityLine size={50} style={{ color: '#4294FF' }}/>
+                </div>
+                <div className="text-info-right">
+                    <h4>Community</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+</SwiperSlide>
+<SwiperSlide>
+    <div
+        className="swiper-slide hover-up"
+        style={{ cursor: "pointer" }}
+        onClick={() => handleOnClick("2")}
+    >
+        <a>
+            <div className="item-logo">
+                <div className="image-left">
+                    <FaEnvira size={50} style={{ color: '#4294FF' }}/>
+                </div>
+                <div className="text-info-right">
+                    <h4>Environment</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+</SwiperSlide>
+<SwiperSlide>
+    <div
+        className="swiper-slide hover-up"
+        style={{ cursor: "pointer" }}
+        onClick={() => handleOnClick("3")}
+    >
+        <a>
+            <div className="item-logo">
+                <div className="image-left">
+                    <GiArchiveResearch size={50} style={{ color: '#4294FF' }}/>
+                </div>
+                <div className="text-info-right">
+                    <h4>Research</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+</SwiperSlide>
+<SwiperSlide>
+    <div
+        className="swiper-slide hover-up"
+        style={{ cursor: "pointer" }}
+        onClick={() => handleOnClick("4")}
+    >
+        <a>
+            <div className="item-logo">
+                <div className="image-left">
+                    <GiTechnoHeart size={50} style={{ color: '#4294FF' }}/>
+                </div>
+                <div className="text-info-right">
+                    <h4>Technology</h4>
+                </div>
+            </div>
+        </a>
+    </div>
+</SwiperSlide>
+
                     </Swiper>
                 </div>
                 <div className="tab-content mt-10" id="myTabContent-1">
                     {grantDetails.map((item, i) => (
                         <div
                             className={`tab-pane fade ${
-                                active == i+1 && "show active"
+                                active == i + 1 && "show active"
                             }`}
                         >
                             <div className="row">

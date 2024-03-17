@@ -136,7 +136,7 @@ export default function Index2() {
                                         about 800+ new grants everyday
                                     </p>
                                 </div>
-                                <div className="box-swiper mt-50">
+                                <div className="box-swiper mt-50 grant-category">
                                     <div>
                                     <NoSSRCategorySlider />
                                     <NoSSRCategorySlider1 />
