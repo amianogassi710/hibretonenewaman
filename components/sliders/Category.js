@@ -116,6 +116,7 @@ const CategorySlider = () => {
         "Education": MdOutlineCastForEducation,
         "Business": MdOutlineBusinessCenter,
         "Regeneration": GiRegeneration,
+        "Equal Opportunities": GiRegeneration,
     };
     
     

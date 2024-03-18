@@ -11,6 +11,8 @@ import TestimonialSliderHomePage from "./../../components/sliders/TestimonialHom
 import Subscription from "../../components/Layout/Subscription";
 import GrantFinderSearchBox from "./../../components/elements/GrantFinderSearchBox";
 import dynamic from "next/dynamic";
+import { Grid } from "@mui/material";
+import { Link as MUILink } from "@mui/material";
 const NoSSRGrantFinderCategoryTab = dynamic(
     () => import("../../components/elements/GrantFinderCategoryTab"),
     { ssr: false }
@@ -48,7 +50,7 @@ export default function Index2() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-0">
+                    <section className="section-box">
                         <div className="container">
                             <div className="banner-hero">
                                 <div className="block-banner">
@@ -109,6 +111,9 @@ export default function Index2() {
                             </div>
                         </div>
                     </section>
+                    <section className="section-box mb-40">
+                        <YellowBanner />
+                    </section>
                     <section className="section-box mt-0">
                         <div className="container">
                             <div className="text-center">
@@ -124,7 +129,7 @@ export default function Index2() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-80">
+                    <section className="section-box mt-30">
                         <div className="section-box wow animate__animated animate__fadeIn">
                             <div className="container">
                                 <div className="text-center">
@@ -138,8 +143,8 @@ export default function Index2() {
                                 </div>
                                 <div className="box-swiper mt-50 grant-category">
                                     <div>
-                                    <NoSSRCategorySlider />
-                                    <NoSSRCategorySlider1 />
+                                        <NoSSRCategorySlider />
+                                        <NoSSRCategorySlider1 />
                                         <div className="swiper-button-next" />
                                         <div className="swiper-button-prev" />
                                     </div>
@@ -147,76 +152,422 @@ export default function Index2() {
                             </div>
                         </div>
                     </section>
-                    <section className="section-box mt-20">
-                        <YellowBanner />
-                    </section>
-                    <section className="section-box pt-50 pb-50 mt-80">
-                        <div className="container">
-                            <div className="text-center mb-50">
-                                <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
-                                    How It Works
-                                </h2>
-                                <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                    Just via some simple steps, you will find
-                                    your ideal grants you are looking for!
-                                </p>
+                    <section className="section-box">
+                        <div className="post-loop-grid">
+                            <div className="container">
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{
+                                        display: {
+                                            xs: "none",
+                                            md: "none",
+                                            lg: "flex",
+                                        },
+                                    }}
+                                >
+                                    <Grid item lg={6}>
+                                        <img
+                                            className="content-media"
+                                            src="assets/imgs/page/grant-finder/1.png"
+                                            alt="joxBox"
+                                        />
+                                    </Grid>
+                                    <Grid
+                                        item
+                                        lg={6}
+                                        sx={{ paddingLeft: { lg: "75px" } }}
+                                    >
+                                        <h4>Grants reduce development risk</h4>
+                                        <div className="mt-10">
+                                            <p className="color-text-paragraph mt-10">
+                                                Hear from entrepreneurs who have
+                                                successfully used grant funding
+                                                to develop their product. Then
+                                                applying for additional grant
+                                                funding to increase staff and
+                                                grow their business.
+                                            </p>
+                                            <p className="color-text-paragraph mt-10">
+                                                Grants can be for innovative
+                                                ideas, but grants are also
+                                                available for traditional
+                                                businesses looking to survive
+                                                through troubled times, or to
+                                                grow. Our Grant Finder will
+                                                point you in the right direction
+                                                with a few words. The Grant
+                                                Finder will also find similar
+                                                grants which you may also be
+                                                eligible for.
+                                            </p>
+                                        </div>
+                                        <div className="mt-20">
+                                            <Link
+                                                href="/grant-finder"
+                                                className="btn btn-start fs-6"
+                                            >
+                                                Read More
+                                            </Link>
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{
+                                        display: {
+                                            xs: "flex",
+                                            md: "flex",
+                                            lg: "none",
+                                        },
+                                    }}
+                                >
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        md={12}
+                                        sx={{ marginBottom: "20px" }}
+                                    >
+                                        <h4>Grants reduce development risk</h4>
+                                    </Grid>
+                                    <Grid item xs={12} md={12}>
+                                        <img
+                                            className="content-media"
+                                            src="assets/imgs/page/grant-finder/1.png"
+                                            alt=""
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} md={12}>
+                                        <div className="mt-10">
+                                            <p className="color-text-paragraph mt-10">
+                                                Hear from entrepreneurs who have
+                                                successfully used grant funding
+                                                to develop their product. Then
+                                                applying for additional grant
+                                                funding to increase staff and
+                                                grow their business.
+                                            </p>
+                                            <p className="color-text-paragraph mt-10">
+                                                Grants can be for innovative
+                                                ideas, but grants are also
+                                                available for traditional
+                                                businesses looking to survive
+                                                through troubled times, or to
+                                                grow. Our Grant Finder will
+                                                point you in the right direction
+                                                with a few words. The Grant
+                                                Finder will also find similar
+                                                grants which you may also be
+                                                eligible for.
+                                            </p>
+                                        </div>
+                                        <div className="mt-20">
+                                            <Link
+                                                href="/grant-finder"
+                                                className="btn btn-start fs-6"
+                                            >
+                                                Read More
+                                            </Link>
+                                        </div>
+                                    </Grid>
+                                </Grid>
                             </div>
-                            <div className="row">
-                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                                    {/* <h2 className="mb-40">Delivering Economic, Social  and Moral impact</h2> */}
-                                    <div className="box-checkbox mb-30">
-                                        <h6>Economic</h6>
-                                        <p className="font-md color-text-paragraph-2 justify-content-between">
-                                            Entrepreneurship is multifaceted -
-                                            job creation, innovation, economic
-                                            growth, wealth creation, tax
-                                            revenue, diversity. A thriving
-                                            entrepreneurial environment is often
-                                            seen as a key driver of economic
-                                            prosperity and societal progress.
-                                        </p>
-                                    </div>
-                                    <div className="box-checkbox mb-30">
-                                        <h6>Social</h6>
-                                        <p className="font-md color-text-paragraph-2">
-                                            Entrepreneurship goes beyond
-                                            economic impact. The potential to
-                                            drive positive social change,
-                                            address societal challenges, and
-                                            contribute to the overall well-being
-                                            of communities. Creating jobs which
-                                            contribute to reducing unemployment
-                                            rates and improving the economic
-                                            well-being of communities.
-                                        </p>
-                                    </div>
-                                    <div className="box-checkbox mb-30">
-                                        <h6>Moral</h6>
-                                        <p className="font-md color-text-paragraph-2">
-                                            Entrepreneurship involves leadership
-                                            grounded in ethical principles. Many
-                                            successful entrepreneurs engage in
-                                            philanthropy and charitable
-                                            activities, using their wealth and
-                                            influence to address issues
-                                            contributing to the society’s
-                                            welfare. Valuing diversity and
-                                            inclusion in more equitable and just
-                                            societies.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center mb-30">
-                                    <iframe
-                                        width="560"
-                                        height="315"
-                                        src="https://www.youtube.com/embed/CIoWgp020B0?si=JXBFLD2VmMtHcDwG"
-                                        title="YouTube video player"
-                                        frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowFullScreen
-                                    ></iframe>
-                                </div>
+                        </div>
+                    </section>
+                    <section className="section-box mt-75">
+                        <div className="post-loop-grid">
+                            <div className="container">
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{
+                                        display: {
+                                            xs: "none",
+                                            md: "none",
+                                            lg: "flex",
+                                        },
+                                    }}
+                                >
+                                    <Grid
+                                        item
+                                        lg={6}
+                                        sx={{
+                                            paddingLeft: { lg: "10px" },
+                                            paddingRight: { lg: "75px" },
+                                        }}
+                                    >
+                                        <Grid item>
+                                            <h4>
+                                                Grant Funding Could be Your
+                                                Kickstarter
+                                            </h4>
+                                        </Grid>
+                                        <Grid item sx={{ mb: 2 }}>
+                                            <p className="color-text-paragraph mt-10">
+                                                When an individual, business, or
+                                                social enterprise is seeking to
+                                                access finance, one of the first
+                                                sources they should try is grant
+                                                funding. A grant is an award,
+                                                usually financial, to facilitate
+                                                a goal or incentivise
+                                                performance. Grants do not
+                                                usually have to be paid back.
+                                            </p>
+                                            <p className="color-text-paragraph mt-10">
+                                                Small-business grants are
+                                                targeted to a variety of
+                                                purposes, from starting a
+                                                company or helping it run more
+                                                efficiently to aiding its
+                                                expansion. Grants are not simply
+                                                free money, however. The funds
+                                                must be used in accordance with
+                                                the terms of the grant, and if
+                                                they are not, they most likely
+                                                have to be paid back.
+                                            </p>
+                                        </Grid>
+                                        <Grid item sx={{ mt: 2 }}>
+                                            <Link
+                                                href="/grant-finder"
+                                                className="btn btn-start fs-6"
+                                            >
+                                                Get Started
+                                            </Link>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid item lg={6}>
+                                        <img
+                                            className="content-media"
+                                            src="assets/imgs/page/business-plan-writer/Royalty-free-images-22.jpeg"
+                                            alt="joxBox"
+                                        />
+                                    </Grid>
+                                </Grid>
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{
+                                        display: {
+                                            xs: "flex",
+                                            md: "flex",
+                                            lg: "none",
+                                        },
+                                    }}
+                                >
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        md={12}
+                                        sx={{ marginBottom: "20px" }}
+                                    >
+                                        <h4>
+                                            Grant Funding Could be Your
+                                            Kickstarter
+                                        </h4>
+                                    </Grid>
+                                    <Grid item xs={12} md={12}>
+                                        <img
+                                            className="content-media"
+                                            src="assets/imgs/page/business-plan-writer/Royalty-free-images-22.jpeg"
+                                            alt="joxBox"
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} md={12}>
+                                        <div className="mt-20">
+                                            <p className="color-text-paragraph mt-10">
+                                                When an individual, business, or
+                                                social enterprise is seeking to
+                                                access finance, one of the first
+                                                sources they should try is grant
+                                                funding. A grant is an award,
+                                                usually financial, to facilitate
+                                                a goal or incentivise
+                                                performance. Grants do not
+                                                usually have to be paid back.
+                                            </p>
+                                            <p className="color-text-paragraph mt-10">
+                                                Small-business grants are
+                                                targeted to a variety of
+                                                purposes, from starting a
+                                                company or helping it run more
+                                                efficiently to aiding its
+                                                expansion. Grants are not simply
+                                                free money, however. The funds
+                                                must be used in accordance with
+                                                the terms of the grant, and if
+                                                they are not, they most likely
+                                                have to be paid back.
+                                            </p>
+                                        </div>
+                                        <div className="mt-20">
+                                            <Link
+                                                href="/grant-finder"
+                                                className="btn btn-start fs-6"
+                                            >
+                                                Get Started
+                                            </Link>
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                            </div>
+                        </div>
+                    </section>
+                    <section className="section-box mt-75">
+                        <div className="post-loop-grid">
+                            <div className="container">
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{
+                                        display: {
+                                            xs: "none",
+                                            md: "none",
+                                            lg: "flex",
+                                        },
+                                    }}
+                                >
+                                    <Grid item lg={6}>
+                                        <img
+                                            className="content-media"
+                                            src="assets/imgs/page/business-plan-writer/Royalty-free-images-14.jpeg"
+                                            alt="joxBox"
+                                        />
+                                    </Grid>
+                                    <Grid
+                                        item
+                                        lg={6}
+                                        sx={{ paddingLeft: { lg: "75px" } }}
+                                    >
+                                        <h4>Top Tips for Grant Applications</h4>
+                                        <div className="mt-10">
+                                            <p className="color-text-paragraph mt-10">
+                                                Finding the funding may actually
+                                                be the easy part. To help you
+                                                secure the funding you need, we
+                                                have collated some tips on how
+                                                to write a successful
+                                                application:
+                                            </p>
+                                            <ul className="mt-10">
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Check your
+                                                    organisation and project are
+                                                    eligible.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Show why there is a
+                                                    need for your project or
+                                                    service.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Explain clearly what
+                                                    you will be doing.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Explain what
+                                                    difference you will make to
+                                                    your beneficiaries.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Show them why should
+                                                    they fund you.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Ask for the right
+                                                    amount of money.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Work on a full cost
+                                                    recovery basis for
+                                                    sustainability.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Give them what
+                                                    they’ve asked for.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Make sure your
+                                                    organisation stands up to
+                                                    scrutiny.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Check the
+                                                    application.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className="mt-20">
+                                            <Link
+                                                href="/grant-finder"
+                                                className="btn btn-start fs-6"
+                                            >
+                                                Get Started
+                                            </Link>
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{
+                                        display: {
+                                            xs: "flex",
+                                            md: "flex",
+                                            lg: "none",
+                                        },
+                                    }}
+                                >
+                                    <Grid
+                                        item
+                                        xs={12}
+                                        md={12}
+                                        sx={{ marginBottom: "20px" }}
+                                    >
+                                        <h4>
+                                            Everyone with a good idea should
+                                            have effective tools
+                                        </h4>
+                                    </Grid>
+                                    <Grid item xs={12} md={12}>
+                                        <img
+                                            className="content-media"
+                                            src="assets/imgs/page/business-plan-writer/Royalty-free-images-14.jpeg"
+                                            alt="joxBox"
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} md={12}>
+                                        <div className="mt-10">
+                                            <p className="font-md color-text-paragraph mt-20">
+                                                You are capable enough to plan,
+                                                build, and scale a business,
+                                                with support if needed. Business
+                                                planning and strategy is not a
+                                                science, you just need to learn.
+                                                Planning and running a business
+                                                changes lives. Even if you fail
+                                                we can help you gain a better
+                                                paying job.
+                                            </p>
+                                        </div>
+                                        <div className="mt-20">
+                                            <Link
+                                                href="/grant-finder"
+                                                className="btn btn-start fs-6"
+                                            >
+                                                Get Started
+                                            </Link>
+                                        </div>
+                                    </Grid>
+                                </Grid>
                             </div>
                         </div>
                     </section>
@@ -302,8 +653,6 @@ export default function Index2() {
                                     <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
                                         Trusted feedback from the aspirers and
                                         the ecosystem
-                                        {/* <br className="d-none d-lg-block" />
-                                        and feed back to us! */}
                                     </p>
                                 </div>
                                 <div className="box-swiper mt-50">
@@ -311,7 +660,11 @@ export default function Index2() {
                                     <div className="swiper-button-prev" />
                                     <NoSSRTestimonialSliderHomePage />
                                 </div>
-                                <KickstartButton />
+                                <div className="col d-flex justify-content-center align-items-center">
+                                    <button className="btn btn-sign-up-inverted fs-6 hover-up font-force-lg">
+                                        Subscribe For Full Access
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </section>
