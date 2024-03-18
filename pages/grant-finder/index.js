@@ -344,7 +344,7 @@ export default function Index2() {
                                     <Grid item lg={6}>
                                         <img
                                             className="content-media"
-                                            src="assets/imgs/page/business-plan-writer/Royalty-free-images-22.jpeg"
+                                            src="assets/imgs/page/grant-finder/2.png"
                                             alt="joxBox"
                                         />
                                     </Grid>
@@ -375,7 +375,7 @@ export default function Index2() {
                                     <Grid item xs={12} md={12}>
                                         <img
                                             className="content-media"
-                                            src="assets/imgs/page/business-plan-writer/Royalty-free-images-22.jpeg"
+                                            src="assets/imgs/page/grant-finder/2.png"
                                             alt="joxBox"
                                         />
                                     </Grid>
@@ -437,7 +437,7 @@ export default function Index2() {
                                     <Grid item lg={6}>
                                         <img
                                             className="content-media"
-                                            src="assets/imgs/page/business-plan-writer/Royalty-free-images-14.jpeg"
+                                            src="assets/imgs/page/grant-finder/3.png"
                                             alt="joxBox"
                                         />
                                     </Grid>
@@ -540,23 +540,67 @@ export default function Index2() {
                                     <Grid item xs={12} md={12}>
                                         <img
                                             className="content-media"
-                                            src="assets/imgs/page/business-plan-writer/Royalty-free-images-14.jpeg"
+                                            src="assets/imgs/page/grant-finder/3.png"
                                             alt="joxBox"
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <div className="mt-10">
-                                            <p className="font-md color-text-paragraph mt-20">
-                                                You are capable enough to plan,
-                                                build, and scale a business,
-                                                with support if needed. Business
-                                                planning and strategy is not a
-                                                science, you just need to learn.
-                                                Planning and running a business
-                                                changes lives. Even if you fail
-                                                we can help you gain a better
-                                                paying job.
+                                        <p className="color-text-paragraph mt-10">
+                                                Finding the funding may actually
+                                                be the easy part. To help you
+                                                secure the funding you need, we
+                                                have collated some tips on how
+                                                to write a successful
+                                                application:
                                             </p>
+                                            <ul className="mt-10">
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Check your
+                                                    organisation and project are
+                                                    eligible.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Show why there is a
+                                                    need for your project or
+                                                    service.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Explain clearly what
+                                                    you will be doing.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Explain what
+                                                    difference you will make to
+                                                    your beneficiaries.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Show them why should
+                                                    they fund you.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Ask for the right
+                                                    amount of money.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Work on a full cost
+                                                    recovery basis for
+                                                    sustainability.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Give them what
+                                                    they’ve asked for.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Make sure your
+                                                    organisation stands up to
+                                                    scrutiny.
+                                                </li>
+                                                <li className="color-text-paragraph">
+                                                    &#8226; Check the
+                                                    application.
+                                                </li>
+                                            </ul>
                                         </div>
                                         <div className="mt-20">
                                             <Link
