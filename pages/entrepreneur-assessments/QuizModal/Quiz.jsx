@@ -265,22 +265,20 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
             ))}
 
             <div className="assessment-form-group" style={{display:"none"}} key={26}>
-
-
-            <div className="container p-0">
-              <div className="row">
-                <div className="col-9 text-start">
-                  <div className="assessment-question fw-bold d-flex align-items-center">
-                    <label>Select Your Gender:</label>
+              <div className="container p-0">
+                <div className="row">
+                  <div className="col-9 text-start">
+                    <div className="assessment-question fw-bold d-flex align-items-center">
+                      <label>Select Your Gender:</label>
+                    </div>
                   </div>
-                </div>
-                <div className="col-3 d-flex align-items-center mb-10">
-                  <div className="section-name fw-bolder">
-                    <h6>Gender</h6>
+                  <div className="col-3 d-flex align-items-center mb-10">
+                    <div className="section-name fw-bolder">
+                      <h6>Gender</h6>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
               <ul className="assessment-radio-group">
                 <li className="gender-male">
                   <input
