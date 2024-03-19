@@ -27,6 +27,10 @@ const nextConfig = {
       {
         source: '/business-plan-writer/:path*',
         destination: 'http://8.134.196.184:8001/:path*', // business-plan-writer-backend FastAPI endpoint
+      },
+      {
+        source: '/business-problem-triage/:path*',
+        destination: 'http://127.0.0.1:8000/:path*', // business-plan-writer-backend FastAPI endpoint
       }
     ];
   },

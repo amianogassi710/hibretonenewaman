@@ -212,7 +212,7 @@ export default function Index() {
             </div>
          </div>
       </section>
-      <section className="section-box mb-100">
+      <section className="section-box mb-100 mt-100">
          <div className="post-loop-grid">
             <div className="container">
                <Grid container alignItems="center" style={{minWidth: '100%'}}

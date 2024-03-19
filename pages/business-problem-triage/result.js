@@ -8,13 +8,11 @@ import SearchBar from '../../components/elements/SearchBar';
 import { Grid } from '@mui/material';
 import CardGrid from '../../components/elements/CardGrid';
 import KickstartButton from '../../components/elements/KickstartButton';
-import { useRouter } from 'next/navigation';
 
 export default function Index() {
   const [data,setData] = useState({})
   const reason = useRef(null)
   const location = useRef(null)
-  const router = useRouter()
 
 
   const locations = [
@@ -50,7 +48,8 @@ const countries = [
   "All"
 ]
 
-  const handleSubmit = async (failure_reason, country_of_origin=null, company_sector=null, failure_stage=null) => {
+  const handleSubmit = async (failure_reason, country_of_orgin, company_sector, failure_stage) => {
+    e.preventDefault()
     const query = {
       "country_of_origin": country_of_origin,
       "company_sector": company_sector,
@@ -59,9 +58,8 @@ const countries = [
     }
 
     try {
-      const response = await axios.post("/business-problem-triage/search/data", query);
+      const response = await axios.post("/business-problem-triage/data", query);
       setData(response.data);
-      router.push("/business-problem-triage/result")
     } catch (error) {
       console.error("Error fetching data:", error);
       // Handle error appropriately (e.g., show an error message)
