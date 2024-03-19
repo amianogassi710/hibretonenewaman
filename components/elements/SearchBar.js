@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Stack from "@mui/material/Stack";
@@ -6,7 +6,8 @@ import { styled } from "@mui/material/styles";
 import { Autocomplete, TextField, Button, Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-function SearchBar({locations, placeholder, countries}) {
+function SearchBar({locations, placeholder, countries, submitFunction}) {
+    const searchInput = useRef(null)
     const StyledTextField = styled(TextField)({
         "& .MuiInput-underline:before": {
             borderBottom: "none",
@@ -61,6 +62,8 @@ function SearchBar({locations, placeholder, countries}) {
                                 },
                                 height: "45px",
                             }}
+                            ref={searchInput}
+                            onClick={() => submitFunction(searchInput.current.value)}
                         >
                             Search
                         </Button>

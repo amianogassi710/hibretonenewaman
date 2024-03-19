@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import React, {useEffect} from "react";
 import {useLocalStorage} from "react-use";
 import {createTheme, ThemeProvider, CssBaseline} from '@mui/material';
+import axiosFetchWithRetry from "../components/elements/fetchWithRetry";
 
 function MyApp({Component, pageProps}) {
     const [isLoggedIn, setIsLoggedIn] = useLocalStorage("is_logged_in", false);
@@ -21,14 +22,18 @@ function MyApp({Component, pageProps}) {
     });
     useEffect(() => {
         if (isLoggedIn) {
-            fetch("/auth/login/jwt", {
-                method: "POST",
-            }).then((response) => {
-                if (response.status !== 200) {
-                    setIsLoggedIn(false);
-                    setUserAccount({});
-                }
-            });
+            try {
+                axiosFetchWithRetry({
+                    url: "/auth/login/jwt",
+                    reqOptions: {
+                        method: "POST",
+                    },
+                    timeout: 3000,
+                });
+            } catch (error) {
+                setIsLoggedIn(false);
+                setUserAccount({});
+            }
         }
     }, [])
 

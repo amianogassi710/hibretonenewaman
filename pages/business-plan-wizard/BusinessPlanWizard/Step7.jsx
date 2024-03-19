@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {
     Grid,
-    Select,
-    MenuItem,
     FormControl,
-    Typography, Divider, Button, FormHelperText, InputLabel, TextField
+    Typography, Divider, Button, FormHelperText, TextField
 } from '@mui/material';
 import {useSessionStorage} from "react-use";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
