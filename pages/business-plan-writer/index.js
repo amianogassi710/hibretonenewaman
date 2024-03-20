@@ -31,7 +31,7 @@ export default function Index() {
                                 <div className="text-center">
                                     <h2 className="section-title mb-10">Transform your business idea into a business
                                         plan</h2>
-                                    <p className="fw-bold color-text-paragraph w-lg-50 mx-auto">
+                                    <p className="font-lg color-text-paragraph-2">
                                         Takes less than 15 minutes</p>
                                 </div>
                                 <div className="text-center mt-20">
@@ -133,7 +133,7 @@ export default function Index() {
                                         <Grid item lg={6} sx={{paddingLeft: {lg: '75px'}}}>
                                             <h4>Business Plan creation for everyone</h4>
                                             <div className="mt-10">
-                                                <p className="color-text-paragraph mt-10">In
+                                                <p className="color-text-paragraph mt-10">
                                                     For aspirers who are neurodiverse, speak English as a second
                                                     language, with limited business skills, or lower levels of
                                                     education,
@@ -163,7 +163,7 @@ export default function Index() {
                                         </Grid>
                                         <Grid item xs={12} md={12}>
                                             <div className="mt-10">
-                                                <p className="color-text-paragraph mt-10">In
+                                                <p className="color-text-paragraph mt-10">
                                                     For aspirers who are neurodiverse, speak English as a second
                                                     language, with limited business skills, or lower levels of
                                                     education,
