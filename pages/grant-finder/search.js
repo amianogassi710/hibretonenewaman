@@ -245,7 +245,7 @@ export default function GrantsList() {
                                                                         <h4>
                                                                             <Link
                                                                                 legacyBehavior
-                                                                                href="/job-details"
+                                                                                href={`/grant-finder/grant/${grant.grant_id}`}
                                                                             >
                                                                                 <a>
                                                                                     {
@@ -265,7 +265,7 @@ export default function GrantsList() {
                                                                         ) => (
                                                                             <Link
                                                                                 legacyBehavior
-                                                                                href=""
+                                                                                href={`/grant-finder`}
                                                                             >
                                                                                 <a className="btn btn-tags-sm mr-5">
                                                                                     {

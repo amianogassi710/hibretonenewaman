@@ -170,7 +170,7 @@ const GrantFinderCategoryTab = () => {
                                                 <h5>
                                                     <Link
                                                         legacyBehavior
-                                                        href={`/grant-details/${grant.grant_id}`}
+                                                        href={`/grant-finder/grant/${grant.grant_id}`}
                                                     >
                                                         <a>{grant.title}</a>
                                                     </Link>

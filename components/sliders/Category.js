@@ -160,7 +160,7 @@ const CategorySlider = () => {
                             <div className="swiper-slide hover-up">
                                 <Link
                                     legacyBehavior
-                                    href="/grant-finder/grants-list"
+                                    href={`/grant-finder/search?category_id=${item.category_id}`}
                                 >
                                     <a>
                                         <div className="item-logo">
