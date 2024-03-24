@@ -1,93 +1,57 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../../components/Layout/Layout";
 import React, { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-import FeaturedSlider from "../../components/sliders/Featured";
 
 export default function GrantDetails() {
-    // const router = useRouter();
-
-    // const [grant_id, setGrantId] = useState(null);
-    const [grantDetails,setGrantDetails] = useState([{
-        "grant_id": 0,
-        "category_id": 0,
-        "category_name": "",
-        "title": "",
-        "description": "",
-        "total_size_of_grant_scheme": 0,
-        "closing_date": "",
-        "location": "",
-        "grant_url": "",
-        "funding_organisation": "",
-        "who_can_apply": "",
-        "how_much_you_can_get": 0
-    }])
-
-    // useEffect(()=>{
-    //     if (router.isReady) {
-    //         const { value } = router.query;
-    //         setGrantId(value);
-    //       }
-    //       console.log('Grant ID:', grant_id)
-    //     const getGrantDetails= async()=>{
-    //         const reqOptions ={
-    //             method:'GET',
-    //             headers:{
-    //                 'Content-Type':'application/json'
-    //             },
-    //         }
-    //         var url = "/grants/grant-details/items/" + grant_id
-    //         const response = await fetch(url, reqOptions)
-
-    //         const data = await response.json()
-    //         if(!response.ok){
-    //             console.log({"error":data.detail})
-    //         }
-    //         else{
-    //             setGrantDetails(data)
-    //         }
-    //     }
-    //     getGrantDetails()
-
-    // },[router.isReady, router.query, grant_id])
     const router = useRouter();
-  // 使用useState来存储grant_id
-  const [grantId, setGrantId] = useState(null); // 初始化为null或者其他默认值
-//   const [grantDetails, setGrantDetails] = useState({});
-  useEffect(() => {
-    if (router.isReady) {
-      // 从router.query中正确解构grant_id
-      const { grant_id } = router.query;
-      setGrantId(grant_id); // 保存grant_id到状态中
-      console.log('Grant ID:', grant_id); // 现在这里应该打印出正确的grant_id值
+    const [grantId, setGrantId] = useState(null);
+    const [grantDetails, setGrantDetails] = useState([
+        {
+            grant_id: 0,
+            category_id: 0,
+            category_name: "",
+            title: "",
+            description: "",
+            total_size_of_grant_scheme: 0,
+            closing_date: "",
+            location: "",
+            grant_url: "",
+            funding_organisation: "",
+            who_can_apply: "",
+            how_much_you_can_get: 0,
+        },
+    ]);
 
-      const getGrantDetails = async () => {
-        const reqOptions = {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        };
-        // 使用状态中的grantId来构建URL
-        var url = "/grants/grant-details/items/" + grantId;
-        const response = await fetch(url, reqOptions);
+    useEffect(() => {
+        if (router.isReady) {
+            const { grant_id } = router.query;
+            setGrantId(grant_id);
+            const getGrantDetails = async () => {
+                const reqOptions = {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                };
 
-        const data = await response.json();
-        if (!response.ok) {
-          console.log({ "error": data.detail });
-        } else {
-          setGrantDetails(data);
+                var url = "/grants/grant-details/items/" + grantId;
+                const response = await fetch(url, reqOptions);
+
+                const data = await response.json();
+                if (!response.ok) {
+                    console.log({ error: data.detail });
+                } else {
+                    setGrantDetails(data);
+                }
+            };
+            if (grantId) {
+                getGrantDetails();
+            }
         }
-      };
-
-      // 确保grantId已经被设置后再调用getGrantDetails
-      if (grantId) {
-        getGrantDetails();
-      }
-    }
-  }, [router.isReady, router.query, grantId]); // 添加grantId作为依赖
+    }, [router.isReady, router.query, grantId]);
     return (
         <>
             <Layout>
@@ -98,33 +62,44 @@ export default function GrantDetails() {
                                 <div className="col-lg-8 col-md-12 col-sm-12 col-12">
                                     <div className="box-border-single">
                                         <div className="row mt-10">
-                                            <div className="col-lg-8 col-md-12">
+                                            <div className="col-lg-12 col-md-12">
                                                 <h3>{grantDetails[0].title}</h3>
                                                 {/* <div className="mt-0 mb-15">
                                                     <span className="card-briefcase">{grantDetails[0].title}</span>
                                                     <span className="card-time">closing date: {grantDetails[0].closing_date}</span>
                                                 </div> */}
                                             </div>
-                                            <div className="col-lg-4 col-md-12 text-lg-end">
-                                                {/* <div className="btn btn-apply-icon btn-apply btn-apply-big hover-up" data-bs-toggle="modal" data-bs-target="#ModalApplyJobForm">
-                                                    Apply now
-                                                </div> */}
-                                            </div>
                                         </div>
                                         <div className="border-bottom pt-10 pb-10" />
                                         <div className="banner-hero banner-image-single mt-10 mb-20">
-                                            <img src="/assets/imgs/page/job-single-2/img.png" alt="jobBox" />
+                                            <img
+                                                src="/assets/imgs/page/job-single-2/img.png"
+                                                alt="jobBox"
+                                            />
                                         </div>
                                         <div className="job-overview">
-                                            <h5 className="border-bottom pb-15 mb-30">Overview</h5>
+                                            <h5 className="border-bottom pb-15 mb-30">
+                                                Overview
+                                            </h5>
                                             <div className="row">
-                                                <div className="col-md-6 d-flex">
+                                                <div className="col-md-12 d-flex">
                                                     <div className="sidebar-icon-item">
-                                                        <img src="/assets/imgs/page/job-single/industry.svg" alt="jobBox" />
+                                                        <img
+                                                            src="/assets/imgs/page/job-single/industry.svg"
+                                                            alt="jobBox"
+                                                        />
                                                     </div>
                                                     <div className="sidebar-text-info ml-10">
-                                                        <span className="text-description industry-icon mb-10">Organisation</span>
-                                                        <strong className="small-heading">  {grantDetails[0].funding_organisation}</strong>
+                                                        <span className="text-description industry-icon mb-10 mr-10">
+                                                            Organisation
+                                                        </span>
+                                                        <strong className="small-heading">
+                                                            {" "}
+                                                            {
+                                                                grantDetails[0]
+                                                                    .funding_organisation
+                                                            }
+                                                        </strong>
                                                     </div>
                                                 </div>
                                                 {/* <div className="col-md-6 d-flex mt-sm-15">
@@ -138,13 +113,24 @@ export default function GrantDetails() {
                                                 </div> */}
                                             </div>
                                             <div className="row mt-25">
-                                                <div className="col-md-6 d-flex mt-sm-15">
+                                                <div className="col-md-12 d-flex mt-sm-15">
                                                     <div className="sidebar-icon-item">
-                                                        <img src="/assets/imgs/page/job-single/salary.svg" alt="jobBox" />
+                                                        <img
+                                                            src="/assets/imgs/page/job-single/salary.svg"
+                                                            alt="jobBox"
+                                                        />
                                                     </div>
                                                     <div className="sidebar-text-info ml-10">
-                                                        <span className="text-description salary-icon mb-10">Maximum Value</span>
-                                                        <strong className="small-heading">  {grantDetails[0].total_size_of_grant_scheme}</strong>
+                                                        <span className="text-description salary-icon mb-10 mr-10">
+                                                            Maximum Value
+                                                        </span>
+                                                        <strong className="small-heading">
+                                                            {" "}
+                                                            {
+                                                                grantDetails[0]
+                                                                    .total_size_of_grant_scheme
+                                                            }
+                                                        </strong>
                                                     </div>
                                                 </div>
                                                 {/* <div className="col-md-6 d-flex">
@@ -167,13 +153,23 @@ export default function GrantDetails() {
                                                         <strong className="small-heading">Permanent</strong>
                                                     </div>
                                                 </div> */}
-                                                <div className="col-md-6 d-flex mt-sm-15">
+                                                <div className="col-md-12 d-flex mt-sm-15">
                                                     <div className="sidebar-icon-item">
-                                                        <img src="/assets/imgs/page/job-single/deadline.svg" alt="jobBox" />
+                                                        <img
+                                                            src="/assets/imgs/page/job-single/deadline.svg"
+                                                            alt="jobBox"
+                                                        />
                                                     </div>
                                                     <div className="sidebar-text-info ml-10">
-                                                        <span className="text-description mb-10">Deadline</span>
-                                                        <strong className="small-heading">{grantDetails[0].closing_date}</strong>
+                                                        <span className="text-description mb-10 mr-10">
+                                                            Deadline
+                                                        </span>
+                                                        <strong className="small-heading">
+                                                            {
+                                                                grantDetails[0]
+                                                                    .closing_date
+                                                            }
+                                                        </strong>
                                                     </div>
                                                 </div>
                                             </div>
@@ -187,20 +183,32 @@ export default function GrantDetails() {
                                                         <strong className="small-heading">10/07/2022</strong>
                                                     </div>
                                                 </div> */}
-                                                <div className="col-md-6 d-flex mt-sm-15">
+                                                <div className="col-md-12 d-flex mt-sm-15">
                                                     <div className="sidebar-icon-item">
-                                                        <img src="/assets/imgs/page/job-single/location.svg" alt="jobBox" />
+                                                        <img
+                                                            src="/assets/imgs/page/job-single/location.svg"
+                                                            alt="jobBox"
+                                                        />
                                                     </div>
                                                     <div className="sidebar-text-info ml-10">
-                                                        <span className="text-description mb-10">Location</span>
-                                                        <strong className="small-heading">{grantDetails[0].location}</strong>
+                                                        <span className="text-description mb-10 mr-10">
+                                                            Location
+                                                        </span>
+                                                        <strong className="small-heading">
+                                                            {
+                                                                grantDetails[0]
+                                                                    .location
+                                                            }
+                                                        </strong>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="content-single">
                                             <h4>Who Can Apply</h4>
-                                            <p>{grantDetails[0].who_can_apply}</p>
+                                            <p>
+                                                {grantDetails[0].who_can_apply}
+                                            </p>
                                             <h4>Grant Description</h4>
                                             <p>{grantDetails[0].description}</p>
                                         </div>
@@ -208,37 +216,76 @@ export default function GrantDetails() {
                                         <div className="single-apply-jobs">
                                             <div className="row align-items-center">
                                                 <div className="col-md-5">
-                                                    <Link legacyBehavior href={grantDetails[0].grant_url}>
-                                                        <a className="btn btn-default mr-15">Apply now</a>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href={
+                                                            grantDetails[0]
+                                                                .grant_url
+                                                        }
+                                                    >
+                                                        <a className="btn btn-default mr-15">
+                                                            Apply now
+                                                        </a>
                                                     </Link>
 
-                                                    <Link legacyBehavior href="#">
-                                                        <a className="btn btn-border">Save Grant</a>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="#"
+                                                    >
+                                                        <a className="btn btn-border">
+                                                            Save Grant
+                                                        </a>
                                                     </Link>
                                                 </div>
                                                 <div className="col-md-7 text-lg-end social-share">
-                                                    <h6 className="color-text-paragraph-2 d-inline-block d-baseline mr-10">Share this</h6>
-                                                    <Link legacyBehavior href="#">
+                                                    <h6 className="color-text-paragraph-2 d-inline-block d-baseline mr-10">
+                                                        Share this
+                                                    </h6>
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="#"
+                                                    >
                                                         <a className="mr-5 d-inline-block d-middle">
-                                                            <img alt="jobBox" src="/assets/imgs/template/icons/share-fb.svg" />
+                                                            <img
+                                                                alt="jobBox"
+                                                                src="/assets/imgs/template/icons/share-fb.svg"
+                                                            />
                                                         </a>
                                                     </Link>
 
-                                                    <Link legacyBehavior href="#">
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="#"
+                                                    >
                                                         <a className="mr-5 d-inline-block d-middle">
-                                                            <img alt="jobBox" src="/assets/imgs/template/icons/share-tw.svg" />
+                                                            <img
+                                                                alt="jobBox"
+                                                                src="/assets/imgs/template/icons/share-tw.svg"
+                                                            />
                                                         </a>
                                                     </Link>
 
-                                                    <Link legacyBehavior href="#">
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="#"
+                                                    >
                                                         <a className="mr-5 d-inline-block d-middle">
-                                                            <img alt="jobBox" src="/assets/imgs/template/icons/share-red.svg" />
+                                                            <img
+                                                                alt="jobBox"
+                                                                src="/assets/imgs/template/icons/share-red.svg"
+                                                            />
                                                         </a>
                                                     </Link>
 
-                                                    <Link legacyBehavior href="#">
+                                                    <Link
+                                                        legacyBehavior
+                                                        href="#"
+                                                    >
                                                         <a className="d-inline-block d-middle">
-                                                            <img alt="jobBox" src="/assets/imgs/template/icons/share-whatsapp.svg" />
+                                                            <img
+                                                                alt="jobBox"
+                                                                src="/assets/imgs/template/icons/share-whatsapp.svg"
+                                                            />
                                                         </a>
                                                     </Link>
                                                 </div>
@@ -589,7 +636,6 @@ export default function GrantDetails() {
                             </div>
                         </div>
                     </section>
-                    
                 </div>
             </Layout>
         </>

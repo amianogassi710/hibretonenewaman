@@ -10,9 +10,9 @@ const RegenerateButton = ({onClick, disabled, children}) => {
                 borderRadius: 16,
                 width: '30%',
                 textTransform: 'none',
-                backgroundColor: 'rgba(116, 170, 156, 0.7)',
+                backgroundColor: 'rgba(58, 171, 103, 0.7)',
                 '&:hover': {
-                    backgroundColor: 'rgba(116, 170, 156)',
+                    backgroundColor: 'rgba(58, 171, 103)',
                 },
                 py: 0.5,
                 px: 2

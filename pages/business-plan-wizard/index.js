@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from 'react';
 import Layout from "../../components/Layout/Layout";
-import BusinessPlanStepForm from "./BusinessPlanWizard/BusinessPlanStepForm";
+import dynamic from "next/dynamic";
+const NoSSRBusinessPlanStepForm = dynamic(() => import("./BusinessPlanWizard/BusinessPlanStepForm"), {ssr: false})
 
 export default function Index() {
     useEffect(() => {
@@ -20,7 +21,7 @@ export default function Index() {
     return (
         <>
             <Layout>
-                <BusinessPlanStepForm/>
+                <NoSSRBusinessPlanStepForm/>
             </Layout>
         </>
     );
