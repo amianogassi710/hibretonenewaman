@@ -1,6 +1,6 @@
 {
-  "name": "jobbox",
-  "version": "2.0.0",
+  "name": "hibretone",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -23,6 +23,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-perfect-scrollbar": "^1.5.8",
+    "react-router-dom": "^6.22.3",
     "react-use": "^17.5.0",
     "recharts": "^2.10.4",
     "sass": "^1.56.1",

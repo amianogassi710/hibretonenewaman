@@ -3,36 +3,122 @@ import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useEffect, useState } from "react";
 
+import { TbDisabled } from "react-icons/tb";
+import { MdFamilyRestroom, MdOutlineDiversity1, MdOutlineCastForEducation, MdOutlineBusinessCenter } from "react-icons/md";
+import { GiHealthNormal, GiConvict, GiArchiveResearch, GiTechnoHeart, GiRegeneration } from "react-icons/gi";
+import { PiPaintBrushBold } from "react-icons/pi";
+import { LuTrees } from "react-icons/lu"; 
+import { FaUserFriends, FaHotel, FaEnvira } from "react-icons/fa";
+import { FaHandsPraying } from "react-icons/fa6";
+import { GrUserWorker } from "react-icons/gr";
+import { FaRunning } from "react-icons/fa";
+import { RiCommunityLine } from "react-icons/ri";
+
 SwiperCore.use([Navigation]);
 
 import "swiper/css/grid";
 import axiosFetchWithRetry from "../elements/fetchWithRetry";
 
 const CategorySlider1 = () => {
-    const [data, setData] = useState([]);
-    const getCategories = async () => {
-        const reqOptions = {
-            method: "get",
-            headers: {
-                "Content-Type": "application/json",
-            },
-        };
+    // const [data, setData] = useState([]);
+    // const getCategories = async () => {
+    //     const reqOptions = {
+    //         method: "get",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //     };
 
-        try {
-            const data = await axiosFetchWithRetry({
-                url: "/grants/grant-categories",
-                reqOptions: reqOptions,
-                timeout: 2000,
-            });
-            setData(data);
-        } catch (error) {
-            console.error({ error: error.message });
-        }
+    //     try {
+    //         const data = await axiosFetchWithRetry({
+    //             url: "/grants/grant-categories",
+    //             reqOptions: reqOptions,
+    //             timeout: 2000,
+    //         });
+    //         setData(data);
+    //     } catch (error) {
+    //         console.error({ error: error.message });
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     getCategories();
+    // }, []);
+    const data = [
+        {
+            category_id: 11,
+            category_name: "Arts",
+            total_num: 0,
+        },
+        {
+            category_id: 12,
+            category_name: "Rural",
+            total_num: 0,
+        },
+        {
+            category_id: 13,
+            category_name: "Equality & Diversity",
+            total_num: 0,
+        },
+        {
+            category_id: 14,
+            category_name: "Regeneration",
+            total_num: 0,
+        },
+        {
+            category_id: 15,
+            category_name: "Religion",
+            total_num: 0,
+        },
+        {
+            category_id: 16,
+            category_name: "Social Enterprise",
+            total_num: 0,
+        },
+        {
+            category_id: 17,
+            category_name: "Leisure & Tourism",
+            total_num: 0,
+        },
+        {
+            category_id: 18,
+            category_name: "Employment",
+            total_num: 0,
+        },
+        {
+            category_id: 19,
+            category_name: "Crime",
+            total_num: 0,
+        },
+        {
+            category_id: 20,
+            category_name: "Young People",
+            total_num: 0,
+        },
+    ];
+
+    const iconsMap = {
+        "Disability": TbDisabled,
+        "People & Families": MdFamilyRestroom,
+        "Equality & Diversity": MdOutlineDiversity1,
+        "Health": GiHealthNormal,
+        "Arts": PiPaintBrushBold,
+        "Rural": LuTrees,
+        "Religion": FaHandsPraying,
+        "Social Enterprise": FaUserFriends,
+        "Leisure & Tourism": FaHotel,
+        "Employment": GrUserWorker,
+        "Crime": GiConvict,
+        "Young People": FaRunning,
+        "Community": RiCommunityLine,
+        "Environment": FaEnvira,
+        "Research": GiArchiveResearch,
+        "Technology": GiTechnoHeart,
+        "Education": MdOutlineCastForEducation,
+        "Business": MdOutlineBusinessCenter,
+        "Regeneration": GiRegeneration,
     };
-
-    useEffect(() => {
-        getCategories();
-    }, []);
+    
     return (
         <>
             <div className="swiper-container swiper-group-5">
@@ -61,7 +147,7 @@ const CategorySlider1 = () => {
                             spaceBetween: 30,
                         },
                         1199: {
-                            slidesPerView: 5,
+                            slidesPerView: 4,
                             spaceBetween: 30,
                         },
                     }}
@@ -72,15 +158,22 @@ const CategorySlider1 = () => {
                             <div className="swiper-slide hover-up">
                                 <Link
                                     legacyBehavior
-                                    href="/grant-finder/grants-list"
+                                    href={`/grant-finder/search?category_id=${item.category_id}`}
                                 >
                                     <a>
                                         <div className="item-logo">
                                             <div className="image-left">
-                                                <img
-                                                    alt="jobBox"
-                                                    src={`assets/imgs/page/homepage1/${item.category_id}.svg`}
-                                                />
+                                                {React.createElement(
+                                                        iconsMap[
+                                                            item.category_name
+                                                        ],
+                                                        {
+                                                            size: 50,
+                                                            style: {
+                                                                color: "#4294FF",
+                                                            },
+                                                        }
+                                                    )}
                                             </div>
                                             <div className="text-info-right">
                                                 <h4>{item.category_name}</h4>

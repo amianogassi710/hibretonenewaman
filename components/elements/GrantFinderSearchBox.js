@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router"; 
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
@@ -7,20 +8,15 @@ import { Autocomplete, TextField, Button, Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 function GrantFinderSearchBox() {
-    const StyledTextField = styled(TextField)({
-        "& .MuiInput-underline:before": {
-            // 默认情况下隐藏底部边线
-            borderBottom: "none",
-        },
-        "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
-            // 鼠标悬浮时隐藏底部边线
-            borderBottom: "none",
-        },
-        "& .MuiInput-underline:after": {
-            // 输入时隐藏底部边线
-            borderBottom: "none",
-        },
-    });
+    const router = useRouter(); 
+    const [keyword, setKeyword] = useState('');
+    const [category, setCategory] = useState('');
+    const [location, setLocation] = useState('');
+
+    const handleSearch = () => {
+        const searchURL = `/grant-finder/search/?keyword=${encodeURIComponent(keyword)}&category=${encodeURIComponent(category)}&location=${encodeURIComponent(location)}&page=1&limit=10`;
+        router.push(searchURL); 
+    };
 
     const categories = [
         "Community",
@@ -80,12 +76,15 @@ function GrantFinderSearchBox() {
                             fullWidth
                             label="Keyword"
                             variant="standard"
+                            value={keyword}
+                            onChange={(e) => setKeyword(e.target.value)}
                         />
                     </Grid>
                     <Grid item xs={12} lg={3}>
                         <Autocomplete
                             clearOnEscape
                             options={categories}
+                            onChange={(event, newValue) => setCategory(newValue)}
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
@@ -100,6 +99,7 @@ function GrantFinderSearchBox() {
                         <Autocomplete
                             clearOnEscape
                             options={locations}
+                            onChange={(event, newValue) => setLocation(newValue)}
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
@@ -123,6 +123,7 @@ function GrantFinderSearchBox() {
                                 },
                                 height: "45px",
                             }}
+                            onClick={handleSearch}
                         >
                             Search
                         </Button>
