@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         source: '/assessments/:path*',
-        destination: 'http://127.0.0.1:8000/:path*',
+        destination: 'https://entrepreneurial-assessments-backend.vercel.app/:path*',
       },
       {
         source: '/grants/:path*',
@@ -30,7 +30,7 @@ const nextConfig = {
       },
       {
         source: '/business-problem-triage/:path*',
-        destination: 'http://127.0.0.1:8000/:path*', // business-plan-writer-backend FastAPI endpoint
+        destination: 'http://127.0.0.1:8000/:path*',
       }
     ];
   },
