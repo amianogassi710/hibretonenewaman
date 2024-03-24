@@ -99,9 +99,9 @@ export default function Index() {
           <div className=" banner-hero bg-img-calculator">
               <div className="container d-flex align-items-center">
                   <div className="row">
-                      <div className="col">
-                          <h2 className="mb-10">Online Courses</h2>
-                          <p className="font-lg color-text-paragraph-2">Ipsum in voluptate ipsum reprehenderit.<br/>product development</p>
+                      <div className="col-lg-12">
+                          <h2 className="mb-20 ml-20">Online Courses</h2>
+                          <p className="color-text-paragraph-2 ml-20">Ipsum in voluptate ipsum reprehenderit.<br/>product development</p>
                       </div>
                   </div>
               </div>
@@ -109,11 +109,9 @@ export default function Index() {
       </section>
       <section className="grid__area container assessment-container">
          <div className="row">
-            <div className="col-xxl-12">
-               <div className=" text-center mb-30">
-                  <h2>Free Online Courses</h2>
-                  <p>Qui adipisicing duis ad fugiat non aliqua labore eiusmod ut et non.</p>
-               </div>
+            <div className="col-lg-12 mb-30">
+                <h2>Free Online Courses</h2>
+                <p>Qui adipisicing duis ad fugiat non aliqua labore eiusmod ut et non.</p>
             </div>
             <section className='section-box mb-50'>
                <YellowBanner />

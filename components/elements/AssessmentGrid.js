@@ -20,9 +20,6 @@ function Grid({ data, clickAction }) {
       return filtered
    },{})
 
-   console.log("Grid")
-   console.log(data)
-
   return (
     <>
     <div className="list-tabs mb-30 d-flex justify-content-center">
@@ -56,7 +53,7 @@ function Grid({ data, clickAction }) {
       <div className="row">
         {Object.keys(filteredData).map((key) => (
                <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6" key={key} data-key={key} onClick={data[key].available ? () => clickAction(data[key],key) : null}>
-                  <div className={`${data[key].available ? "grid__item available" : "grid__item"} white-bg transition-3 mb-30`} data-key={key}>
+                  <div className={`${data[key].available ? "available" : ""} grid__item white-bg transition-3 mb-30`} data-key={key}>
                      <div className="grid__thumb w-img fix grid_thumb_height grid_thumb" data-key={key}>
                         <div className="grid__tag" data-key={key}>
                            <a className="grid__category" data-key={key}>{data[key].category}</a>
@@ -86,7 +83,8 @@ function Grid({ data, clickAction }) {
                         <p data-key={key}>{data[key].description}</p>
                      </div>
                      <div className="grid__tutor">
-                        <a>
+                        <a className="d-flex align-items-center col-lg-6 col-md-7 justify-content-center">
+                           <img src={`assets/imgs/page/entrepreneurial-assessments/Logos/${data[key].provider}.png`} />
                            {data[key].provider}
                         </a>
                      </div>

@@ -51,6 +51,9 @@ const countries = [
 ]
 
   const handleSubmit = async (failure_reason, country_of_origin=null, company_sector=null, failure_stage=null) => {
+    if (failure_reason.current.value.strip() === "") {
+      return
+    }
     const query = {
       "country_of_origin": country_of_origin,
       "company_sector": company_sector,
@@ -76,9 +79,9 @@ const countries = [
               <div className=" banner-hero bg-img-triage">
                 <div className="container d-flex align-items-center">
                   <div className="row">
-                    <div className="col">
-                      <h2 className="mb-10">Business Problem Triage</h2>
-                      <p className="color-text-paragraph-2">Tried and tested options for your business problems,<br />empowering and informing your decision making.</p>
+                    <div className="col-lg-12">
+                      <h2 className="mb-10 ml-20">Business Problem Triage</h2>
+                      <p className="color-text-paragraph-2 ml-20">Tried and tested options for your business problems,<br />empowering and informing your decision making.</p>
                     </div>
                   </div>
                 </div>
@@ -89,7 +92,7 @@ const countries = [
                 <div classsName="row text-center">
                   <div className="col-xxl-12 mt-50">
                     <div className=" text-center mb-30">
-                        <h2>Explore Proven Business Problem Pivots</h2>
+                        <h2 className="mb-20">Explore Proven Business Problem Pivots</h2>
                         <p>Describe your issue. Add filters for improved pivot options</p>
                     </div>
                   </div>

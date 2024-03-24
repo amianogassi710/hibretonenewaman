@@ -114,9 +114,9 @@ export default function Index() {
          <div className="banner-hero bg-img-assessment">
             <div className="container d-flex align-items-center">
                <div className="row">
-                  <div className="col-lg-8">
-                     <h2 className="mb-10">Entrepreneurial Assessments</h2>
-                     <p className="color-text-paragraph-2">Take these simple diverse tests to understand your skills, traits and abilities to run your own enterprise.</p>
+                  <div className="col-lg-12">
+                     <h2 className="mb-20 ml-20">Entrepreneurial Assessments</h2>
+                     <p className="ml-20">Take these simple diverse tests to understand<br />your skills, traits and abilities to run your own enterprise.</p>
                   </div>
                </div>
             </div>
@@ -187,7 +187,7 @@ export default function Index() {
                      </div>
                      </Grid>
                      <Grid item lg={6}>
-                        <iframe className="content-media" width="600" height="400" src="https://www.youtube.com/embed/KZaD0hD3mOg?si=5lKeQBnzQRAmPUdf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe className="content-media" width="600" height="400" src="https://www.youtube.com/embed/KZaD0hD3mOg?si=5lKeQBnzQRAmPUdf" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                      </Grid>
                </Grid>
                <Grid container alignItems="center" style={{minWidth: '100%'}}
@@ -196,8 +196,8 @@ export default function Index() {
                         <h3>Recognising Neuro-diversity Talent</h3>
                      </Grid>
                      <Grid item xs={12} md={12}>
-                     <div className="sm_img_container w-img fix grid_thumb_height">
-                        <img className="content-media" src="assets/imgs/page/about/img-about2.png" alt="joxBox" />
+                     <div className="sm_img_container w-img fix grid_thumb_height shadow">
+                        <iframe className="content-media" src="https://www.youtube.com/embed/KZaD0hD3mOg?si=5lKeQBnzQRAmPUdf" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                      </div>
                      </Grid>
                      <Grid item xs={12} md={12}>

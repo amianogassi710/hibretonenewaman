@@ -5,6 +5,16 @@
   background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top center;
   background-size: cover;
   z-index: -1;
+  h2 {
+    @include media-breakpoint-up(lg) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
   h2,p {
     z-index: 1;
     position: relative;

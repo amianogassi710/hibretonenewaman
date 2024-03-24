@@ -318,9 +318,9 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
         </div>
         <div className="tracker col">
           <p>Question {formIndex+1} of {assessment.questions.length+1}</p>
-          <a className="progress-bar" style={{"backgroundColor": "white"}}>
+          <div className="progress-bar" style={{"backgroundColor": "white"}}>
             <a className="bar" style={{width: `${progress}%`}} />
-          </a>
+          </div>
         </div>
       </div>
     </>
