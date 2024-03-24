@@ -36,9 +36,9 @@ export default function Index() {
                     <div className=" banner-hero bg-img-calculator">
                         <div className="container d-flex align-items-center">
                             <div className="row">
-                                <div className="col">
-                                    <h2 className="mb-10">R&D Tax Credits Calculator</h2>
-                                    <p className="color-text-paragraph-2">Claim money back from HMRC for your<br/>product development</p>
+                                <div className="col-lg-12 ml-20">
+                                    <h2 className="mb-20">R&D Tax Credits Calculator</h2>
+                                    <p>Claim money back from HMRC for your<br/>product development</p>
                                 </div>
                             </div>
                         </div>

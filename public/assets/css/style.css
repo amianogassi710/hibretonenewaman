@@ -462,7 +462,7 @@ a {
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   line-height: 26px;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
@@ -530,7 +530,7 @@ a {
 }
 .dropdown .dropdown-menu.show .dropdown-item {
   padding: 10px 20px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 14px;
 }
 .dropdown .dropdown-menu.show .dropdown-item.active {
@@ -647,7 +647,7 @@ h6 {
 }
 
 .color-text-paragraph {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 
 .color-text-paragraph-2 {
@@ -1257,7 +1257,7 @@ h6,
   font-size: 14px;
   padding: 7px 10px;
   border-radius: 5px;
-  color: #4F5E64 !important;
+  color: rgba(51, 51, 51, 0.7) !important;
 }
 .btn-grey-small:hover {
   color: #3C65F5 !important;
@@ -1447,7 +1447,7 @@ h6,
   padding: 10px 23px 10px 23px;
   border-radius: 10px;
   background: #ffffff;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 18px;
   line-height: 26px;
   transition-duration: 0.2s;
@@ -1714,7 +1714,7 @@ select {
   -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 18px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 
 option {
@@ -2343,7 +2343,7 @@ label {
 }
 .card-grid-2 .card-block-info .card-text-price span {
   font-size: 16px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-weight: 400;
 }
 .card-grid-2 .card-block-info .card-2-bottom {
@@ -2393,7 +2393,7 @@ label {
   color: #05264E;
 }
 .card-grid-2 .card-block-info .card-profile > span {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .card-grid-2 .card-block-info .card-profile .rate-reviews-small span {
   display: inline-block;
@@ -2588,7 +2588,7 @@ label {
 }
 .card-grid-3 .card-block-info .card-text-price span {
   font-size: 16px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-weight: 400;
 }
 .card-grid-3 .card-block-info .card-2-bottom {
@@ -2617,7 +2617,7 @@ label {
 }
 .card-grid-3 .card-block-info .card-profile span {
   font-size: 18px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .card-grid-3 .card-grid-3-image-circle {
   padding-top: 35px;
@@ -2791,7 +2791,7 @@ label {
 .card-list-4 .card-price span {
   font-size: 12px;
   line-height: 12px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-weight: 500;
 }
 
@@ -2938,7 +2938,7 @@ ul li:last-child .card-list-4 {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 .box-image-job .job-top-creator ul li .job-info-creator span {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 16px;
 }
 
@@ -3019,7 +3019,7 @@ ul li:last-child .card-list-4 {
 
 .text-mutted {
   font-size: 18px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   line-height: 16px;
 }
 
@@ -3282,7 +3282,7 @@ ul li:last-child .card-list-4 {
   position: relative;
 }
 .banner-hero .block-banner .list-tags-banner a {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 16px;
   margin-left: 2px;
   text-decoration: underline;
@@ -3292,7 +3292,7 @@ ul li:last-child .card-list-4 {
   font-weight: 700;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .banner-hero .heading-banner {
   color: #05264E;
@@ -3317,7 +3317,7 @@ ul li:last-child .card-list-4 {
 .banner-hero .banner-description {
   position: relative;
   font-size: 20px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .banner-hero.banner-image-single {
   padding: 20px 0px 20px 0px;
@@ -3763,7 +3763,7 @@ ul li:last-child .card-list-4 {
   height: 30px;
 }
 .grid__tutor a {
-  padding: 5px 23px;
+  padding: 5px 20px;
   border: 2px solid rgba(67, 86, 255, 0.1);
   border-radius: 22px;
   color: var(--tp-text-1);
@@ -3773,10 +3773,9 @@ ul li:last-child .card-list-4 {
   color: var(--tp-theme-1);
 }
 .grid__tutor img {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
 }
 .grid_thumb {
   position: relative;
@@ -4268,6 +4267,7 @@ ul li:last-child .card-list-4 {
 .mobile-menu-active .body-overlay-1 {
   opacity: 1;
   visibility: visible;
+  z-index: -10;
 }
 
 .logo-img {
@@ -4498,7 +4498,7 @@ ul li:last-child .card-list-4 {
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .site-copyright {
   font-size: 14px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 
 .burger-icon {
@@ -4560,7 +4560,7 @@ ul li:last-child .card-list-4 {
 
 .burger-icon.burger-icon-white > span::before,
 .burger-icon.burger-icon-white > span::after {
-  background-color: #4F5E64;
+  background-color: rgba(51, 51, 51, 0.7);
 }
 
 .mobile-search form {
@@ -4581,7 +4581,7 @@ ul li:last-child .card-list-4 {
   left: 18px;
   top: 14px;
   font-size: 18px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 
 .mobile-social-icon h6 {
@@ -4773,7 +4773,7 @@ ul li:last-child .card-list-4 {
   margin-bottom: 4px;
 }
 .footer .menu-footer li a {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 16px;
   text-decoration: none;
   transition-duration: 0.2s;
@@ -4809,7 +4809,7 @@ ul li:last-child .card-list-4 {
 .footer .footer-bottom {
   border-top: 1px solid #E0E6F7;
   padding: 30px 0px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 16px;
 }
 .footer .footer-bottom strong {
@@ -6621,7 +6621,7 @@ ul li:last-child .card-list-4 {
   padding: 82px 0px;
 }
 .bg-blue-full .btn-border {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 
 .text-billed {
@@ -6693,7 +6693,7 @@ ul li:last-child .card-list-4 {
 .block-pricing .text-desc-package {
   font-size: 17px;
   line-height: 20px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .block-pricing .list-package-feature {
   display: inline-block;
@@ -6708,7 +6708,7 @@ ul li:last-child .card-list-4 {
   margin-bottom: 20px;
   font-size: 17px;
   line-height: 20px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .block-pricing .most-popular {
   margin-top: -50px;
@@ -6764,11 +6764,11 @@ ul li:last-child .card-list-4 {
   padding-top: 30px;
 }
 .box-info-job.box-info-about .btn-border {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 
 .text-gray-200 {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 18px;
 }
 
@@ -6893,7 +6893,7 @@ ul li:last-child .card-list-4 {
 .single-body p {
   font-size: 20px;
   margin-bottom: 15px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   line-height: 1.5;
 }
 .single-body h1,
@@ -7205,13 +7205,13 @@ ul li:last-child .card-list-4 {
 .content-single p {
   font-size: 18px;
   line-height: 200%;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   line-height: 32px;
   margin-bottom: 20px;
 }
 .content-single h3, .content-single h4, .content-single h5 {
   margin-top: 20px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -7219,7 +7219,7 @@ ul li:last-child .card-list-4 {
   padding-left: 30px;
   line-height: 32px;
   font-size: 18px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   list-style: disc;
 }
 
@@ -7232,7 +7232,7 @@ ul li:last-child .card-list-4 {
   position: relative;
   background-color: #ffffff;
   font-size: 20px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   line-height: 28px;
   font-weight: bold;
 }
@@ -7373,7 +7373,7 @@ ul li:last-child .card-list-4 {
 }
 .sidebar-list-job ul li .sidebar-icon-item i {
   font-size: 18px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .sidebar-list-job ul li .sidebar-text-info {
   display: block;
@@ -7402,7 +7402,7 @@ ul li:last-child .card-list-4 {
   list-style-type: disc;
   display: list-item !important;
   padding-bottom: 5px !important;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 16px;
   line-height: 22px;
 }
@@ -7416,11 +7416,11 @@ ul li:last-child .card-list-4 {
 }
 .ul-lists li {
   list-style-type: disc;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   padding-bottom: 5px;
 }
 .ul-lists li a {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   text-decoration: none;
 }
 .ul-lists li a:hover {
@@ -7463,7 +7463,7 @@ ul li:last-child .card-list-4 {
 
 .job-meta {
   font-size: 12px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .job-meta .company {
   font-weight: bold;
@@ -7698,7 +7698,7 @@ ul li:last-child .card-list-4 {
   padding-left: 42px;
 }
 .box-email-reminder .form-group input::placeholder {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 12px;
 }
 
@@ -7714,7 +7714,7 @@ ul li:last-child .card-list-4 {
   line-height: 14px;
 }
 .job-fillter .box-salary i {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   float: left;
   margin: 1px 7px 0px 0px;
 }
@@ -7737,7 +7737,7 @@ ul li:last-child .card-list-4 {
   margin-top: 0;
 }
 .job-fillter .dropdown .dropdown-toggle i {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   float: left;
   margin: -3px 7px 0px 0px;
   font-size: 18px;
@@ -7787,7 +7787,7 @@ ul li:last-child .card-list-4 {
   box-shadow: none;
 }
 .dropdown-sort .dropdown-toggle i {
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   float: right;
   margin: 0px 7px 0px 0px;
   font-size: 18px;
@@ -7808,13 +7808,13 @@ ul li:last-child .card-list-4 {
 .text-normal {
   font-size: 18px;
   line-height: 22px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 
 .text-small {
   font-size: 16px;
   line-height: 22px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-weight: 500;
 }
 
@@ -7881,7 +7881,7 @@ ul li:last-child .card-list-4 {
 .buttons-filter .btn {
   padding: 12px 15px;
   font-size: 16px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
 }
 .buttons-filter .btn-default {
   color: #ffffff;
@@ -7893,7 +7893,7 @@ ul li:last-child .card-list-4 {
   padding: 0px 0px;
   text-align: center;
   height: 35px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-size: 16px;
 }
 .input-disabled:focus {
@@ -7903,7 +7903,7 @@ ul li:last-child .card-list-4 {
 .lb-slider {
   font-weight: 600;
   font-size: 12px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -7913,7 +7913,7 @@ ul li:last-child .card-list-4 {
 
 .job-tags a {
   background-color: #F2F6FD;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   border-radius: 15px;
   padding: 8px 20px;
   display: inline-block;
@@ -7965,7 +7965,7 @@ ul li:last-child .card-list-4 {
 .box-list-character ul li a {
   font-size: 18px;
   line-height: 28px;
-  color: #4F5E64;
+  color: rgba(51, 51, 51, 0.7);
   text-transform: uppercase;
   display: inline-block;
   width: 28px;
@@ -8622,6 +8622,18 @@ ul li:last-child .card-list-4 {
   background-size: cover;
   z-index: -1;
 }
+@media (min-width: 992px) {
+  .bg-img-assessment h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  .bg-img-assessment h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
 .bg-img-assessment h2, .bg-img-assessment p {
   z-index: 1;
   position: relative;
@@ -9022,6 +9034,9 @@ ul li:last-child .card-list-4 {
   height: 30vh;
   background: url(../imgs/page/r&d-tax-credits-calculator/Hero.jpg) no-repeat center center;
   background-size: cover;
+}
+.bg-img-calculator h2 {
+  font-size: 60px;
 }
 .bg-img-calculator h2, .bg-img-calculator p {
   z-index: 2;
@@ -10832,6 +10847,9 @@ ul li:last-child .card-list-4 {
   background: url(../imgs/page/business-problem-triage/Hero.jpg) no-repeat center;
   background-size: cover;
   z-index: -1;
+}
+.bg-img-triage h2 {
+  font-size: 60px;
 }
 .bg-img-triage h2, .bg-img-triage p {
   z-index: 1;

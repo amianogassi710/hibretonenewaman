@@ -4,6 +4,9 @@
   background: url(../imgs/page/business-problem-triage/Hero.jpg) no-repeat center;
   background-size: cover;
   z-index: -1;
+  h2 {
+    font-size: 60px;
+  }
   h2,p {
     z-index: 1;
     position: relative;

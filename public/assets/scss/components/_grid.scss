@@ -104,7 +104,7 @@
   &__tutor{
     height: 30px;
       & a{
-        padding: 5px 23px;
+        padding: 5px 20px;
         border: 2px solid rgba($color: #4356FF, $alpha: .1);
         border-radius: 22px;
         color: var(--tp-text-1);
@@ -114,10 +114,9 @@
           }
       }
       & img{
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          margin-right: 10px;
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
       }
   }
 
