@@ -197,7 +197,7 @@ export default function Index() {
                      </Grid>
                      <Grid item xs={12} md={12}>
                      <div className="sm_img_container w-img fix grid_thumb_height shadow">
-                        <iframe className="content-media" src="https://www.youtube.com/embed/KZaD0hD3mOg?si=5lKeQBnzQRAmPUdf" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe className="content-media" width="100%" HEIGHT="100%" src="https://www.youtube.com/embed/KZaD0hD3mOg?si=5lKeQBnzQRAmPUdf" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                      </div>
                      </Grid>
                      <Grid item xs={12} md={12}>
@@ -244,7 +244,7 @@ export default function Index() {
                      <Grid item xs={12} md={12}>
                      <div className="mt-10">
                         <p className="mt-10">People with ADHD are 500% more likely to be entrepreneurs. People with dyslexia are 230% more likely to be entrepreneurs.</p>
-                        <p className="font-md mt-10">A large number of tech professionals and Silicon Valley entrepreneurs have Aspergers. Famous entrepreneurs with Aspergers include Elon Musk, Bill Gates and Nikola Tesla.</p>
+                        <p className=" mt-10">A large number of tech professionals and Silicon Valley entrepreneurs have Aspergers. Famous entrepreneurs with Aspergers include Elon Musk, Bill Gates and Nikola Tesla.</p>
                      </div>
                         <div className="mt-20 mb-30">
                            <button className="btn btn-default fs-6">Read More</button>

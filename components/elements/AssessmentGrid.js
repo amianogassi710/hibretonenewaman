@@ -23,7 +23,7 @@ function Grid({ data, clickAction }) {
   return (
     <>
     <div className="list-tabs mb-30 d-flex justify-content-center">
-        <ul className="nav nav-tabs" role="tablist">
+        <ul className="nav nav-tabs d-flex justify-content-center" role="tablist">
             <li>
                 <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1,"All")}>All</a>
                 </li>
