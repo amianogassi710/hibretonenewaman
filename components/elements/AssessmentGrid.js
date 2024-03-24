@@ -83,7 +83,7 @@ function Grid({ data, clickAction }) {
                         <p data-key={key}>{data[key].description}</p>
                      </div>
                      <div className="grid__tutor">
-                        <a className="d-flex align-items-center col-lg-6 col-md-7 justify-content-center">
+                        <a className="d-flex align-items-center justify-content-center">
                            <img src={`assets/imgs/page/entrepreneurial-assessments/Logos/${data[key].provider}.png`} />
                            {data[key].provider}
                         </a>
