@@ -43,7 +43,8 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                             <div className="header-logo">
                                 <Link legacyBehavior href="/">
                                     <a className="d-flex">
-                                        <img className="logo-img"
+                                        <img
+                                            className="logo-img"
                                             alt="jobBox"
                                             src="/assets/imgs/template/hibretOne-logo.png"
                                         />
@@ -76,7 +77,10 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/page-scholarship">
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/page-scholarship"
+                                                >
                                                     <a>
                                                         Scholarship & Bursaries
                                                     </a>
@@ -118,7 +122,10 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="https://www.grant.ecites.co.ke/login.php">
+                                                <Link
+                                                    legacyBehavior
+                                                    href="https://www.grant.ecites.co.ke/login.php"
+                                                >
                                                     <a>Grant Writer</a>
                                                 </Link>
                                             </li>
@@ -144,7 +151,10 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/business-problem-triage">
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/business-problem-triage"
+                                                >
                                                     <a>
                                                         Business Problem Triage
                                                     </a>
@@ -153,6 +163,11 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                             <li>
                                                 <Link legacyBehavior href="/">
                                                     <a>Industry Intelligence</a>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link legacyBehavior href="/">
+                                                    <a>Evidence-led Research</a>
                                                 </Link>
                                             </li>
                                         </ul>
@@ -192,6 +207,30 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                         </Link>
 
                                         <ul className="sub-menu">
+                                            <li>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/page-pricing"
+                                                >
+                                                    <a>Become a Partner</a>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/page-pricing"
+                                                >
+                                                    <a>Rewards Programme</a>
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/page-pricing"
+                                                >
+                                                    <a>Blog</a>
+                                                </Link>
+                                            </li>
                                             <li>
                                                 <Link
                                                     legacyBehavior
