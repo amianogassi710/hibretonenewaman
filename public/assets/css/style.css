@@ -3537,7 +3537,7 @@ ul li:last-child .card-list-4 {
   height: 35vh;
   border-radius: 15px;
   overflow: hidden;
-  background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top;
+  background: url(../imgs/page/entrepreneurial-assessments/Hero.webp) no-repeat top;
   background-size: cover;
   background-color: rgba(5, 38, 78, 0.8);
   background-blend-mode: overlay;
@@ -3654,7 +3654,7 @@ ul li:last-child .card-list-4 {
 
 .progress-bar {
   height: 5px;
-  width: 85%;
+  width: 100%;
   border-radius: 15px;
 }
 
@@ -3858,7 +3858,7 @@ ul li:last-child .card-list-4 {
   height: 35vh;
   max-height: 900px;
   border-radius: 15px;
-  background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top;
+  background: url(../imgs/page/entrepreneurial-assessments/Hero.webp) no-repeat top;
   background-size: cover;
   background-color: rgba(5, 38, 78, 0.8);
   background-blend-mode: overlay;
@@ -8625,7 +8625,7 @@ ul li:last-child .card-list-4 {
 .bg-img-assessment {
   display: flex;
   height: 40vh;
-  background: url(../imgs/page/entrepreneurial-assessments/Hero.jpg) no-repeat top center;
+  background: url(../imgs/page/entrepreneurial-assessments/Hero.webp) no-repeat top center;
   background-size: cover;
   z-index: -1;
 }
@@ -8796,21 +8796,21 @@ ul li:last-child .card-list-4 {
   justify-content: center;
 }
 .strengths-and-ideal-jobs-modal-content {
-  width: 700px;
+  width: 90vw;
+  max-width: 600px;
   background-color: #fff;
   border-radius: 15px;
   overflow: hidden;
-  height: 55vh;
 }
 .strengths-and-ideal-jobs-modal-header {
   color: white;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: #3C65F5;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 45px;
+  padding: 0 20px;
   font-size: 25px;
 }
 .strengths-and-ideal-jobs-modal-body {
