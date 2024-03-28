@@ -214,7 +214,7 @@ export default function Index2() {
                                         </div>
                                         <div className="mt-20">
                                             <Link
-                                                href="/grant-finder"
+                                                href="/grant-finder/grant"
                                                 className="btn btn-start fs-6"
                                             >
                                                 Read More
