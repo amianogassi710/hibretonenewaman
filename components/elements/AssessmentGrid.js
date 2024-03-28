@@ -58,7 +58,7 @@ function Grid({ data, clickAction }) {
                         <div className="grid__tag" data-key={key}>
                            <a className="grid__category" data-key={key}>{data[key].category}</a>
                         </div>
-                        <img src={`assets/imgs/page/entrepreneurial-assessments/${key}.jpg`} alt="Assessment Image" data-key={key} />
+                        <img src={`assets/imgs/page/entrepreneurial-assessments/${key}.webp`} alt="Assessment Image" data-key={key} />
                      </div>
                      <div className="grid__content" data-key={key}>
                         <div className="grid__top d-flex align-items-center">
@@ -84,7 +84,7 @@ function Grid({ data, clickAction }) {
                      </div>
                      <div className="grid__tutor">
                         <a className="d-flex align-items-center justify-content-center">
-                           <img src={`assets/imgs/page/entrepreneurial-assessments/Logos/${data[key].provider}.png`} />
+                           <img src={`assets/imgs/page/entrepreneurial-assessments/Logos/${data[key].provider}.webp`} />
                            {data[key].provider}
                         </a>
                      </div>

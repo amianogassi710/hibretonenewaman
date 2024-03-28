@@ -1,7 +1,7 @@
 
   .bg-img-scholarship {
     display:flex;
-    height: 30vh;
+    height: 40vh;
     background: url(../imgs/page/scholarship/hero-image.png) no-repeat center center;
     background-size: cover;
     h2,p {
@@ -24,70 +24,7 @@
     }
 }
 
-//   complete application button 
-.primary-button{
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    border: 1px solid rgba(60, 101, 245, 1);
-    border-radius: 8px;  
-    background-color: rgba(60, 101, 245, 1);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    line-height: 25px;
-    cursor: pointer;
-  }
-  .rounded-corners{
-    border-radius: 10px;
-  }
-  .pd-l{
-    padding-left: 130px;
-  }
-  .pd-r{
-    padding-right: 130px;
-  }
-  .mg-t{
-    margin-top: 10px;
-  }
-  .mgb-70{
-    margin-bottom: 70px;
-  }
-  .mgt-70{
-    margin-top: 70px;
-  }
-  .mgl{
-    margin-left: 130px;
-  }
-  
-  .text-heading{
-    margin-top: 0px;
-    font-family: "Plus Jakarta Sans";
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 45.36px;
-    color: rgba(5, 38, 78, 1);
-    margin-bottom: 13px;
-    width: 570px;
-    
-  }
-  
-  .para{
-    margin-top: 0px;
-    font-family: "Plus Jakarta Sans";
-    font-weight: 500px;
-    font-size: 16px;
-    line-height: 26px;
-    color: rgba(67, 85, 121, 1);
-    text-align: justify;
-    margin-bottom: 13px;
 
-  }
-  
 
   .scholarship-supporter-pic{
     width: 603px;
@@ -97,8 +34,8 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-  
-  
+
+
   .checkbox-pic{
     width: 16px;
     height: 16px;
@@ -108,7 +45,7 @@
     background-image: url(../imgs/page/scholarship/Checkbox.png);
     background-size: contain;
     background-position: center;  }
-  
+
   .bullet-row{
     margin-top: 0px;
     display: flex;
@@ -118,49 +55,42 @@
   }
 
 
-  // stats section
-  .stats-heading{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    margin-top: 100px;
-    
-  }
-
   .stats{
     display: flex;
     justify-content: space-between;
     margin-top: 59px;
     width: 78%;
     height: 83px;
-    margin-left: auto;
-    margin-right: auto;
-    
+    margin: 0 auto;
+
   }
-  
+
   .stat-box{
     width: 148px;
     height: 83px;
     display: flex;
     justify-content: center;
   }
-  
+
   .stat-nums{
     width: 166px;
     height: 45px;
-  
+
     font-family: "Plus Jakarta Sans";
     font-size: 32px;
     font-weight: 700;
     line-height: 45px;
     letter-spacing: 0em;
     text-align: center;
-  
+
     position: absolute;
     z-index: 1;
-  
+    @include media-breakpoint-down(md) {
+      font-size: 28px;
+    }
+
   }
-  
+
   .box{
     width: 143px;
     height: 43px;
@@ -184,7 +114,7 @@
   .pink-box{
     background-image: url('../imgs/page/scholarship/pink-box.png');
   }
-  
+
 
   .stat-name{
     width: 297px;
@@ -195,56 +125,7 @@
     font-weight: 700;
     letter-spacing: 0em;
     text-align: center;
-  
-  }
-
-  // handling stats area for small screens
-
-  @media screen and (max-width: 1000px) {
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 100px;
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
     }
-  
-    .stat-box {
-      width: 50%; 
-      margin-bottom: 25px;
-      column-gap: 25px;
-    }
-}
-
-
-
-  
-
-  .background-shape-1, .background-shape-2{
-    position: absolute;
-    background: rgba(244, 247, 255, 1);
-    mix-blend-mode: darken;
-    border-radius: 16px;
   }
-  
-  .background-shape-1{
-    top: 500.99px;
-    left: -1930.99px;
-    width: 127.5%;
-    height: 2800.78px;
-    transform: rotate(-101.49deg); 
-  }
-
-  .background-shape-2{
-    top: 3500px;
-    left: 800px;
-    width: 130.20%;
-    height: 900px;
-    transform: rotate(-104.48deg);
-  }
-
-
-
-
-  
-
-  
