@@ -7,6 +7,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import axiosFetchWithRetry from "../../components/elements/fetchWithRetry";
 
 export default function GrantsList() {
     const router = useRouter();
@@ -96,13 +97,20 @@ export default function GrantsList() {
         console.log("queryParams " + queryString.toString());
         setResults([]);
         try {
-            const response = await fetch(
-                `/grants/grant-details/items?${queryString}`
-            );
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            const result = await response.json();
+            const response = await axiosFetchWithRetry({
+                url: `/grants/grant-details/items?${queryString}`,
+                reqOptions: {
+                    method: "get",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                },
+                timeout: 2000,
+                retryCount: 4,
+            }).catch((error) => console.error({ error: error.message }))
+            // console.log("response " + JSON.stringify(response.data));
+            // console.log("Type of result.data:", response.data);
+            // const result = await response;
             // {
             //     "total_count": all_results.__len__(),
             //     "data": grant_details_list,
@@ -110,9 +118,9 @@ export default function GrantsList() {
             //     "limit": limit
             // }
             // console.log("result " + JSON.stringify(result));
-            setTotalGrants(result.total_count);
-            setResults(result.data);
-            setPage(result.page)
+            setTotalGrants(response.total_count);
+            setResults(response.data);
+            setPage(response.page)
             // if (!didCancel) {
             //     const result = await response.json();
             //     setGrantNum(result.length);
@@ -342,7 +350,7 @@ const updatedQueryParameters = {
                                                 </div>
                                             </div>
                                         </div>
-                                        {results.map((grant) => (
+                                        {Array.isArray(results) && results.map((grant) => (
                                             <Link
                                                 legacyBehavior
                                                 href={`/grant-finder/grant/${grant.grant_id}`}
