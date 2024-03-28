@@ -197,7 +197,7 @@ export default function Index() {
                      </Grid>
                      <Grid item xs={12} md={12}>
                      <div className="sm_img_container w-img fix grid_thumb_height shadow">
-                        <iframe className="content-media" width="100%" HEIGHT="100%" src="https://www.youtube.com/embed/KZaD0hD3mOg?si=5lKeQBnzQRAmPUdf" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe className="content-media" width="100%" height="100%" src="https://www.youtube.com/embed/KZaD0hD3mOg?si=5lKeQBnzQRAmPUdf" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                      </div>
                      </Grid>
                      <Grid item xs={12} md={12}>
