@@ -2,14 +2,30 @@ import Link from "next/link";
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useEffect, useState } from "react";
-
+import { useRouter } from 'next/router';
 import { TbDisabled } from "react-icons/tb";
-import { MdFamilyRestroom, MdOutlineDiversity1, MdOutlineCastForEducation, MdOutlineBusinessCenter } from "react-icons/md";
-import { GiHealthNormal, GiConvict, GiArchiveResearch, GiTechnoHeart, GiRegeneration } from "react-icons/gi";
+import {
+    MdFamilyRestroom,
+    MdOutlineDiversity1,
+    MdOutlineCastForEducation,
+    MdOutlineBusinessCenter,
+} from "react-icons/md";
+import {
+    GiHealthNormal,
+    GiConvict,
+    GiArchiveResearch,
+    GiTechnoHeart,
+    GiRegeneration,
+} from "react-icons/gi";
 // 确保 PiPaintBrushBold 和 LuTrees 图标的正确导入路径，这里使用假设的路径作为示例
 import { PiPaintBrushBold } from "react-icons/pi";
 import { LuTrees } from "react-icons/lu"; // 请确认这是正确的导入语句
-import { FaHandsPraying, FaUserFriends, FaHotel, FaEnvira } from "react-icons/fa";
+import {
+    FaHandsPraying,
+    FaUserFriends,
+    FaHotel,
+    FaEnvira,
+} from "react-icons/fa";
 import { GrUserWorker } from "react-icons/gr";
 import { FaRunning } from "react-icons/fa";
 import { RiCommunityLine } from "react-icons/ri";
@@ -19,6 +35,7 @@ import "swiper/css/grid";
 import axiosFetchWithRetry from "../elements/fetchWithRetry";
 
 const CategorySlider = () => {
+    const router = useRouter();
     // const [data, setData] = useState([]);
     // const getCategories = async () => {
     //     const reqOptions = {
@@ -96,7 +113,11 @@ const CategorySlider = () => {
         },
     ];
 
-    const iconsMap = {
+    const handleClick = (categoryId, page = 1, limit = 10) => {
+        router.push(`/grant-finder/search?category=${categoryId}&page=${page}&limit=${limit}`);
+      };
+
+      const iconsMap = {
         "Disability": TbDisabled,
         "People & Families": MdFamilyRestroom,
         "Equality & Diversity": MdOutlineDiversity1,
@@ -116,10 +137,7 @@ const CategorySlider = () => {
         "Education": MdOutlineCastForEducation,
         "Business": MdOutlineBusinessCenter,
         "Regeneration": GiRegeneration,
-        "Equal Opportunities": GiRegeneration,
     };
-    
-    
 
     return (
         <>
@@ -157,39 +175,34 @@ const CategorySlider = () => {
                 >
                     {data.map((item, i) => (
                         <SwiperSlide key={i}>
-                            <div className="swiper-slide hover-up">
-                                <Link
+                            <div className="swiper-slide hover-up " onClick={() => handleClick(item.category_id)} style={{ cursor: 'pointer' }}>
+                                {/* <Link
                                     legacyBehavior
-                                    href={`/grant-finder/search?category_id=${item.category_id}`}
-                                >
-                                    <a>
-                                        <div className="item-logo">
-                                            <div className="image-left">
-                                                {React.createElement(
-                                                    iconsMap[
-                                                        item.category_name
-                                                    ],
-                                                    {
-                                                        size: 50,
-                                                        style: {
-                                                            color: "#4294FF",
-                                                        },
-                                                    }
-                                                )}
-                                            </div>
-                                            <div className="text-info-right">
-                                                <h4>{item.category_name}</h4>
-                                                <p className="font-xs">
-                                                    {item.total_num}
-                                                    <span>
-                                                        {" "}
-                                                        Grants Available
-                                                    </span>
-                                                </p>
-                                            </div>
+                                    href={`/grant-finder/search?category_id=${item.category_id}&page=1&limit=10`}
+                                > */}
+                                <a>
+                                    <div className="item-logo">
+                                        <div className="image-left">
+                                            {React.createElement(
+                                                iconsMap[item.category_name],
+                                                {
+                                                    size: 50,
+                                                    style: {
+                                                        color: "#4294FF",
+                                                    },
+                                                }
+                                            )}
                                         </div>
-                                    </a>
-                                </Link>
+                                        <div className="text-info-right">
+                                            <h4>{item.category_name}</h4>
+                                            <p className="font-xs">
+                                                {item.total_num}
+                                                <span> Grants Available</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                                {/* </Link> */}
                             </div>
                         </SwiperSlide>
                     ))}

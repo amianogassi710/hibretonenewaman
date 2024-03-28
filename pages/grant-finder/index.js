@@ -56,10 +56,12 @@ export default function Index2() {
                                 <div className="block-banner">
                                     <div className="text-center">
                                         <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
-                                            Funding for Every Type of Enterprise
+                                            Grant Funding for Every Type of
+                                            Enterprise
                                         </h2>
                                         <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                            Find the right grants for you.
+                                            Find the right grant for you and
+                                            your business
                                         </p>
                                     </div>
                                     <div className="container mt-70">
@@ -68,40 +70,46 @@ export default function Index2() {
                                                 <div className="text-center">
                                                     <h2 className="color-brand-2 color-background-1">
                                                         <span className="count">
-                                                            £100M
+                                                            £173b+
                                                         </span>
                                                     </h2>
-                                                    <h6>Total Grants</h6>
+                                                    <h6>
+                                                        Total UK grants value
+                                                    </h6>
                                                 </div>
                                             </div>
                                             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                                 <div className="text-center">
                                                     <h2 className="color-brand-2 color-background-2">
                                                         <span className="count">
-                                                            3200+
+                                                            186,200+
                                                         </span>
                                                     </h2>
-                                                    <h6>Number of Grants</h6>
+                                                    <h6>Number of UK grants</h6>
                                                 </div>
                                             </div>
                                             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                                 <div className="text-center">
                                                     <h2 className="color-brand-2 color-background-3">
                                                         <span className="count">
-                                                            1100+
+                                                            56,500+
                                                         </span>
                                                     </h2>
-                                                    <h6>Founders</h6>
+                                                    <h6>
+                                                        Number of UK funders
+                                                    </h6>
                                                 </div>
                                             </div>
                                             <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                                                 <div className="text-center">
                                                     <h2 className="color-brand-2 color-background-4">
                                                         <span className="count">
-                                                            £7.3M
+                                                            £7.3m+
                                                         </span>
                                                     </h2>
-                                                    <h6>Supported</h6>
+                                                    <h6>
+                                                        Directed to by hibretOne
+                                                    </h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -118,10 +126,11 @@ export default function Index2() {
                         <div className="container">
                             <div className="text-center">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
-                                    Explore a Selection of Grants
+                                    Explore a Selection of our Show Me The Money
+                                    Grants
                                 </h2>
                                 <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                    Over 20 new grants uploaded everyday.
+                                    Over 20 new grants uploaded everyday
                                 </p>
                             </div>
                             <div className="mt-0">
@@ -134,7 +143,7 @@ export default function Index2() {
                             <div className="container">
                                 <div className="text-center">
                                     <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
-                                        Browse by category
+                                        New grants uploaded everyday
                                     </h2>
                                     <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
                                         Find the grant that’s perfect for you.
@@ -205,7 +214,7 @@ export default function Index2() {
                                         </div>
                                         <div className="mt-20">
                                             <Link
-                                                href="/grant-finder"
+                                                href="/grant-finder/grant"
                                                 className="btn btn-start fs-6"
                                             >
                                                 Read More
@@ -546,7 +555,7 @@ export default function Index2() {
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <div className="mt-10">
-                                        <p className="color-text-paragraph mt-10">
+                                            <p className="color-text-paragraph mt-10">
                                                 Finding the funding may actually
                                                 be the easy part. To help you
                                                 secure the funding you need, we
@@ -619,11 +628,11 @@ export default function Index2() {
                         <div className="container">
                             <div className="text-center">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">
-                                    Simple steps for grant funding access
+                                    How It Works?
                                 </h2>
                                 <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">
-                                    Just via some simple steps, you will find
-                                    your ideal candidates you are looking for!
+                                    3 Simple steps to gain access to £millions
+                                    in grant funding
                                 </p>
                             </div>
                             <div className="mt-70">
@@ -634,13 +643,16 @@ export default function Index2() {
                                                 1
                                             </h1>
                                             <h4 className="mb-20">
-                                                Register an
+                                                Subscribe to create
                                                 <br className="d-none d-lg-block" />
-                                                account to start
+                                                your account
                                             </h4>
                                             <p className="font-lg color-text-paragraph-2">
-                                                Free access to over 90% of our
-                                                platform resources forever
+                                                Gain access to a grant finder
+                                                <br className="d-none d-lg-block" />
+                                                for a host of personal ,
+                                                <br className="d-none d-lg-block" />
+                                                business and community funders
                                             </p>
                                         </div>
                                     </div>
@@ -650,16 +662,17 @@ export default function Index2() {
                                                 2
                                             </h1>
                                             <h4 className="mb-20">
-                                                Explore the
+                                                Explore grants suggested
                                                 <br className="d-none d-lg-block" />
-                                                game-changing tools
+                                                by our Grant Finder
                                             </h4>
                                             <p className="font-lg color-text-paragraph-2">
-                                                Empowering you to start, grow
-                                                and scale
+                                                As well as grants you find,
                                                 <br className="d-none d-lg-block" />
-                                                your business or social
-                                                enterprise
+                                                we’ll show you similar grants to
+                                                <br className="d-none d-lg-block" />
+                                                your search criteria
+
                                             </p>
                                         </div>
                                     </div>
@@ -669,13 +682,16 @@ export default function Index2() {
                                                 3
                                             </h1>
                                             <h4 className="mb-20">
-                                                Find opportunities
+                                                Select the most
                                                 <br className="d-none d-lg-block" />
+                                                suitable funder
                                             </h4>
                                             <p className="font-lg color-text-paragraph-2">
-                                                Discover sales, procurement,
+                                                Regularly check grants, as every
                                                 <br className="d-none d-lg-block" />
-                                                branding all in one place{" "}
+                                                week new ones are added, some
+                                                <br className="d-none d-lg-block" />
+                                                with short application windows
                                             </p>
                                         </div>
                                     </div>
