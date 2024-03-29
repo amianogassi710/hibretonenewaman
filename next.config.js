@@ -15,6 +15,7 @@ const nextConfig = {
       {
         source: '/grants/:path*',
         destination: 'http://8.134.152.28:8000/grants/:path*', // Your FastAPI endpoint
+        // destination: 'http://127.0.0.1:8000/grants/:path*',
       },
       {
         source: '/alison-courses/:path*',

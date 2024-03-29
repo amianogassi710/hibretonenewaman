@@ -5,111 +5,270 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import { Button } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+
 export default function GrantsList() {
     const router = useRouter();
-    const { keyword, category, location, page, limit } = router.query;
-    // const [results, setResults] = useState([]);
-    const [totalPages, setTotalPages] = useState(0);
-    const [totalCount, setTotalCount] = useState(0);
+    const [filters, setFilters] = useState({
+        grantAmountRange: [],
+        category: [],
+        location: [],
+    });
+    const [results, setResults] = useState([]);
+    const [totalGrants, setTotalGrants] = useState(0);
+    const [page, setPage] = useState(1);
+    const limit = 10; // 假设每页显示10条数据
+    // const [queryParameters, setQueryParameters] = useState({
+    //     category: [],
+    //     grantAmountRange: [],
+    //     location: [],
+    //     keyword: "",
+    //     page: 1,
+    //     limit: 10,
+    // });
 
-    const results = [
-        {
-            grant_id: 335,
-            category_id: 1,
-            category_name: ["Community", "Environment"],
-            title: "Community and Environment Fund (CEF) and Business and Local Economy Fund (BLEF)",
-            description:
-                "This funding programme provides grants to local communities and economies that are disrupted by the construction of Phase One and Phase 2a of HS2 between London and Crewe.",
-            total_size_of_grant_scheme: "£20 million",
-            closing_date: "2025-03-31",
-            location: "England, Wales, Scotland",
-        },
-        {
-            grant_id: 343,
-            category_id: 1,
-            category_name: ["Community", "Environment"],
-            title: "Mode Shift Revenue Support",
-            description:
-                "Mode Shift Revenue Support (MSRS) assists companies with the operating costs associated with running rail or inland water freight transport instead of road, where rail or inland waterway transport is more expensive. Waterborne Freight Grant (WFG) is designed to facilitate and support modal shift to waterborne freight services.",
-            total_size_of_grant_scheme: "£115 million",
-            closing_date: "2025-01-01",
-            location: "England, Wales, Scotland",
-        },
-        {
-            grant_id: 344,
-            category_id: 1,
-            category_name: ["Community"],
-            title: "The Community Ownership Fund",
-            description:
-                "The Community Ownership Fund is a £150 million fund over 4 years to support community groups across England, Wales, Scotland, and Northern Ireland to take ownership of assets which are at risk of being lost to the community.",
-            total_size_of_grant_scheme: "£115 million",
-            closing_date: "2025-01-01",
-            location: "England",
-        },
-        {
-            grant_id: 345,
-            category_id: 1,
-            category_name: ["Community"],
-            title: "Disabled Facilities Grants",
-            description:
-                "Disabled Facilities Grants can help meet the cost of making changes to your home so you or someone you live with can live safely and independently. People of all ages and tenures can apply to their local council for a grant.",
-            total_size_of_grant_scheme: "£115 million",
-            closing_date: "2025-01-01",
-            location: "England",
-        },
-        {
-            grant_id: 347,
-            category_id: 1,
-            category_name: ["Community"],
-            title: "Bus Service Operators Grant (BSOG) Guidance for community transport organisations",
-            description:
-                "The Bus Service Operators Grant (BSOG) is a discretionary grant paid to eligible community transport operators to help them recover some of their fuel costs. The amount each operator receives is based on the amount of fuel they use running eligible services.",
-            total_size_of_grant_scheme: "£115 million",
-            closing_date: "2025-01-01",
-            location: "England",
-        },
-        {
-            grant_id: 348,
-            category_id: 1,
-            category_name: ["Community"],
-            title: "Adoption support fund",
-            description:
-                "The adoption support fund (ASF) provides funds to local authorities and regional adoption agencies (RAAs) to pay for essential therapeutic services for eligible adoptive and special guardianship order (SGO) families. The ASF will continue to offer support to adoptive and eligible special guardianship families up to March 2025.",
-            total_size_of_grant_scheme: "£115 million",
-            closing_date: "2025-01-01",
-            location: "England",
-        },
-    ];
     useEffect(() => {
-        const fetchResults = async () => {
-            const { data, totalPages, totalCount } = await fetchSearchResults({
-                keyword,
-                category,
-                location,
+        if (router.isReady) {
+            const {
+                category = [],
+                grantAmountRange = [],
+                location = [],
+                keyword = "",
                 page,
                 limit,
-            });
-            // setResults(data);
-            setTotalPages(totalPages);
-            setTotalCount(totalCount);
-        };
-
-        if (router.isReady) {
-            fetchResults();
+            } = router.query;
+            console.log("router.query " + JSON.stringify(router.query));
+            const updatedQueryParameters = {
+                // 使用Array.isArray检查字段是否已经是数组，如果不是，则使用[]将其转换为数组
+                category: Array.isArray(category) ? category : category ? [category] : [],
+                grantAmountRange: Array.isArray(grantAmountRange) ? grantAmountRange : grantAmountRange ? [grantAmountRange] : [],
+                location: Array.isArray(location) ? location : location ? [location] : [],
+                keyword,
+                page: parseInt(page, 10) || 1, // 确保page为数字，如果不存在，则默认为1
+                limit: parseInt(limit, 10) || 10, // 确保limit为数字，如果不存在，则默认为10
+            };
+            console.log("updatedQueryParameters " + JSON.stringify(updatedQueryParameters));
+            // setQueryParameters(updatedQueryParameters);
+            // console.log("queryParameters " + JSON.stringify(queryParameters));
+            // let didCancel = false;
+            fetchData(updatedQueryParameters);
+            // return () => {
+            //     didCancel = true;
+            // };
         }
-    }, [router.isReady, keyword, category, location, page]);
+    }, [router.isReady, router.query]);
 
-    async function fetchSearchResults({ keyword, category, location, page }) {
-        // 实现你的数据获取逻辑，包括处理分页
-        // 应该返回获取到的数据和总页数
-        return { data: [], totalPages: 0 }; // 模拟返回结果
+    const fetchData = async (updatedQueryParameters) => {
+        const queryString = new URLSearchParams();
+        if (Array.isArray(updatedQueryParameters.category)) {
+            updatedQueryParameters.category.forEach((value) =>
+                queryString.append("category", value)
+            );
+        } else if (updatedQueryParameters.category) {
+            queryString.append("category", updatedQueryParameters.category);
+        }
+
+        if (Array.isArray(updatedQueryParameters.grantAmountRange)) {
+            updatedQueryParameters.grantAmountRange.forEach((value) =>
+                queryString.append("grantAmountRange", value)
+            );
+        } else if (updatedQueryParameters.grantAmountRange) {
+            queryString.append(
+                "grantAmountRange",
+                updatedQueryParameters.grantAmountRange
+            );
+        }
+
+        if (Array.isArray(updatedQueryParameters.location)) {
+            updatedQueryParameters.location.forEach((value) =>
+                queryString.append("location", value)
+            );
+        } else if (updatedQueryParameters.location) {
+            queryString.append("location", updatedQueryParameters.location);
+        }
+
+        if (updatedQueryParameters.keyword !== "") {
+            queryString.append("keyword", updatedQueryParameters.keyword);
+        }
+        queryString.append("page", updatedQueryParameters.page.toString());
+        queryString.append("limit", updatedQueryParameters.limit.toString());
+        console.log("queryParams " + queryString.toString());
+        setResults([]);
+        try {
+            const response = await fetch(
+                `/grants/grant-details/items?${queryString}`
+            );
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            const result = await response.json();
+            // {
+            //     "total_count": all_results.__len__(),
+            //     "data": grant_details_list,
+            //     "page": page,
+            //     "limit": limit
+            // }
+            // console.log("result " + JSON.stringify(result));
+            setTotalGrants(result.total_count);
+            setResults(result.data);
+            setPage(result.page)
+            // if (!didCancel) {
+            //     const result = await response.json();
+            //     setGrantNum(result.length);
+            //     setResults(result);
+            // }
+        } catch (error) {
+            console.error("Failed to fetch data:", error);
+        }
+    };
+
+    const handleApplyFilter = () => {
+        const filterParams = new URLSearchParams();
+        filters.category.forEach((categoryId) => {
+            filterParams.append("category", categoryId);
+        });
+        filters.grantAmountRange.forEach((rangeId) => {
+            filterParams.append("grantAmountRange", rangeId);
+        });
+        filters.location.forEach((locationId) => {
+            filterParams.append("location", locationId);
+        });
+        filterParams.append("page", 1);
+        filterParams.append("limit", 10);
+        router.push(`/grant-finder/search/?${filterParams.toString()}`);
+    };
+
+    const handleCheckboxChange = (event, filterType) => {
+        const { value, checked } = event.target;
+        setFilters((prevFilters) => {
+            const updatedFilters = { ...prevFilters };
+            if (checked) {
+                if (!updatedFilters[filterType].includes(value)) {
+                    updatedFilters[filterType].push(value);
+                }
+            } else {
+                updatedFilters[filterType] = updatedFilters[filterType].filter(
+                    (item) => item !== value
+                );
+            }
+            return updatedFilters;
+        });
+    };
+
+    const handleResetFilters = () => {
+        setFilters({
+            grantAmountRange: [],
+            category: [],
+            location: [],
+        });
+    };
+
+    const grantAmountRanges = [
+        { label: "All", label_id: "0" },
+        { label: "£0 - £1 million", label_id: "1" },
+        { label: "£1 million - £100 million", label_id: "2" },
+        { label: "£100 million Plus", label_id: "3" },
+    ];
+
+    const categories = [
+        { category_id: 0, category_name: "All" },
+        { category_id: 1, category_name: "Community" },
+        { category_id: 2, category_name: "Environment" },
+        { category_id: 3, category_name: "Research" },
+        { category_id: 4, category_name: "Technology" },
+        { category_id: 5, category_name: "Education" },
+        { category_id: 6, category_name: "Business" },
+        { category_id: 7, category_name: "Disability" },
+        { category_id: 8, category_name: "Equal Opportunities" },
+        { category_id: 9, category_name: "People & Families" },
+        { category_id: 10, category_name: "Health" },
+        { category_id: 11, category_name: "Arts" },
+        { category_id: 12, category_name: "Rural" },
+        { category_id: 13, category_name: "Equality & Diversity" },
+        { category_id: 14, category_name: "Regeneration" },
+        { category_id: 15, category_name: "Religion" },
+        { category_id: 16, category_name: "Social Enterprise" },
+        { category_id: 17, category_name: "Leisure & Tourism" },
+        { category_id: 18, category_name: "Employment" },
+        { category_id: 19, category_name: "Crime" },
+        { category_id: 20, category_name: "Young People" },
+    ];
+
+    const locations = [
+        { label: "National", label_id: "0" },
+        { label: "England", label_id: "1" },
+        { label: "Scotland", label_id: "2" },
+        { label: "Wales", label_id: "3" },
+        { label: "Northern Ireland", label_id: "4" },
+    ];
+
+    function formatGrantAmount(amount) {
+        //如果是null 返回NULL
+        if(amount == null) return 'N/A'
+        // 将金额转换为数字
+        const numAmount = Number(amount);
+        if (isNaN(numAmount)) return amount; // 如果转换失败，返回原始值
+
+        // 检查金额是否大于1百万
+        if (numAmount >= 1000000) {
+            // 大于等于1百万时，转换为“X million”的形式
+            return `£${numAmount / 1000000} million`;
+        } else {
+            // 否则，仅格式化数字，添加逗号
+            return `£${numAmount.toLocaleString()}`;
+        }
     }
+
+    const handlePageChange = (event, value) => {
+        setPage(value); // 更新当前页码状态
+        const {
+            category = [],
+            grantAmountRange = [],
+            location = [],
+            keyword = "",
+            page,
+            limit,
+        } = router.query;
+const updatedQueryParameters = {
+    // 使用Array.isArray检查字段是否已经是数组，如果不是，则使用[]将其转换为数组
+    category: Array.isArray(category) ? category : category ? [category] : [],
+    grantAmountRange: Array.isArray(grantAmountRange) ? grantAmountRange : grantAmountRange ? [grantAmountRange] : [],
+    location: Array.isArray(location) ? location : location ? [location] : [],
+    keyword,
+    page: parseInt(page, 10) || 1, // 确保page为数字，如果不存在，则默认为1
+    limit: parseInt(limit, 10) || 10, // 确保limit为数字，如果不存在，则默认为10
+};
+        console.log("pagechange " + JSON.stringify(updatedQueryParameters));
+        const PaginationParams = new URLSearchParams();
+        if (Array.isArray(updatedQueryParameters.category)) {
+            updatedQueryParameters.category.forEach((categoryId) => {
+                PaginationParams.append("category", categoryId);
+            });
+        }
+        
+        if (Array.isArray(updatedQueryParameters.grantAmountRange)) {
+            updatedQueryParameters.grantAmountRange.forEach((rangeId) => {
+                PaginationParams.append("grantAmountRange", rangeId);
+            });
+        }
+        
+        // 对于location，您已经有了类似的判断条件。
+        if (Array.isArray(updatedQueryParameters.location)) {
+            updatedQueryParameters.location.forEach((locationId) => {
+                PaginationParams.append("location", locationId);
+            });
+        }
+        PaginationParams.append("page", value);
+        PaginationParams.append("limit", 10);
+        router.push(`/grant-finder/search/?${PaginationParams.toString()}`);
+    };
 
     return (
         <>
             <Layout>
                 <div>
-                    <section className="section-box-2">
+                    {/* <section className="section-box-2">
                         <div className="container">
                             <div className="banner-hero bg-img-calculator">
                                 <div className="block-banner text-left">
@@ -124,9 +283,27 @@ export default function GrantsList() {
                                         private, academic and voluntary sector
                                         grant funding
                                     </p>
-                                    {/* <div className="font-sm color-text-paragraph-2 mt-10 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-                                    Search for the latest personal, public, private, academic and voluntary sector grant funding
-                                    </div> */}
+                                </div>
+                            </div>
+                        </div>
+                    </section> */}
+                                        <section className="section-box">
+                        <div className=" banner-hero bg-img-grant-finder">
+                            <div className="container d-flex align-items-center">
+                                <div className="row">
+                                    <div className="col">
+                                    <h2 className="wow animate__animated animate__fadeInUp">
+                                        <span className="color-blue ">
+                                            130 Grants
+                                        </span>{" "}
+                                        Available Now
+                                    </h2>
+                                        <p className="font-lg color-text-paragraph-2">
+                                            Search for the latest personal,
+                                            public, private, academic and
+                                            voluntary sector grant funding
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -157,176 +334,123 @@ export default function GrantsList() {
                                             <div className="row">
                                                 <div className="col-xl-6 col-lg-5">
                                                     <span className="text-small text-showing">
-                                                        Showing{" "}
-                                                        <strong>41-60 </strong>
-                                                        of <strong>944 </strong>
-                                                        grants
+                                                        <strong>
+                                                            {totalGrants}{" "}
+                                                        </strong>
+                                                        Grants Found
                                                     </span>
                                                 </div>
-                                                {/* <div className="col-xl-6 col-lg-7 text-lg-end mt-sm-15">
-                                                    <div className="display-flex2">
-                                                        <div className="box-border mr-10">
-                                                            <span className="text-sortby">Show:</span>
-                                                            <div className="dropdown dropdown-sort">
-                                                                <button className="btn dropdown-toggle" id="dropdownSort" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-                                                                    <span>12</span>
-                                                                    <i className="fi-rr-angle-small-down" />
-                                                                </button>
-                                                                <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort">
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item active">10</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item">12</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item">20</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div className="box-border">
-                                                            <span className="text-sortby">Sort by:</span>
-                                                            <div className="dropdown dropdown-sort">
-                                                                <button className="btn dropdown-toggle" id="dropdownSort2" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-                                                                    <span>Newest Post</span>
-                                                                    <i className="fi-rr-angle-small-down" />
-                                                                </button>
-                                                                <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort2">
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item active">Newest Post</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item">Oldest Post</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link legacyBehavior href="#">
-                                                                            <a className="dropdown-item">Rating Post</a>
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div className="box-view-type">
-                                                            <Link legacyBehavior href="/jobs-list">
-                                                                <a className="view-type">
-                                                                    <img src="assets/imgs/template/icons/icon-list.svg" alt="jobBox" />
-                                                                </a>
-                                                            </Link>
-
-                                                            <Link legacyBehavior href="/jobs-grid">
-                                                                <a className="view-type">
-                                                                    <img src="assets/imgs/template/icons/icon-grid-hover.svg" alt="jobBox" />
-                                                                </a>
-                                                            </Link>
-                                                        </div>
-                                                    </div>
-                                                </div> */}
                                             </div>
                                         </div>
                                         {results.map((grant) => (
-                                            <div className="row display-list">
-                                                <div className="col-xl-12 col-12">
-                                                    <div className="card-grid-2 hover-up">
-                                                        <div className="row card-overflow-list">
-                                                            <div className="col-lg-12 col-md-12 col-sm-12">
-                                                                <div className="card-grid-2-image-left">
-                                                                    <div className="right-info">
-                                                                        <h4>
-                                                                            <Link
-                                                                                legacyBehavior
-                                                                                href={`/grant-finder/grant/${grant.grant_id}`}
-                                                                            >
+                                            <Link
+                                                legacyBehavior
+                                                href={`/grant-finder/grant/${grant.grant_id}`}
+                                            >
+                                                <div className="row display-list clickable">
+                                                    <div className="col-xl-12 col-12">
+                                                        <div className="card-grid-2 hover-up">
+                                                            <div className="row card-overflow-list">
+                                                                <div className="col-lg-12 col-md-12 col-sm-12">
+                                                                    <div className="card-grid-2-image-left">
+                                                                        <div className="right-info">
+                                                                            <h4>
                                                                                 <a>
                                                                                     {
                                                                                         grant.title
                                                                                     }
                                                                                 </a>
-                                                                            </Link>
-                                                                        </h4>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="col-lg-12 text-start pr-60 col-md-12 col-sm-12">
-                                                                <div className="pl-15 mb-15 mt-15">
-                                                                    {grant.category_name.map(
-                                                                        (
-                                                                            one_category_name
-                                                                        ) => (
-                                                                            <Link
-                                                                                legacyBehavior
-                                                                                href={`/grant-finder`}
-                                                                            >
-                                                                                <a className="btn btn-tags-sm mr-5">
-                                                                                    {
-                                                                                        one_category_name
-                                                                                    }
-                                                                                </a>
-                                                                            </Link>
-                                                                        )
-                                                                    )}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div className="card-block-info card-overflow-list">
-                                                            <div className="mt-5">
-                                                                <span className="card-location mr-15">
-                                                                    {
-                                                                        grant.location
-                                                                    }
-                                                                </span>
-                                                                <span className="card-time">
-                                                                    closing
-                                                                    date:{" "}
-                                                                    {
-                                                                        grant.closing_date
-                                                                    }
-                                                                </span>
-                                                            </div>
-                                                            <p className="font-sm color-text-paragraph mt-10">
-                                                                {
-                                                                    grant.description
-                                                                }
-                                                            </p>
-                                                            <div className="card-2-bottom mt-20">
-                                                                <div className="row">
-                                                                    <div className="col-lg-7 col-7">
-                                                                        <span className="card-text-price">
-                                                                            {
-                                                                                grant.total_size_of_grant_scheme
-                                                                            }
-                                                                        </span>
-                                                                    </div>
-                                                                    <div className="col-lg-5 col-5 text-end">
-                                                                        <div
-                                                                            className="btn btn-apply-now"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target="#ModalApplyJobForm"
-                                                                        >
-                                                                            Read
-                                                                            More
+                                                                            </h4>
                                                                         </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="col-lg-12 text-start pr-60 col-md-12 col-sm-12">
+                                                                    <div className="pl-15 mb-15 mt-15">
+                                                                        {grant.category_name.map(
+                                                                            (
+                                                                                one_category_name
+                                                                            ) => (
+                                                                                <Link
+                                                                                    legacyBehavior
+                                                                                    href={`/grant-finder`}
+                                                                                >
+                                                                                    <a className="btn btn-tags-sm mr-5">
+                                                                                        {
+                                                                                            one_category_name
+                                                                                        }
+                                                                                    </a>
+                                                                                </Link>
+                                                                            )
+                                                                        )}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="card-block-info card-overflow-list">
+                                                                <div className="mt-5">
+                                                                    <span className="card-location mr-15">
+                                                                        {
+                                                                            grant.location
+                                                                        }
+                                                                    </span>
+                                                                    <span className="card-time">
+                                                                        closing
+                                                                        date:{" "}
+                                                                        {
+                                                                            grant.closing_date
+                                                                        }
+                                                                    </span>
+                                                                </div>
+                                                                <p className="font-sm color-text-paragraph mt-10">
+                                                                    {
+                                                                        grant.description
+                                                                    }
+                                                                </p>
+                                                                <div className="card-2-bottom mt-20">
+                                                                    <div className="row">
+                                                                        <div className="col-lg-7 col-7">
+                                                                            <span className="card-text-price">
+                                                                                {formatGrantAmount(
+                                                                                    grant.total_size_of_grant_scheme
+                                                                                )}
+                                                                            </span>
+                                                                        </div>
+                                                                        {/* <Link
+                                                                            legacyBehavior
+                                                                            href={`/grant-finder/grant/${grant.grant_id}`}
+                                                                        >
+                                                                            <div className="col-lg-5 col-5 text-end">
+                                                                                <div
+                                                                                    className="btn btn-apply-now"
+                                                                                    data-bs-toggle="modal"
+                                                                                    data-bs-target="#ModalApplyJobForm"
+                                                                                >
+                                                                                    Read
+                                                                                    More
+                                                                                </div>
+                                                                            </div>
+                                                                        </Link> */}
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </Link>
                                         ))}
                                     </div>
-                                    <Stack spacing={2}>
-                                        <Pagination count={10} />
+                                    <Stack
+                                        spacing={2}
+                                        sx={{ my: 2 }}
+                                        justifyContent="center"
+                                    >
+                                        <Pagination
+                                            count={Math.ceil(
+                                                totalGrants / limit
+                                            )}
+                                            page={page}
+                                            onChange={handlePageChange}
+                                            color="primary"
+                                        />
                                     </Stack>
                                 </div>
                                 <div className="col-lg-3 col-md-12 col-sm-12 col-12">
@@ -339,587 +463,169 @@ export default function GrantsList() {
                                                         legacyBehavior
                                                         href="#"
                                                     >
-                                                        <a className="link-reset">
+                                                        <a
+                                                            className="link-reset"
+                                                            onClick={
+                                                                handleResetFilters
+                                                            }
+                                                        >
                                                             Reset
                                                         </a>
                                                     </Link>
                                                 </h5>
                                             </div>
-                                            <div className="filter-block mb-30">
-                                                <div className="form-group select-style select-style-icon">
-                                                    <select className="form-control form-icons select-active">
-                                                        <option>
-                                                            New York, US
-                                                        </option>
-                                                        <option>London</option>
-                                                        <option>Paris</option>
-                                                        <option>Berlin</option>
-                                                    </select>
-                                                    <i className="fi-rr-marker" />
-                                                </div>
+                                            <div className="filter-block mb-20">
+                                                <Button
+                                                    variant="contained"
+                                                    fullWidth
+                                                    size="large"
+                                                    startIcon={<SearchIcon />}
+                                                    sx={{
+                                                        backgroundColor:
+                                                            "rgb(58, 171, 103)",
+                                                        "&:hover": {
+                                                            backgroundColor:
+                                                                "#339e5c",
+                                                        },
+                                                        height: "45px",
+                                                    }}
+                                                    onClick={handleApplyFilter}
+                                                >
+                                                    Apply Filters
+                                                </Button>
                                             </div>
                                             <div className="filter-block mb-20">
                                                 <h5 className="medium-heading mb-15">
-                                                    Industry
+                                                    Grant Amount Range
                                                 </h5>
                                                 <div className="form-group">
                                                     <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    defaultChecked="checked"
-                                                                />
-                                                                <span className="text-small">
-                                                                    All
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                180
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Software
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                12
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Finance
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                23
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Recruting
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                43
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Management
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                65
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Advertising
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                76
-                                                            </span>
-                                                        </li>
+                                                        {grantAmountRanges.map(
+                                                            (range) => (
+                                                                <li
+                                                                    key={
+                                                                        range.label_id
+                                                                    }
+                                                                >
+                                                                    <label className="cb-container">
+                                                                        <input
+                                                                            type="checkbox"
+                                                                            value={
+                                                                                range.label_id
+                                                                            }
+                                                                            onChange={(
+                                                                                e
+                                                                            ) =>
+                                                                                handleCheckboxChange(
+                                                                                    e,
+                                                                                    "grantAmountRange"
+                                                                                )
+                                                                            }
+                                                                            checked={filters.grantAmountRange.includes(
+                                                                                range.label_id.toString()
+                                                                            )}
+                                                                            // 特殊处理逻辑（如果需要）可以在这里添加
+                                                                        />
+                                                                        <span className="text-small">
+                                                                            {
+                                                                                range.label
+                                                                            }
+                                                                        </span>
+                                                                        <span className="checkmark"></span>
+                                                                    </label>
+                                                                </li>
+                                                            )
+                                                        )}
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div className="filter-block mb-20">
-                                                <h5 className="medium-heading mb-25">
-                                                    Salary Range
-                                                </h5>
-                                                <div className="list-checkbox pb-20">
-                                                    <div className="row position-relative mt-10 mb-20">
-                                                        <div className="col-sm-12 box-slider-range">
-                                                            <div id="slider-range" />
-                                                        </div>
-                                                        <div className="box-input-money">
-                                                            <input
-                                                                className="input-disabled form-control min-value-money"
-                                                                type="text"
-                                                                name="min-value-money"
-                                                                disabled="disabled"
-                                                                defaultValue
-                                                            />
-                                                            <input
-                                                                className="form-control min-value"
-                                                                type="hidden"
-                                                                name="min-value"
-                                                                defaultValue
-                                                            />
-                                                        </div>
-                                                    </div>
-                                                    <div className="box-number-money">
-                                                        <div className="row mt-30">
-                                                            <div className="col-sm-6 col-6">
-                                                                <span className="font-sm color-brand-1">
-                                                                    $0
-                                                                </span>
-                                                            </div>
-                                                            <div className="col-sm-6 col-6 text-end">
-                                                                <span className="font-sm color-brand-1">
-                                                                    $500
-                                                                </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="form-group mb-20">
-                                                    <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    defaultChecked="checked"
-                                                                />
-                                                                <span className="text-small">
-                                                                    All
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                145
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    $0k - $20k
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                56
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    $20k - $40k
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                37
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    $40k - $60k
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                75
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    $60k - $80k
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                98
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    $80k - $100k
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                14
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    $100k -
-                                                                    $200k
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                25
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">
-                                                    Popular Keyword
-                                                </h5>
-                                                <div className="form-group">
-                                                    <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    defaultChecked="checked"
-                                                                />
-                                                                <span className="text-small">
-                                                                    Software
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                24
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Developer
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                45
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Web
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                57
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">
-                                                    Position
-                                                </h5>
-                                                <div className="form-group">
-                                                    <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Senior
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                12
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    defaultChecked="checked"
-                                                                />
-                                                                <span className="text-small">
-                                                                    Junior
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                35
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Fresher
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                56
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">
-                                                    Experience Level
-                                                </h5>
-                                                <div className="form-group">
-                                                    <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Internship
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                56
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Entry Level
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                87
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    defaultChecked="checked"
-                                                                />
-                                                                <span className="text-small">
-                                                                    Associate
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                24
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Mid Level
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                45
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Director
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                76
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Executive
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                89
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">
-                                                    Onsite/Remote
-                                                </h5>
-                                                <div className="form-group">
-                                                    <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    On-site
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                12
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    defaultChecked="checked"
-                                                                />
-                                                                <span className="text-small">
-                                                                    Remote
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                65
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Hybrid
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                58
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div className="filter-block mb-30">
-                                                <h5 className="medium-heading mb-10">
-                                                    Job Posted
-                                                </h5>
-                                                <div className="form-group">
-                                                    <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    defaultChecked="checked"
-                                                                />
-                                                                <span className="text-small">
-                                                                    All
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                78
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    1 day
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                65
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    7 days
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                24
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    30 days
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                56
-                                                            </span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+
                                             <div className="filter-block mb-20">
                                                 <h5 className="medium-heading mb-15">
-                                                    Job type
+                                                    Category
                                                 </h5>
                                                 <div className="form-group">
                                                     <ul className="list-checkbox">
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Full Time
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                25
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input
-                                                                    type="checkbox"
-                                                                    defaultChecked="checked"
-                                                                />
-                                                                <span className="text-small">
-                                                                    Part Time
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                64
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Remote Jobs
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                78
-                                                            </span>
-                                                        </li>
-                                                        <li>
-                                                            <label className="cb-container">
-                                                                <input type="checkbox" />
-                                                                <span className="text-small">
-                                                                    Freelancer
-                                                                </span>
-                                                                <span className="checkmark" />
-                                                            </label>
-                                                            <span className="number-item">
-                                                                97
-                                                            </span>
-                                                        </li>
+                                                        {categories.map(
+                                                            (category) => (
+                                                                <li
+                                                                    key={
+                                                                        category.category_id
+                                                                    }
+                                                                >
+                                                                    <label className="cb-container">
+                                                                        <input
+                                                                            type="checkbox"
+                                                                            value={
+                                                                                category.category_id
+                                                                            }
+                                                                            onChange={(
+                                                                                e
+                                                                            ) =>
+                                                                                handleCheckboxChange(
+                                                                                    e,
+                                                                                    "category"
+                                                                                )
+                                                                            }
+                                                                            checked={filters.category.includes(
+                                                                                category.category_id.toString()
+                                                                            )}
+                                                                        />
+                                                                        <span className="text-small">
+                                                                            {
+                                                                                category.category_name
+                                                                            }
+                                                                        </span>
+                                                                        <span className="checkmark"></span>
+                                                                    </label>
+                                                                </li>
+                                                            )
+                                                        )}
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div className="filter-block mb-20">
+                                                <h5 className="medium-heading mb-15">
+                                                    Location
+                                                </h5>
+                                                <div className="form-group">
+                                                    <ul className="list-checkbox">
+                                                        {locations.map(
+                                                            (location) => (
+                                                                <li
+                                                                    key={
+                                                                        location.label_id
+                                                                    }
+                                                                >
+                                                                    <label className="cb-container">
+                                                                        <input
+                                                                            type="checkbox"
+                                                                            value={
+                                                                                location.label_id
+                                                                            }
+                                                                            onChange={(
+                                                                                e
+                                                                            ) =>
+                                                                                handleCheckboxChange(
+                                                                                    e,
+                                                                                    "location"
+                                                                                )
+                                                                            }
+                                                                            checked={filters.location.includes(
+                                                                                location.label_id.toString()
+                                                                            )}
+                                                                        />
+                                                                        <span className="text-small">
+                                                                            {
+                                                                                location.label
+                                                                            }
+                                                                        </span>
+                                                                        <span className="checkmark"></span>
+                                                                    </label>
+                                                                </li>
+                                                            )
+                                                        )}
                                                     </ul>
                                                 </div>
                                             </div>

@@ -158,7 +158,7 @@ const CategorySlider1 = () => {
                             <div className="swiper-slide hover-up">
                                 <Link
                                     legacyBehavior
-                                    href={`/grant-finder/search?category_id=${item.category_id}`}
+                                    href={`/grant-finder/search?category_id=${item.category_id}&page=1&limit=10`}
                                 >
                                     <a>
                                         <div className="item-logo">

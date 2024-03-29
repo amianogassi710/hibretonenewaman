@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router"; 
+import { useRouter } from "next/router";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
@@ -8,60 +8,53 @@ import { Autocomplete, TextField, Button, Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 function GrantFinderSearchBox() {
-    const router = useRouter(); 
-    const [keyword, setKeyword] = useState('');
-    const [category, setCategory] = useState('');
-    const [location, setLocation] = useState('');
+    const router = useRouter();
+    const [keyword, setKeyword] = useState("");
+    const [category, setCategory] = useState("");
+    const [location, setLocation] = useState("");
 
     const handleSearch = () => {
-        const searchURL = `/grant-finder/search/?keyword=${encodeURIComponent(keyword)}&category=${encodeURIComponent(category)}&location=${encodeURIComponent(location)}&page=1&limit=10`;
-        router.push(searchURL); 
+        const queryParams = new URLSearchParams();
+
+        if (keyword) queryParams.append("keyword", keyword);
+        if (category) queryParams.append("category", category);
+        if (location) queryParams.append("location", location); 
+
+        queryParams.append("page", 1);
+        queryParams.append("limit", 10);
+
+        router.push(`/grant-finder/search/?${queryParams.toString()}`);
     };
 
     const categories = [
-        "Community",
-        "Disability",
-        "Education",
-        "Environment",
-        "Equal Opportunities",
-        "People & Families",
-        "Health",
-        "Arts",
-        "Research",
-        "Business",
-        "Rural",
-        "Equality & Diversity",
-        "Regeneration",
-        "Religion",
-        "Social Enterprise",
-        "Leisure & Tourism",
-        "Technology",
-        "Employment",
-        "Crime",
-        "Young People",
+        { category_id: 1, category_name: "Community" },
+        { category_id: 2, category_name: "Environment" },
+        { category_id: 3, category_name: "Research" },
+        { category_id: 4, category_name: "Technology" },
+        { category_id: 5, category_name: "Education" },
+        { category_id: 6, category_name: "Business" },
+        { category_id: 7, category_name: "Disability" },
+        { category_id: 8, category_name: "Equal Opportunities" },
+        { category_id: 9, category_name: "People & Families" },
+        { category_id: 10, category_name: "Health" },
+        { category_id: 11, category_name: "Arts" },
+        { category_id: 12, category_name: "Rural" },
+        { category_id: 13, category_name: "Equality & Diversity" },
+        { category_id: 14, category_name: "Regeneration" },
+        { category_id: 15, category_name: "Religion" },
+        { category_id: 16, category_name: "Social Enterprise" },
+        { category_id: 17, category_name: "Leisure & Tourism" },
+        { category_id: 18, category_name: "Employment" },
+        { category_id: 19, category_name: "Crime" },
+        { category_id: 20, category_name: "Young People" },
     ];
 
     const locations = [
-        "London",
-        "Edinburgh",
-        "Manchester",
-        "Birmingham",
-        "Glasgow",
-        "Bristol",
-        "Liverpool",
-        "Oxford",
-        "Cambridge",
-        "Brighton",
-        "Newcastle",
-        "Leeds",
-        "Sheffield",
-        "Portsmouth",
-        "Nottingham",
-        "Leicester",
-        "Southampton",
-        "Belfast",
-        "Cardiff",
-        "Coventry",
+        { label: "National", label_id: "0" },
+        { label: "England", label_id: "1" },
+        { label: "Scotland", label_id: "2" },
+        { label: "Wales", label_id: "3" },
+        { label: "Northern Ireland", label_id: "4" },
     ];
 
     return (
@@ -83,8 +76,13 @@ function GrantFinderSearchBox() {
                     <Grid item xs={12} lg={3}>
                         <Autocomplete
                             clearOnEscape
-                            options={categories}
-                            onChange={(event, newValue) => setCategory(newValue)}
+                            options={categories} 
+                            getOptionLabel={(option) => option.category_name} 
+                            onChange={(event, newValue) => {
+                                setCategory(
+                                    newValue ? newValue.category_id : ""
+                                ); 
+                            }}
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
@@ -98,8 +96,11 @@ function GrantFinderSearchBox() {
                     <Grid item xs={12} lg={3}>
                         <Autocomplete
                             clearOnEscape
-                            options={locations}
-                            onChange={(event, newValue) => setLocation(newValue)}
+                            options={locations} 
+                            getOptionLabel={(option) => option.label} 
+                            onChange={(event, newValue) => {
+                                setLocation(newValue ? newValue.label_id : ""); 
+                            }}
                             renderInput={(params) => (
                                 <TextField
                                     {...params}
