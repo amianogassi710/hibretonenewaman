@@ -10883,8 +10883,20 @@ ul li:last-child .card-list-4 {
   background: url(../imgs/page/scholarship/hero-image.png) no-repeat center center;
   background-size: cover;
 }
+@media (min-width: 992px) {
+  .bg-img-scholarship h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  .bg-img-scholarship h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
 .bg-img-scholarship h2, .bg-img-scholarship p {
-  z-index: 2;
+  z-index: 1;
   position: relative;
   color: white;
   padding-left: 10px;
@@ -10895,10 +10907,16 @@ ul li:last-child .card-list-4 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  opacity: 0.6;
+  background: #05264E;
+}
+
+.rounded-corners {
+  border-radius: 10px;
+  width: 100%;
 }
 
 .scholarship-supporter-pic {
@@ -10930,19 +10948,15 @@ ul li:last-child .card-list-4 {
 }
 
 .stats {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 59px;
-  width: 78%;
+  width: 100%;
   height: 83px;
   margin: 0 auto;
 }
 
 .stat-box {
-  width: 148px;
+  width: 150px;
   height: 83px;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .stat-nums {

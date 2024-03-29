@@ -205,7 +205,7 @@ const BrandSlider = () => {
 
                         />
                     </SwiperSlide>
-                    
+
                     <SwiperSlide className="centered-swiper">
                         <img
                             src="assets/imgs/page/scholarship/people/paul scully.jpeg"
@@ -223,7 +223,7 @@ const BrandSlider = () => {
                         />
                     </SwiperSlide>
 
-                    
+
                 </Swiper>
             </div>
         </>
