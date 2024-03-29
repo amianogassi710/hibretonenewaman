@@ -4,9 +4,6 @@ import React from 'react';
 import Subscription from "../../components/Layout/Subscription";
 import KickstartButton from '../../components/elements/KickstartButton';
 import {Grid} from "@mui/material";
-
-
-
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
@@ -34,8 +31,8 @@ export default function index() {
                         <div className="container d-flex align-items-center">
                             <div className="row">
                                 <div className="col">
-                                    <h2 className="mb-10">Entrepreneurial Scholarships & Bursaries</h2>
-                                    <p className="font-lg color-text-paragraph-2">Enabling the kickstart of entrepreneurial careers for all aspirers, with<br/>finance, resource and mentorship support</p>
+                                    <h2 className="mb-40">Entrepreneurial Scholarships & Bursaries</h2>
+                                    <p className="color-text-paragraph-2">Enabling the kickstart of entrepreneurial careers for all aspirers, with<br/>finance, resource and mentorship support</p>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +55,9 @@ export default function index() {
                             </div>
                         </div>
 
-            <div className="primary-button mt-50 mb-50">Apply for Scholarship</div>
+            <div className=" text-center mt-50 mb-50">
+                <button className="btn btn-primary"><p className='color-white'>Apply for Scholarship</p></button>
+            </div>
 
 
             {/* Section 1 */}
@@ -73,7 +72,7 @@ export default function index() {
                                     src="assets/imgs/page/scholarship/woman.png"
                                     alt="scholarship"/>
                             </Grid>
-                            <Grid item lg={6} sx={{paddingLeft: {lg: '30px'}}} className='pd-l'>
+                            <Grid item lg={6} sx={{paddingLeft: {lg: '75px'}}} className='pd-l'>
                                 <h3>Scholarships</h3>
                                 <div className="mt-10">
                                     <div className="color-text-paragraph mt-10">
@@ -100,7 +99,7 @@ export default function index() {
                             </Grid>
                             <Grid item xs={12} md={12}>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">hibretOne is inclusive, investing in aspirers, entrepreneurs, small businesses, scale ups, even side-hustlers.</p>
                                         <p className="para">Resources, tools, mentorship and up to £10,000 in funding. Delivering opportunities for aspirers to start and scale a successful enterprise.</p>
                                         <p className="para">Empowering aspirers wanting to start a small hair salon, to founders wanting to start an international tech company, we have scholarships to suit.</p>
@@ -128,10 +127,10 @@ export default function index() {
                         <Grid container alignItems="center" style={{minWidth: '100%'}}
                             sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
 
-                            <Grid item lg={6} sx={{paddingLeft: {lg: '30px'}}} className='pd-r mg-t'>
+                            <Grid item lg={6} sx={{paddingRight: {lg: '75px'}}} className='pd-r mg-t'>
                                 <h4>Scholarship Supporters</h4>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">Globally recognised industry leaders select aspirers with ideas close to their hearts.</p>
                                         <p className="para">Mentor masterclasses by Nick Jenkins founder of Moonpig.com & former-BBC Dragons Den, Melissa Snover received the highest investment for a woman in UK history, Eric Collins (opposite) Channel 4 presenter & former Barack Obama advisor.</p>
                                         <p className="para">Entrepreneurship empowering organisations like SouthBank Centre, Centre for Research into Ethnic Minority Entrepreneurship, Alison and others.</p>
@@ -160,7 +159,7 @@ export default function index() {
                             </Grid>
                             <Grid item xs={12} md={12}>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">Globally recognised industry leaders select aspirers with ideas close to their hearts.</p>
                                         <p className="para">Mentor masterclasses by Nick Jenkins founder of Moonpig.com & former-BBC Dragons Den, Melissa Snover received the highest investment for a woman in UK history, Eric Collins (opposite) Channel 4 presenter & former Barack Obama advisor.</p>
                                         <p className="para">Entrepreneurship empowering organisations like SouthBank Centre, Centre for Research into Ethnic Minority Entrepreneurship (CREME), Alison and others.</p>
@@ -177,7 +176,7 @@ export default function index() {
             </section>
 
             {/* Section 3 */}
-            <section className="section-box mgb-70">
+            <section className="section-box mb-100">
                 <div className="post-loop-grid">
                     <div className="container">
                         <Grid container alignItems="center" style={{minWidth: '100%'}}
@@ -187,10 +186,10 @@ export default function index() {
                                     src="assets/imgs/page/scholarship/money-jar.png"
                                     alt="scholarship"/>
                             </Grid>
-                            <Grid item lg={6} sx={{paddingLeft: {lg: '30px'}}} className='pd-l'>
+                            <Grid item lg={6} sx={{paddingLeft: {lg: '75px'}}}>
                                 <h4>Bursaries</h4>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">Bursaries are non-repayable awards allocated on the basis of your drive as an aspirer, coupled with your financial need and your personal journey.</p>
                                         <p className="para">Of course there is some emphasis on the idea, but if your idea will help change your personal circumstance, or change the community you live in, then you could be eligible. Your idea does not even need to make money, as long as it will make an impact.</p>
                                         <p className="para">Bursaries include a package of group support from our amazing supporters.</p>
@@ -214,7 +213,7 @@ export default function index() {
                             </Grid>
                             <Grid item xs={12} md={12}>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">Bursaries are non-repayable awards allocated on the basis of your drive as an aspirer, coupled with your financial need and your personal journey.</p>
                                         <p className="para">Of course there is some emphasis on the idea, but if your idea will help change your personal circumstance, or change the community you live in, then you could be eligible. Your idea does not even need to make money, as long as it will make an impact.</p>
                                         <p className="para">Bursaries include a package of group support from our amazing supporters.</p>
@@ -230,15 +229,15 @@ export default function index() {
                 </div>
             </section>
 
-            <section className="section-box mt-30 mgb-70">
+            <section className="section-box  mb-100">
                 <div className="post-loop-grid">
                     <div className="container">
                         <Grid container alignItems="center" style={{minWidth: '100%'}}
                             sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
-                            <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}}} className='pd-r'>
+                            <Grid item lg={6} sx={{paddingRight: {lg: '75px'}}} className='pd-r'>
                                 <h4>Upskilling Aspiring Entrepreneurs</h4>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10 mr-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">Grant funding, platform subscription, mentorship, business support, funding to enable you to embark on a higher-paying career.</p>
                                         <p className="para">Upskilling to deliver the learning required for you to become a mentor, a co-founder or business consultant.</p>
                                         <p className="para">Renowned, brilliant & generous leaders helping hibretOne to kickstart entrepreneurship careers.</p>
@@ -269,7 +268,7 @@ export default function index() {
                             </Grid>
                             <Grid item xs={12} md={12}>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10 mr-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">Grant funding, platform subscription, mentorship, business support, funding to enable you to embark on a higher-paying career.</p>
                                         <p className="para">Upskilling to deliver the learning required for you to become a mentor, a co-founder or business consultant.</p>
                                         <p className="para">Renowned, brilliant & generous leaders helping hibretOne to kickstart entrepreneurship careers.</p>
@@ -288,7 +287,7 @@ export default function index() {
 
 
             {/* Section 5 */}
-            <section className="section-box mt-30 mgb-70">
+            <section className="section-box mb-100">
                             <div className="post-loop-grid">
                                 <div className="container">
                                     <Grid container alignItems="center" style={{minWidth: '100%'}}
@@ -298,25 +297,25 @@ export default function index() {
                                                  src="assets/imgs/page/scholarship/graduation.png"
                                                  alt="joxBox"/>
                                         </Grid>
-                                        <Grid item lg={6} sx={{paddingLeft: {lg: '10px'}}} className="pd-l">
+                                        <Grid item lg={6} sx={{paddingLeft: {lg: '75px'}}} className="pd-l">
                                             <h4>Eligibility</h4>
                                             <div className="mt-20">
                                                 <h6 className="mt-10 font-md"><strong>Scholarships are about you, your resilience, your ability to deliver and giving you the opportunity to shine.</strong></h6>
                                                 <ul className="mt-10">
-                                                    <li className="font-md color-text-paragraph bullet-row">
+                                                    <li className="color-text-paragraph bullet-row">
                                                         <div className='checkbox-pic'></div>Supporting those from underrepresented groups.
 
                                                     </li>
-                                                    <li className="font-md color-text-paragraph bullet-row">
+                                                    <li className="color-text-paragraph bullet-row">
                                                         <div className='checkbox-pic'></div> Can be an individual or have a company incorporated.
                                                     </li>
-                                                    <li className="font-md color-text-paragraph bullet-row">
+                                                    <li className="color-text-paragraph bullet-row">
                                                         <div className='checkbox-pic'></div> Successfully completed the Entrepreneur Academy.
                                                     </li>
-                                                    <li className="font-md color-text-paragraph bullet-row">
+                                                    <li className="color-text-paragraph bullet-row">
                                                         <div className='checkbox-pic'></div> Attended an in-person Partner event
                                                     </li>
-                                                    <li className="font-md color-text-paragraph bullet-row">
+                                                    <li className="color-text-paragraph bullet-row">
                                                         <div className='checkbox-pic'></div> Permission to stay or reside in UK.
                                                     </li>
                                                 </ul>
@@ -339,23 +338,22 @@ export default function index() {
                                                  alt="joxBox"/>
                                         </Grid>
                                         <Grid item xs={12} md={12}>
-                                            <div className="mt-20">
-                                                <h6 className="mt-10 font-md"><strong>Scholarships are about you, your resilience, your ability to deliver and giving you the opportunity to shine.</strong></h6>
+                                            <div className="mt-20 ml-20">
                                                 <ul className="mt-10">
-                                                    <li className="font-md color-text-paragraph bullet-row">
-                                                        <div className='checkbox-pic'></div>Supporting those from underrepresented groups.
+                                                    <li className="color-text-paragraph bullet-row">
+                                                        <div className='checkbox-pic'/>Supporting those from underrepresented groups.
                                                     </li>
-                                                    <li className="font-md color-text-paragraph bullet-row">
-                                                        <div className='checkbox-pic'></div> Can be an individual or have a company incorporated.
+                                                    <li className="color-text-paragraph bullet-row">
+                                                        <div className='checkbox-pic'/>Can be an individual or have a company incorporated.
                                                     </li>
-                                                    <li className="font-md color-text-paragraph bullet-row">
-                                                        <div className='checkbox-pic'></div> Successfully completed the Entrepreneur Academy.
+                                                    <li className="color-text-paragraph bullet-row">
+                                                        <div className='checkbox-pic'/>Successfully completed the Entrepreneur Academy.
                                                     </li>
-                                                    <li className="font-md color-text-paragraph bullet-row">
-                                                        <div className='checkbox-pic'></div> Attended an in-person Partner event
+                                                    <li className="color-text-paragraph bullet-row">
+                                                        <div className='checkbox-pic'/>Attended an in-person Partner event
                                                     </li>
-                                                    <li className="font-md color-text-paragraph bullet-row">
-                                                        <div className='checkbox-pic'></div> Permission to stay or reside in UK.
+                                                    <li className="color-text-paragraph bullet-row">
+                                                        <div className='checkbox-pic'/>Permission to stay or reside in UK.
                                                     </li>
                                                 </ul>
                                             </div>
@@ -370,16 +368,16 @@ export default function index() {
                         </section>
 
             {/* Section 6 */}
-            <section className="section-box mt-50 mb-50">
+            <section className="section-box mb-75">
                 <div className="post-loop-grid">
                     <div className="container">
                         <Grid container alignItems="center" style={{minWidth: '100%'}}
                             sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
 
-                            <Grid item lg={6} sx={{paddingLeft: {lg: '30px'}}} className='pd-r'>
+                            <Grid item lg={6} sx={{paddingRight: {lg: '75px'}}} className='pd-r'>
                                 <h4>Empowering Everyone with Talent</h4>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">Whether you want to start a small hair salon in your local village, to starting an international tech company with aspirations to compete with Google, we have scholarships to suit.</p>
                                         <p className="para">We are creating a #Movement where talent, dedication and your idea is the major factor to your success.</p>
                                     </div>
@@ -407,7 +405,7 @@ export default function index() {
                             </Grid>
                             <Grid item xs={12} md={12}>
                                 <div className="mt-10">
-                                    <div className="font-md color-text-paragraph mt-10">
+                                    <div className="color-text-paragraph mt-10">
                                         <p className="para">Whether you want to start a small hair salon in your local village, to starting an international tech company with aspirations to compete with Google, we have scholarships to suit.</p>
                                         <p className="para">We are creating a #Movement where talent, dedication and your idea is the major factor to your success.</p>
                                     </div>
@@ -423,43 +421,55 @@ export default function index() {
             </section>
 
       <KickstartButton />
-    <section>
-        <div className="text-center mt-50">
+    <section className="section-box">
+        <div className="text-center mt-75">
             <h2 className='stats-heading'>Impact of Our Scholarships</h2>
         </div>
-        <div className="stats row mt-50 mb-50">
-            <div className="stat-box col-lg-3 col-sm-12">
-                <div className="stat-nums">1 Million+</div>
-                <div className="stat-category">
-                    <div  className="box blue-box"></div>
-                    <p className="stat-name">User interventions</p>
-                </div>
-            </div>
 
-            <div className="stat-box col-lg-3 col-sm-12">
-                <div className="stat-nums">50+</div>
-                <div className="stat-category">
-                    <div  className="box yellow-box"></div>
-                    <p className="stat-name">Scholarships awarded</p>
+        <div className="container mt-70">
+            <div className="row">
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div className="text-center">
+                        <h2 className="color-brand-2 color-background-1">
+                            <span className="count">
+                                £1Million+
+                            </span>
+                        </h2>
+                        <h6>User interventions</h6>
+                    </div>
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div className="text-center">
+                        <h2 className="color-brand-2 color-background-2">
+                            <span className="count">
+                                50+
+                            </span>
+                        </h2>
+                        <h6>Scholarships awarded</h6>
+                    </div>
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div className="text-center">
+                        <h2 className="color-brand-2 color-background-3">
+                            <span className="count">
+                                50+
+                            </span>
+                        </h2>
+                        <h6>Bursaries awarded</h6>
+                    </div>
+                </div>
+                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div className="text-center">
+                        <h2 className="color-brand-2 color-background-4">
+                            <span className="count">
+                                12
+                            </span>
+                        </h2>
+                        <h6>New businesses created</h6>
+                    </div>
                 </div>
             </div>
-
-            <div className="stat-box col-lg-3 col-sm-12">
-                <div className="stat-nums">50+</div>
-                <div className="stat-category">
-                    <div  className="box beige-box"></div>
-                    <p className="stat-name">Bursries awarded</p>
-                </div>
-            </div>
-
-            <div className="stat-box col-lg-3 col-sm-12">
-                <div className="stat-nums">12</div>
-                <div className="stat-category">
-                    <div  className="box pink-box"></div>
-                    <p className="stat-name">New businesses created</p>
-                </div>
-            </div>
-      </div>
+        </div>
     </section>
 
 

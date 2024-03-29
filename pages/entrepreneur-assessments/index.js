@@ -99,14 +99,6 @@ export default function Index() {
     setOpen(!open);
   }
 
-  // Render nothing if data is not available yet
-  if (Object.keys(data).length === 0) {
-    return (
-      <Layout>
-        <Loading />
-      </Layout>
-    );
-  }
 
   return (
     <Layout>
@@ -161,14 +153,14 @@ export default function Index() {
             <section className='section-box mb-50'>
                <YellowBanner />
             </section>
-            <AssessmentGrid data={traits} clickAction={toggleOpen} />
+            <AssessmentGrid loading={Object.keys(data).length === 0} data={traits} clickAction={toggleOpen} />
             <div className="col-xxl-12">
                <div className=" text-center mt-40 mb-60">
                   <h2>Business Idea Validation</h2>
                   <p>Basic assessment of your idea and business opportunity</p>
                </div>
             </div>
-            {<AssessmentGrid data={business} clickAction={toggleOpen} progress={progress}/>}
+            {<AssessmentGrid loading={Object.keys(data).length === 0} data={business} clickAction={toggleOpen} progress={progress}/>}
          </div>
          <QuizModal onClose={toggleOpen} title={`${assessmentTitle}`} assessment={assessment} uizard={uizard} time={assessment.time} show={open} isLoggedIn={true} />
       </section>
