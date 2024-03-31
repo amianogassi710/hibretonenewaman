@@ -138,7 +138,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
 
                                         <ul className="sub-menu">
                                             <li>
-                                                <Link legacyBehavior href="/">
+                                                <Link legacyBehavior href="/ecosystem-connector">
                                                     <a>Ecosystem Connector</a>
                                                 </Link>
                                             </li>
