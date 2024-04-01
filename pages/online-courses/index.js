@@ -4,7 +4,7 @@ import axios from 'axios';
 import Loading from '../../components/elements/Loading';
 import { useRouter } from 'next/navigation';
 import Subscription from '../../components/Layout/Subscription';
-import Grid from '../../components/elements/Grid';
+import Grid2 from '../../components/elements/Grid2';
 import YellowBanner from '../../components/elements/YellowBanner'
 import KickstartButton from '../../components/elements/KickstartButton'
 
@@ -166,7 +166,7 @@ export default function Index() {
                     <div className="tab-content" id="courseTabContent">
                       <div className="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab">
                         <div className="row">
-                          <Grid data={data} />
+                          <Grid2 data={data} />
                         </div>
                       </div>
                     </div>
