@@ -3,7 +3,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css'
 import Loading from './Loading';
 
-function Grid({ loading, data, clickAction }) {
+function Grid({ loading, data, categories, clickAction }) {
    const [active, setActive] = useState(1);
    const [selectedCategory,setSelectedCategory] = useState("All")
 
@@ -28,24 +28,14 @@ function Grid({ loading, data, clickAction }) {
             <li>
                 <a className={active === 1 ? "active" : ""} onClick={() => handleOnClick(1,"All")}>All</a>
                 </li>
-            <li>
-                <a className={active === 2 ? "active" : ""} onClick={() => handleOnClick(2,"Strategic")}>Strategic</a>
-                </li>
-            <li>
-                <a className={active === 3 ? "active" : ""}onClick={() => handleOnClick(3,"People")}>People</a>
-                </li>
-            <li>
-                <a className={active === 4 ? "active" : ""} onClick={() => handleOnClick(4,"Environment")} >Environment</a>
-                </li>
-            <li>
-                <a className={active === 5 ? "active" : ""} onClick={() => handleOnClick(5,"Product")} >Product</a>
-                </li>
-            <li>
-                <a className={active === 6 ? "active" : ""} onClick={() => handleOnClick(6,"Users")} >Users</a>
-                </li>
-            <li>
-                <a className={active === 7 ? "active" : ""} onClick={() => handleOnClick(7,"Finance")} >Finance</a>
-                </li>
+            {categories.map((category,index) => {
+               const i = index + 2
+               return (
+                  <li>
+                     <a className={active == i ? "active" : ""} onClick={() => handleOnClick(i,category.name)}>{category.name}</a>
+                  </li>
+               )
+            })}
         </ul>
     </div>
     <div className="category-description text-center mb-30">

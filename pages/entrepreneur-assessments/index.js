@@ -4,7 +4,7 @@ import QuizModal from './QuizModal/QuizModal';
 import axios from 'axios';
 import Loading from '../../components/elements/Loading';
 import Subscription from '../../components/Layout/Subscription';
-import AssessmentGrid from '../../components/elements/AssessmentGrid';
+import Grid1 from '../../components/elements/Grid1';
 import YellowBanner from '../../components/elements/YellowBanner';
 import KickstartButton from '../../components/elements/KickstartButton';
 import { Grid } from '@mui/material'
@@ -30,6 +30,7 @@ export default function Index() {
   const [uizard, setUizard] = useState("")
   const [assessmentTitle, setAssessmentTitle] = useState("")
   const [progress,setProgress] = useState({})
+  const [categories, setCategories] = useState([])
 
   const traits = data.Traits
   const business = data.Business
@@ -46,7 +47,16 @@ export default function Index() {
         console.log("Couldn't retrieve quiz: ", error);
       }
     };
+    const getCategory = async () => {
+      try {
+         const response = await axios.get("/assessments/categories")
+         setCategories(response.data)
+      } catch (erro) {
+         console.log("Couldn't retrieve categories: ", error)
+      }
+    }
     getQuiz();
+    getCategory()
   },[])
 
   const featuresData = [
@@ -153,14 +163,14 @@ export default function Index() {
             <section className='section-box mb-50'>
                <YellowBanner />
             </section>
-            <AssessmentGrid loading={Object.keys(data).length === 0} data={traits} clickAction={toggleOpen} />
+            <Grid1 loading={Object.keys(data).length === 0} data={traits} categories={categories} clickAction={toggleOpen} />
             <div className="col-xxl-12">
                <div className=" text-center mt-40 mb-60">
                   <h2>Business Idea Validation</h2>
                   <p>Basic assessment of your idea and business opportunity</p>
                </div>
             </div>
-            {<AssessmentGrid loading={Object.keys(data).length === 0} data={business} clickAction={toggleOpen} progress={progress}/>}
+            {<Grid1 loading={Object.keys(data).length === 0} data={business} categories={categories} clickAction={toggleOpen} progress={progress}/>}
          </div>
          <QuizModal onClose={toggleOpen} title={`${assessmentTitle}`} assessment={assessment} uizard={uizard} time={assessment.time} show={open} isLoggedIn={true} />
       </section>
