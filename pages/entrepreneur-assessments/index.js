@@ -51,7 +51,7 @@ export default function Index() {
       try {
          const response = await axios.get("/assessments/categories")
          setCategories(response.data)
-      } catch (erro) {
+      } catch (error) {
          console.log("Couldn't retrieve categories: ", error)
       }
     }
