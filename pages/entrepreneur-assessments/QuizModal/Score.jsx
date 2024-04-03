@@ -35,7 +35,6 @@ const Score = props => {
   const Feedback = () => {
     if (props.assessment === "Entrepreneurial-Readiness") {
       const feedback = props.feedback.feedback
-      console.log(feedback)
       let j = 0
       return (
         <>
@@ -73,7 +72,6 @@ const Score = props => {
           <div className="mb-10">
             {Object.entries(feedback).map(([category,result]) => {
               const trait = category.split("_").map(word => word[0].toUpperCase() + word.substring(1)).join(" ")
-              console.log(`${trait}: ${result}`)
               return (
               <div className={`${category}`} key={`${category}`}>
                 <div className="personality">
