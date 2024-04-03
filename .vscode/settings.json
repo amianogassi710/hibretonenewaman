@@ -12,5 +12,6 @@
             "savePathReplacementPairs": null
         }
     ],
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
+    "git.allowForcePush": true
 }
