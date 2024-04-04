@@ -108,16 +108,6 @@ export default function GrantsList() {
                 timeout: 2000,
                 retryCount: 4,
             }).catch((error) => console.error({ error: error.message }))
-            // console.log("response " + JSON.stringify(response.data));
-            // console.log("Type of result.data:", response.data);
-            // const result = await response;
-            // {
-            //     "total_count": all_results.__len__(),
-            //     "data": grant_details_list,
-            //     "page": page,
-            //     "limit": limit
-            // }
-            // console.log("result " + JSON.stringify(result));
             setTotalGrants(response.total_count);
             setResults(response.data);
             setPage(response.page)
