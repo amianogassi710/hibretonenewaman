@@ -177,11 +177,17 @@ export default function Index2() {
                                     }}
                                 >
                                     <Grid item lg={6}>
-                                        <img
+                                        <iframe
                                             className="content-media"
-                                            src="assets/imgs/page/grant-finder/1.png"
-                                            alt="joxBox"
-                                        />
+                                            width="663"
+                                            height="504"
+                                            src="https://www.youtube.com/embed/WQ1vFJln8gQ?si=bOwb3RxJJK2UJrIc"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen
+                                        ></iframe>
                                     </Grid>
                                     <Grid
                                         item
@@ -243,11 +249,17 @@ export default function Index2() {
                                         <h4>Grants reduce development risk</h4>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <img
+                                        <iframe
                                             className="content-media"
-                                            src="assets/imgs/page/grant-finder/1.png"
-                                            alt=""
-                                        />
+                                            width="663"
+                                            height="504"
+                                            src="https://www.youtube.com/embed/WQ1vFJln8gQ?si=bOwb3RxJJK2UJrIc"
+                                            title="YouTube video player"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin"
+                                            allowfullscreen
+                                        ></iframe>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <div className="mt-10">
@@ -672,7 +684,6 @@ export default function Index2() {
                                                 we’ll show you similar grants to
                                                 <br className="d-none d-lg-block" />
                                                 your search criteria
-
                                             </p>
                                         </div>
                                     </div>
