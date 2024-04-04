@@ -11,7 +11,7 @@ export default function Aboutusmeetourteam() {
                         </div>
                         <div className="row" style={{ marginTop: '45px' }}>
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                <div className="card-grid-4 text-center hover-up">
+                                <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
                                             <img alt="jobBox" src="../assets/imgs/page/about-us/Drew.jpg" />
@@ -28,7 +28,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                <div className="card-grid-4 text-center hover-up">
+                                <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
                                             <img alt="jobBox" src="../assets/imgs/page/about-us/Nikki.jpg" />
@@ -45,7 +45,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                <div className="card-grid-4 text-center hover-up">
+                                <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
                                             <img alt="jobBox" src="../assets/imgs/page/about-us/Kali.jpg" />
@@ -62,7 +62,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                <div className="card-grid-4 text-center hover-up">
+                                <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
                                             <img alt="jobBox" src="../assets/imgs/page/about-us/Assim.jpg" />
@@ -79,7 +79,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                <div className="card-grid-4 text-center hover-up">
+                                <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
                                             <img alt="jobBox" src="../assets/imgs/page/about-us/Monder.jpg" />
@@ -96,7 +96,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                <div className="card-grid-4 text-center hover-up">
+                                <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
                                             <img alt="jobBox" src="../assets/imgs/page/about-us/Pam.jpg" />
@@ -113,7 +113,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                <div className="card-grid-4 text-center hover-up">
+                                <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
                                             <img alt="jobBox" src="../assets/imgs/page/about-us/Mark.jpg" />
@@ -130,7 +130,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                <div className="card-grid-4 text-center hover-up">
+                                <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
                                             <img alt="jobBox" src="../assets/imgs/page/about-us/Patricia.jpg" />

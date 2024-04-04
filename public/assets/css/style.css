@@ -12365,7 +12365,6 @@ ul li:last-child .card-list-4 {
   font-style: normal;
   font-weight: 500;
   line-height: 25px;
-  /* height: 48px; */
   overflow: hidden;
   /* 156.25% */
   /* 4th April */
@@ -12403,7 +12402,6 @@ ul li:last-child .card-list-4 {
   }
 }
 .meetourteamname {
-  /* height: 52px; */
   overflow: hidden;
   font-size: 18px;
   /* 4th April */
@@ -12881,6 +12879,10 @@ ul li:last-child .card-list-4 {
 .meetourteamcard {
   min-height: 200px;
   min-width: 237px;
+}
+
+.paddingaboutus {
+  padding: 20px 15px 35px 15px;
 }
 
 @media (max-width: 1399.98px) {
