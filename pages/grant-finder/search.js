@@ -41,22 +41,15 @@ export default function GrantsList() {
             } = router.query;
             console.log("router.query " + JSON.stringify(router.query));
             const updatedQueryParameters = {
-                // 使用Array.isArray检查字段是否已经是数组，如果不是，则使用[]将其转换为数组
                 category: Array.isArray(category) ? category : category ? [category] : [],
                 grantAmountRange: Array.isArray(grantAmountRange) ? grantAmountRange : grantAmountRange ? [grantAmountRange] : [],
                 location: Array.isArray(location) ? location : location ? [location] : [],
                 keyword,
-                page: parseInt(page, 10) || 1, // 确保page为数字，如果不存在，则默认为1
-                limit: parseInt(limit, 10) || 10, // 确保limit为数字，如果不存在，则默认为10
+                page: parseInt(page, 10) || 1,
+                limit: parseInt(limit, 10) || 10,
             };
             console.log("updatedQueryParameters " + JSON.stringify(updatedQueryParameters));
-            // setQueryParameters(updatedQueryParameters);
-            // console.log("queryParameters " + JSON.stringify(queryParameters));
-            // let didCancel = false;
             fetchData(updatedQueryParameters);
-            // return () => {
-            //     didCancel = true;
-            // };
         }
     }, [router.isReady, router.query]);
 
@@ -244,13 +237,13 @@ const updatedQueryParameters = {
                 PaginationParams.append("category", categoryId);
             });
         }
-        
+
         if (Array.isArray(updatedQueryParameters.grantAmountRange)) {
             updatedQueryParameters.grantAmountRange.forEach((rangeId) => {
                 PaginationParams.append("grantAmountRange", rangeId);
             });
         }
-        
+
         // 对于location，您已经有了类似的判断条件。
         if (Array.isArray(updatedQueryParameters.location)) {
             updatedQueryParameters.location.forEach((locationId) => {
