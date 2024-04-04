@@ -104,11 +104,6 @@ export default function GrantsList() {
             setTotalGrants(response.total_count);
             setResults(response.data);
             setPage(response.page)
-            // if (!didCancel) {
-            //     const result = await response.json();
-            //     setGrantNum(result.length);
-            //     setResults(result);
-            // }
         } catch (error) {
             console.error("Failed to fetch data:", error);
         }
@@ -195,7 +190,7 @@ export default function GrantsList() {
     ];
 
     function formatGrantAmount(amount) {
-        //如果是null 返回NULL
+
         if(amount == null) return 'N/A'
         // 将金额转换为数字
         const numAmount = Number(amount);
