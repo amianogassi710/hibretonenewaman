@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Layout from "../../components/Layout/Layout";
-import DiscoverButton from '../../components/elements/DiscoverButton';
 import Subscription from '../../components/Layout/Subscription';
 
 export default function BlogInnerPage() {
