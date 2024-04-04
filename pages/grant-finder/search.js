@@ -104,11 +104,6 @@ export default function GrantsList() {
             setTotalGrants(response.total_count);
             setResults(response.data);
             setPage(response.page)
-            // if (!didCancel) {
-            //     const result = await response.json();
-            //     setGrantNum(result.length);
-            //     setResults(result);
-            // }
         } catch (error) {
             console.error("Failed to fetch data:", error);
         }
