@@ -1,11 +1,12 @@
 import "../public/assets/css/style.css";
 import "../styles/globals.css";
-import React, {useEffect} from "react";
-import {useLocalStorage} from "react-use";
-import {createTheme, ThemeProvider, CssBaseline} from '@mui/material';
+import React, { useEffect } from "react";
+import { useLocalStorage } from "react-use";
+import { createTheme, ThemeProvider, CssBaseline } from "@mui/material";
 import axiosFetchWithRetry from "../components/elements/fetchWithRetry";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-function MyApp({Component, pageProps}) {
+function MyApp({ Component, pageProps }) {
     const [isLoggedIn, setIsLoggedIn] = useLocalStorage("is_logged_in", false);
     const [userAccount, setUserAccount] = useLocalStorage("user_account", {});
     useEffect(() => {
@@ -14,12 +15,11 @@ function MyApp({Component, pageProps}) {
 
     const theme = createTheme({
         typography: {
-            fontFamily: [
-                'Plus Jakarta Sans',
-                'sans-serif',
-            ].join(','),
+            fontFamily: ["Plus Jakarta Sans", "sans-serif"].join(","),
         },
     });
+
+    const queryClient = new QueryClient();
     useEffect(() => {
         if (isLoggedIn) {
             try {
@@ -35,14 +35,16 @@ function MyApp({Component, pageProps}) {
                 setUserAccount({});
             }
         }
-    }, [])
+    }, []);
 
     return (
-
         <ThemeProvider theme={theme}>
-            <CssBaseline/>
-            <Component {...pageProps} />
-        </ThemeProvider>);
+            <CssBaseline />
+            <QueryClientProvider client={queryClient}>
+                <Component {...pageProps} />
+            </QueryClientProvider>
+        </ThemeProvider>
+    );
 }
 
 export default MyApp;
