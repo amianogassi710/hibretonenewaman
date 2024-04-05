@@ -43,15 +43,33 @@ TABLE CONTENT
 @import "layout/header", "layout/navigation", "layout/sidebar", "layout/footer",
     "layout/spacing";
 // Page-specific styles
-@import "pages/pages", "pages/blog", "pages/candidates", "pages/job-single",
-    "pages/job-single-2", "pages/blog-grid-2", "pages/job-listing-grid",
-    "pages/job-listing-list", "pages/company", "pages/login-register",
-    "pages/homepage1", "pages/homepage2", "pages/homepage3", "pages/homepage4",
-    "pages/homepage5", "pages/homepage6", "pages/entrepreneur-assessments",
-    "pages/r&d-tax-credits-calculator", "pages/_online-courses",
-    "pages/grant-finder", "pages/business-plan-writer",
-    "pages/business-problem-triage", "pages/page-scholarship",
-    "pages/ecosystem-connector", "pages/job-connect";
+@import 'pages/pages',
+'pages/blog',
+'pages/candidates',
+'pages/job-single',
+'pages/job-single-2',
+'pages/blog-grid-2',
+'pages/job-listing-grid',
+'pages/job-listing-list',
+'pages/company',
+'pages/login-register',
+'pages/homepage1',
+'pages/homepage2',
+'pages/homepage3',
+'pages/homepage4',
+'pages/homepage5',
+'pages/homepage6',
+'pages/entrepreneur-assessments',
+'pages/r&d-tax-credits-calculator',
+'pages/_online-courses',
+'pages/grant-finder',
+'pages/business-plan-writer',
+'pages/business-problem-triage',
+'pages/page-scholarship',
+'pages/ecosystem-connector',
+'pages/blog-page',
+'pages/about-us';
+
 
 // Responsive
 @import "layout/responsive";

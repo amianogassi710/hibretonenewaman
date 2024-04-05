@@ -226,7 +226,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                             <li>
                                                 <Link
                                                     legacyBehavior
-                                                    href="/page-pricing"
+                                                    href="/blog-page"
                                                 >
                                                     <a>Blog</a>
                                                 </Link>

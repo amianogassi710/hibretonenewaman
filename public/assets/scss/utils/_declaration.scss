@@ -16,7 +16,7 @@
     */
     @each $color, $shades in $colors {
         @each $shade, $value in $shades {
-            --tp-#{$color}-#{$shade}: #{$value};
+            --tp-#{$color}-#{$shade}: #{"#{$value}"};
         }
     }
 
@@ -27,7 +27,7 @@
     
     @each $fw, $shades in $font-scale {
         @each $shade, $value in $shades {
-            --tp-#{$fw}-#{$shade}: #{$value};
+            --tp-#{$fw}-#{$shade}: #{"#{$value}"};
         }
     }
 
