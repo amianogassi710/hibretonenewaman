@@ -12,14 +12,14 @@ export default function Aboutushibretoneinformation() {
                             <div className="about__thumb-wrapper d-sm-flex mr-20 p-relative">
                                 <div className="about__thumb-left mr-10">
                                     <div className="about__thumb-1 mb-10">
-                                        <iframe width="560" height="215" src="https://www.youtube.com/embed/CIoWgp020B0" frameBorder="0" allowfullscreen></iframe>
+                                        <iframe width="560" height="215" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{borderRadius: '16px'}}></iframe>
                                     </div>
                                     <div className="about__thumb-1 text-end">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d44f244455f51915d5b62f5936790f9ab60406bcd80dd6641162320e49074c6a?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&" alt="" style={{ height: '180px', width: '201px' }} />
+                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d44f244455f51915d5b62f5936790f9ab60406bcd80dd6641162320e49074c6a?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&" alt="" style={{ height: '180px', width: '201px', borderRadius: '16px' }} />
                                     </div>
                                 </div>
                                 <div className="about__thumb-2">
-                                    <img src="../assets/imgs/page/about-us/b.png" alt="" style={{ height: '585px', width: '333x' }} />
+                                    <img src="../assets/imgs/page/about-us/b.png" alt="" style={{ height: '585px', width: '333px', borderRadius: '16px' }} />
                                 </div>
                             </div>
                         </Grid>
