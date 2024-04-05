@@ -11057,6 +11057,7 @@ ul li:last-child .card-list-4 {
   background: #05264E;
 }
 
+
 /* Blog Start */
 /* BlogTrendingTab */
 .product-list {
@@ -12235,6 +12236,7 @@ ul li:last-child .card-list-4 {
 
 .bg-img-aboutus h2,
 .bg-img-aboutus p {
+
   z-index: 2;
   position: relative;
   color: white;
@@ -12255,14 +12257,8 @@ ul li:last-child .card-list-4 {
 }
 
 .bg-img-aboutus::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
+
+
   background: #05264E;
 }
 
@@ -12745,7 +12741,7 @@ ul li:last-child .card-list-4 {
     width: 40px;
     height: 40px;
     right: -5px;
-  }
+ 
 }
 @media screen and (max-width: 1200px) {
   .swiperprevious-aboutusfull {
