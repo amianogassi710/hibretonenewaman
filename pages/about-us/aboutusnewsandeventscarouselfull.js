@@ -153,7 +153,7 @@ export default function Aboutusnewsandeventscarouselfull() {
                                             className="featured-image"
                                         />
                                         <div className="article-category">{article.category}</div>
-                                        <a href="/blog-page/BlogInnerPage">
+                                        <a href="/blog-page/blog-inner-page">
                                             <div className="article-title-container">
                                                 <div className="article-title-aboutus">{article.title}</div>
                                             </div>

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 
-
 const articleData = [
-
     {
         image: "https://cdn.builder.io/api/v1/image/assets/TEMP/659f692a58c4c92e1ba7dd66767d5d22e36708d9c78aaff8d4b3855bb30441a2?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&",
         title: "11 Tips for an Entrepreneur Programme Success",
@@ -15,7 +12,6 @@ const articleData = [
             date: "25 April 2024"
         },
     },
-
     {
         image: "https://cdn.builder.io/api/v1/image/assets/TEMP/12ec7b0bceb254d0bce1a5e8e4dfa2358674a310534fef82a99a9f7c3c363a4a?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&",
         title: "11 Tips for Student Work Placement Success",
@@ -25,7 +21,6 @@ const articleData = [
             date: "25 April 2024"
         },
     },
-
     {
         image: "https://cdn.builder.io/api/v1/image/assets/TEMP/8d579b7d7a82a6dc86c7b8f113ddc9b245b842e43245ee7b40bf48c2009dfa85?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&",
         title: "11 Tips to Help and Build Upskill Your Career",
@@ -62,7 +57,6 @@ const articleData = [
             date: "27 April 2024"
         },
     },
-
 ];
 
 export default function BlogPageCarousel() {
@@ -89,7 +83,6 @@ export default function BlogPageCarousel() {
             },
         });
         setSwiperInstance(mySwiper); // Change 'swiper' to 'mySwiper'
-
     }, []);
 
     const handlePrevious = () => {
@@ -120,7 +113,7 @@ export default function BlogPageCarousel() {
                                             className="featured-image"
                                             height="100%"
                                         />
-                                        <a href="/blog-page/BlogInnerPage">
+                                        <a href="/blog-page/blog-inner-page">
                                                 <div className="article-title-blogpage">{article.title}</div>
                                         </a>
                                         <img
@@ -134,7 +127,6 @@ export default function BlogPageCarousel() {
 
                                     </div>
                                 </div>
-                                
                             ))}
                         </div>
                         <img

@@ -6,12 +6,8 @@ export default function BlogInnerPage() {
     return (
         <>
             <Layout>
-
-                
-
                 <section className="section-box">
                 <div className="banner-hero2 bg-img-laptop2">
-
                 <div className="col">
                     <div>
                     <img src="../assets/imgs/page/blog-page/BlogHero1.jpeg" />
@@ -23,19 +19,14 @@ export default function BlogInnerPage() {
                     </div>
                     </div>
                 </section>
-
-
                 <section className="section-box">
                     <div className="archive-header-blogpage pt-50 text-center">
                         <div className="container1" style={{ position: 'relative', zIndex: '1', maxWidth: '77%', padding: '0 15px' }}>
-
-
                             <div className="box-white">
                                 <div className="max-width-single">
                                     <Link legacyBehavior href="#">
                                         <a className="btn btn-tag" style={{ fontSize: '18px' }}>Category</a>
                                     </Link>
-
                                     <h2 className="mb-30 mt-20 text-center" style={{ fontSize: '40px' }}>11 Tips to Help You Get New Clients Through Cold Calling</h2>
                                     <div className="post-meta text-muted d-flex align-items-center mx-auto justify-content-center">
                                         <div className="author d-flex align-items-center mr-30">
@@ -216,7 +207,6 @@ export default function BlogInnerPage() {
                     </div>
                 </div>
                 <Subscription />
-
             </Layout>
         </>
     );

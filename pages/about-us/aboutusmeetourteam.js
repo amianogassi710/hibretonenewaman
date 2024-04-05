@@ -147,12 +147,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-40 mb-20 button-meetourteam-aboutus" style={{textAlign:'center'}}>
-                            {/* <button href="/aboutusmeetourteamfull" className="btn btn-default fs-6">Meet Our Team</button> */}
-                            {/* <button onclick="window.location.href='/aboutusmeetourteamfull'" class="btn btn-default fs-6">Meet Our Team</button> */}
-                            <a href="/about-us/aboutusfull" class="btn btn-default fs-6">Meet Our Team</a>
-
-                        </div>
+                        
                     </div>
                 </div>
             </section>

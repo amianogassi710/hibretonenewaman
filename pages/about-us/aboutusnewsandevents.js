@@ -111,7 +111,7 @@ export default function Index() {
                                     />
                                     <div className="article-category">{articleData1.category}</div>
 
-                                    <a href="/blog-page/BlogInnerPage">
+                                    <a href="/blog-page/blog-inner-page">
                                         <div className="article-title-container"> {/* Added container for title */}
                                             <div className="article-title-aboutus">{articleData1.title}</div>
                                         </div>
@@ -144,7 +144,7 @@ export default function Index() {
                                         className="featured-image"
                                     />
                                     <div className="article-category">{articleData2.category}</div>
-                                    <a href="/blog-page/BlogInnerPage">
+                                    <a href="/blog-page/blog-inner-page">
                                         <div className="article-title-container"> {/* Added container for title */}
                                             <div className="article-title-aboutus">{articleData2.title}</div>
                                         </div>
@@ -177,7 +177,7 @@ export default function Index() {
                                         className="featured-image"
                                     />
                                     <div className="article-category">{articleData3.category}</div>
-                                    <a href="/blog-page/BlogInnerPage">
+                                    <a href="/blog-page/blog-inner-page">
                                         <div className="article-title-container"> {/* Added container for title */}
                                             <div className="article-title-aboutus">{articleData3.title}</div>
                                         </div>
@@ -210,7 +210,7 @@ export default function Index() {
                                         className="featured-image"
                                     />
                                     <div className="article-category">{articleData4.category}</div>
-                                    <a href="/blog-page/BlogInnerPage">
+                                    <a href="/blog-page/blog-inner-page">
                                         <div className="article-title-container"> {/* Added container for title */}
                                             <div className="article-title-aboutus">{articleData4.title}</div>
                                         </div>
@@ -243,7 +243,7 @@ export default function Index() {
                                         className="featured-image"
                                     />
                                     <div className="article-category">{articleData5.category}</div>
-                                    <a href="/blog-page/BlogInnerPage">
+                                    <a href="/blog-page/blog-inner-page">
                                         <div className="article-title-container"> {/* Added container for title */}
                                             <div className="article-title-aboutus">{articleData5.title}</div>
                                         </div>
@@ -276,7 +276,7 @@ export default function Index() {
                                         className="featured-image"
                                     />
                                     <div className="article-category">{articleData6.category}</div>
-                                    <a href="/blog-page/BlogInnerPage">
+                                    <a href="/blog-page/blog-inner-page">
                                         <div className="article-title-container"> {/* Added container for title */}
                                             <div className="article-title-aboutus">{articleData6.title}</div>
                                         </div>

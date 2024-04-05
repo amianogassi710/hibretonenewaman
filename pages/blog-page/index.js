@@ -2,21 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import Layout from "../../components/Layout/Layout";
 import Subscription from '../../components/Layout/Subscription';
-import YellowBanner from '../../components/elements/YellowBanner';
 import KickstartButton from '../../components/elements/KickstartButton';
-import BlogSlider1 from '../../components/sliders/BlogSlider1';
 import dynamic from "next/dynamic";
-import { Grid } from '@mui/material';
-import Link from 'next/link';
-import { IoShareSocialOutline } from "react-icons/io5";
-import SwiperExamples from '../../components/elements/SwiperExamples';
-import MyComponent from './MyComponent';
 import BlogPageCarousel from './BlogPageCarousel';
 import CustomPagination from '../../components/elements/CustomPagination';
-
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
-
 
 const BlogTrendingTab = dynamic(
     () => import("../../components/elements/BlogTrendingTab"),
@@ -125,8 +114,6 @@ export default function Index() {
                     </div>
                     <div className="section-box wow animate__animated animate__fadeIn">
                         <div className="container mt-50" >
-                            {/* <BlogSlider1 /> */}
-                            {/* <MyComponent /> */}
                             <BlogPageCarousel />
                         </div>
                     </div>
@@ -172,7 +159,7 @@ export default function Index() {
                                             />
                                             <div className="article-category">{articleData1.category}</div>
 
-                                            <a href="/blog-page/BlogInnerPage">
+                                            <a href="/blog-page/blog-inner-page">
                                                 <div className="article-title-container"> {/* Added container for title */}
                                                     <div className="article-title">{articleData1.title}</div>
                                                 </div>
@@ -205,7 +192,7 @@ export default function Index() {
                                                 className="featured-image"
                                             />
                                             <div className="article-category">{articleData2.category}</div>
-                                            <a href="/blog-page/BlogInnerPage">
+                                            <a href="/blog-page/blog-inner-page">
                                                 <div className="article-title-container"> {/* Added container for title */}
                                                     <div className="article-title">{articleData2.title}</div>
                                                 </div>
@@ -238,7 +225,7 @@ export default function Index() {
                                                 className="featured-image"
                                             />
                                             <div className="article-category">{articleData3.category}</div>
-                                            <a href="/blog-page/BlogInnerPage">
+                                            <a href="/blog-page/blog-inner-page">
                                                 <div className="article-title-container"> {/* Added container for title */}
                                                     <div className="article-title">{articleData3.title}</div>
                                                 </div>
@@ -271,7 +258,7 @@ export default function Index() {
                                                 className="featured-image"
                                             />
                                             <div className="article-category">{articleData4.category}</div>
-                                            <a href="/blog-page/BlogInnerPage">
+                                            <a href="/blog-page/blog-inner-page">
                                                 <div className="article-title-container"> {/* Added container for title */}
                                                     <h2 className="article-title">{articleData4.title}</h2>
                                                 </div>
@@ -304,7 +291,7 @@ export default function Index() {
                                                 className="featured-image"
                                             />
                                             <div className="article-category">{articleData5.category}</div>
-                                            <a href="/blog-page/BlogInnerPage">
+                                            <a href="/blog-page/blog-inner-page">
                                                 <div className="article-title-container"> {/* Added container for title */}
                                                     <h2 className="article-title">{articleData5.title}</h2>
                                                 </div>
@@ -337,7 +324,7 @@ export default function Index() {
                                                 className="featured-image"
                                             />
                                             <div className="article-category">{articleData6.category}</div>
-                                            <a href="/blog-page/BlogInnerPage">
+                                            <a href="/blog-page/blog-inner-page">
                                                 <div className="article-title-container"> {/* Added container for title */}
                                                     <h2 className="article-title">{articleData6.title}</h2>
                                                 </div>

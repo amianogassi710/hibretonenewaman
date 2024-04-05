@@ -1,4 +1,4 @@
-export default function Aboutusmeetourteam() {
+export default function Aboutusmeetourteamfull() {
     return (
         <>
                 <section className="section-box mt-60">
@@ -11,7 +11,7 @@ export default function Aboutusmeetourteam() {
                             </div>
                             <div className="row" style={{marginTop: '35px'}}>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Drew.jpg" />
@@ -28,7 +28,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Nikki.jpg" />
@@ -45,7 +45,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Kali.jpg" />
@@ -62,7 +62,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Assim.jpg" />
@@ -79,7 +79,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Monder.jpg" />
@@ -96,7 +96,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Pam.jpg" />
@@ -113,7 +113,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Mark.jpg" />
@@ -130,7 +130,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Patricia.jpg" />
@@ -148,7 +148,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
 
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Tiago.jpg" />
@@ -165,7 +165,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Ememobong.jpg" />
@@ -182,7 +182,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Ashimi.jpg" />
@@ -199,7 +199,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Robel.jpg" />
@@ -217,7 +217,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
 
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Nick.jpg" />
@@ -234,7 +234,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Sarah.jpg" />
@@ -251,7 +251,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Tom.jpg" />
@@ -268,7 +268,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Richard.jpg" />
@@ -286,7 +286,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
 
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Eric.jpg" />
@@ -303,7 +303,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Melissa.jpg" />
@@ -320,7 +320,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Gordon.jpg" />
@@ -337,7 +337,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Saloni.jpg" />
@@ -355,7 +355,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
 
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Steven.jpg" />
@@ -372,7 +372,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Kenedy.jpg" />
@@ -389,7 +389,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Men.jpg" />
@@ -406,7 +406,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                                 <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
-                                    <div className="card-grid-4 text-center hover-up">
+                                    <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
                                                 <img alt="jobBox" src="../assets/imgs/page/about-us/Women.jpg" />

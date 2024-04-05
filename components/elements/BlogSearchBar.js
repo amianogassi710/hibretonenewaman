@@ -8,7 +8,7 @@ const BlogSearchBar = () => {
 
     const handleSearch = (event) => {
         event.preventDefault(); // Prevent form submission
-        router.push("/blog-page/BlogInnerPage");
+        router.push("/blog-page/blog-inner-page");
     };
 
     const locations = [

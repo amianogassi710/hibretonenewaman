@@ -1,17 +1,5 @@
-CategorySlider/* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import Layout from "../../components/Layout/Layout";
-import GrantFinderCategoryTab from "../../components/elements/GrantFinderCategoryTab";
-import TestimonialSlider from "../../components/sliders/Testimonial1";
-import Location from "../../components/elements/Location";
-import YellowBanner from "../../components/elements/YellowBanner";
-import KickstartButton from "../../components/elements/KickstartButton";
-import TestimonialSliderHomePage from "./../../components/sliders/TestimonialHomepage";
-import Subscription from "../../components/Layout/Subscription";
-import GrantFinderSearchBox from "./../../components/elements/GrantFinderSearchBox";
-import dynamic from "next/dynamic";
-import { Grid } from '@mui/material';
 
+import { Grid } from '@mui/material';
 
 export default function Aboutuscounter() {
     return (

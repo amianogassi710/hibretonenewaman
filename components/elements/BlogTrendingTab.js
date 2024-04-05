@@ -39,7 +39,7 @@ const BlogTrendingTab = () => {
                             className="product-image"
                         />
                         <div className="product-details">
-                            <a href="/blog-page/BlogInnerPage">
+                            <a href="/blog-page/blog-inner-page">
                                 <div className="product-title">{products[0].title}</div>
                             </a>
                             <div className="product-author">
@@ -61,7 +61,7 @@ const BlogTrendingTab = () => {
                             className="product-image"
                         />
                         <div className="product-details">
-                            <a href="/blog-page/BlogInnerPage">
+                            <a href="/blog-page/blog-inner-page">
                             <div className="product-title">{products[1].title}</div>
                             </a>
                             <div className="product-author">
@@ -83,7 +83,7 @@ const BlogTrendingTab = () => {
                             className="product-image"
                         />
                         <div className="product-details">
-                            <a href="/blog-page/BlogInnerPage">
+                            <a href="/blog-page/blog-inner-page">
                                 <h2 className="product-title">{products[2].title}</h2>
                             </a>
                             <div className="product-author">
@@ -105,7 +105,7 @@ const BlogTrendingTab = () => {
                             className="product-image"
                         />
                         <div className="product-details">
-                            <a href="/blog-page/BlogInnerPage">
+                            <a href="/blog-page/blog-inner-page">
                                 <h2 className="product-title">{products[3].title}</h2>
                             </a>
                             <div className="product-author">

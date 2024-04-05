@@ -4,7 +4,9 @@ import Layout from "../../components/Layout/Layout";
 import Subscription from '../../components/Layout/Subscription';
 import Aboutuscounter from './aboutuscounter';
 import Aboutusmeetourteam from './aboutusmeetourteam';
+import Aboutusmeetourteamfull from './aboutusmeetourteamfull';
 import Aboutusnewsandeventscarousel from './aboutusnewsandeventscarousel';
+import Aboutusnewsandeventscarouselfull from './aboutusnewsandeventscarouselfull';
 import SubscribeButton from '../../components/elements/SubscribeButton';
 import { IoShareSocialOutline } from "react-icons/io5";
 import Aboutushibretoneinformation from './aboutushibretoneinformation';
@@ -21,7 +23,19 @@ function useLockBodyScroll(open) {
     }, [open])
 }
 
+
+
 export default function Index() {
+    const [showFullTeam, setShowFullTeam] = useState(false);
+
+    const handleMeetOurTeamClick = () => {
+        setShowFullTeam(true);
+    };
+
+    const handleShowLessClick = () => {
+        setShowFullTeam(false);
+    };
+
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleOpen = e => {
@@ -70,9 +84,33 @@ export default function Index() {
 
                     <Aboutushibretoneinformation />
 
-                    <Aboutusmeetourteam />
+                    {/* <Aboutusmeetourteam /> */}
 
-                    <Aboutusnewsandeventscarousel />
+                    <div>
+                        {showFullTeam ? (
+                            <Aboutusmeetourteamfull />
+                        ) : (
+                            <div>
+                                <Aboutusmeetourteam />
+                                <div className="mt-40 mb-20 button-meetourteam-aboutus" style={{ textAlign: 'center' }}>
+                                    <button onClick={handleMeetOurTeamClick} class="btn btn-default fs-6">Meet Our Team</button>
+                                </div>
+                                <Aboutusnewsandeventscarousel />
+                            </div>
+                            
+                        )}
+
+                        {showFullTeam && (
+                            <div>
+                                <div className="mt-40 mb-20 button-meetourteam-aboutus" style={{ textAlign: 'center' }}>
+                                    <button onClick={handleShowLessClick} class="btn btn-default fs-6">Show Less</button>
+                                </div>
+                                <Aboutusnewsandeventscarouselfull />
+                            </div>
+                        )}
+                    </div>
+
+                    {/* <Aboutusnewsandeventscarousel /> */}
 
                     <section className="section-box mt-75 yellowbanner-aboutus">
                         <SubscribeButton />

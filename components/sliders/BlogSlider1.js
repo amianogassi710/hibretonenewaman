@@ -11,7 +11,7 @@ const data = [
         author: "Debbie Lewis",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "2.jpg",
@@ -19,7 +19,7 @@ const data = [
         author: "David Bond",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "3.jpg",
@@ -27,7 +27,7 @@ const data = [
         author: "Denise Myers",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },,
     {
         img: "2.jpg",
@@ -35,7 +35,7 @@ const data = [
         author: "David Bond",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "3.jpg",
@@ -43,7 +43,7 @@ const data = [
         author: "Denise Myers",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },,
     {
         img: "2.jpg",
@@ -51,7 +51,7 @@ const data = [
         author: "David Bond",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "3.jpg",
@@ -59,7 +59,7 @@ const data = [
         author: "Denise Myers",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },,
     {
         img: "2.jpg",
@@ -67,7 +67,7 @@ const data = [
         author: "David Bond",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "3.jpg",
@@ -75,7 +75,7 @@ const data = [
         author: "Denise Myers",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },,
     {
         img: "2.jpg",
@@ -83,7 +83,7 @@ const data = [
         author: "David Bond",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "3.jpg",
@@ -91,7 +91,7 @@ const data = [
         author: "Denise Myers",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },,
     {
         img: "2.jpg",
@@ -99,7 +99,7 @@ const data = [
         author: "David Bond",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "3.jpg",
@@ -107,7 +107,7 @@ const data = [
         author: "Denise Myers",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },,
     {
         img: "2.jpg",
@@ -115,7 +115,7 @@ const data = [
         author: "David Bond",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "3.jpg",
@@ -123,7 +123,7 @@ const data = [
         author: "Denise Myers",
         date: "25 April 2024",
         authorImage: "assets/imgs/page/blog-page/user1.png",
-        link: "/blog-page/BlogInnerPage"
+        link: "/blog-page/blog-inner-page"
     },
     {
         img: "4.jpg",
