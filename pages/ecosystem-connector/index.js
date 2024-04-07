@@ -2,12 +2,9 @@ import Layout from '../../components/Layout/Layout'
 import React from 'react'
 import dynamic from "next/dynamic";
 import YellowBanner from '../../components/elements/YellowBanner';
-import ConnectorSearchBar from './ConnectorSearchBar';
 import { Grid } from '@mui/material';
 import KickstartButton from '../../components/elements/KickstartButton';
 import Subscription from '../../components/Layout/Subscription';
-import CategorySlider from '../../components/elements/CategorySlider';
-import { Category } from '@mui/icons-material';
 
 const NoSSRBrandSlider = dynamic(
     () => import("../../components/sliders/Brand"),
@@ -22,7 +19,7 @@ const NoSSRCategorySlider = dynamic(
 function index() {
 
 const location = [
-    
+
 ]
 
 
@@ -92,7 +89,6 @@ const data = [
                         <h2>Connect with Expert Advice & Support</h2>
                         <p className="mt-10">Explore the support you need whenever you need it</p>
                     </div>
-                    <ConnectorSearchBar placeholder="What support or advice do you need?" />
                 </div>
             </div>
         </div>
