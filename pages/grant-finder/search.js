@@ -7,6 +7,7 @@ import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { Button } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import axiosFetchWithRetry from "../../components/elements/fetchWithRetry";
 
 export default function GrantsList() {
     const router = useRouter();
@@ -40,22 +41,15 @@ export default function GrantsList() {
             } = router.query;
             console.log("router.query " + JSON.stringify(router.query));
             const updatedQueryParameters = {
-                // 使用Array.isArray检查字段是否已经是数组，如果不是，则使用[]将其转换为数组
                 category: Array.isArray(category) ? category : category ? [category] : [],
                 grantAmountRange: Array.isArray(grantAmountRange) ? grantAmountRange : grantAmountRange ? [grantAmountRange] : [],
                 location: Array.isArray(location) ? location : location ? [location] : [],
                 keyword,
-                page: parseInt(page, 10) || 1, // 确保page为数字，如果不存在，则默认为1
-                limit: parseInt(limit, 10) || 10, // 确保limit为数字，如果不存在，则默认为10
+                page: parseInt(page, 10) || 1,
+                limit: parseInt(limit, 10) || 10,
             };
             console.log("updatedQueryParameters " + JSON.stringify(updatedQueryParameters));
-            // setQueryParameters(updatedQueryParameters);
-            // console.log("queryParameters " + JSON.stringify(queryParameters));
-            // let didCancel = false;
             fetchData(updatedQueryParameters);
-            // return () => {
-            //     didCancel = true;
-            // };
         }
     }, [router.isReady, router.query]);
 
@@ -96,28 +90,20 @@ export default function GrantsList() {
         console.log("queryParams " + queryString.toString());
         setResults([]);
         try {
-            const response = await fetch(
-                `/grants/grant-details/items?${queryString}`
-            );
-            if (!response.ok) {
-                throw new Error("Network response was not ok");
-            }
-            const result = await response.json();
-            // {
-            //     "total_count": all_results.__len__(),
-            //     "data": grant_details_list,
-            //     "page": page,
-            //     "limit": limit
-            // }
-            // console.log("result " + JSON.stringify(result));
-            setTotalGrants(result.total_count);
-            setResults(result.data);
-            setPage(result.page)
-            // if (!didCancel) {
-            //     const result = await response.json();
-            //     setGrantNum(result.length);
-            //     setResults(result);
-            // }
+            const response = await axiosFetchWithRetry({
+                url: `/grants/grant-details/items?${queryString}`,
+                reqOptions: {
+                    method: "get",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                },
+                timeout: 2000,
+                retryCount: 4,
+            }).catch((error) => console.error({ error: error.message }))
+            setTotalGrants(response.total_count);
+            setResults(response.data);
+            setPage(response.page)
         } catch (error) {
             console.error("Failed to fetch data:", error);
         }
@@ -204,7 +190,7 @@ export default function GrantsList() {
     ];
 
     function formatGrantAmount(amount) {
-        //如果是null 返回NULL
+
         if(amount == null) return 'N/A'
         // 将金额转换为数字
         const numAmount = Number(amount);
@@ -246,13 +232,13 @@ const updatedQueryParameters = {
                 PaginationParams.append("category", categoryId);
             });
         }
-        
+
         if (Array.isArray(updatedQueryParameters.grantAmountRange)) {
             updatedQueryParameters.grantAmountRange.forEach((rangeId) => {
                 PaginationParams.append("grantAmountRange", rangeId);
             });
         }
-        
+
         // 对于location，您已经有了类似的判断条件。
         if (Array.isArray(updatedQueryParameters.location)) {
             updatedQueryParameters.location.forEach((locationId) => {
@@ -342,7 +328,7 @@ const updatedQueryParameters = {
                                                 </div>
                                             </div>
                                         </div>
-                                        {results.map((grant) => (
+                                        {Array.isArray(results) && results.map((grant) => (
                                             <Link
                                                 legacyBehavior
                                                 href={`/grant-finder/grant/${grant.grant_id}`}

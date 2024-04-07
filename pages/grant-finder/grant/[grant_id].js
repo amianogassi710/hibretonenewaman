@@ -4,7 +4,6 @@ import Layout from "../../../components/Layout/Layout";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-
 export default function GrantDetails() {
     const router = useRouter();
     const [grantId, setGrantId] = useState(null);
@@ -627,9 +626,24 @@ export default function GrantDetails() {
                                     <div className="sidebar-border">
                                         <h6 className="f-18">Tags</h6>
                                         <div className="sidebar-list-job">
-                                            {/* {grantDetails[0].category_name.map((one_category_name) => (
-                                                <Link legacyBehavior href=""><a className="btn btn-tags-sm mr-5">{one_category_name}</a></Link>
-                                            ))} */}
+                                            {Array.isArray(
+                                                grantDetails[0].category_name
+                                            ) ? (
+                                                grantDetails[0].category_name.map(
+                                                    (one_category_name) => (
+                                                        <a className="btn btn-tags-sm mr-5">
+                                                            {one_category_name}
+                                                        </a>
+                                                    )
+                                                )
+                                            ) : grantDetails[0].category_name ? (
+                                                <a className="btn btn-tags-sm mr-5">
+                                                    {
+                                                        grantDetails[0]
+                                                            .category_name
+                                                    }
+                                                </a>
+                                            ) : null}
                                         </div>
                                     </div>
                                 </div>
