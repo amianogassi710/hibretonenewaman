@@ -5,12 +5,8 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/tax-credits-calculator/:path*',
-        destination: 'https://tax-credits-calculator-backend.vercel.app/:path*',
-      },
-      {
         source: '/assessments/:path*',
-        destination: 'https://entrepreneurial-assessments-backend.vercel.app/:path*',
+        destination: 'http://8.134.196.184:8002/:path*',
         // destination: 'http://127.0.0.1:8000/:path*',
       },
       {
@@ -33,6 +29,10 @@ const nextConfig = {
       {
         source: '/business-problem-triage/:path*',
         destination: 'http://127.0.0.1:8000/:path*',
+      },
+      {
+        source: '/ecosystem-connector/:path*',
+        destination: 'http://127.0.0.1:8000/recommendation/:path*'
       }
     ];
   },
