@@ -33,6 +33,7 @@ const Score = props => {
   }
 
   const Feedback = () => {
+    console.log(props.feedback.feedback)
     if (props.assessment === "Entrepreneurial-Readiness") {
       const feedback = props.feedback.feedback
       let j = 0
@@ -94,7 +95,7 @@ const Score = props => {
           </div>
         </div>
       )
-    } else if (props.assessment === "ADHD-Screener" || props.assessment === "Dyslexia-Screener") {
+    } else if (props.assessment === "ADHD-or-ADD" || props.assessment === "Dyslexia") {
       const feedback = props.feedback.feedback
       let j = 0
       return (
@@ -113,13 +114,12 @@ const Score = props => {
             <div className="feedback mb-10">
               <p>Next step:</p>
               <div className="feedback-container pl-10">
+              <ul>
                   {feedback["recommendations"].map((recommendation) => (
                     <li key={j += 1}>{recommendation}</li>
                   ))}
-              </div>
-              <ul>
-
               </ul>
+              </div>
             </div>
           </div>
         </>

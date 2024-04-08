@@ -17,7 +17,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
     if (e.keyCode === 13) {
         e.preventDefault()
       // Default function of enter submits form so only eliminate when not on the last question
-      if (formIndex < assessment.questions.length) {
+      if (formIndex < assessment.assessment.length) {
         handleGoNext()
       } else if (!handleValidateForm(currentForm)) {
         Swal.fire({
@@ -57,7 +57,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
 
       var nextFormIndex = formIndex + 1;
       setFormIndex(prevFormIndex => prevFormIndex + 1);
-      setProgress((nextFormIndex+1)/(assessment.questions.length+1)*100)
+      setProgress((nextFormIndex+1)/(assessment.assessment.length+1)*100)
 
       var nextForm = formGroupRef.current[nextFormIndex];
       nextForm.style.display = "block";
@@ -77,7 +77,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
 
     var previousFormIndex = formIndex - 1;
     setFormIndex(previousFormIndex);
-    setProgress((previousFormIndex+1)/(assessment.questions.length+1)*100)
+    setProgress((previousFormIndex+1)/(assessment.assessment.length+1)*100)
 
     var previousForm = formGroupRef.current[previousFormIndex];
     previousForm.style.display = "block";
@@ -130,7 +130,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
         })
         i++
       });
-      const request = await axios.post(`/assessments/feedback`, formData)
+      const request = await axios.post(`/assessments/feedback/calculate`, formData)
       feedback = request.data
       // Reset assessment
       setFormIndex(0)
@@ -154,7 +154,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
           </button>
         </div>
       )
-    } else if (number < assessment.questions.length) {
+    } else if (number < assessment.assessment.length) {
       return (
         <>
         <div className="button-group d-flex">
@@ -237,8 +237,8 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
     <>
       <div className="assessment-modal-body text-center">
           <form onSubmit={handleSubmit}>
-            {/* Loops through all the provided assessment.questions */}
-            {assessment.questions.map((question) => (
+            {/* Loops through all the provided assessment.assessment */}
+            {assessment.assessment.map((question) => (
               <div className="assessment-form-group" style={{display: question.question_number === 1 ? "block" : "none"}} key={question.question_number}>
                 <Question section={question.section} question={question.question_text} />
                   <ul className="assessment-radio-group">
@@ -317,7 +317,7 @@ const Quiz = ({ onClose,assessment,title,onSubmit,show,isLoggedIn,onLoad }) => {
           <QuizButton number={formIndex} />
         </div>
         <div className="tracker">
-          <p>Question {formIndex+1} of {assessment.questions.length+1}</p>
+          <p>Question {formIndex+1} of {assessment.assessment.length+1}</p>
           <div className="progress-bar" style={{"backgroundColor": "white"}}>
             <a className="bar" style={{width: `${progress}%`}} />
           </div>

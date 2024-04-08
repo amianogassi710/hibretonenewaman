@@ -71,7 +71,7 @@ const Questions = props => {
       const checkedInputs = document.querySelectorAll('input:checked');
       const costs = document.querySelectorAll('input[type="number"]')
       const formData = {
-        "assessment": "R&D Tax Calculator",
+        "assessment": "R&D-Tax-Credits-Calculator",
         "answers": []
       };
       var i = 1;
@@ -89,7 +89,7 @@ const Questions = props => {
         })
         i++
       })
-      const request = await axios.post("/tax-credits-calculator/tax-credits-calculator", formData);
+      const request = await axios.post("/assessments/feedback/calculate", formData);
       res = request.data
     } catch (error) {
       console.error("Error submitting form: ",error)

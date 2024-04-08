@@ -41,7 +41,7 @@ export default function Index() {
   useEffect(() => {
     const getQuiz = async () => {
       try {
-        const response = await axios.get(`/assessments/assessments`)
+        const response = await axios.get(`/assessments/assessments/details`)
         setData(response.data)
       } catch (error) {
         console.log("Couldn't retrieve quiz: ", error);
@@ -49,7 +49,7 @@ export default function Index() {
     };
     const getCategory = async () => {
       try {
-         const response = await axios.get("/assessments/categories")
+         const response = await axios.get("/assessments/assessments/categories")
          setCategories(response.data)
       } catch (error) {
          console.log("Couldn't retrieve categories: ", error)
