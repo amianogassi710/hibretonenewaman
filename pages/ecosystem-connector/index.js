@@ -154,8 +154,6 @@ const data = [
         <div className='container'>
           <div className="box-swiper mt-50 grant-category">
             <div>
-              <NoSSRCategorySlider data={data} />
-              <NoSSRCategorySlider />
               <div className="swiper-button-next" />
               <div className="swiper-button-prev" />
             </div>
