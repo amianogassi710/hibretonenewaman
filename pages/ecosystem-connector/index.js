@@ -11,11 +11,6 @@ const NoSSRBrandSlider = dynamic(
     { ssr: false }
 );
 
-const NoSSRCategorySlider = dynamic(
-  () => import("../../components/elements/CategorySlider"),
-  { ssr: false }
-)
-
 function index() {
 
 const location = [
@@ -107,7 +102,6 @@ const data = [
 
                     <div className="swiper-button-next swiper-button-margin" />
                     <div className="swiper-button-prev swiper-button-margin" />
-                    <NoSSRBrandSlider />
                 </div>
             </div>
         </div>
