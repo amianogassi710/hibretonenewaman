@@ -844,12 +844,11 @@
 .btn-share-search {
   padding: 5px;
   background-color: #ffffff;
-  color: color(discover-intelligence);
+  color: #3c65f5;
   border: none;
   border-radius: 8px;
   height: auto;
   font-size: 16px;
-  width: "90px";
   font-weight: bold;
   margin-left: -3px;
   margin-top: -26px;
@@ -858,7 +857,7 @@
 .btn-share-search:hover {
   transform: translateY(-2px);
   color: #ffffff;
-  background-color:color(primary);
+  background-color: #05264e;
   transition: 0.2s;
 }
 
@@ -882,7 +881,7 @@
 @media (max-width: 460px) {
   .btn-share-search {
     position: absolute;
-    left: 0px;
+    left: 20px;
     top: -15px;
 }
 }

@@ -107,7 +107,7 @@ export default function Index() {
     return (
         <>
             <Layout>
-                <div className="background-random">
+                <div className="background-random-blogpage">
 
                     <div className="box-swiper">
                         <BlogPageHeading />

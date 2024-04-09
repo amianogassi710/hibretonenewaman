@@ -1049,6 +1049,9 @@
     overflow: hidden;
     text-align: justify;
     margin-top: -140px;
+    font-style: normal;
+font-weight: 700;
+line-height: normal;
     /* 4th April */
   }
   
@@ -1340,3 +1343,34 @@
   }
 }
 /* Share Icon End */
+
+
+.background-random-blogpage {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-random-blogpage::before,
+.background-random-blogpage::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 1500px;
+  background: #f2f6fd;
+  transform-origin: top left;
+  z-index: -1;
+}
+
+.background-random-blogpage::before {
+  transform: rotate(-8deg);
+  top: 600px;
+  left: -300px;
+  border-radius: 25px;
+}
+
+.background-random-blogpage::after {
+  transform: rotate(8deg);
+  top: 1100px;
+  right: -300px;
+  border-radius: 25px;
+}
