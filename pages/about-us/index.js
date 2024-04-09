@@ -54,8 +54,8 @@ export default function Index() {
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
-                                        <h2 style={{ marginBottom: '20px', fontSize: '60px' }}>About Us</h2>
-                                        <p className="color-text-paragraph-2" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
+                                        <h2>About Us</h2>
+                                        <p className="color-text-paragraph-2">
                                             hibretOne is a  <span className="color-blue">  not-for-profit </span> Community Interest Company (CIC), using entrepreneurship & education to create  economic impact                                 </p>
                                     </div>
                                 </div>
@@ -110,7 +110,6 @@ export default function Index() {
                         )}
                     </div>
 
-                    {/* <Aboutusnewsandeventscarousel /> */}
 
                     <section className="section-box mt-75 yellowbanner-aboutus">
                         <SubscribeButton />

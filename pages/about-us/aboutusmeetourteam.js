@@ -5,11 +5,11 @@ export default function Aboutusmeetourteam() {
                 <div className="post-loop-grid">
                     <div className="container1">
                         <div className="text-center">
-                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>Meet Our Team</h2>
+                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp meetourteamheading" >Meet Our Team</h2>
                             <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp meetteamtext">A world-class team, board members and advisors
                             </p>
                         </div>
-                        <div className="row" style={{ marginTop: '45px' }}>
+                        <div className="row aboutusrow">
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">

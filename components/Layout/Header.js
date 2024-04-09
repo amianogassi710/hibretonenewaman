@@ -202,7 +202,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                     </li>
 
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/">
+                                        <Link legacyBehavior href="/about-us">
                                             <a>About Us</a>
                                         </Link>
 

@@ -3,7 +3,7 @@ import { Grid } from '@mui/material';
 
 export default function Aboutushibretoneinformation() {
     return (
-        <section className="section-box mt-100">
+        <section className="section-box" style={{marginTop: '35px'}}>
             <div className="post-loop-grid">
                 <div className="container">
                     <Grid container alignItems="center" style={{ minWidth: '100%' }}

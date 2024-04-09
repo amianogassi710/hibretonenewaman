@@ -12226,6 +12226,55 @@ ul li:last-child .card-list-4 {
   }
 }
 /* Blog Finish */
+/* Share Icon Start */
+.share-icon-container {
+  position: absolute;
+}
+
+.share-icon {
+  font-size: 30px;
+}
+
+.item {
+  font-size: 16px;
+}
+
+.btn-share-search {
+  padding: 5px;
+  background-color: #ffffff;
+  color: color(discover-intelligence);
+  border: none;
+  border-radius: 8px;
+  height: auto;
+  font-size: 16px;
+  width: "90px";
+  font-weight: bold;
+  margin-left: -3px;
+  margin-top: -26px;
+}
+
+.btn-share-search:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background-color: color(primary);
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 999px) {
+  .btn-share-search {
+    position: absolute;
+    left: 1px;
+    top: 26px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn-share-search {
+    position: absolute;
+    left: 65px;
+    top: -15px;
+  }
+}
+/* Share Icon End */
 /* About Us Page Start Suru  */
 .bg-img-aboutus {
   height: 30vh;
@@ -12246,14 +12295,55 @@ ul li:last-child .card-list-4 {
   /* Width of the border */
   padding-bottom: 8px;
   padding-top: 5px;
+  margin-bottom: 20px;
+  font-size: 60px;
   /* Adjust this value to change the height */
 }
 
 .bg-img-aboutus p {
   border-left: 10px solid #83cbff;
+  font-size: 24px;
+  max-width: 835px;
+  line-height: 30px;
   /* Adjust this value to change the height */
 }
 
+@media (max-width: 760px) {
+  .bg-img-aboutus h2 {
+    border-left: 10px solid #83cbff;
+    /* Width of the border */
+    padding-bottom: 8px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    font-size: 50px;
+    /* Adjust this value to change the height */
+  }
+  .bg-img-aboutus p {
+    border-left: 10px solid #83cbff;
+    font-size: 20px;
+    max-width: 835px;
+    line-height: 30px;
+    /* Adjust this value to change the height */
+  }
+}
+@media (max-width: 460px) {
+  .bg-img-aboutus h2 {
+    border-left: 10px solid #83cbff;
+    /* Width of the border */
+    padding-bottom: 8px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    /* Adjust this value to change the height */
+  }
+  .bg-img-aboutus p {
+    border-left: 10px solid #83cbff;
+    font-size: 18px;
+    max-width: 835px;
+    line-height: 30px;
+    /* Adjust this value to change the height */
+  }
+}
 .bg-img-aboutus::before {
   content: "";
   position: absolute;
@@ -12392,8 +12482,14 @@ ul li:last-child .card-list-4 {
 }
 @media screen and (max-width: 576px) {
   .container1 {
-    max-width: 540px;
+    max-width: 480px;
     padding: 0 25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container1 {
+    max-width: 420px;
+    padding: 0 50px;
   }
 }
 @media (min-width: 1400px) {
@@ -12676,13 +12772,13 @@ ul li:last-child .card-list-4 {
     top: 86%;
     width: 30px;
     height: 30px;
-    left: -4px;
+    left: 5px;
   }
   .swipernext-aboutus {
     top: 86%;
     width: 30px;
     height: 30px;
-    right: -4px;
+    right: 5px;
   }
 }
 .swiperprevious-aboutusfull {
@@ -12885,6 +12981,83 @@ ul li:last-child .card-list-4 {
   padding: 20px 15px 35px 15px;
 }
 
+.aboutusrow {
+  margin-top: 45px;
+}
+
+@media (max-width: 460px) {
+  .aboutusrow {
+    margin-top: 25px;
+  }
+}
+.meetourteamheading,
+.newsandeventsheading {
+  color: var(--brand-brand-1, #05264E);
+  text-align: center;
+  /* Heading/H2 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Share Icon Start */
+.share-icon-container {
+  position: absolute;
+}
+
+.share-icon {
+  font-size: 30px;
+}
+
+.item {
+  font-size: 16px;
+}
+
+.btn-share-search {
+  padding: 5px;
+  background-color: #ffffff;
+  color: color(discover-intelligence);
+  border: none;
+  border-radius: 8px;
+  height: auto;
+  font-size: 16px;
+  width: "90px";
+  font-weight: bold;
+  margin-left: -3px;
+  margin-top: -26px;
+}
+
+.btn-share-search:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background-color: color(primary);
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 999px) {
+  .btn-share-search {
+    position: absolute;
+    left: 1px;
+    top: 26px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .btn-share-search {
+    position: absolute;
+    left: 65px;
+    top: -15px;
+  }
+}
+@media (max-width: 460px) {
+  .btn-share-search {
+    position: absolute;
+    left: 0px;
+    top: -15px;
+  }
+}
+/* Share Icon End */
 /* Job Connect CSS */
 .banner-hero {
   padding: 0px 65px;

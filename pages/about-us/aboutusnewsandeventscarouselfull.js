@@ -137,7 +137,7 @@ export default function Aboutusnewsandeventscarouselfull() {
             <div className="post-loop-grid">
                 <div className="container1">
                     <div className="text-center mb-40">
-                        <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>News and Events</h2>
+                        <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp newsandeventsheading"> News and Events</h2>
                         <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp meetteamtext">Get the latest news, updates and tips
                         </p>
                     </div>
