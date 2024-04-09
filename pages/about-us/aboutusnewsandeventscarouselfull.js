@@ -82,7 +82,7 @@ const articleData = [
         description:
             "If you’re an entrepreneur, an SME, an academic, a social enterprise, or a startup then this workshop will provide you with proven advice to secure grant funding.",
         author: {
-            image: "/assets/imgs/page/about-us/hibretOne.png",
+            image: "/assets/imgs/page/about-us/HibretOne.png",
             name: "hibretOne",
             date: "17 March 2024",
         },

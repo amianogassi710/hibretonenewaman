@@ -31,7 +31,7 @@ export default function Aboutusmeetourteamfull() {
                                     <div className="card-grid-4 text-center hover-up paddingaboutus">
                                         <div className="image-top-feature">
                                             <figure>
-                                                <img alt="jobBox" src="../assets/imgs/page/about-us/Nikki.jpg" />
+                                                <img alt="jobBox" src="../assets/imgs/page/about-us/Nikki.JPG" />
                                             </figure>
                                         </div>
                                         <div className="card-grid-4-info-aboutus">
