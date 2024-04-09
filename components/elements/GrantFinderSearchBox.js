@@ -60,7 +60,7 @@ function GrantFinderSearchBox() {
     return (
         <>
             <div
-                className="form-find mt-40 mb-10 wow animate__animated animate__fadeInUp"
+                className="form-find mt-40 mb-30 wow animate__animated animate__fadeInUp"
                 data-wow-delay=".2s"
             >
                 <Grid container spacing={3} alignItems="center">
@@ -131,7 +131,7 @@ function GrantFinderSearchBox() {
                     </Grid>
                 </Grid>
             </div>
-            <div
+            {/* <div
                 className="list-tags-banner mt-10 mb-30 ml-20 wow animate__animated animate__fadeInUp"
                 data-wow-delay=".3s"
             >
@@ -157,7 +157,7 @@ function GrantFinderSearchBox() {
                 <Link legacyBehavior href="#">
                     <a>Environmental </a>
                 </Link>
-            </div>
+            </div> */}
         </>
     );
 }

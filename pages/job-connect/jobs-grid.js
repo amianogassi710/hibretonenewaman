@@ -30,7 +30,7 @@ export default function JobGrid() {
                                     <h3 className="wow animate__animated animate__fadeInUp">
                                         <span className="color-brand-2">{data.length} Jobs</span> Available Now
                                     </h3>
-                                    <div className="font-sm color-text-paragraph-2 mt-10 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                                    <div className="font-sm color-text-paragraph-2-job-connect mt-10 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
                                     Funding database covering local, national, and international sources of funding. <br className="d-none d-xl-block" />
                                         stage, sector and region.
                                     </div>
@@ -947,7 +947,7 @@ export default function JobGrid() {
                         <div className="container">
                             <div className="text-start">
                                 <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp">News and Blog</h2>
-                                      <p className="font-lg color-text-paragraph-2 wow animate__animated animate__fadeInUp">Get the latest news, updates and tips</p>
+                                      <p className="font-lg color-text-paragraph-2-job-connect  wow animate__animated animate__fadeInUp">Get the latest news, updates and tips</p>
                             </div>
                         </div>
                         <div className="container">
