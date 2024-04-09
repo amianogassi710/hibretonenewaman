@@ -168,7 +168,7 @@ export default function JobDetails() {
                                                 </Link> */}
                                             </div>
                                             <div className="col-md-7 text-lg-end social-share">
-                                                <h6 className="color-text-paragraph-2 d-inline-block d-baseline mr-10">Share this</h6>
+                                                <h6 className="color-text-paragraph-2-job-connect  d-inline-block d-baseline mr-10">Share this</h6>
                                                 <Link legacyBehavior href="#">
                                                     <a className="mr-5 d-inline-block d-middle">
                                                         <img alt="jobBox" src="assets/imgs/template/icons/share-fb.svg" />
