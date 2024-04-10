@@ -841,7 +841,7 @@
   font-size: 16px;
 }
 
-.btn-share-search {
+.btn-share-search-aboutus {
   padding: 5px;
   background-color: #ffffff;
   color: #3c65f5;
@@ -854,7 +854,7 @@
   margin-top: -26px;
 }
 
-.btn-share-search:hover {
+.btn-share-search-aboutus:hover {
   transform: translateY(-2px);
   color: #ffffff;
   background-color: #05264e;
@@ -862,7 +862,7 @@
 }
 
 @media screen and (max-width: 999px) {
-  .btn-share-search {
+  .btn-share-search-aboutus {
       position: absolute;
       left: 1px;
       top: 26px;
@@ -870,7 +870,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .btn-share-search {
+  .btn-share-search-aboutus {
       position: absolute;
       left: 65px;
       top: -15px;
@@ -879,9 +879,9 @@
 
 
 @media (max-width: 460px) {
-  .btn-share-search {
+  .btn-share-search-aboutus {
     position: absolute;
-    left: 20px;
+    left: 90px;
     top: -15px;
 }
 }

@@ -67,7 +67,7 @@ export default function Index() {
                         <div className="container">
                             <div className="flex-container">
                                 <div className="share-icon-container">
-                                    <button className="btn-share-search">
+                                    <button className="btn-share-search-aboutus">
                                         <IoShareSocialOutline className="share-icon" />
                                     </button>
                                 </div>

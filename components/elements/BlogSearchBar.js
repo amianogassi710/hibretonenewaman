@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Autocomplete, TextField } from "@mui/material";
 import { useRouter } from 'next/router';
 
@@ -34,17 +34,49 @@ const BlogSearchBar = () => {
         "Coventry",
     ];
 
+    const [isBelow768px, setIsBelow768px] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsBelow768px(window.innerWidth < 768);
+      };
+  
+      // Initial check
+      handleResize();
+  
+      // Listen for window resize events
+      window.addEventListener("resize", handleResize);
+  
+      // Cleanup
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
 
     return (
         <>
             <div className="blog-form-find-top wow animate_animated animate_fadeInUp">
                 <form>
+                    <div style={{width:'100%'}}>
+                    {isBelow768px ? (
+
                     <input
                         className="blog-one"
                         type="text"
                         placeholder="Enter name of blog, article or the insight you require"
                         style={{ marginTop: "5px" }}
                     />
+                ) : (
+<input
+                        className="blog-one"
+                        type="text"
+                        placeholder="Enter name of blog, article or the insight you require"
+                        style={{ marginTop: "5px" }}
+                    />
+                )}
+
+                    </div>
+                    
                     <div className="divider"></div>
                     <Autocomplete
                         clearOnEscape

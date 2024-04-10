@@ -6,6 +6,8 @@ import KickstartButton from '../../components/elements/KickstartButton';
 import dynamic from "next/dynamic";
 import BlogPageCarousel from './BlogPageCarousel';
 import CustomPagination from '../../components/elements/CustomPagination';
+import YellowBanner from "../../components/elements/YellowBanner";
+
 
 const BlogTrendingTab = dynamic(
     () => import("../../components/elements/BlogTrendingTab"),
@@ -118,7 +120,11 @@ export default function Index() {
                         </div>
                     </div>
 
-                    <section className="section-box mt-50 mb-15">
+                    <section className="section-box mt-75 mb-50">
+                        <YellowBanner />
+                    </section>
+
+                    <section className="section-box mt-50 mb-25">
                         <div className="container">
                             <div className="flex-container">
                                 <div className="text-center">
@@ -141,7 +147,7 @@ export default function Index() {
                             <div className="flex-container">
                                 <div className="text-center">
                                     <h2 className="section-title mb-10">
-                                        Latest Post
+                                        Popular Posts
                                     </h2>
                                     <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
                                         Don't miss the trending news

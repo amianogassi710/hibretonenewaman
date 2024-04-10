@@ -20,11 +20,11 @@ const DiscoverButton = () => {
                 </div>
             </section>
 
-            <section className="section-box mt-50 mb-15">
+            <section className="section-box mt-50 mb-25">
                 <div className="container">
                     <div className="flex-container">
                         <div className="share-icon-container">
-                            <button className="btn-share-search">
+                            <button className="btn-share-search-blogpage">
                                 <IoShareSocialOutline className="share-icon" />
                             </button>
                         </div>
@@ -45,7 +45,6 @@ const DiscoverButton = () => {
                     <div className="banner-hero1">
                         <div className="block-banner1">
                             <BlogSearchBar />
-                            {/* <JobConnectSearchBox /> */}
                         </div>
                     </div>
                 </div>

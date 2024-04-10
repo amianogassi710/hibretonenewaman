@@ -105,7 +105,7 @@ export default function BlogPageCarousel() {
                         <div className="swiper-wrapper" >
                             {articleData.map((article, index) => (
                                 <div key={index} className="swiper-slide">
-                                    <div className="card-content" style={{height:'445px', width:'330px'}}>
+                                    <div className="card-content" style={{height:'465px', width:''}}>
                                         <img
                                             loading="lazy"
                                             src={article.image}
