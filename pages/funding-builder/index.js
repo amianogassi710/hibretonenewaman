@@ -40,10 +40,11 @@ export default function Index() {
                         <label className="headingdivider1"></label>
                         <div className="banner-hero1 bg-img-fundingbuilder">
                             <div className="container d-flex align-items-center">
+
                                 <div className="row">
                                     <div className="col">
-                                        <h2 className="heading-aboutus" style={{ marginBottom: '20px', fontSize: '60px' }}>Funding Builder</h2>
-                                        <p className="color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
+                                        <h2 className="heading-aboutus fundingbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '60px' }}>Funding Builder</h2>
+                                        <p className="fundingbuilder-hero-subheading color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
                                             Resources,  tools and connections to deliver funding and investment for your commercial or social enterprise
                                         </p>
                                     </div>
@@ -53,6 +54,8 @@ export default function Index() {
                     </section>
 
                     <section>
+                        
+                        
                         <FundingBuilderCard />
                     </section>
 

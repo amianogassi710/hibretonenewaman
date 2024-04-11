@@ -51,8 +51,8 @@ export default function Index() {
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
-                                        <h2>About Us</h2>
-                                        <p className="color-text-paragraph-2">
+                                        <h2 className="aboutus-hero-heading">About Us</h2>
+                                        <p className="aboutus-hero-subheading color-text-paragraph-2">
                                             hibretOne is a  <span className="color-blue">  not-for-profit </span> Community Interest Company (CIC), using entrepreneurship & education to create  economic impact                                 </p>
                                     </div>
                                 </div>

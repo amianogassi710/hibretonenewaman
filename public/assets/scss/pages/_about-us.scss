@@ -821,14 +821,12 @@
   line-height: normal;
 }
 
-@media (max-width: 460px) {
-  
-}
+@media (max-width: 460px) {}
 
 
 
 
- /* Share Icon Start */
+/* Share Icon Start */
 /* Share Icon Start */
 .share-icon-container-aboutus {
   position: absolute;
@@ -847,35 +845,40 @@
   border-radius: 4px;
 }
 
-@media screen and (max-width:1200px){
-  .share-icon-aboutus{
+@media screen and (max-width:1200px) {
+  .share-icon-aboutus {
     margin-left: 35px !important;
     margin-top: -76px !important;
 
   }
-  }
-@media screen and (max-width:999px){
-  .share-icon-aboutus{
+}
+
+@media screen and (max-width:999px) {
+  .share-icon-aboutus {
     margin-left: 14px !important;
     margin-top: -76px !important;
 
   }
-  }
+}
 
-@media screen and (max-width:768px){
-  .share-icon-aboutus{
+@media screen and (max-width:768px) {
+  .share-icon-aboutus {
     margin-left: 32px !important;
     margin-top: -76px !important;
+  }
+}
 
+@media screen and (max-width:580px) {
+  .share-icon-aboutus {
+    margin-left: 3px !important;
+    margin-top: -80px !important;
   }
-  }
-@media screen and (max-width:580px){
-.share-icon-aboutus{
-  margin-left: 3px !important;
-  margin-top: -80px !important;
 }
-}
-  
 
 /* Share Icon End */
 
+@media screen and (max-width:576px) {
+  .aboutus-hero-heading, .aboutus-hero-subheading {
+    margin-left: -65px;
+  }
+}

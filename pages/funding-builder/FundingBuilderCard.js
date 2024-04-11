@@ -2,12 +2,13 @@
 
 import React from "react";
 import { Grid } from "@mui/material";
+import { IoShareSocialOutline } from "react-icons/io5";
 
 
 function SupportCard({ title, description, imageSrc, imageAlt, backgroundColor, border }) {
     return (
         <div className="support-card" style={{ backgroundColor }}>
-            <div className="support-card-inner" style={{border}}>
+            <div className="support-card-inner" style={{ border }}>
                 <div className="support-card-content">
                     <h2 className="support-card-title">{title}</h2>
                     <p className="support-card-description">{description}</p>
@@ -64,14 +65,17 @@ function FundingBuilderCard() {
         <div className="background-random-fundingbuilder">
 
             <section className="section-box mt-50">
+                <div className="container">
+                    <div className="share-icon-container-fundingbuilder">
+                        <IoShareSocialOutline className="share-icon-fundingbuilder" />
+                    </div>
+                </div>
                 <div className="text-center">
                     <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>Finance & Investment for Your Enterprise</h2>
                     <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp meetteamtext">Support to overcome barriers in accessing funding
                     </p>
                 </div>
             </section>
-
-
 
             <section className="section-box mt-35">
                 <div className="post-loop-grid">
@@ -82,8 +86,7 @@ function FundingBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                         >
-                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}
-                            >
+                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
                                 <section className="support-section">
                                     <SupportCard
                                         title={firstCard.title}
@@ -111,7 +114,6 @@ function FundingBuilderCard() {
                                         border={secondCard.border}
                                     />
                                 </section>
-
                             </Grid>
                         </Grid>
                         <Grid
@@ -121,45 +123,33 @@ function FundingBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                <h3>Market Sector Guide</h3>
-                            </Grid>
-                            <Grid item xs={12} md={12}>
-                                <div className="grid__thumb w-img fix grid_thumb_height grid_thumb">
-                                    <img
-                                        className="content-media"
-                                        src="assets/imgs/page/industry-intelligence/market-sector-guide.jpeg"
-                                        alt="joxBox"
+                            <section className="support-section">
+                                    <SupportCard
+                                        title={firstCard.title}
+                                        description={firstCard.description}
+                                        imageSrc={firstCard.imageSrc}
+                                        imageAlt={firstCard.imageAlt}
+                                        backgroundColor={firstCard.backgroundColor}
+                                        border={firstCard.border}
                                     />
-                                </div>
+                                </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                                <div className="mt-10" style={{ textAlign: "justify" }}>
-                                    <p>
-                                        Intelligence to support your idea, your market, or to
-                                        build your business plan. Helping you determine whether
-                                        your idea is worth exploring, without investing too much
-                                        time or money.
-                                    </p>
-                                    <p className="p-color mt-10">
-                                        The standard chunk of Lorem Ipsum used since the 1500s
-                                        is reproduced below for those interested. Sections
-                                        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
-                                        by Cicero are also reproduced in their exact original
-                                        form, accompanied by English versions from the 1914
-                                        translation by H. Rackham.{" "}
-                                    </p>
-                                    <p className="p-color mt-10">
-                                        Comprehensive analysis and statistics at your
-                                        finger-tips.{" "}
-                                    </p>
-                                </div>
+                            <section className="support-section">
+                                    <SupportCard
+                                        title={secondCard.title}
+                                        description={secondCard.description}
+                                        imageSrc={secondCard.imageSrc}
+                                        imageAlt={secondCard.imageAlt}
+                                        backgroundColor={secondCard.backgroundColor}
+                                        border={secondCard.border}
+                                    />
+                                </section>
                             </Grid>
                         </Grid>
                     </div>
                 </div>
             </section>
-
-
 
             <section className="section-box mt-25">
                 <div className="post-loop-grid">
@@ -181,7 +171,6 @@ function FundingBuilderCard() {
                                         border={thirdCard.border}
                                     />
                                 </section>
-
                             </Grid>
                             <Grid item lg={6}
                                 sx={{ paddingLeft: { lg: "60px" } }}
@@ -205,41 +194,28 @@ function FundingBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                <h3>Intelligence to Plan or Change Career</h3>
-                            </Grid>
-                            <Grid item xs={12} md={12}>
-                                <div className="grid__thumb w-img fix grid_thumb_height grid_thumb">
-                                    <img
-                                        className="content-media"
-                                        src="assets/imgs/page/industry-intelligence/intelligence.jpeg"
-                                        alt="joxBox"
+                            <section className="support-section">
+                                    <SupportCard
+                                        title={thirdCard.title}
+                                        description={thirdCard.description}
+                                        imageSrc={thirdCard.imageSrc}
+                                        imageAlt={thirdCard.imageAlt}
+                                        backgroundColor={thirdCard.backgroundColor}
+                                        border={thirdCard.border}
                                     />
-                                </div>
+                                </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                                <div className="mt-10" style={{ textAlign: "justify" }}>
-                                    <p className="p-color">
-                                        Our tool enables you to quickly gather the intelligence
-                                        and information you need to make informed decisions.
-                                        Validating each of your ideas, to decide which to take
-                                        forward.{" "}
-                                    </p>
-                                    <p className="p-color mt-10">
-                                        Research which would normally take weeks, or even months
-                                        to gather, hibretOne can discover it for you in minutes.
-                                        The standard chunk of Lorem Ipsum used since the 1500s
-                                        is reproduced below for those interested. Sections
-                                        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
-                                        by Cicero are also reproduced in their exact original
-                                        form, accompanied by English versions from the 1914
-                                        translation by H. Rackham.{" "}
-                                    </p>
-                                </div>
-                                <div className="mt-20 mb-30">
-                                    <button href="" className="btn btn-default fs-6">
-                                        Create Guide
-                                    </button>
-                                </div>
+                            <section className="support-section">
+                                    <SupportCard
+                                        title={fourthCard.title}
+                                        description={fourthCard.description}
+                                        imageSrc={fourthCard.imageSrc}
+                                        imageAlt={fourthCard.imageAlt}
+                                        backgroundColor={fourthCard.backgroundColor}
+                                        border={fourthCard.border}
+                                    />
+                                </section>
                             </Grid>
                         </Grid>
                     </div>

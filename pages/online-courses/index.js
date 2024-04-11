@@ -25,7 +25,6 @@ const OnlineCourseTwo = dynamic(
   () => import("../../components/sliders/OnlineCourse2"),
   { ssr: false }
 )
-
 const PopularCourseOne = dynamic(
   () => import("../../components/elements/PopularCourse1"),
   { ssr: false }

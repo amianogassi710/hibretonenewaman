@@ -24,17 +24,15 @@ const OnlineCourse = () => {
             <section className="section-box mt-50 mb-25">
                 <div className="container">
                     <div className="flex-container">
-                        <div className="share-icon-container">
-                            <button className="btn-share-search">
-                                <IoShareSocialOutline className="share-icon" />
-                            </button>
+                        <div className="share-icon-online-course-container">
+                            <IoShareSocialOutline className="share-icon-online-course" />
                         </div>
                         <div className="text-center">
-                            <h2 className="section-title mb-10" style={{fontSize:'36px !important'}}>
-                              Upskilling  for Better-paying Careers
+                            <h2 className="section-title mb-10" style={{ fontSize: '36px !important' }}>
+                                Upskilling  for Better-paying Careers
                             </h2>
-                            <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto"style={{color:'#435579'}}>
-                               Creating opportunities through education
+                            <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto" style={{ color: '#435579' }}>
+                                Creating opportunities through education
                             </p>
                         </div>
                     </div>
@@ -44,8 +42,8 @@ const OnlineCourse = () => {
                 <div className="container">
                     <div className="banner-hero1">
                         <div className="block-banner1">
-                           <OnlineCourseSearchButton />
-                       
+                            <OnlineCourseSearchButton />
+
                         </div>
                     </div>
                 </div>

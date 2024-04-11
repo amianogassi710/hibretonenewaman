@@ -1555,3 +1555,9 @@
   right: -300px;
   border-radius: 25px;
 }
+
+@media screen and (max-width:576px) {
+  .blogpage-hero-heading, .blogpage-hero-subheading {
+    margin-left: -65px;
+  }
+}
