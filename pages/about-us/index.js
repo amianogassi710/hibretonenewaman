@@ -11,7 +11,6 @@ import SubscribeButton from '../../components/elements/SubscribeButton';
 import { IoShareSocialOutline } from "react-icons/io5";
 import Aboutushibretoneinformation from './aboutushibretoneinformation';
 
-
 function useLockBodyScroll(open) {
     useEffect(() => {
         if (open) {
@@ -22,8 +21,6 @@ function useLockBodyScroll(open) {
         }
     }, [open])
 }
-
-
 
 export default function Index() {
     const [showFullTeam, setShowFullTeam] = useState(false);
@@ -66,10 +63,8 @@ export default function Index() {
                     <section className="section-box mt-50 mb-40">
                         <div className="container">
                             <div className="flex-container">
-                                <div className="share-icon-container">
-                                    <button className="btn-share-search-aboutus">
-                                        <IoShareSocialOutline className="share-icon" />
-                                    </button>
+                                <div className="share-icon-container-aboutus">
+                                        <IoShareSocialOutline className="share-icon-aboutus" />
                                 </div>
                                 <div className="text-center">
                                     <h2 className="section-title wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>
@@ -81,10 +76,7 @@ export default function Index() {
                         </div>
                     </section>
 
-
                     <Aboutushibretoneinformation />
-
-                    {/* <Aboutusmeetourteam /> */}
 
                     <div>
                         {showFullTeam ? (
@@ -97,7 +89,6 @@ export default function Index() {
                                 </div>
                                 <Aboutusnewsandeventscarousel />
                             </div>
-                            
                         )}
 
                         {showFullTeam && (
@@ -110,14 +101,12 @@ export default function Index() {
                         )}
                     </div>
 
-
                     <section className="section-box mt-75 yellowbanner-aboutus">
                         <SubscribeButton />
 
                     </section>
                     <section className="section-box subscription-aboutus">
                         <Subscription />
-
                     </section>
                 </div >
             </Layout >

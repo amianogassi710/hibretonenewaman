@@ -1469,34 +1469,32 @@
 
 /* Share Icon Start */
 /* Share Icon Start */
-.share-icon-container {
+.share-icon-container-blogpage {
   position: absolute;
 }
 
-.share-icon {
+.share-icon-blogpage {
   font-size: 30px;
   color: #3c65f5;
 }
-.share-icon:hover {
+
+.share-icon-blogpage:hover {
   transform: translateY(-2px);
   color: #ffffff;
   background-color: #05264e;
   transition: 0.2s;
   border-radius: 4px;
 }
-.item {
-  font-size: 16px;
-}
 
 @media screen and (max-width:1200px){
-  .share-icon{
+  .share-icon-blogpage{
     margin-left: 35px !important;
     margin-top: -76px !important;
 
   }
   }
 @media screen and (max-width:999px){
-  .share-icon{
+  .share-icon-blogpage{
     margin-left: 14px !important;
     margin-top: -76px !important;
 
@@ -1504,14 +1502,14 @@
   }
 
 @media screen and (max-width:768px){
-  .share-icon{
+  .share-icon-blogpage{
     margin-left: 32px !important;
     margin-top: -76px !important;
 
   }
   }
 @media screen and (max-width:580px){
-.share-icon{
+.share-icon-blogpage{
   margin-left: 3px !important;
   margin-top: -80px !important;
 }

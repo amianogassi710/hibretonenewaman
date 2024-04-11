@@ -829,60 +829,53 @@
 
 
  /* Share Icon Start */
- .share-icon-container {
+/* Share Icon Start */
+.share-icon-container-aboutus {
   position: absolute;
 }
 
-.share-icon {
+.share-icon-aboutus {
   font-size: 30px;
-}
-
-.item {
-  font-size: 16px;
-}
-
-.btn-share-search-aboutus {
-  padding: 5px;
-  background-color: #ffffff;
   color: #3c65f5;
-  border: none;
-  border-radius: 8px;
-  height: auto;
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: -3px;
-  margin-top: -26px;
 }
 
-.btn-share-search-aboutus:hover {
+.share-icon-aboutus:hover {
   transform: translateY(-2px);
   color: #ffffff;
   background-color: #05264e;
   transition: 0.2s;
+  border-radius: 4px;
 }
 
-@media screen and (max-width: 999px) {
-  .btn-share-search-aboutus {
-      position: absolute;
-      left: 1px;
-      top: 26px;
+@media screen and (max-width:1200px){
+  .share-icon-aboutus{
+    margin-left: 35px !important;
+    margin-top: -76px !important;
+
   }
-}
-
-@media screen and (max-width: 600px) {
-  .btn-share-search-aboutus {
-      position: absolute;
-      left: 65px;
-      top: -15px;
   }
-}
+@media screen and (max-width:999px){
+  .share-icon-aboutus{
+    margin-left: 14px !important;
+    margin-top: -76px !important;
 
+  }
+  }
 
-@media (max-width: 460px) {
-  .btn-share-search-aboutus {
-    position: absolute;
-    left: 90px;
-    top: -15px;
+@media screen and (max-width:768px){
+  .share-icon-aboutus{
+    margin-left: 32px !important;
+    margin-top: -76px !important;
+
+  }
+  }
+@media screen and (max-width:580px){
+.share-icon-aboutus{
+  margin-left: 3px !important;
+  margin-top: -80px !important;
 }
 }
+  
+
 /* Share Icon End */
+

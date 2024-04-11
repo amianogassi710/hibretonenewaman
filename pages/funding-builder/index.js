@@ -74,10 +74,7 @@ export default function Index() {
                                         lg={6}
                                         sx={{ paddingLeft: { lg: "75px" } }}
                                     >
-                                        <h2
-                                            className=""
-                                            style={{ fontSize: "36px !important" }}
-                                        >
+                                        <h2 className="" style={{ fontSize: "36px !important" }} >
                                             Funding: The Lifeblood of Business Startup & Survival
                                         </h2>
                                         <div className="title-details">
@@ -152,38 +149,77 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h3>Market Sector Guide</h3>
+                                        <h2 className="" style={{ fontSize: "36px !important" }} >
+                                            Funding: The Lifeblood of Business Startup & Survival
+                                        </h2>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="grid__thumb w-img fix grid_thumb_height grid_thumb">
-                                            <img
-                                                className="content-media"
-                                                src="assets/imgs/page/industry-intelligence/market-sector-guide.jpeg"
-                                                alt="joxBox"
-                                            />
-                                        </div>
+                                        <iframe width="100%" height="450" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="mt-10" style={{ textAlign: "justify" }}>
-                                            <p>
-                                                Intelligence to support your idea, your market, or to
-                                                build your business plan. Helping you determine whether
-                                                your idea is worth exploring, without investing too much
-                                                time or money.
+                                        <div className="title-details">
+                                            <p className="fundingbuilderparaheading" style={{ color: "#3C65F5" }}>
+                                                Getting Prepared for Investment
                                             </p>
-                                            <p className="p-color mt-10">
-                                                The standard chunk of Lorem Ipsum used since the 1500s
-                                                is reproduced below for those interested. Sections
-                                                1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
-                                                by Cicero are also reproduced in their exact original
-                                                form, accompanied by English versions from the 1914
-                                                translation by H. Rackham.{" "}
+                                            <p className="fundingbuilderparatext">
+                                                {showMore1
+                                                    ? "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most challenging times for a company. Access to funding is so competitive, additional advisor support is now almost compulsory."
+                                                    : "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same"}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore1(
+                                                            !showMore1
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore1
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
                                             </p>
-                                            <p className="p-color mt-10">
-                                                Comprehensive analysis and statistics at your
-                                                finger-tips.{" "}
+                                            <p className="fundingbuilderparaheading mt-30" style={{ color: "#3AAB67" }}>
+                                                Identifying Sources of Investment
+                                            </p>
+                                            <p className="fundingbuilderparatext">
+                                                {showMore2
+                                                    ? "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various sources of finance available is essential for UK businesses. Kickstart your idea with grants if possible. although very competitive, grants and competitions are a low-cost way to prove your idea. "
+                                                    : "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth"}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore2(
+                                                            !showMore2
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore2
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
+                                            </p>
+                                            <p className="fundingbuilderparaheading mt-30" style={{ color: "#F58A3C" }}>
+                                                Winning Investment
+                                            </p>
+                                            <p className="fundingbuilderparatext">
+                                                {showMore3
+                                                    ? "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than 3% success rate, whereas some organisations applying for Innovate UK grants have better than 50% success. They know what to right!"
+                                                    : "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have "}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore3(
+                                                            !showMore3
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore3
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
                                             </p>
                                         </div>
+
                                     </Grid>
                                 </Grid>
                             </div>
@@ -351,7 +387,7 @@ export default function Index() {
                                                         A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-30">
-                                                        <strong> Revenue-based financing: </strong>#
+                                                        <strong> Revenue-based financing: </strong>
                                                         Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-30">
@@ -371,7 +407,7 @@ export default function Index() {
                                                         A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-30">
-                                                        <strong> Revenue-based financing: </strong>#
+                                                        <strong> Revenue-based financing: </strong>
                                                         Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-30">
