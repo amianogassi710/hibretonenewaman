@@ -18,7 +18,7 @@ function SupportCard({ title, description, imageSrc, imageAlt, backgroundColor, 
     );
 }
 
-function MyComponent() {
+function FundingBuilderCard() {
     const supportCards = [
         {
             title: "Preparation",
@@ -245,12 +245,7 @@ function MyComponent() {
                     </div>
                 </div>
             </section>
-
-
         </div>
-
-
     );
 }
-
-export default MyComponent;
+export default FundingBuilderCard;
