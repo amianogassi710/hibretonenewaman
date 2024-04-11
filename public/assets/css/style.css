@@ -12894,6 +12894,7 @@ ul li:last-child .card-list-4 {
   .container-fundingbuilder {
     max-width: 480px;
     padding: 0 25px;
+    margin-top: -25px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -12951,8 +12952,40 @@ ul li:last-child .card-list-4 {
 }
 /* Share Icon End */
 @media screen and (max-width: 576px) {
-  .fundingbuilder-hero-heading, .fundingbuilder-hero-subheading {
+  .fundingbuilder-hero-heading,
+  .fundingbuilder-hero-subheading {
     margin-left: -65px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .fundingbuilder-video-laptop {
+    height: 300px;
+  }
+  .imagecontent {
+    height: 300px;
+  }
+  .imagecontentwithborder {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .fundingbuilder-video-laptop {
+    height: 280px;
+  }
+  .imagecontent {
+    height: 260px;
+  }
+  .imagecontentwithborder {
+    height: 260px;
+  }
+}
+.fundingbuilder-inner-heading {
+  font-size: 36px !important;
+}
+
+@media screen and (max-width: 576px) {
+  .fundingbuilder-inner-heading {
+    font-size: 28px !important;
   }
 }
 /* Hero Section */

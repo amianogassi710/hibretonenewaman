@@ -393,6 +393,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     .container-fundingbuilder {
         max-width: 480px;
         padding: 0 25px;
+        margin-top: -25px;
     }
 }
 
@@ -413,56 +414,101 @@ $font-family: Plus Jakarta Sans, sans-serif;
 /* Share Icon Start */
 .share-icon-container-fundingbuilder {
     position: absolute;
-  }
-  
-  .share-icon-fundingbuilder {
+}
+
+.share-icon-fundingbuilder {
     font-size: 30px;
     color: #3c65f5;
-  }
-  .share-icon-fundingbuilder:hover {
+}
+
+.share-icon-fundingbuilder:hover {
     transform: translateY(-2px);
     color: #ffffff;
     background-color: #05264e;
     transition: 0.2s;
     border-radius: 4px;
-  }
-  
-  
-  @media screen and (max-width:1200px){
-    .share-icon-fundingbuilder{
-      margin-left: 35px !important;
-      margin-top: -76px !important;
-  
+}
+
+
+@media screen and (max-width:1200px) {
+    .share-icon-fundingbuilder {
+        margin-left: 35px !important;
+        margin-top: -76px !important;
+
     }
+}
+
+@media screen and (max-width:999px) {
+    .share-icon-fundingbuilder {
+        margin-left: 14px !important;
+        margin-top: -76px !important;
+
     }
-  @media screen and (max-width:999px){
-    .share-icon-fundingbuilder{
-      margin-left: 14px !important;
-      margin-top: -76px !important;
-  
+}
+
+@media screen and (max-width:768px) {
+    .share-icon-fundingbuilder {
+        margin-left: 32px !important;
+        margin-top: -76px !important;
+
     }
+}
+
+@media screen and (max-width:580px) {
+    .share-icon-fundingbuilder {
+        margin-left: 3px !important;
+        margin-top: -80px !important;
     }
-  
-  @media screen and (max-width:768px){
-    .share-icon-fundingbuilder{
-      margin-left: 32px !important;
-      margin-top: -76px !important;
-  
+}
+
+
+/* Share Icon End */
+
+
+@media screen and (max-width:576px) {
+
+    .fundingbuilder-hero-heading,
+    .fundingbuilder-hero-subheading {
+        margin-left: -65px;
     }
+}
+
+@media screen and (max-width:576px) {
+    .fundingbuilder-video-laptop {
+        height: 300px;
     }
-  @media screen and (max-width:580px){
-  .share-icon-fundingbuilder{
-    margin-left: 3px !important;
-    margin-top: -80px !important;
-  }
-  }
+
+    .imagecontent {
+        height: 300px;
+    }
+
+    .imagecontentwithborder {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .fundingbuilder-video-laptop {
+        height: 280px;
+    }
+
+    .imagecontent {
+        height: 260px;
+    }
+
+    .imagecontentwithborder {
+        height: 260px;
+    }
+}
+
+.fundingbuilder-inner-heading {
+    font-size: 36px !important;
+}
+
+@media screen and (max-width:576px) {
+    .fundingbuilder-inner-heading {
+        font-size: 28px !important;
+    }
+
     
-  
-  /* Share Icon End */
-
-
-  @media screen and (max-width:576px) {
-    .fundingbuilder-hero-heading, .fundingbuilder-hero-subheading {
-      margin-left: -65px;
-    }
-  }
+}

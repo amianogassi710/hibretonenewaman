@@ -1,6 +1,5 @@
 import { Grid } from '@mui/material';
 
-
 export default function Aboutushibretoneinformation() {
     return (
         <section className="section-box" style={{marginTop: '35px'}}>
@@ -24,7 +23,7 @@ export default function Aboutushibretoneinformation() {
                             </div>
                         </Grid>
                         <Grid item className="" lg={6} sx={{ paddingLeft: { lg: '75px' } }} style={{ marginTop: '-20px' }}>
-                            <h3 style={{ fontSize: '40px' }}>What hibretOne is all about</h3>
+                            <h3 style={{ fontSize: '40px' }}>1What hibretOne is all about</h3>
                             <div style={{ textAlign: 'justify', marginTop: '27px' }}>
                                 <p className="aboutusparaheading" style={{ color: "#3C65F5" }}>
                                     Social, moral and economic purpose
@@ -51,16 +50,12 @@ export default function Aboutushibretoneinformation() {
                     <Grid container alignItems="center" style={{ minWidth: '100%' }}
                         sx={{ display: { xs: 'none', md: "flex", lg: 'none' } }}>
                         <Grid item xs={12} md={12} sx={{ marginBottom: '20px', marginTop: '-30px', textAlign: 'justify' }}>
-                            <h3> What hibretOne is all about</h3>
+                            <h3> 2What hibretOne is all about</h3>
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-
-                                <iframe height="100%" src="https://www.youtube.com/embed/CIoWgp020B0" frameBorder="0" allowfullscreen></iframe>
-
+                                <iframe height="100%" src="https://www.youtube.com/embed/CIoWgp020B0" allowfullscreen></iframe>
                             </div>
-
-
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <div className="mt-10" style={{ textAlign: 'justify' }}>
@@ -89,11 +84,11 @@ export default function Aboutushibretoneinformation() {
                     <Grid container alignItems="center" style={{ minWidth: '100%' }}
                         sx={{ display: { xs: 'flex', md: "none", lg: 'none' } }}>
                         <Grid item xs={12} md={12} sx={{ marginBottom: '20px', marginTop: '-30px', textAlign: 'justify' }}>
-                            <h3>What hibretOne is all about</h3>
+                            <h3>3What hibretOne is all about</h3>
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-                                <iframe width="" height="100%" src="https://www.youtube.com/embed/CIoWgp020B0" frameBorder="0" allowfullscreen></iframe>
+                                <iframe width="" height="100%" src="https://www.youtube.com/embed/CIoWgp020B0" allowfullscreen></iframe>
                             </div>
                         </Grid>
                         <Grid item xs={12} md={12}>
