@@ -13,7 +13,8 @@ const Footer = () => {
                         <div className="footer-social">
                             <a className="icon-socials icon-facebook" href="#" />
                             <a className="icon-socials icon-twitter" href="#" />
-                            <a className="icon-socials icon-linkedin" href="#" /></div>
+                            <a className="icon-socials icon-linkedin" href="#" />
+                        </div>
                     </div>
                     <div className="footer-col-2 col-md-2 col-xs-6">
                         <h6 className="mb-20">Resources
@@ -22,7 +23,7 @@ const Footer = () => {
                             <li>
                                 <a href="#">Business Builder</a></li>
                             <li>
-                                <a href="#">Funding Builder</a></li>
+                                <a href="/funding-builder">Funding Builder</a></li>
                             <li>
                                 <a href="#">Resources Builder</a></li>
                             <li>
@@ -43,7 +44,7 @@ const Footer = () => {
                             <li>
                                 <a href="#">Gallery</a></li>
                             <li>
-                                <a href="#">Blog</a></li>
+                                <a href="/blog-page">Blog</a></li>
                         </ul>
                     </div>
                     <div className="footer-col-4 col-md-2 col-xs-6">
@@ -94,11 +95,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
-        <div className="footer-hero"></div>
+            <div className="footer-hero"></div>
         </footer>
-
     );
 };
 

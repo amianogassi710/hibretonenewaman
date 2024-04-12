@@ -8,6 +8,8 @@ export default function BlogInnerPage() {
     return (
         <>
             <Layout>
+            <div className="background-random-bloginnerpage">
+
                 <section className="section-box">
                     <div className="banner-hero2 bg-img-laptop2">
                         <div className="col">
@@ -273,6 +275,7 @@ export default function BlogInnerPage() {
                 </div>
                 <KickstartButton />
                 <Subscription />
+                </div>
             </Layout>
         </>
     );

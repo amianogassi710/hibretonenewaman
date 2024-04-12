@@ -404,7 +404,7 @@
 
   .article-description-aboutus {
     font: 500 11px/16px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-    height: 50px;
+    height: 63px;
   }
 
   .author-image-aboutus {
@@ -480,8 +480,8 @@
 @media screen and (max-width: 1225px) {
   .swiperprevious-aboutus {
     top: 71%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     left: -5px;
   }
 
@@ -544,15 +544,15 @@
 @media screen and (max-width: 576px) {
   .swiperprevious-aboutus {
     top: 85%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     left: -4px;
   }
 
   .swipernext-aboutus {
     top: 85%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     right: -4px;
   }
 }
@@ -560,15 +560,15 @@
 @media screen and (max-width: 450px) {
   .swiperprevious-aboutus {
     top: 86%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     left: 5px;
   }
 
   .swipernext-aboutus {
     top: 86%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     right: 5px;
   }
 }
@@ -692,15 +692,15 @@
 @media screen and (max-width: 576px) {
   .swiperprevious-aboutusfull {
     top: 92%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     left: -4px;
   }
 
   .swipernext-aboutusfull {
     top: 92%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     right: -4px;
   }
 }
@@ -708,16 +708,16 @@
 @media screen and (max-width: 450px) {
   .swiperprevious-aboutusfull {
     top: 93%;
-    width: 30px;
-    height: 30px;
-    left: -4px;
+    width: 40px;
+    height: 40px;
+    left: 5px;
   }
 
   .swipernext-aboutusfull {
     top: 93%;
-    width: 30px;
-    height: 30px;
-    right: -4px;
+    width: 40px;
+    height: 40px;
+    right: 5px;
   }
 }
 
@@ -871,7 +871,7 @@
 @media screen and (max-width:580px) {
   .share-icon-aboutus {
     margin-left: 3px !important;
-    margin-top: -80px !important;
+    margin-top: -10px !important;
   }
 }
 

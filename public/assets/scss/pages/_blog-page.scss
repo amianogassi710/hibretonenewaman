@@ -1509,7 +1509,7 @@
 @media screen and (max-width:580px) {
   .share-icon-blogpage {
     margin-left: 3px !important;
-    margin-top: -80px !important;
+    margin-top: -10px !important;
   }
 }
 
@@ -1787,11 +1787,13 @@
 
   .bloginnerpage-author-bio {
     .author-image {
-      max-height: 75px;
+      max-height: 70px;
+      margin-bottom: 0px;
     }
 
     .author-description {
       margin-left: 0px;
+      margin-top: 0px;
     }
   }
 }
@@ -2199,3 +2201,32 @@
 /* Share Icon End */
 
 
+.background-random-bloginnerpage {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-random-bloginnerpage::before,
+.background-random-bloginnerpage::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 1500px;
+  background: #f2f6fd;
+  transform-origin: top left;
+  z-index: -1;
+}
+
+.background-random-bloginnerpage::before {
+  transform: rotate(-8deg);
+  top: 800px;
+  left: -300px;
+  border-radius: 25px;
+}
+
+.background-random-bloginnerpage::after {
+  transform: rotate(8deg);
+  top: 700px;
+  right: -300px;
+  border-radius: 25px;
+}

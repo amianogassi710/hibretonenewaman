@@ -85,7 +85,7 @@ export default function Index() {
                             <div>
                                 <Aboutusmeetourteam />
                                 <div className="mt-40 mb-20 button-meetourteam-aboutus" style={{ textAlign: 'center' }}>
-                                    <button onClick={handleMeetOurTeamClick} class="btn btn-default fs-6">Meet Our Team</button>
+                                    <button onClick={handleMeetOurTeamClick} class="btn btn-default fs-6">Show More</button>
                                 </div>
                                 <Aboutusnewsandeventscarousel />
                             </div>
