@@ -40,7 +40,11 @@ export default function BlogInnerPage() {
                                     <div className="post-meta text-muted d-flex align-items-center mx-auto justify-content-center">
                                     
                                         <div className="author d-flex align-items-center mr-30">
-                                            <img alt="jobBox" src="../assets/imgs/page/blog-page/Kristian.jpg" />
+                                            <img alt="jobBox" src="https://cdn.builder.io/api/v1/image/assets/TEMP/59f4eb8d9bc34f0d6dea5131121a0bff828e6d6b860ac2d900734190fd28ed5d?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+ />
+
+
+
                                             <span style={{ fontSize: '16px' }}>David Bond</span>
                                         </div>
                                         <div className="date">

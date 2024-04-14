@@ -692,12 +692,12 @@ max-width: 200px;
   }
   
   
-  .author-image {
-    width: 30px;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 50%;
-  }
+  // .author-image {
+  //   width: 30px;
+  //   aspect-ratio: 1;
+  //   object-fit: cover;
+  //   border-radius: 50%;
+  // }
   .card-content {
     border-radius: 16px;
     border: 1px solid rgb(224, 230, 246);
@@ -716,79 +716,79 @@ max-width: 200px;
     border-radius: 10px;
   }
   
-  .article-category {
-    border-radius: 5px;
-    background-color: var(--border-border-2, #e0e6f6);
-    align-self: start;
-    margin-top: 20px;
-    color: var(--brand-brand-2, #3c65f5);
-    white-space: nowrap;
-    padding: 0 10px;
-    font: 500 16px/156% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
+  // .article-category {
+  //   border-radius: 5px;
+  //   background-color: var(--border-border-2, #e0e6f6);
+  //   align-self: start;
+  //   margin-top: 20px;
+  //   color: var(--brand-brand-2, #3c65f5);
+  //   white-space: nowrap;
+  //   padding: 0 10px;
+  //   font: 500 16px/156% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+  // }
   
-  .article-title {
-    color: var(--brand-brand-1, #05264e);
-    align-self: start;
-    margin: 22px 0 0 10px;
-    font: 700 20px/26px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-    height: 60px;
-    overflow: hidden;
-    margin-right: 10px;
-  }
+  // .article-title {
+  //   color: var(--brand-brand-1, #05264e);
+  //   align-self: start;
+  //   margin: 22px 0 0 10px;
+  //   font: 700 20px/26px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+  //   height: 60px;
+  //   overflow: hidden;
+  //   margin-right: 10px;
+  // }
   
-  .article-description {
-    color: var(--text-paragraph, #6c6e70);
-    align-self: center;
-    margin-top: 18px;
-    font: 500 16px/25px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-    margin: 0 10px;
-    text-align: justify;
-    height: 100px;
-    overflow: hidden;
-  }
+  // .article-description {
+  //   color: var(--text-paragraph, #6c6e70);
+  //   align-self: center;
+  //   margin-top: 18px;
+  //   font: 500 16px/25px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+  //   margin: 0 10px;
+  //   text-align: justify;
+  //   height: 100px;
+  //   overflow: hidden;
+  // }
   
-  .article-meta {
-    display: flex;
-    margin-top: 25px;
-    width: 100%;
-    gap: 20px;
-  }
+  // .article-meta {
+  //   display: flex;
+  //   margin-top: 25px;
+  //   width: 100%;
+  //   gap: 20px;
+  // }
   
-  .author-info {
-    display: flex;
-    gap: 9px;
-  }
+  // .author-info {
+  //   display: flex;
+  //   gap: 9px;
+  // }
   
-  .author-image {
-    aspect-ratio: 1;
-    object-fit: cover;
-    width: 35px;
-    margin: auto 0;
-    border-radius: 50%;
-  }
+  // .author-image {
+  //   aspect-ratio: 1;
+  //   object-fit: cover;
+  //   width: 35px;
+  //   margin: auto 0;
+  //   border-radius: 50%;
+  // }
   
-  .author-details {
-    display: flex;
-    flex-direction: column;
-  }
+  // .author-details {
+  //   display: flex;
+  //   flex-direction: column;
+  // }
   
-  .author-name {
-    color: var(--brand-brand-1, #05264e);
-    font: 700 18px/144% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-    margin-top: -23px;
-  }
+  // .author-name {
+  //   color: var(--brand-brand-1, #05264e);
+  //   font: 700 18px/144% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+  //   margin-top: -23px;
+  // }
   
   
-  .read-time {
-    color: var(--text-Paragrap-2, #435579);
-    flex-grow: 1;
-    flex-basis: auto;
-    margin: auto 0;
-    font: 500 16px/156% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-    text-align: right;
-    margin-right: 10px;
-  }
+  // .read-time {
+  //   color: var(--text-Paragrap-2, #435579);
+  //   flex-grow: 1;
+  //   flex-basis: auto;
+  //   margin: auto 0;
+  //   font: 500 16px/156% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+  //   text-align: right;
+  //   margin-right: 10px;
+  // }
   
   .image-text {
     position: absolute;
