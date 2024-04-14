@@ -2,15 +2,11 @@ import Link from "next/link";
 import SwiperCore, { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React from "react";
-import { SlEarphonesAlt } from "react-icons/sl";
-import { HiOutlineLightBulb } from "react-icons/hi";
-import { TbDeviceDesktopAnalytics } from "react-icons/tb";
-import { PiLockKey } from "react-icons/pi";
 
 SwiperCore.use([Navigation]);
 import "swiper/css/grid";
 
-const OnlineCourse1 = () => {
+const BlogTrendingNowCaraousel = () => {
     const data = [
         {
             category_id: 1,
@@ -62,16 +58,12 @@ const OnlineCourse1 = () => {
         },
     ];
 
-
-
-
-
     return (
         <>
             <div className="swiper-container swiper-group-5">
                 <Swiper
                     slidesPerView={4}
-                    spaceBetween={55}
+                    spaceBetween={25}
                     navigation={{
                         prevEl: ".swiper-button-prev",
                         nextEl: ".swiper-button-next",
@@ -105,12 +97,10 @@ const OnlineCourse1 = () => {
                             <div className="swiper-slide hover-up">
                                 <Link
                                     legacyBehavior
-                                    href={`/online-courses/search?category_id=${item.category_id}`}
+                                    href={`#`}
                                 >
                                     <a>
-                                        
                                         <div className="blogpage-item-logo">
-
                                         <div className="product-image-container">
                                             <img
                                                 src={item.image}
@@ -126,7 +116,6 @@ const OnlineCourse1 = () => {
                                                 </div>
                                             </div>
                                         </div>
-
                                         </div>
                                     </a>
                                 </Link>
@@ -139,4 +128,4 @@ const OnlineCourse1 = () => {
     );
 };
 
-export default OnlineCourse1;
+export default BlogTrendingNowCaraousel;

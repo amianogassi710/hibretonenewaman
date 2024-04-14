@@ -12,12 +12,12 @@ function useLockBodyScroll(open) {
         };
     }, [open]);
 }
-const OnlineCourseOne = dynamic(
-    () => import("../../components/sliders/BlogCheck"),
+const BlogTrendingNowCarousel = dynamic(
+    () => import("./BlogTrendingNowCarousel"),
     { ssr: false }
 );
 
-const Check2 = () => {
+const BlogTrendingNowCarouselFrame = () => {
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -26,11 +26,11 @@ useLockBodyScroll(isOpen);
 return (
     <>
             <div className="section-box wow animate_animated animate_fadeIn">
-                <div className="container">
+                <div className="container blogpage-trendingnowcarousel">
                     
                     <div className="box-swiper grant-category">
                         <div>
-                            <OnlineCourseOne />
+                            <BlogTrendingNowCarousel />
                             <div className="swiper-button-next" />
                             <div className="swiper-button-prev" />
                         </div>
@@ -41,5 +41,4 @@ return (
 );
 };
 
-
-export default Check2;
+export default BlogTrendingNowCarouselFrame;

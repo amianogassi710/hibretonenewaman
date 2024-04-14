@@ -7,7 +7,7 @@ import BlogPageCarousel from './BlogPageCarousel';
 import CustomPagination from '../../components/elements/CustomPagination';
 import YellowBanner from "../../components/elements/YellowBanner";
 import BlogPageHeading from '../../components/elements/BlogPageHeading';
-import Check2 from './../online-courses/check2';
+import BlogTrendingNowCarouselFrame from './BlogTrendingNowCarouselFrame';
 
 const articleData1 = {
     image: "assets/imgs/page/blog-page/category4.jpeg",
@@ -130,7 +130,7 @@ export default function Index() {
                                     </p>
                                 </div>
                                 <div className="mt-30">
-                                    <Check2 />
+                                <BlogTrendingNowCarouselFrame />
                                 </div>
                             </div>
                         </div>
