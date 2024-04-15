@@ -7,6 +7,7 @@ import { Grid } from "@mui/material";
 import FullAccessButton from "../../components/elements/FullAccessButton";
 import FundingBuilderCard from "./FundingBuilderCard";
 
+
 function useLockBodyScroll(open) {
     useEffect(() => {
         if (open) {
@@ -58,6 +59,17 @@ export default function Index() {
                     </section>
 
                     <section className="section-box mt-75">
+                        <YellowBanner />
+                    </section>
+
+
+                    <section className="section-box mt-75">
+                        <div className="text-center">
+                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>Funding: The Lifeblood of Business Startup & Survival</h2>
+                        </div>
+                    </section>
+
+                    <section className="section-box mt-40">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -77,9 +89,6 @@ export default function Index() {
                                         lg={6}
                                         sx={{ paddingLeft: { lg: "75px" } }}
                                     >
-                                        <h2 className="" style={{ fontSize: "36px !important" }} >
-                                            Funding: The Lifeblood of Business Startup & Survival
-                                        </h2>
                                         <div className="title-details">
                                             <p className="fundingbuilderparaheading" style={{ color: "#3C65F5" }}>
                                                 Getting Prepared for Investment
@@ -87,7 +96,7 @@ export default function Index() {
                                             <p className="fundingbuilderparatext">
                                                 {showMore1
                                                     ? "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most challenging times for a company. Access to funding is so competitive, additional advisor support is now almost compulsory."
-                                                    : "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same"}
+                                                    : "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most "}
                                                 <button
                                                     className="btn-show-more"
                                                     onClick={() =>
@@ -107,7 +116,7 @@ export default function Index() {
                                             <p className="fundingbuilderparatext">
                                                 {showMore2
                                                     ? "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various sources of finance available is essential for UK businesses. Kickstart your idea with grants if possible. although very competitive, grants and competitions are a low-cost way to prove your idea. "
-                                                    : "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth"}
+                                                    : "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various "}
                                                 <button
                                                     className="btn-show-more"
                                                     onClick={() =>
@@ -127,7 +136,7 @@ export default function Index() {
                                             <p className="fundingbuilderparatext">
                                                 {showMore3
                                                     ? "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than 3% success rate, whereas some organisations applying for Innovate UK grants have better than 50% success. They know what to right!"
-                                                    : "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have "}
+                                                    : "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than "}
                                                 <button
                                                     className="btn-show-more"
                                                     onClick={() =>
@@ -151,11 +160,6 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none", marginBottom: '-20px' } }}
                                 >
-                                    <Grid item xs={12} md={12} sx={{ marginTop: '-25px', marginBottom: '20px' }}>
-                                        <h2 className="fundingbuilder-inner-heading">
-                                            Funding: The Lifeblood of Business Startup & Survival
-                                        </h2>
-                                    </Grid>
                                     <Grid item xs={12} md={12}>
                                         <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="fundingbuilder-video-laptop"></iframe>
                                     </Grid>
@@ -167,7 +171,7 @@ export default function Index() {
                                             <p className="fundingbuilderparatext">
                                                 {showMore1
                                                     ? "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most challenging times for a company. Access to funding is so competitive, additional advisor support is now almost compulsory."
-                                                    : "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same"}
+                                                    : "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most "}
                                                 <button
                                                     className="btn-show-more"
                                                     onClick={() =>
@@ -181,13 +185,13 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparaheading mt-30" style={{ color: "#3AAB67" }}>
+                                            <p className="fundingbuilderparaheading mt-10" style={{ color: "#3AAB67" }}>
                                                 Identifying Sources of Investment
                                             </p>
                                             <p className="fundingbuilderparatext">
                                                 {showMore2
                                                     ? "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various sources of finance available is essential for UK businesses. Kickstart your idea with grants if possible. although very competitive, grants and competitions are a low-cost way to prove your idea. "
-                                                    : "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth"}
+                                                    : "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various "}
                                                 <button
                                                     className="btn-show-more"
                                                     onClick={() =>
@@ -201,13 +205,13 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparaheading mt-30" style={{ color: "#F58A3C" }}>
+                                            <p className="fundingbuilderparaheading mt-10" style={{ color: "#F58A3C" }}>
                                                 Winning Investment
                                             </p>
                                             <p className="fundingbuilderparatext">
                                                 {showMore3
                                                     ? "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than 3% success rate, whereas some organisations applying for Innovate UK grants have better than 50% success. They know what to right!"
-                                                    : "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have "}
+                                                    : "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than "}
                                                 <button
                                                     className="btn-show-more"
                                                     onClick={() =>
@@ -229,18 +233,16 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box mt-75 mb-50">
-                        <YellowBanner />
-                    </section>
 
-                    <section className="section-box mt-25">
+
+                    <section className="section-box mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "none", md: "none", lg: "flex"} }}
+                                    sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                                 >
                                     <Grid item lg={6} sx={{ paddingRight: { lg: "75px" } }}>
 
@@ -332,20 +334,20 @@ export default function Index() {
                                                     < p className="fundingbuilderparatext"> <strong> Friends, family and fools: </strong> As you know the people you’re pitching to, one of the perks of this type of funding is
                                                         that you don’t have to convince a jury of investors that you’re worth their time and money.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Bootstrapping: </strong> is when a startup is funded by the founding team themselves and then by revenue from the business,
                                                         without external capital.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Grants: </strong>  A form of non-dilutive funding where the money doesn’t require you to give up equity, or be paid back.
                                                         This is a common option for science-based startups and others with a social/impact mission.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Bank loans: </strong>  Can be difficult to secure for very early-stage startups. In the UK, founders can also apply for a &nbsp;
                                                         <u><a href="https://sifted.eu/articles/uk-business-loans-grants-startups">government-backed Start Up Loan</a></u>, which can provide up to £25k and offers 12 months of free mentoring, plus support
                                                         with writing a business plan.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> R&D Tax Credits: </strong>  Research and Development (R&D) tax relief from the government to supports companies that work on
                                                         innovative projects in science and technology.
                                                     </p>
@@ -355,11 +357,11 @@ export default function Index() {
                                                     <p className="fundingbuilderparatext"> <strong> Friends, family and fools: </strong> As you know the people you’re pitching to, one of the perks of this type of funding is
                                                         that you don’t have to convince a jury of investors that you’re worth their time and money.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Bootstrapping: </strong> is when a startup is funded by the founding team themselves and then by revenue from the business,
                                                         without external capital.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Grants: </strong>  A form of non-dilutive funding where the money doesn’t require you to give up equity, or be paid back.
                                                     </p>
                                                 </div>
@@ -383,7 +385,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box" style={{ marginTop: '75px' }}>
+                    <section className="section-box mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -486,15 +488,15 @@ export default function Index() {
                                                         <strong> Crowdfunding: </strong>
                                                         A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Revenue-based financing: </strong>
                                                         Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Accelerators: </strong>
                                                         Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Angel Investors: </strong>
                                                         Have VC experience, others pivot from being founders or operators themselves.
                                                         Investing in return for equity, and either put money in as individual investors or as part of a syndicate.
@@ -506,11 +508,11 @@ export default function Index() {
                                                         <strong> Crowdfunding: </strong>
                                                         A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Revenue-based financing: </strong>
                                                         Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-30">
+                                                    <p className="fundingbuilderparatext mt-10">
                                                         <strong> Accelerators: </strong>
                                                         Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
                                                     </p>
@@ -563,15 +565,15 @@ export default function Index() {
                                                         <strong> VC funding: </strong>
                                                         A venture capital firm will hand over cash in return for equity. VC is typically the most popular type of funding because the cheques tend to be larger than with other options.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-10">
+                                                    <p className="fundingbuilderparatext mt-30">
                                                         <strong> Venture debt: </strong>
                                                         Has to be paid back, rather than exchanged for equity. This type of funding can be helpful to supplement funding in between equity rounds.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-10">
+                                                    <p className="fundingbuilderparatext mt-30">
                                                         <strong> Convertible loan notes: </strong>
                                                         Sits between borrowing and equity. A startup loans money and if it isn’t paid back by a set maturity date, it converts into equity.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-10">
+                                                    <p className="fundingbuilderparatext mt-30">
                                                         <strong> Revenue-based financing: </strong>
                                                         Technically a loan repaid by promising the lender a percentage of future gross revenue over a set time. No assets required as collateral, unlike a bank loan.
                                                     </p>
@@ -582,11 +584,11 @@ export default function Index() {
                                                         <strong> VC funding: </strong>
                                                         A venture capital firm will hand over cash in return for equity. VC is typically the most popular type of funding because the cheques tend to be larger than with other options.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-10">
+                                                    <p className="fundingbuilderparatext mt-30">
                                                         <strong> Venture debt: </strong>
                                                         Has to be paid back, rather than exchanged for equity. This type of funding can be helpful to supplement funding in between equity rounds.
                                                     </p>
-                                                    <p className="fundingbuilderparatext mt-10">
+                                                    <p className="fundingbuilderparatext mt-30">
                                                         <strong> Convertible loan notes: </strong>
                                                         Sits between borrowing and equity. A startup loans money and if it isn’t paid back by a set maturity date, it converts into equity.
                                                     </p>

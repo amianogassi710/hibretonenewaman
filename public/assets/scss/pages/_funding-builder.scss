@@ -102,7 +102,6 @@ $font-family: Plus Jakarta Sans, sans-serif;
 
 .title-details {
     text-align: justify;
-    margin-top: 40px;
 }
 
 .p-color {
@@ -457,7 +456,14 @@ $font-family: Plus Jakarta Sans, sans-serif;
 @media screen and (max-width:580px) {
     .share-icon-fundingbuilder {
         margin-left: 3px !important;
-        margin-top: -80px !important;
+        margin-top: 5px !important;
+    }
+}
+
+@media screen and (max-width:515px) {
+    .share-icon-fundingbuilder {
+        margin-left: 3px !important;
+        margin-top: 30px !important;
     }
 }
 

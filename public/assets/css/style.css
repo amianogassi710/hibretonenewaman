@@ -10071,6 +10071,15 @@ ul li:last-child .card-list-4 {
     border-radius: 50%;
   }
 }
+@media screen and (max-width: 575px) {
+  .blogpage-trendingnow-author-mainimage {
+    width: 50px;
+    height: 40px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
 /* Media query for smaller screens */
 @media screen and (max-width: 550px) {
   .product-list {
@@ -10321,9 +10330,6 @@ ul li:last-child .card-list-4 {
   .article-description {
     max-width: 100%;
   }
-  .blogpage-article-description {
-    max-width: 100%;
-  }
   .article-meta {
     max-width: 100%;
     flex-wrap: wrap;
@@ -10565,7 +10571,7 @@ ul li:last-child .card-list-4 {
 
 .box-swiper .swiper-button-next,
 .box-swiper .swiper-button-prev {
-  width: 40px;
+  width: 50px;
 }
 
 .box-swiper .swiper-button-margin {
@@ -10593,7 +10599,7 @@ ul li:last-child .card-list-4 {
 }
 @media screen and (max-width: 576px) {
   .box-swiper .swiper-button-next {
-    right: -43px !important;
+    right: -57px !important;
     top: 65px !important;
   }
   .box-swiper .swiper-button-prev {
@@ -11140,7 +11146,6 @@ ul li:last-child .card-list-4 {
   aspect-ratio: 1;
   object-fit: cover;
   width: 35px;
-  margin: auto 0;
   border-radius: 50%;
   margin-top: 385px;
   margin-left: 20px;
@@ -11169,155 +11174,104 @@ ul li:last-child .card-list-4 {
 @media screen and (max-width: 1400px) {
   .swiperprevious-blogpage {
     top: 23%;
-    width: 50px;
-    height: 50px;
     left: 30px;
   }
   .swipernext-blogpage {
     top: 23%;
-    width: 50px;
-    height: 50px;
     right: 30px;
   }
 }
 @media screen and (max-width: 1290px) {
   .swiperprevious-blogpage {
     top: 24%;
-    width: 50px;
-    height: 50px;
     left: 0px;
   }
   .swipernext-blogpage {
     top: 24%;
-    width: 50px;
-    height: 50px;
     right: 0px;
   }
 }
 @media screen and (max-width: 1225px) {
   .swiperprevious-blogpage {
     top: 24%;
-    width: 40px;
-    height: 40px;
     left: -5px;
   }
   .swipernext-blogpage {
     top: 24%;
-    width: 40px;
-    height: 40px;
     right: -5px;
   }
 }
 @media screen and (max-width: 1200px) {
   .swiperprevious-blogpage {
     top: 23%;
-    width: 40px;
-    height: 40px;
     left: 8px;
   }
   .swipernext-blogpage {
     top: 23%;
-    width: 40px;
-    height: 40px;
     right: 8px;
   }
 }
 @media screen and (max-width: 992px) {
   .swiperprevious-blogpage {
     top: 25%;
-    width: 40px;
-    height: 40px;
     left: 4px;
   }
   .swipernext-blogpage {
     top: 25%;
-    width: 40px;
-    height: 40px;
     right: 4px;
   }
 }
 @media screen and (max-width: 768px) {
   .swiperprevious-blogpage {
     top: 21%;
-    width: 40px;
-    height: 40px;
     left: 4px;
   }
   .swipernext-blogpage {
     top: 21%;
-    width: 40px;
-    height: 40px;
     right: 4px;
   }
 }
 @media screen and (max-width: 576px) {
   .swiperprevious-blogpage {
     top: 22%;
-    width: 30px;
-    height: 30px;
-    left: -4px;
+    left: 5px;
   }
   .swipernext-blogpage {
     top: 22%;
-    width: 30px;
-    height: 30px;
-    right: -4px;
+    right: 5px;
   }
 }
 @media screen and (max-width: 450px) {
   .swiperprevious-blogpage {
     top: 22%;
-    width: 30px;
-    height: 30px;
     left: 5px;
   }
   .swipernext-blogpage {
     top: 22%;
-    width: 30px;
-    height: 30px;
     right: 5px;
   }
   .article-title-blogpage {
-    color: white;
-    align-self: start;
-    padding: 25px 25px 0px 25px;
+    padding: 25px 10px 0px 10px;
     font: 700 18px/22px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-    overflow: hidden;
-    text-align: justify;
     margin-top: -130px;
   }
   .author-image-blogpage1 {
-    position: absolute;
     margin-right: 10px;
-    aspect-ratio: 1;
-    object-fit: cover;
     width: 30px;
-    margin: auto 0;
-    border-radius: 50%;
     margin-top: 395px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .swiperdate-blogpage1 {
-    position: absolute;
-    color: var(--System-white, var(--System-white, #FFF));
-    /* text/font-sm */
-    font-family: "Plus Jakarta Sans";
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 30px;
     margin-top: 397px;
-    margin-left: 60px;
+    margin-left: 50px;
     /* 166.667% */
     /* 4th April */
   }
   .carouseldate-blogpage1 {
-    position: absolute;
-    color: var(--System-white, var(--System-white, #FFF));
-    /* text/font-sm */
-    font-family: "Plus Jakarta Sans";
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 30px;
     margin-left: 168px;
@@ -11328,108 +11282,67 @@ ul li:last-child .card-list-4 {
 @media screen and (max-width: 420px) {
   .swiperprevious-blogpage {
     top: 22%;
-    width: 30px;
-    height: 30px;
     left: 5px;
   }
   .swipernext-blogpage {
     top: 22%;
-    width: 30px;
-    height: 30px;
     right: 5px;
   }
   .article-title-blogpage {
-    color: white;
     align-self: start;
-    padding: 25px 25px 0px 25px;
+    padding: 25px 10px 0px 10px;
     font: 700 16px/20px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-    overflow: hidden;
-    text-align: justify;
     margin-top: -130px;
   }
   .author-image-blogpage1 {
-    position: absolute;
-    margin-right: 10px;
-    aspect-ratio: 1;
-    object-fit: cover;
     width: 30px;
-    margin: auto 0;
-    border-radius: 50%;
     margin-top: 395px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .swiperdate-blogpage1 {
-    position: absolute;
-    color: var(--System-white, var(--System-white, #FFF));
-    /* text/font-sm */
-    font-family: "Plus Jakarta Sans";
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 30px;
     margin-top: 397px;
-    margin-left: 60px;
+    margin-left: 50px;
     /* 166.667% */
     /* 4th April */
   }
   .carouseldate-blogpage1 {
-    position: absolute;
-    color: var(--System-white, var(--System-white, #FFF));
-    /* text/font-sm */
-    font-family: "Plus Jakarta Sans";
     font-size: 14px;
-    font-style: normal;
     font-weight: 500;
     line-height: 30px;
-    margin-left: 168px;
+    margin-left: 148px;
     margin-top: 397px;
     margin-right: 26px;
   }
 }
-@media screen and (max-width: 417px) {
+@media screen and (max-width: 396px) {
   .article-title-blogpage {
-    color: white;
-    align-self: start;
-    padding: 25px 25px 0px 25px;
-    font: 700 15px/19px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-    overflow: hidden;
-    text-align: justify;
-    margin-top: -130px;
+    font: 700 16px/19px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+    margin-top: -125px;
   }
   .author-image-blogpage1 {
-    position: absolute;
-    aspect-ratio: 1;
-    object-fit: cover;
     width: 30px;
-    margin: auto 0;
-    border-radius: 50%;
     margin-top: 395px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .swiperdate-blogpage1 {
-    position: absolute;
-    color: var(--System-white, var(--System-white, #FFF));
     /* text/font-sm */
-    font-family: "Plus Jakarta Sans";
-    font-size: 13px;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 500;
     line-height: 30px;
     margin-top: 397px;
-    margin-left: 55px;
+    margin-left: 45px;
     /* 166.667% */
     /* 4th April */
   }
   .carouseldate-blogpage1 {
-    position: absolute;
-    color: var(--System-white, var(--System-white, #FFF));
     /* text/font-sm */
-    font-family: "Plus Jakarta Sans";
-    font-size: 13px;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 500;
     line-height: 30px;
-    margin-left: 150px;
+    margin-left: 140px;
     margin-top: 397px;
   }
 }
@@ -11546,6 +11459,10 @@ ul li:last-child .card-list-4 {
 
 .mt-20 {
   margin-top: 20px;
+}
+
+.mt-75 {
+  margin-top: 75px;
 }
 
 .mr-15 {
@@ -12085,10 +12002,6 @@ ul li:last-child .card-list-4 {
 .box-swiper .swiper-button-prev:hover {
   background: url(../imgs/slider/swiper/prev-active.svg) no-repeat 0px 0px;
 }
-.box-swiper .swiper-button-next,
-.box-swiper .swiper-button-prev {
-  width: 40px;
-}
 .box-swiper .swiper-button-margin {
   margin-top: 25px;
 }
@@ -12182,6 +12095,45 @@ ul li:last-child .card-list-4 {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .blogpage-article-title {
+    height: 90px;
+  }
+  .blogpage-article-description {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 494px) {
+  .blogpage-article-title {
+    height: 110px;
+  }
+  .blogpage-article-description {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 462px) {
+  .blogpage-article-title {
+    height: 110px;
+  }
+  .blogpage-article-description {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .blogpage-article-description {
+    height: 225px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .blogpage-article-description {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 396px) {
+  .blogpage-article-description {
+    height: 260px;
+  }
+}
 /* About Us Page Start Suru  */
 .bg-img-aboutus {
   height: 30vh;
@@ -13286,7 +13238,6 @@ ul li:last-child .card-list-4 {
 
 .title-details {
   text-align: justify;
-  margin-top: 40px;
 }
 
 /*Search Component End */
@@ -13587,7 +13538,13 @@ ul li:last-child .card-list-4 {
 @media screen and (max-width: 580px) {
   .share-icon-fundingbuilder {
     margin-left: 3px !important;
-    margin-top: -80px !important;
+    margin-top: 5px !important;
+  }
+}
+@media screen and (max-width: 515px) {
+  .share-icon-fundingbuilder {
+    margin-left: 3px !important;
+    margin-top: 30px !important;
   }
 }
 /* Share Icon End */
@@ -14097,11 +14054,6 @@ ul li:last-child .card-list-4 {
   font-family: Plus Jakarta Sans, sans-serif;
   font-size: 36px;
   color: #229a24;
-}
-
-.title-details {
-  text-align: justify;
-  margin-top: 27px;
 }
 
 .p-color {

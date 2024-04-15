@@ -191,7 +191,7 @@ export default function BlogInnerPage() {
                                                         <div className="author-image">
                                                             <Link legacyBehavior href="#">
                                                                 <a>
-                                                                    <img className="avatar" src="../assets/imgs/page/blog-page/user5.png" alt />
+                                                                    <img className="avatar" src="../assets/imgs/page/blog-page/user3.png" alt />
                                                                 </a>
                                                             </Link>
 
@@ -210,7 +210,7 @@ export default function BlogInnerPage() {
                                                         <div className="author-image">
                                                             <Link legacyBehavior href="/author">
                                                                 <a>
-                                                                    <img className="avatar" src="../assets/imgs/page/blog-page/user1.png" alt />
+                                                                    <img className="avatar" src="../assets/imgs/page/blog-page/user3.png" alt />
                                                                 </a>
                                                             </Link>
 

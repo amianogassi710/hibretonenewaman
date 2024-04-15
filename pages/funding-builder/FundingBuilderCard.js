@@ -64,16 +64,23 @@ function FundingBuilderCard() {
     return (
         <div className="background-random-fundingbuilder">
 
-            <section className="section-box mt-50">
+            
+
+            <section className="section-box mt-50 mb-25">
                 <div className="container">
-                    <div className="share-icon-container-fundingbuilder">
-                        <IoShareSocialOutline className="share-icon-fundingbuilder" />
+                    <div className="flex-container">
+                        <div className="share-icon-container-fundingbuilder">
+                                <IoShareSocialOutline className="share-icon-fundingbuilder" />
+                        </div>
+                        <div className="text-center">
+                            <h2 className="section-title mb-10">
+                            Finance & Investment for Your Enterprise
+                            </h2>
+                            <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
+                            Support to overcome barriers in accessing funding
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className="text-center">
-                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>Finance & Investment for Your Enterprise</h2>
-                    <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp meetteamtext">Support to overcome barriers in accessing funding
-                    </p>
                 </div>
             </section>
 
