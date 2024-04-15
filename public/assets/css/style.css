@@ -9916,7 +9916,8 @@ ul li:last-child .card-list-4 {
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 26px; /* 144.444% */
+  line-height: 26px;
+  /* 144.444% */
 }
 
 .product-author {
@@ -9937,7 +9938,8 @@ ul li:last-child .card-list-4 {
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 25px; /* 156.25% */
+  line-height: 25px;
+  /* 156.25% */
 }
 
 .author-image {
@@ -9964,7 +9966,8 @@ ul li:last-child .card-list-4 {
 
 .blogpage-trendingnow-author-mainimage {
   width: 60px;
-  height: 50px; /* Adjust the height as needed */
+  height: 50px;
+  /* Adjust the height as needed */
   object-fit: cover;
   border-radius: 50%;
   margin: auto 0;
@@ -10386,23 +10389,18 @@ ul li:last-child .card-list-4 {
 }
 /* Blog Category Finish */
 /*blog search component */
-.banner-hero1 {
+.banner-hero1, .banner-hero-blogpage {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 65px 0px 70px;
   position: relative;
+  max-width: 1770px;
+  margin: 0 auto;
 }
 
-.banner-hero1 .block-banner1 .industry-form-find {
-  background: #ffffff;
-  width: 1100px;
-  padding: 8px 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e6f6;
-  border-radius: 8px;
-}
-
-.banner-hero1 .block-banner1 .blog-form-find-top {
+.banner-hero1 .block-banner1 .blog-form-find-top,
+.banner-hero-blogpage .block-banner1 .blog-form-find-top {
   background: #ffffff;
   padding: 8px 8px;
   border: 1px solid #e0e6f6;
@@ -10410,23 +10408,10 @@ ul li:last-child .card-list-4 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.banner-hero1 .block-banner1 .industry-form-find form {
+.banner-hero1 .block-banner1 .blog-form-find-top form,
+.banner-hero-blogpage .block-banner1 .blog-form-find-top form {
   width: 100%;
   display: flex;
-}
-
-.banner-hero1 .block-banner1 .blog-form-find-top form {
-  width: 100%;
-  display: flex;
-}
-
-.industry-form-find form .industry-input {
-  height: 50px;
-  box-shadow: none;
-  padding-left: 20px;
-  font-size: 16px;
-  width: 100%;
-  border: none;
 }
 
 .blog-form-find-top form .blog-one {
@@ -10480,11 +10465,7 @@ ul li:last-child .card-list-4 {
 }
 
 @media screen and (max-width: 420px) {
-  .banner-hero1 .block-banner1 .industry-form-find {
-    padding: 10px 0px 15px 0px !important;
-    margin: 0 -10px !important;
-  }
-  .banner-hero1 .block-banner1 .blog-form-find-top {
+  .banner-hero1 .block-banner1 .blog-form-find-top, .banner-hero-blogpage .block-banner1 .blog-form-find-top {
     padding: 10px 0px 15px 0px !important;
     margin: 0 -10px !important;
   }
@@ -10494,18 +10475,13 @@ ul li:last-child .card-list-4 {
   .block-banner1 {
     width: auto;
   }
-  .banner-hero1 .block-banner1 .industry-form-find {
-    padding: 20px;
-    width: auto;
-  }
   .banner-hero1 .block-banner1 .blog-form-find-top {
     padding: 20px;
   }
-  .banner-hero1 .block-banner1 .industry-form-find form {
-    display: flex;
-    flex-wrap: wrap;
+  .banner-hero1 .block-banner1 .blog-form-find-top, .banner-hero-blogpage .block-banner1 .blog-form-find-top {
+    padding: 20px;
   }
-  .banner-hero1 .block-banner1 .blog-form-find-top form {
+  .banner-hero1 .block-banner1 .blog-form-find-top form, .banner-hero-blogpage .block-banner1 .blog-form-find-top form {
     display: flex;
     flex-wrap: wrap;
   }
@@ -12087,7 +12063,8 @@ ul li:last-child .card-list-4 {
   margin: 0 4px;
   opacity: 0.5;
 }
-.swiper-pagination .swiper-pagination-bullet-active, .swiper-pagination .swiper-pagination-bullet-active:hover {
+.swiper-pagination .swiper-pagination-bullet-active,
+.swiper-pagination .swiper-pagination-bullet-active:hover {
   background-color: #3C65F5;
   width: 12px;
   height: 12px;
@@ -13171,12 +13148,13 @@ ul li:last-child .card-list-4 {
 }
 
 /* Background Blue random Design */
-.background-random-industry-intelligence {
+.background-random-fundingbuilder {
   position: relative;
   overflow: hidden;
 }
 
-.background-random-industry-intelligence::before, .background-random-industry-intelligence::after {
+.background-random-fundingbuilder::before,
+.background-random-fundingbuilder::after {
   content: "";
   position: absolute;
   width: 800px;
@@ -13184,18 +13162,20 @@ ul li:last-child .card-list-4 {
   background: #f2f6fd;
   transform-origin: top left;
   z-index: -1;
-  border-radius: 12px;
 }
 
-.background-random-industry-intelligence::before {
+.background-random-fundingbuilder::before {
   transform: rotate(-8deg);
   top: 800px;
   left: -300px;
+  border-radius: 25px;
 }
-.background-random-industry-intelligence::after {
+
+.background-random-fundingbuilder::after {
   transform: rotate(8deg);
-  top: 1200px;
+  top: 1100px;
   right: -300px;
+  border-radius: 25px;
 }
 
 /* Background Blue random Design End */
@@ -13228,15 +13208,18 @@ ul li:last-child .card-list-4 {
   }
 }
 /*Media Query  End*/
-/*Search Component Start */
-.banner-hero1 {
+/*Hero Component Start */
+.banner-hero-fundingbuilder {
   padding: 0px 65px 0px 70px;
   position: relative;
   max-width: 1770px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.title-details {
+.title-details-fundingbuilder {
   text-align: justify;
 }
 
@@ -13248,64 +13231,24 @@ ul li:last-child .card-list-4 {
   width: 25px;
 }
 
-/* Overview button */
-.overview-button {
-  align-items: center;
-  width: 100%;
-}
-
-.previous-button {
-  align-items: center;
-  border-radius: 4px;
-  border: 1px solid rgb(180, 192, 224);
-  background-color: #fff0a3;
-  color: var(--text-paragraph, var(--Paragraph-Text, ));
-  padding: 14px 89px;
-  font: 700 18px/144% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  font-style: normal;
-  line-height: 26px;
-  margin-left: 5px;
-  margin-top: 50px;
-}
-
-.example-button {
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  border: 1px solid rgb(180, 192, 224);
-  background-color: #fff0a3;
-  color: var(--text-paragraph, var(--Paragraph-Text, ));
-  padding: 14px 85px;
-  font: 700 18px/144% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  font-style: normal;
-  line-height: 26px;
-  margin-left: 5px;
-  margin-top: 50px;
-}
-
-/* Inner Page  End */
 .fundingbuilderparaheading {
   font-family: "Plus Jakarta Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
-  /* 144.444% */
 }
 
 .fundingbuilderparatext {
   color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
   text-align: justify;
-  /* text/font-sm */
   font-family: "Plus Jakarta Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
-  /* 166.667% */
 }
 
-/* About Us Page Start Suru  */
 .bg-img-fundingbuilder {
   height: 30vh;
   background: url(../imgs/page/funding-builder/fundingbuilderhero.jpg) no-repeat center center;
@@ -13324,12 +13267,10 @@ ul li:last-child .card-list-4 {
   border-left: 10px solid #83cbff;
   padding-bottom: 8px;
   padding-top: 5px;
-  /* Adjust this value to change the height */
 }
 
 .bg-img-fundingbuilder p {
   border-left: 10px solid #83cbff;
-  /* Adjust this value to change the height */
 }
 
 .bg-img-fundingbuilder::before {
@@ -13429,13 +13370,11 @@ ul li:last-child .card-list-4 {
   margin-bottom: 25px;
   color: var(--text-Paragrap-2, #435579);
   text-align: justify;
-  /* text/font-lg */
   font-family: "Plus Jakarta Sans";
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 30px;
-  /* 125% */
 }
 
 @media (max-width: 991px) {
@@ -13468,12 +13407,12 @@ ul li:last-child .card-list-4 {
 }
 @media screen and (max-width: 1200px) {
   .container-fundingbuilder {
-    max-width: 900px;
+    max-width: 700px;
   }
 }
 @media screen and (max-width: 992px) {
   .container-fundingbuilder {
-    max-width: 800px;
+    max-width: 700px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -13491,7 +13430,7 @@ ul li:last-child .card-list-4 {
 @media screen and (max-width: 450px) {
   .container-fundingbuilder {
     max-width: 420px;
-    padding: 0 50px;
+    padding: 0 50px 0 30px;
   }
 }
 @media (min-width: 1600px) {
@@ -14431,6 +14370,383 @@ ul li:last-child .card-list-4 {
 }
 
 /* Inner Page  End */
+/* Background Blue random Design */
+.background-random-fundingbuilder {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-random-fundingbuilder::before,
+.background-random-fundingbuilder::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 1500px;
+  background: #f2f6fd;
+  transform-origin: top left;
+  z-index: -1;
+}
+
+.background-random-fundingbuilder::before {
+  transform: rotate(-8deg);
+  top: 800px;
+  left: -300px;
+  border-radius: 25px;
+}
+
+.background-random-fundingbuilder::after {
+  transform: rotate(8deg);
+  top: 1100px;
+  right: -300px;
+  border-radius: 25px;
+}
+
+/* Background Blue random Design End */
+/*Media Query */
+@media (max-width: 992px) {
+  h2 {
+    font-size: 40px !important;
+  }
+  .color-text-paragraph-2 {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px !important;
+    margin-bottom: 10px !important;
+  }
+  .color-text-paragraph-2 {
+    font-size: 18px !important;
+    line-height: 25px !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 455px) {
+  h2 {
+    font-size: 26px !important;
+  }
+  .color-text-paragraph-2 {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}
+/*Media Query  End*/
+/*Hero Component Start */
+.banner-hero-fundingbuilder {
+  padding: 0px 65px 0px 70px;
+  position: relative;
+  max-width: 1770px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-details-fundingbuilder {
+  text-align: justify;
+}
+
+/*Search Component End */
+.img {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 25px;
+}
+
+.fundingbuilderparaheading {
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.fundingbuilderparatext {
+  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
+  text-align: justify;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.bg-img-fundingbuilder {
+  height: 30vh;
+  background: url(../imgs/page/funding-builder/fundingbuilderhero.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.bg-img-fundingbuilder h2,
+.bg-img-fundingbuilder p {
+  z-index: 2;
+  position: relative;
+  color: white;
+  padding-left: 25px;
+}
+
+.bg-img-fundingbuilder h2 {
+  border-left: 10px solid #83cbff;
+  padding-bottom: 8px;
+  padding-top: 5px;
+}
+
+.bg-img-fundingbuilder p {
+  border-left: 10px solid #83cbff;
+}
+
+.bg-img-fundingbuilder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #05264E;
+}
+
+.imagecontent {
+  border-radius: 16px;
+  transition: 0.05s ease-in-out;
+  width: 100%;
+  max-width: 1000px;
+  height: 450px;
+}
+.imagecontent:hover {
+  scale: 1.02;
+  transition: 0.05s ease-in-out;
+}
+
+.imagecontentwithborder {
+  border-radius: 16px;
+  transition: 0.05s ease-in-out;
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+  height: 450px;
+}
+.imagecontentwithborder:hover {
+  scale: 1.02;
+  transition: 0.05s ease-in-out;
+}
+
+.support-section {
+  display: flex;
+  max-width: 653px;
+  padding-top: 26px;
+  flex-direction: column;
+  font-size: 24px;
+}
+
+.support-card {
+  border-radius: 16px;
+  display: flex;
+  margin-top: 26px;
+  width: 105%;
+  flex-direction: column;
+  align-items: start;
+  padding: 0 0 25px 25px;
+}
+
+@media (max-width: 991px) {
+  .support-card {
+    max-width: 105%;
+    padding-left: 20px;
+  }
+}
+.support-card-inner {
+  border-radius: 16px;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  margin-top: -26px;
+  width: 105%;
+  flex-direction: column;
+  padding: 24px 40px;
+}
+
+@media (max-width: 991px) {
+  .support-card-inner {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+.support-card-title {
+  color: var(--brand-brand-1, #05264E);
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (max-width: 991px) {
+  .support-card-title {
+    max-width: 100%;
+  }
+}
+.support-card-description {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  color: var(--text-Paragrap-2, #435579);
+  text-align: justify;
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+@media (max-width: 991px) {
+  .support-card-description {
+    max-width: 100%;
+    margin-right: 10px;
+  }
+}
+.support-card-image {
+  aspect-ratio: 1.8;
+  object-position: center;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .support-card-image {
+    max-width: 100%;
+  }
+}
+.container-fundingbuilder {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1600px) {
+  .container-fundingbuilder {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container-fundingbuilder {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container-fundingbuilder {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-fundingbuilder {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-fundingbuilder {
+    max-width: 480px;
+    padding: 0 25px;
+    margin-top: -25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container-fundingbuilder {
+    max-width: 420px;
+    padding: 0 50px 0 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .container-fundingbuilder {
+    max-width: 1200px;
+  }
+}
+/* Share Icon Start */
+.share-icon-container-fundingbuilder {
+  position: absolute;
+}
+
+.share-icon-fundingbuilder {
+  font-size: 30px;
+  color: #3c65f5;
+}
+
+.share-icon-fundingbuilder:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background-color: #05264e;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  .share-icon-fundingbuilder {
+    margin-left: 35px !important;
+    margin-top: -76px !important;
+  }
+}
+@media screen and (max-width: 999px) {
+  .share-icon-fundingbuilder {
+    margin-left: 14px !important;
+    margin-top: -76px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .share-icon-fundingbuilder {
+    margin-left: 32px !important;
+    margin-top: -76px !important;
+  }
+}
+@media screen and (max-width: 580px) {
+  .share-icon-fundingbuilder {
+    margin-left: 3px !important;
+    margin-top: 5px !important;
+  }
+}
+@media screen and (max-width: 515px) {
+  .share-icon-fundingbuilder {
+    margin-left: 3px !important;
+    margin-top: 30px !important;
+  }
+}
+/* Share Icon End */
+@media screen and (max-width: 576px) {
+  .fundingbuilder-hero-heading,
+  .fundingbuilder-hero-subheading {
+    margin-left: -65px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .fundingbuilder-video-laptop {
+    height: 300px;
+  }
+  .imagecontent {
+    height: 300px;
+  }
+  .imagecontentwithborder {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .fundingbuilder-video-laptop {
+    height: 280px;
+  }
+  .imagecontent {
+    height: 260px;
+  }
+  .imagecontentwithborder {
+    height: 260px;
+  }
+}
+.fundingbuilder-inner-heading {
+  font-size: 36px !important;
+}
+
+@media screen and (max-width: 576px) {
+  .fundingbuilder-inner-heading {
+    font-size: 28px !important;
+  }
+}
 @media (max-width: 1399.98px) {
   .custom-class {
     display: block;

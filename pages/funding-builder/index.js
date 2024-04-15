@@ -7,7 +7,6 @@ import { Grid } from "@mui/material";
 import FullAccessButton from "../../components/elements/FullAccessButton";
 import FundingBuilderCard from "./FundingBuilderCard";
 
-
 function useLockBodyScroll(open) {
     useEffect(() => {
         if (open) {
@@ -29,7 +28,6 @@ export default function Index() {
     const [readMore3, setReadMore3] = useState(false);
     const [readMore4, setReadMore4] = useState(false);
 
-
     const [isOpen, setIsOpen] = useState(false);
     useLockBodyScroll(isOpen);
 
@@ -39,12 +37,11 @@ export default function Index() {
                 <div className="background-random-fundingbuilder">
                     <section className="section-box">
                         <label className="headingdivider1"></label>
-                        <div className="banner-hero1 bg-img-fundingbuilder">
+                        <div className="banner-hero-fundingbuilder bg-img-fundingbuilder">
                             <div className="container d-flex align-items-center">
-
                                 <div className="row">
                                     <div className="col">
-                                        <h2 className="heading-aboutus fundingbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '60px' }}>Funding Builder</h2>
+                                        <h2 className="fundingbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '60px' }}>Funding Builder</h2>
                                         <p className="fundingbuilder-hero-subheading color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
                                             Resources,  tools and connections to deliver funding and investment for your commercial or social enterprise
                                         </p>
@@ -89,7 +86,7 @@ export default function Index() {
                                         lg={6}
                                         sx={{ paddingLeft: { lg: "75px" } }}
                                     >
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             <p className="fundingbuilderparaheading" style={{ color: "#3C65F5" }}>
                                                 Getting Prepared for Investment
                                             </p>
@@ -164,7 +161,7 @@ export default function Index() {
                                         <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="fundingbuilder-video-laptop"></iframe>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             <p className="fundingbuilderparaheading" style={{ color: "#3C65F5" }}>
                                                 Getting Prepared for Investment
                                             </p>
@@ -246,10 +243,10 @@ export default function Index() {
                                 >
                                     <Grid item lg={6} sx={{ paddingRight: { lg: "75px" } }}>
 
-                                        <h2 className="" style={{ fontSize: "36px !important" }}>
+                                        <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
                                             Most Used For Funding Businesses
                                         </h2>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             {readMore1 ? (
                                                 <div>
                                                     < p className="fundingbuilderparatext"> <strong> Friends, family and fools: </strong> As you know the people you’re pitching to, one of the perks of this type of funding is
@@ -328,7 +325,7 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             {readMore1 ? (
                                                 <div>
                                                     < p className="fundingbuilderparatext"> <strong> Friends, family and fools: </strong> As you know the people you’re pitching to, one of the perks of this type of funding is
@@ -407,10 +404,10 @@ export default function Index() {
                                         lg={6}
                                         sx={{ paddingLeft: { lg: "75px" } }}
                                     >
-                                        <h2 className="" style={{ fontSize: "36px !important" }}>
+                                        <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
                                             Less Often Used for Funding
                                         </h2>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             {readMore4 ? (
                                                 <div>
                                                     <p className="fundingbuilderparatext">
@@ -423,7 +420,7 @@ export default function Index() {
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-30">
                                                         <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
+                                                        Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-30">
                                                         <strong> Angel Investors: </strong>
@@ -443,7 +440,7 @@ export default function Index() {
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-30">
                                                         <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
+                                                        Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
                                                     </p>
                                                 </div>
                                             )}
@@ -481,7 +478,7 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             {readMore4 ? (
                                                 <div>
                                                     <p className="fundingbuilderparatext">
@@ -494,7 +491,7 @@ export default function Index() {
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-10">
                                                         <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
+                                                        Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-10">
                                                         <strong> Angel Investors: </strong>
@@ -514,7 +511,7 @@ export default function Index() {
                                                     </p>
                                                     <p className="fundingbuilderparatext mt-10">
                                                         <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
+                                                        Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
                                                     </p>
                                                 </div>
                                             )}
@@ -554,11 +551,11 @@ export default function Index() {
                                     >
                                         <h2
                                             className=""
-                                            style={{ fontSize: "36px !important" }}
+                                            style={{ marginBottom: "40px", fontSize: "36px !important" }}
                                         >
                                             Even Less Often Used
                                         </h2>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             {readMore2 ? (
                                                 <div>
                                                     <p className="fundingbuilderparatext">
@@ -637,7 +634,7 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             {readMore2 ? (
                                                 <div>
                                                     <p className="fundingbuilderparatext">
@@ -713,11 +710,11 @@ export default function Index() {
 
                                         <h2
                                             className=""
-                                            style={{ fontSize: "36px !important" }}
+                                            style={{ marginBottom: "40px", fontSize: "36px !important" }}
                                         >
                                             Resources to Improve Finance Access
                                         </h2>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             {readMore3 ? (
                                                 <div>
                                                     <p className="fundingbuilderparatext mt-10">
@@ -775,7 +772,7 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details">
+                                        <div className="title-details-fundingbuilder">
                                             {readMore3 ? (
                                                 <div>
                                                     <p className="fundingbuilderparatext mt-10">

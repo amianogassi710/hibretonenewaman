@@ -7,8 +7,7 @@ const DiscoverButton = () => {
     return (
         <>
             <section className="section-box">
-                <label className="headingdivider1"></label>
-                <div className="banner-hero1 bg-img-blog">
+                <div className="banner-hero-blogpage bg-img-blog">
                     <div className="container d-flex align-items-center">
                         <div className="row">
                             <div className="col">
@@ -40,7 +39,7 @@ const DiscoverButton = () => {
 
             <section className="section-box mt-25 mb-25">
                 <div className="container">
-                    <div className="banner-hero1">
+                    <div className="banner-hero-blogpage">
                         <div className="block-banner1">
                             <BlogSearchBar />
                         </div>

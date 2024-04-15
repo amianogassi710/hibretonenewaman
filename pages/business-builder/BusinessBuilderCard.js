@@ -19,35 +19,35 @@ function SupportCard({ title, description, imageSrc, imageAlt, backgroundColor, 
     );
 }
 
-function FundingBuilderCard() {
+function BusinessBuilderCard() {
     const supportCards = [
         {
-            title: "Preparation",
-            description: "Improving your chances of funding through developing a  business with growth potential.",
+            title: "Business Preparation",
+            description: "Analysing self, environment and validating the business idea before costly errors are made.",
             imageSrc: "../assets/imgs/page/funding-builder/card1.jpeg",
             imageAlt: "Support in Securing Funding",
             backgroundColor: "rgba(23, 175, 208, 0.40)",
             border: "1px solid rgba(23, 175, 208, 0.40)",
         },
         {
-            title: "Support in Securing Funding",
-            description: "hibretOne resources and our partners can assist in completing required documentation.",
+            title: "Accessing Entrepreneurial Learning",
+            description: "Entrepreneur education upskill programmes available to all aspirers on and off platform.",
             imageSrc: "../assets/imgs/page/funding-builder/card2.jpeg",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(255, 223, 54, 0.60)",
             border: "1px solid #FFDF36",
         },
         {
-            title: "Sources of Funding",
-            description: "Determining the best source of funding for your stage of business and  growth requirements.",
+            title: "Sources of Learning",
+            description: "Curating the best sources and connections for business startup support.",
             imageSrc: "../assets/imgs/page/funding-builder/card3.jpeg",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(255, 126, 32, 0.50)",
             border: "1px solid rgba(255, 126, 32, 0.50)",
         },
         {
-            title: "Funding & Investment",
-            description: "Alternative forms of investment; include grants, loans, equity, debt, tax credits, crowdfunding.",
+            title: "Funding Entrepreneurship",
+            description: "Scholarships to create more aspirers from all socio-demographic backgrounds.",
             imageSrc: "../assets/imgs/page/funding-builder/card4.jpeg",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(208, 23, 178, 0.40)",
@@ -71,10 +71,10 @@ function FundingBuilderCard() {
                         </div>
                         <div className="text-center">
                             <h2 className="section-title mb-10">
-                            Finance & Investment for Your Enterprise
+                            Before Building Your Business, We Help Build You                            
                             </h2>
                             <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
-                            Support to overcome barriers in accessing funding
+                            Support to improve opportunities to be successful 
                             </p>
                         </div>
                     </div>
@@ -228,4 +228,4 @@ function FundingBuilderCard() {
         </div>
     );
 }
-export default FundingBuilderCard;
+export default BusinessBuilderCard;
