@@ -24,7 +24,7 @@ function BusinessBuilderCard() {
         {
             title: "Business Preparation",
             description: "Analysing self, environment and validating the business idea before costly errors are made.",
-            imageSrc: "../assets/imgs/page/funding-builder/card1.jpeg",
+            imageSrc: "../assets/imgs/page/business-builder/businesspreparation.jpg",
             imageAlt: "Support in Securing Funding",
             backgroundColor: "rgba(23, 175, 208, 0.40)",
             border: "1px solid rgba(23, 175, 208, 0.40)",
@@ -32,7 +32,7 @@ function BusinessBuilderCard() {
         {
             title: "Accessing Entrepreneurial Learning",
             description: "Entrepreneur education upskill programmes available to all aspirers on and off platform.",
-            imageSrc: "../assets/imgs/page/funding-builder/card2.jpeg",
+            imageSrc: "../assets/imgs/page/business-builder/accessing.jpg",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(255, 223, 54, 0.60)",
             border: "1px solid #FFDF36",
@@ -40,7 +40,7 @@ function BusinessBuilderCard() {
         {
             title: "Sources of Learning",
             description: "Curating the best sources and connections for business startup support.",
-            imageSrc: "../assets/imgs/page/funding-builder/card3.jpeg",
+            imageSrc: "../assets/imgs/page/business-builder/sources.jpg",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(255, 126, 32, 0.50)",
             border: "1px solid rgba(255, 126, 32, 0.50)",
@@ -48,7 +48,7 @@ function BusinessBuilderCard() {
         {
             title: "Funding Entrepreneurship",
             description: "Scholarships to create more aspirers from all socio-demographic backgrounds.",
-            imageSrc: "../assets/imgs/page/funding-builder/card4.jpeg",
+            imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/536ab00b5153a7bde19d392b8df61c4d607b988391f2e27e64777ea1e14e5459?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(208, 23, 178, 0.40)",
             border: "1px solid rgba(208, 23, 178, 0.40)",
@@ -60,14 +60,13 @@ function BusinessBuilderCard() {
     const thirdCard = supportCards[2]; // Accessing the third card (index 2)
     const fourthCard = supportCards[3]; // Accessing the third card (index 2)
 
-
     return (
         <div className="">
             <section className="section-box mt-50 mb-25">
                 <div className="container">
                     <div className="flex-container">
-                        <div className="share-icon-container-fundingbuilder">
-                                <IoShareSocialOutline className="share-icon-fundingbuilder" />
+                        <div className="share-icon-container-businessbuilder">
+                                <IoShareSocialOutline className="share-icon-businessbuilder" />
                         </div>
                         <div className="text-center">
                             <h2 className="section-title mb-10">
@@ -83,7 +82,7 @@ function BusinessBuilderCard() {
 
             <section className="section-box mt-35">
                 <div className="post-loop-grid">
-                    <div className="container-fundingbuilder">
+                    <div className="container-businessbuilder">
                         <Grid
                             container
                             alignItems="center"
@@ -127,7 +126,7 @@ function BusinessBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                            <section className="support-section">
+                            <section className="support-section-mobileview">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
@@ -157,7 +156,7 @@ function BusinessBuilderCard() {
 
             <section className="section-box mt-25">
                 <div className="post-loop-grid">
-                    <div className="container-fundingbuilder">
+                    <div className="container-businessbuilder">
                         <Grid
                             container
                             alignItems="center"

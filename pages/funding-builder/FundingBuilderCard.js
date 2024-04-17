@@ -108,7 +108,7 @@ function FundingBuilderCard() {
                                 lg={6}
                                 sx={{ paddingLeft: { lg: "60px" } }}
                             >
-                                <section className="support-section">
+                                <section className="support-section-mobileview">
                                     <SupportCard
                                         title={secondCard.title}
                                         description={secondCard.description}
@@ -127,7 +127,7 @@ function FundingBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                            <section className="support-section">
+                            <section className="support-section-mobileview">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}

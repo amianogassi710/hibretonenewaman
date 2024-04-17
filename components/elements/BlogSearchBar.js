@@ -107,7 +107,7 @@ const BlogSearchBar = () => {
                         className="blog-two"
                     />
 
-                    <button onClick={handleSearch} className="blog-btn-search" style={{ marginLeft: '25px' }}>SEARCH</button>
+                    <button onClick={handleSearch} className="blog-btn-search">SEARCH</button>
 
                 </form>
             </div>

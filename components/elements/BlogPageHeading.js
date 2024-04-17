@@ -40,7 +40,7 @@ const DiscoverButton = () => {
             <section className="section-box mt-25 mb-25">
                 <div className="container">
                     <div className="banner-hero-blogpage">
-                        <div className="block-banner1">
+                        <div className="block-banner1 blogpage-block-banner">
                             <BlogSearchBar />
                         </div>
                     </div>

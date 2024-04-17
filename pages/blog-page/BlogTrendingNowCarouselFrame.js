@@ -27,8 +27,7 @@ return (
     <>
             <div className="section-box wow animate_animated animate_fadeIn">
                 <div className="container blogpage-trendingnowcarousel">
-                    
-                    <div className="box-swiper grant-category">
+                    <div className="box-swiper blogpage-trendingnowcarousel-swiper">
                         <div>
                             <BlogTrendingNowCarousel />
                             <div className="swiper-button-next" />

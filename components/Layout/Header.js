@@ -56,7 +56,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                             <nav className="nav-main-menu">
                                 <ul className="main-menu">
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/">
+                                        <Link legacyBehavior href="/business-builder">
                                             <a>Business Builder</a>
                                         </Link>
 

@@ -97,7 +97,7 @@ const BlogTrendingNowCaraousel = () => {
                             <div className="swiper-slide hover-up">
                                 <Link
                                     legacyBehavior
-                                    href={`#`}
+                                    href={`blog-page/blog-inner-page`}
                                 >
                                     <a>
                                         <div className="blogpage-item-logo">

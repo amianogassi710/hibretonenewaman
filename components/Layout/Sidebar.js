@@ -36,7 +36,7 @@ const Sidebar = ({ openClass }) => {
                                 {/* mobile menu start*/}
                                 <nav>
                                     <ul className="mobile-menu font-heading">
-                                         {/* <li className={isActive.key == 1 ? "has-children active" : "has-children"}>
+                                        {/* <li className={isActive.key == 1 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(1)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
                                             <Link legacyBehavior href="/"><a className="active">Home</a></Link>
@@ -62,27 +62,27 @@ const Sidebar = ({ openClass }) => {
                                                     </li>
                                             </ul>
                                         </li> */}
-                                         <li className={isActive.key == 2 ? "has-children active" : "has-children"}>
+                                        <li className={isActive.key == 2 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(2)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/"><a>Business Builder</a></Link>
+                                            <Link legacyBehavior href="/business-builder"><a>Business Builder</a></Link>
 
                                             <ul className={isActive.key == 2 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>
                                                     <Link legacyBehavior href="/entrepreneur-assessments"><a>Entrepreneur Assessments</a></Link>
-                                                    </li>
+                                                </li>
                                                 <li>
                                                     <Link legacyBehavior href="/"><a>Entrepreneur Academy</a></Link>
-                                                    </li>
+                                                </li>
                                                 <li>
                                                     <Link legacyBehavior href="/"><a>Scholarships & Bursaries</a></Link>
-                                                    </li>
+                                                </li>
                                             </ul>
                                         </li>
-                                         <li className={isActive.key == 3 ? "has-children active" : "has-children"}>
+                                        <li className={isActive.key == 3 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(3)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/"><a>Funding Builder</a></Link>
+                                            <Link legacyBehavior href="/funding-builder"><a>Funding Builder</a></Link>
 
                                             <ul className={isActive.key == 3 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>
@@ -99,7 +99,7 @@ const Sidebar = ({ openClass }) => {
                                                 </li>
                                             </ul>
                                         </li>
-                                         <li className={isActive.key == 4 ? "has-children active" : "has-children"}>
+                                        <li className={isActive.key == 4 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(4)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
                                             <Link legacyBehavior href="/candidates-grid"><a>Resource Builder</a></Link>
@@ -119,7 +119,7 @@ const Sidebar = ({ openClass }) => {
                                                 </li>
                                             </ul>
                                         </li>
-                                         <li className={isActive.key == 5 ? "has-children active" : "has-children"}>
+                                        <li className={isActive.key == 5 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(5)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
                                             <Link legacyBehavior href="/blog-grid"><a>Career Builder</a></Link>
@@ -136,12 +136,15 @@ const Sidebar = ({ openClass }) => {
                                                 </li>
                                             </ul>
                                         </li>
-                                         <li className={isActive.key == 6 ? "has-children active" : "has-children"}>
+                                        <li className={isActive.key == 6 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(6)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/blog-grid"><a>About Us</a></Link>
+                                            <Link legacyBehavior href="/about-us"><a>About Us</a></Link>
 
                                             <ul className={isActive.key == 6 ? "sub-menu d-block" : "sub-menu d-none"}>
+                                                <li>
+                                                    <Link legacyBehavior href="/blog-page"><a>Blog</a></Link>
+                                                </li>
                                                 <li>
                                                     <Link legacyBehavior href="/"><a>Pricing</a></Link>
                                                 </li>
@@ -152,7 +155,7 @@ const Sidebar = ({ openClass }) => {
                                         </li>
                                         <li>
                                             <Link legacyBehavior href="/page-contact"><a>Contact</a></Link>
-                                            </li>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -161,15 +164,15 @@ const Sidebar = ({ openClass }) => {
                                 <ul className="mobile-menu font-heading">
                                     <li>
                                         <Link legacyBehavior href="#"><a>Profile</a></Link>
-                                        </li>
+                                    </li>
 
                                     <li>
                                         <Link legacyBehavior href="#"><a>Account Settings</a></Link>
-                                        </li>
+                                    </li>
 
                                     <li>
                                         <Link legacyBehavior href="/page-signin"><a>Sign Out</a></Link>
-                                        </li>
+                                    </li>
                                 </ul>
                             </div>
                             <div className="site-copyright">Copyright 2024 © hibretOne</div>

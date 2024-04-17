@@ -197,6 +197,10 @@ $font-family: Plus Jakarta Sans, sans-serif;
     font-size: 24px;
 }
 
+.support-section-mobileview {
+    padding-top: 0px;
+}
+
 .support-card {
     border-radius: 16px;
     display: flex;
@@ -424,6 +428,6 @@ $font-family: Plus Jakarta Sans, sans-serif;
 
 @media screen and (max-width:576px) {
     .fundingbuilder-inner-heading {
-        font-size: 28px !important;
+        font-size: 20px !important;
     }
 }

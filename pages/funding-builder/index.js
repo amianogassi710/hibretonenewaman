@@ -36,7 +36,6 @@ export default function Index() {
             <Layout>
                 <div className="background-random-fundingbuilder">
                     <section className="section-box">
-                        <label className="headingdivider1"></label>
                         <div className="banner-hero-fundingbuilder bg-img-fundingbuilder">
                             <div className="container d-flex align-items-center">
                                 <div className="row">
@@ -313,9 +312,9 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h2 className="fundingbuilder-inner-heading">
+                                        <h4 className="fundingbuilder-inner-heading">
                                             Most Used For Funding Businesses
-                                        </h2>
+                                        </h4>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <img
@@ -466,9 +465,9 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h2 className="fundingbuilder-inner-heading">
+                                        <h4 className="fundingbuilder-inner-heading">
                                             Less Often Used for Funding
-                                        </h2>
+                                        </h4>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <img
@@ -620,11 +619,11 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h2
+                                        <h4
                                             className="fundingbuilder-inner-heading"
                                         >
                                             Even Less Often Used
-                                        </h2>
+                                        </h4>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <img
@@ -759,11 +758,11 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
                                 >
                                     <Grid item xs={12} md={12}>
-                                        <h2
+                                        <h4
                                             className="fundingbuilder-inner-heading"
                                         >
                                             Resources to Improve Finance Access
-                                        </h2>                                    </Grid>
+                                        </h4>                                    </Grid>
                                     <Grid className="mt-10" item xs={12} md={12}>
                                         <img
                                             className="imagecontentwithborder"

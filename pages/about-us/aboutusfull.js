@@ -35,7 +35,6 @@ export default function Index() {
             <Layout>
                 <div className="background-random-aboutus">
                     <section className="section-box">
-                        <label className="headingdivider1"></label>
                         <div className="banner-hero1 bg-img-aboutus">
                             <div className="container d-flex align-items-center">
                                 <div className="row">

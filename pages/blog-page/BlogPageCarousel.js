@@ -17,7 +17,7 @@ const articleData = [
         title: "11 Tips for Student Work Placement Success",
         author: {
             authorImage: "https://cdn.builder.io/api/v1/image/assets/TEMP/59f4eb8d9bc34f0d6dea5131121a0bff828e6d6b860ac2d900734190fd28ed5d?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&",
-            author: "David Bond", 
+            author: "David Bond",
             date: "25 April 2024"
         },
     },
@@ -44,7 +44,7 @@ const articleData = [
         title: "11 Tips for Student Work Placement Success",
         author: {
             authorImage: "https://cdn.builder.io/api/v1/image/assets/TEMP/59f4eb8d9bc34f0d6dea5131121a0bff828e6d6b860ac2d900734190fd28ed5d?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&",
-            author: "David Bond", 
+            author: "David Bond",
             date: "25 April 2024"
         },
     },
@@ -105,7 +105,7 @@ export default function BlogPageCarousel() {
                         <div className="swiper-wrapper" >
                             {articleData.map((article, index) => (
                                 <div key={index} className="swiper-slide">
-                                    <div className="card-content" style={{height:'465px', width:''}}>
+                                    <div className="card-content" style={{ height: '465px', width: '' }}>
                                         <img
                                             loading="lazy"
                                             src={article.image}
@@ -114,14 +114,14 @@ export default function BlogPageCarousel() {
                                             height="100%"
                                         />
                                         <a href="/blog-page/blog-inner-page">
-                                                <div className="article-title-blogpage">{article.title}</div>
+                                            <div className="article-title-blogpage">{article.title}</div>
                                         </a>
                                         <img
-                                                    loading="lazy"
-                                                    src={article.author.authorImage}
-                                                    alt={`${article.author.author}'s profile picture`}
-                                                    className="author-image-blogpage1"
-                                                />
+                                            loading="lazy"
+                                            src={article.author.authorImage}
+                                            alt={`${article.author.author}'s profile picture`}
+                                            className="author-image-blogpage1"
+                                        />
                                         <div className="swiperdate-blogpage1">{article.author.author}</div>
                                         <div className="carouseldate-blogpage1">{article.author.date}</div>
 
@@ -129,18 +129,19 @@ export default function BlogPageCarousel() {
                                 </div>
                             ))}
                         </div>
-                        <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
-                            alt="" className="swiperprevious-blogpage"
-                            onClick={handlePrevious}
-                        />
-                        <img
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337491ace933b4787201406e5daad90ed836fd3e530ce3a96946f5557244025?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
-                            alt="" className="swipernext-blogpage"
-                            onClick={handleNext}
-                        />
+
                     </div>
                 </div>
+                <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+                    alt="" className="swiperprevious-blogpage"
+                    onClick={handlePrevious}
+                />
+                <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337491ace933b4787201406e5daad90ed836fd3e530ce3a96946f5557244025?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+                    alt="" className="swipernext-blogpage"
+                    onClick={handleNext}
+                />
             </div>
         </section >
     );
