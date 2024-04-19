@@ -5,13 +5,13 @@ import { IoSearchSharp } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
 
 
-const BlogSearchBar = () => {
+const EvidenceLedResearchSearchBar = () => {
 
     const router = useRouter();
 
     const handleSearch = (event) => {
         event.preventDefault(); // Prevent form submission
-        router.push("/blog-page/blog-inner-page");
+        router.push("#");
     };
 
     const locations = [
@@ -58,30 +58,21 @@ const BlogSearchBar = () => {
 
     return (
         <>
-            <div className="blog-form-find-top wow animate_animated animate_fadeInUp">
+            <div className="evidenceled-form-find-top wow animate_animated animate_fadeInUp">
                 <form>
                     <div style={{ width: '100%' }}>
-                        {isBelow768px ? (
-
+                        
                             <input
                                 className="blog-one"
                                 type="text"
-                                placeholder="Enter name of blog, article or the insight you require"
+                                placeholder="Enter name of report, article, research or subject"
                                 style={{ marginTop: "5px" }}
                             />
-                        ) : (
-                            <input
-                                className="blog-one"
-                                type="text"
-                                placeholder="Enter name of blog, article or the insight you require"
-                                style={{ marginTop: "5px" }}
-                            />
-                        )}
 
                     </div>
 
                     <div className="divider"></div>
-                    <CiLocationOn className="blogpage-searchbar-searchicon" />
+                    <CiLocationOn className="evidenceled-searchbar-searchicon" />
                     <Autocomplete
                         clearOnEscape
                         options={locations}
@@ -112,11 +103,12 @@ const BlogSearchBar = () => {
                         className="blog-two"
                     />
                     
-                    <button onClick={handleSearch} className="blog-btn-search"><IoSearchSharp className="blogpage-searchbox-searchicon"/> SEARCH</button>
+                    <button onClick={handleSearch} className="evidenceled-btn-search">
+                        <IoSearchSharp className="searchbox-searchicon-evidenceled"/> SEARCH</button>
                 </form>
             </div>
         </>
     );
 };
 
-export default BlogSearchBar;
+export default EvidenceLedResearchSearchBar;

@@ -90,7 +90,8 @@ function FundingBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                         >
-                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
+                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}
+                            className="d-flex justify-content-center">
                                 <section className="support-section">
                                     <SupportCard
                                         title={firstCard.title}
@@ -104,11 +105,11 @@ function FundingBuilderCard() {
                             </Grid>
                             <Grid
                                 item
-                                className=""
                                 lg={6}
                                 sx={{ paddingLeft: { lg: "60px" } }}
+                                className="d-flex justify-content-center"
                             >
-                                <section className="support-section-mobileview">
+                                <section className="support-section">
                                     <SupportCard
                                         title={secondCard.title}
                                         description={secondCard.description}
@@ -126,8 +127,8 @@ function FundingBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
-                            <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                            <section className="support-section-mobileview">
+                            <Grid item xs={12} md={12} >
+                            <section className="support-section">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
@@ -164,7 +165,8 @@ function FundingBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                         >
-                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
+                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}
+                            className="d-flex justify-content-center">
                                 <section className="support-section">
                                     <SupportCard
                                         title={thirdCard.title}
@@ -197,7 +199,7 @@ function FundingBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
-                            <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
+                            <Grid item xs={12} md={12} >
                             <section className="support-section">
                                     <SupportCard
                                         title={thirdCard.title}

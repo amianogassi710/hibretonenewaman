@@ -1,10 +1,3 @@
-$colors: (
-    card1:rgba(23, 175, 208, 0.40),
-    card2:rgba(255, 223, 54, 0.60),
-    card3:rgba(255, 126, 32, 0.50),
-    card4:rgba(208, 23, 178, 0.40),
-);
-
 @function color($color-name) {
     @return map-get($colors, $color-name)
 }
@@ -94,9 +87,9 @@ $font-family: Plus Jakarta Sans, sans-serif;
     text-align: justify;
 }
 
-.p-color {
-    color: color(p-color);
-}
+// .p-color {
+//     color: color(p-color);
+// }
 /*Search Component End */
 
 .img {
@@ -195,10 +188,6 @@ $font-family: Plus Jakarta Sans, sans-serif;
     padding-top: 26px;
     flex-direction: column;
     font-size: 24px;
-}
-
-.support-section-mobileview {
-    padding-top: 0px;
 }
 
 .support-card {

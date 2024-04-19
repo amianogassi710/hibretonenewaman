@@ -125,7 +125,7 @@ function BusinessBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
-                            <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
+                            <Grid item xs={12} md={12}>
                             <section className="support-section-mobileview">
                                     <SupportCard
                                         title={firstCard.title}
@@ -196,7 +196,7 @@ function BusinessBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
-                            <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
+                            <Grid item xs={12} md={12}>
                             <section className="support-section">
                                     <SupportCard
                                         title={thirdCard.title}
