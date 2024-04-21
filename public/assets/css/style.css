@@ -13635,6 +13635,20 @@ ul li:last-child .card-list-4 {
     font-size: 20px !important;
   }
 }
+@media screen and (max-width: 576px) {
+  .section-box.mt-75 {
+    margin-top: 40px !important;
+  }
+  .section-box.mt-50 {
+    margin-top: 30px !important;
+  }
+  .section-box.mt-40 {
+    margin-top: 30px !important;
+  }
+  .section-box.grid-container-businessbuilder.mt-75 {
+    margin-top: 30px !important;
+  }
+}
 /* Hero Section */
 .bg-img-laptop {
   display: flex;
@@ -14858,14 +14872,18 @@ ul li:last-child .card-list-4 {
     font-size: 20px !important;
   }
 }
+.section-box.mt-100 {
+  margin-top: 100px !important;
+}
+
 /* Background Blue random Design */
-.background-random-businessbuilder {
+.background-random-evidenceledresearch {
   position: relative;
   overflow: hidden;
 }
 
-.background-random-businessbuilder::before,
-.background-random-businessbuilder::after {
+.background-random-evidenceledresearch::before,
+.background-random-evidenceledresearch::after {
   content: "";
   position: absolute;
   width: 800px;
@@ -14875,14 +14893,14 @@ ul li:last-child .card-list-4 {
   z-index: -1;
 }
 
-.background-random-businessbuilder::before {
+.background-random-evidenceledresearch::before {
   transform: rotate(-8deg);
   top: 800px;
   left: -300px;
   border-radius: 25px;
 }
 
-.background-random-businessbuilder::after {
+.background-random-evidenceledresearch::after {
   transform: rotate(8deg);
   top: 1100px;
   right: -300px;
@@ -15232,6 +15250,27 @@ ul li:last-child .card-list-4 {
   }
 }
 /* Evidence Led Research Explore the Research Start */
+.newsandeventsheading-evidenceled {
+  color: var(--brand-brand-1, #05264E);
+  text-align: center;
+  /* Heading/H2 */
+  font-family: "Plus Jakarta Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.newsandeventssubheading-evidenceled {
+  color: var(--text-paragraph, var(--Paragraph-Text, #6C6E70));
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
 .card-content-evidenceled {
   border-radius: 16px;
   border: 1px solid rgb(224, 230, 246);
@@ -15248,25 +15287,9 @@ ul li:last-child .card-list-4 {
   height: 250px;
 }
 
-@media (max-width: 991px) {
-  .card-content-evidenceled {
-    max-width: 100%;
-  }
-  .featured-image-evidenceled {
-    max-width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .card-content-evidenceled {
-    padding: 10px;
-  }
-  .featured-image-evidenceled {
-    max-width: 100%;
-  }
-}
 .swiperprevious-evidenceled {
   position: absolute;
-  top: 48%;
+  top: 34%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -15276,7 +15299,7 @@ ul li:last-child .card-list-4 {
 
 .swipernext-evidenceled {
   position: absolute;
-  top: 48%;
+  top: 34%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -15284,116 +15307,249 @@ ul li:last-child .card-list-4 {
   right: 10px;
 }
 
+.container-evidenceled {
+  margin: auto;
+  padding: 0 50px;
+}
+
+@media (max-width: 1400px) {
+  .container-evidenceled {
+    max-width: 1300px;
+  }
+}
+@media (max-width: 1200px) {
+  .container-evidenceled {
+    max-width: 1140px;
+  }
+}
+@media (max-width: 992px) {
+  .container-evidenceled {
+    max-width: 960px;
+  }
+}
+@media (max-width: 768px) {
+  .container-evidenceled {
+    max-width: 700px;
+  }
+}
+@media (max-width: 700px) {
+  .container-evidenceled {
+    max-width: 640px;
+  }
+  .featured-image-evidenceled {
+    height: 220px;
+  }
+}
+@media (max-width: 640px) {
+  .container-evidenceled {
+    max-width: 600px;
+  }
+  .featured-image-evidenceled {
+    height: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .container-evidenceled {
+    max-width: 540px;
+  }
+}
+@media (max-width: 540px) {
+  .container-evidenceled {
+    max-width: 480px;
+  }
+  .featured-image-evidenceled {
+    height: 220px;
+  }
+}
+@media (max-width: 480px) {
+  .container-evidenceled {
+    max-width: 400px;
+  }
+  .featured-image-evidenceled {
+    height: 200px;
+  }
+}
+@media (max-width: 450px) {
+  .featured-image-evidenceled {
+    height: 310px;
+  }
+}
+@media (max-width: 400px) {
+  .container-evidenceled {
+    max-width: 340px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-evidenceled {
+    max-width: 1300px;
+  }
+}
 @media screen and (max-width: 1400px) {
   .swiperprevious-evidenceled {
-    top: 71%;
-    width: 50px;
-    height: 50px;
-    left: 30px;
+    top: 34%;
+    left: 10px;
   }
   .swipernext-evidenceled {
-    top: 71%;
-    width: 50px;
-    height: 50px;
-    right: 30px;
+    top: 34%;
+    right: 10px;
   }
 }
 @media screen and (max-width: 1290px) {
   .swiperprevious-evidenceled {
-    top: 71%;
-    width: 50px;
-    height: 50px;
     left: 0px;
   }
   .swipernext-evidenceled {
-    top: 71%;
-    width: 50px;
-    height: 50px;
     right: 0px;
   }
 }
 @media screen and (max-width: 1225px) {
   .swiperprevious-evidenceled {
-    top: 71%;
-    width: 50px;
-    height: 50px;
     left: -5px;
   }
   .swipernext-evidenceled {
-    top: 71%;
-    width: 40px;
-    height: 40px;
     right: -5px;
   }
 }
 @media screen and (max-width: 1200px) {
   .swiperprevious-evidenceled {
-    top: 78%;
-    width: 40px;
-    height: 40px;
-    left: 8px;
+    top: 35%;
+    left: 2px;
   }
   .swipernext-evidenceled {
-    top: 78%;
-    width: 40px;
-    height: 40px;
-    right: 8px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .swiperprevious-evidenceled {
-    top: 80%;
-    width: 40px;
-    height: 40px;
-    left: 4px;
-  }
-  .swipernext-evidenceled {
-    top: 80%;
-    width: 40px;
-    height: 40px;
-    right: 4px;
+    top: 35%;
+    right: 2px;
   }
 }
 @media screen and (max-width: 768px) {
   .swiperprevious-evidenceled {
-    top: 79%;
-    width: 40px;
-    height: 40px;
-    left: 4px;
+    top: 37%;
+    left: -3px;
   }
   .swipernext-evidenceled {
-    top: 79%;
-    width: 40px;
-    height: 40px;
-    right: 4px;
+    top: 37%;
+    right: -3px;
   }
 }
 @media screen and (max-width: 576px) {
   .swiperprevious-evidenceled {
-    top: 85%;
-    width: 40px;
-    height: 40px;
-    left: -4px;
+    top: 39%;
   }
   .swipernext-evidenceled {
-    top: 85%;
-    width: 40px;
-    height: 40px;
-    right: -4px;
+    top: 39%;
   }
 }
 @media screen and (max-width: 450px) {
   .swiperprevious-evidenceled {
-    top: 86%;
-    width: 40px;
-    height: 40px;
+    top: 39%;
     left: 5px;
   }
   .swipernext-evidenceled {
-    top: 86%;
-    width: 40px;
-    height: 40px;
+    top: 39%;
     right: 5px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .swiperprevious-evidenceled {
+    top: 34%;
+    left: 40px;
+  }
+  .swipernext-evidenceled {
+    top: 34%;
+    right: 40px;
+  }
+}
+/* Evidence Led Research Explore the Research End */
+/* The Need for Evidence Led Research Start */
+.newsandeventsparaheading-evidenceled {
+  font-family: "Plus Jakarta Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 0px;
+}
+
+.newsandeventsparatext-evidenceled {
+  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #435579));
+  text-align: justify;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+/* The Need for Evidence Led Research End */
+/* Research Trending Now Start */
+/* Research Trending Now End */
+.container2 {
+  margin: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .container2 {
+    max-width: 1130px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container2 {
+    max-width: 1060px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container2 {
+    max-width: 790px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container2 {
+    max-width: 520px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container2 {
+    max-width: 570px;
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .container2 {
+    max-width: 420px;
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container2 {
+    max-width: 420px;
+    padding: 0 50px;
+  }
+}
+@media (min-width: 1400px) {
+  .container2 {
+    max-width: 1130px;
+  }
+}
+.item-logo-evidenceled {
+  padding: 18px 14px !important;
+}
+
+.image-left-evidenceled {
+  padding-right: 5px !important;
+}
+
+.evidence-led-research.box-swiper .swiper-button-next {
+  top: 100px !important;
+}
+.evidence-led-research.box-swiper .swiper-button-prev {
+  top: 100px !important;
+}
+
+@media screen and (max-width: 450px) {
+  .evidence-led-research.box-swiper .swiper-button-next {
+    right: -50px;
+  }
+  .evidence-led-research.box-swiper .swiper-button-prev {
+    left: -50px;
   }
 }
 .img {
@@ -15415,7 +15571,6 @@ ul li:last-child .card-list-4 {
   transition: 0.05s ease-in-out;
 }
 
-/* Evidence Led Research Explore the Research End */
 @media (max-width: 1399.98px) {
   .custom-class {
     display: block;

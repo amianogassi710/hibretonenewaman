@@ -63,7 +63,7 @@ function FundingBuilderCard() {
 
     return (
         <div className="">
-            <section className="section-box mt-50 mb-25">
+            <section className="section-box mt-50">
                 <div className="container">
                     <div className="flex-container">
                         <div className="share-icon-container-fundingbuilder">
@@ -81,7 +81,7 @@ function FundingBuilderCard() {
                 </div>
             </section>
 
-            <section className="section-box mt-35">
+            <section className="section-box mt-50">
                 <div className="post-loop-grid">
                     <div className="container-fundingbuilder">
                         <Grid

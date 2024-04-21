@@ -154,7 +154,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginBottom: '-20px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12}>
                                         <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="fundingbuilder-video-laptop"></iframe>
@@ -229,9 +229,7 @@ export default function Index() {
                         </div>
                     </section>
 
-
-
-                    <section className="section-box mt-75">
+                    <section className="section-box grid-container-fundingbuilder mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -309,7 +307,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
                                         <h4 className="fundingbuilder-inner-heading">
@@ -381,7 +379,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box grid-container-fundingbuilder mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -462,7 +460,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
                                         <h4 className="fundingbuilder-inner-heading">
@@ -533,7 +531,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box" style={{ marginTop: '75px' }}>
+                    <section className="section-box grid-container-fundingbuilder mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -616,7 +614,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
                                         <h4
@@ -689,7 +687,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box" style={{ marginTop: '75px' }}>
+                    <section className="section-box grid-container-fundingbuilder mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -755,7 +753,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12}>
                                         <h4
@@ -814,13 +812,10 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box mt-0 mb-75">
-                        <div className="post-loop-grid">
-                            <div className="container"></div>
-                        </div>
+                    <section className="section-box mt-75">
+                        <FullAccessButton />
                     </section>
 
-                    <FullAccessButton />
                     <Subscription />
                 </div >
             </Layout >

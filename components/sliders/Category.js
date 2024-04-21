@@ -12,23 +12,25 @@ import {
 } from "react-icons/md";
 import {
     GiHealthNormal,
-    GiConvict,
     GiArchiveResearch,
-    GiTechnoHeart,
     GiRegeneration,
 } from "react-icons/gi";
-// 确保 PiPaintBrushBold 和 LuTrees 图标的正确导入路径，这里使用假设的路径作为示例
+
 import { PiPaintBrushBold } from "react-icons/pi";
-import { LuTrees } from "react-icons/lu"; // 请确认这是正确的导入语句
+import { LuTrees } from "react-icons/lu";
 import {
     FaHandsPraying,
-    FaUserFriends,
     FaHotel,
-    FaEnvira,
 } from "react-icons/fa";
 import { GrUserWorker } from "react-icons/gr";
 import { FaRunning } from "react-icons/fa";
-import { RiCommunityLine } from "react-icons/ri";
+
+import { PiHeadsetDuotone } from "react-icons/pi";
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { MdMonitor } from "react-icons/md";
+import { IoMdLock } from "react-icons/io";
+
+
 
 SwiperCore.use([Navigation]);
 import "swiper/css/grid";
@@ -36,49 +38,26 @@ import axiosFetchWithRetry from "../elements/fetchWithRetry";
 
 const CategorySlider = () => {
     const router = useRouter();
-    // const [data, setData] = useState([]);
-    // const getCategories = async () => {
-    //     const reqOptions = {
-    //         method: "get",
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //         },
-    //     };
 
-    //     try {
-    //         const data = await axiosFetchWithRetry({
-    //             url: "/grants/grant-categories",
-    //             reqOptions: reqOptions,
-    //             timeout: 2000,
-    //         });
-    //         setData(data);
-    //     } catch (error) {
-    //         console.error({ error: error.message });
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     getCategories();
-    // }, []);
     const data = [
         {
             category_id: 1,
-            category_name: "Community",
+            category_name: "Social Enterprise",
             total_num: 24,
         },
         {
             category_id: 2,
-            category_name: "Environment",
+            category_name: "Migrant Enterprise",
             total_num: 23,
         },
         {
             category_id: 3,
-            category_name: "Research",
+            category_name: "Crime",
             total_num: 39,
         },
         {
             category_id: 4,
-            category_name: "Technology",
+            category_name: "Neurodiversity",
             total_num: 21,
         },
         {
@@ -115,9 +94,15 @@ const CategorySlider = () => {
 
     const handleClick = (categoryId, page = 1, limit = 10) => {
         router.push(`/grant-finder/search?category=${categoryId}&page=${page}&limit=${limit}`);
-      };
+    };
 
-      const iconsMap = {
+    const iconsMap = {
+        "Social Enterprise": PiHeadsetDuotone,
+        "Migrant Enterprise": HiOutlineLightBulb,
+        "Crime": MdMonitor,
+        "Neurodiversity": IoMdLock,
+
+
         "Disability": TbDisabled,
         "People & Families": MdFamilyRestroom,
         "Equality & Diversity": MdOutlineDiversity1,
@@ -125,15 +110,10 @@ const CategorySlider = () => {
         "Arts": PiPaintBrushBold,
         "Rural": LuTrees,
         "Religion": FaHandsPraying,
-        "Social Enterprise": FaUserFriends,
         "Leisure & Tourism": FaHotel,
         "Employment": GrUserWorker,
-        "Crime": GiConvict,
         "Young People": FaRunning,
-        "Community": RiCommunityLine,
-        "Environment": FaEnvira,
         "Research": GiArchiveResearch,
-        "Technology": GiTechnoHeart,
         "Education": MdOutlineCastForEducation,
         "Business": MdOutlineBusinessCenter,
         "Regeneration": GiRegeneration,
@@ -171,18 +151,14 @@ const CategorySlider = () => {
                             spaceBetween: 30,
                         },
                     }}
-                    className="swiper-wrapper pb-10 pt-5 swiper-grid-jobobx"
+                    className="swiper-wrapper swiper-grid-jobobx"
                 >
                     {data.map((item, i) => (
                         <SwiperSlide key={i}>
                             <div className="swiper-slide hover-up " onClick={() => handleClick(item.category_id)} style={{ cursor: 'pointer' }}>
-                                {/* <Link
-                                    legacyBehavior
-                                    href={`/grant-finder/search?category_id=${item.category_id}&page=1&limit=10`}
-                                > */}
                                 <a>
-                                    <div className="item-logo">
-                                        <div className="image-left">
+                                    <div className="item-logo item-logo-evidenceled">
+                                        <div className="image-left image-left-evidenceled">
                                             {React.createElement(
                                                 iconsMap[item.category_name],
                                                 {
@@ -193,16 +169,11 @@ const CategorySlider = () => {
                                                 }
                                             )}
                                         </div>
-                                        <div className="text-info-right">
+                                        <div className="text-info-right" style={{display: 'flex', alignItems: 'center'}}>
                                             <h4>{item.category_name}</h4>
-                                            <p className="font-xs">
-                                                {item.total_num}
-                                                <span> Grants Available</span>
-                                            </p>
                                         </div>
                                     </div>
                                 </a>
-                                {/* </Link> */}
                             </div>
                         </SwiperSlide>
                     ))}

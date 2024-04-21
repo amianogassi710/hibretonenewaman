@@ -5,10 +5,21 @@ import Subscription from "../../components/Layout/Subscription";
 import YellowBanner from "../../components/elements/YellowBanner";
 import { Grid } from "@mui/material";
 import FullAccessButton from "../../components/elements/FullAccessButton";
-import EvidenceLedResearchSearchBar from "./EvidenceLedResearchSearchBar";
+import EvidenceLedResearchSearchBar1 from "./EvidenceLedResearchSearchBar1";
 import { IoShareSocialOutline } from "react-icons/io5";
 import Evidenceledresearchexplorecarousel from "./Evidenceledresearchexplorecarousel";
+import EvidenceLedResearchPhotoGrid from "./EvidenceLedResearchPhotoGrid";
+import EvidenceLedResearchTrendingNowcarousel from "./EvidenceLedResearchTrendingNowcarousel";
+import dynamic from "next/dynamic";
 
+const NoSSRCategorySlider = dynamic(
+    () => import("../../components/sliders/Category"),
+    { ssr: false }
+);
+const NoSSRCategorySlider1 = dynamic(
+    () => import("../../components/sliders/Category1"),
+    { ssr: false }
+);
 
 function useLockBodyScroll(open) {
     useEffect(() => {
@@ -34,6 +45,96 @@ export default function Index() {
     const [isOpen, setIsOpen] = useState(false);
     useLockBodyScroll(isOpen);
 
+
+    const articleData = [
+        {
+            title: "Time to Change",
+            image: "/assets/imgs/page/evidence-led-research/time to change.png",
+            pdfLocation: "/assets/files/evidence-led-research/time to change.pdf",
+        },
+        {
+            title: "Supporting Diversity",
+            image: "/assets/imgs/page/evidence-led-research/supporting diversity.png",
+            pdfLocation: "/assets/files/evidence-led-research/supporting diversity.pdf",
+        },
+        {
+            title: "Minority Businesses",
+            image: "/assets/imgs/page/evidence-led-research/minority businesses.png",
+            pdfLocation: "/assets/files/evidence-led-research/minority businesses.pdf",
+        },
+        {
+            title: "Disability and Entrepreneurship",
+            image: "/assets/imgs/page/evidence-led-research/disability and entrepreneurship.png",
+            pdfLocation: "/assets/files/evidence-led-research/disability and entrepreneurship.pdf",
+        },
+        {
+            title: "Beyond the VC",
+            image: "/assets/imgs/page/evidence-led-research/beyond the vc.png",
+            pdfLocation: "/assets/files/evidence-led-research/beyond the vc.pdf",
+        },
+        {
+            title: "Exploring the Outcomes",
+            image: "/assets/imgs/page/evidence-led-research/exploring the outcomes.png",
+            pdfLocation: "/assets/files/evidence-led-research/exploring the outcomes.pdf",
+        },
+        {
+            title: "The Shaw Trust",
+            image: "/assets/imgs/page/evidence-led-research/the shaw trust.png",
+            pdfLocation: "/assets/files/evidence-led-research/the shaw trust.pdf",
+        },
+        {
+            title: "The 2023 UK LGBTQ+",
+            image: "/assets/imgs/page/evidence-led-research/the 2023 uk lgbtq+.png",
+            pdfLocation: "/assets/files/evidence-led-research/the 2023 uk lgbtq+.pdf",
+        },
+        {
+            title: "Immerse",
+            image: "/assets/imgs/page/evidence-led-research/immerse.png",
+            pdfLocation: "/assets/files/evidence-led-research/immerse.pdf",
+        },
+        {
+            title: "Unlocking Opportunity",
+            image: "/assets/imgs/page/evidence-led-research/unlocking opportunity.png",
+            pdfLocation: "/assets/files/evidence-led-research/unlocking opportunity.pdf",
+        },
+        {
+            title: "Diversity Beyond Gender",
+            image: "/assets/imgs/page/evidence-led-research/diversity beyond gender.png",
+            pdfLocation: "/assets/files/evidence-led-research/diversity beyond gender.pdf",
+        },
+        {
+            title: "The Alison Rose",
+            image: "/assets/imgs/page/evidence-led-research/the alison rose.png",
+            pdfLocation: "/assets/files/evidence-led-research/the alison rose.pdf",
+        },
+        {
+            title: "The Dyslexic Dynamic",
+            image: "/assets/imgs/page/evidence-led-research/the dyslexic dynamic.png",
+            pdfLocation: "/assets/files/evidence-led-research/the dyslexic dynamic.pdf",
+        },
+        {
+            title: "The Top 20 Reasons",
+            image: "/assets/imgs/page/evidence-led-research/the top 20 reasons.png",
+            pdfLocation: "/assets/files/evidence-led-research/the top 20 reasons.pdf",
+        },
+        
+        
+        
+        
+        {
+            title: "Investment Opportunities",
+            image: "/assets/imgs/page/evidence-led-research/investment opportunities.png",
+            pdfLocation: "/assets/files/evidence-led-research/investment opportunities.pdf",
+        },
+        {
+            title: "Facilitating New Migrant",
+            image: "/assets/imgs/page/evidence-led-research/facilitating new migrant.png",
+            pdfLocation: "/assets/files/evidence-led-research/facilitating new migrant.pdf",
+        },
+    ];
+    
+
+
     return (
         <>
             <Layout>
@@ -52,7 +153,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box mt-50 mb-25">
+                    <section className="section-box mt-50">
                         <div className="container">
                             <div className="flex-container">
                                 <div className="share-icon-container-evidenceledresearch">
@@ -68,9 +169,10 @@ export default function Index() {
                                 </div>
                             </div>
                         </div>
-                        <div className="banner-hero-evidenceledresearch-searchbar mt-25">
+                        <div className="banner-hero-evidenceledresearch-searchbar mt-50">
                             <div className="block-banner-evidenceled block-banner-evidenceled">
-                                <EvidenceLedResearchSearchBar />
+                                {/* <EvidenceLedResearchSearchBar1 /> */}
+                                <EvidenceLedResearchSearchBar1 articleData={articleData} />
                             </div>
                         </div>
                     </section>
@@ -90,13 +192,13 @@ export default function Index() {
                                         </h2>
                                         <div className="title-details-evidenceled">
                                             <div>
-                                                <p className="paratext-evidenceled">
+                                                <p className="newsandeventsparatext-evidenceled">
                                                     <strong> hibertOne working with research partners, is able to convert theory into practise to generate results for the economy.. </strong>
                                                 </p>
-                                                <p className="paratext-evidenceled mt-30">
+                                                <p className="newsandeventsparatext-evidenceled mt-30">
                                                     Academic research created  by researchers, very often does not translate into actionable, measurable outcomes. Papers are written as part of a dissertation, because funding is available, or to appear as if  action is being taken. hibretOne takes a different approach and supports report authors to ensure their recommendations become a blurprint for economic success.
                                                 </p>
-                                                <p className="paratext-evidenceled mt-30">
+                                                <p className="newsandeventsparatext-evidenceled mt-30">
                                                     Watch the video to understand the purpose of levelling-up. It’s not about driving the advantaged down, it’s using the research as evidence of the need to create opportunities for all.
                                                 </p>
                                             </div>
@@ -127,13 +229,13 @@ export default function Index() {
                                     <Grid item xs={12} md={12}>
                                         <div className="title-details-evidenceled">
                                             <div>
-                                                <p className="paratext-evidenceled">
+                                                <p className="newsandeventsparatext-evidenceled">
                                                     <strong> hibertOne working with research partners, is able to convert theory into practise to generate results for the economy.. </strong>
                                                 </p>
-                                                <p className="paratext-evidenceled mt-30">
+                                                <p className="newsandeventsparatext-evidenceled mt-30">
                                                     Academic research created  by researchers, very often does not translate into actionable, measurable outcomes. Papers are written as part of a dissertation, because funding is available, or to appear as if  action is being taken. hibretOne takes a different approach and supports report authors to ensure their recommendations become a blurprint for economic success.
                                                 </p>
-                                                <p className="paratext-evidenceled mt-30">
+                                                <p className="newsandeventsparatext-evidenceled mt-30">
                                                     Watch the video to understand the purpose of levelling-up. It’s not about driving the advantaged down, it’s using the research as evidence of the need to create opportunities for all.
                                                 </p>
                                             </div>
@@ -144,7 +246,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-100">
                         <Evidenceledresearchexplorecarousel />
                     </section>
 
@@ -153,167 +255,42 @@ export default function Index() {
                     </section>
 
                     <section className="section-box mt-75">
-                        <div className="post-loop-grid">
-                            <div className="container">
-                                <Grid
-                                    container
-                                    alignItems="center"
-                                    style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
-                                >
-                                    <Grid item lg={6}>
-                                        <img
-                                            className="imagecontent"
-                                            src="assets/imgs/page/business-builder/buildingmoredesirable.jpg"
-                                            alt="joxBox"
-                                        />
-                                    </Grid>
-                                    <Grid
-                                        item
-                                        className=""
-                                        lg={6}
-                                        sx={{ paddingLeft: { lg: "75px" } }}
-                                    >
-                                        <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
-                                            Building More Desirable Products
+                        <EvidenceLedResearchPhotoGrid />
+                    </section>
 
-                                        </h2>
-                                        <div className="title-details-businessbuilder">
-                                            {readMore4 ? (
-                                                <div>
-                                                    <p className="businessbuilderparatext">
-                                                        <strong> Idea Validation: </strong>
-                                                        Quick assessment of your product, service, or business idea to determine viability against known criteria. It's a framework to make quick, painless, and informed judgments so that you know whether it's worth pursuing.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-30">
-                                                        <strong> Investability Rating: </strong>
-                                                        Quick assessment to measure your potential to raise investment by analysing your performance across 5 key areas. Your unique score will reveal your personal strengths and weaknesses and deliver practical, actionable tips to improve your results and help you secure the funding you need.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-30">
-                                                        <strong> Product Market Fit (PMF): </strong>
-                                                        Assessing the entrepreneurs  vision of their product and the need in the market. Helping build solutions that customers want to buy whilst reducing risk.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-30">
-                                                        <strong> Angel Investors: </strong>
-                                                        Have VC experience, others pivot from being founders or operators themselves.
-                                                        Investing in return for equity, and either put money in as individual investors or as part of a syndicate.
-                                                    </p>
-                                                </div>
-                                            ) : (
-                                                <div>
-                                                    <p className="businessbuilderparatext">
-                                                        <strong> Crowdfunding: </strong>
-                                                        A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-30">
-                                                        <strong> Revenue-based financing: </strong>
-                                                        Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-30">
-                                                        <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
-                                                    </p>
-                                                </div>
-                                            )}
-                                            <span
-                                                className="btn-show-more"
-                                                onClick={() =>
-                                                    setReadMore4(
-                                                        !readMore4
-                                                    )
-                                                }
-                                            >
-                                                {/* <div className="mt-20">
-                                                    {readMore4 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
-                                                </div> */}
-                                            </span>
-                                        </div>
-                                    </Grid>
-                                </Grid>
-                                <Grid
-                                    container
-                                    alignItems="center"
-                                    style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
-                                >
-                                    <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h4 className="inner-heading-evidenceled">
-                                            Building More Desirable Products
-                                        </h4>
-                                    </Grid>
-                                    <Grid item xs={12} md={12}>
-                                        <img
-                                            className="imagecontent"
-                                            src="assets/imgs/page/business-builder/buildingmoredesirable.jpg"
-                                            alt="joxBox"
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12} md={12}>
-                                        <div className="title-details-businessbuilder">
-                                            {readMore4 ? (
-                                                <div>
-                                                    <p className="businessbuilderparatext">
-                                                        <strong> Crowdfunding: </strong>
-                                                        A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Revenue-based financing: </strong>
-                                                        Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Angel Investors: </strong>
-                                                        Have VC experience, others pivot from being founders or operators themselves.
-                                                        Investing in return for equity, and either put money in as individual investors or as part of a syndicate.
-                                                    </p>
-                                                </div>
-                                            ) : (
-                                                <div>
-                                                    <p className="businessbuilderparatext">
-                                                        <strong> Crowdfunding: </strong>
-                                                        A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Revenue-based financing: </strong>
-                                                        Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
-                                                    </p>
-                                                </div>
-                                            )}
-                                            <span
-                                                className="btn-show-more"
-                                                onClick={() =>
-                                                    setReadMore4(
-                                                        !readMore4
-                                                    )
-                                                }
-                                            >
-                                                <div className="mt-20">
-                                                    {readMore4 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </Grid>
-                                </Grid>
+                    <section className="section-box mt-100">
+                        <EvidenceLedResearchTrendingNowcarousel />
+                    </section>
+
+                    <section className="section-box mt-100">
+                        <div className="section-box wow animate__animated animate__fadeIn">
+                            <div className="container">
+                                <div className="text-center">
+                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp newsandeventsheading-evidenceled">
+                                        Browse a Selection of Research Categories
+                                    </h2>
+                                    <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp newsandeventssubheading-evidenceled">
+                                        Find the research that supports your enterprise
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="container2 mt-40">
+                                <div className="box-swiper grant-category evidence-led-research">
+                                    <div>
+                                        <NoSSRCategorySlider />
+                                        <NoSSRCategorySlider1 />
+                                        <div className="swiper-button-next" />
+                                        <div className="swiper-button-prev" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
 
-
-
-                    <section className="section-box mt-0 mb-75">
-                        <div className="post-loop-grid">
-                            <div className="container"></div>
-                        </div>
+                    <section className="section-box mt-75">
+                        <FullAccessButton />
                     </section>
 
-                    <FullAccessButton />
                     <Subscription />
                 </div >
             </Layout >
