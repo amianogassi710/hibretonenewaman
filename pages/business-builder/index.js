@@ -132,7 +132,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginBottom: '-20px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12}>
                                         <h4
@@ -145,7 +145,7 @@ export default function Index() {
                                         <iframe width="100%" height="450px" src="https://www.youtube.com/embed/-sQeREfZY-8" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="businessbuilder-video-laptop"></iframe>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                    <div className="title-details-businessbuilder">
+                                        <div className="title-details-businessbuilder">
                                             {readMore3 ? (
                                                 <div>
                                                     <p className="businessbuilderparatext">
@@ -187,9 +187,7 @@ export default function Index() {
                         </div>
                     </section>
 
-
-
-                    <section className="section-box mt-75">
+                    <section className="section-box grid-container-businessbuilder mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -252,11 +250,11 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
                                         <h4 className="businessbuilder-inner-heading">
-                                        Building More Capable Entrepreneurs
+                                            Building More Capable Entrepreneurs
                                         </h4>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
@@ -267,7 +265,7 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                    <div className="title-details-businessbuilder">
+                                        <div className="title-details-businessbuilder">
                                             {readMore1 ? (
                                                 <div>
                                                     <p className="businessbuilderparatext">
@@ -309,7 +307,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box grid-container-businessbuilder mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -391,11 +389,11 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
                                         <h4 className="businessbuilder-inner-heading">
-                                        Building More Desirable Products
+                                            Building More Desirable Products
                                         </h4>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
@@ -462,15 +460,10 @@ export default function Index() {
                         </div>
                     </section>
 
-                 
-
-                    <section className="section-box mt-0 mb-75">
-                        <div className="post-loop-grid">
-                            <div className="container"></div>
-                        </div>
+                    <section className="section-box mt-75 mb-0">
+                        <FullAccessButton />
                     </section>
 
-                    <FullAccessButton />
                     <Subscription />
                 </div >
             </Layout >

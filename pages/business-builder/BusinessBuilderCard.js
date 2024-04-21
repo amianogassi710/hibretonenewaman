@@ -62,7 +62,7 @@ function BusinessBuilderCard() {
 
     return (
         <div className="">
-            <section className="section-box mt-50 mb-25">
+            <section className="section-box mt-50">
                 <div className="container">
                     <div className="flex-container">
                         <div className="share-icon-container-businessbuilder">
@@ -80,7 +80,7 @@ function BusinessBuilderCard() {
                 </div>
             </section>
 
-            <section className="section-box mt-35">
+            <section className="section-box mt-50">
                 <div className="post-loop-grid">
                     <div className="container-businessbuilder">
                         <Grid
@@ -126,7 +126,7 @@ function BusinessBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12}>
-                            <section className="support-section-mobileview">
+                            <section className="support-section">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
