@@ -166,7 +166,10 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link legacyBehavior href="/evidence-led-research">
+                                                <Link
+                                                    legacyBehavior
+                                                    href="/evidence-led-research"
+                                                >
                                                     <a>Evidence-led Research</a>
                                                 </Link>
                                             </li>
@@ -249,9 +252,8 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                 </ul>
                             </nav>
                             <div
-                                className={`burger-icon burger-icon-white ${
-                                    openClass && "burger-close"
-                                }`}
+                                className={`burger-icon burger-icon-white ${openClass && "burger-close"
+                                    }`}
                                 onClick={() => {
                                     handleOpen();
                                     handleRemove();

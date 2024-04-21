@@ -40,7 +40,7 @@ const articleData = [
     },
     {
         title: "The 2023 UK LGBTQ+",
-        image: "/assets/imgs/page/evidence-led-research/the 2023 uk lgbtq+.png",
+        image: "/assets/imgs/page/evidence-led-research/the 2023 uk lgbtq.png",
         pdfLocation: "/assets/files/evidence-led-research/the 2023 uk lgbtq+.pdf",
     },
     {

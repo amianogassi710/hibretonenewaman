@@ -115,7 +115,10 @@ const Sidebar = ({ openClass }) => {
                                                     <Link legacyBehavior href="/business-problem-triage"><a>Business Problem Triage</a></Link>
                                                 </li>
                                                 <li>
-                                                    <Link legacyBehavior href="/"><a>Industry Intelligence</a></Link>
+                                                    <Link legacyBehavior href="/industry-intelligence"><a>Industry Intelligence</a></Link>
+                                                </li>
+                                                <li>
+                                                    <Link legacyBehavior href="/evidence-led-research"><a>Evidence-led Research</a></Link>
                                                 </li>
                                             </ul>
                                         </li>
