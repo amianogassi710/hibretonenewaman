@@ -420,3 +420,31 @@ $font-family: Plus Jakarta Sans, sans-serif;
         font-size: 20px !important;
     }
 }
+
+@media screen and (max-width:576px) {
+    .section-box {
+        &.mt-75 {
+            margin-top: 40px !important;
+        }
+    }
+
+    .section-box {
+        &.mt-50 {
+            margin-top: 30px !important;
+        }
+    }
+
+    .section-box {
+        &.mt-40 {
+            margin-top: 30px !important;
+        }
+    }
+
+    .section-box {
+        &.grid-container-fundingbuilder {
+            &.mt-75 {
+                margin-top: 30px !important;
+            }
+        }
+    }
+}
