@@ -11,6 +11,7 @@ import Evidenceledresearchexplorecarousel from "./Evidenceledresearchexplorecaro
 import EvidenceLedResearchPhotoGrid from "./EvidenceLedResearchPhotoGrid";
 import EvidenceLedResearchTrendingNowcarousel from "./EvidenceLedResearchTrendingNowcarousel";
 import dynamic from "next/dynamic";
+import CustomAsyncSelect from "./App";
 
 const NoSSRCategorySlider = dynamic(
     () => import("../../components/sliders/Category"),
@@ -50,72 +51,72 @@ export default function Index() {
         {
             title: "Time to Change",
             image: "/assets/imgs/page/evidence-led-research/time to change.png",
-            pdfLocation: "/assets/files/evidence-led-research/time to change.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/time to change.pdf",
         },
         {
             title: "Supporting Diversity",
             image: "/assets/imgs/page/evidence-led-research/supporting diversity.png",
-            pdfLocation: "/assets/files/evidence-led-research/supporting diversity.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/supporting diversity.pdf",
         },
         {
             title: "Minority Businesses",
             image: "/assets/imgs/page/evidence-led-research/minority businesses.png",
-            pdfLocation: "/assets/files/evidence-led-research/minority businesses.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/minority businesses.pdf",
         },
         {
             title: "Disability and Entrepreneurship",
             image: "/assets/imgs/page/evidence-led-research/disability and entrepreneurship.png",
-            pdfLocation: "/assets/files/evidence-led-research/disability and entrepreneurship.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/disability and entrepreneurship.pdf",
         },
         {
             title: "Beyond the VC",
             image: "/assets/imgs/page/evidence-led-research/beyond the vc.png",
-            pdfLocation: "/assets/files/evidence-led-research/beyond the vc.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/beyond the vc.pdf",
         },
         {
             title: "Exploring the Outcomes",
             image: "/assets/imgs/page/evidence-led-research/exploring the outcomes.png",
-            pdfLocation: "/assets/files/evidence-led-research/exploring the outcomes.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/exploring the outcomes.pdf",
         },
         {
             title: "The Shaw Trust",
             image: "/assets/imgs/page/evidence-led-research/the shaw trust.png",
-            pdfLocation: "/assets/files/evidence-led-research/the shaw trust.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/the shaw trust.pdf",
         },
         {
             title: "The 2023 UK LGBTQ+",
             image: "/assets/imgs/page/evidence-led-research/the 2023 uk lgbtq.png",
-            pdfLocation: "/assets/files/evidence-led-research/the 2023 uk lgbtq.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/the 2023 uk lgbtq.pdf",
         },
         {
             title: "Immerse",
             image: "/assets/imgs/page/evidence-led-research/immerse.png",
-            pdfLocation: "/assets/files/evidence-led-research/immerse.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/immerse.pdf",
         },
         {
             title: "Unlocking Opportunity",
             image: "/assets/imgs/page/evidence-led-research/unlocking opportunity.png",
-            pdfLocation: "/assets/files/evidence-led-research/unlocking opportunity.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/unlocking opportunity.pdf",
         },
         {
             title: "Diversity Beyond Gender",
             image: "/assets/imgs/page/evidence-led-research/diversity beyond gender.png",
-            pdfLocation: "/assets/files/evidence-led-research/diversity beyond gender.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/diversity beyond gender.pdf",
         },
         {
             title: "The Alison Rose",
             image: "/assets/imgs/page/evidence-led-research/the alison rose.png",
-            pdfLocation: "/assets/files/evidence-led-research/the alison rose.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/the alison rose.pdf",
         },
         {
             title: "The Dyslexic Dynamic",
             image: "/assets/imgs/page/evidence-led-research/the dyslexic dynamic.png",
-            pdfLocation: "/assets/files/evidence-led-research/the dyslexic dynamic.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/the dyslexic dynamic.pdf",
         },
         {
             title: "The Top 20 Reasons",
             image: "/assets/imgs/page/evidence-led-research/the top 20 reasons.png",
-            pdfLocation: "/assets/files/evidence-led-research/the top 20 reasons.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/the top 20 reasons.pdf",
         },
         
         
@@ -124,12 +125,12 @@ export default function Index() {
         {
             title: "Investment Opportunities",
             image: "/assets/imgs/page/evidence-led-research/investment opportunities.png",
-            pdfLocation: "/assets/files/evidence-led-research/investment opportunities.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/investment opportunities.pdf",
         },
         {
             title: "Facilitating New Migrant",
             image: "/assets/imgs/page/evidence-led-research/facilitating new migrant.png",
-            pdfLocation: "/assets/files/evidence-led-research/facilitating new migrant.pdf",
+            pdfLocation: "/assets/files/page/evidence-led-research/facilitating new migrant.pdf",
         },
     ];
     
@@ -146,7 +147,7 @@ export default function Index() {
                                     <div className="col">
                                         <h2 className="businessbuilder-hero-heading-evidenceledresearch" style={{ marginBottom: '20px', fontSize: '60px' }}>Evidence-led Research</h2>
                                         <p className="businessbuilder-hero-subheading-evidenceledresearch color-text-paragraph-evidenceledresearch subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
-                                            Leading global academic research is converted into a blueprint for change across economic, social and moral requirements                                        </p>
+                                            Leading <span className="color-blue"> global academic research </span> is converted into a blueprint for change across economic, social and moral requirements                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -175,7 +176,11 @@ export default function Index() {
                                 <EvidenceLedResearchSearchBar1 articleData={articleData} />
                             </div>
                         </div>
+                                {/* <EvidenceLedResearchSearchBar1 /> */}
+                                <CustomAsyncSelect />
                     </section>
+
+
 
                     <section className="section-box mt-75">
                         <div className="post-loop-grid">
@@ -277,8 +282,8 @@ export default function Index() {
                             <div className="container2 mt-40">
                                 <div className="box-swiper grant-category evidence-led-research">
                                     <div>
-                                        <NoSSRCategorySlider />
-                                        <NoSSRCategorySlider1 />
+                                        {/* <NoSSRCategorySlider /> */}
+                                        {/* <NoSSRCategorySlider1 /> */}
                                         <div className="swiper-button-next" />
                                         <div className="swiper-button-prev" />
                                     </div>

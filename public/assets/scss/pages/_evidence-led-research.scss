@@ -51,7 +51,7 @@
 //   Hero Page Section
 .bg-img-businessbuilder-evidenceledresearch {
     height: 30vh;
-    background: url(../imgs/page/business-builder/businessbuilderhero.jpg) no-repeat center center;
+    background: url(../imgs/page/evidence-led-research/evidenceledresearchhero1.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -239,10 +239,10 @@
     color: #ffffff;
     border: none;
     border-radius: 8px;
-    width: 15%;
+    width: 20%;
     height: auto;
     font-size: 16px;
-    margin-left: 25px;
+    // margin-left: 25px;
 }
 
 .evidenceled-btn-search:hover {
@@ -274,11 +274,7 @@
 
 @media screen and (max-width: 1199px) {
     .block-banner-evidenceled {
-        width: auto;
-    }
-
-    .block-banner-evidenceled {
-        width: auto;
+        width: 650px;
     }
 
     .banner-hero-evidenceledresearch-searchbar .block-banner-evidenceled .evidenceled-form-find-top {
@@ -335,7 +331,18 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .block-banner-evidenceled {
+        width: 550px;
+        padding: 0 25px;
+    }
+}
+
 @media screen and (max-width: 496px) {
+    .block-banner-evidenceled {
+        width: 470px;
+    }
+
     .evidenceled-form-find-top form .blog-one {
         padding-left: 20px;
         padding-right: 10px;
@@ -379,6 +386,20 @@
     }
 }
 
+@media screen and (max-width: 435px) {
+    .block-banner-evidenceled {
+        width: 435px;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .block-banner-evidenceled {
+        width: 410px;
+        padding: 0 30px;
+    }
+}
+
 @media screen and (max-width: 410px) {
 
     .evidenceled-form-find-top form .blog-one,
@@ -388,6 +409,20 @@
 
     .evidenceled-btn-search {
         margin: 0px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .block-banner-evidenceled {
+        width: 400px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .block-banner-evidenceled {
+        width: 380px;
+        padding: 0 15px;
     }
 }
 
@@ -810,3 +845,51 @@
         transition: 0.05s ease-in-out;
     }
 }
+
+.swiper-slide-searchbar.swiper-slide {
+    width: 175px !important;
+    /* Define your desired width */
+    margin-right: 30px !important;
+    /* Adjust as per your requirement */
+}
+
+
+/* SCSS */
+.custom-select {
+    width: 60%;
+    font-size: 20px;
+    margin: auto;
+
+    .css-1uccc91-singleValue {
+        color: #333;
+    }
+
+    .css-yk16xz-control,
+    .css-1pahdxg-control {
+        border-radius: 4px;
+        border-color: #e2e8f0;
+
+        &:hover {
+            border-color: #cbd5e0;
+        }
+    }
+
+    .css-26l3qy-menu {
+        border-radius: 4px;
+        border-color: #e2e8f0;
+        box-shadow: none;
+        height: 600px;
+        overflow-y: auto; /* Added */
+
+    }
+
+    .css-tlfecz-indicatorContainer {
+        color: #a0aec0;
+
+        &:hover {
+            color: #718096;
+        }
+    }
+}
+
+

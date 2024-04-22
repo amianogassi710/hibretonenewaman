@@ -137,12 +137,7 @@ const CategorySlider1 = () => {
                     {data.map((item, i) => (
                         <SwiperSlide key={i}>
                             <div className="swiper-slide hover-up">
-                                <Link
-                                    legacyBehavior
-                                    href={`#`}
-                                >
-                                    <a>
-                                    <div className="item-logo item-logo-evidenceled">
+                                                                  <div className="item-logo item-logo-evidenceled">
                                     <div className="image-left image-left-evidenceled">
                                                 {React.createElement(
                                                         iconsMap[
@@ -160,8 +155,6 @@ const CategorySlider1 = () => {
                                                 <h4>{item.category_name}</h4>
                                             </div>
                                         </div>
-                                    </a>
-                                </Link>
                             </div>
                         </SwiperSlide>
                     ))}

@@ -92,10 +92,6 @@ const CategorySlider = () => {
         },
     ];
 
-    const handleClick = (categoryId, page = 1, limit = 10) => {
-        router.push(`/grant-finder/search?category=${categoryId}&page=${page}&limit=${limit}`);
-    };
-
     const iconsMap = {
         "Social Enterprise": PiHeadsetDuotone,
         "Migrant Enterprise": HiOutlineLightBulb,
@@ -155,8 +151,7 @@ const CategorySlider = () => {
                 >
                     {data.map((item, i) => (
                         <SwiperSlide key={i}>
-                            <div className="swiper-slide hover-up " onClick={() => handleClick(item.category_id)} style={{ cursor: 'pointer' }}>
-                                <a>
+                            <div className="swiper-slide hover-up ">
                                     <div className="item-logo item-logo-evidenceled">
                                         <div className="image-left image-left-evidenceled">
                                             {React.createElement(
@@ -173,7 +168,7 @@ const CategorySlider = () => {
                                             <h4>{item.category_name}</h4>
                                         </div>
                                     </div>
-                                </a>
+                                {/* </a> */}
                             </div>
                         </SwiperSlide>
                     ))}
