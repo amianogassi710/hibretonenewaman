@@ -8,21 +8,27 @@ const articleData = [
 
     {
         image: "/assets/imgs/page/evidence-led-research/the top 20 reasons.png",
+        pdfLocation: "/assets/files/page/evidence-led-research/the top 20 reasons.pdf",
     },
     {
         image: "/assets/imgs/page/evidence-led-research/time to change.png",
+        pdfLocation: "/assets/files/page/evidence-led-research/time to change.pdf",
     },
     {
         image: "/assets/imgs/page/evidence-led-research/the dyslexic dynamic.png",
+        pdfLocation: "/assets/files/page/evidence-led-research/the dyslexic dynamic.pdf",
     },
     {
         image: "/assets/imgs/page/evidence-led-research/beyond the vc.png",
+        pdfLocation: "/assets/files/page/evidence-led-research/beyond the vc.pdf",
     },
     {
         image: "/assets/imgs/page/evidence-led-research/investment opportunities.png",
+        pdfLocation: "/assets/files/page/evidence-led-research/investment opportunities.pdf",
     },
     {
         image: "/assets/imgs/page/evidence-led-research/facilitating new migrant.png",
+        pdfLocation: "/assets/files/page/evidence-led-research/facilitating new migrant.pdf",
     },
 ];
 
