@@ -31,6 +31,18 @@ export default function Index() {
     const [isOpen, setIsOpen] = useState(false);
     useLockBodyScroll(isOpen);
 
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://cdn.userway.org/widget.js";
+        script.setAttribute("data-account", "IPLbOdMJ9G");
+        script.async = true;
+        document.head.appendChild(script);
+
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, []);
+
     return (
         <>
             <Layout>
