@@ -14,11 +14,11 @@ export default function Aboutushibretoneinformation() {
                                         <iframe width="560" height="215" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{borderRadius: '16px'}}></iframe>
                                     </div>
                                     <div className="about__thumb-1 text-end">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d44f244455f51915d5b62f5936790f9ab60406bcd80dd6641162320e49074c6a?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&" alt="" style={{ height: '180px', width: '201px', borderRadius: '16px' }} />
+                                        <img src="../assets/imgs/page/about-us/grid-down.jpg" alt="" style={{ height: '180px', width: '260px', borderRadius: '16px' }} />
                                     </div>
                                 </div>
                                 <div className="about__thumb-2">
-                                    <img src="../assets/imgs/page/about-us/b.png" alt="" style={{ height: '585px', width: '333px', borderRadius: '16px' }} />
+                                    <img src="../assets/imgs/page/about-us/grid-right.png" alt="" style={{ height: '585px', width: '333px', borderRadius: '16px' }} />
                                 </div>
                             </div>
                         </Grid>

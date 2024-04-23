@@ -41,24 +41,6 @@ export default function EvidenceLedResearchPhotoGrid() {
                                 <p className="newsandeventsparaheading-evidenceled" style={{ color: "#3C65F5" }}>
                                     Economic
                                 </p>
-                                {/* <p className="newsandeventsparatext-evidenceled">
-                                    {showMore1
-                                        ? "Over £430bn could be added to the UK economy  if recommendations in the reports which talk about levelling-up were actioned. One of the biggest opportunities will come from migrant entrepreneurs. Watch the video to understand why migrant entrepreneurs appear to have many of the traits necessary to be a successful entrepreneur."
-                                        : "Over £430bn could be added to the UK economy  if recommendations in the reports which talk about levelling-up were actioned. One of the biggest opportunities will come from migrant entrepreneurs. Watch the video to understand why migrant entrepreneurs appear to have many of the traits necessary to be a successful entrepreneur."
-                                    }
-                                    < button
-                                        className="btn-show-more"
-                                        onClick={() =>
-                                            setShowMore1(
-                                                !showMore1
-                                            )
-                                        }
-                                    >
-                                        {showMore1
-                                            ? "show less"
-                                            : "...more"}
-                                    </button>
-                                </p> */}
                                 <p className="newsandeventsparatext-evidenceled">
                                     {showMore1 ? (
                                         <>
@@ -110,12 +92,12 @@ export default function EvidenceLedResearchPhotoGrid() {
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <div className="mt-10" style={{ textAlign: 'justify' }}>
-                               
 
-                            <p className="newsandeventsparaheading-evidenceled" style={{ color: "#3C65F5" }}>
+
+                                <p className="newsandeventsparaheading-evidenceled" style={{ color: "#3C65F5" }}>
                                     Economic
                                 </p>
-                                
+
                                 <p className="newsandeventsparatext-evidenceled">
                                     {showMore1 ? (
                                         <>
@@ -170,12 +152,12 @@ export default function EvidenceLedResearchPhotoGrid() {
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <div className="mt-10" style={{ textAlign: 'justify' }}>
-                                
 
-                            <p className="newsandeventsparaheading-evidenceled" style={{ color: "#3C65F5" }}>
+
+                                <p className="newsandeventsparaheading-evidenceled" style={{ color: "#3C65F5" }}>
                                     Economic
                                 </p>
-                                
+
                                 <p className="newsandeventsparatext-evidenceled">
                                     {showMore1 ? (
                                         <>

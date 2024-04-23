@@ -6,13 +6,13 @@ $font-family: Plus Jakarta Sans, sans-serif;
 
 
 /* Background Blue random Design */
-.background-random-evidenceledresearch {
+.background-random-resourcebuilder {
     position: relative;
     overflow: hidden;
 }
 
-.background-random-evidenceledresearch::before,
-.background-random-evidenceledresearch::after {
+.background-random-resourcebuilder::before,
+.background-random-resourcebuilder::after {
     content: "";
     position: absolute;
     width: 800px;
@@ -22,20 +22,19 @@ $font-family: Plus Jakarta Sans, sans-serif;
     z-index: -1;
 }
 
-.background-random-evidenceledresearch::before {
+.background-random-resourcebuilder::before {
     transform: rotate(-8deg);
     top: 800px;
     left: -300px;
     border-radius: 25px;
 }
 
-.background-random-evidenceledresearch::after {
+.background-random-resourcebuilder::after {
     transform: rotate(8deg);
     top: 1100px;
     right: -300px;
     border-radius: 25px;
 }
-
 /* Background Blue random Design End */
 
 /*Media Query */
@@ -71,11 +70,10 @@ $font-family: Plus Jakarta Sans, sans-serif;
         }
     }
 }
-
 /*Media Query  End*/
 
 /*Hero Component Start */
-.banner-hero-businessbuilder {
+.banner-hero-resourcebuilder {
     padding: 0px 65px 0px 70px;
     position: relative;
     max-width: 1770px;
@@ -85,7 +83,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     align-items: center;
 }
 
-.title-details-businessbuilder {
+.title-details-resourcebuilder {
     text-align: justify;
 }
 
@@ -101,7 +99,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     width: 25px;
 }
 
-.businessbuilderparaheading {
+.resourcebuilderparaheading {
     font-family: "Plus Jakarta Sans";
     font-size: 16px;
     font-style: normal;
@@ -109,7 +107,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     line-height: 26px;
 }
 
-.businessbuilderparatext {
+.resourcebuilderparatext {
     color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
     text-align: justify;
     font-family: "Plus Jakarta Sans";
@@ -120,31 +118,31 @@ $font-family: Plus Jakarta Sans, sans-serif;
 }
 
 //   Hero Page Section
-.bg-img-businessbuilder {
+.bg-img-resourcebuilder {
     height: 30vh;
-    background: url(../imgs/page/business-builder/businessbuilderhero.jpg) no-repeat center center;
+    background: url(../imgs/page/resource-builder/resourcebuilderhero.jpg) no-repeat center center;
     background-size: cover;
 }
 
-.bg-img-businessbuilder h2,
-.bg-img-businessbuilder p {
+.bg-img-resourcebuilder h2,
+.bg-img-resourcebuilder p {
     z-index: 2;
     position: relative;
     color: white;
     padding-left: 25px;
 }
 
-.bg-img-businessbuilder h2 {
+.bg-img-resourcebuilder h2 {
     border-left: 10px solid #83cbff;
     padding-bottom: 8px;
     padding-top: 5px;
 }
 
-.bg-img-businessbuilder p {
+.bg-img-resourcebuilder p {
     border-left: 10px solid #83cbff;
 }
 
-.bg-img-businessbuilder::before {
+.bg-img-resourcebuilder::before {
     content: "";
     position: absolute;
     top: 0;
@@ -183,7 +181,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     }
 }
 
-// Business Builder Card
+// Resource Builder Card
 .support-section {
     display: flex;
     max-width: 653px;
@@ -274,38 +272,38 @@ $font-family: Plus Jakarta Sans, sans-serif;
     }
 }
 
-.container-businessbuilder {
+.container-resourcebuilder {
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
 @media screen and (max-width: 1600px) {
-    .container-businessbuilder {
+    .container-resourcebuilder {
         max-width: 1200px;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    .container-businessbuilder {
+    .container-resourcebuilder {
         max-width: 700px;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .container-businessbuilder {
+    .container-resourcebuilder {
         max-width: 700px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .container-businessbuilder {
+    .container-resourcebuilder {
         max-width: 480px;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .container-businessbuilder {
+    .container-resourcebuilder {
         max-width: 480px;
         padding: 0 25px;
         margin-top: -25px;
@@ -313,29 +311,29 @@ $font-family: Plus Jakarta Sans, sans-serif;
 }
 
 @media screen and (max-width: 450px) {
-    .container-businessbuilder {
+    .container-resourcebuilder {
         max-width: 420px;
         padding: 0 50px 0 30px;
     }
 }
 
 @media (min-width: 1600px) {
-    .container-businessbuilder {
+    .container-resourcebuilder {
         max-width: 1200px;
     }
 }
 
 /* Share Icon Start */
-.share-icon-container-businessbuilder {
+.share-icon-container-resourcebuilder {
     position: absolute;
 }
 
-.share-icon-businessbuilder {
+.share-icon-resourcebuilder {
     font-size: 30px;
     color: #3c65f5;
 }
 
-.share-icon-businessbuilder:hover {
+.share-icon-resourcebuilder:hover {
     transform: translateY(-2px);
     color: #ffffff;
     background-color: #05264e;
@@ -344,52 +342,50 @@ $font-family: Plus Jakarta Sans, sans-serif;
 }
 
 @media screen and (max-width:1200px) {
-    .share-icon-businessbuilder {
+    .share-icon-resourcebuilder {
         margin-left: 35px !important;
         margin-top: -76px !important;
     }
 }
 
 @media screen and (max-width:999px) {
-    .share-icon-businessbuilder {
+    .share-icon-resourcebuilder {
         margin-left: 14px !important;
         margin-top: -76px !important;
     }
 }
 
 @media screen and (max-width:768px) {
-    .share-icon-businessbuilder {
+    .share-icon-resourcebuilder {
         margin-left: 32px !important;
         margin-top: -76px !important;
     }
 }
 
 @media screen and (max-width:580px) {
-    .share-icon-businessbuilder {
+    .share-icon-resourcebuilder {
         margin-left: 3px !important;
         margin-top: 5px !important;
     }
 }
 
 @media screen and (max-width:515px) {
-    .share-icon-businessbuilder {
+    .share-icon-resourcebuilder {
         margin-left: 3px !important;
         margin-top: 30px !important;
     }
 }
-
 /* Share Icon End */
 
 @media screen and (max-width:576px) {
-
-    .businessbuilder-hero-heading,
-    .businessbuilder-hero-subheading {
+    .resourcebuilder-hero-heading,
+    .resourcebuilder-hero-subheading {
         margin-left: -65px;
     }
 }
 
 @media screen and (max-width:576px) {
-    .businessbuilder-video-laptop {
+    .resourcebuilder-video-laptop {
         height: 300px;
     }
 
@@ -403,7 +399,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
 }
 
 @media screen and (max-width:430px) {
-    .businessbuilder-video-laptop {
+    .resourcebuilder-video-laptop {
         height: 280px;
     }
 
@@ -416,32 +412,20 @@ $font-family: Plus Jakarta Sans, sans-serif;
     }
 }
 
-.businessbuilder-inner-heading {
+.resourcebuilder-inner-heading {
     font-size: 36px !important;
 }
 
 @media screen and (max-width:576px) {
-    .businessbuilder-inner-heading {
+    .resourcebuilder-inner-heading {
         font-size: 20px !important;
     }
 }
 
 @media screen and (max-width:576px) {
     .section-box {
-        &.mt-100 {
-            margin-top: 45px !important;
-        }
-    }
-
-    .section-box {
         &.mt-75 {
             margin-top: 40px !important;
-        }
-    }
-
-    .section-box {
-        &.mt-60 {
-            margin-top: 35px !important;
         }
     }
 
@@ -458,17 +442,10 @@ $font-family: Plus Jakarta Sans, sans-serif;
     }
 
     .section-box {
-        &.grid-container-fundingbuilder {
+        &.grid-container-businessbuilder {
             &.mt-75 {
                 margin-top: 30px !important;
             }
         }
     }
 }
-
-body .uwy.userway_p1 .userway_buttons_wrapper {
-    top: 0 !important;
-margin-top: 36px;
-margin-left: -30px !important;
-}
-

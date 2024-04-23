@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Select from 'react-select/async';
 import { colourOptions } from './data';
+import { IoSearchSharp } from "react-icons/io5";
 
 
 const filterColors = (inputValue) => {
@@ -52,7 +53,7 @@ const CustomAsyncSelect = () => {
       ...provided,
       display: 'none',
     }),
-   
+
     searchButton: {
       width: '120px',
       height: '100%',
@@ -67,55 +68,77 @@ const CustomAsyncSelect = () => {
       color: '#ffffff',
       borderRadius: '8px',
       fontSize: '16px',
-      height: '55px'
+      height: '55px',
+      marginRight: '10px',
     },
   };
 
   const customOption = (props) => (
-    <div onClick={() => window.open(props.data.pdfLocation, '_blank')} style={{cursor: 'pointer'}}>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        padding: '10px',
+        cursor: 'pointer',
+      }}
+      onClick={() => window.open(props.data.pdfLocation, '_blank')}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.backgroundColor = '#f0f0f0';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.backgroundColor = 'transparent';
+      }}
+    >
       <img
         alt=""
         src={props.data.image}
-        style={{ width: 100, marginRight: 100, marginBottom: 50 }}
+        style={{ width: 40, marginRight: 10 }}
       />
-      <span style={{ textAlign: 'center', marginTop: '-50px' }}>{props.label}</span>
+      <span>{props.label}</span>
     </div>
   );
 
   return (
-    <Select
-      className="custom-select" // SCSS Class
-      cacheOptions
-      loadOptions={loadOptions}
-      defaultOptions
-      onChange={handleChange}
-      value={selectedOption}
-      styles={customStyles}
-      placeholder="Enter name of report, article, research or subject" // Placeholder text
-      isSearchable
-      menuIsOpen={menuIsOpen}
-      onMenuOpen={() => setMenuIsOpen(true)}
-      onMenuClose={() => setMenuIsOpen(false)}
-
-
-      components={{
-        Option: customOption,
-        IndicatorSeparator: null,
-        DropdownIndicator: (props) => (
-          <div>
+    <div className="custom-select-container">
+      <Select
+        className="custom-select" // SCSS Class
+        cacheOptions
+        loadOptions={loadOptions}
+        defaultOptions
+        onChange={handleChange}
+        value={selectedOption}
+        styles={customStyles}
+        placeholder="Enter name of report, article, research or subject" // Placeholder text
+        isSearchable
+        menuIsOpen={menuIsOpen}
+        onMenuOpen={() => setMenuIsOpen(true)}
+        onMenuClose={() => setMenuIsOpen(false)}
+        components={{
+          Option: customOption,
+          IndicatorSeparator: null,
+          DropdownIndicator: (props) => (
+            <div className="search-button-container-laptop">
             <div
-              style={customStyles.searchButton}
-              onClick={() => console.log('Search Button clicked')}
-            >
-              
-              SEARCH
+                style={customStyles.searchButton}
+                onClick={() => console.log('Search Button clicked')}
+              >
+                <IoSearchSharp style={{ marginRight: '5px' }} />
+                SEARCH
+              </div>
             </div>
-          </div>
-        ),
-      }}
-
-
-    />
+          ),
+        }}
+      />
+      <div className="search-button-container">
+        <div
+          style={customStyles.searchButton}
+          onClick={() => console.log('Search Button clicked')}
+        >
+          <IoSearchSharp style={{ marginRight: '5px' }} />
+          SEARCH
+        </div>
+      </div>
+    </div>
   );
 };
 

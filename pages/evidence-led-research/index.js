@@ -184,7 +184,8 @@ export default function Index() {
                         <div className="banner-hero-evidenceledresearch-searchbar mt-50">
                             <div className="block-banner-evidenceled block-banner-evidenceled">
                                 {/* <EvidenceLedResearchSearchBar1 /> */}
-                                <EvidenceLedResearchSearchBar1 articleData={articleData} />
+                                {/* <EvidenceLedResearchSearchBar1 articleData={articleData} /> */}
+                                
                             </div>
                         </div>
                                 {/* <EvidenceLedResearchSearchBar1 /> */}

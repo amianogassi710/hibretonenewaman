@@ -67,11 +67,6 @@ export default function Index() {
                         translation by H. Rackham.{" "}
                       </p>
                     </div>
-                    <div className="mt-20">
-                      <button href="" className="btn btn-default fs-6">
-                        Create Guide
-                      </button>
-                    </div>
                   </Grid>
                   <Grid item lg={6} className="d-flex justify-content-center">
                     <img
@@ -88,7 +83,7 @@ export default function Index() {
                   sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                 >
                   <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                    <h3 style={{ fontSize: "36px !important" }}>Intelligence to Plan or Change Career</h3>
+                    <h3 style={{ fontSize: "24px !important" }}>Intelligence to Plan or Change Career</h3>
                   </Grid>
                   <Grid item xs={12} md={12}>
                     <div className="grid__thumb w-img fix grid_thumb_height grid_thumb">
@@ -117,11 +112,6 @@ export default function Index() {
                         form, accompanied by English versions from the 1914
                         translation by H. Rackham.{" "}
                       </p>
-                    </div>
-                    <div className="mt-20 mb-30">
-                      <button href="" className="btn btn-default fs-6">
-                        Create Guide
-                      </button>
                     </div>
                   </Grid>
                 </Grid>
@@ -180,7 +170,7 @@ export default function Index() {
                   sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                 >
                   <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                    <h3 style={{ fontSize: "36px !important" }}>Market Sector Guide</h3>
+                    <h3 style={{ fontSize: "24px !important" }}>Market Sector Guide</h3>
                   </Grid>
                   <Grid item xs={12} md={12}>
                     <div className="grid__thumb w-img fix grid_thumb_height grid_thumb">
@@ -266,7 +256,7 @@ export default function Index() {
                   sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                 >
                   <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                    <h3 style={{ fontSize: "36px !important" }}>New Occupation Guide</h3>
+                    <h3 style={{ fontSize: "24px !important" }}>New Occupation Guide</h3>
                   </Grid>
                   <Grid item xs={12} md={12}>
                     <div className="grid__thumb w-img fix grid_thumb_height grid_thumb">
@@ -320,7 +310,7 @@ export default function Index() {
                     <h3 className="mt-5" style={{ fontSize: "36px !important" }}>
                       Discover Business Idea
                     </h3>
-                    <div className="title-details">
+                    <div  className="title-details">
                       <p className="p-color mt-10">
                         If you are in need of inspiration to start a new
                         business, we've got you covered. You can discover the
@@ -348,7 +338,7 @@ export default function Index() {
                   sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                 >
                   <Grid item xs={12} md={12}>
-                    <h3 style={{fontSize:'36px !important'}}>Discover Business Idea</h3>
+                    <h3 style={{fontSize:'24px !important'}}>Discover Business Idea</h3>
                   </Grid>
                   <Grid className="mt-10" item xs={12} md={12}>
                     <div className="grid__thumb w-img fix grid_thumb_height grid_thumb">
@@ -360,7 +350,7 @@ export default function Index() {
                     </div>
                   </Grid>
                   <Grid item xs={12} md={12}>
-                    <div style={{ textAlign: "justify" }}>
+                    <div  className="mt-10" style={{ textAlign: "justify" }}>
                       <p className="p-color">
                         If you are in need of inspiration to start a new
                         business, we've got you covered. You can discover the
