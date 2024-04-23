@@ -19,7 +19,7 @@ import {
 import { PiPaintBrushBold } from "react-icons/pi";
 import { LuTrees } from "react-icons/lu";
 import {
-    FaHandsPraying,
+    
     FaHotel,
 } from "react-icons/fa";
 import { GrUserWorker } from "react-icons/gr";
@@ -105,7 +105,7 @@ const CategorySlider = () => {
         "Health": GiHealthNormal,
         "Arts": PiPaintBrushBold,
         "Rural": LuTrees,
-        "Religion": FaHandsPraying,
+        "Religion": FaHotel,
         "Leisure & Tourism": FaHotel,
         "Employment": GrUserWorker,
         "Young People": FaRunning,
