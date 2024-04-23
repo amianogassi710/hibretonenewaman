@@ -27,17 +27,17 @@ export default function Index() {
                     <div className="box-swiper">
                         <BlogPageHeading />
                     </div>
-                    <div className="section-box wow animate__animated animate__fadeIn">
-                        <div className="container mt-50" >
+                    <div className="section-box mt-75 wow animate__animated animate__fadeIn">
+                        <div className="container" >
                             <BlogPageCarousel />
                         </div>
                     </div>
 
-                    <section className="section-box mt-75 mb-50">
+                    <section className="section-box mt-75">
                         <YellowBanner />
                     </section>
 
-                    <section className="section-box mt-50 mb-25">
+                    <section className="section-box mt-100">
                         <div className="container">
                             <div className="flex-container">
                                 <div className="text-center">
@@ -56,7 +56,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box mt-50 mb-15">
+                    <section className="section-box mt-75">
                         <div className="container">
                             <div className="flex-container">
                                 <div className="text-center">
@@ -81,14 +81,9 @@ export default function Index() {
 
                     </section>
 
-                    <section className="section-box mt-0 mb-75">
-                        <div className="post-loop-grid">
-                            <div className="container">
-
-                            </div>
-                        </div>
+                    <section className="section-box mt-75">
+                            <KickstartButton />
                     </section>
-                    <KickstartButton />
                     <Subscription />
                 </div>
             </Layout>

@@ -35,6 +35,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     right: -300px;
     border-radius: 25px;
 }
+
 /* Background Blue random Design End */
 
 /*Media Query */
@@ -70,6 +71,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
         }
     }
 }
+
 /*Media Query  End*/
 
 /*Hero Component Start */
@@ -196,7 +198,8 @@ $font-family: Plus Jakarta Sans, sans-serif;
     margin-top: 26px;
     width: 105%;
     flex-direction: column;
-    align-items: start;
+    // align-items: start;
+    align-items: flex-start;
     padding: 0 0 25px 25px;
 }
 
@@ -374,9 +377,11 @@ $font-family: Plus Jakarta Sans, sans-serif;
         margin-top: 30px !important;
     }
 }
+
 /* Share Icon End */
 
 @media screen and (max-width:576px) {
+
     .businessbuilder-hero-heading,
     .businessbuilder-hero-subheading {
         margin-left: -65px;
@@ -423,8 +428,20 @@ $font-family: Plus Jakarta Sans, sans-serif;
 
 @media screen and (max-width:576px) {
     .section-box {
+        &.mt-100 {
+            margin-top: 45px !important;
+        }
+    }
+
+    .section-box {
         &.mt-75 {
             margin-top: 40px !important;
+        }
+    }
+
+    .section-box {
+        &.mt-60 {
+            margin-top: 35px !important;
         }
     }
 

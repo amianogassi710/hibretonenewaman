@@ -105,7 +105,7 @@ export default function EvidenceLedResearchPhotoGrid() {
 
                         <Grid item xs={12} md={12}>
                             <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-                                <iframe height="100%" src="https://www.youtube.com/embed/i-7DGjUYCWc" allowfullscreen></iframe>
+                                <iframe height="100%" src="https://www.youtube.com/embed/i-7DGjUYCWc" allowFullScreen></iframe>
                             </div>
                         </Grid>
                         <Grid item xs={12} md={12}>
@@ -165,7 +165,7 @@ export default function EvidenceLedResearchPhotoGrid() {
                         sx={{ display: { xs: 'flex', md: "none", lg: 'none' } }}>
                         <Grid item xs={12} md={12}>
                             <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-                                <iframe width="" height="100%" src="https://www.youtube.com/embed/i-7DGjUYCWc" allowfullscreen></iframe>
+                                <iframe width="" height="100%" src="https://www.youtube.com/embed/i-7DGjUYCWc" allowFullScreen></iframe>
                             </div>
                         </Grid>
                         <Grid item xs={12} md={12}>

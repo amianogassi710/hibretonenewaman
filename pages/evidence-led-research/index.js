@@ -13,6 +13,7 @@ import EvidenceLedResearchTrendingNowcarousel from "./EvidenceLedResearchTrendin
 import dynamic from "next/dynamic";
 import CustomAsyncSelect from "./App";
 
+
 const NoSSRCategorySlider = dynamic(
     () => import("../../components/sliders/Category"),
     { ssr: false }
@@ -134,7 +135,17 @@ export default function Index() {
         },
     ];
     
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://cdn.userway.org/widget.js";
+        script.setAttribute("data-account", "IPLbOdMJ9G");
+        script.async = true;
+        document.head.appendChild(script);
 
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, []);
 
     return (
         <>

@@ -12213,6 +12213,11 @@ ul li:last-child .card-list-4 {
   opacity: 1;
 }
 
+@media screen and (max-width: 576px) {
+  body .section-box.mt-100 {
+    margin-top: 45px !important;
+  }
+}
 /* About Us Page Start Suru  */
 .bg-img-aboutus {
   height: 30vh;
@@ -12791,9 +12796,6 @@ ul li:last-child .card-list-4 {
   .section-box-meetourteam-aboutus {
     margin-top: 35px !important;
   }
-  .section-box-newsandevents-aboutus {
-    margin-top: 10px !important;
-  }
   .mb5 {
     margin-bottom: 5px;
   }
@@ -13369,7 +13371,7 @@ ul li:last-child .card-list-4 {
   margin-top: 26px;
   width: 105%;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding: 0 0 25px 25px;
 }
 
@@ -14606,7 +14608,7 @@ ul li:last-child .card-list-4 {
   margin-top: 26px;
   width: 105%;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding: 0 0 25px 25px;
 }
 
@@ -14807,8 +14809,14 @@ ul li:last-child .card-list-4 {
   }
 }
 @media screen and (max-width: 576px) {
+  .section-box.mt-100 {
+    margin-top: 45px !important;
+  }
   .section-box.mt-75 {
     margin-top: 40px !important;
+  }
+  .section-box.mt-60 {
+    margin-top: 35px !important;
   }
   .section-box.mt-50 {
     margin-top: 30px !important;

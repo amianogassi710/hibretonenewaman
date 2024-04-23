@@ -915,6 +915,7 @@
 }
 
 @media screen and (max-width: 420px) {
+
   .banner-hero1 .block-banner1 .blog-form-find-top,
   .banner-hero-blogpage .block-banner1 .blog-form-find-top {
     padding: 10px 5px 10px 5px !important;
@@ -2807,5 +2808,15 @@
     height: 12px;
     margin: -1px 3px 0;
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    .section-box {
+      &.mt-100 {
+        margin-top: 45px !important;
+      }
+    }
   }
 }
