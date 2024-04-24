@@ -1,9 +1,14 @@
 // React Component
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch, useHistory, useParams } from 'react-router-dom';
+import Link from "next/link";
+import { useRouter } from 'next/router';
+
+
 import Select from 'react-select/async';
 import { colourOptions } from './data';
 import { IoSearchSharp } from "react-icons/io5";
-
+import SearchResult from './SearchResult';
 
 const filterColors = (inputValue) => {
   return colourOptions.filter((i) =>
@@ -17,12 +22,30 @@ const loadOptions = (inputValue, callback) => {
   }, 1000);
 };
 
+
+
+
+
 const CustomAsyncSelect = () => {
+  const router = useRouter();
+  const [searchValue, setSearchValue] = useState('');
+
+
   const [selectedOption, setSelectedOption] = useState(null);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  const handleChange = (selectedOption) => {
-    setSelectedOption(selectedOption);
+  const handleChange = (selected) => {
+    setSelectedOption(selected);
+    setSearchValue(selected ? selected.value : '');
+  };
+
+  const handleInputChange = (inputValue) => {
+    setSearchValue(inputValue);
+  };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    router.push(`/evidence-led-research/SearchResult/${searchValue}`);
   };
 
   const customStyles = {
@@ -71,7 +94,14 @@ const CustomAsyncSelect = () => {
       height: '55px',
       marginRight: '10px',
     },
+    input: (provided) => ({
+      ...provided,
+      marginLeft: '10px', // Adjust the gap on the left side
+    })
   };
+
+
+
 
   const customOption = (props) => (
     <div
@@ -98,48 +128,68 @@ const CustomAsyncSelect = () => {
     </div>
   );
 
+
+
+
   return (
-    <div className="custom-select-container">
-      <Select
-        className="custom-select" // SCSS Class
-        cacheOptions
-        loadOptions={loadOptions}
-        defaultOptions
-        onChange={handleChange}
-        value={selectedOption}
-        styles={customStyles}
-        placeholder="Enter name of report, article, research or subject" // Placeholder text
-        isSearchable
-        menuIsOpen={menuIsOpen}
-        onMenuOpen={() => setMenuIsOpen(true)}
-        onMenuClose={() => setMenuIsOpen(false)}
-        components={{
-          Option: customOption,
-          IndicatorSeparator: null,
-          DropdownIndicator: (props) => (
-            <div className="search-button-container-laptop">
-            <div
-                style={customStyles.searchButton}
-                onClick={() => console.log('Search Button clicked')}
-              >
-                <IoSearchSharp style={{ marginRight: '5px' }} />
-                SEARCH
-              </div>
-            </div>
-          ),
-        }}
-      />
-      <div className="search-button-container">
-        <div
-          style={customStyles.searchButton}
-          onClick={() => console.log('Search Button clicked')}
-        >
-          <IoSearchSharp style={{ marginRight: '5px' }} />
-          SEARCH
+    <div className="custom-select-container mt-50">
+      <form>
+        <div className="search-container">
+          <Select
+            className="custom-select" // SCSS Class
+            cacheOptions
+            loadOptions={loadOptions}
+            defaultOptions
+            onChange={handleChange}
+            onInputChange={handleInputChange}
+            value={selectedOption}
+            styles={customStyles}
+            placeholder="Enter name of report, article, research or subject" // Placeholder text
+            isSearchable
+            menuIsOpen={menuIsOpen}
+            onMenuOpen={() => setMenuIsOpen(true)}
+            onMenuClose={() => setMenuIsOpen(false)}
+            components={{
+              Option: customOption,
+              IndicatorSeparator: null,
+              DropdownIndicator: (props) => (
+                <div className="search-button-container-laptop">
+
+                  <div
+                    style={customStyles.searchButton}
+                    onClick={handleSearch}
+
+                  >
+                    <IoSearchSharp style={{ marginRight: '5px' }} />
+                    SEARCH
+                  </div>
+                </div>
+
+
+              ),
+            }}
+          />
         </div>
-      </div>
-    </div>
+        <div className="search-button-container">
+          <Link
+            legacyBehavior
+            href={`/evidence-led-research/SearchResult/${searchValue}`}
+          >
+            <div
+              style={customStyles.searchButton}
+              className='searchButton'
+            // onClick={handleSearch}
+            >
+              <IoSearchSharp style={{ marginRight: '5px' }} />
+              SEARCH
+
+            </div>
+          </Link>
+        </div>      </form>
+
+    </div >
   );
+
 };
 
 export default CustomAsyncSelect;

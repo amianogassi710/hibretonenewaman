@@ -15630,6 +15630,12 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   font-size: 20px;
   margin: auto;
 }
+.custom-select .css-lmmipk-control {
+  border: 0 !important;
+}
+.custom-select .css-319lph-ValueContainer {
+  padding: 2px 0px !important;
+}
 .custom-select .css-1wv8xcf-placeholder {
   margin-left: 0px;
   margin-right: 0px;
@@ -15661,23 +15667,41 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   color: #718096;
 }
 
+.custom-select {
+  width: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .custom-select-container {
+    width: 50%;
+  }
+}
 @media screen and (max-width: 1260px) {
-  .custom-select {
+  .custom-select-container {
     width: 55%;
   }
 }
 @media screen and (max-width: 920px) {
-  .custom-select {
+  .custom-select-container {
     width: 75%;
   }
 }
 @media screen and (max-width: 670px) {
-  .custom-select {
+  .custom-select-container {
     width: 95%;
+  }
+}
+@media (min-width: 1400px) {
+  .custom-select-container {
+    width: 50%;
   }
 }
 .custom-select-container {
   position: relative;
+  margin: 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: auto;
 }
 
 .search-button-container {
@@ -15691,12 +15715,21 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
     display: none;
   }
   .search-button-container {
-    margin-top: 10px;
     display: flex;
     justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
   }
   .custom-select {
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  .searchButton {
+    width: 100% !important;
+    margin: 0 10px !important;
+  }
+  .css-319lph-ValueContainer {
+    padding: 2px 0px 0px 0px !important;
   }
 }
 /* Background Blue random Design */

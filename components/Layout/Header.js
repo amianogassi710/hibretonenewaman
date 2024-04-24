@@ -4,6 +4,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useLocalStorage } from "react-use";
 import { useRouter } from "next/router";
+import { Accessibility } from "@mui/icons-material";
+import Accessibility1 from "../../components/elements/Accessibility";
+
 
 const Header = ({ handleOpen, handleRemove, openClass }) => {
     const [scroll, setScroll] = useState(0);
@@ -319,6 +322,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                             Sign in
                                         </a>
                                     </Link>
+                                    <Accessibility1 />
                                 </div>
                             )}
                         </div>

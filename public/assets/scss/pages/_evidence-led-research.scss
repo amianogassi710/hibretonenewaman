@@ -860,7 +860,14 @@
     font-size: 20px;
     margin: auto;
 
-    .css-1wv8xcf-placeholder{
+    .css-lmmipk-control {
+        border: 0 !important
+    }
+
+    .css-319lph-ValueContainer {
+        padding: 2px 0px !important;
+    }
+    .css-1wv8xcf-placeholder {
         margin-left: 0px;
         margin-right: 0px;
         padding-left: 10px;
@@ -899,45 +906,77 @@
 }
 
 
+.custom-select {
+    width: auto;
+}
+
+@media screen and (max-width: 1400px) {
+    .custom-select-container {
+        width: 50%;
+    }
+}
+
 @media screen and (max-width: 1260px) {
-    .custom-select {
+    .custom-select-container {
         width: 55%;
     }
 }
 
 @media screen and (max-width: 920px) {
-    .custom-select {
+    .custom-select-container {
         width: 75%;
     }
 }
 
 @media screen and (max-width: 670px) {
-    .custom-select {
+    .custom-select-container {
         width: 95%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .custom-select-container {
+        width: 50%;
     }
 }
 
 .custom-select-container {
     position: relative;
-  }
-  
-  .search-button-container {
+    margin: 0 20px;
+    border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: auto;
+}
+
+.search-button-container {
     position: relative;
     margin-top: 10px;
     display: none;
-  }
-  
-  @media screen and (max-width: 570px) {
+}
+
+@media screen and (max-width: 570px) {
     .search-button-container-laptop {
         display: none;
     }
+
     .search-button-container {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+        margin-bottom: 5px;
     }
-  
+
     .custom-select {
-      margin-bottom: 10px;
+        margin-bottom: 0;
+        width: 100%;
     }
-  }
+
+    .searchButton{
+        width: 100% !important;
+        margin: 0 10px !important;
+    }
+
+    .css-319lph-ValueContainer{
+        padding: 2px 0px 0px 0px !important;
+    }
+}

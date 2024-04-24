@@ -119,10 +119,10 @@ export default function Index() {
             image: "/assets/imgs/page/evidence-led-research/the top 20 reasons.png",
             pdfLocation: "/assets/files/page/evidence-led-research/the top 20 reasons.pdf",
         },
-        
-        
-        
-        
+
+
+
+
         {
             title: "Investment Opportunities",
             image: "/assets/imgs/page/evidence-led-research/investment opportunities.png",
@@ -134,7 +134,7 @@ export default function Index() {
             pdfLocation: "/assets/files/page/evidence-led-research/facilitating new migrant.pdf",
         },
     ];
-    
+
     useEffect(() => {
         const script = document.createElement("script");
         script.src = "https://cdn.userway.org/widget.js";
@@ -158,7 +158,7 @@ export default function Index() {
                                     <div className="col">
                                         <h2 className="businessbuilder-hero-heading-evidenceledresearch" style={{ marginBottom: '20px', fontSize: '60px' }}>Evidence-led Research</h2>
                                         <p className="businessbuilder-hero-subheading-evidenceledresearch color-text-paragraph-evidenceledresearch subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
-                                            Leading <span className="color-blue"> global academic research </span> is converted into a blueprint for change across economic, social and moral requirements                                        </p>
+                                            Leading <span className="color-blue"> global academic research </span> is used as our  economic, social and moral blueprint for change </p>
                                     </div>
                                 </div>
                             </div>
@@ -181,15 +181,10 @@ export default function Index() {
                                 </div>
                             </div>
                         </div>
-                        <div className="banner-hero-evidenceledresearch-searchbar mt-50">
-                            <div className="block-banner-evidenceled block-banner-evidenceled">
                                 {/* <EvidenceLedResearchSearchBar1 /> */}
                                 {/* <EvidenceLedResearchSearchBar1 articleData={articleData} /> */}
-                                
-                            </div>
-                        </div>
-                                {/* <EvidenceLedResearchSearchBar1 /> */}
-                                <CustomAsyncSelect />
+                        {/* <EvidenceLedResearchSearchBar1 /> */}
+                        <CustomAsyncSelect />
                     </section>
 
 
@@ -231,7 +226,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none", marginTop: '-25px' } }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none"} }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
                                         <h4 className="inner-heading-evidenceled">
