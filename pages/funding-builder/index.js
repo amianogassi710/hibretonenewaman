@@ -16,6 +16,17 @@ function useLockBodyScroll(open) {
             document.body.style.overflow = "visible";
         };
     }, [open]);
+
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://website-widgets.pages.dev/dist/sienna.min.js";
+        script.defer = true;
+        document.head.appendChild(script);
+
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, []);
 }
 
 export default function Index() {

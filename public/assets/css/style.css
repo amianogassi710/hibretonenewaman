@@ -15432,11 +15432,11 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (max-width: 1400px) {
   .swiperprevious-evidenceled {
-    top: 34%;
+    top: 35%;
     left: 10px;
   }
   .swipernext-evidenceled {
-    top: 34%;
+    top: 35%;
     right: 10px;
   }
 }
@@ -15496,11 +15496,11 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (min-width: 1400px) {
   .swiperprevious-evidenceled {
-    top: 34%;
+    top: 35%;
     left: 40px;
   }
   .swipernext-evidenceled {
-    top: 34%;
+    top: 35%;
     right: 40px;
   }
 }
@@ -15678,12 +15678,12 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (max-width: 1260px) {
   .custom-select-container {
-    width: 55%;
+    width: 75%;
   }
 }
 @media screen and (max-width: 920px) {
   .custom-select-container {
-    width: 75%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 670px) {
@@ -15699,15 +15699,20 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 .custom-select-container {
   position: relative;
   margin: 0 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   margin: auto;
+  border: 1px solid #e0e6f6;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .search-button-container {
   position: relative;
   margin-top: 10px;
   display: none;
+}
+
+.search-button-container-laptop {
+  position: relative;
 }
 
 @media screen and (max-width: 570px) {
@@ -15732,6 +15737,49 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
     padding: 2px 0px 0px 0px !important;
   }
 }
+.btn-search-evidence-led-research {
+  background-color: rgb(34, 154, 36);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 35%;
+  height: auto;
+  font-size: 16px;
+  margin-left: 12px;
+}
+
+.banner-hero1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  position: relative;
+  max-width: 1770px;
+  margin: 0 auto;
+}
+
+.banner-hero1 .block-banner1 .industry-form-find {
+  background: #fff;
+  width: 800px;
+  padding: 8px 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solidcolor(#e0e6f6);
+  border-radius: 8px;
+}
+
+.banner-hero1 .block-banner1 .industry-form-find form {
+  width: 100%;
+  display: flex;
+}
+
+.industry-form-find form .industry-input-top-four {
+  height: 50px;
+  box-shadow: none;
+  padding-left: 10px;
+  font-size: 16px;
+  border: none;
+}
+
 /* Background Blue random Design */
 .background-random-resourcebuilder {
   position: relative;

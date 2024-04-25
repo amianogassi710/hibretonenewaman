@@ -11,7 +11,7 @@ import Evidenceledresearchexplorecarousel from "./Evidenceledresearchexplorecaro
 import EvidenceLedResearchPhotoGrid from "./EvidenceLedResearchPhotoGrid";
 import EvidenceLedResearchTrendingNowcarousel from "./EvidenceLedResearchTrendingNowcarousel";
 import dynamic from "next/dynamic";
-import CustomAsyncSelect from "./App";
+import EvidenceLedResearchMUISearchFrame from "./EvidenceLedResearchMUISearchFrame";
 
 
 const NoSSRCategorySlider = dynamic(
@@ -32,6 +32,17 @@ function useLockBodyScroll(open) {
             document.body.style.overflow = "visible";
         };
     }, [open]);
+
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://website-widgets.pages.dev/dist/sienna.min.js";
+        script.defer = true;
+        document.head.appendChild(script);
+
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, []);
 }
 
 export default function Index() {
@@ -46,6 +57,7 @@ export default function Index() {
 
     const [isOpen, setIsOpen] = useState(false);
     useLockBodyScroll(isOpen);
+
 
 
     const articleData = [
@@ -135,20 +147,11 @@ export default function Index() {
         },
     ];
 
-    useEffect(() => {
-        const script = document.createElement("script");
-        script.src = "https://cdn.userway.org/widget.js";
-        script.setAttribute("data-account", "IPLbOdMJ9G");
-        script.async = true;
-        document.head.appendChild(script);
 
-        return () => {
-            document.head.removeChild(script);
-        };
-    }, []);
 
     return (
         <>
+
             <Layout>
                 <div className="background-random-evidenceledresearch">
                     <section className="section-box">
@@ -176,15 +179,11 @@ export default function Index() {
                                         Explore the Supporting Global Research
                                     </h2>
                                     <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
-                                        Exploit your abilities, skillset and traits
-                                    </p>
+                                        Social and economic research from great sources all in one place                                    </p>
                                 </div>
                             </div>
                         </div>
-                                {/* <EvidenceLedResearchSearchBar1 /> */}
-                                {/* <EvidenceLedResearchSearchBar1 articleData={articleData} /> */}
-                        {/* <EvidenceLedResearchSearchBar1 /> */}
-                        <CustomAsyncSelect />
+                        <EvidenceLedResearchMUISearchFrame />
                     </section>
 
 
@@ -226,7 +225,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none"} }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
                                         <h4 className="inner-heading-evidenceled">
@@ -289,8 +288,8 @@ export default function Index() {
                             <div className="container2 mt-40">
                                 <div className="box-swiper grant-category evidence-led-research">
                                     <div>
-                                        {/* <NoSSRCategorySlider /> */}
-                                        {/* <NoSSRCategorySlider1 /> */}
+                                        <NoSSRCategorySlider />
+                                        <NoSSRCategorySlider1 />
                                         <div className="swiper-button-next" />
                                         <div className="swiper-button-prev" />
                                     </div>

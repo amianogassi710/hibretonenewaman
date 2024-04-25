@@ -68,13 +68,7 @@ export default function NewOccupationGuide() {
         formData
       );
       setResponseData(response.data);
-    //   router.push(
-    //     "/industry-intelligence/new-occupation-guide",
-    //     undefined,
-    //     {
-    //         shallow: true,
-    //     }
-    // );
+    
     } catch (error) {
       console.error("Error:", error);
     } finally {

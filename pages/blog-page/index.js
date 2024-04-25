@@ -12,16 +12,32 @@ import BlogPopularPostsPaginationFrame from './BlogPopularPostsPaginationFrame';
 
 import BlogPopularPostsPaginationBackup from './BlogPopularPostsPaginationBackup';
 
+
+
 export default function Index() {
+    useEffect(() => {
+        const script = document.createElement("script");
+        script.src = "https://website-widgets.pages.dev/dist/sienna.min.js";
+        script.defer = true;
+        document.head.appendChild(script);
+
+        return () => {
+            document.head.removeChild(script);
+        };
+    }, []);
 
     const [currentPage, setCurrentPage] = useState(1);
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
     }
 
+    
+
     return (
         <>
+        
             <Layout>
+                
                 <div className="background-random-blogpage">
 
                     <div className="box-swiper">
