@@ -134,7 +134,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/">
+                                        <Link legacyBehavior href="/resource-builder">
                                             <a>Resource Builder</a>
                                         </Link>
 

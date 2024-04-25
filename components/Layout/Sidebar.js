@@ -102,7 +102,7 @@ const Sidebar = ({ openClass }) => {
                                         <li className={isActive.key == 4 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(4)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/candidates-grid"><a>Resource Builder</a></Link>
+                                            <Link legacyBehavior href="/resource-builder"><a>Resource Builder</a></Link>
 
                                             <ul className={isActive.key == 4 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>

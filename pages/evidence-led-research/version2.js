@@ -184,7 +184,7 @@ export default function Index() {
                                 </div>
                             </div>
                         </div>
-                        <EvidenceLedResearchSearchBar1 articleData={articleData} />
+                        <EvidenceLedResearchMUISearchFrame />
                     </section>
 
 
@@ -289,8 +289,8 @@ export default function Index() {
                             <div className="container2 mt-40">
                                 <div className="box-swiper grant-category evidence-led-research">
                                     <div>
-                                         <NoSSRCategorySlider />
-                                        <NoSSRCategorySlider1 /> 
+                                        {/* <NoSSRCategorySlider />
+                                        <NoSSRCategorySlider1 /> */}
                                         <div className="swiper-button-next" />
                                         <div className="swiper-button-prev" />
                                     </div>

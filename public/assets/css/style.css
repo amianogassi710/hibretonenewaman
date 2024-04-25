@@ -15335,7 +15335,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 
 .swiperprevious-evidenceled {
   position: absolute;
-  top: 34%;
+  top: 35%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -15345,7 +15345,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 
 .swipernext-evidenceled {
   position: absolute;
-  top: 34%;
+  top: 35%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -15496,11 +15496,11 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (min-width: 1400px) {
   .swiperprevious-evidenceled {
-    top: 35%;
+    top: 36%;
     left: 40px;
   }
   .swipernext-evidenceled {
-    top: 35%;
+    top: 36%;
     right: 40px;
   }
 }
@@ -15598,33 +15598,6 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
     left: -50px;
   }
 }
-.img {
-  aspect-ratio: 1;
-  object-fit: auto;
-  object-position: center;
-  width: 25px;
-}
-
-.imagecontent {
-  border-radius: 16px;
-  transition: 0.05s ease-in-out;
-  width: 100%;
-  max-width: 1000px;
-  height: 450px;
-}
-.imagecontent:hover {
-  scale: 1.02;
-  transition: 0.05s ease-in-out;
-}
-
-.swiper-slide-searchbar.swiper-slide {
-  width: 175px !important;
-  /* Define your desired width */
-  margin-right: 30px !important;
-  /* Adjust as per your requirement */
-}
-
-/* SCSS */
 .custom-select {
   width: 40%;
   font-size: 20px;
@@ -15778,6 +15751,126 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   padding-left: 10px;
   font-size: 16px;
   border: none;
+}
+
+.swiperprevious-search-evidenceled {
+  position: absolute;
+  top: 17%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  left: 10px;
+}
+
+.swipernext-search-evidenceled {
+  position: absolute;
+  top: 17%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  right: 10px;
+}
+
+@media screen and (max-width: 1400px) {
+  .swiperprevious-search-evidenceled {
+    top: 35%;
+    left: 10px;
+  }
+  .swipernext-search-evidenceled {
+    top: 35%;
+    right: 10px;
+  }
+}
+@media screen and (max-width: 1290px) {
+  .swiperprevious-search-evidenceled {
+    left: 0px;
+  }
+  .swipernext-search-evidenceled {
+    right: 0px;
+  }
+}
+@media screen and (max-width: 1225px) {
+  .swiperprevious-search-evidenceled {
+    left: -5px;
+  }
+  .swipernext-search-evidenceled {
+    right: -5px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .swiperprevious-search-evidenceled {
+    top: 35%;
+    left: 2px;
+  }
+  .swipernext-search-evidenceled {
+    top: 35%;
+    right: 2px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .swiperprevious-search-evidenceled {
+    top: 37%;
+    left: -3px;
+  }
+  .swipernext-search-evidenceled {
+    top: 37%;
+    right: -3px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .swiperprevious-search-evidenceled {
+    top: 39%;
+  }
+  .swipernext-search-evidenceled {
+    top: 39%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .swiperprevious-search-evidenceled {
+    top: 39%;
+    left: 5px;
+  }
+  .swipernext-search-evidenceled {
+    top: 39%;
+    right: 5px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .swiperprevious-search-evidenceled {
+    top: 17%;
+    left: 40px;
+  }
+  .swipernext-search-evidenceled {
+    top: 17%;
+    right: 40px;
+  }
+}
+.img {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 25px;
+}
+
+.imagecontent {
+  border-radius: 16px;
+  transition: 0.05s ease-in-out;
+  width: 100%;
+  max-width: 1000px;
+  height: 450px;
+}
+.imagecontent:hover {
+  scale: 1.02;
+  transition: 0.05s ease-in-out;
+}
+
+.swiper-slide-searchbar.swiper-slide {
+  width: 175px !important;
+  /* Define your desired width */
+  margin-right: 30px !important;
+  /* Adjust as per your requirement */
 }
 
 /* Background Blue random Design */

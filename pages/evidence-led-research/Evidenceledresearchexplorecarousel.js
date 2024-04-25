@@ -1,6 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
+import { useRouter } from 'next/router';
+import { useLocation } from 'react-router-dom';
 
 const articleData = [
     {
@@ -76,8 +78,12 @@ const articleData = [
 ];
 
 
-export default function Evidenceledresearchexplorecarousel() {
+export default function Evidenceledresearchexplorecarousel({ searchText }) {
+    console.log('Matched Results Count is as :', {searchText});
+
     const swiperRef = useRef(null);
+
+    const router = useRouter();
 
     useEffect(() => {
         if (swiperRef.current !== null) {
@@ -128,7 +134,10 @@ export default function Evidenceledresearchexplorecarousel() {
         }
     };
 
+
+
     return (
+
         <div className="post-loop-grid">
             <div className="container-evidenceled">
                 <div className="text-center">
@@ -136,7 +145,7 @@ export default function Evidenceledresearchexplorecarousel() {
                         Explore the Research underpinning our £1bn annual target
                     </h2>
                     <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp newsandeventssubheading-evidenceled">
-                        Evidence converted into practical applications
+                    {searchText} Evidence converted into practical applications {searchText}
                     </p>
                 </div>
                 <div className="swiper-container mt-50" style={{ overflow: 'hidden' }} ref={swiperRef}>
@@ -158,20 +167,25 @@ export default function Evidenceledresearchexplorecarousel() {
                             </div>
                         ))}
                     </div>
+
+                    <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+                        alt=""
+                        className="swiperprevious-evidenceled"
+                        onClick={handlePrevious}
+                    />
+
+                    <img
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337491ace933b4787201406e5daad90ed836fd3e530ce3a96946f5557244025?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+                        alt=""
+                        className="swipernext-evidenceled"
+                        onClick={handleNext}
+                    />
+
                 </div>
-                <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
-                    alt=""
-                    className="swiperprevious-evidenceled"
-                    onClick={handlePrevious}
-                />
-                <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337491ace933b4787201406e5daad90ed836fd3e530ce3a96946f5557244025?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
-                    alt=""
-                    className="swipernext-evidenceled"
-                    onClick={handleNext}
-                />
+
             </div>
         </div>
     );
 }
+

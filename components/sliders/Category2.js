@@ -17,8 +17,8 @@ const data = [
     },
     {
         img: "3.jpg",
-        title: "Resources Builder",
-        link: "/resources-builder"
+        title: "Resource Builder",
+        link: "/resource-builder"
     },
     {
         img: "4.jpg",
