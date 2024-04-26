@@ -40,7 +40,7 @@ export default function Index() {
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
-                                        <h2 className="businessbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '60px' }}>Business Builder</h2>
+                                        <h2 className="businessbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '56px' }}>Business Builder</h2>
                                         <p className="businessbuilder-hero-subheading color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
                                             Your enterprise starts with resources, tools and connections to deliver  reliable, consistent outcomes for you as an entrepreneur
                                         </p>

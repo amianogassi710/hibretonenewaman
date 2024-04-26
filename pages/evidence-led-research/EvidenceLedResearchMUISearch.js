@@ -130,8 +130,9 @@ function EvidenceLedResearchMUISearch() {
                     />
                     {formErrors.selectedOption && <p style={{ color: 'red' }}>required*</p>}
 
+                    {/* <button type="submit" className="btn-search-evidence-led-research"><IoSearchSharp style={{ marginRight: '5px' }} />SEARCH</button> */}
 
-                    <button type="submit" className="btn-search-evidence-led-research"><IoSearchSharp style={{ marginRight: '5px' }} />SEARCH</button>
+                    <button type="" className="btn-search-evidence-led-research"><IoSearchSharp style={{ marginRight: '5px' }} />SEARCH</button>
                 </form>
             </div>
         </>

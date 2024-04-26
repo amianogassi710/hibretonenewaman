@@ -4,7 +4,6 @@
 
 $font-family: Plus Jakarta Sans, sans-serif;
 
-
 /* Background Blue random Design */
 .background-random-evidenceledresearch {
     position: relative;
@@ -35,7 +34,6 @@ $font-family: Plus Jakarta Sans, sans-serif;
     right: -300px;
     border-radius: 25px;
 }
-
 /* Background Blue random Design End */
 
 /*Media Query */
@@ -71,7 +69,6 @@ $font-family: Plus Jakarta Sans, sans-serif;
         }
     }
 }
-
 /*Media Query  End*/
 
 /*Hero Component Start */
@@ -88,11 +85,6 @@ $font-family: Plus Jakarta Sans, sans-serif;
 .title-details-businessbuilder {
     text-align: justify;
 }
-
-// .p-color {
-//     color: color(p-color);
-// }
-/*Search Component End */
 
 .img {
     aspect-ratio: 1;
@@ -278,6 +270,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    margin-left: 132px;
 }
 
 @media screen and (max-width: 1600px) {
@@ -309,6 +302,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
         max-width: 480px;
         padding: 0 25px;
         margin-top: -25px;
+        margin-left: 32px !important;
     }
 }
 
@@ -316,6 +310,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     .container-businessbuilder {
         max-width: 420px;
         padding: 0 50px 0 30px;
+        margin-left: 5px !important;
     }
 }
 
@@ -377,11 +372,9 @@ $font-family: Plus Jakarta Sans, sans-serif;
         margin-top: 30px !important;
     }
 }
-
 /* Share Icon End */
 
 @media screen and (max-width:576px) {
-
     .businessbuilder-hero-heading,
     .businessbuilder-hero-subheading {
         margin-left: -65px;
@@ -468,7 +461,6 @@ $font-family: Plus Jakarta Sans, sans-serif;
 
 body .uwy.userway_p1 .userway_buttons_wrapper {
     top: 0 !important;
-margin-top: 36px;
-margin-left: -30px !important;
+    margin-top: 36px;
+    margin-left: -30px !important;
 }
-

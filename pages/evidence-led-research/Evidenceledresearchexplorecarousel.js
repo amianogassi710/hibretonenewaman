@@ -78,12 +78,11 @@ const articleData = [
 ];
 
 
-export default function Evidenceledresearchexplorecarousel({ searchText }) {
-    console.log('Matched Results Count is as :', {searchText});
+export default function Evidenceledresearchexplorecarousel() {
+    
 
     const swiperRef = useRef(null);
 
-    const router = useRouter();
 
     useEffect(() => {
         if (swiperRef.current !== null) {
@@ -145,7 +144,7 @@ export default function Evidenceledresearchexplorecarousel({ searchText }) {
                         Explore the Research underpinning our £1bn annual target
                     </h2>
                     <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp newsandeventssubheading-evidenceled">
-                    {searchText} Evidence converted into practical applications {searchText}
+                    Evidence converted into practical applications 
                     </p>
                 </div>
                 <div className="swiper-container mt-50" style={{ overflow: 'hidden' }} ref={swiperRef}>

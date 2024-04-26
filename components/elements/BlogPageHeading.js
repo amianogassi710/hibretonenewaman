@@ -11,7 +11,7 @@ const DiscoverButton = () => {
                     <div className="container d-flex align-items-center">
                         <div className="row">
                             <div className="col">
-                                <h2 className="blogpage-hero-heading" style={{ marginBottom: '35px', fontSize: '60px' }}>Blog</h2>
+                                <h2 className="blogpage-hero-heading" style={{ marginBottom: '35px', fontSize: '56px' }}>Blog</h2>
                                 <p className="blogpage-hero-subheading color-text-paragraph-2" style={{ fontSize: '24px', maxWidth: '780px', lineHeight: '30px', paddingTop: '5px' }}>Get the latest news, updates and tips</p>
                             </div>
                         </div>

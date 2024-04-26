@@ -4,7 +4,6 @@
 
 $font-family: Plus Jakarta Sans, sans-serif;
 
-
 /* Background Blue random Design */
 .background-random-resourcebuilder {
     position: relative;
@@ -86,11 +85,6 @@ $font-family: Plus Jakarta Sans, sans-serif;
 .title-details-resourcebuilder {
     text-align: justify;
 }
-
-// .p-color {
-//     color: color(p-color);
-// }
-/*Search Component End */
 
 .img {
     aspect-ratio: 1;
@@ -276,6 +270,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
+    margin-left: 132px;
 }
 
 @media screen and (max-width: 1600px) {
@@ -307,6 +302,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
         max-width: 480px;
         padding: 0 25px;
         margin-top: -25px;
+        margin-left: 32px !important;
     }
 }
 
@@ -314,6 +310,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     .container-resourcebuilder {
         max-width: 420px;
         padding: 0 50px 0 30px;
+        margin-left: 5px !important;
     }
 }
 
@@ -424,8 +421,20 @@ $font-family: Plus Jakarta Sans, sans-serif;
 
 @media screen and (max-width:576px) {
     .section-box {
+        &.mt-100 {
+            margin-top: 45px !important;
+        }
+    }
+
+    .section-box {
         &.mt-75 {
             margin-top: 40px !important;
+        }
+    }
+
+    .section-box {
+        &.mt-60 {
+            margin-top: 35px !important;
         }
     }
 
@@ -448,4 +457,10 @@ $font-family: Plus Jakarta Sans, sans-serif;
             }
         }
     }
+}
+
+body .uwy.userway_p1 .userway_buttons_wrapper {
+    top: 0 !important;
+    margin-top: 36px;
+    margin-left: -30px !important;
 }

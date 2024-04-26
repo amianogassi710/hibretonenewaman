@@ -54,7 +54,7 @@ export default function Index() {
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
-                                        <h2 className="resourcebuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '60px' }}>Resource Builder</h2>
+                                        <h2 className="resourcebuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '56px' }}>Resource Builder</h2>
                                         <p className="resourcebuilder-hero-subheading color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
                                             Evidence-led resources <span className="color-blue"> to save business owners time and money</span>. Tools  continuously developed to the needs of business owners.
                                         </p>
@@ -598,7 +598,7 @@ export default function Index() {
                                     <Grid item lg={6} className="d-flex justify-content-center">
                                         <img
                                             className="imagecontentwithborder"
-                                            src="assets/imgs/page/resource-builder/newresourcesindevelopmenet.jpg"
+                                            src="assets/imgs/page/resource-builder/newresourcesindevelopment.jpg"
                                             alt="joxBox"
                                         />
                                     </Grid>
@@ -619,7 +619,7 @@ export default function Index() {
                                     <Grid item xs={12} md={12}>
                                         <img
                                             className="imagecontentwithborder"
-                                            src="assets/imgs/page/resource-builder/newresourcesindevelopmenet.jpg"
+                                            src="assets/imgs/page/resource-builder/newresourcesindevelopment.jpg"
                                             alt="joxBox"
                                         />
                                     </Grid>

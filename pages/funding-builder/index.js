@@ -51,7 +51,7 @@ export default function Index() {
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
-                                        <h2 className="fundingbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '60px' }}>Funding Builder</h2>
+                                        <h2 className="fundingbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '56px' }}>Funding Builder</h2>
                                         <p className="fundingbuilder-hero-subheading color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
                                             Resources,  tools and connections to deliver funding and investment for your commercial or social enterprise
                                         </p>

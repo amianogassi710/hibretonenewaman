@@ -502,7 +502,7 @@
 
 .swiperprevious-evidenceled {
     position: absolute;
-    top: 35%;
+    top: 34%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -512,7 +512,7 @@
 
 .swipernext-evidenceled {
     position: absolute;
-    top: 35%;
+    top: 34%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -694,13 +694,13 @@
 
 @media screen and (min-width: 1400px) {
     .swiperprevious-evidenceled {
-        top: 36%;
-        left: 40px;
+        top: 34%;
+        left: 70px;
     }
 
     .swipernext-evidenceled {
-        top: 36%;
-        right: 40px;
+        top: 34%;
+        right: 70px;
     }
 }
 
@@ -1005,9 +1005,14 @@
 
 }
 
+.nested-swiper-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .swiperprevious-search-evidenceled {
     position: absolute;
-    top: 17%;
+    top: 16%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -1017,7 +1022,7 @@
 
 .swipernext-search-evidenceled {
     position: absolute;
-    top: 17%;
+    top: 16%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -1105,13 +1110,13 @@
 
 @media screen and (min-width: 1400px) {
     .swiperprevious-search-evidenceled {
-        top: 17%;
-        left: 40px;
+        top: 16%;
+        left: 70px;
     }
 
     .swipernext-search-evidenceled {
-        top: 17%;
-        right: 40px;
+        top: 16%;
+        right: 70px;
     }
 }
 //   Search Bar End
@@ -1145,3 +1150,4 @@
     margin-right: 30px !important;
     /* Adjust as per your requirement */
 }
+

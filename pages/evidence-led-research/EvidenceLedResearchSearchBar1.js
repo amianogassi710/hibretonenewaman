@@ -18,8 +18,6 @@ const EvidenceLedResearchSearchBar1 = ({ articleData }) => {
     const [filteredArticles, setFilteredArticles] = useState([]);
     const [slidesPerView, setSlidesPerView] = useState(2);
     const [matchedResultsCount, setMatchedResultsCount] = useState(0);
-
-
     const swiperRef = useRef(null);
 
     useEffect(() => {
@@ -61,9 +59,7 @@ const EvidenceLedResearchSearchBar1 = ({ articleData }) => {
 
     const countMatchedResults = () => {
         return filteredArticles.length;
-
     };
-
 
     useEffect(() => {
         if (!searchText) {
@@ -74,43 +70,48 @@ const EvidenceLedResearchSearchBar1 = ({ articleData }) => {
             .filter(article =>
                 article.title.toLowerCase().includes(searchText.toLowerCase())
             )
-
-
         setFilteredArticles(filtered);
     }, [searchText, articleData, slidesPerView]);
-
-
-
-
-
 
     const handleInputChange = (event) => {
         setSearchText(event.target.value);
         console.log('Matched Results Count is a :', event.target.value);
-    
+
+
+        const searchText = event.target.value;
+
         // Construct the query string with the value
         const queryString = `searchText=${encodeURIComponent(event.target.value)}`;
-        const pathname = '/evidenceledresearch/Evidenceledresearchexplorecarousel';
 
         // Append the query string to the current URL without navigating away
         const currentUrl = window.location.pathname + '?' + queryString;
-        history.pushState(null, '', currentUrl);
-    };
+        console.log('New URL:', currentUrl);
 
+        history.pushState({ searchText }, '', currentUrl);
+
+
+        // // Update the URL with the new search text
+        // router.push({
+        //     pathname: '/evidence-led-research/',
+        //     query: { searchText },
+        // });
+
+        return (
+            <input type="text" onChange={handleInputChange} />
+        );
+    };
 
     const handleSearch = (event) => {
         event.preventDefault(); // Prevent form submission
         // router.push("#");
 
         const queryParams = searchText ? `search=${encodeURIComponent(searchText)}` : '';
-        router.push(`/Evidenceledresearchexplorecarousel?${queryParams}`);
+        router.push(`/evidence-led-research/?${queryParams}`);
 
 
         console.log('Matched Results Count:', queryParams);
 
     };
-
-
 
     const [isBelow768px, setIsBelow768px] = useState(false);
 
@@ -145,9 +146,7 @@ const EvidenceLedResearchSearchBar1 = ({ articleData }) => {
     };
 
     return (
-
         <>
-
             <div className="banner-hero-evidenceledresearch-searchbar mt-50">
                 <div className="block-banner-evidenceled block-banner-evidenceled">
                     <div className="evidenceled-form-find-top wow animate_animated animate_fadeInUp">
@@ -175,10 +174,7 @@ const EvidenceLedResearchSearchBar1 = ({ articleData }) => {
 
             {/* Display the count of matched results if searchText is not empty */}
             {searchText && (
-
                 <div className="matched-results-count">
-
-
                     <div className="text-center mt-20 mb-20">
                         <h4 className="section-title mb-10">
                             {countMatchedResults() === 1 ? 'Result' : 'Results'} For: {searchText}
@@ -190,51 +186,78 @@ const EvidenceLedResearchSearchBar1 = ({ articleData }) => {
                 </div >
             )}
 
-
             {/* Display the filtered articles */}
             <section className="section-box">
                 <div className="post-loop-grid">
                     <div className="container-evidenceled">
-                        <div className="swiper-container" style={{ overflow: 'hidden' }} ref={swiperRef}>
-                            <div className="swiper-wrapper">
-                                {filteredArticles.map((article, index) => (
-                                    <div key={index} className="swiper-slide">
+                        <div className="swiper-container-wrapper"> {/* Parent container */}
+                            <div className="swiper-container" style={{ overflow: 'hidden' }} ref={swiperRef}>
+                                {/* <div className="swiper-container" ref={swiperRef}> */}
 
-                                        <div className="card-content-evidenceled hover-up">
-                                            <a href={`${article.pdfLocation}`} target="_blank" rel="noopener noreferrer">
-                                                <img
-                                                    loading="lazy"
-                                                    src={article.image}
-                                                    alt="Article featured image"
+                                {countMatchedResults() < 6 ? (
+                                    <div className="swiper-wrapper nested-swiper-wrapper">
 
-                                                    className="featured-image-evidenceled"
-                                                />
-                                            </a>
-                                        </div>
+                                        {filteredArticles.map((article, index) => (
+                                            <div key={index} className="swiper-slide">
+                                                <div className="card-content-evidenceled hover-up">
+                                                    <a href={`${article.pdfLocation}`} target="_blank" rel="noopener noreferrer">
+                                                        <img
+                                                            loading="lazy"
+                                                            src={article.image}
+                                                            alt="Article featured image"
+
+                                                            className="featured-image-evidenceled"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        ))}
                                     </div>
-                                ))}
+                                ) : (
+                                    <div className="swiper-wrapper">
+
+                                        {filteredArticles.map((article, index) => (
+                                            <div key={index} className="swiper-slide">
+                                                <div className="card-content-evidenceled hover-up">
+                                                    <a href={`${article.pdfLocation}`} target="_blank" rel="noopener noreferrer">
+                                                        <img
+                                                            loading="lazy"
+                                                            src={article.image}
+                                                            alt="Article featured image"
+
+                                                            className="featured-image-evidenceled"
+                                                        />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
-                        {/* Display navigation buttons if count is greater than 7 */}
-                        {countMatchedResults() > 6 && (
-                            <div className="navigation-buttons">
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
-                                    alt=""
-                                    className="swiperprevious-search-evidenceled"
-                                    onClick={handlePrevious}
-                                />
-                                <img
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337491ace933b4787201406e5daad90ed836fd3e530ce3a96946f5557244025?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
-                                    alt=""
-                                    className="swipernext-search-evidenceled"
-                                    onClick={handleNext}
-                                />
-                            </div>
-                        )}
                     </div>
+
+
+                    {/* Display navigation buttons if count is greater than 7 */}
+                    {countMatchedResults() > 6 && (
+                        <div className="navigation-buttons">
+                            <img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+                                alt=""
+                                className="swiperprevious-search-evidenceled"
+                                onClick={handlePrevious}
+                            />
+                            <img
+                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337491ace933b4787201406e5daad90ed836fd3e530ce3a96946f5557244025?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+                                alt=""
+                                className="swipernext-search-evidenceled"
+                                onClick={handleNext}
+                            />
+                        </div>
+                    )}
                 </div>
-            </section>
+            </section >
 
 
         </>
