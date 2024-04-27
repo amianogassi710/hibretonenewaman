@@ -10908,7 +10908,7 @@ ul li:last-child .card-list-4 {
 /* Blog Hero Image  */
 .bg-img-blog {
   height: 30vh;
-  background: url(../imgs/page/blog-page/BlogHero1.jpeg) no-repeat center center;
+  background: url(../imgs/page/blog-page/BlogHero1.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -12317,7 +12317,7 @@ ul li:last-child .card-list-4 {
 }
 
 .countertext {
-  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #435579));
+  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
   text-align: center;
   /* text/font-xs */
   font-family: "Plus Jakarta Sans";
@@ -12340,7 +12340,7 @@ ul li:last-child .card-list-4 {
 }
 
 .aboutusparatext {
-  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #435579));
+  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
   text-align: justify;
   font-family: "Plus Jakarta Sans";
   font-size: 18px;
@@ -13414,7 +13414,7 @@ ul li:last-child .card-list-4 {
 .support-card-description {
   margin-top: 15px;
   margin-bottom: 25px;
-  color: var(--text-Paragrap-2, #435579);
+  color: var(--text-Paragrap-2, #6C6E70);
   text-align: justify;
   font-family: "Plus Jakarta Sans";
   font-size: 18px;
@@ -14720,7 +14720,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 .support-card-description {
   margin-top: 15px;
   margin-bottom: 25px;
-  color: var(--text-Paragrap-2, #435579);
+  color: var(--text-Paragrap-2, #6C6E70);
   text-align: justify;
   font-family: "Plus Jakarta Sans";
   font-size: 18px;
@@ -15532,7 +15532,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 
 .newsandeventsparatext-evidenceled {
-  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #435579));
+  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
   text-align: justify;
   font-family: "Plus Jakarta Sans";
   font-size: 16px;
@@ -16114,7 +16114,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 .support-card-description {
   margin-top: 15px;
   margin-bottom: 25px;
-  color: var(--text-Paragrap-2, #435579);
+  color: var(--text-Paragrap-2, #6C6E70);
   text-align: justify;
   font-family: "Plus Jakarta Sans";
   font-size: 18px;
@@ -16290,6 +16290,411 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
     margin-top: 30px !important;
   }
   .section-box.grid-container-businessbuilder.mt-75 {
+    margin-top: 30px !important;
+  }
+}
+body .uwy.userway_p1 .userway_buttons_wrapper {
+  top: 0 !important;
+  margin-top: 36px;
+  margin-left: -30px !important;
+}
+
+/* Background Blue random Design */
+.background-random-evidenceledresearch {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-random-evidenceledresearch::before,
+.background-random-evidenceledresearch::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 1500px;
+  background: #f2f6fd;
+  transform-origin: top left;
+  z-index: -1;
+}
+
+.background-random-evidenceledresearch::before {
+  transform: rotate(-8deg);
+  top: 800px;
+  left: -300px;
+  border-radius: 25px;
+}
+
+.background-random-evidenceledresearch::after {
+  transform: rotate(8deg);
+  top: 1100px;
+  right: -300px;
+  border-radius: 25px;
+}
+
+/* Background Blue random Design End */
+/*Media Query */
+@media (max-width: 992px) {
+  h2 {
+    font-size: 40px !important;
+  }
+  .color-text-paragraph-2 {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 30px !important;
+    margin-bottom: 10px !important;
+  }
+  .color-text-paragraph-2 {
+    font-size: 18px !important;
+    line-height: 25px !important;
+  }
+}
+@media (max-width: 768px) and (max-width: 455px) {
+  h2 {
+    font-size: 26px !important;
+  }
+  .color-text-paragraph-2 {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+}
+/*Media Query  End*/
+/*Hero Component Start */
+.banner-hero-careerbuilder {
+  padding: 0px 65px 0px 70px;
+  position: relative;
+  max-width: 1770px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-details-careerbuilder {
+  text-align: justify;
+}
+
+.img {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 25px;
+}
+
+.careerbuilderparaheading {
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.careerbuilderparatext {
+  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
+  text-align: justify;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.bg-img-careerbuilder {
+  height: 30vh;
+  background: url(../imgs/page/career-builder/careerbuilderhero.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.bg-img-careerbuilder h2,
+.bg-img-careerbuilder p {
+  z-index: 2;
+  position: relative;
+  color: white;
+  padding-left: 25px;
+}
+
+.bg-img-careerbuilder h2 {
+  border-left: 10px solid #83cbff;
+  padding-bottom: 8px;
+  padding-top: 5px;
+}
+
+.bg-img-careerbuilder p {
+  border-left: 10px solid #83cbff;
+}
+
+.bg-img-careerbuilder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #05264E;
+}
+
+.imagecontent {
+  border-radius: 16px;
+  transition: 0.05s ease-in-out;
+  width: 100%;
+  max-width: 1000px;
+  height: 450px;
+}
+.imagecontent:hover {
+  scale: 1.02;
+  transition: 0.05s ease-in-out;
+}
+
+.imagecontentwithborder {
+  border-radius: 16px;
+  transition: 0.05s ease-in-out;
+  width: 100%;
+  max-width: 1000px;
+  border: 1px solid #ccc;
+  height: 450px;
+}
+.imagecontentwithborder:hover {
+  scale: 1.02;
+  transition: 0.05s ease-in-out;
+}
+
+.support-section {
+  display: flex;
+  max-width: 653px;
+  padding-top: 26px;
+  flex-direction: column;
+  font-size: 24px;
+}
+
+.support-card {
+  border-radius: 16px;
+  display: flex;
+  margin-top: 26px;
+  width: 105%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 25px 25px;
+}
+
+@media (max-width: 991px) {
+  .support-card {
+    max-width: 105%;
+    padding-left: 20px;
+  }
+}
+.support-card-inner {
+  border-radius: 16px;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  margin-top: -26px;
+  width: 105%;
+  flex-direction: column;
+  padding: 24px 28px;
+}
+
+@media (max-width: 991px) {
+  .support-card-inner {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+.support-card-title {
+  color: var(--brand-brand-1, #05264E);
+  font-family: "Plus Jakarta Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (max-width: 991px) {
+  .support-card-title {
+    max-width: 100%;
+  }
+}
+.support-card-description {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  color: var(--text-Paragrap-2, #6C6E70);
+  text-align: justify;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+@media (max-width: 991px) {
+  .support-card-description {
+    max-width: 100%;
+    margin-right: 10px;
+  }
+}
+.support-card-image {
+  aspect-ratio: 1.8;
+  object-position: center;
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .support-card-image {
+    max-width: 100%;
+  }
+}
+.container-careerbuilder {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-left: 132px;
+}
+
+@media screen and (max-width: 1600px) {
+  .container-careerbuilder {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container-careerbuilder {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container-careerbuilder {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-careerbuilder {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-careerbuilder {
+    max-width: 480px;
+    padding: 0 25px;
+    margin-top: -25px;
+    margin-left: 32px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .container-careerbuilder {
+    max-width: 420px;
+    padding: 0 50px 0 30px;
+    margin-left: 5px !important;
+  }
+}
+@media (min-width: 1600px) {
+  .container-careerbuilder {
+    max-width: 1200px;
+  }
+}
+/* Share Icon Start */
+.share-icon-container-careerbuilder {
+  position: absolute;
+}
+
+.share-icon-careerbuilder {
+  font-size: 30px;
+  color: #3c65f5;
+}
+
+.share-icon-careerbuilder:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background-color: #05264e;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  .share-icon-careerbuilder {
+    margin-left: 35px !important;
+    margin-top: -76px !important;
+  }
+}
+@media screen and (max-width: 999px) {
+  .share-icon-careerbuilder {
+    margin-left: 14px !important;
+    margin-top: -76px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .share-icon-careerbuilder {
+    margin-left: 32px !important;
+    margin-top: -76px !important;
+  }
+}
+@media screen and (max-width: 580px) {
+  .share-icon-careerbuilder {
+    margin-left: 3px !important;
+    margin-top: 5px !important;
+  }
+}
+@media screen and (max-width: 515px) {
+  .share-icon-careerbuilder {
+    margin-left: 3px !important;
+    margin-top: 30px !important;
+  }
+}
+/* Share Icon End */
+@media screen and (max-width: 576px) {
+  .careerbuilder-hero-heading,
+  .careerbuilder-hero-subheading {
+    margin-left: -65px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .careerbuilder-video-laptop {
+    height: 300px;
+  }
+  .imagecontent {
+    height: 300px;
+  }
+  .imagecontentwithborder {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .careerbuilder-video-laptop {
+    height: 280px;
+  }
+  .imagecontent {
+    height: 260px;
+  }
+  .imagecontentwithborder {
+    height: 260px;
+  }
+}
+.careerbuilder-inner-heading {
+  font-size: 36px !important;
+}
+
+@media screen and (max-width: 576px) {
+  .careerbuilder-inner-heading {
+    font-size: 20px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .section-box.mt-100 {
+    margin-top: 45px !important;
+  }
+  .section-box.mt-75 {
+    margin-top: 40px !important;
+  }
+  .section-box.mt-60 {
+    margin-top: 35px !important;
+  }
+  .section-box.mt-50 {
+    margin-top: 30px !important;
+  }
+  .section-box.mt-40 {
+    margin-top: 30px !important;
+  }
+  .section-box.grid-container-fundingbuilder.mt-75 {
     margin-top: 30px !important;
   }
 }

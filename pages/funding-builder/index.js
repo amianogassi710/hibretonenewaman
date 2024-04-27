@@ -53,7 +53,7 @@ export default function Index() {
                                     <div className="col">
                                         <h2 className="fundingbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '56px' }}>Funding Builder</h2>
                                         <p className="fundingbuilder-hero-subheading color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
-                                            Resources,  tools and connections to deliver funding and investment for your commercial or social enterprise
+                                            Resources,  tools and connections to deliver <span className="color-blue"> funding and investment </span> for your commercial or social enterprise
                                         </p>
                                     </div>
                                 </div>

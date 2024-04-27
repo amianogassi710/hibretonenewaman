@@ -19,36 +19,36 @@ function SupportCard({ title, description, imageSrc, imageAlt, backgroundColor, 
     );
 }
 
-function FundingBuilderCard() {
+function CareerBuilderCard() {
     const supportCards = [
         {
-            title: "Preparation",
-            description: "Improving your chances of funding through developing a  business with growth potential.",
-            imageSrc: "../assets/imgs/page/funding-builder/card1.jpg",
+            title: "Career Preparation",
+            description: "Understanding your skills and traits, to improve  career choices.",
+            imageSrc: "../assets/imgs/page/career-builder/card1.jpg",
             imageAlt: "Support in Securing Funding",
             backgroundColor: "rgba(23, 175, 208, 0.40)",
             border: "1px solid rgba(23, 175, 208, 0.40)",
         },
         {
-            title: "Support in Securing Funding",
-            description: "hibretOne resources and our partners can assist in completing required documentation.",
-            imageSrc: "../assets/imgs/page/funding-builder/card2.jpg",
+            title: "Support in  Identifying Career Opportunities",
+            description: "hibretOne and Channel Partners resources to help secure that new employment.",
+            imageSrc: "../assets/imgs/page/career-builder/card2.jpg",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(255, 223, 54, 0.60)",
             border: "1px solid #FFDF36",
         },
         {
-            title: "Sources of Funding",
-            description: "Determining the best source of funding for your stage of business and  growth requirements.",
-            imageSrc: "../assets/imgs/page/funding-builder/card3.jpg",
+            title: "Sources of Guidance",
+            description: "Identifying the resources available and the best career pathway.",
+            imageSrc: "../assets/imgs/page/career-builder/card3.jpg",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(255, 126, 32, 0.50)",
             border: "1px solid rgba(255, 126, 32, 0.50)",
         },
         {
-            title: "Funding & Investment",
-            description: "Alternative forms of investment; include grants, loans, equity, debt, tax credits, crowdfunding.",
-            imageSrc: "../assets/imgs/page/funding-builder/card4.jpg",
+            title: "Types of Resource",
+            description: "Assessments, educational courses, career guidance, job connections.",
+            imageSrc: "../assets/imgs/page/career-builder/card4.jpg",
             imageAlt: "Another Support Card",
             backgroundColor: "rgba(208, 23, 178, 0.40)",
             border: "1px solid rgba(208, 23, 178, 0.40)",
@@ -60,21 +60,20 @@ function FundingBuilderCard() {
     const thirdCard = supportCards[2]; // Accessing the third card (index 2)
     const fourthCard = supportCards[3]; // Accessing the third card (index 2)
 
-
     return (
         <div className="">
             <section className="section-box mt-50">
                 <div className="container">
                     <div className="flex-container">
-                        <div className="share-icon-container-fundingbuilder">
-                                <IoShareSocialOutline className="share-icon-fundingbuilder" />
+                        <div className="share-icon-container-careerbuilder">
+                            <IoShareSocialOutline className="share-icon-careerbuilder" />
                         </div>
                         <div className="text-center">
                             <h2 className="section-title mb-10">
-                            Finance & Investment for Your Enterprise
+                                Empowering Not-yet-ready and Not-yet-successful Entrepreneurs
                             </h2>
                             <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
-                            Support to overcome barriers in accessing funding
+                                Overcoming the barriers and unwarranted stigma of business failure
                             </p>
                         </div>
                     </div>
@@ -83,15 +82,14 @@ function FundingBuilderCard() {
 
             <section className="section-box mt-50">
                 <div className="post-loop-grid">
-                    <div className="container-fundingbuilder">
+                    <div className="container-careerbuilder">
                         <Grid
                             container
                             alignItems="center"
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                         >
-                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}
-                            className="d-flex justify-content-center">
+                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
                                 <section className="support-section">
                                     <SupportCard
                                         title={firstCard.title}
@@ -105,9 +103,9 @@ function FundingBuilderCard() {
                             </Grid>
                             <Grid
                                 item
+                                className=""
                                 lg={6}
                                 sx={{ paddingLeft: { lg: "60px" } }}
-                                className="d-flex justify-content-center"
                             >
                                 <section className="support-section">
                                     <SupportCard
@@ -127,8 +125,8 @@ function FundingBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
-                            <Grid item xs={12} md={12} >
-                            <section className="support-section">
+                            <Grid item xs={12} md={12}>
+                                <section className="support-section">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
@@ -140,7 +138,7 @@ function FundingBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                            <section className="support-section">
+                                <section className="support-section">
                                     <SupportCard
                                         title={secondCard.title}
                                         description={secondCard.description}
@@ -158,15 +156,14 @@ function FundingBuilderCard() {
 
             <section className="section-box mt-25">
                 <div className="post-loop-grid">
-                    <div className="container-fundingbuilder">
+                    <div className="container-careerbuilder">
                         <Grid
                             container
                             alignItems="center"
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                         >
-                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}
-                            className="d-flex justify-content-center">
+                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
                                 <section className="support-section">
                                     <SupportCard
                                         title={thirdCard.title}
@@ -199,8 +196,8 @@ function FundingBuilderCard() {
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
-                            <Grid item xs={12} md={12} >
-                            <section className="support-section">
+                            <Grid item xs={12} md={12}>
+                                <section className="support-section">
                                     <SupportCard
                                         title={thirdCard.title}
                                         description={thirdCard.description}
@@ -212,7 +209,7 @@ function FundingBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                            <section className="support-section">
+                                <section className="support-section">
                                     <SupportCard
                                         title={fourthCard.title}
                                         description={fourthCard.description}
@@ -230,4 +227,4 @@ function FundingBuilderCard() {
         </div>
     );
 }
-export default FundingBuilderCard;
+export default CareerBuilderCard;

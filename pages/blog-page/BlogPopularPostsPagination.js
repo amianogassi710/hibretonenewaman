@@ -10,7 +10,7 @@ const BlogPopularPostsPagination = () => {
     const data = [
         {
             category_id: 1,
-            image: "assets/imgs/page/blog-page/category4.jpeg",
+            image: "assets/imgs/page/blog-page/category4.jpg",
             category: "News",
             title: "21 Grant Writing Tips: How To Make a Great Impression",
             description:
@@ -24,7 +24,7 @@ const BlogPopularPostsPagination = () => {
         },
         {
             category_id: 2,
-            image: "assets/imgs/page/blog-page/news3.jpeg",
+            image: "assets/imgs/page/blog-page/news3.jpg",
             category: "News",
             title: "21 Team Building Tips: How To Build an Efficient Startup Team",
             description:
@@ -38,7 +38,7 @@ const BlogPopularPostsPagination = () => {
         },
         {
             category_id: 3,
-            image: "assets/imgs/page/blog-page/category1.jpeg",
+            image: "assets/imgs/page/blog-page/category1.jpg",
             category: "News",
             title: "21 Business Building Tips: How To Scale on a Budget",
             description:
@@ -52,7 +52,7 @@ const BlogPopularPostsPagination = () => {
         },
         {
             category_id: 4,
-            image: "assets/imgs/page/blog-page/category2.jpeg",
+            image: "assets/imgs/page/blog-page/category2.jpg",
             category: "News",
             title: "21 Job Interview Tips: How Students Can Make a Great Impression",
             description:
@@ -66,7 +66,7 @@ const BlogPopularPostsPagination = () => {
         },
         {
             category_id: 5,
-            image: "assets/imgs/page/blog-page/category3.jpeg",
+            image: "assets/imgs/page/blog-page/category3.jpg",
             category: "News",
             title: "21 Job Interview Tips: How To Make a Great Impression",
             description:

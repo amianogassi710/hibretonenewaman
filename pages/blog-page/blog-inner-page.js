@@ -14,7 +14,7 @@ export default function BlogInnerPage() {
                     <div className="banner-hero2 bg-img-laptop2">
                         <div className="col">
                             <div>
-                                <img src="../assets/imgs/page/blog-page/BlogHero1.jpeg" />
+                                <img src="../assets/imgs/page/blog-page/BlogHero1.jpg" />
                                 <div style={{ position: 'absolute', top: '20%', left: '6.7%' }}>
                                     <h2 className="bloginnerheading">Blog</h2>
                                     <p className="bloginnertext" >Get the latest news, updates and tips</p>

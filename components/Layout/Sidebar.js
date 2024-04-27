@@ -125,7 +125,7 @@ const Sidebar = ({ openClass }) => {
                                         <li className={isActive.key == 5 ? "has-children active" : "has-children"}>
                                             <span onClick={() => handleToggle(5)} className="menu-expand"><i className="fi-rr-angle-small-down"></i></span>
 
-                                            <Link legacyBehavior href="/blog-grid"><a>Career Builder</a></Link>
+                                            <Link legacyBehavior href="/career-builder"><a>Career Builder</a></Link>
 
                                             <ul className={isActive.key == 5 ? "sub-menu d-block" : "sub-menu d-none"}>
                                                 <li>

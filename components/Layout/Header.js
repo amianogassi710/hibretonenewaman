@@ -178,7 +178,7 @@ const Header = ({ handleOpen, handleRemove, openClass }) => {
                                         </ul>
                                     </li>
                                     <li className="has-children">
-                                        <Link legacyBehavior href="/">
+                                        <Link legacyBehavior href="/career-builder">
                                             <a>Career Builder</a>
                                         </Link>
                                         <ul className="sub-menu">
