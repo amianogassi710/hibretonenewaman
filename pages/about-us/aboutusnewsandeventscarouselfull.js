@@ -49,7 +49,7 @@ const articleData = [
     },
 
     {
-        image: "/assets/imgs/page/about-us/fundraising.jpeg",
+        image: "/assets/imgs/page/about-us/fundraising.jpg",
         category: "News",
         title: "10 Fundraising Tips: Alternatives to Equity Funding",
         description:
@@ -63,7 +63,7 @@ const articleData = [
     },
 
     {
-        image: "/assets/imgs/page/about-us/businessplan.jpeg",
+        image: "/assets/imgs/page/about-us/businessplan.jpg",
         category: "News",
         title: "10 Business Plan Tips: Main headings in a successful plan",
         description:

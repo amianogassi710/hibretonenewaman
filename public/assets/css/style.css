@@ -10751,7 +10751,7 @@ ul li:last-child .card-list-4 {
     padding-left: 10px;
   }
   .blog-btn-search {
-    margin: 0 20px 0 10px;
+    margin: 10px 20px 0 10px;
   }
   .blogpage-searchbar-searchicon {
     margin-top: 72px !important;
@@ -12919,12 +12919,6 @@ ul li:last-child .card-list-4 {
   }
 }
 /* Share Icon End */
-@media screen and (max-width: 576px) {
-  .aboutus-hero-heading,
-  .aboutus-hero-subheading {
-    margin-left: -65px;
-  }
-}
 .aboutus-inner-heading {
   font-size: 40px !important;
 }

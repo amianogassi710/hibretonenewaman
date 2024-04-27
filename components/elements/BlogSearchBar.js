@@ -85,8 +85,7 @@ const BlogSearchBar = () => {
                     <Autocomplete
                         clearOnEscape
                         options={locations}
-                        renderInput={(params) => (
-                                                    
+                        renderInput={(params) => (    
                             <TextField
                                 sx={{
                                     border: "none !important",
