@@ -15442,19 +15442,21 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (max-width: 1400px) {
   .swiperprevious-evidenceled {
-    top: 35%;
+    top: 37%;
     left: 10px;
   }
   .swipernext-evidenceled {
-    top: 35%;
+    top: 37%;
     right: 10px;
   }
 }
 @media screen and (max-width: 1290px) {
   .swiperprevious-evidenceled {
+    top: 36%;
     left: 0px;
   }
   .swipernext-evidenceled {
+    top: 36%;
     right: 0px;
   }
 }
@@ -15468,39 +15470,39 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (max-width: 1200px) {
   .swiperprevious-evidenceled {
-    top: 35%;
+    top: 37%;
     left: 2px;
   }
   .swipernext-evidenceled {
-    top: 35%;
+    top: 37%;
     right: 2px;
   }
 }
 @media screen and (max-width: 768px) {
   .swiperprevious-evidenceled {
-    top: 37%;
+    top: 39%;
     left: -3px;
   }
   .swipernext-evidenceled {
-    top: 37%;
+    top: 39%;
     right: -3px;
   }
 }
 @media screen and (max-width: 576px) {
   .swiperprevious-evidenceled {
-    top: 39%;
+    top: 41%;
   }
   .swipernext-evidenceled {
-    top: 39%;
+    top: 41%;
   }
 }
 @media screen and (max-width: 450px) {
   .swiperprevious-evidenceled {
-    top: 39%;
+    top: 40.5%;
     left: 5px;
   }
   .swipernext-evidenceled {
-    top: 39%;
+    top: 40.5%;
     right: 5px;
   }
 }
