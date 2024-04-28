@@ -4,6 +4,7 @@ import 'swiper/swiper-bundle.css';
 import { useRouter } from 'next/router';
 import { useLocation } from 'react-router-dom';
 
+
 const articleData = [
     {
         title: "Time to Change",
@@ -167,7 +168,10 @@ export default function Evidenceledresearchexplorecarousel() {
                         ))}
                     </div>
 
-                    <img
+                    
+
+                </div>
+                <img
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
                         alt=""
                         className="swiperprevious-evidenceled"
@@ -180,9 +184,6 @@ export default function Evidenceledresearchexplorecarousel() {
                         className="swipernext-evidenceled"
                         onClick={handleNext}
                     />
-
-                </div>
-
             </div>
         </div>
     );

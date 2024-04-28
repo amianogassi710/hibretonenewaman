@@ -10,26 +10,26 @@ $font-family: Plus Jakarta Sans, sans-serif;
     overflow: hidden;
 }
 
-.background-random-evidenceledresearch::before,
-.background-random-evidenceledresearch::after {
+.background-random-careerbuilder::before,
+.background-random-careerbuilder::after {
     content: "";
     position: absolute;
-    width: 800px;
+    width: 600px;
     height: 1500px;
     background: #f2f6fd;
     transform-origin: top left;
     z-index: -1;
 }
 
-.background-random-evidenceledresearch::before {
-    transform: rotate(-8deg);
+.background-random-careerbuilder::before {
+    transform: rotate(-7deg);
     top: 800px;
     left: -300px;
     border-radius: 25px;
 }
 
-.background-random-evidenceledresearch::after {
-    transform: rotate(8deg);
+.background-random-careerbuilder::after {
+    transform: rotate(7deg);
     top: 1100px;
     right: -300px;
     border-radius: 25px;

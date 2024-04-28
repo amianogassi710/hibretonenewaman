@@ -187,8 +187,6 @@ export default function Index() {
                         <EvidenceLedResearchSearchBar1 articleData={articleData} />
                     </section>
 
-
-
                     <section className="section-box mt-75">
                         <div className="post-loop-grid">
                             <div className="container">
@@ -289,8 +287,8 @@ export default function Index() {
                             <div className="container2 mt-40">
                                 <div className="box-swiper grant-category evidence-led-research">
                                     <div>
-                                         <NoSSRCategorySlider />
-                                        <NoSSRCategorySlider1 /> 
+                                         {/* <NoSSRCategorySlider />
+                                        <NoSSRCategorySlider1 />  */}
                                         <div className="swiper-button-next" />
                                         <div className="swiper-button-prev" />
                                     </div>

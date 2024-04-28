@@ -5,31 +5,31 @@
 $font-family: Plus Jakarta Sans, sans-serif;
 
 /* Background Blue random Design */
-.background-random-evidenceledresearch {
+.background-random-businessbuilder {
     position: relative;
     overflow: hidden;
 }
 
-.background-random-evidenceledresearch::before,
-.background-random-evidenceledresearch::after {
+.background-random-businessbuilder::before,
+.background-random-businessbuilder::after {
     content: "";
     position: absolute;
-    width: 800px;
+    width: 600px;
     height: 1500px;
     background: #f2f6fd;
     transform-origin: top left;
     z-index: -1;
 }
 
-.background-random-evidenceledresearch::before {
-    transform: rotate(-8deg);
+.background-random-businessbuilder::before {
+    transform: rotate(-10deg);
     top: 800px;
     left: -300px;
     border-radius: 25px;
 }
 
-.background-random-evidenceledresearch::after {
-    transform: rotate(8deg);
+.background-random-businessbuilder::after {
+    transform: rotate(10deg);
     top: 1100px;
     right: -300px;
     border-radius: 25px;

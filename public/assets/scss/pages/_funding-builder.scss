@@ -14,7 +14,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
 .background-random-fundingbuilder::after {
     content: "";
     position: absolute;
-    width: 800px;
+    width: 600px;
     height: 1500px;
     background: #f2f6fd;
     transform-origin: top left;
@@ -22,14 +22,14 @@ $font-family: Plus Jakarta Sans, sans-serif;
 }
 
 .background-random-fundingbuilder::before {
-    transform: rotate(-8deg);
+    transform: rotate(-9deg);
     top: 800px;
     left: -300px;
     border-radius: 25px;
 }
 
 .background-random-fundingbuilder::after {
-    transform: rotate(8deg);
+    transform: rotate(9deg);
     top: 1100px;
     right: -300px;
     border-radius: 25px;
