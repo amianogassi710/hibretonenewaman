@@ -14,7 +14,7 @@
 .background-random-evidenceledresearch::after {
     content: "";
     position: absolute;
-    width: 800px;
+    width: 600px;
     height: 1500px;
     background: #f2f6fd;
     transform-origin: top left;
@@ -22,14 +22,14 @@
 }
 
 .background-random-evidenceledresearch::before {
-    transform: rotate(-8deg);
+    transform: rotate(-12deg);
     top: 800px;
     left: -300px;
     border-radius: 25px;
 }
 
 .background-random-evidenceledresearch::after {
-    transform: rotate(8deg);
+    transform: rotate(12deg);
     top: 1100px;
     right: -300px;
     border-radius: 25px;
@@ -964,7 +964,7 @@
         width: 50px;
         height: 50px;
         cursor: pointer;
-        right: 10px;
+        right: 65px;
     }
     
     .swiperprevious-evidenceled-explore {
@@ -974,7 +974,7 @@
         width: 50px;
         height: 50px;
         cursor: pointer;
-        left: 10px;
+        left: 65px;
     }
 }
 
@@ -1135,7 +1135,7 @@
 @media screen and (max-width: 450px) {
     .swipernext-evidenceled-explore {
         position: absolute;
-        top: 94%;
+        top: 93%;
         transform: translateY(-50%);
         width: 50px;
         height: 50px;
@@ -1145,7 +1145,7 @@
     
     .swiperprevious-evidenceled-explore {
         position: absolute;
-        top: 94%;
+        top: 93%;
         transform: translateY(-50%);
         width: 50px;
         height: 50px;

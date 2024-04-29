@@ -13,6 +13,7 @@ import EvidenceLedResearchTrendingNowcarousel from "./EvidenceLedResearchTrendin
 import dynamic from "next/dynamic";
 import EvidenceLedResearchMUISearchFrame from "./EvidenceLedResearchMUISearchFrame";
 import CustomAsyncSelect from "./App";
+import Combined from "./Combined";
 
 
 const NoSSRCategorySlider = dynamic(
@@ -155,7 +156,7 @@ export default function Index() {
 
             <Layout>
                 <div className="background-random-evidenceledresearch">
-                    <section className="section-box">
+                    {/* <section className="section-box">
                         <div className="banner-hero-evidenceledresearch bg-img-businessbuilder-evidenceledresearch">
                             <div className="container d-flex align-items-center">
                                 <div className="row">
@@ -258,6 +259,10 @@ export default function Index() {
 
                     <section className="section-box mt-100">
                         <Evidenceledresearchexplorecarousel />
+                    </section> */}
+
+                    <section>
+                    <Combined />
                     </section>
 
                     <section className="section-box mt-75">

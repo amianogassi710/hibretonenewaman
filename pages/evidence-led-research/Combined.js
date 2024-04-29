@@ -275,7 +275,6 @@ const Combined = () => {
 
     return (
         <>
-            <Layout>
                 <div className="background-random-evidenceledresearch">
                     <section className="section-box">
                         <div className="banner-hero-evidenceledresearch bg-img-businessbuilder-evidenceledresearch">
@@ -578,7 +577,6 @@ const Combined = () => {
 
 
                 </div >
-            </Layout >
 
         </>
 
