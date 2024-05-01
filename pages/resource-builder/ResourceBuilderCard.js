@@ -102,8 +102,7 @@ function ResourceBuilderCard() {
                                     />
                                 </section>
                             </Grid>
-                            <Grid
-                                item
+                            <Grid item
                                 lg={6}
                                 sx={{ paddingLeft: { lg: "60px" } }}>
                                 <section className="support-section-builder">

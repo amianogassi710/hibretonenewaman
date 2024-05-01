@@ -255,7 +255,6 @@ export default function Index() {
                                                         </>
                                                     )}
                                                 </p>
-
                                                 <p className="builderparatext mt-30">
                                                     <strong> Business Plan Writer: </strong>   Thinking of skipping the business plan to save time? Think again. A business with a business plan created is 260% more likely to launch. 58% of founders polled in a CNBC study said they wished they had put together a stronger business plan.
                                                 </p>
@@ -507,9 +506,7 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                                 >
-                                    <Grid
-                                        className="`"
-                                        item
+                                    <Grid item
                                         lg={6}
                                         sx={{ paddingRight: { lg: "75px" } }}
                                     >

@@ -208,7 +208,7 @@
 
 .support-section-builder {
     display: flex;
-    max-width: 653px;
+    max-width: 564px;
     // padding-top: 26px;
     padding-top: 0px;
     // flex-direction: column;
@@ -216,11 +216,18 @@
     // margin: auto;
 }
 
+@media screen and (max-width: 1200px) {
+    .support-section-builder {
+        max-width: 653px;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .support-section-builder {
         max-width: 326px;
     }
 }
+
 
 .support-card {
     border-radius: 16px;
@@ -318,7 +325,7 @@
 
 @media screen and (max-width: 1600px) {
     .container-builder {
-        max-width: 1200px;
+        max-width: 1300px;
     }
 }
 

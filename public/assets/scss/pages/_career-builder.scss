@@ -1,9 +1,3 @@
-@function color($color-name) {
-    @return map-get($colors, $color-name)
-}
-
-$font-family: Plus Jakarta Sans, sans-serif;
-
 /* Background Blue random Design */
 .background-random-evidenceledresearch {
     position: relative;
@@ -34,54 +28,9 @@ $font-family: Plus Jakarta Sans, sans-serif;
     right: -300px;
     border-radius: 25px;
 }
-
 /* Background Blue random Design End */
 
-/*Media Query */
-
-/*Media Query  End*/
-
-/*Hero Component Start */
-.banner-hero-careerbuilder {
-    padding: 0px 65px 0px 70px;
-    position: relative;
-    max-width: 1770px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title-details-careerbuilder {
-    text-align: justify;
-}
-
-.img {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 25px;
-}
-
-.careerbuilderparaheading {
-    font-family: "Plus Jakarta Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px;
-}
-
-.careerbuilderparatext {
-    color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
-    text-align: justify;
-    font-family: "Plus Jakarta Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px;
-}
-
-//   Hero Page Section
+/* Banner Start */
 .bg-img-careerbuilder {
     height: 30vh;
     background: url(../imgs/page/career-builder/careerbuilderhero.jpg) no-repeat center center;
@@ -117,94 +66,7 @@ $font-family: Plus Jakarta Sans, sans-serif;
     opacity: 0.8;
     background: #05264E;
 }
-
-.imagecontent {
-    border-radius: 16px;
-    transition: 0.05s ease-in-out;
-    width: 100%;
-    max-width: 1000px;
-    height: 450px;
-
-    &:hover {
-        scale: 1.02;
-        transition: 0.05s ease-in-out;
-    }
-}
-
-.imagecontentwithborder {
-    border-radius: 16px;
-    transition: 0.05s ease-in-out;
-    width: 100%;
-    max-width: 1000px;
-    border: 1px solid #ccc;
-    height: 450px;
-
-    &:hover {
-        scale: 1.02;
-        transition: 0.05s ease-in-out;
-    }
-}
-
-// Career Builder Card
-
-
-
-
-
-
-.container-careerbuilder {
-    width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    margin-left: 132px;
-}
-
-@media screen and (max-width: 1600px) {
-    .container-careerbuilder {
-        max-width: 1200px;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .container-careerbuilder {
-        max-width: 700px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .container-careerbuilder {
-        max-width: 700px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .container-careerbuilder {
-        max-width: 480px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .container-careerbuilder {
-        max-width: 480px;
-        padding: 0 25px;
-        margin-top: -25px;
-        margin-left: 32px !important;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .container-careerbuilder {
-        max-width: 420px;
-        padding: 0 50px 0 30px;
-        margin-left: 5px !important;
-    }
-}
-
-@media (min-width: 1600px) {
-    .container-careerbuilder {
-        max-width: 1200px;
-    }
-}
+/* Banner End */
 
 /* Share Icon Start */
 .share-icon-container-careerbuilder {
@@ -231,85 +93,9 @@ $font-family: Plus Jakarta Sans, sans-serif;
     }
 }
 
-@media screen and (max-width:999px) {
-    .share-icon-careerbuilder {
-        margin-left: 14px !important;
-        margin-top: -76px !important;
+@media screen and (max-width:1180px) {
+    .share-icon-container-careerbuilder {
+        display: none;
     }
 }
-
-@media screen and (max-width:768px) {
-    .share-icon-careerbuilder {
-        margin-left: 32px !important;
-        margin-top: -76px !important;
-    }
-}
-
-@media screen and (max-width:580px) {
-    .share-icon-careerbuilder {
-        margin-left: 3px !important;
-        margin-top: 5px !important;
-    }
-}
-
-@media screen and (max-width:515px) {
-    .share-icon-careerbuilder {
-        margin-left: 3px !important;
-        margin-top: 30px !important;
-    }
-}
-
 /* Share Icon End */
-
-@media screen and (max-width:576px) {
-
-    .careerbuilder-hero-heading,
-    .careerbuilder-hero-subheading {
-        margin-left: -65px;
-    }
-}
-
-@media screen and (max-width:576px) {
-    .careerbuilder-video-laptop {
-        height: 300px;
-    }
-
-    .imagecontent {
-        height: 300px;
-    }
-
-    .imagecontentwithborder {
-        height: 300px;
-    }
-}
-
-@media screen and (max-width:430px) {
-    .careerbuilder-video-laptop {
-        height: 280px;
-    }
-
-    .imagecontent {
-        height: 260px;
-    }
-
-    .imagecontentwithborder {
-        height: 260px;
-    }
-}
-
-.careerbuilder-inner-heading {
-    font-size: 36px !important;
-}
-
-@media screen and (max-width:576px) {
-    .careerbuilder-inner-heading {
-        font-size: 20px !important;
-    }
-}
-
-
-body .uwy.userway_p1 .userway_buttons_wrapper {
-    top: 0 !important;
-    margin-top: 36px;
-    margin-left: -30px !important;
-}
