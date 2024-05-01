@@ -41,7 +41,7 @@ export default function Index() {
                                 <div className="row">
                                     <div className="col">
                                         <div className="builder-hero-heading">Business Builder</div>
-                                        <div className="builder-hero-subheading subheading-aboutus">
+                                        <div className="builder-hero-subheading">
                                             Your enterprise starts with <span className="color-blue"> resources, tools and connections to deliver reliable, consistent outcomes </span> for you as an entrepreneur
                                         </div>
                                     </div>

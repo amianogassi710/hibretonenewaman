@@ -14597,7 +14597,7 @@ ul li:last-child .card-list-4 {
     height: 300px;
   }
   .imagecontent {
-    height: 300px;
+    height: 300px !important;
   }
   .imagecontentwithborder {
     height: 300px;
@@ -16205,7 +16205,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 /* Share Icon End */
 /* Background Blue random Design */
-.background-random-evidenceledresearch {
+.background-random-careerbuilder {
   position: relative;
   overflow: hidden;
 }
@@ -16365,22 +16365,12 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   }
 }
 /* AccessibilityButton.css */
-.accessibility-widget {
-  position: fixed;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+@media (min-width: 1200px) {
+  .asw-menu-btn {
+    top: 33px;
+    left: 1450px !important;
+  }
 }
-
-.accessibility-widget img {
-  width: 30px; /* Adjust the size of the icon as needed */
-  height: auto;
-}
-
-.asw-menu-btn {
-  top: 29px;
-  left: 1076px;
-}
-
 /*
 
 

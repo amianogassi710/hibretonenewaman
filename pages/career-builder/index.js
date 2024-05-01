@@ -24,6 +24,9 @@ export default function Index() {
     const [showMore2, setShowMore2] = useState(false);
     const [showMore3, setShowMore3] = useState(false);
     const [readMore1, setReadMore1] = useState(false);
+    const [readMore2, setReadMore2] = useState(false);
+    const [readMore3, setReadMore3] = useState(false);
+    const [readMore4, setReadMore4] = useState(false);
 
     const [isOpen, setIsOpen] = useState(false);
     useLockBodyScroll(isOpen);
@@ -46,6 +49,7 @@ export default function Index() {
                             </div>
                         </div>
                     </section>
+
                     <section>
                         <CareerBuilderCard />
                     </section>
@@ -54,7 +58,7 @@ export default function Index() {
                         <YellowBanner />
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-50">
                         <div className="text-center">
                             <div className="section-heading-single"> Guidance to  Make the Right Education and Career Choices</div>
                         </div>
@@ -143,7 +147,7 @@ export default function Index() {
                                                             : "...more"}
                                                     </button>
                                                 </p>
-                                                <p className="builderparatext mt-30">
+                                                <p className="builderparatext mt-10">
                                                     Don’t expect to figure out what you’re best at right away, especially after the hurt of a failed business venture and through the eyes of introspection. hibretOne resources are enablers to support your decision-making.
                                                 </p>
                                             </div>
@@ -209,7 +213,7 @@ export default function Index() {
                                             <p className="builderparatext">
                                                 Making the right career choice stems from really knowing your strengths and weaknesses; your interests, motivations and personality. So, getting unbiased careers guidance based on industry standard guidelines, means you can analyse the real you. You will come to understand what motivates you and as a result, find the right career path after running your own business.
                                             </p>
-                                            <p className="builderparatext mt-30">
+                                            <p className="builderparatext mt-10">
                                                 Few journeys are more personal than your own journey to career success, especially for entrepreneurs who have run an unsuccessful business. With 60% of startups failing within 3 years, many entrepreneurs too often take the difficult path into having to work for an employer.
                                             </p>
                                         </div>
