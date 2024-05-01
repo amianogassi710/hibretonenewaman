@@ -36,14 +36,14 @@ export default function Index() {
             <Layout>
                 <div className="background-random-businessbuilder">
                     <section className="section-box">
-                        <div className="banner-hero-businessbuilder bg-img-businessbuilder">
+                        <div className="banner-hero-builder bg-img-businessbuilder">
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
-                                        <h2 className="businessbuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '56px' }}>Business Builder</h2>
-                                        <p className="businessbuilder-hero-subheading color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
+                                        <div className="builder-hero-heading">Business Builder</div>
+                                        <div className="builder-hero-subheading subheading-aboutus">
                                             Your enterprise starts with <span className="color-blue"> resources, tools and connections to deliver reliable, consistent outcomes </span> for you as an entrepreneur
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -54,17 +54,17 @@ export default function Index() {
                         <BusinessBuilderCard />
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-50">
                         <YellowBanner />
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-50">
                         <div className="text-center">
-                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>Analyse & Improve Self including Idea Validation </h2>
+                            <div className="section-heading-single">Elevate Your Personal Growth & Validate Your Business Idea </div>
                         </div>
                     </section>
 
-                    <section className="section-box mt-40">
+                    <section className="section-box mt-40 mt-40-20">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -84,31 +84,28 @@ export default function Index() {
                                         lg={6}
                                         sx={{ paddingLeft: { lg: "75px" } }}
                                     >
-                                        <h2
-                                            className=""
-                                            style={{ marginBottom: "40px", fontSize: "36px !important" }}
-                                        >
+                                        <div className="grid-content-heading">
                                             Characteristics of Successful Entrepreneurs
-                                        </h2>
-                                        <div className="title-details-businessbuilder">
+                                        </div>
+                                        <div className="title-details-builder">
                                             {readMore3 ? (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         Entrepreneurs acknowledge their first product may be far from perfect. Often this realisation comes at a large financial, of time & human cost.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         It is widely thought there are 7 key traits of an entrepreneur include a strong work ethic, passion and drive, risk-taking, resilience, innovation, adaptability, and networking and building relationships. By identifying these traits in yourself and working to develop them, you can set yourself up for success as an entrepreneur.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         Business success can take multiple attempts, with successful £billionaires going bankrupt 3.5 times. hibretOne Business Builder resources are a necessary part of improving startup success.
                                                     </p>
                                                 </div>
                                             ) : (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         Entrepreneurs acknowledge their first product may be far from perfect. Often this realisation comes at a large financial, of time & human cost.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         It is widely thought there are 7 key traits of an entrepreneur include a strong work ethic, passion and drive, risk-taking, resilience, innovation, adaptability, and networking and building relationships. By identifying these traits in yourself and working to develop them, you can set yourself up for success as an entrepreneur.
                                                     </p>
                                                 </div>
@@ -135,48 +132,45 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12}>
-                                        <h4
-                                            className="businessbuilder-inner-heading"
-                                        >
+                                        <div className="grid-content-heading">
                                             Characteristics of Successful Entrepreneurs
-                                        </h4>
+                                        </div>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <iframe width="100%" height="450px" src="https://www.youtube.com/embed/-sQeREfZY-8" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="businessbuilder-video-laptop"></iframe>
+                                        <iframe width="100%" height="450px" src="https://www.youtube.com/embed/-sQeREfZY-8" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details-businessbuilder">
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             {readMore3 ? (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         Entrepreneurs acknowledge their first product may be far from perfect. Often this realisation comes at a large financial, of time & human cost.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-10">
+                                                    <p className="builderparatext mt-10">
                                                         It is widely thought there are 7 key traits of an entrepreneur include a strong work ethic, passion and drive, risk-taking, resilience, innovation, adaptability, and networking and building relationships. By identifying these traits in yourself and working to develop them, you can set yourself up for success as an entrepreneur.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-10">
+                                                    <p className="builderparatext mt-10">
                                                         Business success can take multiple attempts, with successful £billionaires going bankrupt 3.5 times. hibretOne Business Builder resources are a necessary part of improving startup success.
                                                     </p>
                                                 </div>
                                             ) : (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         Entrepreneurs acknowledge their first product may be far from perfect. Often this realisation comes at a large financial, of time & human cost.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-10">
+                                                    <p className="builderparatext mt-10">
                                                         It is widely thought there are 7 key traits of an entrepreneur include a strong work ethic, passion and drive, risk-taking, resilience, innovation, adaptability, and networking and building relationships. By identifying these traits in yourself and working to develop them, you can set yourself up for success as an entrepreneur.
                                                     </p>
                                                 </div>
                                             )}
-                                            <span
-                                                className="btn-show-more"
+                                            <span className="btn-show-more"
                                                 onClick={() =>
                                                     setReadMore3(
                                                         !readMore3
                                                     )
                                                 }
                                             >
-                                                <div className="mt-20">
+                                                <div className="mt-20 mt-20-10">
                                                     {readMore3 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
                                                 </div>
                                             </span>
@@ -187,7 +181,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box grid-container-businessbuilder mt-75">
+                    <section className="section-box mt-100-grid mt-100-50 mt-100-30-grid">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -197,35 +191,33 @@ export default function Index() {
                                     sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                                 >
                                     <Grid item lg={6} sx={{ paddingRight: { lg: "75px" } }}>
-
-                                        <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
+                                        <div className="grid-content-heading">
                                             Building More Capable Entrepreneurs
-                                        </h2>
-                                        <div className="title-details-businessbuilder">
+                                        </div>
+                                        <div className="title-details-builder">
                                             {readMore1 ? (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         <strong> Entrepreneur Assessments: </strong> Builder helps you assess your entrepreneurial potential, personality, skills and idea viability. You may be entrepreneurial, but your idea may not be. hibretOne gives you tools and the outcomes to objectively separate both.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         <strong> Entrepreneur Academy: </strong> Completing an Entrepreneur Accelerator is proven to improve startup success. A NatWest study showed over 80% of entrepreneurs who completed a programme are still trading 3 years on.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         <strong> Scholarships & Bursaries: </strong> Awarded on a set of entrepreneurial criteria, merit, equity and inclusion. Amazing scholarship supporters helping create more diverse business founders for a fairer world.
                                                     </p>
                                                 </div>
                                             ) : (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         <strong> Entrepreneur Assessments: </strong> Builder helps you assess your entrepreneurial potential, personality, skills and idea viability. You may be entrepreneurial, but your idea may not be. hibretOne gives you tools and the outcomes to objectively separate both.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         <strong> Entrepreneur Academy: </strong> Completing an Entrepreneur Accelerator is proven to improve startup success. A NatWest study showed over 80% of entrepreneurs who completed a programme are still trading 3 years on.
                                                     </p>
                                                 </div>
                                             )}
-                                            <span
-                                                className="btn-show-more"
+                                            <span className="btn-show-more"
                                                 onClick={() =>
                                                     setReadMore1(
                                                         !readMore1
@@ -252,10 +244,10 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h4 className="businessbuilder-inner-heading">
+                                    <Grid item xs={12} md={12}>
+                                        <div className="grid-content-heading">
                                             Building More Capable Entrepreneurs
-                                        </h4>
+                                        </div>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <img
@@ -265,25 +257,25 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details-businessbuilder">
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             {readMore1 ? (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         <strong> Entrepreneur Assessments: </strong> Builder helps you assess your entrepreneurial potential, personality, skills and idea viability. You may be entrepreneurial, but your idea may not be. hibretOne gives you tools and the outcomes to objectively separate both.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-10">
+                                                    <p className="builderparatext mt-10">
                                                         <strong> Entrepreneur Academy: </strong> Completing an Entrepreneur Accelerator is proven to improve startup success. A NatWest study showed over 80% of entrepreneurs who completed a programme are still trading 3 years on.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-10">
+                                                    <p className="builderparatext mt-10">
                                                         <strong> Scholarships & Bursaries: </strong> Awarded on a set of entrepreneurial criteria, merit, equity and inclusion. Amazing scholarship supporters helping create more diverse business founders for a fairer world.
                                                     </p>
                                                 </div>
                                             ) : (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         <strong> Entrepreneur Assessments: </strong> Builder helps you assess your entrepreneurial potential, personality, skills and idea viability. You may be entrepreneurial, but your idea may not be. hibretOne gives you tools and the outcomes to objectively separate both.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-10">
+                                                    <p className="builderparatext mt-10">
                                                         <strong> Entrepreneur Academy: </strong> Completing an Entrepreneur Accelerator is proven to improve startup success. A NatWest study showed over 80% of entrepreneurs who completed a programme are still trading 3 years on.
                                                     </p>
                                                 </div>
@@ -296,7 +288,7 @@ export default function Index() {
                                                     )
                                                 }
                                             >
-                                                <div className="mt-20">
+                                                <div className="mt-20 mt-20-10">
                                                     {readMore1 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
                                                 </div>
                                             </span>
@@ -307,7 +299,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box grid-container-businessbuilder mt-75">
+                    <section className="section-box mt-100-grid mt-100-50 mt-100-30-grid">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -323,32 +315,29 @@ export default function Index() {
                                             alt="joxBox"
                                         />
                                     </Grid>
-                                    <Grid
-                                        item
-                                        className=""
+                                    <Grid item
                                         lg={6}
                                         sx={{ paddingLeft: { lg: "75px" } }}
                                     >
-                                        <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
+                                        <div className="grid-content-heading">
                                             Building More Desirable Products
-
-                                        </h2>
-                                        <div className="title-details-businessbuilder">
+                                        </div>
+                                        <div className="title-details-builder">
                                             {readMore4 ? (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
+                                                    <p className="builderparatext">
                                                         <strong> Idea Validation: </strong>
                                                         Quick assessment of your product, service, or business idea to determine viability against known criteria. It's a framework to make quick, painless, and informed judgments so that you know whether it's worth pursuing.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         <strong> Investability Rating: </strong>
                                                         Quick assessment to measure your potential to raise investment by analysing your performance across 5 key areas. Your unique score will reveal your personal strengths and weaknesses and deliver practical, actionable tips to improve your results and help you secure the funding you need.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         <strong> Product Market Fit (PMF): </strong>
                                                         Assessing the entrepreneurs  vision of their product and the need in the market. Helping build solutions that customers want to buy whilst reducing risk.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
+                                                    <p className="builderparatext mt-30">
                                                         <strong> Angel Investors: </strong>
                                                         Have VC experience, others pivot from being founders or operators themselves.
                                                         Investing in return for equity, and either put money in as individual investors or as part of a syndicate.
@@ -356,88 +345,13 @@ export default function Index() {
                                                 </div>
                                             ) : (
                                                 <div>
-                                                    <p className="businessbuilderparatext">
-                                                        <strong> Crowdfunding: </strong>
-                                                        A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
+                                                    <p className="builderparatext">
+                                                        <strong> Idea Validation: </strong>
+                                                        Quick assessment of your product, service, or business idea to determine viability against known criteria. It's a framework to make quick, painless, and informed judgments so that you know whether it's worth pursuing.
                                                     </p>
-                                                    <p className="businessbuilderparatext mt-30">
-                                                        <strong> Revenue-based financing: </strong>
-                                                        Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-30">
-                                                        <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
-                                                    </p>
-                                                </div>
-                                            )}
-                                            <span
-                                                className="btn-show-more"
-                                                onClick={() =>
-                                                    setReadMore4(
-                                                        !readMore4
-                                                    )
-                                                }
-                                            >
-                                                {/* <div className="mt-20">
-                                                    {readMore4 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
-                                                </div> */}
-                                            </span>
-                                        </div>
-                                    </Grid>
-                                </Grid>
-                                <Grid
-                                    container
-                                    alignItems="center"
-                                    style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
-                                >
-                                    <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h4 className="businessbuilder-inner-heading">
-                                            Building More Desirable Products
-                                        </h4>
-                                    </Grid>
-                                    <Grid item xs={12} md={12}>
-                                        <img
-                                            className="imagecontent"
-                                            src="assets/imgs/page/business-builder/buildingmoredesirable.jpg"
-                                            alt="joxBox"
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12} md={12}>
-                                        <div className="title-details-businessbuilder">
-                                            {readMore4 ? (
-                                                <div>
-                                                    <p className="businessbuilderparatext">
-                                                        <strong> Crowdfunding: </strong>
-                                                        A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Revenue-based financing: </strong>
-                                                        Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Angel Investors: </strong>
-                                                        Have VC experience, others pivot from being founders or operators themselves.
-                                                        Investing in return for equity, and either put money in as individual investors or as part of a syndicate.
-                                                    </p>
-                                                </div>
-                                            ) : (
-                                                <div>
-                                                    <p className="businessbuilderparatext">
-                                                        <strong> Crowdfunding: </strong>
-                                                        A large group of people invest individual amounts through a platform. Types of crowdfunding include: Equity crowdfunding, Rewards-based crowdfunding and Crowdlending.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Revenue-based financing: </strong>
-                                                        Technically a loan, which is repaid by promising the lender a percentage of the company’s future gross revenue over a set amount of time.
-                                                    </p>
-                                                    <p className="businessbuilderparatext mt-10">
-                                                        <strong> Accelerators: </strong>
-                                                        Accelerators: Choose a cohort of early-stage founders to take part in a development programme with mentorship. Participants in some can also get a cash injection for equity.
+                                                    <p className="builderparatext mt-30">
+                                                        <strong> Investability Rating: </strong>
+                                                        Quick assessment to measure your potential to raise investment by analysing your performance across 5 key areas. Your unique score will reveal your personal strengths and weaknesses and deliver practical, actionable tips to improve your results and help you secure the funding you need.
                                                     </p>
                                                 </div>
                                             )}
@@ -456,11 +370,78 @@ export default function Index() {
                                         </div>
                                     </Grid>
                                 </Grid>
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
+                                >
+                                    <Grid item xs={12} md={12}>
+                                        <h4 className="grid-content-heading">
+                                            Building More Desirable Products
+                                        </h4>
+                                    </Grid>
+                                    <Grid item xs={12} md={12}>
+                                        <img
+                                            className="imagecontent"
+                                            src="assets/imgs/page/business-builder/buildingmoredesirable.jpg"
+                                            alt="joxBox"
+                                        />
+                                    </Grid>
+                                    <Grid item xs={12} md={12}>
+                                    <div className="title-details-builder mt-20 mt-20-10">
+                                            {readMore4 ? (
+                                                <div>
+                                                    <p className="builderparatext">
+                                                        <strong> Idea Validation: </strong>
+                                                        Quick assessment of your product, service, or business idea to determine viability against known criteria. It's a framework to make quick, painless, and informed judgments so that you know whether it's worth pursuing.
+                                                    </p>
+                                                    <p className="builderparatext mt-30">
+                                                        <strong> Investability Rating: </strong>
+                                                        Quick assessment to measure your potential to raise investment by analysing your performance across 5 key areas. Your unique score will reveal your personal strengths and weaknesses and deliver practical, actionable tips to improve your results and help you secure the funding you need.
+                                                    </p>
+                                                    <p className="builderparatext mt-30">
+                                                        <strong> Product Market Fit (PMF): </strong>
+                                                        Assessing the entrepreneurs  vision of their product and the need in the market. Helping build solutions that customers want to buy whilst reducing risk.
+                                                    </p>
+                                                    <p className="builderparatext mt-30">
+                                                        <strong> Angel Investors: </strong>
+                                                        Have VC experience, others pivot from being founders or operators themselves.
+                                                        Investing in return for equity, and either put money in as individual investors or as part of a syndicate.
+                                                    </p>
+                                                </div>
+                                            ) : (
+                                                <div>
+                                                    <p className="builderparatext">
+                                                        <strong> Idea Validation: </strong>
+                                                        Quick assessment of your product, service, or business idea to determine viability against known criteria. It's a framework to make quick, painless, and informed judgments so that you know whether it's worth pursuing.
+                                                    </p>
+                                                    <p className="builderparatext mt-30">
+                                                        <strong> Investability Rating: </strong>
+                                                        Quick assessment to measure your potential to raise investment by analysing your performance across 5 key areas. Your unique score will reveal your personal strengths and weaknesses and deliver practical, actionable tips to improve your results and help you secure the funding you need.
+                                                    </p>
+                                                </div>
+                                            )}
+                                            <span
+                                                className="btn-show-more"
+                                                onClick={() =>
+                                                    setReadMore4(
+                                                        !readMore4
+                                                    )
+                                                }
+                                            >
+                                                <div className="mt-20 mt-20-10">
+                                                    {readMore4 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
+                                                </div>
+                                            </span>
+                                        </div>
+                                    </Grid>
+                                </Grid>
                             </div>
                         </div>
                     </section>
 
-                    <section className="section-box mt-75 mb-0">
+                    <section className="section-box mt-75 mt-75-40">
                         <FullAccessButton />
                     </section>
 

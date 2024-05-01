@@ -70,29 +70,28 @@ function ResourceBuilderCard() {
                             <IoShareSocialOutline className="share-icon-resourcebuilder" />
                         </div>
                         <div className="text-center">
-                            <h2 className="section-title mb-10">
+                            <div className="component-title">
                                 Bespoke Resources to Boost Your Business Success
-                            </h2>
-                            <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
+                            </div>
+                            <div className="component-subtitle">
                                 Tools to overcome barriers in conducting your operations effectively
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="section-box mt-50">
+            <section className="section-box mt-40-grid mt-40-30-grid">
                 <div className="post-loop-grid">
-                    <div className="container-resourcebuilder">
+                    <div className="container-builder">
                         <Grid
                             container
                             alignItems="center"
                             style={{ minWidth: "100%" }}
                             sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                         >
-                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}
-                                className="d-flex justify-content-center">
-                                <section className="support-section">
+                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
@@ -106,10 +105,8 @@ function ResourceBuilderCard() {
                             <Grid
                                 item
                                 lg={6}
-                                sx={{ paddingLeft: { lg: "60px" } }}
-                                className="d-flex justify-content-center"
-                            >
-                                <section className="support-section">
+                                sx={{ paddingLeft: { lg: "60px" } }}>
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={secondCard.title}
                                         description={secondCard.description}
@@ -128,7 +125,7 @@ function ResourceBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12} >
-                                <section className="support-section">
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
@@ -140,7 +137,7 @@ function ResourceBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                                <section className="support-section">
+                                <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={secondCard.title}
                                         description={secondCard.description}
@@ -156,18 +153,17 @@ function ResourceBuilderCard() {
                 </div>
             </section>
 
-            <section className="section-box mt-25">
+            <section className="section-box">
                 <div className="post-loop-grid">
-                    <div className="container-resourcebuilder">
+                    <div className="container-builder">
                         <Grid
                             container
                             alignItems="center"
                             style={{ minWidth: "100%" }}
-                            sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
+                            sx={{ display: { xs: "none", md: "none", lg: "flex" }, marginTop: "100px" }}
                         >
-                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}
-                                className="d-flex justify-content-center">
-                                <section className="support-section">
+                            <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={thirdCard.title}
                                         description={thirdCard.description}
@@ -179,9 +175,8 @@ function ResourceBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item lg={6}
-                                sx={{ paddingLeft: { lg: "60px" } }}
-                                className="d-flex justify-content-center">
-                                <section className="support-section">
+                                sx={{ paddingLeft: { lg: "60px" } }}>
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={fourthCard.title}
                                         description={fourthCard.description}
@@ -200,7 +195,7 @@ function ResourceBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12} >
-                                <section className="support-section">
+                                <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={thirdCard.title}
                                         description={thirdCard.description}
@@ -212,7 +207,7 @@ function ResourceBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                                <section className="support-section">
+                                <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={fourthCard.title}
                                         description={fourthCard.description}

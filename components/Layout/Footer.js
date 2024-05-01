@@ -4,20 +4,20 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="footer mt-50">
+        <footer className="footer mt-50 mt-50-30">
             <div className="container">
-                <div className="row">
+                <div className="row row-footer">
                     <div className="footer-col-1 col-md-3 col-sm-12">
                         <Link legacyBehavior href="/"><a><img alt="jobBox" src="/assets/imgs/template/hibretOne-logo.png" /></a></Link>
-                        <div className="mt-20 mb-20 font-xs color-text-paragraph-2">The most comprehensive success business resources, tools, funding and opportunities, all in one place</div>
-                        <div className="footer-social">
+                        <div className="mt-20 font-xs">The most comprehensive business resources, tools, funding and opportunities, all in one place.</div>
+                        <div className="footer-social mt-20">
                             <a className="icon-socials icon-facebook" href="#" />
                             <a className="icon-socials icon-twitter" href="#" />
                             <a className="icon-socials icon-linkedin" href="#" />
                         </div>
                     </div>
                     <div className="footer-col-2 col-md-2 col-xs-6">
-                        <h6 className="mb-20">Resources
+                        <h6 className="mb-20 mb-20-10">Resources
                         </h6>
                         <ul className="menu-footer">
                             <li>
@@ -33,7 +33,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer-col-3 col-md-2 col-xs-6">
-                        <h6 className="mb-20">Community</h6>
+                        <h6 className="mb-20 mb-20-10">Community</h6>
                         <ul className="menu-footer">
                             <li>
                                 <a href="#">Social Impact</a></li>
@@ -48,7 +48,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer-col-4 col-md-2 col-xs-6">
-                        <h6 className="mb-20">Support</h6>
+                        <h6 className="mb-20 mb-20-10">Support</h6>
                         <ul className="menu-footer">
                             <li>
                                 <a href="#">Ecosystem Connect</a></li>
@@ -63,7 +63,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer-col-5 col-md-2 col-xs-6">
-                        <h6 className="mb-20">More</h6>
+                        <h6 className="mb-20 mb-20-10">More</h6>
                         <ul className="menu-footer">
                             <li>
                                 <a href="#">Become a Partner</a></li>
@@ -78,13 +78,13 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="footer-col-6 col-md-3 col-sm-12">
-                        <h6 className="mb-20">Download App</h6>
-                        <div className="mt-15">
+                        <h6 className="">Download App</h6>
+                        <div className="mt-20">
                             <a className="mr-5" href="#"><img src="../../assets/imgs/template/icons/app-store.png" alt="joxBox" /></a>
                             <a href="#"><img src="../../assets/imgs/template/icons/android.png" alt="joxBox" /></a></div>
                     </div>
                 </div>
-                <div className="footer-bottom mt-50">
+                <div className="footer-bottom mt-10">
                     <div className="row">
                         <div className="col-md-6"><span className="font-xs color-text-paragraph">Copyright © 2024. hibretOne all right reserved</span></div>
                         <div className="col-md-6 text-md-end text-start">

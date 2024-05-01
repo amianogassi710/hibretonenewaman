@@ -10,8 +10,8 @@ function SupportCard({ title, description, imageSrc, imageAlt, backgroundColor, 
         <div className="support-card" style={{ backgroundColor }}>
             <div className="support-card-inner" style={{ border }}>
                 <div className="support-card-content">
-                    <h4 className="support-card-title">{title}</h4>
-                    <p className="support-card-description">{description}</p>
+                    <div className="support-card-title">{title}</div>
+                    <div className="support-card-description">{description}</div>
                     <img src={imageSrc} alt={imageAlt} className="support-card-image" />
                 </div>
             </div>
@@ -62,27 +62,27 @@ function BusinessBuilderCard() {
 
     return (
         <div className="">
-            <section className="section-box mt-50">
+            <section className="section-box mt-50 mt-50-30">
                 <div className="container">
                     <div className="flex-container">
                         <div className="share-icon-container-businessbuilder">
                                 <IoShareSocialOutline className="share-icon-businessbuilder" />
                         </div>
                         <div className="text-center">
-                            <h2 className="section-title mb-10">
+                            <div className="component-title">
                             Before Building Your Business, We Help Build You                            
-                            </h2>
-                            <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
+                            </div>
+                            <div className="component-subtitle">
                             Support to improve opportunities to be successful 
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="section-box mt-50">
+            <section className="section-box mt-40-grid mt-40-30-grid">
                 <div className="post-loop-grid">
-                    <div className="container-businessbuilder">
+                    <div className="container-builder">
                         <Grid
                             container
                             alignItems="center"
@@ -90,7 +90,7 @@ function BusinessBuilderCard() {
                             sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                         >
                             <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
-                                <section className="support-section">
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
@@ -107,7 +107,7 @@ function BusinessBuilderCard() {
                                 lg={6}
                                 sx={{ paddingLeft: { lg: "60px" } }}
                             >
-                                <section className="support-section">
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={secondCard.title}
                                         description={secondCard.description}
@@ -126,7 +126,7 @@ function BusinessBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12}>
-                            <section className="support-section">
+                            <section className="support-section-builder">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
@@ -138,7 +138,7 @@ function BusinessBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                            <section className="support-section">
+                            <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={secondCard.title}
                                         description={secondCard.description}
@@ -154,17 +154,17 @@ function BusinessBuilderCard() {
                 </div>
             </section>
 
-            <section className="section-box mt-25">
+            <section className="section-box">
                 <div className="post-loop-grid">
-                    <div className="container-businessbuilder">
+                    <div className="container-builder">
                         <Grid
                             container
                             alignItems="center"
                             style={{ minWidth: "100%" }}
-                            sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
+                            sx={{ display: { xs: "none", md: "none", lg: "flex" }, marginTop: "100px" }}
                         >
                             <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
-                                <section className="support-section">
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={thirdCard.title}
                                         description={thirdCard.description}
@@ -176,9 +176,8 @@ function BusinessBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item lg={6}
-                                sx={{ paddingLeft: { lg: "60px" } }}
-                                className="d-flex justify-content-center">
-                                <section className="support-section">
+                                sx={{ paddingLeft: { lg: "60px" } }}>
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={fourthCard.title}
                                         description={fourthCard.description}
@@ -197,7 +196,7 @@ function BusinessBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12}>
-                            <section className="support-section">
+                            <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={thirdCard.title}
                                         description={thirdCard.description}
@@ -209,7 +208,7 @@ function BusinessBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                            <section className="support-section">
+                            <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={fourthCard.title}
                                         description={fourthCard.description}

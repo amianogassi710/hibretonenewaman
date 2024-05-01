@@ -50,14 +50,14 @@ export default function Index() {
             <Layout>
                 <div className="background-random-resourcebuilder">
                     <section className="section-box">
-                        <div className="banner-hero-resourcebuilder bg-img-resourcebuilder">
+                        <div className="banner-hero-builder bg-img-resourcebuilder">
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
-                                        <h2 className="resourcebuilder-hero-heading" style={{ marginBottom: '20px', fontSize: '56px' }}>Resource Builder</h2>
-                                        <p className="resourcebuilder-hero-subheading color-text-paragraph-2 subheading-aboutus" style={{ fontSize: '24px', maxWidth: '835px', lineHeight: '30px' }}>
+                                        <div className="builder-hero-heading">Resource Builder</div>
+                                        <div className="builder-hero-subheading">
                                             Evidence-led resources <span className="color-blue"> to save business owners time and money</span>. Tools  continuously developed to the needs of business owners.
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -68,18 +68,17 @@ export default function Index() {
                         <ResourceBuilderCard />
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-50">
                         <YellowBanner />
                     </section>
 
-
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-50">
                         <div className="text-center">
-                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>Essential Elements to Achieve Your Business Goals...Faster </h2>
+                            <div className="section-heading-single"> Essential Elements to Achieve Your Business Goals...Faster </div>
                         </div>
                     </section>
 
-                    <section className="section-box mt-40">
+                    <section className="section-box mt-40 mt-40-20">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -99,12 +98,12 @@ export default function Index() {
                                         lg={6}
                                         sx={{ paddingLeft: { lg: "75px" } }}
                                     >
-                                        <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
+                                        <div className="grid-content-heading">
                                             Resources for side-hustlers to startups to scaleups...
-                                        </h2>
-                                        <div className="title-details-resourcebuilder">
+                                        </div>
+                                        <div className="title-details-builder">
                                             <div>
-                                                <p className="resourcebuilderparatext">
+                                                <p className="builderparatext">
                                                     {showMore1
                                                         ? "A business owner or side-hustle, wanting to be successful in today’s economy will need to understand which resources will substantially grow their business, how to access them in their business model and how to make the most out of them. For startups & many scaleups even knowing these resources exist is often the first challenge."
                                                         : "A business owner or side-hustle, wanting to be successful in today’s economy will need to understand which resources will substantially grow their business, how to access them in their business model and how to "}
@@ -121,7 +120,7 @@ export default function Index() {
                                                             : "...more"}
                                                     </button>
                                                 </p>
-                                                <p className="resourcebuilderparatext mt-30">
+                                                <p className="builderparatext mt-30">
                                                     {showMore2
                                                         ? "hibretOne works with technology & content Channel Partners throughout the world to continuously bring gamechanging resources to the attention of founders, all through one platform. We were the first Community Interest Company in the UK to use OpenAI’s GPT3 as part of the beta trial."
                                                         : "hibretOne works with technology & content Channel Partners throughout the world to continuously bring gamechanging resources to the attention of founders, all through one platform. We were the first Community "}
@@ -138,12 +137,10 @@ export default function Index() {
                                                             : "...more"}
                                                     </button>
                                                 </p>
-                                                <p className="resourcebuilderparatext mt-30">
+                                                <p className="builderparatext mt-30">
                                                     Identifying tools, utilising them effectively & when the founder is ready, connecting to trusted organisations who can provide problem solving advice, products or services.
                                                 </p>
-
                                             </div>
-
                                             <span
                                                 className="btn-show-more"
                                                 onClick={() =>
@@ -154,7 +151,6 @@ export default function Index() {
                                             >
                                             </span>
                                         </div>
-
                                     </Grid>
                                 </Grid>
                                 <Grid
@@ -164,19 +160,16 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item xs={12} md={12}>
-                                    <h4
-                                            className="resourcebuilder-inner-heading"
-                                        >
+                                        <div className="grid-content-heading">
                                             New Resources in Development
-                                        </h4>
+                                        </div>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <iframe width="100%" height="450px" src="https://www.youtube.com/embed/8bu1Ltpeiu4" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="resourcebuilder-video-laptop"></iframe>
+                                        <iframe width="100%" height="450px" src="https://www.youtube.com/embed/8bu1Ltpeiu4" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details-resourcebuilder">
-
-                                            <p className="resourcebuilderparatext">
+                                        <div className="title-details-builder mt-20 mt-20-10">
+                                            <p className="builderparatext">
                                                 {showMore1
                                                     ? "A business owner or side-hustle, wanting to be successful in today’s economy will need to understand which resources will substantially grow their business, how to access them in their business model and how to make the most out of them. For startups & many scaleups even knowing these resources exist is often the first challenge."
                                                     : "A business owner or side-hustle, wanting to be successful in today’s economy will need to understand which resources will substantially grow their business, how to access them in their business model and how to "}
@@ -193,7 +186,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="resourcebuilderparatext mt-10">
+                                            <p className="builderparatext mt-10">
                                                 {showMore2
                                                     ? "hibretOne works with technology & content Channel Partners throughout the world to continuously bring gamechanging resources to the attention of founders, all through one platform. We were the first Community Interest Company in the UK to use OpenAI’s GPT3 as part of the beta trial."
                                                     : "hibretOne works with technology & content Channel Partners throughout the world to continuously bring gamechanging resources to the attention of founders, all through one platform. We were the first Community "}
@@ -210,7 +203,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="resourcebuilderparatext mt-10" >
+                                            <p className="builderparatext mt-10" >
                                                 Identifying tools, utilising them effectively & when the founder is ready, connecting to trusted organisations who can provide problem solving advice, products or services.
                                             </p>
 
@@ -221,7 +214,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box grid-container-resourcebuilder mt-75">
+                    <section className="section-box mt-100-grid mt-100-50 mt-100-30-grid">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -231,13 +224,12 @@ export default function Index() {
                                     sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                                 >
                                     <Grid item lg={6} sx={{ paddingRight: { lg: "75px" } }}>
-
-                                        <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
+                                        <div className="grid-content-heading">
                                             ...and All the Business Stages between
-                                        </h2>
-                                        <div className="title-details-resourcebuilder">
+                                        </div>
+                                        <div className="title-details-builder">
                                             <div>
-                                                <p className="newsandeventsparatext-evidenceled">
+                                                <p className="builderparatext">
                                                     {showMore1 ? (
                                                         <>
                                                             <strong> Business Problem Triage: </strong>  Many believe you can learn more from failures and mistakes than from successes. Better than that hibretOne believes you can learn from the failures of others, using their experiences & their hindsight to support you in your success.
@@ -264,7 +256,7 @@ export default function Index() {
                                                     )}
                                                 </p>
 
-                                                <p className="resourcebuilderparatext mt-30">
+                                                <p className="builderparatext mt-30">
                                                     <strong> Business Plan Writer: </strong>   Thinking of skipping the business plan to save time? Think again. A business with a business plan created is 260% more likely to launch. 58% of founders polled in a CNBC study said they wished they had put together a stronger business plan.
                                                 </p>
                                             </div>
@@ -284,10 +276,10 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h4 className="resourcebuilder-inner-heading">
+                                    <Grid item xs={12} md={12}>
+                                        <div className="grid-content-heading">
                                             ...and All the Business Stages between
-                                        </h4>
+                                        </div>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <img
@@ -297,9 +289,9 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                        <div className="title-details-resourcebuilder">
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             <div>
-                                                <p className="newsandeventsparatext-evidenceled">
+                                                <p className="builderparatext">
                                                     {showMore1 ? (
                                                         <>
                                                             <strong> Business Problem Triage: </strong>  Many believe you can learn more from failures and mistakes than from successes. Better than that hibretOne believes you can learn from the failures of others, using their experiences & their hindsight to support you in your success.
@@ -325,8 +317,7 @@ export default function Index() {
                                                         </>
                                                     )}
                                                 </p>
-
-                                                <p className="resourcebuilderparatext mt-10">
+                                                <p className="builderparatext mt-10">
                                                     <strong> Business Plan Writer: </strong>   Thinking of skipping the business plan to save time? Think again. A business with a business plan created is 260% more likely to launch. 58% of founders polled in a CNBC study said they wished they had put together a stronger business plan.
                                                 </p>
                                             </div>
@@ -337,7 +328,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box grid-container-resourcebuilder mt-75">
+                    <section className="section-box mt-100-grid mt-100-50 mt-100-30-grid">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -353,17 +344,15 @@ export default function Index() {
                                             alt="joxBox"
                                         />
                                     </Grid>
-                                    <Grid
-                                        item
-                                        className=""
+                                    <Grid item
                                         lg={6}
                                         sx={{ paddingLeft: { lg: "75px" } }}
                                     >
-                                        <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
+                                        <div className="grid-content-heading">
                                             Evidence-led Resources
-                                        </h2>
-                                        <div className="title-details-fundingbuilder">
-                                            <p className="fundingbuilderparatext">
+                                        </div>
+                                        <div className="title-details-builder">
+                                            <p className="builderparatext">
                                                 {showMore1
                                                     ? <span><strong>Ecosystem Connector:</strong> The Ecosystem Connector creates social capital, building a network of relationships which can provide tangible and intangible resources like office space, equipment, investment, technical expertise, patent advice. With all connections made through one platform.</span>
                                                     : <span><strong>Ecosystem Connector:</strong> The Ecosystem Connector creates social capital, building a network of relationships which can provide tangible and intangible resources like office space, equipment, investment, </span>}
@@ -380,7 +369,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparatext mt-30">
+                                            <p className="builderparatext mt-30">
                                                 {showMore2
                                                     ? <span><strong>Industry Intelligence:</strong>
                                                         More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured, market intelligence in minutes, instead of months. Market intelligence before launch, means emotions can be taken out of your decisions. With the opportunity for business decisions to be made on facts. Let data be your guide, not gut instinct or confirmation bias.
@@ -401,7 +390,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparatext mt-30">
+                                            <p className="builderparatext mt-30">
                                                 {showMore3
                                                     ? <span><strong>Evidence-led Research:</strong>
                                                         Effective resources developed from the evidence are coordinated & delivered on our platform. New tools are developed every day, some will improve business success, boosting survivability for the 60% of startups failing within 3 years, or the 90% of entrepreneurs who will fail.
@@ -430,9 +419,9 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h4 className="resourcebuilder-inner-heading">
-                                        Evidence-led Resources
+                                    <Grid item xs={12} md={12}>
+                                        <h4 className="grid-content-heading">
+                                            Evidence-led Resources
                                         </h4>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
@@ -443,8 +432,8 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                    <div className="title-details-fundingbuilder">
-                                            <p className="fundingbuilderparatext">
+                                        <div className="title-details-builder mt-20 mt-20-10">
+                                            <p className="builderparatext">
                                                 {showMore1
                                                     ? <span><strong>Ecosystem Connector:</strong> The Ecosystem Connector creates social capital, building a network of relationships which can provide tangible and intangible resources like office space, equipment, investment, technical expertise, patent advice. With all connections made through one platform.</span>
                                                     : <span><strong>Ecosystem Connector:</strong> The Ecosystem Connector creates social capital, building a network of relationships which can provide tangible and intangible resources like office space, equipment, investment, </span>}
@@ -461,7 +450,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparatext mt-10">
+                                            <p className="builderparatext mt-10">
                                                 {showMore2
                                                     ? <span><strong>Industry Intelligence:</strong>
                                                         More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured, market intelligence in minutes, instead of months. Market intelligence before launch, means emotions can be taken out of your decisions. With the opportunity for business decisions to be made on facts. Let data be your guide, not gut instinct or confirmation bias.
@@ -482,7 +471,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparatext mt-10">
+                                            <p className="builderparatext mt-10">
                                                 {showMore3
                                                     ? <span><strong>Evidence-led Research:</strong>
                                                         Effective resources developed from the evidence are coordinated & delivered on our platform. New tools are developed every day, some will improve business success, boosting survivability for the 60% of startups failing within 3 years, or the 90% of entrepreneurs who will fail.
@@ -509,7 +498,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box grid-container-resourcebuilder mt-75">
+                    <section className="section-box mt-100-grid mt-100-50 mt-100-30-grid">
                         <div className="post-loop-grid">
                             <div className="container">
                                 <Grid
@@ -524,14 +513,11 @@ export default function Index() {
                                         lg={6}
                                         sx={{ paddingRight: { lg: "75px" } }}
                                     >
-                                        <h2
-                                            className=""
-                                            style={{ marginBottom: "40px", fontSize: "36px !important" }}
-                                        >
+                                        <div className="grid-content-heading">
                                             New Resources in Development
-                                        </h2>
-                                        <div className="title-details-fundingbuilder">
-                                            <p className="fundingbuilderparatext">
+                                        </div>
+                                        <div className="title-details-builder">
+                                            <p className="builderparatext">
                                                 {showMore4
                                                     ? <span><strong>Business Need:</strong>
                                                         Identifying, creating and developing accelerated support tools for founders at all business stages. Future resources helping new and mature ventures to refine business models, develop products/services and scale up effectively.
@@ -552,7 +538,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparatext mt-30">
+                                            <p className="builderparatext mt-30">
                                                 {showMore5
                                                     ? <span><strong>Technology Need:</strong>
                                                         Identifying, developing and working with software communities, networks of developers and contributors. Providing access to cost-effective, low-risk software solutions to foster innovation which support even the less technically gifted business owner.
@@ -573,7 +559,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparatext mt-30">
+                                            <p className="builderparatext mt-30">
                                                 {showMore6
                                                     ? <span><strong>Societal Need:</strong>
                                                         Identifying, developing and working with organisations with effective Environmental, Social and Governance (ESG) & Corporate Social Responsibility (CSR) objectives. Ensuring hibretOne continues to scale its ESG/CSR initiatives, contributing to societal well-being beyond our core  activities. Focusing on areas such as environmental sustainability, community development, education, and social justice. Supporting companies engaged in philanthropy, volunteerism, environmental conservation efforts, ethical sourcing practices and partnerships with non-profit organisations.
@@ -593,11 +579,11 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                        </div>  
+                                        </div>
                                     </Grid>
                                     <Grid item lg={6} className="d-flex justify-content-center">
                                         <img
-                                            className="imagecontentwithborder"
+                                            className="imagecontent"
                                             src="assets/imgs/page/resource-builder/newresourcesindevelopment.jpg"
                                             alt="joxBox"
                                         />
@@ -609,23 +595,21 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item xs={12} md={12} sx={{ marginBottom: "20px" }}>
-                                        <h4
-                                            className="resourcebuilder-inner-heading"
-                                        >
+                                    <Grid item xs={12} md={12}>
+                                        <div className="grid-content-heading">
                                             New Resources in Development
-                                        </h4>
+                                        </div>
                                     </Grid>
                                     <Grid item xs={12} md={12}>
                                         <img
-                                            className="imagecontentwithborder"
+                                            className="imagecontent"
                                             src="assets/imgs/page/resource-builder/newresourcesindevelopment.jpg"
                                             alt="joxBox"
                                         />
                                     </Grid>
                                     <Grid item xs={12} md={12}>
-                                    <div className="title-details-fundingbuilder">
-                                            <p className="fundingbuilderparatext">
+                                        <div className="title-details-builder mt-20 mt-20-10">
+                                            <p className="builderparatext">
                                                 {showMore4
                                                     ? <span><strong>Business Need:</strong>
                                                         Identifying, creating and developing accelerated support tools for founders at all business stages. Future resources helping new and mature ventures to refine business models, develop products/services and scale up effectively.
@@ -646,7 +630,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparatext mt-10">
+                                            <p className="builderparatext mt-10">
                                                 {showMore5
                                                     ? <span><strong>Technology Need:</strong>
                                                         Identifying, developing and working with software communities, networks of developers and contributors. Providing access to cost-effective, low-risk software solutions to foster innovation which support even the less technically gifted business owner.
@@ -667,7 +651,7 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                            <p className="fundingbuilderparatext mt-10">
+                                            <p className="builderparatext mt-10">
                                                 {showMore6
                                                     ? <span><strong>Societal Need:</strong>
                                                         Identifying, developing and working with organisations with effective Environmental, Social and Governance (ESG) & Corporate Social Responsibility (CSR) objectives. Ensuring hibretOne continues to scale its ESG/CSR initiatives, contributing to societal well-being beyond our core  activities. Focusing on areas such as environmental sustainability, community development, education, and social justice. Supporting companies engaged in philanthropy, volunteerism, environmental conservation efforts, ethical sourcing practices and partnerships with non-profit organisations.
@@ -687,14 +671,14 @@ export default function Index() {
                                                         : "...more"}
                                                 </button>
                                             </p>
-                                        </div> 
+                                        </div>
                                     </Grid>
                                 </Grid>
                             </div>
                         </div>
                     </section >
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-40">
                         <FullAccessButton />
                     </section>
 
