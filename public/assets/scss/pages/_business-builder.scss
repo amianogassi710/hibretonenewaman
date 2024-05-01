@@ -158,7 +158,6 @@
         display: none;
     }
 }
-
 /* Share Icon End */
 
 /* Card Component Start */
@@ -255,7 +254,8 @@
     margin-top: -26px;
     width: 105%;
     flex-direction: column;
-    padding: 20px 40px;
+    // padding: 20px 40px;
+    padding: 16px 28px;
 }
 
 @media screen and (max-width: 576px) {

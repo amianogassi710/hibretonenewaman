@@ -71,27 +71,27 @@ export default function EvidenceLedResearchTrendingNowcarousel() {
     return (
         <div className="post-loop-grid">
             <div className="container-evidenceled">
-                <div className="text-center mb-40">
-                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp newsandeventsheading-evidenceled">
+                <div className="text-center">
+                    <div className="component-title">
                         Research Trending Now
-                    </h2>
-                    <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp newsandeventssubheading-evidenceled">
+                    </div>
+                    <div className="component-subtitle">
                         Don't miss the trending news
-                    </p>
+                    </div>
                 </div>
-                <div className="swiper-container" style={{ overflow: 'hidden' }}>
+                <div className="swiper-container mt-40-20" style={{ overflow: 'hidden' }} >
                     <div className="swiper-wrapper" >
                         {articleData.map((article, index) => (
                             <div key={index} className="swiper-slide">
                                 <div className="card-content-evidenceled hover-up">
-                                <a href={`${article.pdfLocation}`} target="_blank" rel="noopener noreferrer">
+                                    <a href={`${article.pdfLocation}`} target="_blank" rel="noopener noreferrer">
 
-                                    <img
-                                        loading="lazy"
-                                        src={article.image}
-                                        alt="Article featured image"
-                                        className="featured-image-evidenceled"
-                                    />
+                                        <img
+                                            loading="lazy"
+                                            src={article.image}
+                                            alt="Article featured image"
+                                            className="featured-image-evidenceled"
+                                        />
                                     </a>
                                 </div>
                             </div>

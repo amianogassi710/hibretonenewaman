@@ -1,5 +1,3 @@
-
-
 /* Background Blue random Design */
 .background-random-evidenceledresearch {
     position: relative;
@@ -30,10 +28,9 @@
     right: -300px;
     border-radius: 25px;
 }
-
 /* Background Blue random Design End */
 
-/*Hero Component Start */
+/* Banner Start */
 .banner-hero-evidenceledresearch {
     padding: 0px 65px 0px 70px;
     position: relative;
@@ -44,29 +41,10 @@
     align-items: center;
 }
 
-//   Hero Page Section
 .bg-img-businessbuilder-evidenceledresearch {
     height: 30vh;
     background: url(../imgs/page/evidence-led-research/evidenceledresearchhero1.jpg) no-repeat center center;
     background-size: cover;
-}
-
-.bg-img-businessbuilder-evidenceledresearch h2,
-.bg-img-businessbuilder-evidenceledresearch p {
-    z-index: 2;
-    position: relative;
-    color: white;
-    padding-left: 25px;
-}
-
-.bg-img-businessbuilder-evidenceledresearch h2 {
-    border-left: 10px solid #83cbff;
-    padding-bottom: 8px;
-    padding-top: 5px;
-}
-
-.bg-img-businessbuilder-evidenceledresearch p {
-    border-left: 10px solid #83cbff;
 }
 
 .bg-img-businessbuilder-evidenceledresearch::before {
@@ -82,7 +60,6 @@
 }
 
 @media screen and (max-width:576px) {
-
     .businessbuilder-hero-heading-evidenceledresearch,
     .businessbuilder-hero-subheading-evidenceledresearch {
         margin-left: -65px;
@@ -90,37 +67,25 @@
 }
 
 @media (max-width: 992px) {
-    h2 {
-        font-size: 40px !important;
-    }
-
-    .color-text-paragraph-evidenceledresearch {
+        .color-text-paragraph-evidenceledresearch {
         font-size: 20px !important;
     }
 }
 
 @media (max-width: 768px) {
-    h2 {
-        font-size: 30px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .color-text-paragraph-evidenceledresearch {
+       .color-text-paragraph-evidenceledresearch {
         font-size: 18px !important;
         line-height: 25px !important;
     }
 
     @media (max-width: 455px) {
-        h2 {
-            font-size: 26px !important;
-        }
-
-        .color-text-paragraph-evidenceledresearch {
+                .color-text-paragraph-evidenceledresearch {
             font-size: 14px !important;
             line-height: 20px !important;
         }
     }
 }
+/* Banner End */
 
 /* Share Icon Start */
 .share-icon-container-evidenceledresearch {
@@ -144,33 +109,14 @@
     .share-icon-evidenceledresearch {
         margin-left: 35px !important;
         margin-top: -76px !important;
-
     }
 }
 
-@media screen and (max-width:999px) {
+@media screen and (max-width:1180px) {
     .share-icon-evidenceledresearch {
-        margin-left: 14px !important;
-        margin-top: -76px !important;
-
+        display: none;
     }
 }
-
-@media screen and (max-width:768px) {
-    .share-icon-evidenceledresearch {
-        margin-left: 32px !important;
-        margin-top: -76px !important;
-
-    }
-}
-
-@media screen and (max-width:580px) {
-    .share-icon-evidenceledresearch {
-        margin-left: 3px !important;
-        margin-top: -10px !important;
-    }
-}
-
 /* Share Icon End */
 
 /*Evidence Led Research Search Bar*/
@@ -427,7 +373,6 @@
         padding: 0 0 20px 0;
     }
 }
-
 /*Search Component End */
 
 // Academic Research Grid Component Start
@@ -454,32 +399,9 @@
         font-size: 20px !important;
     }
 }
-
 // Academic Research Grid Component End
 
-
 /* Evidence Led Research Explore the Research Start */
-.newsandeventsheading-evidenceled {
-    color: var(--brand-brand-1, #05264E);
-    text-align: center;
-    /* Heading/H2 */
-    font-family: "Plus Jakarta Sans";
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.newsandeventssubheading-evidenceled {
-    color: var(--text-paragraph, var(--Paragraph-Text, #6C6E70));
-    text-align: center;
-    font-family: "Plus Jakarta Sans";
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-}
-
 .card-content-evidenceled {
     border-radius: 16px;
     border: 1px solid rgba(224, 230, 246, 1);
@@ -495,8 +417,6 @@
     width: 100%;
     height: 250px;
 }
-
-
 
 .container-evidenceled {
     margin: auto;
@@ -703,13 +623,9 @@
         right: 70px;
     }
 }
-
 /* Evidence Led Research Explore the Research End */
 
 /* Evidence Led Research Search Bar Start */
-
-
-
 /* Evidence Led Research Search Bar When True Start */
 .swipernext-evidenceled-explore-true {
     position: absolute;
@@ -733,88 +649,48 @@
 
 @media screen and (min-width: 1496px) {
     .swipernext-evidenceled-explore-true {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 10px;
+        right: 65px;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 10px;
+        left: 65px;
     }
 }
 
 @media screen and (max-width: 1496px) {
     .swipernext-evidenceled-explore-true {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         right: 65px;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         left: 65px;
     }
 }
 
 @media screen and (max-width: 1435px) {
     .swipernext-evidenceled-explore-true {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         right: 30px;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         left: 30px;
     }
 }
 
 @media screen and (max-width: 1360px) {
     .swipernext-evidenceled-explore-true {
-        position: absolute;
-        top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
+        top: 93%;
         right: 0px;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
-        top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
+        top: 93%;
         left: 0px;
     }
 }
@@ -823,118 +699,58 @@
     .swipernext-evidenceled-explore-true {
         position: absolute;
         top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 0px;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
         top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 0px;
     }
 }
 
 @media screen and (max-width: 992px) {
     .swipernext-evidenceled-explore-true {
-        position: absolute;
-        top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 0px;
+        top: 94%;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
-        top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 0px;
+        top: 94%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .swipernext-evidenceled-explore-true {
-        position: absolute;
         top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 3px;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
         top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 3px;
     }
 }
 
 @media screen and (max-width: 576px) {
     .swipernext-evidenceled-explore-true {
-        position: absolute;
         top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 3px;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
         top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 3px;
     }
 }
 
 @media screen and (max-width: 450px) {
     .swipernext-evidenceled-explore-true {
-        position: absolute;
-        top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 3px;
+        top: 93%;
     }
     
     .swiperprevious-evidenceled-explore-true {
-        position: absolute;
-        top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 3px;
+        top: 93%;
     }
 }
 /* Evidence Led Research Search Bar When True End */
 
-
 /* Evidence Led Research Search Bar When False Start */
 .swipernext-evidenceled-explore {
     position: absolute;
-    top: 92%;
+    top: 89%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -944,7 +760,7 @@
 
 .swiperprevious-evidenceled-explore {
     position: absolute;
-    top: 92%;
+    top: 89%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -955,7 +771,7 @@
 @media screen and (min-width: 1496px) {
     .swipernext-evidenceled-explore {
         position: absolute;
-        top: 92%;
+        top: 89%;
         transform: translateY(-50%);
         width: 50px;
         height: 50px;
@@ -965,7 +781,7 @@
     
     .swiperprevious-evidenceled-explore {
         position: absolute;
-        top: 92%;
+        top: 89%;
         transform: translateY(-50%);
         width: 50px;
         height: 50px;
@@ -976,192 +792,96 @@
 
 @media screen and (max-width: 1496px) {
     .swipernext-evidenceled-explore {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         right: 65px;
     }
     
     .swiperprevious-evidenceled-explore {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         left: 65px;
     }
 }
 
 @media screen and (max-width: 1435px) {
     .swipernext-evidenceled-explore {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         right: 30px;
     }
     
     .swiperprevious-evidenceled-explore {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         left: 30px;
     }
 }
 
 @media screen and (max-width: 1360px) {
     .swipernext-evidenceled-explore {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         right: 0px;
     }
     
     .swiperprevious-evidenceled-explore {
-        position: absolute;
         top: 92%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         left: 0px;
     }
 }
 
 @media screen and (max-width: 1160px) {
     .swipernext-evidenceled-explore {
-        position: absolute;
         top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 0px;
     }
     
     .swiperprevious-evidenceled-explore {
-        position: absolute;
         top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 0px;
     }
 }
 
 @media screen and (max-width: 992px) {
     .swipernext-evidenceled-explore {
-        position: absolute;
         top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         right: 0px;
     }
     
     .swiperprevious-evidenceled-explore {
-        position: absolute;
         top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         left: 0px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .swipernext-evidenceled-explore {
-        position: absolute;
         top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         right: 3px;
     }
     
     .swiperprevious-evidenceled-explore {
-        position: absolute;
         top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
         left: 3px;
     }
 }
 
 @media screen and (max-width: 576px) {
     .swipernext-evidenceled-explore {
-        position: absolute;
         top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 3px;
     }
     
     .swiperprevious-evidenceled-explore {
-        position: absolute;
         top: 94%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 3px;
     }
 }
 
 @media screen and (max-width: 450px) {
     .swipernext-evidenceled-explore {
-        position: absolute;
-        top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        right: 3px;
+        top: 90%;
     }
     
     .swiperprevious-evidenceled-explore {
-        position: absolute;
-        top: 93%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-        left: 3px;
+        top: 90%;
     }
 }
 /* Evidence Led Research Search Bar When False End */
 
-
 /* The Need for Evidence Led Research Start */
-.newsandeventsparaheading-evidenceled {
-    font-family: "Plus Jakarta Sans";
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 26px;
-    margin-bottom: 0px;
-}
-
 .newsandeventsparatext-evidenceled {
     color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
     text-align: justify;
@@ -1171,12 +891,7 @@
     font-weight: 500;
     line-height: 30px;
 }
-
 /* The Need for Evidence Led Research End */
-
-/* Research Trending Now Start */
-
-/* Research Trending Now End */
 
 //   Browse a Selection of Research Categories Start
 .container2 {
@@ -1191,13 +906,13 @@
 
 @media screen and (max-width: 1200px) {
     .container2 {
-        max-width: 1060px;
+        max-width: 1000px;
     }
 }
 
 @media screen and (max-width: 992px) {
     .container2 {
-        max-width: 790px;
+        max-width: 650px;
     }
 }
 
@@ -1321,7 +1036,6 @@
     }
 }
 
-
 .custom-select {
     width: auto;
 }
@@ -1413,7 +1127,6 @@
     margin-left: 12px;
 }
 
-
 .banner-hero1 {
     display: flex;
     justify-content: center;
@@ -1422,9 +1135,7 @@
     position: relative;
     max-width: 1770px;
     margin: 0 auto;
-
 }
-
 
 .banner-hero1 .block-banner1 .industry-form-find {
     background: #fff;
@@ -1448,17 +1159,13 @@
     font-size: 16px;
     // width: 120%;
     border: none;
-
 }
 
 .nested-swiper-wrapper {
     display: flex;
     justify-content: center;
     width: 100vw; // Set width to 100% of the viewport width
-
 }
-
-
 
 .swiperprevious-search-evidenceled {
     position: absolute;
@@ -1516,13 +1223,13 @@
 
 @media screen and (max-width: 1200px) {
     .swiperprevious-search-evidenceled {
-        top: 35%;
-        left: 2px;
+        top: 38%;
+        left: 0px;
     }
 
     .swipernext-search-evidenceled {
-        top: 35%;
-        right: 2px;
+        top: 38%;
+        right: 0px;
     }
 }
 
@@ -1550,12 +1257,12 @@
 
 @media screen and (max-width: 450px) {
     .swiperprevious-search-evidenceled {
-        top: 30%;
+        top: 34%;
         left: 5px;
     }
 
     .swipernext-search-evidenceled {
-        top: 30%;
+        top: 34%;
         right: 5px;
     }
 }
@@ -1573,15 +1280,12 @@
 }
 //   Search Bar End
 
-
-
 .img {
     aspect-ratio: 1;
     object-fit: auto;
     object-position: center;
     width: 25px;
 }
-
 
 .imagecontent {
     border-radius: 16px;
@@ -1598,9 +1302,15 @@
 
 .swiper-slide-searchbar.swiper-slide {
     width: 175px !important;
-    /* Define your desired width */
     margin-right: 30px !important;
-    /* Adjust as per your requirement */
 }
 
+.mt-75-belowsearch-evidence-led {
+    margin-top: 55px;
+}
 
+@media screen and (max-width: 576px) {
+    .mt-75-50-belowsearch-evidence-led {
+        margin-top: 30px;
+    }
+}

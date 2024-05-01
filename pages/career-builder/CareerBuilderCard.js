@@ -62,7 +62,7 @@ function CareerBuilderCard() {
 
     return (
         <div className="">
-            <section className="section-box mt-50">
+            <section className="section-box mt-50 mt-50-30">
                 <div className="container">
                     <div className="flex-container">
                         <div className="share-icon-container-careerbuilder">

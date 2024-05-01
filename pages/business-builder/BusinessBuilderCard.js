@@ -66,14 +66,14 @@ function BusinessBuilderCard() {
                 <div className="container">
                     <div className="flex-container">
                         <div className="share-icon-container-businessbuilder">
-                                <IoShareSocialOutline className="share-icon-businessbuilder" />
+                            <IoShareSocialOutline className="share-icon-businessbuilder" />
                         </div>
                         <div className="text-center">
                             <div className="component-title">
-                            Before Building Your Business, We Help Build You                            
+                                Before Building Your Business, We Help Build You
                             </div>
                             <div className="component-subtitle">
-                            Support to improve opportunities to be successful 
+                                Support to improve opportunities to be successful
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@ function BusinessBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12}>
-                            <section className="support-section-builder">
+                                <section className="support-section-builder">
                                     <SupportCard
                                         title={firstCard.title}
                                         description={firstCard.description}
@@ -138,7 +138,7 @@ function BusinessBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                            <section className="support-section-builder mt-30">
+                                <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={secondCard.title}
                                         description={secondCard.description}
@@ -196,7 +196,7 @@ function BusinessBuilderCard() {
                             sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
                         >
                             <Grid item xs={12} md={12}>
-                            <section className="support-section-builder mt-30">
+                                <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={thirdCard.title}
                                         description={thirdCard.description}
@@ -208,7 +208,7 @@ function BusinessBuilderCard() {
                                 </section>
                             </Grid>
                             <Grid item xs={12} md={12}>
-                            <section className="support-section-builder mt-30">
+                                <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={fourthCard.title}
                                         description={fourthCard.description}

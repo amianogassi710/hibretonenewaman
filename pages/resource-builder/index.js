@@ -370,11 +370,8 @@ export default function Index() {
                                             </p>
                                             <p className="builderparatext mt-30">
                                                 {showMore2
-                                                    ? <span><strong>Industry Intelligence:</strong>
-                                                        More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured, market intelligence in minutes, instead of months. Market intelligence before launch, means emotions can be taken out of your decisions. With the opportunity for business decisions to be made on facts. Let data be your guide, not gut instinct or confirmation bias.
-                                                    </span>
-                                                    : <span><strong>Industry Intelligence:</strong>
-                                                        More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured,
+                                                    ? <span><strong>Industry Intelligence: </strong> More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured, market intelligence in minutes, instead of months. Market intelligence before launch, means emotions can be taken out of your decisions. With the opportunity for business decisions to be made on facts. Let data be your guide, not gut instinct or confirmation bias. </span>
+                                                    : <span><strong>Industry Intelligence: </strong> More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured,
                                                     </span>}
                                                 <button
                                                     className="btn-show-more"
@@ -451,11 +448,9 @@ export default function Index() {
                                             </p>
                                             <p className="builderparatext mt-10">
                                                 {showMore2
-                                                    ? <span><strong>Industry Intelligence:</strong>
-                                                        More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured, market intelligence in minutes, instead of months. Market intelligence before launch, means emotions can be taken out of your decisions. With the opportunity for business decisions to be made on facts. Let data be your guide, not gut instinct or confirmation bias.
+                                                    ? <span><strong>Industry Intelligence: </strong> More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured, market intelligence in minutes, instead of months. Market intelligence before launch, means emotions can be taken out of your decisions. With the opportunity for business decisions to be made on facts. Let data be your guide, not gut instinct or confirmation bias.
                                                     </span>
-                                                    : <span><strong>Industry Intelligence:</strong>
-                                                        More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured,
+                                                    : <span><strong>Industry Intelligence: </strong> More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured,
                                                     </span>}
                                                 <button
                                                     className="btn-show-more"
@@ -472,10 +467,10 @@ export default function Index() {
                                             </p>
                                             <p className="builderparatext mt-10">
                                                 {showMore3
-                                                    ? <span><strong>Evidence-led Research:</strong>
+                                                    ? <span><strong>Evidence-led Research: </strong>
                                                         Effective resources developed from the evidence are coordinated & delivered on our platform. New tools are developed every day, some will improve business success, boosting survivability for the 60% of startups failing within 3 years, or the 90% of entrepreneurs who will fail.
                                                     </span>
-                                                    : <span><strong>Evidence-led Research:</strong>
+                                                    : <span><strong>Evidence-led Research: </strong>
                                                         Effective resources developed from the evidence are coordinated & delivered on our platform. New tools are developed every day, some will improve business success, boosting survivability
                                                     </span>}<button
                                                         className="btn-show-more"

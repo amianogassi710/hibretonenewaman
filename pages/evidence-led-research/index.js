@@ -16,12 +16,12 @@ import CustomAsyncSelect from "./App";
 import Combined from "./Combined";
 
 
-const NoSSRCategorySlider = dynamic(
-    () => import("../../components/sliders/Category"),
+const CategorySlider = dynamic(
+    () => import("./CategorySlider"),
     { ssr: false }
 );
-const NoSSRCategorySlider1 = dynamic(
-    () => import("../../components/sliders/Category1"),
+const CategorySlider1 = dynamic(
+    () => import("./CategorySlider1"),
     { ssr: false }
 );
 
@@ -262,38 +262,38 @@ export default function Index() {
                     </section> */}
 
                     <section>
-                    <Combined />
+                        <Combined />
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-50">
                         <YellowBanner />
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-50">
                         <EvidenceLedResearchPhotoGrid />
                     </section>
 
-                    <section className="section-box mt-100">
+                    <section className="section-box mt-100-grid mt-100-50 mt-100-30-grid">
                         <EvidenceLedResearchTrendingNowcarousel />
                     </section>
 
-                    <section className="section-box mt-100">
+                    <section className="section-box mt-100-grid mt-100-50 mt-100-30-grid">
                         <div className="section-box wow animate__animated animate__fadeIn">
                             <div className="container">
                                 <div className="text-center">
-                                    <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp newsandeventsheading-evidenceled">
+                                    <div className="component-title">
                                         Browse a Selection of Research Categories
-                                    </h2>
-                                    <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp newsandeventssubheading-evidenceled">
+                                    </div>
+                                    <div className="component-subtitle">
                                         Find the research that supports your enterprise
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="container2 mt-40">
+                            <div className="container2 mt-40 mt-40-20">
                                 <div className="box-swiper grant-category evidence-led-research">
                                     <div>
-                                         {/* <NoSSRCategorySlider />
-                                        <NoSSRCategorySlider1 />  */}
+                                        <CategorySlider />
+                                        <CategorySlider1 /> 
                                         <div className="swiper-button-next" />
                                         <div className="swiper-button-prev" />
                                     </div>
@@ -302,7 +302,7 @@ export default function Index() {
                         </div>
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-40">
                         <FullAccessButton />
                     </section>
 

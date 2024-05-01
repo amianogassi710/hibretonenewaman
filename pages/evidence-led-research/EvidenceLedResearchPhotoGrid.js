@@ -11,13 +11,13 @@ export default function EvidenceLedResearchPhotoGrid() {
         <section className="section-box">
             <div className="post-loop-grid">
                 <div className="container">
-                    <div className="text-center mb-40">
-                        <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp newsandeventsheading-evidenceled">
+                    <div className="text-center">
+                        <div className="component-title">
                             The Need for Evidence-led Research
-                        </h2>
-                        <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp newsandeventssubheading-evidenceled">
+                        </div>
+                        <div className="component-subtitle">
                             Global research  is the basis of our enterprise tools
-                        </p>
+                        </div>
                     </div>
                     <Grid container alignItems="center" style={{ minWidth: '100%' }}
                         sx={{ display: { xs: 'none', md: 'none', lg: 'flex' } }}>
@@ -38,10 +38,10 @@ export default function EvidenceLedResearchPhotoGrid() {
                         </Grid>
                         <Grid item className="" lg={6} sx={{ paddingLeft: { lg: '75px' } }} style={{ marginTop: '-20px' }}>
                             <div style={{ textAlign: 'justify', marginTop: '27px' }}>
-                                <p className="newsandeventsparaheading-evidenceled" style={{ color: "#3C65F5" }}>
+                                <p className="builderparaheading" style={{ color: "#3C65F5" }}>
                                     Economic
                                 </p>
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     {showMore1 ? (
                                         <>
                                             Over £430bn could be added to the UK economy if recommendations in the reports which talk about levelling-up were actioned. One of the biggest opportunities will come from migrant entrepreneurs. Watch the video to understand why migrant entrepreneurs appear to have many of the traits necessary to be a successful entrepreneur.
@@ -67,38 +67,35 @@ export default function EvidenceLedResearchPhotoGrid() {
                                         </>
                                     )}
                                 </p>
-                                <p className="newsandeventsparaheading-evidenceled mt-30" style={{ color: "#3AAB67" }}>
+                                <p className="builderparaheading mt-30" style={{ color: "#3AAB67" }}>
                                     Social
                                 </p>
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     Time To Change - CREME/ Aston University/ Natwest demonstrated, Extend Ventures, Rose Review (NatWest) , ACH, Llilac Review explore the benefit  of empowering underrepresented groups to add to the economy. Whilst fostering deeper inclusion for all socio-demographic groups.
                                 </p>
-                                <p className="newsandeventsparaheading-evidenceled mt-30" style={{ color: "#F58A3C" }}>
+                                <p className="builderparaheading mt-30" style={{ color: "#F58A3C" }}>
                                     Moral
                                 </p>
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     VC’s give 2 pence in the £1 to all-women startups & slightly less than that for Black-led teams. Because investment is focussed on scaleups, the startup pipeline is drying up. Low-income earners struggle to save or create wealth.
                                 </p>
                             </div>
                         </Grid>
                     </Grid>
                     <Grid container alignItems="center" style={{ minWidth: '100%' }}
-                        sx={{ display: { xs: 'none', md: "flex", lg: 'none' } }}>
+                        sx={{ display: { xs: 'none', md: "flex", lg: 'none' } }} className="mt-40-20">
 
                         <Grid item xs={12} md={12}>
                             <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-                                <iframe height="100%" src="https://www.youtube.com/embed/i-7DGjUYCWc" allowFullScreen></iframe>
+                                <iframe height="100%" src="https://www.youtube.com/embed/i-7DGjUYCWc" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                             </div>
                         </Grid>
                         <Grid item xs={12} md={12}>
-                            <div className="mt-10" style={{ textAlign: 'justify' }}>
-
-
-                                <p className="newsandeventsparaheading-evidenceled" style={{ color: "#3C65F5" }}>
+                        <div className="title-details-builder mt-20 mt-20-10">
+                                <p className="builderparaheading" style={{ color: "#3C65F5" }}>
                                     Economic
                                 </p>
-
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     {showMore1 ? (
                                         <>
                                             Over £430bn could be added to the UK economy if recommendations in the reports which talk about levelling-up were actioned. One of the biggest opportunities will come from migrant entrepreneurs. Watch the video to understand why migrant entrepreneurs appear to have many of the traits necessary to be a successful entrepreneur.
@@ -124,45 +121,38 @@ export default function EvidenceLedResearchPhotoGrid() {
                                         </>
                                     )}
                                 </p>
-                                <p className="newsandeventsparaheading-evidenceled mt-30" style={{ color: "#3AAB67" }}>
+                                <p className="builderparaheading mt-30" style={{ color: "#3AAB67" }}>
                                     Social
                                 </p>
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     Time To Change - CREME/ Aston University/ Natwest demonstrated, Extend Ventures, Rose Review (NatWest) , ACH, Llilac Review explore the benefit  of empowering underrepresented groups to add to the economy. Whilst fostering deeper inclusion for all socio-demographic groups.
                                 </p>
-                                <p className="newsandeventsparaheading-evidenceled mt-30" style={{ color: "#F58A3C" }}>
+                                <p className="builderparaheading mt-30" style={{ color: "#F58A3C" }}>
                                     Moral
                                 </p>
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     VC’s give 2 pence in the £1 to all-women startups & slightly less than that for Black-led teams. Because investment is focussed on scaleups, the startup pipeline is drying up. Low-income earners struggle to save or create wealth.
                                 </p>
-
-                            </div>
-                            <div className="mt-20">
-                                <button href="/" className="btn btn-default fs-6">Read More</button>
                             </div>
                         </Grid>
                     </Grid>
                     <Grid container alignItems="center" style={{ minWidth: '100%' }}
-                        sx={{ display: { xs: 'flex', md: "none", lg: 'none' } }}>
+                        sx={{ display: { xs: 'flex', md: "none", lg: 'none' } }} className="mt-40-20">
                         <Grid item xs={12} md={12}>
                             <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-                                <iframe width="" height="100%" src="https://www.youtube.com/embed/i-7DGjUYCWc" allowFullScreen></iframe>
+                                <iframe height="100%" src="https://www.youtube.com/embed/i-7DGjUYCWc" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                             </div>
                         </Grid>
                         <Grid item xs={12} md={12}>
-                            <div className="mt-10" style={{ textAlign: 'justify' }}>
-
-
-                                <p className="newsandeventsparaheading-evidenceled" style={{ color: "#3C65F5" }}>
+                        <div className="title-details-builder mt-20 mt-20-10">
+                                <p className="builderparaheading" style={{ color: "#3C65F5" }}>
                                     Economic
                                 </p>
-
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     {showMore1 ? (
                                         <>
                                             Over £430bn could be added to the UK economy if recommendations in the reports which talk about levelling-up were actioned. One of the biggest opportunities will come from migrant entrepreneurs. Watch the video to understand why migrant entrepreneurs appear to have many of the traits necessary to be a successful entrepreneur.
-                                            <div className="mt-30">
+                                            <div className="mt-10">
                                                 60% of startups fail within 3 years, 2 years faster than they did 5 years ago, costing the UK economy £4 billion a year. 90% of entrepreneurs fail. 80% of venture capital goes to the London, Oxford, Cambridge triangle.
                                                 <button
                                                     className="btn-show-more"
@@ -184,22 +174,18 @@ export default function EvidenceLedResearchPhotoGrid() {
                                         </>
                                     )}
                                 </p>
-                                <p className="newsandeventsparaheading-evidenceled mt-30" style={{ color: "#3AAB67" }}>
+                                <p className="builderparaheading mt-10" style={{ color: "#3AAB67" }}>
                                     Social
                                 </p>
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     Time To Change - CREME/ Aston University/ Natwest demonstrated, Extend Ventures, Rose Review (NatWest) , ACH, Llilac Review explore the benefit  of empowering underrepresented groups to add to the economy. Whilst fostering deeper inclusion for all socio-demographic groups.
                                 </p>
-                                <p className="newsandeventsparaheading-evidenceled mt-30" style={{ color: "#F58A3C" }}>
+                                <p className="builderparaheading mt-10" style={{ color: "#F58A3C" }}>
                                     Moral
                                 </p>
-                                <p className="newsandeventsparatext-evidenceled">
+                                <p className="builderparatext">
                                     VC’s give 2 pence in the £1 to all-women startups & slightly less than that for Black-led teams. Because investment is focussed on scaleups, the startup pipeline is drying up. Low-income earners struggle to save or create wealth.
                                 </p>
-
-                            </div>
-                            <div className="mt-20">
-                                <button href="/" className="btn btn-default fs-6">Read More</button>
                             </div>
                         </Grid>
                     </Grid>

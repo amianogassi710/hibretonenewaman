@@ -46,29 +46,30 @@ export default function Index() {
             <Layout>
                 <div className="background-random-aboutus">
                     <section className="section-box">
-                        <div className="banner-hero1 bg-img-aboutus">
+                        <div className="banner-hero-builder bg-img-aboutus">
                             <div className="container d-flex align-items-center">
                                 <div className="row">
                                     <div className="col">
-                                        <h2 className="aboutus-hero-heading">About Us</h2>
-                                        <p className="aboutus-hero-subheading color-text-paragraph-2">
-                                            hibretOne is a  <span className="color-blue">  not-for-profit </span> Community Interest Company (CIC), using entrepreneurship & education to create  economic impact                                 </p>
+                                        <div className="builder-hero-heading">About Us</div>
+                                        <div className="builder-hero-subheading">
+                                            hibretOne is a  <span className="color-blue">  not-for-profit </span> Community Interest Company (CIC), using entrepreneurship & education to create  economic impact
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <section className="section-box mt-50 mb-40">
+                    <section className="section-box mt-50 mt-50-30">
                         <div className="container">
                             <div className="flex-container">
                                 <div className="share-icon-container-aboutus">
-                                        <IoShareSocialOutline className="share-icon-aboutus" />
+                                    <IoShareSocialOutline className="share-icon-aboutus" />
                                 </div>
                                 <div className="text-center">
-                                    <h2 className="section-title wow animate__animated animate__fadeInUp" style={{ fontSize: '40px' }}>
+                                <div className="component-title">
                                         Our Impact so far
-                                    </h2>
+                                </div>
                                 </div>
                                 <Aboutuscounter />
                             </div>

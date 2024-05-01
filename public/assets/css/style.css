@@ -11616,10 +11616,6 @@ ul li:last-child .card-list-4 {
   margin-bottom: 24px;
 }
 
-.mt-20 {
-  margin-top: 20px;
-}
-
 .mr-15 {
   margin-right: 15px;
 }
@@ -12219,75 +12215,45 @@ ul li:last-child .card-list-4 {
   opacity: 1;
 }
 
-/* About Us Page Start Suru  */
+/* Background Blue random Design */
+.background-random-aboutus {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-random-aboutus::before,
+.background-random-aboutus::after {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 1500px;
+  background: #f2f6fd;
+  transform-origin: top left;
+  z-index: -1;
+}
+
+.background-random-aboutus::before {
+  transform: rotate(-8deg);
+  top: 800px;
+  left: -300px;
+  border-radius: 25px;
+}
+
+.background-random-aboutus::after {
+  transform: rotate(8deg);
+  top: 1100px;
+  right: -300px;
+  border-radius: 25px;
+}
+
+/* Background Blue random Design End */
+/* Banner Start */
 .bg-img-aboutus {
   height: 30vh;
   background: url(../imgs/page/about-us/aboutushero1.jpg) no-repeat center center;
   background-size: cover;
 }
 
-.bg-img-aboutus h2,
-.bg-img-aboutus p {
-  z-index: 2;
-  position: relative;
-  color: white;
-  padding-left: 25px;
-}
-
-.bg-img-aboutus h2 {
-  border-left: 10px solid #83cbff;
-  /* Width of the border */
-  padding-bottom: 8px;
-  padding-top: 5px;
-  margin-bottom: 20px;
-  font-size: 56px;
-  /* Adjust this value to change the height */
-}
-
-.bg-img-aboutus p {
-  border-left: 10px solid #83cbff;
-  font-size: 24px;
-  max-width: 835px;
-  line-height: 30px;
-  /* Adjust this value to change the height */
-}
-
-@media (max-width: 760px) {
-  .bg-img-aboutus h2 {
-    border-left: 10px solid #83cbff;
-    /* Width of the border */
-    padding-bottom: 8px;
-    padding-top: 5px;
-    margin-bottom: 20px;
-    font-size: 50px;
-    /* Adjust this value to change the height */
-  }
-  .bg-img-aboutus p {
-    border-left: 10px solid #83cbff;
-    font-size: 20px;
-    max-width: 835px;
-    line-height: 30px;
-    /* Adjust this value to change the height */
-  }
-}
-@media (max-width: 460px) {
-  .bg-img-aboutus h2 {
-    border-left: 10px solid #83cbff;
-    /* Width of the border */
-    padding-bottom: 8px;
-    padding-top: 5px;
-    margin-bottom: 20px;
-    font-size: 40px;
-    /* Adjust this value to change the height */
-  }
-  .bg-img-aboutus p {
-    border-left: 10px solid #83cbff;
-    font-size: 18px;
-    max-width: 835px;
-    line-height: 30px;
-    /* Adjust this value to change the height */
-  }
-}
 .bg-img-aboutus::before {
   content: "";
   position: absolute;
@@ -12300,10 +12266,42 @@ ul li:last-child .card-list-4 {
   background: #05264E;
 }
 
-.color-text-paragraph-aboutus {
-  color: #66789C;
+/* Banner End */
+/* Share Icon Start */
+.share-icon-container-aboutus {
+  position: absolute;
 }
 
+.share-icon-aboutus {
+  font-size: 30px;
+  color: #3c65f5;
+}
+
+.share-icon-aboutus:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background-color: #05264e;
+  transition: 0.2s;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 1200px) {
+  .share-icon-aboutus {
+    margin-left: 35px !important;
+    margin-top: -76px !important;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .share-icon-aboutus {
+    display: none;
+  }
+}
+/* Share Icon End */
+@media screen and (max-width: 576px) {
+  .mt-45-10 {
+    margin-top: 10px !important;
+  }
+}
 .counter {
   color: var(--brand-brand-2, #3C65F5);
   text-align: center;
@@ -12320,13 +12318,11 @@ ul li:last-child .card-list-4 {
 .countertext {
   color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
   text-align: center;
-  /* text/font-xs */
   font-family: "Plus Jakarta Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 25px;
-  /* 156.25% */
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -12357,23 +12353,18 @@ ul li:last-child .card-list-4 {
 
 .card-grid-4-info-aboutus {
   display: flex;
-  /* Use flexbox to arrange items in a row */
   align-items: center;
-  /* Center items vertically */
   justify-content: space-between;
-  /* Distribute items along the row */
   margin-bottom: -25px;
 }
 
 .left-content {
   margin-right: auto;
-  /* Push the left content to the left as much as possible */
   text-align: left;
 }
 
 .social-share-link {
   margin-left: 10px;
-  /* Adjust spacing between left content and share link */
 }
 
 .meetteamtext {
@@ -12384,21 +12375,17 @@ ul li:last-child .card-list-4 {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  /* 120% */
 }
 
 .positionaboutus {
   color: var(--text-Paragrap-2, #66789C) !important;
   text-align: left;
-  /* text/font-xs */
   font-family: "Plus Jakarta Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 25px;
   overflow: hidden;
-  /* 156.25% */
-  /* 4th April */
 }
 
 @media screen and (max-width: 1400px) {
@@ -12447,7 +12434,6 @@ ul li:last-child .card-list-4 {
 .meetourteamname {
   overflow: hidden;
   font-size: 18px;
-  /* 4th April */
 }
 
 .social-share-link-aboutus {
@@ -12457,7 +12443,6 @@ ul li:last-child .card-list-4 {
   background-repeat: no-repeat;
   background-position: center;
   /* margin-left: 14px; */
-  /* 4th April */
 }
 
 .card-list-aboutus {
@@ -12791,9 +12776,6 @@ ul li:last-child .card-list-4 {
   }
 }
 @media screen and (max-width: 992px) {
-  .section-box-aboutus {
-    margin-top: 10px !important;
-  }
   .section-box-meetourteam-aboutus {
     margin-top: 35px !important;
   }
@@ -12810,38 +12792,7 @@ ul li:last-child .card-list-4 {
     margin-top: -20px !important;
   }
 }
-.background-random-aboutus {
-  position: relative;
-  overflow: hidden;
-}
-
-.background-random-aboutus::before,
-.background-random-aboutus::after {
-  content: "";
-  position: absolute;
-  width: 800px;
-  height: 1500px;
-  background: #f2f6fd;
-  transform-origin: top left;
-  z-index: -1;
-}
-
-.background-random-aboutus::before {
-  transform: rotate(-8deg);
-  top: 800px;
-  left: -300px;
-  border-radius: 25px;
-}
-
-.background-random-aboutus::after {
-  transform: rotate(8deg);
-  top: 1100px;
-  right: -300px;
-  border-radius: 25px;
-}
-
-/* 4th April */
-/* aboutus */
+/* Aboutus Start */
 .card-grid-4 .image-top-feature {
   padding-bottom: 10px;
 }
@@ -12868,7 +12819,6 @@ ul li:last-child .card-list-4 {
 .newsandeventsheading {
   color: var(--brand-brand-1, #05264E);
   text-align: center;
-  /* Heading/H2 */
   font-family: "Plus Jakarta Sans";
   font-size: 40px;
   font-style: normal;
@@ -12876,50 +12826,6 @@ ul li:last-child .card-list-4 {
   line-height: normal;
 }
 
-/* Share Icon Start */
-/* Share Icon Start */
-.share-icon-container-aboutus {
-  position: absolute;
-}
-
-.share-icon-aboutus {
-  font-size: 30px;
-  color: #3c65f5;
-}
-
-.share-icon-aboutus:hover {
-  transform: translateY(-2px);
-  color: #ffffff;
-  background-color: #05264e;
-  transition: 0.2s;
-  border-radius: 4px;
-}
-
-@media screen and (max-width: 1200px) {
-  .share-icon-aboutus {
-    margin-left: 35px !important;
-    margin-top: -76px !important;
-  }
-}
-@media screen and (max-width: 999px) {
-  .share-icon-aboutus {
-    margin-left: 14px !important;
-    margin-top: -76px !important;
-  }
-}
-@media screen and (max-width: 768px) {
-  .share-icon-aboutus {
-    margin-left: 32px !important;
-    margin-top: -76px !important;
-  }
-}
-@media screen and (max-width: 580px) {
-  .share-icon-aboutus {
-    margin-left: 3px !important;
-    margin-top: -10px !important;
-  }
-}
-/* Share Icon End */
 .aboutus-inner-heading {
   font-size: 40px !important;
 }
@@ -14426,7 +14332,7 @@ ul li:last-child .card-list-4 {
   margin-top: -26px;
   width: 105%;
   flex-direction: column;
-  padding: 20px 40px;
+  padding: 16px 28px;
 }
 
 @media screen and (max-width: 576px) {
@@ -14741,7 +14647,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 
 /* Background Blue random Design End */
-/*Hero Component Start */
+/* Banner Start */
 .banner-hero-evidenceledresearch {
   padding: 0px 65px 0px 70px;
   position: relative;
@@ -14756,24 +14662,6 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   height: 30vh;
   background: url(../imgs/page/evidence-led-research/evidenceledresearchhero1.jpg) no-repeat center center;
   background-size: cover;
-}
-
-.bg-img-businessbuilder-evidenceledresearch h2,
-.bg-img-businessbuilder-evidenceledresearch p {
-  z-index: 2;
-  position: relative;
-  color: white;
-  padding-left: 25px;
-}
-
-.bg-img-businessbuilder-evidenceledresearch h2 {
-  border-left: 10px solid #83cbff;
-  padding-bottom: 8px;
-  padding-top: 5px;
-}
-
-.bg-img-businessbuilder-evidenceledresearch p {
-  border-left: 10px solid #83cbff;
 }
 
 .bg-img-businessbuilder-evidenceledresearch::before {
@@ -14795,32 +14683,23 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   }
 }
 @media (max-width: 992px) {
-  h2 {
-    font-size: 40px !important;
-  }
   .color-text-paragraph-evidenceledresearch {
     font-size: 20px !important;
   }
 }
 @media (max-width: 768px) {
-  h2 {
-    font-size: 30px !important;
-    margin-bottom: 10px !important;
-  }
   .color-text-paragraph-evidenceledresearch {
     font-size: 18px !important;
     line-height: 25px !important;
   }
 }
 @media (max-width: 768px) and (max-width: 455px) {
-  h2 {
-    font-size: 26px !important;
-  }
   .color-text-paragraph-evidenceledresearch {
     font-size: 14px !important;
     line-height: 20px !important;
   }
 }
+/* Banner End */
 /* Share Icon Start */
 .share-icon-container-evidenceledresearch {
   position: absolute;
@@ -14845,22 +14724,9 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
     margin-top: -76px !important;
   }
 }
-@media screen and (max-width: 999px) {
+@media screen and (max-width: 1180px) {
   .share-icon-evidenceledresearch {
-    margin-left: 14px !important;
-    margin-top: -76px !important;
-  }
-}
-@media screen and (max-width: 768px) {
-  .share-icon-evidenceledresearch {
-    margin-left: 32px !important;
-    margin-top: -76px !important;
-  }
-}
-@media screen and (max-width: 580px) {
-  .share-icon-evidenceledresearch {
-    margin-left: 3px !important;
-    margin-top: -10px !important;
+    display: none;
   }
 }
 /* Share Icon End */
@@ -15112,27 +14978,6 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   }
 }
 /* Evidence Led Research Explore the Research Start */
-.newsandeventsheading-evidenceled {
-  color: var(--brand-brand-1, #05264E);
-  text-align: center;
-  /* Heading/H2 */
-  font-family: "Plus Jakarta Sans";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.newsandeventssubheading-evidenceled {
-  color: var(--text-paragraph, var(--Paragraph-Text, #6C6E70));
-  text-align: center;
-  font-family: "Plus Jakarta Sans";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-}
-
 .card-content-evidenceled {
   border-radius: 16px;
   border: 1px solid rgb(224, 230, 246);
@@ -15347,81 +15192,41 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 
 @media screen and (min-width: 1496px) {
   .swipernext-evidenceled-explore-true {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 10px;
+    right: 65px;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 10px;
+    left: 65px;
   }
 }
 @media screen and (max-width: 1496px) {
   .swipernext-evidenceled-explore-true {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     right: 65px;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     left: 65px;
   }
 }
 @media screen and (max-width: 1435px) {
   .swipernext-evidenceled-explore-true {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     right: 30px;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     left: 30px;
   }
 }
 @media screen and (max-width: 1360px) {
   .swipernext-evidenceled-explore-true {
-    position: absolute;
-    top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+    top: 93%;
     right: 0px;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
-    top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+    top: 93%;
     left: 0px;
   }
 }
@@ -15429,107 +15234,48 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   .swipernext-evidenceled-explore-true {
     position: absolute;
     top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 0px;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
     top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 0px;
   }
 }
 @media screen and (max-width: 992px) {
   .swipernext-evidenceled-explore-true {
-    position: absolute;
-    top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 0px;
+    top: 94%;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
-    top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 0px;
+    top: 94%;
   }
 }
 @media screen and (max-width: 768px) {
   .swipernext-evidenceled-explore-true {
-    position: absolute;
     top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 3px;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
     top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 3px;
   }
 }
 @media screen and (max-width: 576px) {
   .swipernext-evidenceled-explore-true {
-    position: absolute;
     top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 3px;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
     top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 3px;
   }
 }
 @media screen and (max-width: 450px) {
   .swipernext-evidenceled-explore-true {
-    position: absolute;
-    top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 3px;
+    top: 93%;
   }
   .swiperprevious-evidenceled-explore-true {
-    position: absolute;
-    top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 3px;
+    top: 93%;
   }
 }
 /* Evidence Led Research Search Bar When True End */
 /* Evidence Led Research Search Bar When False Start */
 .swipernext-evidenceled-explore {
   position: absolute;
-  top: 92%;
+  top: 89%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -15539,7 +15285,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 
 .swiperprevious-evidenceled-explore {
   position: absolute;
-  top: 92%;
+  top: 89%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -15550,7 +15296,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 @media screen and (min-width: 1496px) {
   .swipernext-evidenceled-explore {
     position: absolute;
-    top: 92%;
+    top: 89%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -15559,7 +15305,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   }
   .swiperprevious-evidenceled-explore {
     position: absolute;
-    top: 92%;
+    top: 89%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
@@ -15569,175 +15315,80 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (max-width: 1496px) {
   .swipernext-evidenceled-explore {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     right: 65px;
   }
   .swiperprevious-evidenceled-explore {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     left: 65px;
   }
 }
 @media screen and (max-width: 1435px) {
   .swipernext-evidenceled-explore {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     right: 30px;
   }
   .swiperprevious-evidenceled-explore {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     left: 30px;
   }
 }
 @media screen and (max-width: 1360px) {
   .swipernext-evidenceled-explore {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     right: 0px;
   }
   .swiperprevious-evidenceled-explore {
-    position: absolute;
     top: 92%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     left: 0px;
   }
 }
 @media screen and (max-width: 1160px) {
   .swipernext-evidenceled-explore {
-    position: absolute;
     top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 0px;
   }
   .swiperprevious-evidenceled-explore {
-    position: absolute;
     top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 0px;
   }
 }
 @media screen and (max-width: 992px) {
   .swipernext-evidenceled-explore {
-    position: absolute;
     top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     right: 0px;
   }
   .swiperprevious-evidenceled-explore {
-    position: absolute;
     top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     left: 0px;
   }
 }
 @media screen and (max-width: 768px) {
   .swipernext-evidenceled-explore {
-    position: absolute;
     top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     right: 3px;
   }
   .swiperprevious-evidenceled-explore {
-    position: absolute;
     top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
     left: 3px;
   }
 }
 @media screen and (max-width: 576px) {
   .swipernext-evidenceled-explore {
-    position: absolute;
     top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 3px;
   }
   .swiperprevious-evidenceled-explore {
-    position: absolute;
     top: 94%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 3px;
   }
 }
 @media screen and (max-width: 450px) {
   .swipernext-evidenceled-explore {
-    position: absolute;
-    top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    right: 3px;
+    top: 90%;
   }
   .swiperprevious-evidenceled-explore {
-    position: absolute;
-    top: 93%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    left: 3px;
+    top: 90%;
   }
 }
 /* Evidence Led Research Search Bar When False End */
 /* The Need for Evidence Led Research Start */
-.newsandeventsparaheading-evidenceled {
-  font-family: "Plus Jakarta Sans";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-  margin-bottom: 0px;
-}
-
 .newsandeventsparatext-evidenceled {
   color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
   text-align: justify;
@@ -15749,8 +15400,6 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 
 /* The Need for Evidence Led Research End */
-/* Research Trending Now Start */
-/* Research Trending Now End */
 .container2 {
   margin: auto;
 }
@@ -15762,12 +15411,12 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (max-width: 1200px) {
   .container2 {
-    max-width: 1060px;
+    max-width: 1000px;
   }
 }
 @media screen and (max-width: 992px) {
   .container2 {
-    max-width: 790px;
+    max-width: 650px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -16032,12 +15681,12 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (max-width: 1200px) {
   .swiperprevious-search-evidenceled {
-    top: 35%;
-    left: 2px;
+    top: 38%;
+    left: 0px;
   }
   .swipernext-search-evidenceled {
-    top: 35%;
-    right: 2px;
+    top: 38%;
+    right: 0px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -16060,11 +15709,11 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 }
 @media screen and (max-width: 450px) {
   .swiperprevious-search-evidenceled {
-    top: 30%;
+    top: 34%;
     left: 5px;
   }
   .swipernext-search-evidenceled {
-    top: 30%;
+    top: 34%;
     right: 5px;
   }
 }
@@ -16099,11 +15748,18 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
 
 .swiper-slide-searchbar.swiper-slide {
   width: 175px !important;
-  /* Define your desired width */
   margin-right: 30px !important;
-  /* Adjust as per your requirement */
 }
 
+.mt-75-belowsearch-evidence-led {
+  margin-top: 55px;
+}
+
+@media screen and (max-width: 576px) {
+  .mt-75-50-belowsearch-evidence-led {
+    margin-top: 30px;
+  }
+}
 /* Background Blue random Design */
 .background-random-resourcebuilder {
   position: relative;

@@ -247,7 +247,6 @@ export default function Index() {
                                     sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
                                 >
                                     <Grid item lg={6} sx={{ paddingRight: { lg: "75px" } }}>
-
                                         <div className="grid-content-heading">
                                             Most Used For Funding Businesses
                                         </div>
