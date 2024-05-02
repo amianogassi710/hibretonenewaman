@@ -133,15 +133,18 @@ export default function Aboutusnewsandeventscarouselfull() {
 
 
     return (
-        <section className="section-box section-box-newsandevents-aboutus" style={{marginTop:'55px'}}>
+        <section className="section-box mt-75 mt-75-50">
             <div className="post-loop-grid">
                 <div className="container1">
-                    <div className="text-center mb-40">
-                        <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp newsandeventsheading"> News and Events</h2>
-                        <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp meetteamtext">Get the latest news, updates and tips
-                        </p>
+                    <div className="text-center">
+                        <div className="component-title">
+                            News and Events
+                        </div>
+                        <div className="component-subtitle wow animate__animated animate__fadeInUp">
+                            Get the latest news, updates and tips
+                        </div>
                     </div>
-                    <div className="swiper-container" style={{ overflow: 'hidden' }}>
+                    <div className="swiper-container mt-40 mt-40-30" style={{ overflow: 'hidden' }}>
                         <div className="swiper-wrapper" >
                             {articleData.map((article, index) => (
                                 <div key={index} className="swiper-slide">

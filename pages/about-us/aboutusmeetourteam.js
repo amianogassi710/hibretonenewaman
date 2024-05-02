@@ -1,15 +1,18 @@
 export default function Aboutusmeetourteam() {
     return (
         <>
-            <section className="section-box section-box-meetourteam-aboutus">
+            <section className="section-box mt-75 mt-75-50">
                 <div className="post-loop-grid">
                     <div className="container1">
                         <div className="text-center">
-                            <h2 className="section-title mb-10 wow animate__animated animate__fadeInUp meetourteamheading" >Meet Our Team</h2>
-                            <p className="w-lg-50 mx-auto wow animate__animated animate__fadeInUp meetteamtext">A world-class team, board members and advisors
-                            </p>
+                            <div className="component-title wow animate__animated animate__fadeInUp" >
+                                Meet Our Team
+                            </div>
+                            <div className="component-subtitle wow animate__animated animate__fadeInUp">
+                                A world-class team, board members and advisors
+                            </div>
                         </div>
-                        <div className="row aboutusrow">
+                        <div className="row mt-40 mt-40-30">
                             <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
@@ -19,8 +22,8 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                     <div className="card-grid-4-info-aboutus">
                                         <div className="left-content">
-                                            <h5 className="meetourteamname">Drew Currie</h5>
-                                            <p className="positionaboutus">Founder</p>
+                                            <div className="meetourteamname">Drew Currie</div>
+                                            <div className="positionaboutus">Founder</div>
                                         </div>
                                         <a className="share-linkedin social-share-link-aboutus" href="https://www.linkedin.com/in/drew-currie-7863b32b/">
                                         </a>
@@ -36,8 +39,8 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                     <div className="card-grid-4-info-aboutus">
                                         <div className="left-content">
-                                            <h5 className="meetourteamname">Nikki Salisbury</h5>
-                                            <p className="positionaboutus">Co-Founder</p>
+                                            <div className="meetourteamname">Nikki Salisbury</div>
+                                            <div className="positionaboutus">Co-Founder</div>
                                         </div>
                                         <a className="share-linkedin social-share-link-aboutus" href="#">
                                         </a>
@@ -53,8 +56,8 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                     <div className="card-grid-4-info-aboutus">
                                         <div className="left-content">
-                                            <h5 className="meetourteamname">Kali Bagarry</h5>
-                                            <p className="positionaboutus">CTO</p>
+                                            <div className="meetourteamname">Kali Bagarry</div>
+                                            <div className="positionaboutus">CTO</div>
                                         </div>
                                         <a className="share-linkedin social-share-link-aboutus" href="#">
                                         </a>
@@ -70,8 +73,8 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                     <div className="card-grid-4-info-aboutus">
                                         <div className="left-content">
-                                            <h5 className="meetourteamname">Assim Ishaque</h5>
-                                            <p className="positionaboutus">Finance</p>
+                                            <div className="meetourteamname">Assim Ishaque</div>
+                                            <div className="positionaboutus">Finance</div>
                                         </div>
                                         <a className="share-linkedin social-share-link-aboutus" href="#">
                                         </a>
@@ -87,8 +90,8 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                     <div className="card-grid-4-info-aboutus">
                                         <div className="left-content">
-                                            <h5 className="meetourteamname">Prof Monder Ram OBE</h5>
-                                            <p className="positionaboutus">Non-Executive Director</p>
+                                            <div className="meetourteamname">Prof Monder Ram OBE</div>
+                                            <div className="positionaboutus">Non-Executive Director</div>
                                         </div>
                                         <a className="share-linkedin social-share-link-aboutus" href="#">
                                         </a>
@@ -104,8 +107,8 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                     <div className="card-grid-4-info-aboutus">
                                         <div className="left-content">
-                                            <h5 className="meetourteamname">Pam Sheemar</h5>
-                                            <p className="positionaboutus">Non-Executive Director</p>
+                                            <div className="meetourteamname">Pam Sheemar</div>
+                                            <div className="positionaboutus">Non-Executive Director</div>
                                         </div>
                                         <a className="share-linkedin social-share-link-aboutus" href="#">
                                         </a>
@@ -121,8 +124,8 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                     <div className="card-grid-4-info-aboutus">
                                         <div className="left-content">
-                                            <h5>Dr Mark Esho OBE</h5>
-                                            <p className="positionaboutus">Non-Executive Director</p>
+                                            <div className="meetourteamname">Dr Mark Esho OBE</div>
+                                            <div className="positionaboutus">Non-Executive Director</div>
                                         </div>
                                         <a className="share-linkedin social-share-link-aboutus" href="#">
                                         </a>
@@ -138,8 +141,8 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                     <div className="card-grid-4-info-aboutus">
                                         <div className="left-content">
-                                            <h5>Patricia Hamzahee</h5>
-                                            <p className="positionaboutus">Non-Executive Director</p>
+                                            <div className="meetourteamname">Patricia Hamzahee</div>
+                                            <div className="positionaboutus">Non-Executive Director</div>
                                         </div>
                                         <a className="share-linkedin social-share-link-aboutus" href="#">
                                         </a>

@@ -84,7 +84,7 @@ export default function Index() {
                         ) : (
                             <div>
                                 <Aboutusmeetourteam />
-                                <div className="mt-40 mb-20 button-meetourteam-aboutus" style={{ textAlign: 'center' }}>
+                                <div className="mt-20 mt-20-0-meetourteam" style={{ textAlign: 'center' }}>
                                     <button onClick={handleMeetOurTeamClick} class="btn btn-default fs-6">Show More</button>
                                 </div>
                                 <Aboutusnewsandeventscarousel />
@@ -93,7 +93,7 @@ export default function Index() {
 
                         {showFullTeam && (
                             <div>
-                                <div className="mt-40 mb-20 button-meetourteam-aboutus" style={{ textAlign: 'center' }}>
+                                <div className="mt-20 mt-20-0-meetourteam" style={{ textAlign: 'center' }}>
                                     <button onClick={handleShowLessClick} class="btn btn-default fs-6">Show Less</button>
                                 </div>
                                 <Aboutusnewsandeventscarouselfull />
@@ -101,13 +101,11 @@ export default function Index() {
                         )}
                     </div>
 
-                    <section className="section-box mt-75 yellowbanner-aboutus">
+                    <section className="section-box mt-75 mt-75-40 yellowbanner-aboutus">
                         <SubscribeButton />
+                    </section>
 
-                    </section>
-                    <section className="section-box subscription-aboutus">
                         <Subscription />
-                    </section>
                 </div >
             </Layout >
         </>

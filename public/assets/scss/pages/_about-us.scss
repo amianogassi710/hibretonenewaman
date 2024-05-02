@@ -231,7 +231,17 @@
 
 .meetourteamname {
   overflow: hidden;
+
+
+  color: var(--brand-brand-1, #05264E);
+
+  /* Heading/H5 */
+  font-family: "Plus Jakarta Sans";
   font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  /* 130% */
 }
 
 .social-share-link-aboutus {
@@ -639,9 +649,6 @@
     margin-bottom: 5px;
   }
 
-  .button-meetourteam-aboutus {
-    margin-top: 0px !important;
-  }
 
   .yellowbanner-aboutus {
     margin-top: 40px !important;
@@ -666,15 +673,6 @@
   padding: 20px 15px 35px 15px;
 }
 
-.aboutusrow {
-  margin-top: 45px;
-}
-
-@media (max-width: 460px) {
-  .aboutusrow {
-    margin-top: 25px;
-  }
-}
 
 .meetourteamheading,
 .newsandeventsheading {
@@ -701,4 +699,10 @@
 // Meet our team
 .section-box-meetourteam-aboutus {
   margin-top: 75px;
+}
+
+@media screen and (max-width:576px) {
+  .mt-20-0-meetourteam {
+    margin-top: 0px !important;
+  }
 }

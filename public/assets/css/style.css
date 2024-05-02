@@ -1218,7 +1218,7 @@ h6,
   line-height: 26px;
   padding: 10px 25px;
   transition: 0.2s ease-in-out;
-  padding: 20px 90px;
+  padding: 20px 60px;
 }
 
 .btn-sign-up {
@@ -11755,9 +11755,6 @@ ul li:last-child .card-list-4 {
   .bloginnerpage-author-bio {
     display: block;
   }
-  .mt-40 {
-    margin-top: 25px !important;
-  }
   .mb-40 {
     margin-bottom: 25px !important;
   }
@@ -12433,7 +12430,14 @@ ul li:last-child .card-list-4 {
 }
 .meetourteamname {
   overflow: hidden;
+  color: var(--brand-brand-1, #05264E);
+  /* Heading/H5 */
+  font-family: "Plus Jakarta Sans";
   font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  /* 130% */
 }
 
 .social-share-link-aboutus {
@@ -12782,9 +12786,6 @@ ul li:last-child .card-list-4 {
   .mb5 {
     margin-bottom: 5px;
   }
-  .button-meetourteam-aboutus {
-    margin-top: 0px !important;
-  }
   .yellowbanner-aboutus {
     margin-top: 40px !important;
   }
@@ -12806,15 +12807,6 @@ ul li:last-child .card-list-4 {
   padding: 20px 15px 35px 15px;
 }
 
-.aboutusrow {
-  margin-top: 45px;
-}
-
-@media (max-width: 460px) {
-  .aboutusrow {
-    margin-top: 25px;
-  }
-}
 .meetourteamheading,
 .newsandeventsheading {
   color: var(--brand-brand-1, #05264E);
@@ -12839,6 +12831,11 @@ ul li:last-child .card-list-4 {
   margin-top: 75px;
 }
 
+@media screen and (max-width: 576px) {
+  .mt-20-0-meetourteam {
+    margin-top: 0px !important;
+  }
+}
 /* Job Connect CSS */
 .banner-hero {
   padding: 0px 65px;
@@ -14560,6 +14557,9 @@ ul li:last-child .card-list-4 {
   .mt-50-25 {
     margin-top: 25px !important;
   }
+  .mt-40-30 {
+    margin-top: 30px !important;
+  }
 }
 .mt-100-grid {
   margin-top: 100px;
@@ -16025,7 +16025,7 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   }
 }
 /* AccessibilityButton.css */
-@media (max-width: 1600px) {
+@media (min-width: 1181px) {
   .asw-menu-btn {
     top: 33px;
     left: 96% !important;

@@ -87,7 +87,7 @@ function BusinessBuilderCard() {
                             container
                             alignItems="center"
                             style={{ minWidth: "100%" }}
-                            sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
+                            sx={{ display: { xs: "none", sm: "none", md: "none", lg: "flex" } }}
                         >
                             <Grid item lg={6} sx={{ paddingRight: { lg: "60px" } }}>
                                 <section className="support-section-builder">
@@ -123,9 +123,9 @@ function BusinessBuilderCard() {
                             container
                             alignItems="center"
                             style={{ minWidth: "100%" }}
-                            sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
+                            sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                         >
-                            <Grid item xs={12} md={12}>
+                            <Grid item md={6}>
                                 <section className="support-section-builder">
                                     <SupportCard
                                         title={firstCard.title}
@@ -137,7 +137,69 @@ function BusinessBuilderCard() {
                                     />
                                 </section>
                             </Grid>
-                            <Grid item xs={12} md={12}>
+                            <Grid item md={6}>
+                                <section className="support-section-builder">
+                                    <SupportCard
+                                        title={secondCard.title}
+                                        description={secondCard.description}
+                                        imageSrc={secondCard.imageSrc}
+                                        imageAlt={secondCard.imageAlt}
+                                        backgroundColor={secondCard.backgroundColor}
+                                        border={secondCard.border}
+                                    />
+                                </section>
+                            </Grid>
+                        </Grid>
+                        <Grid
+                            container
+                            alignItems="center"
+                            style={{ minWidth: "100%" }}
+                            sx={{ display: { xs: "none", sm: "flex", md: "none", lg: "none" } }}
+                        >
+                                    <Grid item sm={12}>
+                                <section className="support-section-builder">
+                                    <SupportCard
+                                        title={firstCard.title}
+                                        description={firstCard.description}
+                                        imageSrc={firstCard.imageSrc}
+                                        imageAlt={firstCard.imageAlt}
+                                        backgroundColor={firstCard.backgroundColor}
+                                        border={firstCard.border}
+                                    />
+                                </section>
+                            </Grid>
+                            <Grid item sm={12}>
+                                <section className="support-section-builder mt-30">
+                                    <SupportCard
+                                        title={secondCard.title}
+                                        description={secondCard.description}
+                                        imageSrc={secondCard.imageSrc}
+                                        imageAlt={secondCard.imageAlt}
+                                        backgroundColor={secondCard.backgroundColor}
+                                        border={secondCard.border}
+                                    />
+                                </section>
+                            </Grid>
+                        </Grid>
+                        <Grid
+                            container
+                            alignItems="center"
+                            style={{ minWidth: "100%" }}
+                            sx={{ display: { xs: "flex", sm: "none", md: "none", lg: "none" } }}
+                        >
+                                    <Grid item xs={12}>
+                                <section className="support-section-builder">
+                                    <SupportCard
+                                        title={firstCard.title}
+                                        description={firstCard.description}
+                                        imageSrc={firstCard.imageSrc}
+                                        imageAlt={firstCard.imageAlt}
+                                        backgroundColor={firstCard.backgroundColor}
+                                        border={firstCard.border}
+                                    />
+                                </section>
+                            </Grid>
+                            <Grid item xs={12}>
                                 <section className="support-section-builder mt-30">
                                     <SupportCard
                                         title={secondCard.title}
