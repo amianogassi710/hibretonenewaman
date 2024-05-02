@@ -28,6 +28,7 @@
   right: -300px;
   border-radius: 25px;
 }
+
 /* Background Blue random Design End */
 
 /* Banner Start */
@@ -48,6 +49,7 @@
   opacity: 0.8;
   background: #05264E;
 }
+
 /* Banner End */
 
 /* Share Icon Start */
@@ -80,12 +82,13 @@
     display: none;
   }
 }
+
 /* Share Icon End */
 
 // Counter Start
 @media screen and (max-width:576px) {
   .mt-45-10 {
-      margin-top: 10px !important;
+    margin-top: 10px !important;
   }
 }
 
@@ -692,4 +695,10 @@
   .aboutus-inner-heading {
     font-size: 20px !important;
   }
+}
+
+
+// Meet our team
+.section-box-meetourteam-aboutus {
+  margin-top: 75px;
 }

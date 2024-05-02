@@ -12835,6 +12835,10 @@ ul li:last-child .card-list-4 {
     font-size: 20px !important;
   }
 }
+.section-box-meetourteam-aboutus {
+  margin-top: 75px;
+}
+
 /* Job Connect CSS */
 .banner-hero {
   padding: 0px 65px;
@@ -16021,10 +16025,12 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   }
 }
 /* AccessibilityButton.css */
-@media (min-width: 1200px) {
+@media (max-width: 1600px) {
   .asw-menu-btn {
     top: 33px;
-    left: 1450px !important;
+    left: 96% !important;
+    height: 7% !important;
+    width: 3% !important;
   }
 }
 /*

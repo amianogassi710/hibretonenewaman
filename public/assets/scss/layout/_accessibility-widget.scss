@@ -3,13 +3,30 @@
 
 
 
-@media (min-width: 1200px) {
-    .asw-menu-btn{
+@media (max-width: 1600px) {
+    .asw-menu-btn {
         top: 33px;
-        left: 1450px !important;
+        // left: 1440px !important;
+        left: 96% !important;
+
+        // height: 50px !important;
+        // width: 40px !important;
+        height: 7% !important;
+        width: 3% !important;
         // right: 500px !important;
     }
 }
+
+// @media (max-width: 1400px) {
+//     .asw-menu-btn{
+//         top: 33px;
+//         // left: 1340px !important;
+//         height: 50px !important;
+//         width: 40px !important;
+//         // right: 500px !important;
+//     }
+// }
+
 
 /*
 
@@ -17,4 +34,4 @@
 .asw-menu-btn svg {
 
 
-    */   
+    */

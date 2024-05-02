@@ -1,7 +1,7 @@
 export default function Aboutusmeetourteam() {
     return (
         <>
-            <section className="section-box section-box-meetourteam-aboutus" style={{marginTop: '75px'}}>
+            <section className="section-box section-box-meetourteam-aboutus">
                 <div className="post-loop-grid">
                     <div className="container1">
                         <div className="text-center">
@@ -147,7 +147,7 @@ export default function Aboutusmeetourteam() {
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>

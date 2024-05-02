@@ -11,7 +11,7 @@ export default function Aboutushibretoneinformation() {
                             <div className="about__thumb-wrapper d-sm-flex mr-20 p-relative">
                                 <div className="about__thumb-left mr-10">
                                     <div className="about__thumb-1 mb-10">
-                                        <iframe width="560" height="215" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{borderRadius: '16px'}}></iframe>
+                                        <iframe width="560" height="215" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ borderRadius: '16px' }}></iframe>
                                     </div>
                                     <div className="about__thumb-1 text-end">
                                         <img src="../assets/imgs/page/about-us/grid-down.jpg" alt="" style={{ height: '180px', width: '260px', borderRadius: '16px' }} />
@@ -23,22 +23,22 @@ export default function Aboutushibretoneinformation() {
                             </div>
                         </Grid>
                         <Grid item className="" lg={6} sx={{ paddingLeft: { lg: '75px' } }} style={{ marginTop: '-20px' }}>
-                            <h3 classname ='aboutus-inner-heading'>What hibretOne is all about</h3>
+                            <h3 classname='aboutus-inner-heading'>What hibretOne is all about</h3>
                             <div style={{ textAlign: 'justify', marginTop: '27px' }}>
-                                <p className="aboutusparaheading" style={{ color: "#3C65F5" }}>
+                                <p className="builderparaheading" style={{ color: "#3C65F5" }}>
                                     Social, moral and economic purpose
                                 </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparatext">
                                     Empower all aspirers and their communities to benefit from intergenerational opportunities. Generating scalable levelling-up impact .
                                 </p>
-                                <p className="aboutusparaheading mt-10" style={{ color: "#3AAB67" }}>
+                                <p className="builderparaheading mt-10" style={{ color: "#3AAB67" }}>
                                     Our vision </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparatext">
                                     To support 1 million aspirers and organisations every year in the UK alone. To award enterprises with grants of £1 million+ every year. Create a marketplace for public, private, academic and voluntary sectors to collaborate, celebrate and inspire entrepreneurship.
                                 </p>
-                                <p className="aboutusparaheading mt-10" style={{ color: "#F58A3C" }}>
+                                <p className="builderparaheading mt-10" style={{ color: "#F58A3C" }}>
                                     Our values </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparatext">
                                     We promise to maintain our not-for-profit status, providing all our users with a lifetime of free first-line business support. A commitment to erode the  barriers to starting a business for overlooked aspiring learners and entrepreneurs.
                                 </p>
                             </div>
@@ -59,20 +59,20 @@ export default function Aboutushibretoneinformation() {
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <div className="mt-10" style={{ textAlign: 'justify' }}>
-                                <p className="aboutusparaheading" style={{ color: "#3C65F5" }}>
+                                <p className="builderparaheading" style={{ color: "#3C65F5" }}>
                                     Social, moral and economic purpose
                                 </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparatext">
                                     Empower all aspirers and their communities to benefit from intergenerational opportunities. Generating scalable levelling-up impact .
                                 </p>
-                                <p className="aboutusparaheading mt-10" style={{ color: "#3AAB67" }}>
+                                <p className="builderparaheading mt-30" style={{ color: "#3AAB67" }}>
                                     Our vision </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparatext">
                                     To support 1 million aspirers and organisations every year in the UK alone. To award enterprises with grants of £1 million+ every year. Create a marketplace for public, private, academic and voluntary sectors to collaborate, celebrate and inspire entrepreneurship.
                                 </p>
-                                <p className="aboutusparaheading mt-10" style={{ color: "#F58A3C" }}>
+                                <p className="builderparaheading mt-30" style={{ color: "#F58A3C" }}>
                                     Our values </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparatext">
                                     We promise to maintain our not-for-profit status, providing all our users with a lifetime of free first-line business support. A commitment to erode the  barriers to starting a business for overlooked aspiring learners and entrepreneurs.
                                 </p>
                             </div>
@@ -93,24 +93,26 @@ export default function Aboutushibretoneinformation() {
                         </Grid>
                         <Grid item xs={12} md={12}>
                             <div className="mt-10" style={{ textAlign: 'justify' }}>
-                                <p className="aboutusparaheading" style={{ color: "#3C65F5" }}>
+                                <p className="builderparaheading" style={{ color: "#3C65F5" }}>
                                     Social, moral and economic purpose
                                 </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparatext">
                                     Empower all aspirers and their communities to benefit from intergenerational opportunities. Generating scalable levelling-up impact .
                                 </p>
-                                <p className="aboutusparaheading mt-10" style={{ color: "#3AAB67" }}>
-                                    Our vision </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparaheading mt-10" style={{ color: "#3AAB67" }}>
+                                    Our vision
+                                </p>
+                                <p className="builderparatext">
                                     To support 1 million aspirers and organisations every year in the UK alone. To award enterprises with grants of £1 million+ every year. Create a marketplace for public, private, academic and voluntary sectors to collaborate, celebrate and inspire entrepreneurship.
                                 </p>
-                                <p className="aboutusparaheading mt-10" style={{ color: "#F58A3C" }}>
-                                    Our values </p>
-                                <p className="aboutusparatext">
+                                <p className="builderparaheading mt-10" style={{ color: "#F58A3C" }}>
+                                    Our values
+                                </p>
+                                <p className="builderparatext">
                                     We promise to maintain our not-for-profit status, providing all our users with a lifetime of free first-line business support. A commitment to erode the  barriers to starting a business for overlooked aspiring learners and entrepreneurs.
                                 </p>
                             </div>
-                            <div className="mt-20">
+                            <div className="mt-20 mt-20-10">
                                 <button href="/" className="btn btn-default fs-6">Read More</button>
                             </div>
                         </Grid>
