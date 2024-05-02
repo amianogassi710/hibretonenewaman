@@ -600,18 +600,17 @@ export default function Index() {
                                     sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
                                     <Grid item md={6}>
-                                    <img
+                                        <img
                                             className="imagecontent"
                                             src="assets/imgs/page/business-builder/buildingmoredesirable.jpg"
                                             alt="joxBox"
                                         />
-                                        
+
                                     </Grid>
                                     <Grid item md={6} sx={{ paddingLeft: { md: "75px" } }}>
-                                    <div className="grid-content-heading">
+                                        <div className="grid-content-heading">
                                             Building More Desirable Products
                                         </div>
-                                   
                                         <div className="title-details-builder mt-20 mt-20-10">
                                             {readMore4 ? (
                                                 <div>
@@ -667,9 +666,9 @@ export default function Index() {
                                     sx={{ display: { xs: "none", sm: "flex", md: "none", lg: "none" } }}
                                 >
                                     <Grid item sm={12}>
-                                    <div className="grid-content-heading">
+                                        <div className="grid-content-heading">
                                             Building More Desirable Products
-                                            </div>
+                                        </div>
                                     </Grid>
                                     <Grid item sm={12} sx={{ paddingLeft: { md: "75px" } }}>
                                         <img
@@ -677,7 +676,6 @@ export default function Index() {
                                             src="assets/imgs/page/business-builder/buildingmoredesirable.jpg"
                                             alt="joxBox"
                                         />
-                                  
                                         <div className="title-details-builder mt-20 mt-20-10">
                                             {readMore4 ? (
                                                 <div>
@@ -733,7 +731,7 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", sm: "none", md: "none", lg: "none" } }}
                                 >
                                     <Grid item xs={12}>
-                                    <div className="grid-content-heading">
+                                        <div className="grid-content-heading">
                                             Building More Desirable Products
                                         </div>
                                     </Grid>

@@ -82,7 +82,7 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
+                                    sx={{ display: { xs: "none", sm: "none", md: "none", lg: "flex" } }}
                                 >
                                     <Grid item lg={6}>
                                         <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
@@ -163,12 +163,164 @@ export default function Index() {
                                     container
                                     alignItems="center"
                                     style={{ minWidth: "100%" }}
-                                    sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
+                                    sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item xs={12} md={12}>
+                                    <Grid item md={6}>
+                                        <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
+                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                        </div>
+                                    </Grid>
+                                    <Grid item md={6} sx={{ paddingLeft: { md: "75px" } }}>
+                                        <div className="title-details-businessbuilder">
+                                            <p className="builderparaheading" style={{ color: "#3C65F5" }}>
+                                                Getting Prepared for Investment
+                                            </p>
+                                            <p className="builderparatext">
+                                                {showMore1
+                                                    ? "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most challenging times for a company. Access to funding is so competitive, additional advisor support is now almost compulsory."
+                                                    : "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most "}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore1(
+                                                            !showMore1
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore1
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
+                                            </p>
+                                            <p className="builderparaheading mt-30" style={{ color: "#3AAB67" }}>
+                                                Identifying Sources of Investment
+                                            </p>
+                                            <p className="builderparatext">
+                                                {showMore2
+                                                    ? "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various sources of finance available is essential for UK businesses. Kickstart your idea with grants if possible. although very competitive, grants and competitions are a low-cost way to prove your idea. "
+                                                    : "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various "}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore2(
+                                                            !showMore2
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore2
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
+                                            </p>
+                                            <p className="builderparaheading mt-30" style={{ color: "#F58A3C" }}>
+                                                Winning Investment
+                                            </p>
+                                            <p className="builderparatext">
+                                                {showMore3
+                                                    ? "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than 3% success rate, whereas some organisations applying for Innovate UK grants have better than 50% success. They know what to right!"
+                                                    : "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than "}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore3(
+                                                            !showMore3
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore3
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{ display: { xs: "none", sm: "flex", md: "none", lg: "none" } }}
+                                >
+                                    <Grid item sm={12}>
+                                        <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
+                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                        </div>
+                                    </Grid>
+                                    <Grid item sm={12} sx={{ paddingLeft: { md: "75px" } }}>
+                                        <div className="title-details-businessbuilder">
+                                            <p className="builderparaheading" style={{ color: "#3C65F5" }}>
+                                                Getting Prepared for Investment
+                                            </p>
+                                            <p className="builderparatext">
+                                                {showMore1
+                                                    ? "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most challenging times for a company. Access to funding is so competitive, additional advisor support is now almost compulsory."
+                                                    : "A Skynova study notes that 47% of startup failures in 2022 were due to a lack of financing, nearly double the percentage that failed for the same reason in 2021, based on CB Insight’s data. Raising funding is one of the most "}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore1(
+                                                            !showMore1
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore1
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
+                                            </p>
+                                            <p className="builderparaheading mt-30" style={{ color: "#3AAB67" }}>
+                                                Identifying Sources of Investment
+                                            </p>
+                                            <p className="builderparatext">
+                                                {showMore2
+                                                    ? "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various sources of finance available is essential for UK businesses. Kickstart your idea with grants if possible. although very competitive, grants and competitions are a low-cost way to prove your idea. "
+                                                    : "Running a successful business requires more than just a great idea and a solid business plan. Adequate financing plays a crucial role in the growth and sustainability of any business, and understanding the various "}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore2(
+                                                            !showMore2
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore2
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
+                                            </p>
+                                            <p className="builderparaheading mt-30" style={{ color: "#F58A3C" }}>
+                                                Winning Investment
+                                            </p>
+                                            <p className="builderparatext">
+                                                {showMore3
+                                                    ? "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than 3% success rate, whereas some organisations applying for Innovate UK grants have better than 50% success. They know what to right!"
+                                                    : "Due diligence. Making yourself stand out from the crowd is a must to ensure success! connect with the right partners who have experience in that area. Some Innovate UK Smart grant calls have a less than "}
+                                                <button
+                                                    className="btn-show-more"
+                                                    onClick={() =>
+                                                        setShowMore3(
+                                                            !showMore3
+                                                        )
+                                                    }
+                                                >
+                                                    {showMore3
+                                                        ? "show less"
+                                                        : "...more"}
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </Grid>
+                                </Grid>
+                                <Grid
+                                    container
+                                    alignItems="center"
+                                    style={{ minWidth: "100%" }}
+                                    sx={{ display: { xs: "flex", sm: "none", md: "none", lg: "none" } }}
+                                >
+                                    <Grid item xs={12}>
                                         <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                                     </Grid>
-                                    <Grid item xs={12} md={12}>
+                                    <Grid item xs={12}>
                                     <div className="title-details-builder mt-20 mt-20-10">
                                             <p className="builderparaheading" style={{ color: "#3C65F5" }}>
                                                 Getting Prepared for Investment
