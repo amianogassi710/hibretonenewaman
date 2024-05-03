@@ -14649,6 +14649,10 @@ body .uwy.userway_p1 .userway_buttons_wrapper {
   display: grid !important;
 }
 
+.textaligncenter {
+  text-align: center;
+}
+
 /* Background Blue random Design */
 .background-random-evidenceledresearch {
   position: relative;

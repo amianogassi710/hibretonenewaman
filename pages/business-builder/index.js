@@ -131,12 +131,12 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item md={6}>
+                                    <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
                                         <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
-                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/-sQeREfZY-8" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
+                                            <iframe width="100%" height="400px" src="https://www.youtube.com/embed/-sQeREfZY-8" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                                         </div>
                                     </Grid>
-                                    <Grid item md={6} sx={{ paddingLeft: { md: "75px" } }}>
+                                    <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <div className="grid-content-heading">
                                             Characteristics of Successful Entrepreneurs
                                         </div>
@@ -162,7 +162,7 @@ export default function Index() {
                                                         Entrepreneurs acknowledge their first product may be far from perfect. Often this realisation comes at a large financial, of time & human cost.
                                                     </p>
                                                     <p className="builderparatext mt-10">
-                                                        It is widely thought there are 7 key traits of an entrepreneur include a strong work ethic, passion and drive, risk-taking, resilience, innovation, adaptability, and networking and building relationships. By identifying these traits in yourself and working to develop them, you can set yourself up for success as an entrepreneur.
+                                                        It is widely thought there are 7 key traits of an entrepreneur include a strong work ethic, passion and drive, risk-taking, resilience, innovation, adaptability, and networking and building relationships. By identifying these traits in yourself and working to develop them, .
                                                     </p>
                                                 </div>
                                             )}
@@ -229,7 +229,7 @@ export default function Index() {
                                                     )
                                                 }
                                             >
-                                                <div className="mt-20 mt-20-10">
+                                                <div className="mt-20 mt-20-10 textaligncenter">
                                                     {readMore3 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
                                                 </div>
                                             </span>
@@ -281,7 +281,7 @@ export default function Index() {
                                                     )
                                                 }
                                             >
-                                                <div className="mt-20 mt-20-10">
+                                                <div className="mt-20 mt-20-10 textaligncenter">
                                                     {readMore3 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
                                                 </div>
                                             </span>
@@ -355,7 +355,7 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item md={6}>
+                                    <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
                                         <div className="grid-content-heading">
                                             Building More Capable Entrepreneurs
                                         </div>
@@ -396,11 +396,12 @@ export default function Index() {
                                             </span>
                                         </div>
                                     </Grid>
-                                    <Grid md={6} sx={{ paddingLeft: { md: "75px" } }}>
+                                    <Grid md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <img
                                             className="imagecontent"
                                             src="assets/imgs/page/business-builder/buildingmore.jpg"
                                             alt="joxBox"
+                                            style={{height: '400px'}}
                                         />
                                     </Grid>
                                 </Grid>
@@ -454,7 +455,7 @@ export default function Index() {
                                                     )
                                                 }
                                             >
-                                                <div className="mt-20 mt-20-10">
+                                                <div className="mt-20 mt-20-10 textaligncenter">
                                                     {readMore1 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
                                                 </div>
                                             </span>
@@ -511,7 +512,7 @@ export default function Index() {
                                                     )
                                                 }
                                             >
-                                                <div className="mt-20 mt-20-10">
+                                                <div className="mt-20 mt-20-10 textaligncenter">
                                                     {readMore1 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
                                                 </div>
                                             </span>
@@ -538,9 +539,7 @@ export default function Index() {
                                             alt="joxBox"
                                         />
                                     </Grid>
-                                    <Grid item
-                                        lg={6}
-                                        sx={{ paddingLeft: { lg: "75px" } }}
+                                    <Grid item lg={6} sx={{ paddingLeft: { lg: "75px" } }}
                                     >
                                         <div className="grid-content-heading">
                                             Building More Desirable Products
@@ -599,15 +598,15 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item md={6}>
+                                    <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
                                         <img
                                             className="imagecontent"
                                             src="assets/imgs/page/business-builder/buildingmoredesirable.jpg"
                                             alt="joxBox"
+                                            style={{height: '400px'}}
                                         />
-
                                     </Grid>
-                                    <Grid item md={6} sx={{ paddingLeft: { md: "75px" } }}>
+                                    <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <div className="grid-content-heading">
                                             Building More Desirable Products
                                         </div>
@@ -640,7 +639,7 @@ export default function Index() {
                                                     </p>
                                                     <p className="builderparatext mt-30">
                                                         <strong> Investability Rating: </strong>
-                                                        Quick assessment to measure your potential to raise investment by analysing your performance across 5 key areas. Your unique score will reveal your personal strengths and weaknesses and deliver practical, actionable tips to improve your results and help you secure the funding you need.
+                                                        Quick assessment to measure your potential to raise investment by analysing your performance across 5 key areas.
                                                     </p>
                                                 </div>
                                             )}
@@ -717,7 +716,7 @@ export default function Index() {
                                                     )
                                                 }
                                             >
-                                                <div className="mt-20 mt-20-10">
+                                                <div className="mt-20 mt-20-10 textaligncenter">
                                                     {readMore4 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
                                                 </div>
                                             </span>
@@ -784,7 +783,7 @@ export default function Index() {
                                                     )
                                                 }
                                             >
-                                                <div className="mt-20 mt-20-10">
+                                                <div className="mt-20 mt-20-10 textaligncenter">
                                                     {readMore4 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
                                                 </div>
                                             </span>
