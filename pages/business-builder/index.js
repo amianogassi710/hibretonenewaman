@@ -140,9 +140,6 @@ export default function Index() {
                                         <div className="grid-content-heading">
                                             Characteristics of Successful Entrepreneurs
                                         </div>
-                                        {/* </Grid>
-                                    
-                                    <Grid item sm={12} md={12}> */}
                                         <div className="title-details-builder mt-20 mt-20-10">
                                             {readMore3 ? (
                                                 <div>
@@ -190,15 +187,11 @@ export default function Index() {
                                         <div className="grid-content-heading">
                                             Characteristics of Successful Entrepreneurs
                                         </div>
-
                                     </Grid>
                                     <Grid item sm={12} sx={{ paddingLeft: { md: "75px" } }}>
-                                        <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
+                                    <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
                                             <iframe width="100%" height="450px" src="https://www.youtube.com/embed/-sQeREfZY-8" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                                         </div>
-                                        {/* </Grid>
-                                    
-                                    <Grid item sm={12} md={12}> */}
                                         <div className="title-details-builder mt-20 mt-20-10">
                                             {readMore3 ? (
                                                 <div>
@@ -401,7 +394,7 @@ export default function Index() {
                                             className="imagecontent"
                                             src="assets/imgs/page/business-builder/buildingmore.jpg"
                                             alt="joxBox"
-                                            style={{height: '400px'}}
+                                            style={{ height: '400px' }}
                                         />
                                     </Grid>
                                 </Grid>
@@ -539,8 +532,7 @@ export default function Index() {
                                             alt="joxBox"
                                         />
                                     </Grid>
-                                    <Grid item lg={6} sx={{ paddingLeft: { lg: "75px" } }}
-                                    >
+                                    <Grid item lg={6} sx={{ paddingLeft: { lg: "75px" } }}>
                                         <div className="grid-content-heading">
                                             Building More Desirable Products
                                         </div>
@@ -603,7 +595,7 @@ export default function Index() {
                                             className="imagecontent"
                                             src="assets/imgs/page/business-builder/buildingmoredesirable.jpg"
                                             alt="joxBox"
-                                            style={{height: '400px'}}
+                                            style={{ height: '400px' }}
                                         />
                                     </Grid>
                                     <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>

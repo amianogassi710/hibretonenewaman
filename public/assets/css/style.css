@@ -14301,7 +14301,7 @@ ul li:last-child .card-list-4 {
 
 @media screen and (max-width: 1200px) {
   .support-section-builder {
-    max-width: 467px;
+    max-width: 506px;
   }
 }
 @media screen and (max-width: 820px) {
@@ -14343,7 +14343,7 @@ ul li:last-child .card-list-4 {
 
 @media screen and (max-width: 1180px) {
   .support-card-inner {
-    padding: 16px 26px;
+    padding: 16px 19px;
   }
 }
 @media screen and (max-width: 820px) {
@@ -14387,6 +14387,11 @@ ul li:last-child .card-list-4 {
   font-size: 24px;
 }
 
+@media screen and (max-width: 1180px) {
+  .support-card-title {
+    font-size: 22px !important;
+  }
+}
 @media screen and (max-width: 450px) {
   .support-card-title {
     font-size: 20px !important;
@@ -14427,7 +14432,7 @@ ul li:last-child .card-list-4 {
 }
 @media screen and (max-width: 1200px) {
   .container-builder {
-    max-width: 1030px;
+    max-width: 1110px;
   }
 }
 @media screen and (max-width: 820px) {

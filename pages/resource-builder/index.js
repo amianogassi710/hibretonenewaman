@@ -159,21 +159,21 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item md={6}>
+                                    <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
                                         <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
-                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/8bu1Ltpeiu4" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                            <iframe width="100%" height="400px" src="https://www.youtube.com/embed/8bu1Ltpeiu4" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
                                         </div>
                                     </Grid>
-                                    <Grid item md={6} sx={{ paddingLeft: { md: "75px" } }}>
+                                    <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <div className="grid-content-heading">
                                             Resources for side-hustlers to startups to scaleups...
                                         </div>
-                                        <div className="title-details-builder">
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             <div>
                                                 <p className="builderparatext">
                                                     {showMore1
                                                         ? "A business owner or side-hustle, wanting to be successful in today’s economy will need to understand which resources will substantially grow their business, how to access them in their business model and how to make the most out of them. For startups & many scaleups even knowing these resources exist is often the first challenge."
-                                                        : "A business owner or side-hustle, wanting to be successful in today’s economy will need to understand which resources will substantially grow their business, how to access them in their business model and how to "}
+                                                        : "A business owner or side-hustle, wanting to be successful in today’s economy will need to understand which resources will substantially grow their business, "}
                                                     <button
                                                         className="btn-show-more"
                                                         onClick={() =>
@@ -190,7 +190,7 @@ export default function Index() {
                                                 <p className="builderparatext mt-30">
                                                     {showMore2
                                                         ? "hibretOne works with technology & content Channel Partners throughout the world to continuously bring gamechanging resources to the attention of founders, all through one platform. We were the first Community Interest Company in the UK to use OpenAI’s GPT3 as part of the beta trial."
-                                                        : "hibretOne works with technology & content Channel Partners throughout the world to continuously bring gamechanging resources to the attention of founders, all through one platform. We were the first Community "}
+                                                        : "hibretOne works with technology & content Channel Partners throughout the world to continuously bring gamechanging resources to the attention of "}
                                                     <button
                                                         className="btn-show-more"
                                                         onClick={() =>
@@ -227,15 +227,15 @@ export default function Index() {
                                     sx={{ display: { xs: "none", sm: "flex", md: "none", lg: "none" } }}
                                 >
                                     <Grid item sm={12}>
-                                        <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
-                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/8bu1Ltpeiu4" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
-                                        </div>
-                                    </Grid>
-                                    <Grid item sm={12} sx={{ paddingLeft: { md: "75px" } }}>
                                         <div className="grid-content-heading">
                                             Resources for side-hustlers to startups to scaleups...
                                         </div>
-                                        <div className="title-details-builder">
+                                    </Grid>
+                                    <Grid item sm={12} sx={{ paddingLeft: { md: "75px" } }}>
+                                        <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
+                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/8bu1Ltpeiu4" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                        </div>
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             <div>
                                                 <p className="builderparatext">
                                                     {showMore1
@@ -409,11 +409,11 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item md={6}>
+                                    <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
                                         <div className="grid-content-heading">
                                             ...and All the Business Stages between
                                         </div>
-                                        <div className="title-details-builder">
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             <div>
                                                 <p className="builderparatext">
                                                     {showMore1 ? (
@@ -447,11 +447,12 @@ export default function Index() {
                                             </div>
                                         </div>
                                     </Grid>
-                                    <Grid md={6} sx={{ paddingLeft: { md: "75px" } }}>
+                                    <Grid md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <img
                                             className="imagecontent"
                                             src="assets/imgs/page/resource-builder/andallthebusiness.jpg"
                                             alt="joxBox"
+                                            style={{ height: '400px' }}
                                         />
                                     </Grid>
                                 </Grid>
@@ -655,14 +656,15 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item md={6}>
+                                    <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
                                         <img
                                             className="imagecontent"
                                             src="assets/imgs/page/resource-builder/evidenceledresearch.jpg"
                                             alt="joxBox"
+                                            style={{ height: '400px' }}
                                         />
                                     </Grid>
-                                    <Grid item md={6} sx={{ paddingLeft: { md: "75px" } }}>
+                                    <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <div className="grid-content-heading">
                                             Evidence-led Resources
                                         </div>
@@ -670,7 +672,7 @@ export default function Index() {
                                             <p className="builderparatext">
                                                 {showMore1
                                                     ? <span><strong>Ecosystem Connector:</strong> The Ecosystem Connector creates social capital, building a network of relationships which can provide tangible and intangible resources like office space, equipment, investment, technical expertise, patent advice. With all connections made through one platform.</span>
-                                                    : <span><strong>Ecosystem Connector:</strong> The Ecosystem Connector creates social capital, building a network of relationships which can provide tangible and intangible resources like office space, equipment, investment, </span>}
+                                                    : <span><strong>Ecosystem Connector:</strong> The Ecosystem Connector creates social capital, building a network of relationships which can provide tangible and intangible </span>}
                                                 <button
                                                     className="btn-show-more"
                                                     onClick={() =>
@@ -687,8 +689,7 @@ export default function Index() {
                                             <p className="builderparatext mt-30">
                                                 {showMore2
                                                     ? <span><strong>Industry Intelligence: </strong> More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured, market intelligence in minutes, instead of months. Market intelligence before launch, means emotions can be taken out of your decisions. With the opportunity for business decisions to be made on facts. Let data be your guide, not gut instinct or confirmation bias. </span>
-                                                    : <span><strong>Industry Intelligence: </strong> More than 50% of founders stated they wished they had completed more market research before launching their business. Industry Intelligence enables the gathering of real-time, structured,
-                                                    </span>}
+                                                    : <span><strong>Industry Intelligence: </strong> More than 50% of founders stated they wished they had completed more market research before launching their business. Industry </span>}
                                                 <button
                                                     className="btn-show-more"
                                                     onClick={() =>
@@ -708,15 +709,14 @@ export default function Index() {
                                                         Effective resources developed from the evidence are coordinated & delivered on our platform. New tools are developed every day, some will improve business success, boosting survivability for the 60% of startups failing within 3 years, or the 90% of entrepreneurs who will fail.
                                                     </span>
                                                     : <span><strong>Evidence-led Research:</strong>
-                                                        Effective resources developed from the evidence are coordinated & delivered on our platform. New tools are developed every day, some will improve business success, boosting survivability
-                                                    </span>}<button
-                                                        className="btn-show-more"
-                                                        onClick={() =>
-                                                            setShowMore3(
-                                                                !showMore3
-                                                            )
-                                                        }
-                                                    >
+                                                        Effective resources developed from the evidence are coordinated & delivered on our platform. New tools are developed every day, </span>}<button
+                                                            className="btn-show-more"
+                                                            onClick={() =>
+                                                                setShowMore3(
+                                                                    !showMore3
+                                                                )
+                                                            }
+                                                        >
                                                     {showMore3
                                                         ? "show less"
                                                         : "...more"}
@@ -742,7 +742,7 @@ export default function Index() {
                                             src="assets/imgs/page/resource-builder/evidenceledresearch.jpg"
                                             alt="joxBox"
                                         />
-                                        <div className="title-details-builder">
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             <p className="builderparatext">
                                                 {showMore1
                                                     ? <span><strong>Ecosystem Connector:</strong> The Ecosystem Connector creates social capital, building a network of relationships which can provide tangible and intangible resources like office space, equipment, investment, technical expertise, patent advice. With all connections made through one platform.</span>
@@ -976,18 +976,18 @@ export default function Index() {
                                     style={{ minWidth: "100%" }}
                                     sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                                 >
-                                    <Grid item md={6}>
+                                    <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
                                         <div className="grid-content-heading">
                                             New Resources in Development
                                         </div>
-                                        <div className="title-details-builder">
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             <p className="builderparatext">
                                                 {showMore4
                                                     ? <span><strong>Business Need:</strong>
                                                         Identifying, creating and developing accelerated support tools for founders at all business stages. Future resources helping new and mature ventures to refine business models, develop products/services and scale up effectively.
                                                     </span>
                                                     : <span><strong>Business Need:</strong>
-                                                        Identifying, creating and developing accelerated support tools for founders at all business stages. Future resources helping new and mature ventures to refine business models, develop products/
+                                                        Identifying, creating and developing accelerated support tools for founders at all business stages. Future resources helping new and mature
                                                     </span>}
                                                 <button
                                                     className="btn-show-more"
@@ -1008,7 +1008,7 @@ export default function Index() {
                                                         Identifying, developing and working with software communities, networks of developers and contributors. Providing access to cost-effective, low-risk software solutions to foster innovation which support even the less technically gifted business owner.
                                                     </span>
                                                     : <span><strong>Technology Need:</strong>
-                                                        Identifying, developing and working with software communities, networks of developers and contributors. Providing access to cost-effective, low-risk software solutions to foster innovation
+                                                        Identifying, developing and working with software communities, networks of developers and contributors. Providing access to cost-effective,
                                                     </span>}
                                                 <button
                                                     className="btn-show-more"
@@ -1029,7 +1029,7 @@ export default function Index() {
                                                         Identifying, developing and working with organisations with effective Environmental, Social and Governance (ESG) & Corporate Social Responsibility (CSR) objectives. Ensuring hibretOne continues to scale its ESG/CSR initiatives, contributing to societal well-being beyond our core  activities. Focusing on areas such as environmental sustainability, community development, education, and social justice. Supporting companies engaged in philanthropy, volunteerism, environmental conservation efforts, ethical sourcing practices and partnerships with non-profit organisations.
                                                     </span>
                                                     : <span><strong>Societal Need:</strong>
-                                                        Identifying, developing and working with organisations with effective Environmental, Social and Governance (ESG) & Corporate Social Responsibility (CSR) objectives. Ensuring hibretOne continues
+                                                        Identifying, developing and working with organisations with effective Environmental, Social and Governance (ESG) & Corporate Social
                                                     </span>}<button
                                                         className="btn-show-more"
                                                         onClick={() =>
@@ -1045,11 +1045,12 @@ export default function Index() {
                                             </p>
                                         </div>
                                     </Grid>
-                                    <Grid md={6} sx={{ paddingLeft: { md: "75px" } }}>
+                                    <Grid md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <img
                                             className="imagecontent"
                                             src="assets/imgs/page/resource-builder/newresourcesindevelopment.jpg"
                                             alt="joxBox"
+                                            style={{ height: '400px' }}
                                         />
                                     </Grid>
                                 </Grid>
@@ -1072,7 +1073,7 @@ export default function Index() {
                                         />
                                     </Grid>
                                     <Grid item sm={12}>
-                                        <div className="title-details-builder">
+                                    <div className="title-details-builder mt-20 mt-20-10">
                                             <p className="builderparatext">
                                                 {showMore4
                                                     ? <span><strong>Business Need:</strong>

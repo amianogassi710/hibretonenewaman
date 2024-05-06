@@ -247,7 +247,7 @@ export default function Index() {
                                         </div>
                                     </Grid>
                                     <Grid item sm={12} sx={{ paddingLeft: { md: "75px" } }}>
-                                        <div className="title-details-businessbuilder">
+                                        <div className="title-details-builder mt-20 mt-20-10">
                                             <p className="builderparaheading" style={{ color: "#3C65F5" }}>
                                                 Getting Prepared for Investment
                                             </p>
@@ -766,6 +766,7 @@ export default function Index() {
                                             className="imagecontent"
                                             src="assets/imgs/page/funding-builder/lessoften.jpg"
                                             alt="joxBox"
+                                            style={{ height: '400px' }}
                                         />
                                     </Grid>
                                     <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>

@@ -221,7 +221,7 @@
 
 @media screen and (max-width: 1200px) {
     .support-section-builder {
-        max-width: 467px;
+        max-width: 506px;
     }
 }
 
@@ -270,7 +270,7 @@
 
 @media screen and (max-width: 1180px) {
     .support-card-inner {
-        padding: 16px 26px;
+        padding: 16px 19px;
     }
 }
 
@@ -319,6 +319,12 @@
     font-size: 24px;
 }
 
+@media screen and (max-width:1180px) {
+    .support-card-title {
+        font-size: 22px !important;
+    }
+}
+
 @media screen and (max-width:450px) {
     .support-card-title {
         font-size: 20px !important;
@@ -365,7 +371,7 @@
 
 @media screen and (max-width: 1200px) {
     .container-builder {
-        max-width: 1030px;
+        max-width: 1110px;
     }
 }
 
