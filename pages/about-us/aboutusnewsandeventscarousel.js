@@ -132,7 +132,7 @@ export default function Aboutusnewsandeventscarousel() {
     return (
         <section className="section-box mt-75 mt-75-50">
             <div className="post-loop-grid">
-                <div className="container1">
+                <div className="container2">
                     <div className="text-center">
                         <div className="component-title">
                             News and Events

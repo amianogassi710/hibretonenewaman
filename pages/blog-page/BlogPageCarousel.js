@@ -105,7 +105,7 @@ export default function BlogPageCarousel() {
                         <div className="swiper-wrapper" >
                             {articleData.map((article, index) => (
                                 <div key={index} className="swiper-slide">
-                                    <div className="card-content" style={{ height: '465px', width: '' }}>
+                                    <div className="card-content-blog" style={{ height: '465px', width: '' }}>
                                         <img
                                             loading="lazy"
                                             src={article.image}
@@ -120,10 +120,10 @@ export default function BlogPageCarousel() {
                                             loading="lazy"
                                             src={article.author.authorImage}
                                             alt={`${article.author.author}'s profile picture`}
-                                            className="author-image-blogpage1"
+                                            className="author-image-blogpage"
                                         />
-                                        <div className="swiperdate-blogpage1">{article.author.author}</div>
-                                        <div className="carouseldate-blogpage1">{article.author.date}</div>
+                                        <div className="swiperdate-blogpage">{article.author.author}</div>
+                                        <div className="carouseldate-blogpage">{article.author.date}</div>
 
                                     </div>
                                 </div>

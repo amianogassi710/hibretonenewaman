@@ -86,7 +86,7 @@ export default function Index() {
                                 >
                                     <Grid item lg={6}>
                                         <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
-                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/8xDb8ZgcWF0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
                                         </div>
                                     </Grid>
                                     <Grid
@@ -167,7 +167,7 @@ export default function Index() {
                                 >
                                     <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
                                         <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
-                                            <iframe width="100%" height="400px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                            <iframe width="100%" height="400px" src="https://www.youtube.com/embed/8xDb8ZgcWF0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
                                         </div>
                                     </Grid>
                                     <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>
@@ -243,7 +243,7 @@ export default function Index() {
                                 >
                                     <Grid item sm={12}>
                                         <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
-                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                            <iframe width="100%" height="450px" src="https://www.youtube.com/embed/8xDb8ZgcWF0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
                                         </div>
                                     </Grid>
                                     <Grid item sm={12} sx={{ paddingLeft: { md: "75px" } }}>
@@ -318,7 +318,7 @@ export default function Index() {
                                     sx={{ display: { xs: "flex", sm: "none", md: "none", lg: "none" } }}
                                 >
                                     <Grid item xs={12}>
-                                        <iframe width="100%" height="450px" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
+                                        <iframe width="100%" height="450px" src="https://www.youtube.com/embed/8xDb8ZgcWF0" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                                     </Grid>
                                     <Grid item xs={12}>
                                         <div className="title-details-builder mt-20 mt-20-10">

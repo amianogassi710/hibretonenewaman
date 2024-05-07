@@ -90,7 +90,7 @@ const BlogTrendingNowCaraousel = () => {
                             spaceBetween: 25,
                         },
                     }}
-                    className="swiper-wrapper pb-10 pt-5 swiper-grid-jobobx"
+                    className="swiper-wrapper swiper-grid-jobobx"
                 >
                     {data.map((item, i) => (
                         <SwiperSlide key={i}>
@@ -112,7 +112,7 @@ const BlogTrendingNowCaraousel = () => {
                                                     <div className="blogpage-trendingnow-product-title">{item.title}</div>
                                                 </a>
                                                 <div className="blogpage-trendingnow-product-author">
-                                                    <div className="blogpage-trendingnow-author-name1">{item.author}</div>
+                                                    <div className="blogpage-trendingnow-author-name">{item.author}</div>
                                                 </div>
                                             </div>
                                         </div>

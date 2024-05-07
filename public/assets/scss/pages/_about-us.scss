@@ -28,7 +28,6 @@
   right: -300px;
   border-radius: 25px;
 }
-
 /* Background Blue random Design End */
 
 /* Banner Start */
@@ -49,7 +48,6 @@
   opacity: 0.8;
   background: #05264E;
 }
-
 /* Banner End */
 
 /* Share Icon Start */
@@ -82,7 +80,6 @@
     display: none;
   }
 }
-
 /* Share Icon End */
 
 // Counter Start
@@ -117,67 +114,9 @@
   align-items: center !important;
   justify-content: center !important;
 }
+// Counter End
 
-.aboutusparaheading {
-  font-family: "Plus Jakarta Sans";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-}
-
-.aboutusparatext {
-  color: var(--text-Paragrap-2, var(--text-Paragrap-2, #6C6E70));
-  text-align: justify;
-  font-family: "Plus Jakarta Sans";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 30px;
-}
-
-.counter-text {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.card-grid-4-info-aboutus {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: -25px;
-}
-
-.left-content {
-  margin-right: auto;
-  text-align: left;
-}
-
-.social-share-link {
-  margin-left: 10px;
-}
-
-.meetteamtext {
-  color: var(--text-paragraph, var(--Paragraph-Text, #6C6E70));
-  text-align: center;
-  font-family: "Plus Jakarta Sans";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-}
-
-.positionaboutus {
-  color: var(--text-Paragrap-2, #66789C) !important;
-  text-align: left;
-  font-family: "Plus Jakarta Sans";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 25px;
-  overflow: hidden;
-}
-
+// Meet Our Team Start
 @media screen and (max-width: 1400px) {
   .container1 {
     max-width: 1120px;
@@ -186,7 +125,7 @@
 
 @media screen and (max-width: 1200px) {
   .container1 {
-    max-width: 900px;
+    max-width: 1091px;
   }
 }
 
@@ -229,19 +168,41 @@
   }
 }
 
+.card-grid-4-info-aboutus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -25px;
+}
+
+.left-content {
+  margin-right: auto;
+  text-align: left;
+}
+
 .meetourteamname {
   overflow: hidden;
-
-
   color: var(--brand-brand-1, #05264E);
-
-  /* Heading/H5 */
   font-family: "Plus Jakarta Sans";
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
-  /* 130% */
+}
+
+.positionaboutus {
+  color: var(--text-Paragrap-2, #66789C) !important;
+  text-align: left;
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  overflow: hidden;
+}
+
+.social-share-link {
+  margin-left: 10px;
 }
 
 .social-share-link-aboutus {
@@ -253,25 +214,21 @@
   /* margin-left: 14px; */
 }
 
-.card-list-aboutus {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 20px), 1fr));
-  justify-content: center;
-  gap: 20px;
+.card-grid-4 .image-top-feature {
+  padding-bottom: 10px;
 }
 
-@media (max-width: 760px) {
-  .card-list-aboutus {
-    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr));
-  }
+.meetourteamcard {
+  min-height: 200px;
+  min-width: 237px;
 }
 
-@media (max-width: 450px) {
-  .card-list-aboutus {
-    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 20px), 1fr));
-  }
+.paddingaboutus {
+  padding: 20px 15px 35px 15px;
 }
+// Meet Our Team End
 
+// News and Events Start
 .article-title-aboutus {
   color: var(--brand-brand-1, #05264e);
   align-self: start;
@@ -323,7 +280,7 @@
   margin-right: 10px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .article-title-container {
     height: 60px;
   }
@@ -454,14 +411,14 @@
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1200px) {
   .swiperprevious-aboutus {
-    top: 79%;
+    top: 72%;
     left: 8px;
   }
 
   .swipernext-aboutus {
-    top: 79%;
+    top: 72%;
     right: 8px;
   }
 }
@@ -510,12 +467,12 @@
 
 @media screen and (max-width: 485px) {
   .swiperprevious-aboutus {
-    top: 87%;
+    top: 85%;
     left: 0px;
   }
 
   .swipernext-aboutus {
-    top: 87%;
+    top: 85%;
     right: 0px;
   }
 }
@@ -578,12 +535,12 @@
 
 @media screen and (max-width: 1200px) {
   .swiperprevious-aboutusfull {
-    top: 83%;
+    top: 79%;
     left: 8px;
   }
 
   .swipernext-aboutusfull {
-    top: 83%;
+    top: 79%;
     right: 8px;
   }
 }
@@ -626,83 +583,114 @@
 
 @media screen and (max-width: 450px) {
   .swiperprevious-aboutusfull {
-    top: 93%;
-    left: 5px;
+    top: 91%;
+    left: 1px;
   }
 
   .swipernext-aboutusfull {
-    top: 93%;
-    right: 5px;
+    top: 91%;
+    right: 1px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container2 {
+    max-width: 1120px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container2 {
+    max-width: 900px;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .section-box-meetourteam-aboutus {
-    margin-top: 35px !important;
-  }
-
-  // .section-box-newsandevents-aboutus {
-  //   margin-top: 10px !important;
-  // }
-
-  .mb5 {
-    margin-bottom: 5px;
-  }
-
-
-  .yellowbanner-aboutus {
-    margin-top: 40px !important;
-  }
-
-  .subscription-aboutus {
-    margin-top: -20px !important;
+  .container2 {
+    max-width: 700px;
   }
 }
 
-/* Aboutus Start */
-.card-grid-4 .image-top-feature {
-  padding-bottom: 10px;
-}
-
-.meetourteamcard {
-  min-height: 200px;
-  min-width: 237px;
-}
-
-.paddingaboutus {
-  padding: 20px 15px 35px 15px;
-}
-
-
-.meetourteamheading,
-.newsandeventsheading {
-  color: var(--brand-brand-1, #05264E);
-  text-align: center;
-  font-family: "Plus Jakarta Sans";
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-}
-
-.aboutus-inner-heading {
-  font-size: 40px !important;
-}
-
-@media screen and (max-width:576px) {
-  .aboutus-inner-heading {
-    font-size: 20px !important;
+@media screen and (max-width: 768px) {
+  .container2 {
+    max-width: 480px;
   }
 }
 
-
-// Meet our team
-.section-box-meetourteam-aboutus {
-  margin-top: 75px;
+@media screen and (max-width: 576px) {
+  .container2 {
+    max-width: 450px;
+    padding: 0 25px;
+  }
 }
+
+@media screen and (max-width: 530px) {
+  .container2 {
+    max-width: 420px;
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container2 {
+    max-width: 420px;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container2 {
+    max-width: 1120px;
+  }
+}
+// News and Events End
 
 @media screen and (max-width:576px) {
   .mt-20-0-meetourteam {
     margin-top: 0px !important;
   }
+}
+
+
+
+
+
+.article-category {
+  white-space: initial;
+}
+
+
+
+.article-category {
+  border-radius: 5px;
+  background-color: var(--border-border-2, #e0e6f6);
+  align-self: start;
+  margin-top: 20px;
+  color: var(--brand-brand-2, #3c65f5);
+  white-space: nowrap;
+  padding: 0 10px;
+  font: 500 16px/156% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.author-info {
+  display: flex;
+  gap: 5px;
+}
+
+.article-meta {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+
+.article-meta {
+  display: flex;
+  margin-top: 25px;
+  width: 100%;
+  gap: 20px;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
 }

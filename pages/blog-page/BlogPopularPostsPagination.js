@@ -130,18 +130,18 @@ const BlogPopularPostsPagination = () => {
                             spaceBetween: 25,
                         },
                     }}
-                    className="swiper-wrapper pb-10 pt-5 swiper-grid-jobobx"
+                    className="swiper-wrapper swiper-grid-jobobx"
                 >
                     <div>
                         {firstDivData.map((item, i) => (
                             <SwiperSlide key={i}>
                                 <article className="news-article-card">
-                                    <div className="card-content">
+                                    <div className="card-content-blog-popularpost">
                                         <img
                                             loading="lazy"
                                             src={item.image}
                                             alt="Article featured image"
-                                            className="featured-image"
+                                            className="featured-image-blog-popularpost"
                                         />
                                         <div className="blogpage-article-category">{item.category}</div>
 
@@ -152,7 +152,7 @@ const BlogPopularPostsPagination = () => {
                                         </a>
                                         <p className="blogpage-article-description">{item.description}</p>
                                         <div className="blogpage-article-meta">
-                                            <div className="author-info">
+                                            <div className="author-info-blog-popularpost">
                                                 <img
                                                     loading="lazy"
                                                     src={item.author.image}
@@ -212,7 +212,7 @@ const BlogPopularPostsPagination = () => {
                                             loading="lazy"
                                             src={item.image}
                                             alt="Article featured image"
-                                            className="featured-image"
+                                            className="featured-image-blog-popularpost"
                                         />
                                         <div className="blogpage-article-category">{item.category}</div>
 
@@ -223,7 +223,7 @@ const BlogPopularPostsPagination = () => {
                                         </a>
                                         <p className="blogpage-article-description">{item.description}</p>
                                         <div className="blogpage-article-meta">
-                                            <div className="author-info">
+                                            <div className="author-info-blog-popularpost">
                                                 <img
                                                     loading="lazy"
                                                     src={item.author.image}

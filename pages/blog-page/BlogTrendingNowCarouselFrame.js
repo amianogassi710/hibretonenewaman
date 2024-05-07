@@ -25,7 +25,6 @@ useLockBodyScroll(isOpen);
 
 return (
     <>
-            <div className="section-box wow animate_animated animate_fadeIn">
                 <div className="container blogpage-trendingnowcarousel">
                     <div className="box-swiper blogpage-trendingnowcarousel-swiper">
                         <div>
@@ -35,7 +34,6 @@ return (
                         </div>
                     </div>
                 </div>
-            </div>
     </>
 );
 };

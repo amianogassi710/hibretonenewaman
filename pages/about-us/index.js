@@ -101,7 +101,7 @@ export default function Index() {
                         )}
                     </div>
 
-                    <section className="section-box mt-75 mt-75-40 yellowbanner-aboutus">
+                    <section className="section-box mt-75 mt-75-40">
                         <SubscribeButton />
                     </section>
 

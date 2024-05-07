@@ -122,7 +122,7 @@ export default function Index() {
                         </a>
                         <p className="blogpage-article-description">{articleData1.description}</p>
                         <div className="blogpage-article-meta">
-                            <div className="author-info">
+                            <div className="author-info-blog-popularpost">
                                 <img
                                     loading="lazy"
                                     src={articleData1.author.image}
@@ -155,7 +155,7 @@ export default function Index() {
                         </a>
                         <p className="blogpage-article-description">{articleData2.description}</p>
                         <div className="blogpage-article-meta">
-                            <div className="author-info">
+                            <div className="author-info-blog-popularpost">
                                 <img
                                     loading="lazy"
                                     src={articleData2.author.image}
@@ -188,7 +188,7 @@ export default function Index() {
                         </a>
                         <p className="blogpage-article-description">{articleData3.description}</p>
                         <div className="blogpage-article-meta">
-                            <div className="author-info">
+                            <div className="author-info-blog-popularpost">
                                 <img
                                     loading="lazy"
                                     src={articleData3.author.image}
@@ -221,7 +221,7 @@ export default function Index() {
                         </a>
                         <p className="blogpage-article-description">{articleData4.description}</p>
                         <div className="blogpage-article-meta">
-                            <div className="author-info">
+                            <div className="author-info-blog-popularpost">
                                 <img
                                     loading="lazy"
                                     src={articleData4.author.image}
@@ -254,7 +254,7 @@ export default function Index() {
                         </a>
                         <p className="blogpage-article-description">{articleData5.description}</p>
                         <div className="blogpage-article-meta">
-                            <div className="author-info">
+                            <div className="author-info-blog-popularpost">
                                 <img
                                     loading="lazy"
                                     src={articleData5.author.image}
@@ -287,7 +287,7 @@ export default function Index() {
                         </a>
                         <p className="blogpage-article-description">{articleData6.description}</p>
                         <div className="blogpage-article-meta">
-                            <div className="author-info">
+                            <div className="author-info-blog-popularpost">
                                 <img
                                     loading="lazy"
                                     src={articleData6.author.image}

@@ -12,8 +12,6 @@ import BlogPopularPostsPaginationFrame from './BlogPopularPostsPaginationFrame';
 
 import BlogPopularPostsPaginationBackup from './BlogPopularPostsPaginationBackup';
 
-
-
 export default function Index() {
     useEffect(() => {
         const script = document.createElement("script");
@@ -31,62 +29,57 @@ export default function Index() {
         setCurrentPage(pageNumber);
     }
 
-    
-
     return (
         <>
-        
             <Layout>
-                
                 <div className="background-random-blogpage">
-
                     <div className="box-swiper">
                         <BlogPageHeading />
                     </div>
-                    <div className="section-box mt-75 wow animate__animated animate__fadeIn">
+                    <section className="section-box mt-75 mt-75-50">
                         <div className="container" >
                             <BlogPageCarousel />
                         </div>
-                    </div>
+                    </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-50">
                         <YellowBanner />
                     </section>
 
-                    <section className="section-box mt-100">
+                    <section className="section-box mt-75 mt-75-50">
                         <div className="container">
                             <div className="flex-container">
                                 <div className="text-center">
-                                    <h2 className="section-title mb-10">
+                                    <div className="component-title">
                                         Trending Now
-                                    </h2>
-                                    <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
+                                    </div>
+                                    <div className="component-subtitle">
                                         Don't miss the trending news
-                                    </p>
+                                    </div>
                                 </div>
-                                <div className="mt-30">
+                                <section className="section-box mt-40 mt-40-20">
                                     <BlogTrendingNowCarouselFrame />
-                                </div>
+                                </section>
 
                             </div>
                         </div>
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-100-grid mt-100-50 mt-100-30-grid">
                         <div className="container">
                             <div className="flex-container">
                                 <div className="text-center">
-                                    <h2 className="section-title mb-10">
+                                    <div className="component-title">
                                         Popular Posts
-                                    </h2>
-                                    <p className="font-lg fw-bold color-text-paragraph w-lg-50 mx-auto">
+                                    </div>
+                                    <div className="component-subtitle">
                                         Don't miss the trending news
-                                    </p>
+                                    </div>
                                 </div>
                                 {/* <div className="mt-30">
                                     <BlogPopularPostsPaginationBackup />
                                 </div> */}
-                                <div className="mt-30">
+                                <div className="mt-30 mt-30-10">
                                     <BlogPopularPostsPaginationFrame />
                                 </div>
                             </div>
@@ -98,7 +91,7 @@ export default function Index() {
                     </section>
 
                     <section className="section-box mt-75">
-                            <KickstartButton />
+                        <KickstartButton />
                     </section>
                     <Subscription />
                 </div>

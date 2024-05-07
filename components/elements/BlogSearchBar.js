@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Autocomplete, TextField } from "@mui/material";
 import { useRouter } from 'next/router';
-import { IoSearchSharp } from "react-icons/io5";  
+import { IoSearchSharp } from "react-icons/io5";
 import { CiLocationOn } from "react-icons/ci";
 
 
@@ -62,56 +62,52 @@ const BlogSearchBar = () => {
                 <form>
                     <div style={{ width: '100%' }}>
                         {isBelow768px ? (
-
                             <input
                                 className="blog-one"
                                 type="text"
                                 placeholder="Enter name of blog, article or the insight you require"
-                                style={{ marginTop: "5px" }}
                             />
                         ) : (
                             <input
                                 className="blog-one"
                                 type="text"
                                 placeholder="Enter name of blog, article or the insight you require"
-                                style={{ marginTop: "5px" }}
                             />
                         )}
-
                     </div>
-
-                    <div className="divider"></div>
-                    <CiLocationOn className="blogpage-searchbar-searchicon" />
-                    <Autocomplete
-                        clearOnEscape
-                        options={locations}
-                        renderInput={(params) => (    
-                            <TextField
-                                sx={{
-                                    border: "none !important",
-                                    "&:focus": {
+                    <div className="divider-blog"></div>
+                    <div className="searchbox-location"><CiLocationOn className="blogpage-searchbar-icon" />
+                        <Autocomplete
+                            clearOnEscape
+                            options={locations}
+                            renderInput={(params) => (
+                                <TextField
+                                    sx={{
                                         border: "none !important",
-                                    },
-                                    "& .MuiInputBase-input": {
-                                        border: "none !important",
-                                        height: "auto",
-                                        width: "auto !important",
-                                    },
+                                        "&:focus": {
+                                            border: "none !important",
+                                        },
+                                        "& .MuiInputBase-input": {
+                                            border: "none !important",
+                                            height: "auto",
+                                            width: "auto !important",
+                                        },
 
-                                }}
-                                {...params}
-                                label="City, region or country"
-                                variant="standard"
-                                InputProps={{
-                                    ...params.InputProps,
-                                    disableUnderline: true,
-                                }}
-                            />
-                        )}
-                        className="blog-two"
-                    />
-                    
-                    <button onClick={handleSearch} className="blog-btn-search"><IoSearchSharp className="blogpage-searchbox-searchicon"/> SEARCH</button>
+                                    }}
+                                    {...params}
+                                    label="City, region or country"
+                                    className="location-blog"
+                                    variant="standard"
+                                    InputProps={{
+                                        ...params.InputProps,
+                                        disableUnderline: true,
+                                    }}
+                                />
+                            )}
+                            className="blog-two"
+                        />
+                    </div>
+                    <button onClick={handleSearch} className="blog-btn-search"><IoSearchSharp className="blogpage-searchbox-searchicon" /> SEARCH</button>
                 </form>
             </div>
         </>

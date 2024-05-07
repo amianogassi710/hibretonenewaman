@@ -13,7 +13,7 @@ export default function Aboutusmeetourteam() {
                             </div>
                         </div>
                         <div className="row mt-40 mt-40-30">
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
+                            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
@@ -30,7 +30,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
+                            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
@@ -47,7 +47,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
+                            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
@@ -64,7 +64,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
+                            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
@@ -81,7 +81,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
+                            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
@@ -98,7 +98,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
+                            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
@@ -115,7 +115,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
+                            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
@@ -132,7 +132,7 @@ export default function Aboutusmeetourteam() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
+                            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb5 meetourteamcard">
                                 <div className="card-grid-4 text-center hover-up paddingaboutus">
                                     <div className="image-top-feature">
                                         <figure>
