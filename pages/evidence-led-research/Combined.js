@@ -98,6 +98,9 @@ const Combined = () => {
 
     const [carouselTrue, setCarouselTrue] = useState(false);
 
+    const [readMore3, setReadMore3] = useState(false);
+
+
     useEffect(() => {
         if (swiperRef.current !== null) {
             const mySwiper = new Swiper(swiperRef.current, {
@@ -316,7 +319,6 @@ const Combined = () => {
                                             className="blog-one"
                                             type="text"
                                             placeholder="Enter name of report, article, research or subject"
-                                            style={{ marginTop: "5px" }}
                                             value={searchText}
                                             // onChange={(e) => setSearchText(e.target.value)}
                                             onChange={handleInputChange}
@@ -428,12 +430,12 @@ const Combined = () => {
                                 container
                                 alignItems="center"
                                 style={{ minWidth: "100%" }}
-                                sx={{ display: { xs: "none", md: "none", lg: "flex" } }}
+                                sx={{ display: { xs: "none", sm: "none", md: "none", lg: "flex" } }}
                             >
                                 <Grid item lg={6} sx={{ paddingRight: { lg: "75px" } }}>
-                                    <h2 className="" style={{ marginBottom: "40px", fontSize: "36px !important" }}>
+                                    <div className="grid-content-heading">
                                         Academic Research meets Action
-                                    </h2>
+                                    </div>
                                     <div className="title-details-builder">
                                         <div>
                                             <p className="builderparatext">
@@ -458,19 +460,103 @@ const Combined = () => {
                                 container
                                 alignItems="center"
                                 style={{ minWidth: "100%" }}
-                                sx={{ display: { xs: "flex", md: "flex", lg: "none" } }}
+                                sx={{ display: { xs: "none", sm: "none", md: "flex", lg: "none" } }}
                             >
-                                <Grid item xs={12} md={12}>
+                                <Grid item md={6} sx={{ paddingRight: { md: "30px" } }}>
+                                    <div className="grid-content-heading">
+                                        Academic Research meets Action
+                                    </div>
+                                    <div className="title-details-builder mt-20 mt-20-10">
+                                        {readMore3 ? (
+                                            <div>
+                                                <p className="builderparatext">
+                                                    <strong> hibertOne working with research partners, is able to convert theory into practise to generate results for the economy.. </strong>
+                                                </p>
+                                                <p className="builderparatext mt-30">
+                                                    Academic research created  by researchers, very often does not translate into actionable, measurable outcomes. Papers are written as part of a dissertation, because funding is available, or to appear as if  action is being taken. hibretOne takes a different approach and supports report authors to ensure their recommendations become a blurprint for economic success.
+                                                </p>
+                                                <p className="builderparatext mt-30">
+                                                    Watch the video to understand the purpose of levelling-up. It’s not about driving the advantaged down, it’s using the research as evidence of the need to create opportunities for all.
+                                                </p>
+                                            </div>
+                                        ) : (
+                                            <div>
+                                                <p className="builderparatext">
+                                                    <strong> hibertOne working with research partners, is able to convert theory into practise to generate results for the economy.. </strong>
+                                                </p>
+                                                <p className="builderparatext mt-30">
+                                                    Academic research created  by researchers, very often does not translate into actionable, measurable outcomes. Papers are written as part of a dissertation, because funding is available, or to appear as if  action is being taken.
+                                                </p>
+                                            </div>
+                                        )}
+                                        <span className="btn-show-more"
+                                            onClick={() =>
+                                                setReadMore3(
+                                                    !readMore3
+                                                )
+                                            }
+                                        >
+                                            <div className="mt-20 mt-20-10">
+                                                {readMore3 ? <button className="btn btn-default fs-6">Show Less </button> : <button className="btn btn-default fs-6">Read More</button>}
+                                            </div>
+                                        </span>
+                                    </div>
+                                </Grid>
+                                <Grid md={6} sx={{ paddingLeft: { md: "30px" } }}>
+                                    <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
+                                        <iframe width="100%" height="400px" src="https://www.youtube.com/embed/71KXmZcHi24" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                    </div>
+                                </Grid>
+                            </Grid>
+                            <Grid
+                                container
+                                alignItems="center"
+                                style={{ minWidth: "100%" }}
+                                sx={{ display: { xs: "none", sm: "flex", md: "none", lg: "none" } }}
+                            >
+                                <Grid item sm={12}>
                                     <div className="grid-content-heading">
                                         Academic Research meets Action
                                     </div>
                                 </Grid>
-                                <Grid item xs={12} md={12}>
+                                <Grid item sm={12}>
+                                    <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
+                                        <iframe width="100%" height="450px" src="https://www.youtube.com/embed/71KXmZcHi24" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
+                                    </div>
+                                </Grid>
+                                <Grid item sm={12}>
+                                    <div className="title-details-builder mt-20 mt-20-10">
+                                        <div>
+                                            <p className="builderparatext">
+                                                <strong> hibertOne working with research partners, is able to convert theory into practise to generate results for the economy.. </strong>
+                                            </p>
+                                            <p className="builderparatext mt-10">
+                                                Academic research created  by researchers, very often does not translate into actionable, measurable outcomes. Papers are written as part of a dissertation, because funding is available, or to appear as if  action is being taken. hibretOne takes a different approach and supports report authors to ensure their recommendations become a blurprint for economic success.
+                                            </p>
+                                            <p className="builderparatext mt-10">
+                                                Watch the video to understand the purpose of levelling-up. It’s not about driving the advantaged down, it’s using the research as evidence of the need to create opportunities for all.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </Grid>
+                            </Grid>
+                            <Grid
+                                container
+                                alignItems="center"
+                                style={{ minWidth: "100%" }}
+                                sx={{ display: { xs: "flex", sm: "none", md: "none", lg: "none" } }}
+                            >
+                                <Grid item xs={12}>
+                                    <div className="grid-content-heading">
+                                        Academic Research meets Action
+                                    </div>
+                                </Grid>
+                                <Grid item xs={12}>
                                     <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
                                         <iframe width="100%" height="450px" src="https://www.youtube.com/embed/71KXmZcHi24" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }} className="builder-video"></iframe>
                                     </div>
                                 </Grid>
-                                <Grid item xs={12} md={12}>
+                                <Grid item xs={12}>
                                     <div className="title-details-builder mt-20 mt-20-10">
                                         <div>
                                             <p className="builderparatext">

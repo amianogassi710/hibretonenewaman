@@ -130,12 +130,6 @@
     align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-    .banner-hero-evidenceledresearch-searchbar {
-        padding: 0px;
-    }
-}
-
 .banner-hero-evidenceledresearch-searchbar .block-banner-evidenceled .evidenceled-form-find-top {
     background: #ffffff;
     padding: 8px 8px;
@@ -152,27 +146,13 @@
 .evidenceled-form-find-top form .blog-one {
     height: 50px;
     box-shadow: none;
-    padding-left: 20px;
+    padding-left: 10px;
     font-size: 16px;
     border: none;
-    margin-left: 1px;
     width: 550px;
 }
 
 .evidenceled-form-find-top form .blog-one::placeholder {
-    color: #6B6B6B;
-}
-
-.evidenceled-form-find-top form .blog-two {
-    height: 50px;
-    box-shadow: none;
-    padding-left: 10px;
-    font-size: 16px;
-    border: none;
-    width: 350px;
-}
-
-.evidenceled-form-find-top form .blog-two::placeholder {
     color: #6B6B6B;
 }
 
@@ -184,7 +164,7 @@
     width: 20%;
     height: auto;
     font-size: 16px;
-    // margin-left: 25px;
+    margin-left: -100px;
 }
 
 .evidenceled-btn-search:hover {
@@ -193,51 +173,16 @@
     transition: 0.2s;
 }
 
-.divider {
-    width: 1px;
-    height: 55px;
-    background-color: rgba(180, 192, 237, 0.6);
-    margin-left: 35px;
-}
-
-@media screen and (max-width: 420px) {
-    .banner-hero-evidenceledresearch-searchbar .block-banner-evidenceled .evidenceled-form-find-top {
-        padding: 10px 5px 10px 5px !important;
-        margin: 0 -10px !important;
-    }
-}
-
-.evidenceled-searchbar-searchicon {
-    margin-top: 10px;
-    width: 50px;
-    margin-left: 10px;
-    height: auto;
-}
-
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 576px) {
     .block-banner-evidenceled {
         width: 650px;
     }
-
-    .banner-hero-evidenceledresearch-searchbar .block-banner-evidenceled .evidenceled-form-find-top {
-        padding: 20px;
-    }
-
     .banner-hero-evidenceledresearch-searchbar .block-banner-evidenceled .evidenceled-form-find-top form {
         display: flex;
         flex-wrap: wrap;
     }
-
-    .btn-search {
-        background-color: #229A24;
-        color: #ffffff;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        padding: 8px 12px;
-        margin-top: 20px;
-        margin-left: 20px;
-        width: auto;
+    .banner-hero-evidenceledresearch-searchbar .block-banner-evidenceled .evidenceled-form-find-top {
+        padding: 20px;
     }
 
     .evidenceled-btn-search {
@@ -247,8 +192,10 @@
         margin-left: 0px;
     }
 
-    .divider {
-        display: none;
+    
+
+    .searchbox-searchicon-evidenceled {
+        margin-top: -3px !important;
     }
 
     .evidenceled-form-find-top form .blog-one,
@@ -257,26 +204,13 @@
         padding-left: 0px;
     }
 
-    .evidenceled-form-find-top form .blog-two {
-        margin-left: 35px;
-    }
-
-    .evidenceled-searchbar-searchicon {
-        position: absolute;
-        margin-top: 72px !important;
-        width: 30px !important;
-        margin-left: -5px !important;
-    }
-
-    .searchbox-searchicon-evidenceled {
-        margin-top: -3px !important;
-    }
 }
 
-@media screen and (max-width: 768px) {
-    .block-banner-evidenceled {
-        width: 550px;
-        padding: 0 25px;
+
+@media screen and (max-width: 420px) {
+    .banner-hero-evidenceledresearch-searchbar .block-banner-evidenceled .evidenceled-form-find-top {
+        padding: 10px 5px 10px 5px !important;
+        margin: 0 -10px !important;
     }
 }
 
@@ -290,42 +224,22 @@
         padding-right: 10px;
     }
 
-    .evidenceled-form-find-top form .blog-two {
-        padding-left: 12px;
-        padding-right: 10px;
-    }
-
     .evidenceled-btn-search {
         margin: 0 20px;
-    }
-
-    .evidenceled-searchbar-searchicon {
-        margin-top: 72px !important;
-        width: 30px !important;
-        margin-left: 13px !important;
     }
 }
 
 @media screen and (max-width: 450px) {
 
-    .evidenceled-form-find-top form .blog-one,
-    .evidenceled-form-find-top form .blog-two {
+    .evidenceled-form-find-top form .blog-one {
         padding-left: 10px;
     }
 
-    .evidenceled-form-find-top form .blog-two {
-        padding-left: 10px;
-    }
 
     .evidenceled-btn-search {
         margin: 0 20px 0 10px;
     }
 
-    .evidenceled-searchbar-searchicon {
-        margin-top: 72px !important;
-        width: 30px !important;
-        margin-left: 6px !important;
-    }
 }
 
 @media screen and (max-width: 435px) {
@@ -344,8 +258,7 @@
 
 @media screen and (max-width: 410px) {
 
-    .evidenceled-form-find-top form .blog-one,
-    .evidenceled-form-find-top form .blog-two {
+    .evidenceled-form-find-top form .blog-one {
         padding-left: 0px;
     }
 
