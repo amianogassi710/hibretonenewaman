@@ -200,7 +200,7 @@ const BlogPopularPostsPagination = () => {
                             spaceBetween: 25,
                         },
                     }}
-                    className="swiper-wrapper pb-10 pt-5 swiper-grid-jobobx"
+                    className="swiper-wrapper mt-30 swiper-grid-jobobx"
                 >
                     <div>
                         {secondDivData.map((item, i) => (

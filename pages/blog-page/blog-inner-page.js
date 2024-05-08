@@ -15,8 +15,8 @@ export default function BlogInnerPage() {
                             <div className="col">
                                 <div>
                                     <img src="../assets/imgs/page/blog-page/BlogHero1.jpg" />
-                                    <div style={{ position: 'absolute', top: '20%', left: '6.7%' }}>
-                                        <div className="builder-hero-heading">Blog</div>
+                                    <div className="container-inside-blog-innerpage">
+                                        <div className="builder-hero-heading hero-heading-blog-innerpage">Blog</div>
                                         <div className="builder-hero-subheading">Get the latest news, updates and tips</div>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@ export default function BlogInnerPage() {
                             </div>
                         </div>
                     </section>
-                    <div className="post-loop-grid mt-50 mt-50-0-blog-innerpage mb-75">
+                    <div className="post-loop-grid mt-20 mt-50-0-blog-innerpage">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-10 mx-auto">
@@ -189,7 +189,7 @@ export default function BlogInnerPage() {
                                                         <div className="bloginnerpage-author-bio mt-40 bg-white">
                                                             <div style={{ display: 'flex' }}>
                                                                 <div className="author-image-blog-innerpage">
-                                                                    <img className="avatar" src="../assets/imgs/page/blog-page/user3.png" alt />
+                                                                    <img className="avatar" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ca475068597a1602a643de41b14d0f7f1b6352a0bf5ecf56adb9eafa9bd51705?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&" alt />
                                                                 </div>
                                                                 <div className="author-information">
                                                                     <div className="comments-author-name">Robert Fox</div>
@@ -207,7 +207,7 @@ export default function BlogInnerPage() {
                                                                 <div className="author-image-blog-innerpage">
                                                                     <Link legacyBehavior href="/author">
                                                                         <a>
-                                                                            <img className="avatar" src="../assets/imgs/page/blog-page/user3.png" alt />
+                                                                            <img className="avatar" src="https://cdn.builder.io/api/v1/image/assets/TEMP/57a4bb143c08751ee435e97385940bdc02196fce2c6cf2790205bbb28ba39485?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&" alt />
                                                                         </a>
                                                                     </Link>
                                                                 </div>
@@ -227,7 +227,7 @@ export default function BlogInnerPage() {
                                                                         <div className="author-image-blog-innerpage">
                                                                             <Link legacyBehavior href="">
                                                                                 <a>
-                                                                                    <img className="avatar" src="../assets/imgs/page/blog-page/user3.png" alt />
+                                                                                    <img className="avatar" src="https://cdn.builder.io/api/v1/image/assets/TEMP/af6f6b8acd8a04895515b177d473a214d43400a02f27050dc28808dd784c43c1?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&" alt />
                                                                                 </a>
                                                                             </Link>
                                                                         </div>
@@ -253,7 +253,7 @@ export default function BlogInnerPage() {
                                                                 <textarea className="input-comment" placeholder="Write a comment" defaultValue={""} />
                                                             </div>
                                                             <div className="row">
-                                                                <div className="col-lg-7 col-md-7 col-sm-7 mb-30">
+                                                                <div className="col-lg-7 col-md-7 col-sm-7">
                                                                     <div className="box-agree">
                                                                         <input className="chkbox-aggree" type="checkbox" />
                                                                         <span className="bloginnerpage-comment-form-save">Save my name, email, and website in this browser for the next time I comment.</span>
@@ -275,7 +275,9 @@ export default function BlogInnerPage() {
                             </div>
                         </div>
                     </div>
-                    <KickstartButton />
+                    <section className="section-box mt-75 mt-75-40">
+                        <KickstartButton />
+                    </section>
                     <Subscription />
                 </div>
             </Layout >

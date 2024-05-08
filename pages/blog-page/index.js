@@ -83,14 +83,14 @@ export default function Index() {
                                     <BlogPopularPostsPaginationFrame />
                                 </div>
                             </div>
-                            <section className="section-box mt-60"  >
+                            <section className="section-box mt-50 mt-50-30"  >
                                 <CustomPagination currentPage={currentPage} totalPages={10} onPageChange={handlePageChange} setCurrentPage={setCurrentPage} />
                             </section>
                         </div>
 
                     </section>
 
-                    <section className="section-box mt-75">
+                    <section className="section-box mt-75 mt-75-40">
                         <KickstartButton />
                     </section>
                     <Subscription />
