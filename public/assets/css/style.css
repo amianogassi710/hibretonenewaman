@@ -11066,7 +11066,7 @@ ul li:last-child .card-list-4 {
 }
 .swiperprevious-aboutus {
   position: absolute;
-  top: 72%;
+  top: 71%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -11076,7 +11076,7 @@ ul li:last-child .card-list-4 {
 
 .swipernext-aboutus {
   position: absolute;
-  top: 72%;
+  top: 71%;
   transform: translateY(-50%);
   width: 50px;
   height: 50px;
@@ -11130,11 +11130,11 @@ ul li:last-child .card-list-4 {
 }
 @media screen and (max-width: 992px) {
   .swiperprevious-aboutus {
-    top: 80%;
+    top: 79%;
     left: 5px;
   }
   .swipernext-aboutus {
-    top: 80%;
+    top: 79%;
     right: 5px;
   }
 }
@@ -11156,11 +11156,11 @@ ul li:last-child .card-list-4 {
 }
 @media screen and (max-width: 485px) {
   .swiperprevious-aboutus {
-    top: 85%;
+    top: 84%;
     left: 0px;
   }
   .swipernext-aboutus {
-    top: 85%;
+    top: 84%;
     right: 0px;
   }
 }
