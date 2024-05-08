@@ -9228,6 +9228,24 @@ ul li:last-child .card-list-4 {
   }
 }
 /* Share Icon End */
+.bg-img-blog {
+  height: 30vh;
+  background: url(../imgs/page/blog-page/BlogHero1.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.bg-img-blog::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  background: #05264E;
+}
+
 .banner-hero-blogpage {
   display: flex;
   justify-content: center;
@@ -9679,6 +9697,21 @@ ul li:last-child .card-list-4 {
   }
 }
 /* Blog Trending Now Start */
+.box-swiper .swiper-container {
+  position: relative;
+}
+.box-swiper .swiper-container .blogpage-item-logo img {
+  max-width: 100%;
+}
+.box-swiper .swiper-container .blogpage-item-logo:hover {
+  border: 1px solid #B4C0E0;
+  box-shadow: 0px 10px 20px -5px rgba(10, 42, 105, 0.06);
+}
+.box-swiper .swiper-button-next:after,
+.box-swiper .swiper-button-prev:after {
+  content: "";
+}
+
 .product-image-container {
   display: flex;
   gap: 5px;
@@ -10347,6 +10380,10 @@ ul li:last-child .card-list-4 {
   padding: 50px 0px 0px 0px;
 }
 
+.image-borderradius {
+  border-radius: 16px;
+}
+
 .max-width-single {
   max-width: 733px;
   width: 100%;
@@ -10447,6 +10484,18 @@ ul li:last-child .card-list-4 {
   line-height: 30px;
 }
 
+.keywords-bloginnerpage {
+  color: var(--brand-brand-1, #05264E);
+  font-family: "Plus Jakarta Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  padding: 12px 20px;
+  background: #EFF2FB;
+  border-radius: 8px;
+}
+
 .show-bullet {
   list-style: disc !important;
 }
@@ -10460,6 +10509,20 @@ ul li:last-child .card-list-4 {
   line-height: normal;
 }
 
+.list-comments {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.list-comments li ul li {
+  padding-left: 45px;
+}
+
+@media screen and (max-width: 576px) {
+  .list-comments li ul li {
+    padding-left: 0px !important;
+  }
+}
 .bloginnerpage-author-bio {
   border-radius: 0px;
   border: 0px solid #E0E6F6;
@@ -10542,15 +10605,6 @@ ul li:last-child .card-list-4 {
     margin-top: 0px;
   }
 }
-.list-comments {
-  padding-left: 0px;
-  margin-bottom: 0px;
-}
-
-.list-comments li ul li {
-  padding-left: 45px;
-}
-
 .leave-comment-blog-innerpage {
   color: var(--brand-brand-1, #05264E);
   font-family: "Plus Jakarta Sans";
@@ -10593,35 +10647,7 @@ ul li:last-child .card-list-4 {
   line-height: 30px;
 }
 
-/* Blog Ends */
-/* Blog Hero Image  */
-.bg-img-blog {
-  height: 30vh;
-  background: url(../imgs/page/blog-page/BlogHero1.jpg) no-repeat center center;
-  background-size: cover;
-}
-
-.bg-img-blog::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-  background: #05264E;
-}
-
 /* Blog Inner Page Finish */
-/* blogpage */
-.author-info-container-blogpage {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
 .mr-15 {
   margin-right: 15px;
 }
@@ -10656,71 +10682,6 @@ ul li:last-child .card-list-4 {
 
 .pl-30 {
   padding-left: 30px;
-}
-
-.image-borderradius {
-  border-radius: 16px;
-}
-
-.keywords-bloginnerpage {
-  color: var(--brand-brand-1, #05264E);
-  font-family: "Plus Jakarta Sans";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 25px;
-  padding: 12px 20px;
-  background: #EFF2FB;
-  border-radius: 8px;
-}
-
-@media screen and (max-width: 576px) {
-  .list-comments li ul li {
-    padding-left: 0px !important;
-  }
-}
-.author span {
-  color: #253D4E;
-}
-
-.img-middle {
-  float: left;
-  margin-top: 2px;
-}
-
-.box-swiper .swiper-container {
-  position: relative;
-}
-.box-swiper .swiper-container .blogpage-item-logo {
-  border: 1px solid rgba(6, 18, 36, 0.1);
-  padding: 10px;
-  display: flex;
-  width: 100%;
-  text-align: left;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  background-color: #ffffff;
-  flex-wrap: wrap;
-}
-.box-swiper .swiper-container .blogpage-item-logo img {
-  max-width: 100%;
-}
-.box-swiper .swiper-container .blogpage-item-logo:hover {
-  border: 1px solid #B4C0E0;
-  box-shadow: 0px 10px 20px -5px rgba(10, 42, 105, 0.06);
-}
-.box-swiper .swiper-container .blogpage-item-logo .image-left {
-  min-width: 50px;
-  padding-right: 10px;
-}
-.box-swiper .swiper-container .blogpage-item-logo .text-info-right h4 {
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 3px;
-}
-.box-swiper .swiper-button-next:after,
-.box-swiper .swiper-button-prev:after {
-  content: "";
 }
 
 .css-p1olib-MuiAutocomplete-endAdornment {
