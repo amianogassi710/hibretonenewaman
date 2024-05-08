@@ -191,30 +191,6 @@ const Combined = () => {
         setFilteredArticles(filtered);
     }, [searchText, articleData, slidesPerView]);
 
-    // const handleInputChange = (event) => {
-    //     setSearchText(event.target.value);
-    //     console.log('Matched Results Count is a :', event.target.value);
-
-
-    //     const searchText = event.target.value;
-
-    //     // Construct the query string with the value
-    //     const queryString = `searchText=${encodeURIComponent(event.target.value)}`;
-
-    //     // Append the query string to the current URL without navigating away
-    //     const currentUrl = window.location.pathname + '?' + queryString;
-    //     console.log('New URL:', currentUrl);
-
-    //     history.pushState({ searchText }, '', currentUrl);
-
-
-
-
-    //     return (
-    //         <input type="text" onChange={handleInputChange} />
-    //     );
-    // };
-
     const handleInputChange = (event) => {
         setSearchText(event.target.value);
         setCarouselTrue(event.target.value !== ''); // Set carouselTrue based on whether the search text is empty or not
@@ -222,7 +198,6 @@ const Combined = () => {
 
     const handleSearch = (event) => {
         event.preventDefault(); // Prevent form submission
-        // router.push("#");
 
         const queryParams = searchText ? `search=${encodeURIComponent(searchText)}` : '';
         router.push(`/evidence-led-research/?${queryParams}`);
@@ -502,7 +477,7 @@ const Combined = () => {
                                         </span>
                                     </div>
                                 </Grid>
-                                <Grid md={6} sx={{ paddingLeft: { md: "30px" } }}>
+                                <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                     <div className='grid__thumb w-img fix grid_thumb_height grid_thumb' style={{ aspectRatio: '0' }}>
                                         <iframe width="100%" height="400px" src="https://www.youtube.com/embed/71KXmZcHi24" allowFullScreen style={{ border: '1px solid #ccc', borderRadius: '16px' }}></iframe>
                                     </div>

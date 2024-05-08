@@ -85,7 +85,7 @@ export default function Index() {
                             <div>
                                 <Aboutusmeetourteam />
                                 <div className="mt-20 mt-20-0-meetourteam" style={{ textAlign: 'center' }}>
-                                    <button onClick={handleMeetOurTeamClick} class="btn btn-default fs-6">Show More</button>
+                                    <button onClick={handleMeetOurTeamClick} className="btn btn-default fs-6">Show More</button>
                                 </div>
                                 <Aboutusnewsandeventscarousel />
                             </div>
@@ -94,7 +94,7 @@ export default function Index() {
                         {showFullTeam && (
                             <div>
                                 <div className="mt-20 mt-20-0-meetourteam" style={{ textAlign: 'center' }}>
-                                    <button onClick={handleShowLessClick} class="btn btn-default fs-6">Show Less</button>
+                                    <button onClick={handleShowLessClick} className="btn btn-default fs-6">Show Less</button>
                                 </div>
                                 <Aboutusnewsandeventscarouselfull />
                             </div>

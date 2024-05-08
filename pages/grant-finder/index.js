@@ -10,6 +10,7 @@ import KickstartButton from "../../components/elements/KickstartButton";
 import TestimonialSliderHomePage from "./../../components/sliders/TestimonialHomepage";
 import Subscription from "../../components/Layout/Subscription";
 import GrantFinderSearchBox from "./../../components/elements/GrantFinderSearchBox";
+import GrantFinderSearchBoxWithAI from "./../../components/elements/GrantFinderSearchBoxWithAI";
 import dynamic from "next/dynamic";
 import { Grid } from "@mui/material";
 import { Link as MUILink } from "@mui/material";
@@ -115,6 +116,7 @@ export default function Index2() {
                                         </div>
                                     </div>
                                     <GrantFinderSearchBox />
+                                    <GrantFinderSearchBoxWithAI />
                                 </div>
                             </div>
                         </div>
@@ -186,7 +188,7 @@ export default function Index2() {
                                             frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen
+                                            allowFullScreen
                                         ></iframe>
                                     </Grid>
                                     <Grid
@@ -258,7 +260,7 @@ export default function Index2() {
                                             frameborder="0"
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             referrerpolicy="strict-origin-when-cross-origin"
-                                            allowfullscreen
+                                            allowFullScreen
                                         ></iframe>
                                     </Grid>
                                     <Grid item xs={12} md={12}>

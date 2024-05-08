@@ -18,7 +18,7 @@ export default function OnlineCourseVideo() {
                                    
         
                                     <div className="about__thumb-1 text-end"style={{marginTop:'8px',marginLeft:'120px',height:'100px',width:'350px'}}>
-                                        <iframe width="560" height="215" src="https://www.youtube.com/embed/XPf1kLnJpio" frameborder="0" allowfullscreen></iframe>
+                                        <iframe width="560" height="215" src="https://www.youtube.com/embed/XPf1kLnJpio" frameborder="0" allowFullScreen></iframe>
                                     </div>
                                     <div style={{marginTop:'-100px',marginLeft:'-50px'}}>
                                         <img  className="online-video-section-image-six" src="../assets/imgs/page/online-courses/image5.jpg" alt=""/>
@@ -87,7 +87,7 @@ export default function OnlineCourseVideo() {
           <img src="../assets/imgs/page/online-courses/image8.jpg" alt="" style={{ height: '180px', width: '240px' }} />
         </div>
         <div className="" style={{ marginTop: '8px', marginLeft: '120px', height: '100px', width: '300px' }}>
-          <iframe width="560" height="215" src="https://www.youtube.com/embed/XPf1kLnJpio" frameborder="0" allowfullscreen></iframe>
+          <iframe width="560" height="215" src="https://www.youtube.com/embed/XPf1kLnJpio" frameborder="0" allowFullScreen></iframe>
         </div>
         <div className="" style={{ marginTop: '-100px', marginLeft: '-15px' }}>
           <img src="../assets/imgs/page/online-courses/image5.jpg" alt="" style={{ height: '190px', width: '120px' }} />
@@ -135,7 +135,7 @@ export default function OnlineCourseVideo() {
   </Grid>
   <Grid item xs={12} md={12} style={{ marginTop: '60px' }}>
   <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-                                <iframe width="" height="100%" src="https://www.youtube.com/embed/XPf1kLnJpio" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="" height="100%" src="https://www.youtube.com/embed/XPf1kLnJpio" frameborder="0" allowFullScreen></iframe>
                             </div>
   </Grid>
   <Grid item xs={12} md={12} style={{ marginTop: '40px' }}>

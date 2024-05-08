@@ -6,6 +6,10 @@ import ComingSoon from '../../components/elements/ComingSoon';
 import { useRouter } from "next/router";
 import axios from "axios";
 import IndustryIntelligenceTopBusinessIdea from "./Database";
+import { IoShareSocialOutline } from "react-icons/io5";
+import FullAccessButton from "../../components/elements/FullAccessButton";
+import { TextField } from "@mui/material";
+import { IoSearchSharp } from "react-icons/io5";
 
 function useLockBodyScroll(open) {
     useEffect(() => {
@@ -66,13 +70,7 @@ export default function InnerPage() {
                 formData
             );
             setResponseData(response.data);
-            // router.push(
-            //     "/industry-intelligence/top-business-ideas",
-            //     undefined,
-            //     {
-            //         shallow: true,
-            //     }
-            // );
+
         } catch (error) {
             console.error("Error:", error);
         } finally {
@@ -84,6 +82,49 @@ export default function InnerPage() {
             callAPI();
         }
     }, [formData]);
+
+    
+    const [formErrors, setFormErrors] = useState({
+        number_of_business_ideas: false,
+        location: false
+    });
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!formData.number_of_business_ideas || !formData.location) {
+            setFormErrors({
+                number_of_business_ideas: !formData.number_of_business_ideas,
+                location: !formData.location
+            });
+            return;
+        }
+
+        const queryParams = new URLSearchParams(formData);
+
+        const url = `/evidence-led-research/database-result?${queryParams}`;
+        if (window.location.pathname !== '/evidence-led-research/database-result') {
+            router.push(url);
+        } else {
+            router.push({
+                pathname: window.location.pathname,
+                query: queryParams.toString()
+            }, undefined, { shallow: true, replace: true });
+        }
+    };
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [name]: value
+        }));
+
+        setFormErrors(prevFormErrors => ({
+            ...prevFormErrors,
+            [name]: false
+        }));
+    }
 
     const incrementCounter = () => {
         setCounter((prevCounter) => prevCounter + 1);
@@ -104,10 +145,83 @@ export default function InnerPage() {
     return (
         <>
             <Layout>
-                <div className="background-random-industry-intelligence ">
-                    <IndustryIntelligenceTopBusinessIdea />
+                <div className="background-random-evidenceledresearch ">
+                    <section className="section-box">
+                        <div className="banner-hero-builder bg-img-businessbuilder-evidenceledresearch">
+                            <div className="container d-flex align-items-center">
+                                <div className="row">
+                                    <div className="col">
+                                        <div className="builder-hero-heading">Evidence-led Research</div>
+                                        <div className="builder-hero-subheading">
+                                            Leading <span className="color-blue"> global academic research </span> is used as our  economic, social and moral blueprint for change
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-                    <section className="course__area pt-20 pb-75 grey-bg-3">
+                    <section className="section-box mt-50 mt-50-30">
+                        <div className="container">
+                            <div className="flex-container">
+                                <div className="share-icon-container-evidenceledresearch">
+                                    <IoShareSocialOutline className="share-icon-evidenceledresearch" />
+                                </div>
+                                <div className="text-center">
+                                    <div className="component-title">
+                                        Explore the Supporting Global Research
+                                    </div>
+                                    <div className="component-subtitle">
+                                        Social and economic research from great sources all in one place
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div className="mt-50 mt-50-30">
+                            <div className="">
+                                <div className="industry-form-find-top  wow animate__animated animate__fadeInUp" style={{ width: '80%', margin: 'auto' }}>
+                                    <form onSubmit={handleSubmit} className="database-search-evidence">
+                                        <TextField
+                                            name="location"
+                                            id="location"
+                                            value={formData.location}
+                                            onChange={handleChange}
+                                            label="Enter name of report, article, research or subject"
+                                            variant="standard"
+
+                                            InputProps={{
+                                                disableUnderline: true,
+                                            }}
+                                            className="industry-input-top-one"
+                                        />
+                                        {formErrors.location && <p style={{ color: 'red' }}>required*</p>}
+                                        <div className="divider-database-evidence"></div>
+
+                                        <input
+                                            className="evidenceled-search-two-database"
+                                            type="text"
+                                            name="number_of_business_ideas"
+                                            id="number_of_business_ideas"
+                                            value={formData.number_of_business_ideas}
+                                            onChange={handleChange}
+                                            placeholder="Numbers"
+                                            style={{ marginTop: "5px" }}
+                                        />
+                                        {formErrors.number_of_business_ideas && <p style={{ color: 'red', marginRight: '15px' }}>required*</p>}
+                                        {/* <button className="btn-search-database-evidence">SEARCH</button> */}
+
+                                        <button className="evidenceled-btn-search-database">
+                                            <IoSearchSharp className="searchbox-searchicon-evidenceled" style={{ marginTop: '-2px' }} /> SEARCH
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        {/* <IndustryIntelligenceTopBusinessIdea /> */}
+                    </section>
+
+                    <section className="section-box mt-50 mt-50-30">
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-xxl-4 col-xl-3 col-lg-3">
@@ -133,7 +247,7 @@ export default function InnerPage() {
                                                         alt="icon"
                                                     />
                                                     <div className="div-5">
-                                                        Number of Ideas{" "}
+                                                        Number {" "}
                                                     </div>
                                                 </div>
                                                 <div className="div-6">
@@ -152,10 +266,10 @@ export default function InnerPage() {
                                                     />
                                                     <div className="div-5">
                                                         {" "}
-                                                        Guide Number{" "}
+                                                        Report Number{" "}
                                                     </div>
                                                 </div>
-                                                <div className="div-6">{`TBI${counter
+                                                <div className="div-6">{`ELR${counter
                                                     .toString()
                                                     .padStart(3, "0")}`}</div>
 
@@ -168,7 +282,7 @@ export default function InnerPage() {
                                                     />
                                                     <div className="div-5">
                                                         {" "}
-                                                        Location{" "}
+                                                        Keywords{" "}
                                                     </div>
                                                 </div>
                                                 <div className="div-6">
@@ -194,62 +308,28 @@ export default function InnerPage() {
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div className="overview-button-d">
-                                        <button 
-                                         onClick={handleClick}
-                                            className="previous-button"
-                                        >
-                                            Previous Guides
-                                        </button>       
-                                        <ComingSoon open={showDialog} handleClose={handleClose} />     
-                                        <button
-                                            className="example-button"
-                                            onClick={handleClick}
-                                        >
-                                            Examples Guides
-                                        </button>
-                                       
-                                    </div>
-                                   
                                 </div>
 
                                 <div className="col-xxl-8 col-xl-9 col-lg-9">
                                     <div className="row">
                                         <div className="col-12">
                                             <div className="course__tab-content">
-                                                <div
-                                                    className="tab-content"
-                                                    id="courseTabContent"
+                                                <div className="tab-content" id="courseTabContent"
                                                 >
                                                     <div
-                                                        className="tab-pane fade show active"
-                                                        id="grid"
-                                                        role="tabpanel"
-                                                        aria-labelledby="grid-tab"
+                                                        className="tab-pane fade show active" id="grid" role="tabpanel" aria-labelledby="grid-tab"
                                                     >
                                                         <div className="row">
-                                                            <h3 className="guideheading">
-                                                                List of Business
-                                                                Ideas
-                                                            </h3>
-                                                            <div
-                                                                className="mb-15"
-                                                                style={{
-                                                                    textAlign:
-                                                                        "justify",
-                                                                    marginTop:
-                                                                        "11px",
-                                                                }}
-                                                            ></div>
+                                                            <div className="component-title component-title-database-search-evidence">
+                                                            Results For: {" "}
+                                                                            {
+                                                                                formData.location
+                                                                            }{" "}
+                                                            </div>
                                                         </div>
                                                         <div>
                                                             {loading ? (
-                                                                <div
-                                                                    style={{
-                                                                        textAlign:
-                                                                            "center",
-                                                                    }}
+                                                                <div style={{ textAlign: "center", }}
                                                                 >
                                                                     <div
                                                                         className="spinner-border text-primary"
@@ -259,158 +339,68 @@ export default function InnerPage() {
                                                                     </div>
                                                                     <p
                                                                         className="descriptionoftitle"
-                                                                        style={{
-                                                                            color: "#3d66f5",
-                                                                        }}
+                                                                        style={{ color: "#3d66f5", }}
                                                                     >
-                                                                        Your
-                                                                        document
-                                                                        is
-                                                                        generating.
-                                                                        Please
-                                                                        wait.
+                                                                        Your document is generating. Please wait.
                                                                     </p>
                                                                 </div>
                                                             ) : (
                                                                 <>
-                                                                    <div className="row mt-15 mb-15">
-                                                                        <div className="titleforguides">
-                                                                            Overview
-                                                                            of
-                                                                            Top{" "}
+                                                                    <div className="row mt-15">
+                                                                        <div className="component-subtitle">
+                                                                            {" "}
                                                                             {
                                                                                 formData.number_of_business_ideas
                                                                             }{" "}
-                                                                            Ideas
+                                                                            results found
                                                                         </div>
-                                                                        <div
-                                                                            className="mt-10"
-                                                                            style={{
-                                                                                textAlign:
-                                                                                    "justify",
-                                                                            }}
-                                                                        >
-                                                                            <ul className="bullet-list">
-                                                                                <div
-                                                                                    className="mt-10"
-                                                                                    style={{
-                                                                                        textAlign:
-                                                                                            "justify",
-                                                                                    }}
-                                                                                >
-                                                                                    <ul className="bullet-list">
-                                                                                        {responseData && (
-                                                                                            <ul>
-                                                                                                {responseData.extracted_text_1
-                                                                                                    .split(
-                                                                                                        "<h3>"
-                                                                                                    )
-                                                                                                    .filter(
-                                                                                                        (
-                                                                                                            section,
-                                                                                                            index
-                                                                                                        ) =>
-                                                                                                            index !==
-                                                                                                            0
-                                                                                                    )
-                                                                                                    .map(
-                                                                                                        (
-                                                                                                            section,
-                                                                                                            index
-                                                                                                        ) => {
-                                                                                                            const [
-                                                                                                                title,
-                                                                                                                description,
-                                                                                                            ] =
-                                                                                                                section.split(
-                                                                                                                    "</h3>"
-                                                                                                                );
-                                                                                                            const cleanTitle =
-                                                                                                                title.replace(
-                                                                                                                    /^\d+\.\s*/,
-                                                                                                                    ""
-                                                                                                                );
-                                                                                                            const cleanDescription =
-                                                                                                                description
-                                                                                                                    ? description.replace(
-                                                                                                                          /<[^>]+>/g,
-                                                                                                                          ""
-                                                                                                                      )
-                                                                                                                    : "";
-                                                                                                            return (
-                                                                                                                <li
-                                                                                                                    key={
-                                                                                                                        index
-                                                                                                                    }
-                                                                                                                    className="descriptionoftitle"
-                                                                                                                >
-                                                                                                                    <span>{`• `}</span>
-                                                                                                                    {cleanDescription ? (
-                                                                                                                        <span
-                                                                                                                            style={{
-                                                                                                                                fontWeight:
-                                                                                                                                    cleanDescription
-                                                                                                                                        ? "bold"
-                                                                                                                                        : "normal",
-                                                                                                                            }}
-                                                                                                                        >
-                                                                                                                            {
-                                                                                                                                cleanTitle
-                                                                                                                            }
-                                                                                                                        </span>
-                                                                                                                    ) : (
-                                                                                                                        cleanTitle
-                                                                                                                    )}
-                                                                                                                    {cleanDescription && (
-                                                                                                                        <span
-                                                                                                                            style={{
-                                                                                                                                fontWeight:
-                                                                                                                                    "bold",
-                                                                                                                            }}
-                                                                                                                        >
-                                                                                                                            :
-                                                                                                                        </span>
-                                                                                                                    )}{" "}
-                                                                                                                    {
-                                                                                                                        cleanDescription
-                                                                                                                    }
-                                                                                                                </li>
-                                                                                                            );
-                                                                                                        }
-                                                                                                    )}
-                                                                                            </ul>
-                                                                                        )}
+                                                                        <div className="mt-50 mt-50-30" style={{ textAlign: "justify" }}                                                                                >
+                                                                            <ul className="bullet-list-database-search-evidence">
+                                                                                {responseData && (
+                                                                                    <ul style={{ paddingLeft: '0px' }}>
+                                                                                        {responseData.extracted_text_1
+                                                                                            .split("<h3>")
+                                                                                            .filter((section, index) => index !== 0)
+                                                                                            .map((section, index) => {
+                                                                                                const [titlePart, descriptionPart] = section.split("</h3>");
+                                                                                                const cleanTitlePart = titlePart.replace(/^\d+\.\s*/, "").trim();
+                                                                                                const cleanDescriptionPart = descriptionPart ? descriptionPart.replace(/<[^>]+>/g, "").trim() : "";
+                                                                                                const link = cleanDescriptionPart.match(/http(s)?:\/\/[^\s]+/g);
+                                                                                                const title = cleanTitlePart || "No Title";
+                                                                                                return (
+                                                                                                    <li key={index} className="descriptionoftitle">
+                                                                                                        <div className="border-result-evidence hover-up">
+                                                                                                            <span>{`• `}</span>
+                                                                                                            <span style={{ fontWeight: "bold" }}>{title}</span>
+                                                                                                            {link && (
+                                                                                                                <>
+                                                                                                                    <br />
+                                                                                                                    <a href={link[0]} target="_blank" rel="noopener noreferrer">{link[0]}</a>
+                                                                                                                </>
+                                                                                                            )}
+                                                                                                        </div>
+                                                                                                    </li>
+                                                                                                );
+                                                                                            })}
                                                                                     </ul>
-                                                                                </div>
+                                                                                )}
+
                                                                             </ul>
                                                                         </div>
                                                                     </div>
 
                                                                     <div className="button-container">
-                                                                        <button
-                                                                            className="button regenerate-button"
-                                                                            onClick={handleClick}
-                                                                        >
+                                                                        <button className="button regenerate-button" onClick={handleClick}                                                                       >
                                                                             Regenerate
                                                                         </button>
-                                                                        
-                                                                        <button
-                                                                            className="button download-button"
-                                                                            onClick={handleClick}
-                                                                        >
-                                                                            Download
-                                                                            PDF
+
+                                                                        <button className="button download-button" onClick={handleClick}                                                                        >
+                                                                            Download PDF
                                                                         </button>
-                                                                   
-                                                                        <button
-                                                                            className="button share-button"
-                                                                            onClick={handleClick}
-                                                                        >
-                                                                            Share
-                                                                            by
-                                                                            Email
+
+                                                                        <button className="button share-button" onClick={handleClick}                                                                        >
+                                                                            Share by Email
                                                                         </button>
-                                                            
                                                                     </div>
                                                                 </>
                                                             )}
@@ -425,7 +415,10 @@ export default function InnerPage() {
                         </div>
                     </section>
 
-                    <KickstartButton />
+                    <section className="section-box mt-75 mt-75-40">
+                        <FullAccessButton />
+                    </section>
+
                     <Subscription />
                 </div>
             </Layout>

@@ -1,13 +1,14 @@
 ﻿import Link from "next/link";
 import Layout from "../../components/Layout/Layout";
 import GrantFinderSearchBox from "../../components/elements/GrantFinderSearchBox";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
-import { Button } from "@mui/material";
+import { Button, Grid, MenuItem, MenuList, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import axiosFetchWithRetry from "../../components/elements/fetchWithRetry";
+import ClosingDateDisplay from "../../components/elements/ClosingDateDisplay";
 
 export default function GrantsList() {
     const router = useRouter();
@@ -19,15 +20,54 @@ export default function GrantsList() {
     const [results, setResults] = useState([]);
     const [totalGrants, setTotalGrants] = useState(0);
     const [page, setPage] = useState(1);
-    const limit = 10; // 假设每页显示10条数据
-    // const [queryParameters, setQueryParameters] = useState({
-    //     category: [],
-    //     grantAmountRange: [],
-    //     location: [],
-    //     keyword: "",
-    //     page: 1,
-    //     limit: 10,
-    // });
+    const limit = 10;
+    const [sortMethod, setSortMethod] = useState(1);
+    const sortOptions = {
+        1: 'Relevance',
+        2: 'Closing Date',
+        3: 'Grant Amount: High to Low',
+        4: 'Grant Amount: Low to High'
+    };
+    const [keyword, setKeyword] = useState("");
+
+    const handleSearch = () => {
+        const filterParams = new URLSearchParams();
+        filters.category.forEach((categoryId) => {
+            filterParams.append("category", categoryId);
+        });
+        filters.grantAmountRange.forEach((rangeId) => {
+            filterParams.append("grantAmountRange", rangeId);
+        });
+        filters.location.forEach((locationId) => {
+            filterParams.append("location", locationId);
+        });
+        filterParams.append("keyword", keyword);
+        filterParams.append("page", 1);
+        filterParams.append("limit", 10);
+        filterParams.append("sort", sortMethod);
+        router.push(`/grant-finder/search/?${filterParams.toString()}`);
+    };
+
+
+    const handleMenuItemClick = (index) => {
+        setSortMethod(index);
+        const filterParams = new URLSearchParams();
+        filters.category.forEach((categoryId) => {
+            filterParams.append("category", categoryId);
+        });
+        filters.grantAmountRange.forEach((rangeId) => {
+            filterParams.append("grantAmountRange", rangeId);
+        });
+        filters.location.forEach((locationId) => {
+            filterParams.append("location", locationId);
+        });
+        filterParams.append("keyword", keyword);
+        filterParams.append("page", 1);
+        filterParams.append("limit", 10);
+        filterParams.append("sort", index);
+        router.push(`/grant-finder/search/?${filterParams.toString()}`);
+    };
+
 
     useEffect(() => {
         if (router.isReady) {
@@ -38,17 +78,34 @@ export default function GrantsList() {
                 keyword = "",
                 page,
                 limit,
+                sort,
             } = router.query;
             console.log("router.query " + JSON.stringify(router.query));
             const updatedQueryParameters = {
-                category: Array.isArray(category) ? category : category ? [category] : [],
-                grantAmountRange: Array.isArray(grantAmountRange) ? grantAmountRange : grantAmountRange ? [grantAmountRange] : [],
-                location: Array.isArray(location) ? location : location ? [location] : [],
+                category: Array.isArray(category)
+                    ? category
+                    : category
+                        ? [category]
+                        : [],
+                grantAmountRange: Array.isArray(grantAmountRange)
+                    ? grantAmountRange
+                    : grantAmountRange
+                        ? [grantAmountRange]
+                        : [],
+                location: Array.isArray(location)
+                    ? location
+                    : location
+                        ? [location]
+                        : [],
                 keyword,
                 page: parseInt(page, 10) || 1,
                 limit: parseInt(limit, 10) || 10,
+                sort: parseInt(sort, 10) || 1,
             };
-            console.log("updatedQueryParameters " + JSON.stringify(updatedQueryParameters));
+            console.log(
+                "updatedQueryParameters " +
+                JSON.stringify(updatedQueryParameters)
+            );
             fetchData(updatedQueryParameters);
         }
     }, [router.isReady, router.query]);
@@ -87,6 +144,7 @@ export default function GrantsList() {
         }
         queryString.append("page", updatedQueryParameters.page.toString());
         queryString.append("limit", updatedQueryParameters.limit.toString());
+        queryString.append("sort", updatedQueryParameters.sort.toString());
         console.log("queryParams " + queryString.toString());
         setResults([]);
         try {
@@ -98,12 +156,12 @@ export default function GrantsList() {
                         "Content-Type": "application/json",
                     },
                 },
-                timeout: 2000,
+                timeout: 20000,
                 retryCount: 4,
-            }).catch((error) => console.error({ error: error.message }))
+            }).catch((error) => console.error({ error: error.message }));
             setTotalGrants(response.total_count);
             setResults(response.data);
-            setPage(response.page)
+            setPage(response.page);
         } catch (error) {
             console.error("Failed to fetch data:", error);
         }
@@ -120,8 +178,10 @@ export default function GrantsList() {
         filters.location.forEach((locationId) => {
             filterParams.append("location", locationId);
         });
+        filterParams.append("keyword", keyword);
         filterParams.append("page", 1);
         filterParams.append("limit", 10);
+        filterParams.append("sort", sortMethod);
         router.push(`/grant-finder/search/?${filterParams.toString()}`);
     };
 
@@ -190,8 +250,7 @@ export default function GrantsList() {
     ];
 
     function formatGrantAmount(amount) {
-
-        if(amount == null) return 'N/A'
+        if (amount == null) return "N/A";
         // 将金额转换为数字
         const numAmount = Number(amount);
         if (isNaN(numAmount)) return amount; // 如果转换失败，返回原始值
@@ -215,16 +274,30 @@ export default function GrantsList() {
             keyword = "",
             page,
             limit,
+            sort,
         } = router.query;
-const updatedQueryParameters = {
-    // 使用Array.isArray检查字段是否已经是数组，如果不是，则使用[]将其转换为数组
-    category: Array.isArray(category) ? category : category ? [category] : [],
-    grantAmountRange: Array.isArray(grantAmountRange) ? grantAmountRange : grantAmountRange ? [grantAmountRange] : [],
-    location: Array.isArray(location) ? location : location ? [location] : [],
-    keyword,
-    page: parseInt(page, 10) || 1, // 确保page为数字，如果不存在，则默认为1
-    limit: parseInt(limit, 10) || 10, // 确保limit为数字，如果不存在，则默认为10
-};
+        const updatedQueryParameters = {
+            // 使用Array.isArray检查字段是否已经是数组，如果不是，则使用[]将其转换为数组
+            category: Array.isArray(category)
+                ? category
+                : category
+                    ? [category]
+                    : [],
+            grantAmountRange: Array.isArray(grantAmountRange)
+                ? grantAmountRange
+                : grantAmountRange
+                    ? [grantAmountRange]
+                    : [],
+            location: Array.isArray(location)
+                ? location
+                : location
+                    ? [location]
+                    : [],
+            keyword,
+            page: parseInt(page, 10) || 1, // 确保page为数字，如果不存在，则默认为1
+            limit: parseInt(limit, 10) || 10, // 确保limit为数字，如果不存在，则默认为10
+            sort: parseInt(sort, 10) || 1,
+        };
         console.log("pagechange " + JSON.stringify(updatedQueryParameters));
         const PaginationParams = new URLSearchParams();
         if (Array.isArray(updatedQueryParameters.category)) {
@@ -247,6 +320,7 @@ const updatedQueryParameters = {
         }
         PaginationParams.append("page", value);
         PaginationParams.append("limit", 10);
+        PaginationParams.append("sort", sort);
         router.push(`/grant-finder/search/?${PaginationParams.toString()}`);
     };
 
@@ -273,7 +347,7 @@ const updatedQueryParameters = {
                             </div>
                         </div>
                     </section> */}
-                                        <section className="section-box">
+                    {/* <section className="section-box">
                         <div className=" banner-hero bg-img-grant-finder">
                             <div className="container d-flex align-items-center">
                                 <div className="row">
@@ -284,6 +358,22 @@ const updatedQueryParameters = {
                                         </span>{" "}
                                         Available Now
                                     </h2>
+                                        <p className="font-lg color-text-paragraph-2">
+                                            Search for the latest personal,
+                                            public, private, academic and
+                                            voluntary sector grant funding
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> */}
+                    <section className="section-box">
+                        <div className=" banner-hero bg-img-grant-finder">
+                            <div className="container d-flex align-items-center">
+                                <div className="row">
+                                    <div className="col">
+                                        <h2 className="mb-10">Grant Finder</h2>
                                         <p className="font-lg color-text-paragraph-2">
                                             Search for the latest personal,
                                             public, private, academic and
@@ -306,7 +396,40 @@ const updatedQueryParameters = {
                                             Find the right grants for you.
                                         </p>
                                     </div>
-                                    <GrantFinderSearchBox />
+                                    <div
+                                        className="form-find mt-40 mb-30 wow animate__animated animate__fadeInUp"
+                                        data-wow-delay=".2s"
+                                    >
+                                        <Grid container spacing={3} alignItems="center">
+                                            <Grid item xs={12} lg={10}>
+                                                <TextField
+                                                    fullWidth
+                                                    label="Keyword"
+                                                    variant="standard"
+                                                    value={keyword}
+                                                    onChange={(e) => setKeyword(e.target.value)}
+                                                />
+                                            </Grid>
+                                            <Grid item xs={12} lg={2}>
+                                                <Button
+                                                    variant="contained"
+                                                    fullWidth
+                                                    size="large"
+                                                    startIcon={<SearchIcon />}
+                                                    sx={{
+                                                        backgroundColor: "rgb(58, 171, 103)",
+                                                        "&:hover": {
+                                                            backgroundColor: "#339e5c",
+                                                        },
+                                                        height: "45px",
+                                                    }}
+                                                    onClick={handleSearch}
+                                                >
+                                                    Search
+                                                </Button>
+                                            </Grid>
+                                        </Grid>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -326,103 +449,109 @@ const updatedQueryParameters = {
                                                         Grants Found
                                                     </span>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        {Array.isArray(results) && results.map((grant) => (
-                                            <Link
-                                                legacyBehavior
-                                                href={`/grant-finder/grant/${grant.grant_id}`}
-                                            >
-                                                <div className="row display-list clickable">
-                                                    <div className="col-xl-12 col-12">
-                                                        <div className="card-grid-2 hover-up">
-                                                            <div className="row card-overflow-list">
-                                                                <div className="col-lg-12 col-md-12 col-sm-12">
-                                                                    <div className="card-grid-2-image-left">
-                                                                        <div className="right-info">
-                                                                            <h4>
-                                                                                <a>
-                                                                                    {
-                                                                                        grant.title
-                                                                                    }
-                                                                                </a>
-                                                                            </h4>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div className="col-lg-12 text-start pr-60 col-md-12 col-sm-12">
-                                                                    <div className="pl-15 mb-15 mt-15">
-                                                                        {grant.category_name.map(
-                                                                            (
-                                                                                one_category_name
-                                                                            ) => (
-                                                                                <Link
-                                                                                    legacyBehavior
-                                                                                    href={`/grant-finder`}
-                                                                                >
-                                                                                    <a className="btn btn-tags-sm mr-5">
-                                                                                        {
-                                                                                            one_category_name
-                                                                                        }
-                                                                                    </a>
-                                                                                </Link>
-                                                                            )
-                                                                        )}
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div className="card-block-info card-overflow-list">
-                                                                <div className="mt-5">
-                                                                    <span className="card-location mr-15">
-                                                                        {
-                                                                            grant.location
-                                                                        }
-                                                                    </span>
-                                                                    <span className="card-time">
-                                                                        closing
-                                                                        date:{" "}
-                                                                        {
-                                                                            grant.closing_date
-                                                                        }
-                                                                    </span>
-                                                                </div>
-                                                                <p className="font-sm color-text-paragraph mt-10">
-                                                                    {
-                                                                        grant.description
-                                                                    }
-                                                                </p>
-                                                                <div className="card-2-bottom mt-20">
-                                                                    <div className="row">
-                                                                        <div className="col-lg-7 col-7">
-                                                                            <span className="card-text-price">
-                                                                                {formatGrantAmount(
-                                                                                    grant.total_size_of_grant_scheme
-                                                                                )}
-                                                                            </span>
-                                                                        </div>
-                                                                        {/* <Link
-                                                                            legacyBehavior
-                                                                            href={`/grant-finder/grant/${grant.grant_id}`}
-                                                                        >
-                                                                            <div className="col-lg-5 col-5 text-end">
-                                                                                <div
-                                                                                    className="btn btn-apply-now"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#ModalApplyJobForm"
-                                                                                >
-                                                                                    Read
-                                                                                    More
-                                                                                </div>
-                                                                            </div>
-                                                                        </Link> */}
-                                                                    </div>
-                                                                </div>
+                                                <div className="col-xl-6 col-lg-7 text-lg-end mt-sm-15">
+                                                    <div className="display-flex2">
+                                                        <div className="box-border">
+                                                            <span className="text-sortby">Sort by:</span>
+                                                            <div className="dropdown dropdown-sort">
+                                                                <button className="btn dropdown-toggle" id="dropdownSort2" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                                                                    <span>{sortOptions[sortMethod]}</span>
+                                                                    <i className="fi-rr-angle-small-down" />
+                                                                </button>
+                                                                <ul className="dropdown-menu dropdown-menu-light" aria-labelledby="dropdownSort2">
+                                                                    <MenuList>
+                                                                        <MenuItem onClick={() => handleMenuItemClick(1)}>Relevance</MenuItem>
+                                                                        <MenuItem onClick={() => handleMenuItemClick(2)}>Closing Date</MenuItem>
+                                                                        <MenuItem onClick={() => handleMenuItemClick(3)}>Grant Amount: High to Low</MenuItem>
+                                                                        <MenuItem onClick={() => handleMenuItemClick(4)}>Grant Amount: Low to High</MenuItem>
+                                                                    </MenuList>
+                                                                </ul>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </Link>
-                                        ))}
+                                            </div>
+
+                                        </div>
+                                        {Array.isArray(results) &&
+                                            results.map((grant) => (
+                                                <Link
+                                                    legacyBehavior
+                                                    href={`/grant-finder/grant/${grant.grant_id}`}
+                                                >
+                                                    <a target="_blank" style={{ textDecoration: 'none' }}>
+                                                        <div className="row display-list clickable">
+                                                            <div className="col-xl-12 col-12">
+                                                                <div className="card-grid-2 hover-up">
+                                                                    <div className="row card-overflow-list">
+                                                                        <div className="col-lg-12 col-md-12 col-sm-12">
+                                                                            <div className="card-grid-2-image-left">
+                                                                                <div className="right-info">
+                                                                                    <h4>
+                                                                                        <a>
+                                                                                            {
+                                                                                                grant.title
+                                                                                            }
+                                                                                        </a>
+                                                                                    </h4>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            className="col-lg-12 text-start pr-60 col-md-12 col-sm-12">
+                                                                            <div className="pl-15 mb-15 mt-15">
+                                                                                {grant.category_name.map(
+                                                                                    (
+                                                                                        one_category_name
+                                                                                    ) => (
+                                                                                        <Link
+                                                                                            legacyBehavior
+                                                                                            href={`/grant-finder`}
+                                                                                        >
+                                                                                            <a className="btn btn-tags-sm mr-5">
+                                                                                                {
+                                                                                                    one_category_name
+                                                                                                }
+                                                                                            </a>
+                                                                                        </Link>
+                                                                                    )
+                                                                                )}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="card-block-info card-overflow-list">
+                                                                        <div className="mt-5">
+                                                                            <span className="card-location mr-15">
+                                                                                {
+                                                                                    grant.location
+                                                                                }
+                                                                            </span>
+                                                                            <ClosingDateDisplay
+                                                                                closingDate={grant.closing_date} />
+                                                                        </div>
+                                                                        <p className="font-sm color-text-paragraph mt-10">
+                                                                            {
+                                                                                grant.description
+                                                                            }
+                                                                        </p>
+                                                                        <div className="card-2-bottom mt-20">
+                                                                            <div className="row">
+                                                                                <div className="col-lg-7 col-7">
+                                                                                    <span className="card-text-price">
+                                                                                        {formatGrantAmount(
+                                                                                            grant.total_size_of_grant_scheme
+                                                                                        )}
+                                                                                    </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </Link>
+                                            ))}
                                     </div>
                                     <Stack
                                         spacing={2}
@@ -445,19 +574,14 @@ const updatedQueryParameters = {
                                             <div className="filter-block head-border mb-30">
                                                 <h5>
                                                     Advance Filter
-                                                    <Link
-                                                        legacyBehavior
-                                                        href="#"
+                                                    <button
+                                                        className="link-reset"
+                                                        onClick={
+                                                            handleResetFilters
+                                                        }
                                                     >
-                                                        <a
-                                                            className="link-reset"
-                                                            onClick={
-                                                                handleResetFilters
-                                                            }
-                                                        >
-                                                            Reset
-                                                        </a>
-                                                    </Link>
+                                                        Reset
+                                                    </button>
                                                 </h5>
                                             </div>
                                             <div className="filter-block mb-20">
@@ -510,7 +634,7 @@ const updatedQueryParameters = {
                                                                             checked={filters.grantAmountRange.includes(
                                                                                 range.label_id.toString()
                                                                             )}
-                                                                            // 特殊处理逻辑（如果需要）可以在这里添加
+                                                                        // 特殊处理逻辑（如果需要）可以在这里添加
                                                                         />
                                                                         <span className="text-small">
                                                                             {
@@ -571,7 +695,7 @@ const updatedQueryParameters = {
                                                 </div>
                                             </div>
 
-                                            <div className="filter-block mb-20">
+                                            {/* <div className="filter-block mb-20">
                                                 <h5 className="medium-heading mb-15">
                                                     Location
                                                 </h5>
@@ -614,7 +738,7 @@ const updatedQueryParameters = {
                                                         )}
                                                     </ul>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>

@@ -112,7 +112,7 @@ const data = [
                <Grid container alignItems="center" style={{minWidth: '100%'}}
                      sx={{display: {xs: 'none', md: "none", lg: 'flex'}}}>
                      <Grid item lg={6}>
-                      <iframe className='content-media' width="1000" height="500" src="https://www.youtube.com/embed/xSaggc-qxn0?si=5GExD99pRLDqjIva" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      <iframe className='content-media' width="1000" height="500" src="https://www.youtube.com/embed/xSaggc-qxn0?si=5GExD99pRLDqjIva" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                      </Grid>
                      <Grid item lg={6} sx={{paddingLeft: {lg: '75px'}}}>
 

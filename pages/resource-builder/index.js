@@ -447,7 +447,7 @@ export default function Index() {
                                             </div>
                                         </div>
                                     </Grid>
-                                    <Grid md={6} sx={{ paddingLeft: { md: "30px" } }}>
+                                    <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <img
                                             className="imagecontent"
                                             src="assets/imgs/page/resource-builder/andallthebusiness.jpg"
@@ -1045,7 +1045,7 @@ export default function Index() {
                                             </p>
                                         </div>
                                     </Grid>
-                                    <Grid md={6} sx={{ paddingLeft: { md: "30px" } }}>
+                                    <Grid item md={6} sx={{ paddingLeft: { md: "30px" } }}>
                                         <img
                                             className="imagecontent"
                                             src="assets/imgs/page/resource-builder/newresourcesindevelopment.jpg"

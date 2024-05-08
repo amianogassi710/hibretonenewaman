@@ -7,55 +7,21 @@ import { styled } from "@mui/material/styles";
 import { Autocomplete, TextField, Button, Grid } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-function GrantFinderSearchBox() {
+function GrantFinderSearchBoxWithAI() {
     const router = useRouter();
-    const [keyword, setKeyword] = useState("");
+    const [prompt, setPrompt] = useState("");
     const [category, setCategory] = useState("");
     const [location, setLocation] = useState("");
 
     const handleSearch = () => {
         const queryParams = new URLSearchParams();
+        const promptValue = prompt || "I am an entrepreneur, please recommend me some grants";
+        queryParams.append("prompt", promptValue);
 
-        if (keyword) queryParams.append("keyword", keyword);
-        if (category) queryParams.append("category", category);
-        if (location) queryParams.append("location", location); 
-
-        queryParams.append("page", 1);
-        queryParams.append("limit", 10);
-
-        router.push(`/grant-finder/search/?${queryParams.toString()}`);
+        router.push(`/grant-finder/search-ai/?${queryParams.toString()}`);
+        
     };
 
-    const categories = [
-        { category_id: 1, category_name: "Community" },
-        { category_id: 2, category_name: "Environment" },
-        { category_id: 3, category_name: "Research" },
-        { category_id: 4, category_name: "Technology" },
-        { category_id: 5, category_name: "Education" },
-        { category_id: 6, category_name: "Business" },
-        { category_id: 7, category_name: "Disability" },
-        { category_id: 8, category_name: "Equal Opportunities" },
-        { category_id: 9, category_name: "People & Families" },
-        { category_id: 10, category_name: "Health" },
-        { category_id: 11, category_name: "Arts" },
-        { category_id: 12, category_name: "Rural" },
-        { category_id: 13, category_name: "Equality & Diversity" },
-        { category_id: 14, category_name: "Regeneration" },
-        { category_id: 15, category_name: "Religion" },
-        { category_id: 16, category_name: "Social Enterprise" },
-        { category_id: 17, category_name: "Leisure & Tourism" },
-        { category_id: 18, category_name: "Employment" },
-        { category_id: 19, category_name: "Crime" },
-        { category_id: 20, category_name: "Young People" },
-    ];
-
-    const locations = [
-        { label: "National", label_id: "0" },
-        { label: "England", label_id: "1" },
-        { label: "Scotland", label_id: "2" },
-        { label: "Wales", label_id: "3" },
-        { label: "Northern Ireland", label_id: "4" },
-    ];
 
     return (
         <>
@@ -67,10 +33,10 @@ function GrantFinderSearchBox() {
                     <Grid item xs={12} lg={10}>
                         <TextField
                             fullWidth
-                            label="Keyword"
+                            label="You can ask me questions, e.g., 'I am an entrepreneur, please recommend me some grants'"
                             variant="standard"
-                            value={keyword}
-                            onChange={(e) => setKeyword(e.target.value)}
+                            value={prompt}
+                            onChange={(e) => setPrompt(e.target.value)}
                         />
                     </Grid>
                     {/* <Grid item xs={12} lg={3}>
@@ -162,4 +128,4 @@ function GrantFinderSearchBox() {
     );
 }
 
-export default GrantFinderSearchBox;
+export default GrantFinderSearchBoxWithAI;

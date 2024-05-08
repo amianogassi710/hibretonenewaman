@@ -96,7 +96,7 @@ export default function Aboutushibretoneinformation() {
                         </Grid>
                         <Grid item sm={12}>
                             <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-                                <iframe width="" height="100%" src="https://www.youtube.com/embed/CIoWgp020B0" allowfullscreen></iframe>
+                                <iframe width="" height="100%" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen></iframe>
                             </div>
                         </Grid>
                         <Grid item sm={12}>
@@ -134,7 +134,7 @@ export default function Aboutushibretoneinformation() {
                         </Grid>
                         <Grid item xs={12}>
                             <div className='grid__thumb w-img fix grid_thumb_height grid_thumb'>
-                                <iframe width="" height="100%" src="https://www.youtube.com/embed/CIoWgp020B0" allowfullscreen></iframe>
+                                <iframe width="" height="100%" src="https://www.youtube.com/embed/CIoWgp020B0" allowFullScreen></iframe>
                             </div>
                         </Grid>
                         <Grid item xs={12}>

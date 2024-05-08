@@ -5,6 +5,9 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 export default function GrantDetails() {
+    const createMarkup = (htmlContent) => {
+        return { __html: htmlContent };
+    };
     const router = useRouter();
     const [grantId, setGrantId] = useState(null);
     const [grantDetails, setGrantDetails] = useState([
@@ -204,12 +207,43 @@ export default function GrantDetails() {
                                             </div>
                                         </div>
                                         <div className="content-single">
-                                            <h4>Who Can Apply</h4>
-                                            <p>
-                                                {grantDetails[0].who_can_apply}
-                                            </p>
-                                            <h4>Grant Description</h4>
-                                            <p>{grantDetails[0].description}</p>
+                                            {grantDetails[0].who_can_apply && (
+                                                <div>
+                                                    <h4>Who Can Apply</h4>
+                                                    <p>
+                                                        {
+                                                            grantDetails[0]
+                                                                .who_can_apply
+                                                        }
+                                                    </p>
+                                                    <hr></hr>
+                                                </div>
+                                            )}
+
+                                            {grantDetails[0]
+                                                .grant_background && (
+                                                <div>
+                                                    <h4>Background</h4>
+                                                    <div
+                                                        dangerouslySetInnerHTML={createMarkup(
+                                                            grantDetails[0]
+                                                                .grant_background
+                                                        )}
+                                                    ></div>
+                                                </div>
+                                            )}
+
+                                            {grantDetails[0].description && (
+                                                <div>
+                                                    <h4>Grant Description</h4>
+                                                    <p>
+                                                        {
+                                                            grantDetails[0]
+                                                                .description
+                                                        }
+                                                    </p>
+                                                </div>
+                                            )}
                                         </div>
 
                                         <div className="single-apply-jobs">
@@ -636,7 +670,8 @@ export default function GrantDetails() {
                                                         </a>
                                                     )
                                                 )
-                                            ) : grantDetails[0].category_name ? (
+                                            ) : grantDetails[0]
+                                                  .category_name ? (
                                                 <a className="btn btn-tags-sm mr-5">
                                                     {
                                                         grantDetails[0]
