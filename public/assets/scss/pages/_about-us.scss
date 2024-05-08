@@ -658,7 +658,24 @@
 .article-category {
   white-space: initial;
 }
+@media (max-width: 768px) {
 
+
+
+
+  .article-category {
+    white-space: initial;
+  }
+
+
+  
+
+  .article-meta {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+}
 
 
 .article-category {

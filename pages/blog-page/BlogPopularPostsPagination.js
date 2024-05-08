@@ -144,9 +144,8 @@ const BlogPopularPostsPagination = () => {
                                             className="featured-image-blog-popularpost"
                                         />
                                         <div className="blogpage-article-category">{item.category}</div>
-
                                         <a href="/blog-page/blog-inner-page">
-                                            <div className="article-title-container"> {/* Added container for title */}
+                                            <div className="article-title-container-blog"> {/* Added container for title */}
                                                 <div className="blogpage-article-title">{item.title}</div>
                                             </div>
                                         </a>
@@ -217,7 +216,7 @@ const BlogPopularPostsPagination = () => {
                                         <div className="blogpage-article-category">{item.category}</div>
 
                                         <a href="/blog-page/blog-inner-page">
-                                            <div className="article-title-container"> {/* Added container for title */}
+                                            <div className="article-title-container-blog"> {/* Added container for title */}
                                                 <div className="blogpage-article-title">{item.title}</div>
                                             </div>
                                         </a>

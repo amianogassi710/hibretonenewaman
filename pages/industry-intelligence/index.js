@@ -4,7 +4,6 @@ import Layout from "../../components/Layout/Layout";
 import Subscription from "../../components/Layout/Subscription";
 import YellowBanner from "../../components/elements/YellowBanner";
 import KickstartButton from "../../components/elements/KickstartButton";
-import DiscoverButton from "../../components/elements/DiscoverButton";
 import { Grid } from "@mui/material";
 
 function useLockBodyScroll(open) {
@@ -26,7 +25,6 @@ export default function Index() {
     <>
       <Layout>
         <div className="background-random-industry-intelligence">
-          <DiscoverButton />
           <section className="section-box mt-25 mb-25">
             <YellowBanner />
           </section>

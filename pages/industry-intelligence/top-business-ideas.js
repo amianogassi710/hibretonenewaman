@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout/Layout";
-import DiscoverButton from "../../components/elements/DiscoverButton";
 import Subscription from "../../components/Layout/Subscription";
 import KickstartButton from "../../components/elements/KickstartButton";
 import ComingSoon from '../../components/elements/ComingSoon';
@@ -105,7 +104,6 @@ export default function InnerPage() {
         <>
             <Layout>
                 <div className="background-random-industry-intelligence ">
-                    <DiscoverButton />
 
                     <section className="course__area pt-20 pb-75 grey-bg-3">
                         <div className="container">

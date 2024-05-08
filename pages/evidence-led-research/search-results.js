@@ -115,7 +115,6 @@ export default function SearchResults() {
         <>
             <Layout>
                 <div className="background-random-industry-intelligence">
-                    {/* <DiscoverButton /> */}
                     <section className="section-box mt-25 mb-25">
                         <div className="container">
                             <div className="banner-hero1">

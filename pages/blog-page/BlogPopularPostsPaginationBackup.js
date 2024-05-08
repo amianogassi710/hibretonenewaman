@@ -116,7 +116,7 @@ export default function Index() {
                         <div className="blogpage-article-category">{articleData1.category}</div>
 
                         <a href="/blog-page/blog-inner-page">
-                            <div className="article-title-container">
+                            <div className="article-title-container-blog">
                                 <div className="blogpage-article-title">{articleData1.title}</div>
                             </div>
                         </a>
@@ -149,7 +149,7 @@ export default function Index() {
                         />
                         <div className="blogpage-article-category">{articleData2.category}</div>
                         <a href="/blog-page/blog-inner-page">
-                            <div className="article-title-container">
+                            <div className="article-title-container-blog">
                                 <div className="blogpage-article-title">{articleData2.title}</div>
                             </div>
                         </a>
@@ -182,7 +182,7 @@ export default function Index() {
                         />
                         <div className="blogpage-article-category">{articleData3.category}</div>
                         <a href="/blog-page/blog-inner-page">
-                            <div className="article-title-container">
+                            <div className="article-title-container-blog">
                                 <div className="blogpage-article-title">{articleData3.title}</div>
                             </div>
                         </a>
@@ -215,7 +215,7 @@ export default function Index() {
                         />
                         <div className="blogpage-article-category">{articleData4.category}</div>
                         <a href="/blog-page/blog-inner-page">
-                            <div className="article-title-container">
+                            <div className="article-title-container-blog">
                                 <h2 className="blogpage-article-title">{articleData4.title}</h2>
                             </div>
                         </a>
@@ -248,7 +248,7 @@ export default function Index() {
                         />
                         <div className="blogpage-article-category">{articleData5.category}</div>
                         <a href="/blog-page/blog-inner-page">
-                            <div className="article-title-container">
+                            <div className="article-title-container-blog">
                                 <h2 className="blogpage-article-title">{articleData5.title}</h2>
                             </div>
                         </a>
@@ -281,7 +281,7 @@ export default function Index() {
                         />
                         <div className="blogpage-article-category">{articleData6.category}</div>
                         <a href="/blog-page/blog-inner-page">
-                            <div className="article-title-container">
+                            <div className="article-title-container-blog">
                                 <h2 className="blogpage-article-title">{articleData6.title}</h2>
                             </div>
                         </a>
