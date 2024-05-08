@@ -206,7 +206,7 @@ const BlogPopularPostsPagination = () => {
                         {secondDivData.map((item, i) => (
                             <SwiperSlide key={i}>
                                 <article className="news-article-card">
-                                    <div className="card-content">
+                                    <div className="card-content-blog-popularpost">
                                         <img
                                             loading="lazy"
                                             src={item.image}

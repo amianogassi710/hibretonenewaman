@@ -145,29 +145,29 @@ export default function Aboutusnewsandeventscarousel() {
                         <div className="swiper-wrapper" >
                             {articleData.map((article, index) => (
                                 <div key={index} className="swiper-slide">
-                                    <div className="card-content">
+                                    <div className="card-content-aboutus">
                                         <img
                                             loading="lazy"
                                             src={article.image}
                                             alt="Article featured image"
-                                            className="featured-image"
+                                            className="featured-image-aboutus"
                                         />
-                                        <div className="article-category">{article.category}</div>
+                                        <div className="article-category-aboutus">{article.category}</div>
                                         <a href="/blog-page/blog-inner-page">
                                             <div className="article-title-container">
                                                 <div className="article-title-aboutus">{article.title}</div>
                                             </div>
                                         </a>
                                         <p className="article-description-aboutus">{article.description}</p>
-                                        <div className="article-meta">
-                                            <div className="author-info">
+                                        <div className="article-meta-aboutus">
+                                            <div className="author-info-aboutus">
                                                 <img
                                                     loading="lazy"
                                                     src={article.author.image}
                                                     alt={`${article.author.name}'s profile picture`}
                                                     className="author-image-aboutus"
                                                 />
-                                                <div className="author-details">
+                                                <div className="author-details-aboutus">
                                                     <div className="author-name-aboutus">{article.author.name}</div>
                                                     <div className="publish-date-aboutus">{article.author.date}</div>
                                                 </div>

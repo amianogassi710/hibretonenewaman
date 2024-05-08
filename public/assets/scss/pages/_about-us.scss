@@ -28,6 +28,7 @@
   right: -300px;
   border-radius: 25px;
 }
+
 /* Background Blue random Design End */
 
 /* Banner Start */
@@ -48,6 +49,7 @@
   opacity: 0.8;
   background: #05264E;
 }
+
 /* Banner End */
 
 /* Share Icon Start */
@@ -80,6 +82,7 @@
     display: none;
   }
 }
+
 /* Share Icon End */
 
 // Counter Start
@@ -114,9 +117,14 @@
   align-items: center !important;
   justify-content: center !important;
 }
+
 // Counter End
 
 // Meet Our Team Start
+.container1 {
+  margin: 0 auto;
+}
+
 @media screen and (max-width: 1400px) {
   .container1 {
     max-width: 1120px;
@@ -229,6 +237,28 @@
 // Meet Our Team End
 
 // News and Events Start
+.card-content-aboutus {
+  border-radius: 16px;
+  border: 1px solid rgba(224, 230, 246, 1);
+  background-color: #fff;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 13px 12px;
+  height: 100%;
+}
+
+.article-category-aboutus {
+  align-self: start;
+  border-radius: 5px;
+  background-color: var(--border-border-2, #e0e6f6);
+  margin-top: 20px;
+  color: var(--brand-brand-2, #3c65f5);
+  white-space: nowrap;
+  padding: 0 10px;
+  font: 500 16px/156% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
 .article-title-aboutus {
   color: var(--brand-brand-1, #05264e);
   align-self: start;
@@ -251,12 +281,31 @@
   overflow: hidden;
 }
 
+.article-meta-aboutus {
+  max-width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 25px;
+  width: 100%;
+  gap: 20px;
+}
+
+.author-info-aboutus {
+  display: flex;
+  gap: 5px;
+}
+
 .author-image-aboutus {
   aspect-ratio: 1;
   object-fit: cover;
   width: 35px;
   margin: auto 0;
   border-radius: 50%;
+}
+
+.author-details-aboutus {
+  display: flex;
+  flex-direction: column;
 }
 
 .author-name-aboutus {
@@ -281,6 +330,8 @@
 }
 
 @media screen and (max-width: 1200px) {
+
+
   .article-title-container {
     height: 60px;
   }
@@ -311,7 +362,11 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
+  .featured-image-aboutus {
+    max-width: 100%;
+  }
+
   .article-title-aboutus {
     margin-top: 10px;
   }
@@ -322,6 +377,19 @@
 }
 
 @media (max-width: 768px) {
+  .article-category-aboutus {
+    white-space: initial;
+  }
+
+  .article-meta-aboutus {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .featured-image-aboutus {
+    max-width: 100%;
+  }
+
   .article-title-container {
     height: 70px;
   }
@@ -645,69 +713,10 @@
 }
 // News and Events End
 
+
+
 @media screen and (max-width:576px) {
   .mt-20-0-meetourteam {
     margin-top: 0px !important;
   }
-}
-
-
-
-
-
-.article-category {
-  white-space: initial;
-}
-@media (max-width: 768px) {
-
-
-
-
-  .article-category {
-    white-space: initial;
-  }
-
-
-  
-
-  .article-meta {
-    max-width: 100%;
-    flex-wrap: wrap;
-  }
-
-}
-
-
-.article-category {
-  border-radius: 5px;
-  background-color: var(--border-border-2, #e0e6f6);
-  align-self: start;
-  margin-top: 20px;
-  color: var(--brand-brand-2, #3c65f5);
-  white-space: nowrap;
-  padding: 0 10px;
-  font: 500 16px/156% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-}
-
-.author-info {
-  display: flex;
-  gap: 5px;
-}
-
-.article-meta {
-  max-width: 100%;
-  flex-wrap: wrap;
-}
-
-
-.article-meta {
-  display: flex;
-  margin-top: 25px;
-  width: 100%;
-  gap: 20px;
-}
-
-.author-details {
-  display: flex;
-  flex-direction: column;
 }
