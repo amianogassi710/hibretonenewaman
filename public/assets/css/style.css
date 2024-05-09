@@ -9689,6 +9689,17 @@ ul li:last-child .card-list-4 {
 .box-swiper .swiper-container {
   position: relative;
 }
+.box-swiper .swiper-container .blogpage-item-logo {
+  border: 1px solid rgba(6, 18, 36, 0.1);
+  padding: 10px;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+}
 .box-swiper .swiper-container .blogpage-item-logo img {
   max-width: 100%;
 }

@@ -597,6 +597,16 @@
     position: relative;
 
     .blogpage-item-logo {
+      border: 1px solid $border-color-1;
+      padding: 10px;
+      display: flex;
+      width: 100%;
+      text-align: left;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      background-color: $background-white;
+      flex-wrap: wrap;
+      
       img {
         max-width: 100%;
 
