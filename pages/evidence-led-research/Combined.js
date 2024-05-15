@@ -259,7 +259,7 @@ const Combined = () => {
                         <div className="container d-flex align-items-center">
                             <div className="row">
                                 <div className="col">
-                                    <div className="builder-hero-heading">Evidence-led Research</div>
+                                    <div className="builder-hero-heading" style={{paddingTop: '0px', paddingBottom: '0px'}}>Evidence-led Research</div>
                                     <div className="builder-hero-subheading">
                                         Leading <span className="color-blue"> global academic research </span> is used as our  economic, social and moral blueprint for change
                                     </div>

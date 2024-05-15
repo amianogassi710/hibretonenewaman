@@ -165,11 +165,11 @@
     color: #ffffff;
     border: none;
     border-radius: 8px;
-    width: 20%;
+    width: 18%;
     height: auto;
     font-size: 16px;
     // margin-left: -100px;
-    margin-left: -22%;
+    margin-left: -20%;
 }
 
 .evidenceled-btn-search:hover {
@@ -1230,8 +1230,15 @@
     box-shadow: none;
     padding-left: 20px;
     font-size: 16px;
-    width: 80%;
+    // width: 80%;
+    width: 50%;
     border: none;
+    outline: none;
+}
+
+.database-search-evidence .evidenceled-search-two-database:focus,
+.database-search-evidence .evidenceled-search-two-database:hover {
+    border: none; /* Remove the border on focus and hover */
 }
 
 .border-result-evidence {
@@ -1504,7 +1511,8 @@
     box-shadow: none;
     /* padding-left: 20px; */
     font-size: 16px;
-    width: 100%;
+    // width: 100%;
+    width: 70%;
     border: none;
 }
 
@@ -1516,4 +1524,43 @@
     .component-title-database-search-evidence {
         margin-top: 30px !important;
     }
+}
+
+
+//Entrepreneru Academy
+
+.entrepreneur-academy-btn-search-database {
+    background-color: #229A24;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    width: 25%;
+    height: auto;
+    font-size: 16px;
+    // margin-left: -100px;
+    // margin-left: -22%;
+}
+
+.entrepreneur-academy-one-database {
+    height: 50px;
+    box-shadow: none;
+    /* padding-left: 20px; */
+    font-size: 16px;
+    // width: 100%;
+    width: 75%;
+    border: none;
+}
+
+
+
+// col-9
+
+.tab-items-container {
+    display: flex; /* Ensure items are displayed in a row */
+    align-items: center; /* Align items vertically */
+}
+
+.tab-items {
+    display: flex; /* Ensure items are displayed in a row */
+    gap: 20px; /* Adjust the gap between items */
 }

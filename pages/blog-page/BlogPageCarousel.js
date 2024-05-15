@@ -110,7 +110,8 @@ export default function BlogPageCarousel() {
                                             loading="lazy"
                                             src={article.image}
                                             alt="Article featured image"
-                                            className="featured-image"
+                                            // className="featured-image"
+                                            className=""
                                             height="100%"
                                         />
                                         <a href="/blog-page/blog-inner-page">

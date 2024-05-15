@@ -127,8 +127,6 @@ export default function SearchResults() {
                     <section className="course__area pt-20 pb-75 grey-bg-3">
                         <div className="container">
                             <div className="row justify-content-center">
-
-
                                 <div className="col-xxl-8 col-xl-9 col-lg-9">
                                     <div className="row">
                                         <div className="col-12">
@@ -178,17 +176,17 @@ export default function SearchResults() {
                                                             </div>
                                                         </div>
                                                         <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
-                    alt=""
-                    className="swiperprevious-evidenceled"
-                    onClick={handlePrevious}
-                />
-                <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337491ace933b4787201406e5daad90ed836fd3e530ce3a96946f5557244025?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
-                    alt=""
-                    className="swipernext-evidenceled"
-                    onClick={handleNext}
-                />
+                                                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c658ccb5a89c8b196706d39f3080fe9aec5fca63395c6bacc09940807e1a2dd6?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+                                                            alt=""
+                                                            className="swiperprevious-evidenceled"
+                                                            onClick={handlePrevious}
+                                                        />
+                                                        <img
+                                                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/2337491ace933b4787201406e5daad90ed836fd3e530ce3a96946f5557244025?apiKey=f6a6ad117fb14da0acc6aa0c9555a986&"
+                                                            alt=""
+                                                            className="swipernext-evidenceled"
+                                                            onClick={handleNext}
+                                                        />
                                                     </div>
                                                 </div>
                                             </div>

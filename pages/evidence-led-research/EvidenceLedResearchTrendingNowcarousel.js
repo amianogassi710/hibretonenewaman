@@ -79,7 +79,7 @@ export default function EvidenceLedResearchTrendingNowcarousel() {
                         Don't miss the trending news
                     </div>
                 </div>
-                <div className="swiper-container mt-40-20" style={{ overflow: 'hidden' }} >
+                <div className="swiper-container mt-40 mt-40-20" style={{ overflow: 'hidden' }} >
                     <div className="swiper-wrapper" >
                         {articleData.map((article, index) => (
                             <div key={index} className="swiper-slide">

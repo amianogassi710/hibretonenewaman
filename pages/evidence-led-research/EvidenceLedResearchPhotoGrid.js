@@ -40,7 +40,7 @@ export default function EvidenceLedResearchPhotoGrid() {
                                         </div>
                                     </div>
                                     <div className="about__thumb-2">
-                                        <img src="../assets/imgs/page/evidence-led-research/researchphotogrid-right.jpg" alt="" style={{ height: '585px', width: '333px', borderRadius: '16px' }} />
+                                        <img src="../assets/imgs/page/evidence-led-research/researchphotogrid-right.jpg" alt="" style={{ height: '562px', width: '320px', borderRadius: '16px' }} />
                                     </div>
                                 </div>
                             </Grid>

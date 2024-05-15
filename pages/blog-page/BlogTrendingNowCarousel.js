@@ -28,7 +28,7 @@ const BlogTrendingNowCaraousel = () => {
         },
         {
             category_id: 4,
-            image: "assets/imgs/page/blog-page/Maxine.webp",
+            image: "assets/imgs/page/blog-page/Maxine.jpg",
             title: "Recruiting staff member number one",
             author: "Absolute Collagen",
         },

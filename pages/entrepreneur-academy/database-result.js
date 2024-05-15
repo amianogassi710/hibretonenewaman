@@ -71,47 +71,19 @@ export default function InnerPage() {
             );
             setResponseData(response.data);
 
-
-
-
-
-// Parse the HTML response and structure the lessons
-const lessonRegex = /<h3>(.*?)<\/h3>.*?<p><strong>Lesson Overview:<\/strong>(.*?)<\/p>.*?<p><strong>What you will Learn:<\/strong>(.*?)<\/p>/g;
-const lessonsArray = [];
-let match;
-while ((match = lessonRegex.exec(data.extracted_text_1)) !== null) {
-    lessonsArray.push({
-        title: match[1].trim(),
-        overview: match[2].trim(),
-        learning: match[3].trim()
-    });
-}
-
-// Update state with parsed lessons
-setLessons(lessonsArray);
-setResponseData(data);
-
-
-
-
-
-
-
-
         } catch (error) {
             console.error("Error:", error);
         } finally {
             setLoading(false);
         }
     };
-
     useEffect(() => {
         if (formData.number_of_business_ideas && formData.location) {
             callAPI();
         }
     }, [formData]);
 
-
+    
     const [formErrors, setFormErrors] = useState({
         number_of_business_ideas: false,
         location: false
@@ -170,40 +142,6 @@ setResponseData(data);
 
     useLockBodyScroll(isOpen);
 
-
-    function extractOverview(responseData) {
-        if (typeof responseData === 'string') {
-            const startTagIndex = responseData.indexOf("Short Course Overview") + "Short Course Overview".length;
-            const endTagIndex = responseData.indexOf("Who is this Course For");
-            return responseData.substring(startTagIndex, endTagIndex).trim();
-        } else {
-            // Handle other data types
-            return '';
-        }
-    }
-    
-    function extractTargetAudience(responseData) {
-        if (typeof responseData === 'string') {
-            const startTagIndex = responseData.indexOf("Who is this Course For") + "Who is this Course For".length;
-            const endTagIndex = responseData.indexOf("Lessons");
-            return responseData.substring(startTagIndex, endTagIndex).trim();
-        } else {
-            // Handle other data types
-            return '';
-        }
-    }
-    
-    function extractLessons(responseData) {
-        if (typeof responseData === 'string') {
-            const startTagIndex = responseData.indexOf("Lessons");
-            const lessonsSection = responseData.substring(startTagIndex);
-            return lessonsSection.split("Lesson").map(lesson => lesson.trim()).filter(Boolean);
-        } else {
-            // Handle other data types
-            return [];
-        }
-    }
-
     return (
         <>
             <Layout>
@@ -239,7 +177,7 @@ setResponseData(data);
                                 </div>
                             </div>
                         </div>
-
+                        
                         <div className="mt-50 mt-50-30">
                             <div className="">
                                 <div className="industry-form-find-top  wow animate__animated animate__fadeInUp" style={{ width: '80%', margin: 'auto' }}>
@@ -383,10 +321,10 @@ setResponseData(data);
                                                     >
                                                         <div className="row">
                                                             <div className="component-title component-title-database-search-evidence">
-                                                                Results For: {" "}
-                                                                {
-                                                                    formData.location
-                                                                }{" "}
+                                                            Results For: {" "}
+                                                                            {
+                                                                                formData.location
+                                                                            }{" "}
                                                             </div>
                                                         </div>
                                                         <div>
@@ -416,19 +354,39 @@ setResponseData(data);
                                                                             }{" "}
                                                                             results found
                                                                         </div>
-                                                                         <div className="mt-50 mt-50-30" style={{ textAlign: "justify" }}                                                                                >
+                                                                        <div className="mt-50 mt-50-30" style={{ textAlign: "justify" }}                                                                                >
                                                                             <ul className="bullet-list-database-search-evidence">
                                                                                 {responseData && (
                                                                                     <ul style={{ paddingLeft: '0px' }}>
                                                                                         {responseData.extracted_text_1
                                                                                             .split("<h3>")
-                                                                                            }
+                                                                                            .filter((section, index) => index !== 0)
+                                                                                            .map((section, index) => {
+                                                                                                const [titlePart, descriptionPart] = section.split("</h3>");
+                                                                                                const cleanTitlePart = titlePart.replace(/^\d+\.\s*/, "").trim();
+                                                                                                const cleanDescriptionPart = descriptionPart ? descriptionPart.replace(/<[^>]+>/g, "").trim() : "";
+                                                                                                const link = cleanDescriptionPart.match(/http(s)?:\/\/[^\s]+/g);
+                                                                                                const title = cleanTitlePart || "No Title";
+                                                                                                return (
+                                                                                                    <li key={index} className="descriptionoftitle">
+                                                                                                        <div className="border-result-evidence hover-up">
+                                                                                                            <span>{`• `}</span>
+                                                                                                            <span style={{ fontWeight: "bold" }}>{title}</span>
+                                                                                                            {link && (
+                                                                                                                <>
+                                                                                                                    <br />
+                                                                                                                    <a href={link[0]} target="_blank" rel="noopener noreferrer">{link[0]}</a>
+                                                                                                                </>
+                                                                                                            )}
+                                                                                                        </div>
+                                                                                                    </li>
+                                                                                                );
+                                                                                            })}
                                                                                     </ul>
                                                                                 )}
 
                                                                             </ul>
-                                                                        </div> 
-
+                                                                        </div>
                                                                     </div>
 
                                                                     <div className="button-container">
